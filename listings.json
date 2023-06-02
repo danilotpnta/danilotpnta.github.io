@@ -1,0 +1,42 @@
+[
+  {
+    "listing": "/bin/grid_index.html",
+    "items": [
+      "/bin/blog/index.html",
+      "/bin/blog/about.html",
+      "/bin/tutorials.html",
+      "/bin/tutorial2.html",
+      "/bin/tutorial1.html",
+      "/bin/Python-demo.html",
+      "/bin/blog/posts/post-with-code/index.html",
+      "/bin/blog/posts/welcome/index.html"
+    ]
+  },
+  {
+    "listing": "/bin/blog/index.html",
+    "items": [
+      "/bin/blog/posts/post-with-code/index.html",
+      "/bin/blog/posts/welcome/index.html"
+    ]
+  },
+  {
+    "listing": "/projects/index.html",
+    "items": [
+      "/projects/computer-vision/index.html",
+      "/projects/artificial-intelligence/index.html",
+      "/projects/welcome_2/index.html",
+      "/projects/welcome_3/index.html",
+      "/projects/welcome/index.html",
+      "/projects/bsc-thesis/Python-demo.html",
+      "/projects/cpp-project/Python-demo.html"
+    ]
+  },
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/post-with-code/index.html",
+      "/blog/welcome/index.html",
+      "/blog/Python-project/Python-demo.html"
+    ]
+  }
+]
