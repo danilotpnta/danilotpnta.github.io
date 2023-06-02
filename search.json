@@ -28,32 +28,11 @@
     "text": "For a demonstration of a line plot on a polar axis, see Figure 1.\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 1 * np.pi * r\nfig, ax = plt.subplots(\n    subplot_kw = {'projection': 'polar'}\n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\nFigure 1: A line plot on a polar axis\n\n\n\n\n\n\n\nplt.figure(figsize=(4, 2))\n_ = plt.plot([3, 4, 2, 5])\n\n\n\n\n\n\nWhen people think about using artificial intelligence (AI) for writing, they immediately jump to 1500-word articles and lengthy social media posts. And yes, these are use cases that AI writing assistants can help with.\nBut it’s only a fraction of what this technology can do.\nA high-quality paragraph generator transforms everyone on your team into a robust and well-rounded writer. Now anyone can create informative, engaging, and persuasive content one paragraph at a time – whether responding to a lead via email or creating a thought leadership piece to go viral.\nThat’s why, in a moment, we’ll show you how to use Cop.aiI’s paragraph generator to build any text-based asset you need.\nBefore diving in, though, let’s cover the basics and answer the following: what’s a paragraph generator, how do they work, and why would you want to use one?\n\n\n\n\nWhen people think about using artificial intelligence (AI) for writing, they immediately jump to 1500-word articles and lengthy social media posts. And yes, these are use cases that AI writing assistants can help with.\nBut it’s only a fraction of what this technology can do.\nA high-quality paragraph generator transforms everyone on your team into a robust and well-rounded writer. Now anyone can create informative, engaging, and persuasive content one paragraph at a time – whether responding to a lead via email or creating a thought leadership piece to go viral.\nThat’s why, in a moment, we’ll show you how to use Cop.aiI’s paragraph generator to build any text-based asset you need.\nBefore diving in, though, let’s cover the basics and answer the following: what’s a paragraph generator, how do they work, and why would you want to use one?"
   },
   {
-    "objectID": "projects/welcome_2/index.html",
-    "href": "projects/welcome_2/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "projects/welcome_3/index.html",
-    "href": "projects/welcome_3/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
     "objectID": "projects/index.html",
     "href": "projects/index.html",
     "title": "Danilo Toapanta",
     "section": "",
-    "text": "CV Project\n\n\n\nComputer Vision\n\n\nControl Systems\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAI Project\n\n\n\nMachine Learning\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBSc Thesis\n\n\n\nEE\n\n\nDSP\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nC++ Project\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "projects/welcome/index.html",
-    "href": "projects/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "CV Project\n\n\n\nComputer Vision\n\n\nControl Systems\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAI Project\n\n\n\nMachine Learning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEA Project\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nML Project\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCS Project\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBSc Thesis\n\n\n\nEE\n\n\nDSP\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nC++ Project\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/computer-vision/index.html",
@@ -82,6 +61,27 @@
     "title": "AI Project",
     "section": "",
     "text": "Above we use the left option to specify items for the left side of the navigation bar. You can also use the right option to specify items for the right side.\nThe text for navigation bar items will be taken from the underlying target document’s title. Note that in the above example we provide a custom text: “Home” value for index.qmd.\nYou can also create a navigation bar menu by including a menu (which is a list of items much like left and right). For example:\nleft: - text: “More” menu: - talks.qmd - about.qmd\nHere are all of the options available for top navigation:\nOption Description title Navbar title (uses the site: title if none is specified). Use title: false to suppress the display of the title on the navbar. logo Logo image to be displayed left of the title. logo-alt Alternate text for the logo image. logo-href Target href from navbar logo / title. By default, the logo and title link to the root page of the site (/index.html). background Background color (“primary”, “secondary”, “success”, “danger”, “warning”, “info”, “light”, “dark”, or hex color) foreground Foreground color (“primary”, “secondary”, “success”, “danger”, “warning”, “info”, “light”, “dark”, or hex color). The foreground color will be used to color navigation elements, text and links that appear in the navbar. search Include a search box (true or false) tools List of navbar tools (e.g. link to github or twitter, etc.). See Navbar Tools for details. left / right Lists of navigation items for left and right side of navbar pinned Always show the navbar (true or false). Defaults to false, and uses headroom.js to automatically show the navbar when the user scrolls up on the page. collapse Collapse the navbar items into a hamburger menu when the display gets narrow (defaults to true) collapse-below Responsive breakpoint at which to collapse navbar items to a hamburger menu (“sm”, “md”, “lg”, “xl”, or “xxl”, defaults to “lg”) Here are the options available for individual navigation items:\nOption Description href Link to file contained with the project or external URL. text Text to display for navigation item (defaults to the document title if not provided). icon Name of one of the standard Bootstrap 5 icons (e.g. “github”, “twitter”, “share”, etc.). aria-label Accessible label for the navigation item. rel Value for rel attribute. Multiple space-separated values are permitted. menu List of navigation items to populate a drop-down menu.\nAbove we use the left option to specify items for the left side of the navigation bar. You can also use the right option to specify items for the right side.\nThe text for navigation bar items will be taken from the underlying target document’s title. Note that in the above example we provide a custom text: “Home” value for index.qmd.\nYou can also create a navigation bar menu by including a menu (which is a list of items much like left and right). For example:\nleft: - text: “More” menu: - talks.qmd - about.qmd\nHere are all of the options available for top navigation:\nOption Description title Navbar title (uses the site: title if none is specified). Use title: false to suppress the display of the title on the navbar. logo Logo image to be displayed left of the title. logo-alt Alternate text for the logo image. logo-href Target href from navbar logo / title. By default, the logo and title link to the root page of the site (/index.html). background Background color (“primary”, “secondary”, “success”, “danger”, “warning”, “info”, “light”, “dark”, or hex color) foreground Foreground color (“primary”, “secondary”, “success”, “danger”, “warning”, “info”, “light”, “dark”, or hex color). The foreground color will be used to color navigation elements, text and links that appear in the navbar. search Include a search box (true or false) tools List of navbar tools (e.g. link to github or twitter, etc.). See Navbar Tools for details. left / right Lists of navigation items for left and right side of navbar pinned Always show the navbar (true or false). Defaults to false, and uses headroom.js to automatically show the navbar when the user scrolls up on the page. collapse Collapse the navbar items into a hamburger menu when the display gets narrow (defaults to true) collapse-below Responsive breakpoint at which to collapse navbar items to a hamburger menu (“sm”, “md”, “lg”, “xl”, or “xxl”, defaults to “lg”) Here are the options available for individual navigation items:\nOption Description href Link to file contained with the project or external URL. text Text to display for navigation item (defaults to the document title if not provided). icon Name of one of the standard Bootstrap 5 icons (e.g. “github”, “twitter”, “share”, etc.). aria-label Accessible label for the navigation item. rel Value for rel attribute. Multiple space-separated values are permitted. menu List of navigation items to populate a drop-down menu."
+  },
+  {
+    "objectID": "projects/travel-sales-project/index.html",
+    "href": "projects/travel-sales-project/index.html",
+    "title": "EA Project",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "projects/mlp/index.html",
+    "href": "projects/mlp/index.html",
+    "title": "ML Project",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "projects/segway/index.html",
+    "href": "projects/segway/index.html",
+    "title": "CS Project",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
     "objectID": "index.html",
