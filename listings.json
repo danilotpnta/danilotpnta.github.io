@@ -1,25 +1,5 @@
 [
   {
-    "listing": "/bin/grid_index.html",
-    "items": [
-      "/bin/blog/index.html",
-      "/bin/blog/about.html",
-      "/bin/tutorials.html",
-      "/bin/tutorial2.html",
-      "/bin/tutorial1.html",
-      "/bin/Python-demo.html",
-      "/bin/blog/posts/post-with-code/index.html",
-      "/bin/blog/posts/welcome/index.html"
-    ]
-  },
-  {
-    "listing": "/bin/blog/index.html",
-    "items": [
-      "/bin/blog/posts/post-with-code/index.html",
-      "/bin/blog/posts/welcome/index.html"
-    ]
-  },
-  {
     "listing": "/projects/index.html",
     "items": [
       "/projects/computer-vision/index.html",
