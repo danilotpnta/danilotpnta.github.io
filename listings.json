@@ -4,7 +4,7 @@
     "items": []
   },
   {
-    "listing": "/projects/index.html",
+    "listing": "/projects/projects.html",
     "items": [
       "/projects/computer-vision/index.html",
       "/projects/artificial-intelligence/index.html",
@@ -16,7 +16,7 @@
     ]
   },
   {
-    "listing": "/blog/index.html",
+    "listing": "/blog/blog.html",
     "items": [
       "/blog/lua-shorcuts/index.html",
       "/blog/how-hash-table-works/how-hash-table-works.html",

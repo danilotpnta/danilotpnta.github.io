@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Danilo Toapanta">
 
-<title>Danilo Toapanta - Tutorials</title>
+<title>Danilo Toapanta – projects</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,6 +26,9 @@ ul.task-list li input[type="checkbox"] {
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../img/Danilo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -51,7 +55,39 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-lab-reports .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      page: 6,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-lab-reports'] = new List('listing-lab-reports', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -72,11 +108,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../blog/index.html" rel="" target="">
+    <a class="nav-link" href="../blog/blog.html" rel="" target="">
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../projects/index.html" rel="" target="">
+    <a class="nav-link active" href="../projects/projects.html" rel="" target="" aria-current="page">
  <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
@@ -89,7 +125,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="http://localhost:4200/dev/" rel="" target=""><i class="bi bi-braces" role="img">
+    <a class="nav-link" href="../dev/" rel="" target=""><i class="bi bi-braces" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -102,67 +138,165 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#this-is-a-title" id="toc-this-is-a-title" class="nav-link active" data-scroll-target="#this-is-a-title">This is a title</a>
-  <ul class="collapse">
-  <li><a href="#this-is-a-title-hugmongoues-that-will-not-pass" id="toc-this-is-a-title-hugmongoues-that-will-not-pass" class="nav-link" data-scroll-target="#this-is-a-title-hugmongoues-that-will-not-pass">3.1 This is a title hugmongoues that will not pass</a></li>
-  </ul></li>
-  </ul>
-</nav>
-</nav>
+  
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    </div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Computer Vision">Computer Vision <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Control Systems">Control Systems <span class="quarto-category-count">(1)</span></div><div class="category" data-category="DSP">DSP <span class="quarto-category-count">(1)</span></div><div class="category" data-category="EE">EE <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Machine Learning">Machine Learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(3)</span></div></div></div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Tutorials</h1>
+
+
+<div id="listing-lab-reports" class="quarto-listing quarto-listing-container-grid">
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-categories="Computer Vision,Control Systems" data-listing-date-sort="1685311200000" data-listing-file-modified-sort="1685720379518" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<a href="../projects/computer-vision/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="../projects/computer-vision/image.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+CV Project
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Computer Vision'); return false;">
+Computer Vision
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('Control Systems'); return false;">
+Control Systems
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="Machine Learning" data-listing-date-sort="1685311200000" data-listing-file-modified-sort="1685720923925" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+<a href="../projects/artificial-intelligence/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="../projects/artificial-intelligence/image.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+AI Project
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Machine Learning'); return false;">
+Machine Learning
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="news" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1685743051300" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="../projects/travel-sales-project/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="../projects/travel-sales-project/image.jpeg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+EA Project
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
+news
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="news" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1685742955534" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="../projects/mlp/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="../projects/mlp/image.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+ML Project
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
+news
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="news" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1685742837978" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<a href="../projects/segway/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="../projects/segway/image.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+CS Project
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
+news
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="5" data-categories="EE,DSP" data-listing-date-sort="1674946800000" data-listing-file-modified-sort="1685720923929" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<a href="../projects/bsc-thesis/Python-demo.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img src="../projects/bsc-thesis/image.jpg" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+BSc Thesis
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('EE'); return false;">
+EE
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('DSP'); return false;">
+DSP
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="6" data-listing-date-sort="1674946800000" data-listing-file-modified-sort="1685721176738" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+<a href="../projects/cpp-project/Python-demo.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img data-src="../projects/cpp-project/image.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+C++ Project
+</h5>
+</div>
+</div>
+</a>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+<nav id="lab-reports-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div>
 
 
 
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-</header>
-
-<p>About this site This will contain different files</p>
-<section id="this-is-a-title" class="level2">
-<h2 class="anchored" data-anchor-id="this-is-a-title">This is a title</h2>
-<p>Above we use the left option to specify items for the left side of the navigation bar. You can also use the right option to specify items for the right side.</p>
-<p>The text for navigation bar items will be taken from the underlying target document’s title. Note that in the above example we provide a custom text: “Home” value for index.qmd.</p>
-<p>You can also create a navigation bar menu by including a menu (which is a list of items much like left and right). For example:</p>
-<p>left: - text: “More” menu: - talks.qmd - about.qmd</p>
-<p>Here are all of the options available for top navigation:</p>
-<p>Option Description title Navbar title (uses the site: title if none is specified). Use title: false to suppress the display of the title on the navbar. logo Logo image to be displayed left of the title. logo-alt Alternate text for the logo image. logo-href Target href from navbar logo / title. By default, the logo and title link to the root page of the site (/index.html). background Background color (“primary”, “secondary”, “success”, “danger”, “warning”, “info”, “light”, “dark”, or hex color) foreground Foreground color (“primary”, “secondary”, “success”, “danger”, “warning”, “info”, “light”, “dark”, or hex color). The foreground color will be used to color navigation elements, text and links that appear in the navbar. search Include a search box (true or false) tools List of navbar tools (e.g.&nbsp;link to github or twitter, etc.). See Navbar Tools for details. left / right Lists of navigation items for left and right side of navbar pinned Always show the navbar (true or false). Defaults to false, and uses headroom.js to automatically show the navbar when the user scrolls up on the page. collapse Collapse the navbar items into a hamburger menu when the display gets narrow (defaults to true) collapse-below Responsive breakpoint at which to collapse navbar items to a hamburger menu (“sm”, “md”, “lg”, “xl”, or “xxl”, defaults to “lg”) Here are the options available for individual navigation items:</p>
-<p>Option Description href Link to file contained with the project or external URL. text Text to display for navigation item (defaults to the document title if not provided). icon Name of one of the standard Bootstrap 5 icons (e.g.&nbsp;“github”, “twitter”, “share”, etc.). aria-label Accessible label for the navigation item. rel Value for rel attribute. Multiple space-separated values are permitted. menu List of navigation items to populate a drop-down menu.</p>
-<p>Above we use the left option to specify items for the left side of the navigation bar. You can also use the right option to specify items for the right side.</p>
-<p>The text for navigation bar items will be taken from the underlying target document’s title. Note that in the above example we provide a custom text: “Home” value for index.qmd.</p>
-<p>You can also create a navigation bar menu by including a menu (which is a list of items much like left and right). For example:</p>
-<p>left: - text: “More” menu: - talks.qmd - about.qmd</p>
-<p>Here are all of the options available for top navigation:</p>
-<p>Option Description title Navbar title (uses the site: title if none is specified). Use title: false to suppress the display of the title on the navbar. logo Logo image to be displayed left of the title. logo-alt Alternate text for the logo image. logo-href Target href from navbar logo / title. By default, the logo and title link to the root page of the site (/index.html). background Background color (“primary”, “secondary”, “success”, “danger”, “warning”, “info”, “light”, “dark”, or hex color) foreground Foreground color (“primary”, “secondary”, “success”, “danger”, “warning”, “info”, “light”, “dark”, or hex color). The foreground color will be used to color navigation elements, text and links that appear in the navbar. search Include a search box (true or false) tools List of navbar tools (e.g.&nbsp;link to github or twitter, etc.). See Navbar Tools for details. left / right Lists of navigation items for left and right side of navbar pinned Always show the navbar (true or false). Defaults to false, and uses headroom.js to automatically show the navbar when the user scrolls up on the page. collapse Collapse the navbar items into a hamburger menu when the display gets narrow (defaults to true) collapse-below Responsive breakpoint at which to collapse navbar items to a hamburger menu (“sm”, “md”, “lg”, “xl”, or “xxl”, defaults to “lg”) Here are the options available for individual navigation items:</p>
-<p>Option Description href Link to file contained with the project or external URL. text Text to display for navigation item (defaults to the document title if not provided). icon Name of one of the standard Bootstrap 5 icons (e.g.&nbsp;“github”, “twitter”, “share”, etc.). aria-label Accessible label for the navigation item. rel Value for rel attribute. Multiple space-separated values are permitted. menu List of navigation items to populate a drop-down menu.</p>
-<section id="this-is-a-title-hugmongoues-that-will-not-pass" class="level3">
-<h3 class="anchored" data-anchor-id="this-is-a-title-hugmongoues-that-will-not-pass">3.1 This is a title hugmongoues that will not pass</h3>
-
-
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Danilo Toapanta">
 
-<title>Danilo Toapanta – grid_index</title>
+<title>Danilo Toapanta – blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,6 +26,7 @@ ul.task-list li input[type="checkbox"] {
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../img/Danilo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-listing/list.min.js"></script>
 <script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -63,10 +65,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-image','listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      page: 4,
-    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
+      valueNames: ['listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -106,11 +107,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../blog/index.html" rel="" target="">
+    <a class="nav-link active" href="../blog/blog.html" rel="" target="" aria-current="page">
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../projects/index.html" rel="" target="">
+    <a class="nav-link" href="../projects/projects.html" rel="" target="">
  <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
@@ -123,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="http://localhost:4200/dev/" rel="" target=""><i class="bi bi-braces" role="img">
+    <a class="nav-link" href="../dev/" rel="" target=""><i class="bi bi-braces" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -136,147 +137,88 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    
+</nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(8)</span></div><div class="category" data-category="analysis">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="code">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="news">news <span class="quarto-category-count">(2)</span></div></div></div>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
-<div id="listing-lab-reports" class="quarto-listing quarto-listing-container-grid">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1685348416452" data-listing-reading-time-sort="1">
-<a href="../bin/blog/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="blog/posts/post-with-code/image.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-blog
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1685348416456" data-listing-reading-time-sort="1">
-<a href="../bin/blog/about.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="../bin/blog/profile.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-About
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1685400947654" data-listing-reading-time-sort="4">
-<a href="../bin/tutorials.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Tutorials
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1685305643060" data-listing-reading-time-sort="1">
-<a href="../bin/tutorial2.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Tutorial2
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-listing-file-modified-sort="1685305643057" data-listing-reading-time-sort="1">
-<a href="../bin/tutorial1.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Tutorial1
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="5" data-listing-file-modified-sort="1685386667130" data-listing-reading-time-sort="1">
-<a href="../bin/Python-demo.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img data-src="Python-demo_files/figure-html/fig-polar-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Quarto Basics
-</h5>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="6" data-categories="news,code,analysis" data-listing-date-sort="1685311200000" data-listing-file-modified-sort="1685348416455" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<a href="../bin/blog/posts/post-with-code/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img data-src="../bin/blog/posts/post-with-code/image.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Post With Code
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('code'); return false;">
-code
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('analysis'); return false;">
-analysis
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="7" data-categories="news" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1685348416453" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<a href="../bin/blog/posts/welcome/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img data-src="blog/posts/welcome/thumbnail.jpg" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Welcome To My Blog
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-news
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
+<section id="section" class="level3 unlisted unnumbered">
+<h3 class="unlisted unnumbered anchored" data-anchor-id="section">2023</h3>
+<div class="datePadding">
+<div id="listing-lab-reports" class="quarto-listing quarto-listing-container-table">
+
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-categories="Workflow" data-listing-date-sort="1686261600000" data-listing-file-modified-sort="1686392593310" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-title-sort="On the topic of Optimization" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">2023-06-9</span>
+</td>
+<td>
+<a href="../blog/lua-shorcuts/index.html" class="title listing-title">On the topic of Optimization</a>
+</td>
+</tr>
+
+<tr data-index="1" data-categories="Data Mining" data-listing-date-sort="1685916000000" data-listing-file-modified-sort="1686397989646" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="How PCY Algorithm works" data-listing-filename-sort="how-hash-table-works.ipynb">
+<td>
+<span class="listing-date">2023-06-5</span>
+</td>
+<td>
+<a href="../blog/how-hash-table-works/how-hash-table-works.html" class="title listing-title">How PCY Algorithm works</a>
+</td>
+</tr>
+<tr data-index="2" data-categories="news,analysis" data-listing-date-sort="1685311200000" data-listing-file-modified-sort="1685606099226" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-title-sort="Post With Code insane you will learn a lot, and beyond what you can comprehend" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">2023-05-29</span>
+</td>
+<td>
+<a href="../blog/post-with-code/index.html" class="title listing-title">Post With Code insane you will learn a lot, and beyond what you can comprehend</a>
+</td>
+</tr>
+<tr data-index="3" data-categories="news" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1685474741257" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-title-sort="Welcome To My Blog" data-listing-filename-sort="index.qmd">
+<td>
+<span class="listing-date">2023-05-26</span>
+</td>
+<td>
+<a href="../blog/welcome/index.html" class="title listing-title">Welcome To My Blog</a>
+</td>
+</tr>
+<tr data-index="4" data-listing-date-sort="1674946800000" data-listing-file-modified-sort="1686396823089" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-title-sort="Post that shows Quarto Basics" data-listing-filename-sort="Python-demo.ipynb">
+<td>
+<span class="listing-date">2023-01-29</span>
+</td>
+<td>
+<a href="../blog/Python-project/Python-demo.html" class="title listing-title">Post that shows Quarto Basics</a>
+</td>
+</tr>
+</tbody>
+
+</table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-<nav id="lab-reports-pagination" class="listing-pagination" aria-label="Page Navigation">
-  <ul class="pagination"></ul>
-</nav>
+</div>
 </div>
 
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
