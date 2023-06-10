@@ -198,23 +198,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 
-<div class="cell" data-executetime="{&quot;start_time&quot;:&quot;2023-06-05T23:31:31.091302Z&quot;,&quot;end_time&quot;:&quot;2023-06-05T23:31:31.094701Z&quot;}" data-execution_count="22">
+<p>In this post I will go over the implementation of: An Effective Hash-Based Algorithm for Mining Association Rules<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
+<p><img src="https://slama.dev/assets/mining-massive-datasets/pcy.svg" width="400"></p>
+<section id="initializing-the-transaction-baskets" class="level2">
+<h2 class="anchored" data-anchor-id="initializing-the-transaction-baskets">Initializing the transaction baskets</h2>
+<div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> itertools</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="initializing-the-transaction-baskets" class="level2">
-<h2 class="anchored" data-anchor-id="initializing-the-transaction-baskets">Initializing the transaction baskets</h2>
-<div class="cell" data-executetime="{&quot;start_time&quot;:&quot;2023-06-05T23:31:33.320727Z&quot;,&quot;end_time&quot;:&quot;2023-06-05T23:31:33.338123Z&quot;}" data-execution_count="23">
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-06-05T23:31:33.338123Z&quot;,&quot;start_time&quot;:&quot;2023-06-05T23:31:33.320727Z&quot;}" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># initialize lists</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [[<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">5</span>], [<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>], [<span class="dv">4</span>,<span class="dv">5</span>], [<span class="dv">1</span>,<span class="dv">6</span>,<span class="dv">7</span>], [<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">7</span>], [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">7</span>]]</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>pairs <span class="op">=</span> [<span class="bu">list</span>(itertools.combinations(i, <span class="dv">2</span>)) <span class="cf">for</span> i <span class="kw">in</span> data]</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>mydict<span class="op">=</span>{<span class="st">'Items'</span>:data, <span class="st">'Pairs'</span>: pairs}</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>mydict <span class="op">=</span> {<span class="st">'Items'</span>:data, <span class="st">'Pairs'</span>: pairs}</span>
 <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the pandas DataFrame with column name is provided explicitly</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.DataFrame(mydict)</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># print dataframe.</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Print dataframe</span></span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>display(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -268,13 +270,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="calculating-the-supports" class="level2">
 <h2 class="anchored" data-anchor-id="calculating-the-supports">Calculating the supports</h2>
-<div class="cell" data-executetime="{&quot;start_time&quot;:&quot;2023-06-05T23:00:18.330044Z&quot;,&quot;end_time&quot;:&quot;2023-06-05T23:00:18.334695Z&quot;}" data-execution_count="3">
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-06-05T23:00:18.334695Z&quot;,&quot;start_time&quot;:&quot;2023-06-05T23:00:18.330044Z&quot;}" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[[1, 2, 5], [2, 3, 5], [4, 5], [1, 6, 7], [2, 3, 5, 7], [1, 2, 7]]</code></pre>
 </div>
 </div>
-<div class="cell" data-executetime="{&quot;start_time&quot;:&quot;2023-06-05T23:00:18.338297Z&quot;,&quot;end_time&quot;:&quot;2023-06-05T23:00:18.343197Z&quot;}" data-execution_count="4">
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-06-05T23:00:18.343197Z&quot;,&quot;start_time&quot;:&quot;2023-06-05T23:00:18.338297Z&quot;}" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>supports <span class="op">=</span> {}</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> row <span class="kw">in</span> data:</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> e <span class="kw">in</span> row:</span>
@@ -289,7 +291,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>{1: 0, 2: 0, 5: 0, 3: 0, 4: 0, 6: 0, 7: 0}</code></pre>
 </div>
 </div>
-<div class="cell" data-executetime="{&quot;start_time&quot;:&quot;2023-06-05T23:00:18.348951Z&quot;,&quot;end_time&quot;:&quot;2023-06-05T23:00:18.441247Z&quot;}" data-execution_count="5">
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-06-05T23:00:18.441247Z&quot;,&quot;start_time&quot;:&quot;2023-06-05T23:00:18.348951Z&quot;}" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> row <span class="kw">in</span> data:</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> e <span class="kw">in</span> row:</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>        supports[e] <span class="op">+=</span> <span class="dv">1</span></span>
@@ -299,7 +301,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>{1: 3, 2: 4, 5: 4, 3: 2, 4: 1, 6: 1, 7: 3}</code></pre>
 </div>
 </div>
-<div class="cell" data-executetime="{&quot;start_time&quot;:&quot;2023-06-05T23:00:39.392276Z&quot;,&quot;end_time&quot;:&quot;2023-06-05T23:00:39.401511Z&quot;}" data-execution_count="17">
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-06-05T23:00:39.401511Z&quot;,&quot;start_time&quot;:&quot;2023-06-05T23:00:39.392276Z&quot;}" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>item <span class="op">=</span> [ key <span class="cf">for</span> key, value <span class="kw">in</span> supports.items()]</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>supp <span class="op">=</span> [ value <span class="cf">for</span> key, value <span class="kw">in</span> supports.items()]</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>unique_items_count <span class="op">=</span> {<span class="st">'Itemset'</span>: item, <span class="st">'Sup'</span>: supp}</span>
@@ -377,11 +379,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="pass-1" class="level3">
 <h3 class="anchored" data-anchor-id="pass-1">Pass 1</h3>
-<div class="cell" data-executetime="{&quot;start_time&quot;:&quot;2023-06-05T23:00:18.367301Z&quot;,&quot;end_time&quot;:&quot;2023-06-05T23:00:18.442868Z&quot;}" data-execution_count="7">
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-06-05T23:00:18.442868Z&quot;,&quot;start_time&quot;:&quot;2023-06-05T23:00:18.367301Z&quot;}" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hash_f_pair(i,j):</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (i<span class="op">*</span>j) <span class="op">%</span> <span class="dv">7</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-executetime="{&quot;start_time&quot;:&quot;2023-06-05T23:00:18.377244Z&quot;,&quot;end_time&quot;:&quot;2023-06-05T23:00:18.443268Z&quot;}" data-execution_count="8">
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-06-05T23:00:18.443268Z&quot;,&quot;start_time&quot;:&quot;2023-06-05T23:00:18.377244Z&quot;}" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>unique_items <span class="op">=</span> []</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> row <span class="kw">in</span> pairs:</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> e <span class="kw">in</span> row:</span>
@@ -392,13 +394,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>[(1, 2), (1, 5), (2, 5), (2, 3), (3, 5), (4, 5), (1, 6), (1, 7), (6, 7), (2, 7), (3, 7), (5, 7)]</code></pre>
 </div>
 </div>
-<div class="cell" data-executetime="{&quot;start_time&quot;:&quot;2023-06-05T23:00:18.382795Z&quot;,&quot;end_time&quot;:&quot;2023-06-05T23:00:18.452038Z&quot;}" data-execution_count="9">
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-06-05T23:00:18.452038Z&quot;,&quot;start_time&quot;:&quot;2023-06-05T23:00:18.382795Z&quot;}" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>unique_items[<span class="dv">0</span>][<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="9">
+<div class="cell-output cell-output-display" data-execution_count="30">
 <pre><code>2</code></pre>
 </div>
 </div>
-<div class="cell" data-executetime="{&quot;start_time&quot;:&quot;2023-06-05T23:00:18.392646Z&quot;,&quot;end_time&quot;:&quot;2023-06-05T23:00:18.462775Z&quot;}" data-execution_count="10">
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-06-05T23:00:18.462775Z&quot;,&quot;start_time&quot;:&quot;2023-06-05T23:00:18.392646Z&quot;}" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>hash_value_pairs <span class="op">=</span> []</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> e <span class="kw">in</span> unique_items:</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>        hash_value_pairs.append(hash_f_pair(e[<span class="dv">0</span>],e[<span class="dv">1</span>]))</span>
@@ -407,7 +409,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>[2, 5, 3, 6, 1, 6, 6, 0, 0, 0, 0, 0]</code></pre>
 </div>
 </div>
-<div class="cell" data-executetime="{&quot;start_time&quot;:&quot;2023-06-05T23:00:18.399654Z&quot;,&quot;end_time&quot;:&quot;2023-06-05T23:00:18.463038Z&quot;}" data-execution_count="11">
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-06-05T23:00:18.463038Z&quot;,&quot;start_time&quot;:&quot;2023-06-05T23:00:18.399654Z&quot;}" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>my_dict2 <span class="op">=</span> {}</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> pair <span class="kw">in</span> unique_items:</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    my_dict2[<span class="bu">str</span>(pair)] <span class="op">=</span> <span class="dv">0</span></span>
@@ -416,7 +418,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>{'(1, 2)': 0, '(1, 5)': 0, '(2, 5)': 0, '(2, 3)': 0, '(3, 5)': 0, '(4, 5)': 0, '(1, 6)': 0, '(1, 7)': 0, '(6, 7)': 0, '(2, 7)': 0, '(3, 7)': 0, '(5, 7)': 0}</code></pre>
 </div>
 </div>
-<div class="cell" data-executetime="{&quot;start_time&quot;:&quot;2023-06-05T23:00:18.403951Z&quot;,&quot;end_time&quot;:&quot;2023-06-05T23:00:18.463294Z&quot;}" data-execution_count="12">
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-06-05T23:00:18.463294Z&quot;,&quot;start_time&quot;:&quot;2023-06-05T23:00:18.403951Z&quot;}" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> row <span class="kw">in</span> pairs:</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> e <span class="kw">in</span> row:</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>        my_dict2[<span class="bu">str</span>(e)] <span class="op">+=</span><span class="dv">1</span></span>
@@ -426,7 +428,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>{'(1, 2)': 2, '(1, 5)': 1, '(2, 5)': 3, '(2, 3)': 2, '(3, 5)': 2, '(4, 5)': 1, '(1, 6)': 1, '(1, 7)': 2, '(6, 7)': 1, '(2, 7)': 2, '(3, 7)': 1, '(5, 7)': 1}</code></pre>
 </div>
 </div>
-<div class="cell" data-executetime="{&quot;start_time&quot;:&quot;2023-06-05T23:00:18.414693Z&quot;,&quot;end_time&quot;:&quot;2023-06-05T23:00:18.463543Z&quot;}" data-execution_count="13">
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-06-05T23:00:18.463543Z&quot;,&quot;start_time&quot;:&quot;2023-06-05T23:00:18.414693Z&quot;}" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> [ value <span class="cf">for</span> key, value <span class="kw">in</span> my_dict2.items()]</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(counts)</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="co"># df_counts = pd.DataFrame()</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -434,14 +436,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>[2, 1, 3, 2, 2, 1, 1, 2, 1, 2, 1, 1]</code></pre>
 </div>
 </div>
-<div class="cell" data-executetime="{&quot;start_time&quot;:&quot;2023-06-05T23:48:57.563967Z&quot;,&quot;end_time&quot;:&quot;2023-06-05T23:48:57.571477Z&quot;}" data-execution_count="29">
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-06-05T23:48:57.571477Z&quot;,&quot;start_time&quot;:&quot;2023-06-05T23:48:57.563967Z&quot;}" data-execution_count="35">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>unique_items_count <span class="op">=</span> {<span class="st">'Pairs'</span>: unique_items, <span class="st">'Count'</span>: counts, <span class="st">'Hash'</span>: hash_value_pairs}</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(unique_items_count)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>{'Pairs': [(1, 2), (1, 5), (2, 5), (2, 3), (3, 5), (4, 5), (1, 6), (1, 7), (6, 7), (2, 7), (3, 7), (5, 7)], 'Count': [2, 1, 3, 2, 2, 1, 1, 2, 1, 2, 1, 1], 'Hash': [2, 5, 3, 6, 1, 6, 6, 0, 0, 0, 0, 0]}</code></pre>
 </div>
 </div>
-<div class="cell" data-executetime="{&quot;start_time&quot;:&quot;2023-06-05T23:49:04.728449Z&quot;,&quot;end_time&quot;:&quot;2023-06-05T23:49:04.731871Z&quot;}" data-execution_count="30">
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-06-05T23:49:04.731871Z&quot;,&quot;start_time&quot;:&quot;2023-06-05T23:49:04.728449Z&quot;}" data-execution_count="36">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>df_counts <span class="op">=</span> pd.DataFrame(unique_items_count)</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>display(df_counts)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -552,7 +554,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Minium support count is 2 so we eliminate from the Pair list the items that have less than 2 from <a href="#tbl-support">Table&nbsp;1</a>. The resulting table is called the Candidate Pairs.</p>
-<div class="cell" data-executetime="{&quot;start_time&quot;:&quot;2023-06-05T23:49:09.618379Z&quot;,&quot;end_time&quot;:&quot;2023-06-05T23:49:09.622209Z&quot;}" data-execution_count="31">
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-06-05T23:49:09.622209Z&quot;,&quot;start_time&quot;:&quot;2023-06-05T23:49:09.618379Z&quot;}" data-execution_count="37">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>df_counts_after <span class="op">=</span> df_counts.drop([<span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">8</span>])</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>display(df_counts_after)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -648,7 +650,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="pass-2" class="level3">
 <h3 class="anchored" data-anchor-id="pass-2">Pass 2</h3>
 <p>The final step is to build a table from @ tbl-hash that counts the number of ocurrences per hash value.</p>
-<div class="cell" data-executetime="{&quot;start_time&quot;:&quot;2023-06-06T00:10:43.076958Z&quot;,&quot;end_time&quot;:&quot;2023-06-06T00:10:43.085086Z&quot;}" data-execution_count="53">
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-06-06T00:10:43.085086Z&quot;,&quot;start_time&quot;:&quot;2023-06-06T00:10:43.076958Z&quot;}" data-execution_count="38">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>hash_values <span class="op">=</span> [x <span class="cf">for</span> x <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">max</span>(hash_value_pairs)<span class="op">+</span><span class="dv">1</span>)]</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>my_dict3 <span class="op">=</span> {}</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> e <span class="kw">in</span> hash_values:</span>
@@ -719,7 +721,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>With the result above we can look back to table <a href="#tbl-hash_after_pass1">Table&nbsp;3</a> and see which hash values, have a value lower than the minimum support count. That is hash value 4 and 5. With this result we look at table <a href="#tbl-hash_after_pass1">Table&nbsp;3</a> and delete those corresponding hash values. The final result is teh Final Candidates</p>
-<div class="cell" data-executetime="{&quot;start_time&quot;:&quot;2023-06-06T00:13:45.459766Z&quot;,&quot;end_time&quot;:&quot;2023-06-06T00:13:45.465704Z&quot;}" data-execution_count="55">
+<div class="cell" data-executetime="{&quot;end_time&quot;:&quot;2023-06-06T00:13:45.465704Z&quot;,&quot;start_time&quot;:&quot;2023-06-06T00:13:45.459766Z&quot;}" data-execution_count="39">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>df_counts_after_pass2 <span class="op">=</span> df_counts_after.drop([<span class="dv">1</span>])</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>display(df_counts_after_pass2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
@@ -795,7 +797,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Paper available at: <a href="https://www.researchgate.net/publication/2267911_An_Effective_Hash-Based_Algorithm_for_Mining_Association_Rules">DOI:10.1145/568271.223813</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -1,5 +1,9 @@
 [
   {
+    "listing": "/bin/blog_index_backup.html",
+    "items": []
+  },
+  {
     "listing": "/projects/index.html",
     "items": [
       "/projects/computer-vision/index.html",
@@ -14,6 +18,7 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/lua-shorcuts/index.html",
       "/blog/how-hash-table-works/how-hash-table-works.html",
       "/blog/post-with-code/index.html",
       "/blog/welcome/index.html",
