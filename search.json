@@ -35,6 +35,13 @@
     "text": "For a demonstration of a line plot on a polar axis, see Figure 1.\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 1 * np.pi * r\nfig, ax = plt.subplots(\n    subplot_kw = {'projection': 'polar'}\n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\nFigure 1: A line plot on a polar axis\n\n\n\n\n\n\n\nplt.figure(figsize=(4, 2))\n_ = plt.plot([3, 4, 2, 5])\n\n\n\n\n\n\nWhen people think about using artificial intelligence (AI) for writing, they immediately jump to 1500-word articles and lengthy social media posts. And yes, these are use cases that AI writing assistants can help with.\nBut it’s only a fraction of what this technology can do.\nA high-quality paragraph generator transforms everyone on your team into a robust and well-rounded writer. Now anyone can create informative, engaging, and persuasive content one paragraph at a time – whether responding to a lead via email or creating a thought leadership piece to go viral.\nThat’s why, in a moment, we’ll show you how to use Cop.aiI’s paragraph generator to build any text-based asset you need.\nBefore diving in, though, let’s cover the basics and answer the following: what’s a paragraph generator, how do they work, and why would you want to use one?\n\n\n\n\nWhen people think about using artificial intelligence (AI) for writing, they immediately jump to 1500-word articles and lengthy social media posts. And yes, these are use cases that AI writing assistants can help with.\nBut it’s only a fraction of what this technology can do.\nA high-quality paragraph generator transforms everyone on your team into a robust and well-rounded writer. Now anyone can create informative, engaging, and persuasive content one paragraph at a time – whether responding to a lead via email or creating a thought leadership piece to go viral.\nThat’s why, in a moment, we’ll show you how to use Cop.aiI’s paragraph generator to build any text-based asset you need.\nBefore diving in, though, let’s cover the basics and answer the following: what’s a paragraph generator, how do they work, and why would you want to use one?"
   },
   {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Danilo Toapanta",
+    "section": "",
+    "text": "CV Project\n\n\n\nComputer Vision\n\n\nControl Systems\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAI Project\n\n\n\nMachine Learning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEA Project\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nML Project\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nCS Project\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBSc Thesis\n\n\n\nEE\n\n\nDSP\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nC++ Project\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "projects/computer-vision/index.html",
     "href": "projects/computer-vision/index.html",
     "title": "CV Project",
@@ -133,6 +140,13 @@
     "text": "For a demonstration of a line plot on a polar axis, see Figure 1.\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 1 * np.pi * r\nfig, ax = plt.subplots(\n    subplot_kw = {'projection': 'polar'}\n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\nFigure 1: A line plot on a polar axis\n\n\n\n\n\n\n\nplt.figure(figsize=(4, 2))\n_ = plt.plot([3, 4, 2, 5])\n\n\n\n\n\n\nWhen people think about using artificial intelligence (AI) for writing, they immediately jump to 1500-word articles and lengthy social media posts. And yes, these are use cases that AI writing assistants can help with.\nBut it’s only a fraction of what this technology can do.\nA high-quality paragraph generator transforms everyone on your team into a robust and well-rounded writer. Now anyone can create informative, engaging, and persuasive content one paragraph at a time – whether responding to a lead via email or creating a thought leadership piece to go viral.\nThat’s why, in a moment, we’ll show you how to use Cop.aiI’s paragraph generator to build any text-based asset you need.\nBefore diving in, though, let’s cover the basics and answer the following: what’s a paragraph generator, how do they work, and why would you want to use one?\n\n\n\n\nWhen people think about using artificial intelligence (AI) for writing, they immediately jump to 1500-word articles and lengthy social media posts. And yes, these are use cases that AI writing assistants can help with.\nBut it’s only a fraction of what this technology can do.\nA high-quality paragraph generator transforms everyone on your team into a robust and well-rounded writer. Now anyone can create informative, engaging, and persuasive content one paragraph at a time – whether responding to a lead via email or creating a thought leadership piece to go viral.\nThat’s why, in a moment, we’ll show you how to use Cop.aiI’s paragraph generator to build any text-based asset you need.\nBefore diving in, though, let’s cover the basics and answer the following: what’s a paragraph generator, how do they work, and why would you want to use one?"
   },
   {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Danilo Toapanta",
+    "section": "",
+    "text": "2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJun 09\n\n\nOn the topic of Optimization\n\n\nWorkflow\n\n\n\n\n\nJun 05\n\n\nHow PCY Algorithm works\n\n\nData Mining\n\n\n\n\nMay 29\n\n\nPost With Code insane you will learn a lot, and beyond what you can comprehend\n\n\nAnalysis\n\n\n\n\nMay 26\n\n\nWelcome To My Blog\n\n\nNews\n\n\n\n\nJan 29\n\n\nPost that shows Quarto Basics\n\n\nAnalysis\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "blog/welcome/index.html",
     "href": "blog/welcome/index.html",
     "title": "Welcome To My Blog",
@@ -186,6 +200,6 @@
     "href": "blog.html",
     "title": "Danilo Toapanta",
     "section": "",
-    "text": "2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nJun 09\n\n\nOn the topic of Optimization\n\n\nWorkflow\n\n\n\n\n\nJun 05\n\n\nHow PCY Algorithm works\n\n\nData Mining\n\n\n\n\nMay 29\n\n\nPost With Code insane you will learn a lot, and beyond what you can comprehend\n\n\nAnalysis\n\n\n\n\nMay 26\n\n\nWelcome To My Blog\n\n\nNews\n\n\n\n\nJan 29\n\n\nPost that shows Quarto Basics\n\n\nAnalysis\n\n\n\n\n\n\nNo matching items"
+    "text": "2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nundefined\n\n\n2023\n\n\nundefined\n\n\n\n\nJun 09\n\n\nOn the topic of Optimization\n\n\nWorkflow\n\n\n\n\n\nJun 05\n\n\nHow PCY Algorithm works\n\n\nData Mining\n\n\n\n\nMay 29\n\n\nPost With Code insane you will learn a lot, and beyond what you can comprehend\n\n\nAnalysis\n\n\n\n\nMay 26\n\n\nWelcome To My Blog\n\n\nNews\n\n\n\n\nJan 29\n\n\nPost that shows Quarto Basics\n\n\nAnalysis\n\n\n\n\n\n\nNo matching items"
   }
 ]
