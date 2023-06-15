@@ -1,7 +1,9 @@
 [
   {
     "listing": "/bin/blog_index_backup.html",
-    "items": []
+    "items": [
+      "/bin/index_books.html"
+    ]
   },
   {
     "listing": "/projects/index.html",
@@ -14,10 +16,6 @@
       "/projects/bsc-thesis/Python-demo.html",
       "/projects/cpp-project/Python-demo.html"
     ]
-  },
-  {
-    "listing": "/books/index.html",
-    "items": []
   },
   {
     "listing": "/blog/index.html",

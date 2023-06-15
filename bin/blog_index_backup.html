@@ -64,9 +64,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -92,9 +92,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -192,6 +192,14 @@ ul.task-list li input[type="checkbox"] {
 </tr>
 </thead>
 <tbody class="list">
+<tr data-index="0" data-listing-file-modified-sort="1686852541979" data-listing-reading-time-sort="5" data-listing-title-sort="Books" data-listing-filename-sort="index_books.qmd">
+<td>
+<span class="listing-date">undefined</span>
+</td>
+<td>
+<a href="../bin/index_books.html" class="title listing-title">Books</a>
+</td>
+</tr>
 </tbody>
 
 </table>
@@ -214,6 +222,14 @@ No matching items
 </tr>
 </thead>
 <tbody class="list">
+<tr data-index="0" data-listing-file-modified-sort="1686852541979" data-listing-reading-time-sort="5" data-listing-title-sort="Books" data-listing-filename-sort="index_books.qmd">
+<td>
+<span class="listing-date">undefined</span>
+</td>
+<td>
+<a href="../bin/index_books.html" class="title listing-title">Books</a>
+</td>
+</tr>
 </tbody>
 
 </table>

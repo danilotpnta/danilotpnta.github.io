@@ -2,74 +2,82 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://danilotpnta.github.io/bin/blog_index_backup.html</loc>
-    <lastmod>2023-06-15T16:24:02.530Z</lastmod>
+    <lastmod>2023-06-15T19:49:45.886Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danilotpnta.github.io/bin/index_books.html</loc>
+    <lastmod>2023-06-15T19:49:46.675Z</lastmod>
   </url>
   <url>
     <loc>https://danilotpnta.github.io/projects/bsc-thesis/Python-demo.html</loc>
-    <lastmod>2023-06-15T16:24:03.666Z</lastmod>
+    <lastmod>2023-06-15T19:49:47.898Z</lastmod>
   </url>
   <url>
     <loc>https://danilotpnta.github.io/projects/cpp-project/Python-demo.html</loc>
-    <lastmod>2023-06-15T16:24:04.295Z</lastmod>
+    <lastmod>2023-06-15T19:49:48.645Z</lastmod>
   </url>
   <url>
     <loc>https://danilotpnta.github.io/projects/index.html</loc>
-    <lastmod>2023-06-15T16:24:05.277Z</lastmod>
+    <lastmod>2023-06-15T19:49:49.659Z</lastmod>
   </url>
   <url>
     <loc>https://danilotpnta.github.io/projects/computer-vision/index.html</loc>
-    <lastmod>2023-06-15T16:24:05.975Z</lastmod>
+    <lastmod>2023-06-15T19:49:50.380Z</lastmod>
   </url>
   <url>
     <loc>https://danilotpnta.github.io/projects/artificial-intelligence/index.html</loc>
-    <lastmod>2023-06-15T16:24:06.725Z</lastmod>
+    <lastmod>2023-06-15T19:49:51.084Z</lastmod>
   </url>
   <url>
     <loc>https://danilotpnta.github.io/projects/travel-sales-project/index.html</loc>
-    <lastmod>2023-06-15T16:24:07.230Z</lastmod>
+    <lastmod>2023-06-15T19:49:51.593Z</lastmod>
   </url>
   <url>
     <loc>https://danilotpnta.github.io/projects/mlp/index.html</loc>
-    <lastmod>2023-06-15T16:24:07.735Z</lastmod>
+    <lastmod>2023-06-15T19:49:52.098Z</lastmod>
   </url>
   <url>
     <loc>https://danilotpnta.github.io/projects/segway/index.html</loc>
-    <lastmod>2023-06-15T16:24:08.215Z</lastmod>
+    <lastmod>2023-06-15T19:49:52.612Z</lastmod>
+  </url>
+  <url>
+    <loc>https://danilotpnta.github.io/books/index.html</loc>
+    <lastmod>2023-06-15T19:49:53.153Z</lastmod>
   </url>
   <url>
     <loc>https://danilotpnta.github.io/index.html</loc>
-    <lastmod>2023-06-15T16:24:09.274Z</lastmod>
+    <lastmod>2023-06-15T19:49:53.682Z</lastmod>
   </url>
   <url>
     <loc>https://danilotpnta.github.io/blog/lua-shorcuts/index.html</loc>
-    <lastmod>2023-06-15T16:24:09.861Z</lastmod>
+    <lastmod>2023-06-15T19:49:54.275Z</lastmod>
   </url>
   <url>
     <loc>https://danilotpnta.github.io/blog/post-with-code/index.html</loc>
-    <lastmod>2023-06-15T16:24:10.519Z</lastmod>
+    <lastmod>2023-06-15T19:49:54.999Z</lastmod>
   </url>
   <url>
     <loc>https://danilotpnta.github.io/blog/Python-project/Python-demo.html</loc>
-    <lastmod>2023-06-15T16:24:11.129Z</lastmod>
+    <lastmod>2023-06-15T19:49:55.617Z</lastmod>
   </url>
   <url>
     <loc>https://danilotpnta.github.io/blog/index.html</loc>
-    <lastmod>2023-06-15T16:24:11.817Z</lastmod>
+    <lastmod>2023-06-15T19:49:56.253Z</lastmod>
   </url>
   <url>
     <loc>https://danilotpnta.github.io/blog/welcome/index.html</loc>
-    <lastmod>2023-06-15T16:24:12.331Z</lastmod>
+    <lastmod>2023-06-15T19:49:56.792Z</lastmod>
   </url>
   <url>
     <loc>https://danilotpnta.github.io/blog/how-hash-table-works/how-hash-table-works.html</loc>
-    <lastmod>2023-06-15T16:24:13.527Z</lastmod>
+    <lastmod>2023-06-15T19:49:57.963Z</lastmod>
   </url>
   <url>
     <loc>https://danilotpnta.github.io/about.html</loc>
-    <lastmod>2023-06-15T16:24:14.031Z</lastmod>
+    <lastmod>2023-06-15T19:49:58.465Z</lastmod>
   </url>
   <url>
     <loc>https://danilotpnta.github.io/dev/index.html</loc>
-    <lastmod>2023-06-15T16:24:15.949Z</lastmod>
+    <lastmod>2023-06-15T19:50:00.353Z</lastmod>
   </url>
 </urlset>

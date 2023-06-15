@@ -4,7 +4,14 @@
     "href": "bin/blog_index_backup.html",
     "title": "Danilo Toapanta",
     "section": "",
-    "text": "2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\n2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nundefined\n\n\nBooks\n\n\n\n\n\n\nNo matching items\n\n\n\n\n2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nundefined\n\n\nBooks\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "bin/index_books.html",
+    "href": "bin/index_books.html",
+    "title": "Danilo Toapanta",
+    "section": "",
+    "text": "Books\n\n\n\n\nDynamic Documents\n\nLearn more »\n\n\n\nBeautiful Publications\nPublish high-quality articles, reports, presentations, websites, and books in HTML, PDF, MS Word, ePub, and more. Use a single source document to target multiple formats.\n\nLearn more »\n\n\n\nScientific Markdown\nPandoc markdown has excellent support for LaTeX equations and citations. Quarto adds extensions for cross-references, figure panels, callouts, advanced page layout, and more.\n\nLearn more »\n\n\n\nAuthoring Tools\nUse your favorite tools including VS Code, RStudio, Jupyter Lab, or any text editor. Use the Quarto visual markdown editor for long-form documents.\n\nLearn more »\n\n\n\nInteractivity\nEngage readers by adding interactive data exploration to your documents using Jupyter Widgets, htmlwidgets for R, Observable JS, and Shiny.\n\nLearn more »\n\n\n\nWebsites and Books\nPublish collections of documents as a blog or full website. Create books and manuscripts in both print formats (PDF and MS Word) and online formats (HTML and ePub).\n\nLearn more »\n\n\n\n\n\n\n    \n        \n            \n            Atomic Habits\n            James Clear\n        \n    \n\n\n\n    \n        \n            \n            Unclutter Your Life in One Week\n            Erin Rooney Doland\n        \n    \n\n\n\n    \n        \n            \n            Grit\n            Angela Duckworth\n        \n    \n\n\n\n    \n        \n            \n            Mindset\n            Carol S. Dweck\n        \n    \n\n\n\n    \n        \n            \n            The Four-Hour Workweek\n            Tim Ferriss\n        \n    \n\n\n\n    \n        \n            \n            Blink\n            Malcolm Gladwell\n        \n    \n\n\n\n    \n        \n            \n            The Tipping Point\n            Malcolm Gladwell\n        \n    \n\n\n\n    \n        \n            \n            The Information\n            James Gleick\n        \n    \n\n\n\n    \n        \n            \n            The Practice\n            Seth Godin\n        \n    \n\n\n\n    \n        \n            \n            All Marketers are Liars\n            Seth Godin"
   },
   {
     "objectID": "projects/bsc-thesis/Python-demo.html",
@@ -89,6 +96,13 @@
     "title": "CS Project",
     "section": "",
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "books/index.html",
+    "href": "books/index.html",
+    "title": "Danilo Toapanta",
+    "section": "",
+    "text": "Books\n\n\n\n\n        \n            \n                \n                Atomic Habits\n                James Clear\n            \n        \n\n\n        \n            \n                \n                Unclutter Your Life in One Week\n                Erin Rooney Doland\n            \n        \n\n\n\n         \n            \n                \n                \n                    The Tipping Point\n                    Malcolm Gladwell\n                \n            \n        \n\n\n\n\n        \n            \n                \n                Mindset\n                Carol S. Dweck\n            \n        \n\n\n\n        \n            \n                \n                The Four-Hour Workweek\n                Tim Ferriss\n            \n        \n\n\n\n        \n            \n                \n                Blink\n                Malcolm Gladwell\n            \n        \n\n\n\n        \n            \n                \n                The Tipping Point\n                Malcolm Gladwell\n            \n        \n\n\n\n        \n            \n                \n                The Information\n                James Gleick\n            \n        \n\n\n\n        \n            \n                \n                The Practice\n                Seth Godin\n            \n        \n\n\n\n        \n            \n                \n                All Marketers are Liars\n                Seth Godin\n            \n        \n\n\n\n        \n            \n                \n                Emotional Intelligence\n                Daniel Goleman\n            \n        \n\n\n\n        \n            \n                \n                Originals\n                Adam Grant\n            \n        \n\n\n\n        \n            \n                \n                You Can't Make This Stuff Up\n                Lee Gutkind\n            \n        \n\n\n\n        \n            \n                \n                Mindfulness in Plain English\n                Bhante Henepola Gunaratana\n            \n        \n\n\n\n        \n            \n                \n                The Joy of Less\n                Francine Jay\n            \n        \n\n\n\n        \n            \n                \n                Farsighted\n                Steven Johnson\n            \n        \n\n\n\n        \n            \n                \n                Where Good Ideas Come From\n                Steven Johnson"
   },
   {
     "objectID": "index.html",
