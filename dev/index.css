@@ -1,0 +1,12 @@
+/* Start here */
+.codeColored code {
+    color: green;
+}
+
+div.callout-note.callout {
+    border-left-color: #fde10d;
+}
+
+.callout-icon {
+    color: yellow
+}

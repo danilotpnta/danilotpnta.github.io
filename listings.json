@@ -20,11 +20,12 @@
   {
     "listing": "/blog/index.html",
     "items": [
-      "/blog/lua-shorcuts/index.html",
-      "/blog/how-hash-table-works/how-hash-table-works.html",
-      "/blog/post-with-code/index.html",
-      "/blog/welcome/index.html",
-      "/blog/Python-project/Python-demo.html"
+      "/blog/2023-06-20-running-my-first-marathon/index.html",
+      "/blog/2023-06-09-lua-shorcuts/index.html",
+      "/blog/2023-06-05-how-hash-table-works/how-hash-table-works.html",
+      "/blog/2023-05-29-post-with-code/index.html",
+      "/blog/2023-01-29-welcome/index.html",
+      "/blog/2023-01-29-Python-project/Python-demo.html"
     ]
   }
 ]
