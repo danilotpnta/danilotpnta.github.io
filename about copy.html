@@ -52,6 +52,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script type="text/javascript" href="../blog/get-latest-post.js"></script>
 
 
 </head>
@@ -81,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -132,7 +133,7 @@ ul.task-list li input[type="checkbox"] {
                     <p>
                         You can look me up on <a href="https://github.com/danilotpnta?tab=repositories" target="_blank">Github</a>↗.<br> 
                         Check out my <a href="https://www.linkedin.com/in/DaniloToapnta/" target="_blank">LinkedIn</a>↗.<br> 
-                        Read my lastest <a href="blog/2023-06-20-running-my-first-marathon">post</a>.<br> 
+                        Read my lastest <a href="http://localhost:4200/about.html">post</a>.<br> 
                         My (outdated) <a href="http://localhost:4200/about.html">résumé</a>.<br> <a href="mailto:danilotpnta@gmail.com?subject=%5BWebsite%5D%20-%20%27Insert%20Subject%20Here%27" target="_blank">Message me</a>↗.<br>
                         Or see <a href="./now/index.html">what I’m working right now</a>.
                     </p>
@@ -148,6 +149,14 @@ ul.task-list li input[type="checkbox"] {
         // var links = document.getElementsByTagName('a');
         // window.alert(links);
         // console.log("links:", links)
+        $(document).ready(function () 
+        {
+            $.get(".", function(data) 
+            {
+                $("#fileNames").append(data);
+            });
+        })
+
     }
 </script>
 
