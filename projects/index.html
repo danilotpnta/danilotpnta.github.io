@@ -67,7 +67,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-image','listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
       
-      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-language","listing-freeze","listing-title-block-banner","listing-author","listing-title","listing-image","listing-date","listing-categories","listing-jupyter","listing-source","listing-paper","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-subtitle","listing-sidebar","listing-demo"],
+      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-language","listing-freeze","listing-title-block-banner","listing-author","listing-title","listing-image","listing-date","listing-categories","listing-jupyter","listing-paper","listing-tags","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-source","listing-subtitle","listing-sidebar"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -144,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">All Categories</h5><div class="quarto-listing-category category-unnumbered"><div class="category" data-category="C++">C++</div><div class="category" data-category="Computer Vision">Computer Vision</div><div class="category" data-category="Control Systems">Control Systems</div><div class="category" data-category="DSP">DSP</div><div class="category" data-category="EE">EE</div><div class="category" data-category="Machine Learning">Machine Learning</div><div class="category" data-category="news">news</div></div></div>
+    <h5 class="quarto-listing-category-title">All Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="All <span class=&quot;quarto-category-count&quot;>(7)</span>"></div><div class="category" data-category="Algorithms">Algorithms <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Computer Vision">Computer Vision <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Control Systems">Control Systems <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Electrical Engineering">Electrical Engineering <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Machine Learning">Machine Learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Optimization">Optimization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Software Engineering">Software Engineering <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -209,6 +209,54 @@ Category[1]: Control Systems -->
     </br>
     - Title: AI Project
     <br>
+    All Categories: Machine Learning,Algorithms
+    <br> -->
+    <!-- Without the undefined detector error ocurrs -->
+    <!-- Categories[0]: Machine Learning  
+    <br>
+    typeof: object
+    <br>   
+    isArray: true
+    <br> 
+    Length: 2
+    <br> 
+    Length: 2
+    <br> 
+    Object.keys: 0,1
+    <br>  -->
+    <!-- Now I can loop over the categories, before I couldnt because
+    one post has categories as Undefined -->
+    <!-- 
+        Category[0]: Machine Learning
+        <br> 
+        Category[1]: Algorithms
+        <br> 
+    </br>
+    - Title: EA Project
+    <br>
+    All Categories: Optimization
+    <br> -->
+    <!-- Without the undefined detector error ocurrs -->
+    <!-- Categories[0]: Optimization  
+    <br>
+    typeof: object
+    <br>   
+    isArray: true
+    <br> 
+    Length: 1
+    <br> 
+    Length: 1
+    <br> 
+    Object.keys: 0
+    <br>  -->
+    <!-- Now I can loop over the categories, before I couldnt because
+    one post has categories as Undefined -->
+    <!-- 
+        Category[0]: Optimization
+        <br> 
+    </br>
+    - Title: ML Project
+    <br>
     All Categories: Machine Learning
     <br> -->
     <!-- Without the undefined detector error ocurrs -->
@@ -230,12 +278,12 @@ Category[1]: Control Systems -->
         Category[0]: Machine Learning
         <br> 
     </br>
-    - Title: EA Project
+    - Title: Control Systems Project
     <br>
-    All Categories: news
+    All Categories: Electrical Engineering
     <br> -->
     <!-- Without the undefined detector error ocurrs -->
-    <!-- Categories[0]: news  
+    <!-- Categories[0]: Electrical Engineering  
     <br>
     typeof: object
     <br>   
@@ -250,86 +298,15 @@ Category[1]: Control Systems -->
     <!-- Now I can loop over the categories, before I couldnt because
     one post has categories as Undefined -->
     <!-- 
-        Category[0]: news
-        <br> 
-    </br>
-    - Title: ML Project
-    <br>
-    All Categories: news
-    <br> -->
-    <!-- Without the undefined detector error ocurrs -->
-    <!-- Categories[0]: news  
-    <br>
-    typeof: object
-    <br>   
-    isArray: true
-    <br> 
-    Length: 1
-    <br> 
-    Length: 1
-    <br> 
-    Object.keys: 0
-    <br>  -->
-    <!-- Now I can loop over the categories, before I couldnt because
-    one post has categories as Undefined -->
-    <!-- 
-        Category[0]: news
-        <br> 
-    </br>
-    - Title: CS Project
-    <br>
-    All Categories: news
-    <br> -->
-    <!-- Without the undefined detector error ocurrs -->
-    <!-- Categories[0]: news  
-    <br>
-    typeof: object
-    <br>   
-    isArray: true
-    <br> 
-    Length: 1
-    <br> 
-    Length: 1
-    <br> 
-    Object.keys: 0
-    <br>  -->
-    <!-- Now I can loop over the categories, before I couldnt because
-    one post has categories as Undefined -->
-    <!-- 
-        Category[0]: news
+        Category[0]: Electrical Engineering
         <br> 
     </br>
     - Title: BSc Thesis
     <br>
-    All Categories: EE,DSP
+    All Categories: Electrical Engineering
     <br> -->
     <!-- Without the undefined detector error ocurrs -->
-    <!-- Categories[0]: EE  
-    <br>
-    typeof: object
-    <br>   
-    isArray: true
-    <br> 
-    Length: 2
-    <br> 
-    Length: 2
-    <br> 
-    Object.keys: 0,1
-    <br>  -->
-    <!-- Now I can loop over the categories, before I couldnt because
-    one post has categories as Undefined -->
-    <!-- 
-        Category[0]: EE
-        <br> 
-        Category[1]: DSP
-        <br> 
-    </br>
-    - Title: C++ Project
-    <br>
-    All Categories: C++
-    <br> -->
-    <!-- Without the undefined detector error ocurrs -->
-    <!-- Categories[0]: C++  
+    <!-- Categories[0]: Electrical Engineering  
     <br>
     typeof: object
     <br>   
@@ -344,11 +321,34 @@ Category[1]: Control Systems -->
     <!-- Now I can loop over the categories, before I couldnt because
     one post has categories as Undefined -->
     <!-- 
-        Category[0]: C++
+        Category[0]: Electrical Engineering
+        <br> 
+    </br>
+    - Title: C++ Project
+    <br>
+    All Categories: Software Engineering
+    <br> -->
+    <!-- Without the undefined detector error ocurrs -->
+    <!-- Categories[0]: Software Engineering  
+    <br>
+    typeof: object
+    <br>   
+    isArray: true
+    <br> 
+    Length: 1
+    <br> 
+    Length: 1
+    <br> 
+    Object.keys: 0
+    <br>  -->
+    <!-- Now I can loop over the categories, before I couldnt because
+    one post has categories as Undefined -->
+    <!-- 
+        Category[0]: Software Engineering
         <br> 
  -->
 <div class="list grid" style="column-gap: 20px;">
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-categories="Computer Vision,Control Systems" data-listing-date-sort="1685311200000" data-listing-file-modified-sort="1688069804010" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-categories="Computer Vision,Control Systems" data-listing-date-sort="1685311200000" data-listing-file-modified-sort="1688401633521" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
             <!-- IMAGE -->
             <a href="../projects/computer-vision/index.html">
                 <img src="../projects/computer-vision/image.jpg" alt="Above we use the left option to specify items for the left side of the navigation bar. You can also use the right option to specify items for the right side." class="thumbnail-image card-img" style="height: 150px;">
@@ -374,23 +374,34 @@ Category[1]: Control Systems -->
                         Control Systems
                 </div> -->
                 <div class="listing-categories">
+                     <!-- Displays Categories -->
                         <div class="listing-category" onclick="window.quartoListingCategory('Computer Vision'); return false;">
                             Computer Vision
                             </div>
                         <div class="listing-category" onclick="window.quartoListingCategory('Control Systems'); return false;">
                             Control Systems
                             </div>
-                    </div>
+                    <!-- Displays Technology Tags -->
+                        <div class="listing-category-inactive">
+                            Python
+                        </div>
+                        <div class="listing-category-inactive">
+                            Kaggle
+                        </div>
+                        <div class="listing-category-inactive">
+                            Tensorflow
+                        </div>
+                </div> 
                 <a class="button small flex" href="../projects/computer-vision/index.html">
                     Article
                     </a> 
-                    <a class="button small flex" href="https://github.com/" target="_blank" rel="noreferrer">
+                    <a class="button small flex" href="https://github.com/danilotpnta/ComputerVission" target="_blank" rel="noreferrer">
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
             </div>
             <!-- <div class="card-header py-1 px-2  bg-light">
-                    <a  class="button small flex" href="https://github.com/" target="_blank" rel="noreferrer">
+                    <a  class="button small flex" href="https://github.com/danilotpnta/ComputerVission" target="_blank" rel="noreferrer">
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
@@ -402,7 +413,7 @@ Category[1]: Control Systems -->
                 </b>
                  -->
         </div>
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="1" data-categories="Machine Learning" data-listing-date-sort="1685311200000" data-listing-file-modified-sort="1688387647245" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="1" data-categories="Machine Learning,Algorithms" data-listing-date-sort="1685311200000" data-listing-file-modified-sort="1688401594529" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
             <!-- IMAGE -->
             <a href="../projects/artificial-intelligence/index.html">
                 <img src="../projects/artificial-intelligence/image.jpg" alt="Above we use the left option to specify items for the left side of the navigation bar. You can also use the right option to specify items for the right side." class="thumbnail-image card-img" style="height: 150px;">
@@ -425,23 +436,32 @@ Category[1]: Control Systems -->
             <div class="card-body post-contents">
                 <!-- <div class="listing-categories">
                         Machine Learning
+                        Algorithms
                 </div> -->
                 <div class="listing-categories">
+                     <!-- Displays Categories -->
                         <div class="listing-category" onclick="window.quartoListingCategory('Machine Learning'); return false;">
                             Machine Learning
                             </div>
-                    </div>
+                        <div class="listing-category" onclick="window.quartoListingCategory('Algorithms'); return false;">
+                            Algorithms
+                            </div>
+                    <!-- Displays Technology Tags -->
+                        <div class="listing-category-inactive">
+                            Python
+                        </div>
+                </div> 
                 <a class="button small flex" href="../projects/artificial-intelligence/index.html">
                     Article
                     </a> 
-                    <a class="button small flex" href="https://github.com/" target="_blank" rel="noreferrer">
-                        Demo
+                    <a class="button small flex" href="https://github.com/danilotpnta/CS188_Artificial-Intelligence-Berkeley" target="_blank" rel="noreferrer">
+                        Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
             </div>
             <!-- <div class="card-header py-1 px-2  bg-light">
-                    <a  class="button small flex" href="https://github.com/" target="_blank" rel="noreferrer">
-                        Demo
+                    <a  class="button small flex" href="https://github.com/danilotpnta/CS188_Artificial-Intelligence-Berkeley" target="_blank" rel="noreferrer">
+                        Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
             </div> -->
@@ -452,7 +472,7 @@ Category[1]: Control Systems -->
                 </b>
                  -->
         </div>
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="2" data-categories="news" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1688069835795" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="2" data-categories="Optimization" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1688401744661" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
             <!-- IMAGE -->
             <a href="../projects/travel-sales-project/index.html">
                 <img src="../projects/travel-sales-project/image.jpeg" alt="This is the first post in a Quarto blog. Welcome!" class="thumbnail-image card-img" style="height: 150px;">
@@ -474,23 +494,31 @@ Category[1]: Control Systems -->
             <!-- </div> -->
             <div class="card-body post-contents">
                 <!-- <div class="listing-categories">
-                        news
+                        Optimization
                 </div> -->
                 <div class="listing-categories">
-                        <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-                            news
+                     <!-- Displays Categories -->
+                        <div class="listing-category" onclick="window.quartoListingCategory('Optimization'); return false;">
+                            Optimization
                             </div>
-                    </div>
+                    <!-- Displays Technology Tags -->
+                        <div class="listing-category-inactive">
+                            Python
+                        </div>
+                        <div class="listing-category-inactive">
+                            Numba
+                        </div>
+                </div> 
                 <a class="button small flex" href="../projects/travel-sales-project/index.html">
                     Article
                     </a> 
-                    <a class="button small flex" href="https://github.com/" target="_blank" rel="noreferrer">
+                    <a class="button small flex" href="https://github.com/danilotpnta/TSP_EA" target="_blank" rel="noreferrer">
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
             </div>
             <!-- <div class="card-header py-1 px-2  bg-light">
-                    <a  class="button small flex" href="https://github.com/" target="_blank" rel="noreferrer">
+                    <a  class="button small flex" href="https://github.com/danilotpnta/TSP_EA" target="_blank" rel="noreferrer">
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
@@ -502,7 +530,7 @@ Category[1]: Control Systems -->
                 </b>
                  -->
         </div>
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="3" data-categories="news" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1688069819961" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="3" data-categories="Machine Learning" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1688401683412" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
             <!-- IMAGE -->
             <a href="../projects/mlp/index.html">
                 <img src="../projects/mlp/image.png" alt="This is the first post in a Quarto blog. Welcome!" class="thumbnail-image card-img" style="height: 150px;">
@@ -524,23 +552,31 @@ Category[1]: Control Systems -->
             <!-- </div> -->
             <div class="card-body post-contents">
                 <!-- <div class="listing-categories">
-                        news
+                        Machine Learning
                 </div> -->
                 <div class="listing-categories">
-                        <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-                            news
+                     <!-- Displays Categories -->
+                        <div class="listing-category" onclick="window.quartoListingCategory('Machine Learning'); return false;">
+                            Machine Learning
                             </div>
-                    </div>
+                    <!-- Displays Technology Tags -->
+                        <div class="listing-category-inactive">
+                            Python
+                        </div>
+                        <div class="listing-category-inactive">
+                            OpenSpiel
+                        </div>
+                </div> 
                 <a class="button small flex" href="../projects/mlp/index.html">
                     Article
                     </a> 
-                    <a class="button small flex" href="https://github.com/" target="_blank" rel="noreferrer">
+                    <a class="button small flex" href="https://github.com/danilotpnta/MachineLearning" target="_blank" rel="noreferrer">
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
             </div>
             <!-- <div class="card-header py-1 px-2  bg-light">
-                    <a  class="button small flex" href="https://github.com/" target="_blank" rel="noreferrer">
+                    <a  class="button small flex" href="https://github.com/danilotpnta/MachineLearning" target="_blank" rel="noreferrer">
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
@@ -552,21 +588,21 @@ Category[1]: Control Systems -->
                 </b>
                  -->
         </div>
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="4" data-categories="news" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1688069828974" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="4" data-categories="Electrical Engineering" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1688401721811" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
             <!-- IMAGE -->
             <a href="../projects/segway/index.html">
                 <img src="../projects/segway/image.png" alt="This is the first post in a Quarto blog. Welcome!" class="thumbnail-image card-img" style="height: 150px;">
                 <div class="card-title">
-                    CS Project
+                    Control Systems Project
                 </div>
             </a>
             <!-- <div class="card-header py-1 px-2  bg-light"> -->
                 <!-- <a href="" class="listing-title">
-                    CS Project
+                    Control Systems Project
                 </a>  -->
                 <!-- <small class="card-text text-nowrap inline-block">
                     <a href="" class="listing-title">
-                        CS Project
+                        Control Systems Project
                     </a> 
                 </small> -->
                 <!-- <a class="button small flex" href="https://github.com/taniarascia/takenote" target="_blank" rel="noreferrer">Source 
@@ -574,23 +610,28 @@ Category[1]: Control Systems -->
             <!-- </div> -->
             <div class="card-body post-contents">
                 <!-- <div class="listing-categories">
-                        news
+                        Electrical Engineering
                 </div> -->
                 <div class="listing-categories">
-                        <div class="listing-category" onclick="window.quartoListingCategory('news'); return false;">
-                            news
+                     <!-- Displays Categories -->
+                        <div class="listing-category" onclick="window.quartoListingCategory('Electrical Engineering'); return false;">
+                            Electrical Engineering
                             </div>
-                    </div>
+                    <!-- Displays Technology Tags -->
+                        <div class="listing-category-inactive">
+                            Other
+                        </div>
+                </div> 
                 <a class="button small flex" href="../projects/segway/index.html">
                     Article
                     </a> 
-                    <a class="button small flex" href="https://github.com/" target="_blank" rel="noreferrer">
+                    <a class="button small flex" href="https://github.com/danilotpnta/Segway" target="_blank" rel="noreferrer">
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
             </div>
             <!-- <div class="card-header py-1 px-2  bg-light">
-                    <a  class="button small flex" href="https://github.com/" target="_blank" rel="noreferrer">
+                    <a  class="button small flex" href="https://github.com/danilotpnta/Segway" target="_blank" rel="noreferrer">
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
@@ -602,7 +643,7 @@ Category[1]: Control Systems -->
                 </b>
                  -->
         </div>
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="5" data-categories="EE,DSP" data-listing-date-sort="1674946800000" data-listing-file-modified-sort="1688397448926" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="5" data-categories="Electrical Engineering" data-listing-date-sort="1674946800000" data-listing-file-modified-sort="1688401606373" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
             <!-- IMAGE -->
             <a href="../projects/bsc-thesis/Python-demo.html">
                 <img src="../projects/bsc-thesis/image.jpg" alt="For a demonstration of a line plot on a polar axis, see Figure&nbsp;1." class="thumbnail-image card-img" style="height: 150px;">
@@ -624,17 +665,24 @@ Category[1]: Control Systems -->
             <!-- </div> -->
             <div class="card-body post-contents">
                 <!-- <div class="listing-categories">
-                        EE
-                        DSP
+                        Electrical Engineering
                 </div> -->
                 <div class="listing-categories">
-                        <div class="listing-category" onclick="window.quartoListingCategory('EE'); return false;">
-                            EE
+                     <!-- Displays Categories -->
+                        <div class="listing-category" onclick="window.quartoListingCategory('Electrical Engineering'); return false;">
+                            Electrical Engineering
                             </div>
-                        <div class="listing-category" onclick="window.quartoListingCategory('DSP'); return false;">
-                            DSP
-                            </div>
-                    </div>
+                    <!-- Displays Technology Tags -->
+                        <div class="listing-category-inactive">
+                            C++
+                        </div>
+                        <div class="listing-category-inactive">
+                            LateX
+                        </div>
+                        <div class="listing-category-inactive">
+                            Arduino
+                        </div>
+                </div> 
                 <a class="button small flex" href="../projects/bsc-thesis/Python-demo.html">
                     Article
                     </a> 
@@ -642,16 +690,8 @@ Category[1]: Control Systems -->
                         Paper
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
-                    <a class="button small flex" href="https://github.com/" target="_blank" rel="noreferrer">
-                        Source
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
-                    </a> 
             </div>
             <!-- <div class="card-header py-1 px-2  bg-light">
-                    <a  class="button small flex" href="https://github.com/" target="_blank" rel="noreferrer">
-                        Source
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
-                    </a> 
             </div> -->
             <!-- Display Publication date if any -->
             <!-- 
@@ -660,7 +700,7 @@ Category[1]: Control Systems -->
                 </b>
                  -->
         </div>
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="6" data-categories="C++" data-listing-date-sort="1674946800000" data-listing-file-modified-sort="1688387659846" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="6" data-categories="Software Engineering" data-listing-date-sort="1674946800000" data-listing-file-modified-sort="1688401662923" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
             <!-- IMAGE -->
             <a href="../projects/cpp-project/Python-demo.html">
                 <img src="../projects/cpp-project/image.png" alt="For a demonstration of a line plot on a polar axis, see Figure&nbsp;1." class="thumbnail-image card-img" style="height: 150px;">
@@ -682,23 +722,28 @@ Category[1]: Control Systems -->
             <!-- </div> -->
             <div class="card-body post-contents">
                 <!-- <div class="listing-categories">
-                        C++
+                        Software Engineering
                 </div> -->
                 <div class="listing-categories">
-                        <div class="listing-category" onclick="window.quartoListingCategory('C++'); return false;">
-                            C++
+                     <!-- Displays Categories -->
+                        <div class="listing-category" onclick="window.quartoListingCategory('Software Engineering'); return false;">
+                            Software Engineering
                             </div>
-                    </div>
+                    <!-- Displays Technology Tags -->
+                        <div class="listing-category-inactive">
+                            C++
+                        </div>
+                </div> 
                 <a class="button small flex" href="../projects/cpp-project/Python-demo.html">
                     Article
                     </a> 
-                    <a class="button small flex" href="https://github.com/" target="_blank" rel="noreferrer">
+                    <a class="button small flex" href="https://github.com/danilotpnta/PacmanGame" target="_blank" rel="noreferrer">
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
             </div>
             <!-- <div class="card-header py-1 px-2  bg-light">
-                    <a  class="button small flex" href="https://github.com/" target="_blank" rel="noreferrer">
+                    <a  class="button small flex" href="https://github.com/danilotpnta/PacmanGame" target="_blank" rel="noreferrer">
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
