@@ -88,7 +88,7 @@
     "href": "books/index.html",
     "title": "Danilo Toapanta",
     "section": "",
-    "text": "This section covers various books that I think are worth reading."
+    "text": "This section covers various books that I have read and think are worth reading."
   },
   {
     "objectID": "index.html",
@@ -96,6 +96,13 @@
     "title": "Danilo Toapanta",
     "section": "",
     "text": "Recognize this picture? shot me a message if you do. \n\nNews\n\n\n    \n        \n            Jun 2023 - I will do an intership at IMEC\n            May 2023 - Have been accepted to the M.Sc. in AI at VU\n            Feb 2023 - Now the website has a Blog section\n            Nov 2023 - Have completed AI Berkeley Course\n            Sep 2022 - Started M.Sc. in CS at KU Leuven\n        \n    \n\n\n\n\n\n\n\nNote\n\n\n\nThis website is under construction. To review changes visit DEV page of this site."
+  },
+  {
+    "objectID": "tailor/index.html",
+    "href": "tailor/index.html",
+    "title": "Danilo Toapanta",
+    "section": "",
+    "text": "In this section I reflect on the learnings about male fashion that have shaped my vision on how to dress and show you what I learned."
   },
   {
     "objectID": "blog/2023-06-05-how-hash-table-works/how-hash-table-works.html",
@@ -200,7 +207,7 @@
     "href": "about.html",
     "title": "Danilo Toapanta",
     "section": "",
-    "text": "Hi, there! This is Danilo.\n                    \n                    I’m an AI researcher based in the Netherlands.\n                    I studied Electrical Engineering at University of Twente and now I am doing my master in Artificial Intillegence.\n                    When I am not trying to figure out how my computer works, I like to swim, read books, tailor my clothes, and spend time with my family.\n                    \n                        You can look me up on Github↗. \n                        Check out my LinkedIn↗. \n                        Read my lastest post. \n                        My (outdated) résumé. Message me↗.\n                        Or see what I’m working right now."
+    "text": "Hi, there! This is Danilo.\n                    \n                    I’m an AI researcher based in the Netherlands.\n                    I studied Electrical Engineering at University of Twente and now I am doing my master in Artificial Intillegence.\n                    When I am not trying to figure out how my computer works, I like to read books, go for a run or swim, tailor my clothes, and spend some quality time with my family.\n                    \n                        You can look me up on Github↗. \n                        Check out my LinkedIn↗. \n                        Read my lastest post. \n                        My (outdated) résumé. Message me↗.\n                        Or see what I’m working right now."
   },
   {
     "objectID": "now/index.html",

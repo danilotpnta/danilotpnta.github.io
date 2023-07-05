@@ -68,3 +68,13 @@ ul.c-gridview li a small {
 .show-anchor-link .anchorjs-link {
 opacity: 1;
 }
+
+.show-anchor-link a {
+    color: #0d6efd;
+}
+
+hr{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #dee2e6;
+}
