@@ -29,8 +29,8 @@ ul.c-gridview {
 ul.c-gridview li {
     width: 25%;
     padding: 0 10px;
-    padding-right: 15px;
-    padding-left: 0;
+    /* padding-right: 15px;
+    padding-left: 0; */
     margin-bottom: 40px;
     font-size: 14px;
     line-height: 20px;
@@ -78,3 +78,4 @@ hr{
     border-style: solid;
     border-color: #dee2e6;
 }
+
