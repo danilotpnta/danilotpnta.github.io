@@ -1,0 +1,21 @@
+
+/* Alterign the DEFAULT Category listing */
+
+div.quarto-post .metadata {
+	font-size: 1em;
+	flex-basis: 13%
+} 
+
+.disable_blog_link_decoration a {
+	text-decoration: none;
+} 
+
+
+.table>:not(:first-child) {
+    border-top: none;
+}
+
+.listing-categories{
+	cursor: pointer;
+}
+
