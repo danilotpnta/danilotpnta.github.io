@@ -19,3 +19,6 @@ div.quarto-post .metadata {
 	cursor: pointer;
 }
 
+.table-fixed {
+	table-layout: fixed;
+ }
