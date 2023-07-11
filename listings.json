@@ -14,7 +14,6 @@
   {
     "listing": "/blog/index.html",
     "items": [
-      "/blog/listing-table.ejs.html",
       "/blog/2023-06-20-running-my-first-marathon/index.html",
       "/blog/2023-06-09-lua-shorcuts/index.html",
       "/blog/2023-06-05-how-hash-table-works/how-hash-table-works.html",
