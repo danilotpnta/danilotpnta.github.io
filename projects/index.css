@@ -90,9 +90,20 @@ Start of the Sidebar-margin: [body-end-outset] minmax(10px, 30px) <-- 30px makes
 
 .listing-category-inactive {
     border: transparent;
-    padding-right: 0rem;
+    padding-right: 0.25rem;
+    padding-left: .25rem;
+    margin-right: 0;
+    margin-left: 0;
     /* text-transform: capitalize;
     font-size: 0.6em; */
 }
 
 
+.listing-category-inactive:hover {
+    /* text-decoration: solid;  */
+    background-color: #66666614;
+}
+
+div#tags:hover{
+    background-color: transparent;
+}
