@@ -32,6 +32,11 @@ a.button, button {
     padding-top: .7rem;
 }
 
+.card-body{
+    padding-bottom: 0rem;
+    padding-top: 0.8rem;
+}
+
 .card-title {
     opacity: .9;
     font-weight: 500;
@@ -45,4 +50,18 @@ a.button, button {
     border-bottom-style: solid; */
 }
 
+
+#quarto-document-content {
+    margin-top: -1.2rem;
+}
+
+@media (max-width: 991px){
+    #quarto-document-content {
+        margin-top: 0rem;
+    }
+}
+
+#see-all-categories{
+    padding-bottom: 0.3rem;
+}
 

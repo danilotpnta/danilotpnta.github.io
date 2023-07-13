@@ -7,9 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Danilo Toapanta">
-<meta name="dcterms.date" content="2023-06-09">
 
-<title>Danilo Toapanta - On the topic of Optimization</title>
+<title>Danilo Toapanta – listing-table.ejs</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,58 +21,24 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
-<link href="../../img/Danilo.png" rel="icon" type="image/png">
-<script src="../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<link href="../img/Danilo.png" rel="icon" type="image/png">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -99,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../../index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Danilo Toapanta</span>
     </a>
   </div>
@@ -109,15 +74,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../blog/index.html" rel="" target="">
+    <a class="nav-link" href="../blog/index.html" rel="" target="">
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects/index.html" rel="" target="">
+    <a class="nav-link" href="../projects/index.html" rel="" target="">
  <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
+    <a class="nav-link" href="../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -126,7 +91,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../dev/" rel="" target=""><i class="bi bi-braces" role="img">
+    <a class="nav-link" href="../dev/" rel="" target=""><i class="bi bi-braces" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -139,66 +104,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
-    <div class="quarto-title-banner page-columns page-full">
-        <div class="quarto-title column-body">
-            <h1 class="title">On the topic of Optimization</h1>
-                
-            <!-- Description Block -->
-                
-            <!-- categories Block -->
-                                            <div class="quarto-categories">
-                                        <div class="quarto-category">
-                        <a href="../../blog/#category=Workflow">Workflow
-                        </a>
-
-                    </div>
-                        
-                                                        </div>
-                            
-        </div>
-    </div>
-
-
-    
-    <div class="quarto-title-meta">
-
-        <div>
-        <div class="quarto-title-meta-heading">Author</div>
-        <div class="quarto-title-meta-contents">
-                 <p><a href="https://danilotpnta.github.io/">Danilo Toapanta</a> </p>
-              </div>
-      </div>
-        
-        <div>
-        <div class="quarto-title-meta-heading">Published</div>
-        <div class="quarto-title-meta-contents">
-          <p class="date">June 9, 2023</p>
-        </div>
-      </div>
-      
-        
-      </div>
-      
-
-        <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-center justify-content-sm-start" role="group" aria-label="Post Links">
-                <a href="https://www.google.com/" class="btn btn-secondary"><i class="bi bi-file-slides-fill me-1"></i> Slides</a>
-                <a href="https://www.google.com/" class="btn btn-secondary"><i class="bi bi-github me-1"></i> Code</a>
-                <a href="https://www.google.com/" class="btn btn-secondary"><i class="bi bi-play-btn-fill me-1"></i> Video</a>
-            </div>
-    
-</header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#microsoft-edge" id="toc-microsoft-edge" class="nav-link active" data-scroll-target="#microsoft-edge">Microsoft Edge</a></li>
-  <li><a href="#hammerspoon" id="toc-hammerspoon" class="nav-link" data-scroll-target="#hammerspoon">Hammerspoon</a></li>
-  <li><a href="#honourable-mentions" id="toc-honourable-mentions" class="nav-link" data-scroll-target="#honourable-mentions">Honourable Mentions</a></li>
-  </ul>
-</nav>
+    
 </nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
@@ -207,113 +116,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
-<!-- <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Running my first Marathon</h1>
-                  <div>
-        <div class="description">
-          I will be running at the 42km TCS Amsterdam 2023, 15th October
-        </div>
-      </div>
-                          <div class="quarto-categories">
-                <div class="quarto-category">News</div>
-              </div>
-                  </div>
-  </div> -->
-
-  <!-- ---
-  coming-soon: true
-  tags: [Spanish]
-  --- -->
 
 
+<p>&lt;% // The Fields const fields = listing.fields;</p>
+<p>// Whether to enable sorting const sortUi = listing[“sort-ui”] !== false;</p>
+<p>// The height for images const imgHeight = listing[‘image-height’];</p>
+<p>// Striped? const stripedCls = listing[‘table-striped’] ? ” table-striped” : ““;</p>
+<p>const sortFields = listing.utilities.sortableFieldData().map(fieldData =&gt; fieldData.listingSort.field); const hasSort = (field) =&gt; { if (sortFields.includes(field)){ return true; } else if (sortFields.includes(<code>listing-${field}</code>) || sortFields.includes(<code>listing-${field}-sort</code>)) { return true; } else { return false; } };</p>
+<p>// hover const hoverCls = listing[‘table-hover’] ? ” table-hover” : ““; const onclick = (item) =&gt; { if (listing[‘table-hover’]) { return <code>onclick="href = this.querySelector('a').getAttribute('href');\n if (href) { window.location=href ; return false; }"</code>; } else { return”“; } }</p>
+<p>const outputValue = (itemNumber, field) =&gt; { let value = item[field]; if (field === “image”) { if (item.image) { value = listing.utilities.img(itemNumber, item[field], ““, item[‘image-alt’]); } else { value = listing.utilities.imgPlaceholder(itemNumber, item.outputHref); } } return listing.utilities.outputLink(item, field, value, <code>listing-${field}</code>); } %&gt;</p>
 
 
+&lt;% for (const field of fields) { %&gt;
 
+&lt;% } %&gt;
+<p>&lt;% for (item of items) { // Capture the item number for utility functions that need it const itemNumber = listing.utilities.itemNumber(); %&gt;</p>&lt;%= onclick(item) %&gt;&gt;
+&lt;% for (const field of fields){ %&gt;
 
+&lt;% } %&gt;
 
-
-
-<p>Below the apps I use in a daily basis to make my life easier:</p>
-<section id="microsoft-edge" class="level3">
-<h3 class="anchored" data-anchor-id="microsoft-edge">Microsoft Edge</h3>
-<blockquote class="blockquote">
-<p>Prefer this over Safari because of add-ons. Chrome is the same</p>
-</blockquote>
-<p>I used it to install apps like YouTube or Google Translator so that when I hit a <a href="#hammerspoon">shortcut command</a>, it opens that app. Here it’s an example.</p>
-<p><img src="https://winaero.com/blog/wp-content/uploads/2019/12/Edge-Install-PWA-Site.png" alt="8" width="500"></p>
-</section>
-<section id="hammerspoon" class="level3">
-<h3 class="anchored" data-anchor-id="hammerspoon">Hammerspoon</h3>
-<blockquote class="blockquote">
-<p><a href="https://www.hammerspoon.org/">App Link</a>. Creates global shortcuts</p>
-</blockquote>
-<p>Uses <code>Lua</code> programming language to assign keybindings to certain actions. Here a sneak peek of what can you do.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">--- Open App</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> open<span class="op">(</span><span class="va">name</span><span class="op">)</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="kw">function</span><span class="op">()</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>        <span class="va">hs</span><span class="op">.</span><span class="va">application</span><span class="op">.</span>launchOrFocus<span class="op">(</span><span class="va">name</span><span class="op">)</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="va">name</span> <span class="op">==</span> <span class="st">'Finder'</span> <span class="cf">then</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>            <span class="va">hs</span><span class="op">.</span><span class="va">appfinder</span><span class="op">.</span>appFromName<span class="op">(</span><span class="va">name</span><span class="op">):</span>activate<span class="op">()</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The above function can be called to open an <code>app: Google Maps</code> by an i.e.&nbsp;the shortcut: <code>⌘ + M</code></p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">--- Binding Keys</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="va">hs</span><span class="op">.</span><span class="va">hotkey</span><span class="op">.</span>bind<span class="op">({</span> <span class="st">"cmd"</span> <span class="op">},</span> <span class="st">"M"</span><span class="op">,</span> open<span class="op">(</span><span class="st">"Google Maps"</span><span class="op">))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>For complete implementation visit, this <a href="https://github.com/danilotpnta/hammerspoon-config">repo</a>.</p>
-For Windows alternative see the code below:
-<details>
-<summary>
-Code
-</summary>
-<pre><code>#MaxHotkeysPerInterval 200
-!WheelUp::Volume_Up
-!WheelDown::Volume_Down
-!MButton::Volume_Mute
-&lt;#!e::
-Run, %WINDIR%\explorer.exe
-return
-!q::Send !{F4}
-return
-&lt;#!x::
-Run, msedge.exe
-return
-!y::
-Run, C:\Users\datoapnta\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\YouTube.lnk
-return</code></pre>
-</details>
-</section>
-<section id="honourable-mentions" class="level3">
-<h3 class="anchored" data-anchor-id="honourable-mentions">Honourable Mentions</h3>
-<blockquote class="blockquote">
-<p>The apps above can do the same, but I like the UX interface.</p>
-</blockquote>
-<table class="table">
+&lt;% } %&gt;
+<table class="quarto-listing-table table<%- stripedCls %><%- hoverCls %>">
 <thead>
-<tr class="header">
-<th>App</th>
-<th>Description</th>
-</tr>
+<tr><th>
+&lt;% if (sortUi &amp;&amp; hasSort(field)) { %&gt;<a class="sort" data-sort="<%-listing.utilities.sortTarget(field)%>" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">&lt;% } %&gt;&lt;%= listing.utilities.fieldName(field) %&gt;&lt;% if (sortUi &amp;&amp; hasSort(field)) { %&gt;</a>&lt;% } %&gt;
+</th></tr>
 </thead>
-<tbody>
-<tr class="odd">
-<td><a href="https://folivora.ai/">BetterTouchTool</a></td>
-<td>Enables trackpad new gestures shortcuts</td>
-</tr>
-<tr class="even">
-<td><a href="https://www.autohotkey.com/">AutoHotkey</a></td>
-<td>Same as Hammerspoon but for Windows</td>
-</tr>
-<tr class="odd">
-<td><a href="https://freemacsoft.net/tiles/">Tiles</a></td>
-<td>Windows manager (allows keybindings)</td>
-</tr>
-</tbody>
+<tbody class="list">
+
+<tr <%="listing.utilities.metadataAttrs(item)" %=""><td>
+&lt;%= outputValue(itemNumber, field) %&gt;
+</td></tr></tbody>
+
 </table>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -673,13 +510,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="../../about.html"><span class="footerDaniloToapanta">Mantained by Danilo Toapanta</span></a>
+    <a class="nav-link" href="../about.html"><span class="footerDaniloToapanta">Mantained by Danilo Toapanta</span></a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../coming-soon.html">Newsletter</a>
+    <a class="nav-link" href="../coming-soon.html">Newsletter</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../docs/sitemap.xml">RSS</a>
+    <a class="nav-link" href="../docs/sitemap.xml">RSS</a>
   </li>  
 </ul>
     </div>
