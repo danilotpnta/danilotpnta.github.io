@@ -69,7 +69,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-image','listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
       
-      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-language","listing-freeze","listing-title-block-banner","listing-author","listing-title","listing-image","listing-date","listing-categories","listing-jupyter","listing-paper","listing-tags","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-source","listing-subtitle","listing-sidebar"],
+      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-language","listing-freeze","listing-title-block-banner","listing-author","listing-title","listing-image","listing-date","listing-categories","listing-jupyter","listing-paper","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-source","listing-subtitle","listing-sidebar"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -193,7 +193,7 @@ Category[1]: Control Systems -->
     </br>
     - Title: CV Project
     <br>
-    All Categories: Computer Vision,Control Systems
+    All Categories: Computer Vision,Control Systems,TAGS,Python,Kaggle,Tensorflow
     <br> -->
     <!-- Without the undefined detector error ocurrs -->
     <!-- Categories[0]: Computer Vision  
@@ -202,11 +202,11 @@ Category[1]: Control Systems -->
     <br>   
     isArray: true
     <br> 
-    Length: 2
+    Length: 6
     <br> 
-    Length: 2
+    Length: 6
     <br> 
-    Object.keys: 0,1
+    Object.keys: 0,1,2,3,4,5
     <br>  -->
     <!-- Now I can loop over the categories, before I couldnt because
     one post has categories as Undefined -->
@@ -215,10 +215,18 @@ Category[1]: Control Systems -->
         <br> 
         Category[1]: Control Systems
         <br> 
+        Category[2]: TAGS
+        <br> 
+        Category[3]: Python
+        <br> 
+        Category[4]: Kaggle
+        <br> 
+        Category[5]: Tensorflow
+        <br> 
     </br>
     - Title: AI Project
     <br>
-    All Categories: Machine Learning,Algorithms
+    All Categories: Machine Learning,Algorithms,TAGS,Python
     <br> -->
     <!-- Without the undefined detector error ocurrs -->
     <!-- Categories[0]: Machine Learning  
@@ -227,11 +235,11 @@ Category[1]: Control Systems -->
     <br>   
     isArray: true
     <br> 
-    Length: 2
+    Length: 4
     <br> 
-    Length: 2
+    Length: 4
     <br> 
-    Object.keys: 0,1
+    Object.keys: 0,1,2,3
     <br>  -->
     <!-- Now I can loop over the categories, before I couldnt because
     one post has categories as Undefined -->
@@ -240,10 +248,14 @@ Category[1]: Control Systems -->
         <br> 
         Category[1]: Algorithms
         <br> 
+        Category[2]: TAGS
+        <br> 
+        Category[3]: Python
+        <br> 
     </br>
     - Title: EA Project
     <br>
-    All Categories: Optimization
+    All Categories: Optimization,TAGS,Python,Numba
     <br> -->
     <!-- Without the undefined detector error ocurrs -->
     <!-- Categories[0]: Optimization  
@@ -252,21 +264,27 @@ Category[1]: Control Systems -->
     <br>   
     isArray: true
     <br> 
-    Length: 1
+    Length: 4
     <br> 
-    Length: 1
+    Length: 4
     <br> 
-    Object.keys: 0
+    Object.keys: 0,1,2,3
     <br>  -->
     <!-- Now I can loop over the categories, before I couldnt because
     one post has categories as Undefined -->
     <!-- 
         Category[0]: Optimization
         <br> 
+        Category[1]: TAGS
+        <br> 
+        Category[2]: Python
+        <br> 
+        Category[3]: Numba
+        <br> 
     </br>
     - Title: ML Project
     <br>
-    All Categories: Machine Learning
+    All Categories: Machine Learning,TAGS,Python,OpenSpiel
     <br> -->
     <!-- Without the undefined detector error ocurrs -->
     <!-- Categories[0]: Machine Learning  
@@ -275,16 +293,22 @@ Category[1]: Control Systems -->
     <br>   
     isArray: true
     <br> 
-    Length: 1
+    Length: 4
     <br> 
-    Length: 1
+    Length: 4
     <br> 
-    Object.keys: 0
+    Object.keys: 0,1,2,3
     <br>  -->
     <!-- Now I can loop over the categories, before I couldnt because
     one post has categories as Undefined -->
     <!-- 
         Category[0]: Machine Learning
+        <br> 
+        Category[1]: TAGS
+        <br> 
+        Category[2]: Python
+        <br> 
+        Category[3]: OpenSpiel
         <br> 
     </br>
     - Title: Control Systems Project
@@ -312,7 +336,7 @@ Category[1]: Control Systems -->
     </br>
     - Title: BSc Thesis
     <br>
-    All Categories: Electrical Engineering
+    All Categories: Electrical Engineering,TAGS,C++,LateX,Arduino
     <br> -->
     <!-- Without the undefined detector error ocurrs -->
     <!-- Categories[0]: Electrical Engineering  
@@ -321,21 +345,29 @@ Category[1]: Control Systems -->
     <br>   
     isArray: true
     <br> 
-    Length: 1
+    Length: 5
     <br> 
-    Length: 1
+    Length: 5
     <br> 
-    Object.keys: 0
+    Object.keys: 0,1,2,3,4
     <br>  -->
     <!-- Now I can loop over the categories, before I couldnt because
     one post has categories as Undefined -->
     <!-- 
         Category[0]: Electrical Engineering
         <br> 
+        Category[1]: TAGS
+        <br> 
+        Category[2]: C++
+        <br> 
+        Category[3]: LateX
+        <br> 
+        Category[4]: Arduino
+        <br> 
     </br>
     - Title: C++ Project
     <br>
-    All Categories: Software Engineering
+    All Categories: Software Engineering,TAGS,C++
     <br> -->
     <!-- Without the undefined detector error ocurrs -->
     <!-- Categories[0]: Software Engineering  
@@ -344,20 +376,24 @@ Category[1]: Control Systems -->
     <br>   
     isArray: true
     <br> 
-    Length: 1
+    Length: 3
     <br> 
-    Length: 1
+    Length: 3
     <br> 
-    Object.keys: 0
+    Object.keys: 0,1,2
     <br>  -->
     <!-- Now I can loop over the categories, before I couldnt because
     one post has categories as Undefined -->
     <!-- 
         Category[0]: Software Engineering
         <br> 
+        Category[1]: TAGS
+        <br> 
+        Category[2]: C++
+        <br> 
  -->
 <div class="list grid" style="column-gap: 20px;">
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-categories="Computer Vision,Control Systems" data-listing-date-sort="1685311200000" data-listing-file-modified-sort="1689246481300" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-categories="Computer Vision,Control Systems,TAGS,Python,Kaggle,Tensorflow" data-listing-date-sort="1685311200000" data-listing-file-modified-sort="1689261216464" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
             <!-- IMAGE -->
             <a href="../projects/computer-vision/index.html">
                 <div class="card-title change-title-background-color" style="text-align: center; padding-bottom: 0.4em;  padding-top: 0.4em; ">
@@ -388,45 +424,64 @@ Category[1]: Control Systems -->
                 <!-- <div class="listing-categories">
                         Computer Vision
                         Control Systems
+                        TAGS
+                        Python
+                        Kaggle
+                        Tensorflow
                 </div> -->
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;">
-                     <!-- Displays Categories -->
+                    <!-- Displays Categories -->                
                         <!-- <div class="listing-category" onclick="window.quartoListingCategory('Computer Vision'); return false;">
                             Computer Vision
                         </div> -->
-                        <span class="listing-category">
+                            <span class="listing-category">
                                 <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Computer Vision">
                                     Computer Vision
                                 </a>   
-                        </span>
+                            </span>
                         <!-- <div class="listing-category" onclick="window.quartoListingCategory('Control Systems'); return false;">
                             Control Systems
                         </div> -->
-                        <span class="listing-category">
+                            <span class="listing-category">
                                 <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Control Systems">
                                     Control Systems
                                 </a>   
-                        </span>
+                            </span>
+                        <!-- <div class="listing-category" onclick="window.quartoListingCategory('TAGS'); return false;">
+                            TAGS
+                        </div> -->
                 </div> 
+                <!-- Display TAGS -->
                 <div class="listing-categories" style="padding-top: 0em;">
-                    <!-- Displays Technology Tags Icon -->
-                    <div class="listing-category-inactive" style="text-transform: uppercase;">
+                    <!-- Displays Technology Tag + Icon -->
+                    <div class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
                         <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
                     </div>
-                    <!-- Displays Reaiming Tags text -->
+                    <!-- If there is only one element in Categories then also show "Other" as tag --> 
+                    <!-- Displays Reaiming TAGS items -->
                         <div class="listing-category-inactive">
+                            <!-- If there exist no TAG word in Categories, show "Other" as tag -->
                             <!-- Add 'Python icon' -->
+                                <!-- Disable for now uncomment ONLY FIRST line below to add icon -->
                                 <!-- <i class="fa-brands fa-python" style="color: #6c757d;"> </i> -->
                                 <!--  -->
-                                Python 
+                                <a href="../projects/#category=Python">
+                                    Python
+                                </a>   
                         </div>
                         <div class="listing-category-inactive">
+                            <!-- If there exist no TAG word in Categories, show "Other" as tag -->
                             <!-- Add 'Python icon' -->
-                                Kaggle
+                                <a href="../projects/#category=Kaggle">
+                                    Kaggle
+                                </a>   
                         </div>
                         <div class="listing-category-inactive">
+                            <!-- If there exist no TAG word in Categories, show "Other" as tag -->
                             <!-- Add 'Python icon' -->
-                                Tensorflow
+                                <a href="../projects/#category=Tensorflow">
+                                    Tensorflow
+                                </a>   
                         </div>
                 </div> 
             </div>
@@ -443,7 +498,7 @@ Category[1]: Control Systems -->
                 </b>
                  -->
         </div>
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="1" data-categories="Machine Learning,Algorithms" data-listing-date-sort="1685311200000" data-listing-file-modified-sort="1688401594529" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="1" data-categories="Machine Learning,Algorithms,TAGS,Python" data-listing-date-sort="1685311200000" data-listing-file-modified-sort="1689259624699" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
             <!-- IMAGE -->
             <a href="../projects/artificial-intelligence/index.html">
                 <div class="card-title change-title-background-color" style="text-align: center; padding-bottom: 0.4em;  padding-top: 0.4em; ">
@@ -474,37 +529,48 @@ Category[1]: Control Systems -->
                 <!-- <div class="listing-categories">
                         Machine Learning
                         Algorithms
+                        TAGS
+                        Python
                 </div> -->
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;">
-                     <!-- Displays Categories -->
+                    <!-- Displays Categories -->                
                         <!-- <div class="listing-category" onclick="window.quartoListingCategory('Machine Learning'); return false;">
                             Machine Learning
                         </div> -->
-                        <span class="listing-category">
+                            <span class="listing-category">
                                 <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Machine Learning">
                                     Machine Learning
                                 </a>   
-                        </span>
+                            </span>
                         <!-- <div class="listing-category" onclick="window.quartoListingCategory('Algorithms'); return false;">
                             Algorithms
                         </div> -->
-                        <span class="listing-category">
+                            <span class="listing-category">
                                 <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Algorithms">
                                     Algorithms
                                 </a>   
-                        </span>
+                            </span>
+                        <!-- <div class="listing-category" onclick="window.quartoListingCategory('TAGS'); return false;">
+                            TAGS
+                        </div> -->
                 </div> 
+                <!-- Display TAGS -->
                 <div class="listing-categories" style="padding-top: 0em;">
-                    <!-- Displays Technology Tags Icon -->
-                    <div class="listing-category-inactive" style="text-transform: uppercase;">
+                    <!-- Displays Technology Tag + Icon -->
+                    <div class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
                         <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
                     </div>
-                    <!-- Displays Reaiming Tags text -->
+                    <!-- If there is only one element in Categories then also show "Other" as tag --> 
+                    <!-- Displays Reaiming TAGS items -->
                         <div class="listing-category-inactive">
+                            <!-- If there exist no TAG word in Categories, show "Other" as tag -->
                             <!-- Add 'Python icon' -->
+                                <!-- Disable for now uncomment ONLY FIRST line below to add icon -->
                                 <!-- <i class="fa-brands fa-python" style="color: #6c757d;"> </i> -->
                                 <!--  -->
-                                Python 
+                                <a href="../projects/#category=Python">
+                                    Python
+                                </a>   
                         </div>
                 </div> 
             </div>
@@ -521,7 +587,7 @@ Category[1]: Control Systems -->
                 </b>
                  -->
         </div>
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="2" data-categories="Optimization" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1688401744661" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="2" data-categories="Optimization,TAGS,Python,Numba" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1689259605006" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
             <!-- IMAGE -->
             <a href="../projects/travel-sales-project/index.html">
                 <div class="card-title change-title-background-color" style="text-align: center; padding-bottom: 0.4em;  padding-top: 0.4em; ">
@@ -551,33 +617,48 @@ Category[1]: Control Systems -->
                     </a> 
                 <!-- <div class="listing-categories">
                         Optimization
+                        TAGS
+                        Python
+                        Numba
                 </div> -->
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;">
-                     <!-- Displays Categories -->
+                    <!-- Displays Categories -->                
                         <!-- <div class="listing-category" onclick="window.quartoListingCategory('Optimization'); return false;">
                             Optimization
                         </div> -->
-                        <span class="listing-category">
+                            <span class="listing-category">
                                 <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Optimization">
                                     Optimization
                                 </a>   
-                        </span>
+                            </span>
+                        <!-- <div class="listing-category" onclick="window.quartoListingCategory('TAGS'); return false;">
+                            TAGS
+                        </div> -->
                 </div> 
+                <!-- Display TAGS -->
                 <div class="listing-categories" style="padding-top: 0em;">
-                    <!-- Displays Technology Tags Icon -->
-                    <div class="listing-category-inactive" style="text-transform: uppercase;">
+                    <!-- Displays Technology Tag + Icon -->
+                    <div class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
                         <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
                     </div>
-                    <!-- Displays Reaiming Tags text -->
+                    <!-- If there is only one element in Categories then also show "Other" as tag --> 
+                    <!-- Displays Reaiming TAGS items -->
                         <div class="listing-category-inactive">
+                            <!-- If there exist no TAG word in Categories, show "Other" as tag -->
                             <!-- Add 'Python icon' -->
+                                <!-- Disable for now uncomment ONLY FIRST line below to add icon -->
                                 <!-- <i class="fa-brands fa-python" style="color: #6c757d;"> </i> -->
                                 <!--  -->
-                                Python 
+                                <a href="../projects/#category=Python">
+                                    Python
+                                </a>   
                         </div>
                         <div class="listing-category-inactive">
+                            <!-- If there exist no TAG word in Categories, show "Other" as tag -->
                             <!-- Add 'Python icon' -->
-                                Numba
+                                <a href="../projects/#category=Numba">
+                                    Numba
+                                </a>   
                         </div>
                 </div> 
             </div>
@@ -594,7 +675,7 @@ Category[1]: Control Systems -->
                 </b>
                  -->
         </div>
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="3" data-categories="Machine Learning" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1688401683412" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="3" data-categories="Machine Learning,TAGS,Python,OpenSpiel" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1689259592237" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
             <!-- IMAGE -->
             <a href="../projects/mlp/index.html">
                 <div class="card-title change-title-background-color" style="text-align: center; padding-bottom: 0.4em;  padding-top: 0.4em; ">
@@ -624,33 +705,48 @@ Category[1]: Control Systems -->
                     </a> 
                 <!-- <div class="listing-categories">
                         Machine Learning
+                        TAGS
+                        Python
+                        OpenSpiel
                 </div> -->
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;">
-                     <!-- Displays Categories -->
+                    <!-- Displays Categories -->                
                         <!-- <div class="listing-category" onclick="window.quartoListingCategory('Machine Learning'); return false;">
                             Machine Learning
                         </div> -->
-                        <span class="listing-category">
+                            <span class="listing-category">
                                 <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Machine Learning">
                                     Machine Learning
                                 </a>   
-                        </span>
+                            </span>
+                        <!-- <div class="listing-category" onclick="window.quartoListingCategory('TAGS'); return false;">
+                            TAGS
+                        </div> -->
                 </div> 
+                <!-- Display TAGS -->
                 <div class="listing-categories" style="padding-top: 0em;">
-                    <!-- Displays Technology Tags Icon -->
-                    <div class="listing-category-inactive" style="text-transform: uppercase;">
+                    <!-- Displays Technology Tag + Icon -->
+                    <div class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
                         <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
                     </div>
-                    <!-- Displays Reaiming Tags text -->
+                    <!-- If there is only one element in Categories then also show "Other" as tag --> 
+                    <!-- Displays Reaiming TAGS items -->
                         <div class="listing-category-inactive">
+                            <!-- If there exist no TAG word in Categories, show "Other" as tag -->
                             <!-- Add 'Python icon' -->
+                                <!-- Disable for now uncomment ONLY FIRST line below to add icon -->
                                 <!-- <i class="fa-brands fa-python" style="color: #6c757d;"> </i> -->
                                 <!--  -->
-                                Python 
+                                <a href="../projects/#category=Python">
+                                    Python
+                                </a>   
                         </div>
                         <div class="listing-category-inactive">
+                            <!-- If there exist no TAG word in Categories, show "Other" as tag -->
                             <!-- Add 'Python icon' -->
-                                OpenSpiel
+                                <a href="../projects/#category=OpenSpiel">
+                                    OpenSpiel
+                                </a>   
                         </div>
                 </div> 
             </div>
@@ -667,7 +763,7 @@ Category[1]: Control Systems -->
                 </b>
                  -->
         </div>
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="4" data-categories="Electrical Engineering" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1688401721811" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="4" data-categories="Electrical Engineering" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1689260372526" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
             <!-- IMAGE -->
             <a href="../projects/segway/index.html">
                 <div class="card-title change-title-background-color" style="text-align: center; padding-bottom: 0.4em;  padding-top: 0.4em; ">
@@ -699,26 +795,29 @@ Category[1]: Control Systems -->
                         Electrical Engineering
                 </div> -->
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;">
-                     <!-- Displays Categories -->
+                    <!-- Displays Categories -->                
                         <!-- <div class="listing-category" onclick="window.quartoListingCategory('Electrical Engineering'); return false;">
                             Electrical Engineering
                         </div> -->
-                        <span class="listing-category">
+                            <span class="listing-category">
                                 <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Electrical Engineering">
                                     Electrical Engineering
                                 </a>   
-                        </span>
+                            </span>
                 </div> 
+                <!-- Display TAGS -->
                 <div class="listing-categories" style="padding-top: 0em;">
-                    <!-- Displays Technology Tags Icon -->
-                    <div class="listing-category-inactive" style="text-transform: uppercase;">
+                    <!-- Displays Technology Tag + Icon -->
+                    <div class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
                         <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
                     </div>
-                    <!-- Displays Reaiming Tags text -->
+                    <!-- If there is only one element in Categories then also show "Other" as tag --> 
                         <div class="listing-category-inactive">
-                            <!-- Add 'Python icon' -->
+                            <a href="../projects">
                                 Other
+                            </a>   
                         </div>
+                    <!-- Displays Reaiming TAGS items -->
                 </div> 
             </div>
             <!-- <div class="card-header py-1 px-2  bg-light">
@@ -734,7 +833,7 @@ Category[1]: Control Systems -->
                 </b>
                  -->
         </div>
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="5" data-categories="Electrical Engineering" data-listing-date-sort="1674946800000" data-listing-file-modified-sort="1688401606373" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="5" data-categories="Electrical Engineering,TAGS,C++,LateX,Arduino" data-listing-date-sort="1674946800000" data-listing-file-modified-sort="1689259636206" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
             <!-- IMAGE -->
             <a href="../projects/bsc-thesis/Python-demo.html">
                 <div class="card-title change-title-background-color" style="text-align: center; padding-bottom: 0.4em;  padding-top: 0.4em; ">
@@ -764,35 +863,53 @@ Category[1]: Control Systems -->
                     </a> 
                 <!-- <div class="listing-categories">
                         Electrical Engineering
+                        TAGS
+                        C++
+                        LateX
+                        Arduino
                 </div> -->
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;">
-                     <!-- Displays Categories -->
+                    <!-- Displays Categories -->                
                         <!-- <div class="listing-category" onclick="window.quartoListingCategory('Electrical Engineering'); return false;">
                             Electrical Engineering
                         </div> -->
-                        <span class="listing-category">
+                            <span class="listing-category">
                                 <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Electrical Engineering">
                                     Electrical Engineering
                                 </a>   
-                        </span>
+                            </span>
+                        <!-- <div class="listing-category" onclick="window.quartoListingCategory('TAGS'); return false;">
+                            TAGS
+                        </div> -->
                 </div> 
+                <!-- Display TAGS -->
                 <div class="listing-categories" style="padding-top: 0em;">
-                    <!-- Displays Technology Tags Icon -->
-                    <div class="listing-category-inactive" style="text-transform: uppercase;">
+                    <!-- Displays Technology Tag + Icon -->
+                    <div class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
                         <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
                     </div>
-                    <!-- Displays Reaiming Tags text -->
+                    <!-- If there is only one element in Categories then also show "Other" as tag --> 
+                    <!-- Displays Reaiming TAGS items -->
                         <div class="listing-category-inactive">
+                            <!-- If there exist no TAG word in Categories, show "Other" as tag -->
                             <!-- Add 'Python icon' -->
-                                C++
+                                <a href="../projects/#category=C++">
+                                    C++
+                                </a>   
                         </div>
                         <div class="listing-category-inactive">
+                            <!-- If there exist no TAG word in Categories, show "Other" as tag -->
                             <!-- Add 'Python icon' -->
-                                LateX
+                                <a href="../projects/#category=LateX">
+                                    LateX
+                                </a>   
                         </div>
                         <div class="listing-category-inactive">
+                            <!-- If there exist no TAG word in Categories, show "Other" as tag -->
                             <!-- Add 'Python icon' -->
-                                Arduino
+                                <a href="../projects/#category=Arduino">
+                                    Arduino
+                                </a>   
                         </div>
                 </div> 
             </div>
@@ -805,7 +922,7 @@ Category[1]: Control Systems -->
                 </b>
                  -->
         </div>
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="6" data-categories="Software Engineering" data-listing-date-sort="1674946800000" data-listing-file-modified-sort="1688401662923" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="6" data-categories="Software Engineering,TAGS,C++" data-listing-date-sort="1674946800000" data-listing-file-modified-sort="1689259587946" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2">
             <!-- IMAGE -->
             <a href="../projects/cpp-project/Python-demo.html">
                 <div class="card-title change-title-background-color" style="text-align: center; padding-bottom: 0.4em;  padding-top: 0.4em; ">
@@ -835,27 +952,37 @@ Category[1]: Control Systems -->
                     </a> 
                 <!-- <div class="listing-categories">
                         Software Engineering
+                        TAGS
+                        C++
                 </div> -->
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;">
-                     <!-- Displays Categories -->
+                    <!-- Displays Categories -->                
                         <!-- <div class="listing-category" onclick="window.quartoListingCategory('Software Engineering'); return false;">
                             Software Engineering
                         </div> -->
-                        <span class="listing-category">
+                            <span class="listing-category">
                                 <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Software Engineering">
                                     Software Engineering
                                 </a>   
-                        </span>
+                            </span>
+                        <!-- <div class="listing-category" onclick="window.quartoListingCategory('TAGS'); return false;">
+                            TAGS
+                        </div> -->
                 </div> 
+                <!-- Display TAGS -->
                 <div class="listing-categories" style="padding-top: 0em;">
-                    <!-- Displays Technology Tags Icon -->
-                    <div class="listing-category-inactive" style="text-transform: uppercase;">
+                    <!-- Displays Technology Tag + Icon -->
+                    <div class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
                         <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
                     </div>
-                    <!-- Displays Reaiming Tags text -->
+                    <!-- If there is only one element in Categories then also show "Other" as tag --> 
+                    <!-- Displays Reaiming TAGS items -->
                         <div class="listing-category-inactive">
+                            <!-- If there exist no TAG word in Categories, show "Other" as tag -->
                             <!-- Add 'Python icon' -->
-                                C++
+                                <a href="../projects/#category=C++">
+                                    C++
+                                </a>   
                         </div>
                 </div> 
             </div>
