@@ -3,10 +3,17 @@
     color: green;
 }
 
-div.callout-note.callout {
+/* div.callout-note.callout {
     border-left-color: #fde10d;
 }
 
 .callout-icon {
     color: yellow
+} */
+
+
+/* Shows the anchor link */
+.show-anchor-link .anchorjs-link {
+    opacity: 1;
+	/* pointer-events: none; */
 }
