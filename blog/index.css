@@ -1,5 +1,4 @@
 /* Alterign the DEFAULT Category listing */
-
 div.quarto-post .metadata {
 	font-size: 1em;
 	flex-basis: 13%
@@ -24,4 +23,29 @@ div.quarto-post .metadata {
 
 h3 {
 	margin-bottom: 1rem;
+}
+
+
+.callout-tip{
+	margin-top: 0rem;
+}
+
+/* Shows the anchor link */
+.show-anchor-link .anchorjs-link {
+    opacity: 1;
+	/* pointer-events: none; */
+}
+
+
+/* Disable the lines of the table */
+.table>:not(caption)>*:not(:last-child)>* {
+    border-bottom-color: transparent;
+    border-bottom-style: solid;
+    border-bottom-width: 0px;
+}
+
+/* Gives new padding top bottom to each row */
+.table>:not(caption)>*>* {
+    padding-bottom: 6px;
+    padding-top: 6px;
 }
