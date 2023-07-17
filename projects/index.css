@@ -94,8 +94,8 @@ Start of the Sidebar-margin: [body-end-outset] minmax(10px, 30px) <-- 30px makes
     padding-left: .25rem;
     margin-right: 0;
     margin-left: 0;
-    /* text-transform: capitalize;
-    font-size: 0.6em; */
+    /* text-transform: capitalize; */
+    font-size: 0.57em; 
 }
 
 
@@ -107,3 +107,5 @@ Start of the Sidebar-margin: [body-end-outset] minmax(10px, 30px) <-- 30px makes
 div#tags:hover{
     background-color: transparent;
 }
+
+

@@ -7,3 +7,31 @@
     }
 }
 
+/* Changes the width of contents
+This is the guys that does the trick: calc( 950px - 3em )) <-- 950px increases width 
+Start of the Sidebar-margin: [body-end-outset] minmax(10px, 30px) <-- 30px makes the sidebar larger*/   
+/* @media (min-width: 992px) {
+    body.floating .page-columns {
+        display: grid;
+        gap: 0;
+        grid-template-columns: [screen-start] 1.5em [screen-start-inset] 5fr [page-start] minmax(5px, 10px) [page-start-inset] minmax(10px, 30px) [body-start-outset] minmax(5px, 10px) [body-start] 1.5em [body-content-start] minmax(500px, calc( 950px - 3em )) [body-content-end] 1.5em [body-end] minmax(5px, 10px) [body-end-outset] minmax(10px, 30px) [page-end-inset] minmax(5px, 10px) [page-end] 5fr [screen-end-inset] 1.5em [screen-end];
+    }
+} */
+
+
+/* Hides the sidebar and margin bar when it reaches 991px window width */
+@media (max-width: 991.98px){
+    body .page-columns, body.fullcontent:not(.floating):not(.docked) .page-columns, body.slimcontent:not(.floating):not(.docked) .page-columns, body.docked .page-columns, body.docked.slimcontent .page-columns, body.docked.fullcontent .page-columns, body.floating .page-columns, body.floating.slimcontent .page-columns, body.floating.fullcontent .page-columns {
+        display: grid;
+        gap: 0;
+        grid-template-columns: [screen-start] 1.5em [screen-start-inset page-start page-start-inset body-start-outset body-start body-content-start] minmax(0px, 1fr) [body-content-end body-end body-end-outset page-end-inset page-end screen-end-inset] 1.5em [screen-end];
+    }
+}
+
+main {
+    margin-top: 0.25em;
+}
+
+#quarto-content>* {
+    padding-top: 10px;
+}

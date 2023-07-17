@@ -32,9 +32,11 @@ h3 {
 
 /* Shows the anchor link */
 .show-anchor-link .anchorjs-link {
-    opacity: 1;
-	/* pointer-events: none; */
+    /* opacity: 1;
+	pointer-events: none; */
+	display: none;
 }
+
 
 
 /* Disable the lines of the table */
@@ -55,4 +57,18 @@ h3 {
 	margin-top: 0.8em;
 	margin-bottom: 0.95em;
 }
+
+main {
+    margin-top: 0.5em;
+}
+
+/* Hides the sidebar and margin bar when it reaches 991px window width */
+@media (max-width: 991.98px){
+    body .page-columns, body.fullcontent:not(.floating):not(.docked) .page-columns, body.slimcontent:not(.floating):not(.docked) .page-columns, body.docked .page-columns, body.docked.slimcontent .page-columns, body.docked.fullcontent .page-columns, body.floating .page-columns, body.floating.slimcontent .page-columns, body.floating.fullcontent .page-columns {
+        display: grid;
+        gap: 0;
+        grid-template-columns: [screen-start] 1.5em [screen-start-inset page-start page-start-inset body-start-outset body-start body-content-start] minmax(0px, 1fr) [body-content-end body-end body-end-outset page-end-inset page-end screen-end-inset] 1.5em [screen-end];
+    }
+}
+
 
