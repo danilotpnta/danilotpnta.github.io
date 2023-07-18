@@ -231,13 +231,6 @@
     "text": "Below the apps I use in a daily basis to make my life easier:\n\nMicrosoft Edge\n\nPrefer this over Safari because of add-ons. Chrome is the same\n\nI used it to install apps like YouTube or Google Translator so that when I hit a shortcut command, it opens that app. Here it’s an example.\n\n\n\nHammerspoon\n\nApp Link. Creates global shortcuts\n\nUses Lua programming language to assign keybindings to certain actions. Here a sneak peek of what can you do.\n--- Open App\nfunction open(name)\n    return function()\n        hs.application.launchOrFocus(name)\n        if name == 'Finder' then\n            hs.appfinder.appFromName(name):activate()\n        end\n    end\nend\nThe above function can be called to open an app: Google Maps by an i.e. the shortcut: ⌘ + M\n--- Binding Keys\nhs.hotkey.bind({ \"cmd\" }, \"M\", open(\"Google Maps\"))\nFor complete implementation visit, this repo.\nFor Windows alternative see the code below:\n\n\nCode\n\n#MaxHotkeysPerInterval 200\n!WheelUp::Volume_Up\n!WheelDown::Volume_Down\n!MButton::Volume_Mute\n&lt;#!e::\nRun, %WINDIR%\\explorer.exe\nreturn\n!q::Send !{F4}\nreturn\n&lt;#!x::\nRun, msedge.exe\nreturn\n!y::\nRun, C:\\Users\\datoapnta\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\YouTube.lnk\nreturn\n\n\n\nHonourable Mentions\n\nThe apps above can do the same, but I like the UX interface.\n\n\n\n\nApp\nDescription\n\n\n\n\nBetterTouchTool\nEnables trackpad new gestures shortcuts\n\n\nAutoHotkey\nSame as Hammerspoon but for Windows\n\n\nTiles\nWindows manager (allows keybindings)"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "Danilo Toapanta",
-    "section": "",
-    "text": "[1] \"blog/2023-06-20-running-my-first-marathon\"\n\n\n\n\n\n    \n        \n            \n                \n                    \n                        Hi, there! This is Danilo.\n                    \n                    I’m an AI researcher based in the Netherlands.\n                    I studied Electrical Engineering at University of Twente and now I am doing my master in Artificial Intillegence.\n                    When I am not trying to figure out how my computer works, I like to read books, go for a run/swim, tailor my clothes, and spend some quality time with my family.\n                    \n                        You can look me up on Github↗. \n                        Check out my LinkedIn↗. \n                        Read my lastest post. \n                        \n                        \n                            Message me↗.\n                        Or see what I’m working right now."
-  },
-  {
     "objectID": "now/index.html",
     "href": "now/index.html",
     "title": "Danilo Toapanta",
