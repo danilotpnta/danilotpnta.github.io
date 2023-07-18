@@ -28,10 +28,39 @@ Start of the Sidebar-margin: [body-end-outset] minmax(10px, 30px) <-- 30px makes
     }
 }
 
-main {
+/* main {
     margin-top: 0.25em;
 }
 
 #quarto-content>* {
     padding-top: 10px;
+} */
+
+
+
+/* Shows the anchor link */
+.show-anchor-link .anchorjs-link {
+    /* opacity: 1;
+	pointer-events: none; */
+	display: none;
 }
+
+.show-anchor-link h2 {
+	margin-bottom: 1.8rem;
+    margin-top: 0rem;
+}
+
+
+.show-anchor-link h1 {
+	margin-bottom: 1.8rem;
+    margin-top: 0rem;
+}
+
+
+main {
+    margin-top: 0.5em;
+}
+
+/* div.quarto-about-solana {
+    padding-top: 2em !important;
+} */

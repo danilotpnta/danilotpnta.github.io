@@ -51,10 +51,10 @@ a.button, button {
     border-bottom-style: solid; */
 }
 
-
-#quarto-document-content {
+/* TOP Margin */
+/* #quarto-document-content {
     margin-top: -0.5rem;
-}
+} */
 
 @media (max-width: 991px){
     #quarto-document-content {
@@ -63,7 +63,7 @@ a.button, button {
 }
 
 #see-all-categories{
-    padding-bottom: 0.3rem;
+    padding-bottom: 1.3rem;
 }
 
 

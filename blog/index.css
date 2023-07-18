@@ -58,9 +58,9 @@ h3 {
 	margin-bottom: 0.95em;
 }
 
-main {
+/* main {
     margin-top: 0.5em;
-}
+} */
 
 /* Hides the sidebar and margin bar when it reaches 991px window width */
 @media (max-width: 991.98px){
