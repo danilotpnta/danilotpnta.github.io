@@ -91,6 +91,13 @@
     "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "Danilo Toapanta",
+    "section": "",
+    "text": "Hi, there! This is Danilo.\n                    \n                    I’m an AI researcher based in the Netherlands.\n                    I studied Electrical Engineering at University of Twente and now I am doing my master in Artificial Intillegence.\n                    When I am not trying to figure out how my computer works, I like to read books, go for a run/swim, tailor my clothes, and spend some quality time with my family.\n                    \n                        You can look me up on Github↗. \n                        Check out my LinkedIn↗. \n                        Read my lastest post. \n                        \n                        \n                            Message me↗.\n                        Or see what I’m working right now."
+  },
+  {
     "objectID": "books/index.html",
     "href": "books/index.html",
     "title": "Danilo Toapanta",
@@ -228,7 +235,7 @@
     "href": "about.html",
     "title": "Danilo Toapanta",
     "section": "",
-    "text": "Hi, there! This is Danilo.\n                    \n                    I’m an AI researcher based in the Netherlands.\n                    I studied Electrical Engineering at University of Twente and now I am doing my master in Artificial Intillegence.\n                    When I am not trying to figure out how my computer works, I like to read books, go for a run/swim, tailor my clothes, and spend some quality time with my family.\n                    \n                        You can look me up on Github↗. \n                        Check out my LinkedIn↗. \n                        Read my lastest post. \n                        \n                        \n                            Message me↗.\n                        Or see what I’m working right now."
+    "text": "[1] \"blog/2023-06-20-running-my-first-marathon\"\n\n\n\n\n\n    \n        \n            \n                \n                    \n                        Hi, there! This is Danilo.\n                    \n                    I’m an AI researcher based in the Netherlands.\n                    I studied Electrical Engineering at University of Twente and now I am doing my master in Artificial Intillegence.\n                    When I am not trying to figure out how my computer works, I like to read books, go for a run/swim, tailor my clothes, and spend some quality time with my family.\n                    \n                        You can look me up on Github↗. \n                        Check out my LinkedIn↗. \n                        Read my lastest post. \n                        \n                        \n                            Message me↗.\n                        Or see what I’m working right now."
   },
   {
     "objectID": "now/index.html",
