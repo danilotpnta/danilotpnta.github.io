@@ -170,9 +170,11 @@ ul.task-list li input[type="checkbox"] {
   <p>
 </span> -->
 <!-- <p id="see-all-categories" align="center" style="visibility: hidden;" > -->
+<a href="../projects" style="text-decoration: none; font-style:italic ">
 <p id="see-all-categories" align="center">
-<a href="../projects" style="text-decoration: none; font-style:italic "> Showing All Categories </a>
+Showing All Categories
 </p>
+</a><p><a href="../projects" style="text-decoration: none; font-style:italic "></a></p>
 <!-- :::{.center .show-anchor-link}
 ## Projects {.unlisted .unnumbered }
 ::: -->
@@ -1011,11 +1013,80 @@ No matching items
 </p>
 </div>
 </div>
+<script type="text/javascript">
+    window.onload = function(){
+        // var links = document.getElementsByTagName('a');
+        // window.alert(links);
+        // console.log("links:", links)
+
+        var paragraph = document.getElementById("see-all-categories");
+        paragraph.textContent = "Show All Categories";
+    
+    }
+</script>
+
+
 
 
 
 
 </main> <!-- /main -->
+<script id="script-part">
+    var node;
+    var showCategories = false;
+    
+    window.onload = function(){
+      var currentUrl = window.location.href;
+      var index_hashtag = currentUrl.lastIndexOf("#");
+      var index_slash = currentUrl.lastIndexOf("/");
+    //   window.alert("index_hashtag: " + index_hashtag + " index_slash: " + index_slash);
+      
+    //   var filename1 = currentUrl.substr(index_hashtag);
+      var filename2 = currentUrl.substr(index_slash);
+    //   window.alert("path#: " + filename1 + " path/: " + filename2);
+
+      if (! (index_hashtag === -1) ){
+        var filename = currentUrl.substr(index_hashtag);
+        // window.alert("# found: " + filename);
+        showCategories = true;
+        // window.alert("Bool changed: " + showCategories);
+        showhideCategory();
+      }
+
+      if (filename2 === "/"){
+        showCategories = false;
+        showhideCategory();
+      }
+
+    }
+
+    window.addEventListener('hashchange', function() { 
+    //   window.alert("location changed!"); 
+      showCategories = true;
+      showhideCategory();
+    });
+
+    // if (splitText === "danilo") {
+
+
+    function showhideCategory() {
+        // window.alert(showCategories); 
+        if (showCategories){
+            node = document.getElementById('see-all-categories');
+            node.style.visibility = 'visible';
+            // node.style.marginBottom = '0em';
+
+        }
+        if (!showCategories){
+            node = document.getElementById('see-all-categories');
+            // node.style.marginBottom = '-3em';
+            // node.style.paddingBottom = '0.5em';
+            // node.remove();
+        }
+    }
+    
+
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
