@@ -67,7 +67,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-date','listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
       
-      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-language","listing-freeze","listing-title-block-banner","listing-author","listing-title","listing-date","listing-categories","listing-jupyter","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-image","listing-sidebar","listing-links","listing-coming-soon"],
+      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-language","listing-freeze","listing-title-block-banner","listing-author","listing-css","listing-title","listing-date","listing-categories","listing-jupyter","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-image","listing-sidebar","listing-links","listing-coming-soon"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -95,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-date','listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
       
-      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-language","listing-freeze","listing-title-block-banner","listing-author","listing-title","listing-date","listing-year","listing-categories","listing-tags","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time"],
+      searchColumns: ["listing-project","listing-execute","listing-website","listing-format","listing-language","listing-freeze","listing-title-block-banner","listing-author","listing-css","listing-title","listing-date","listing-year","listing-categories","listing-tags","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -116,6 +116,7 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<link rel="stylesheet" href="index_post.css">
 <link rel="stylesheet" href="index.css">
 </head>
 
@@ -135,6 +136,10 @@ ul.task-list li input[type="checkbox"] {
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link active" href="../blog/index.html" rel="" target="" aria-current="page">
  <span class="menu-text">Blog</span></a>
@@ -183,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="writing" class="level2 unlisted unnumbered center show-anchor-link disable-border-bottom">
 <h2 class="unlisted unnumbered anchored" data-anchor-id="writing">Writing</h2>
 </section>
-<p style="padding-bottom:0.5rem;">
+<p style="padding-bottom: 0.8rem;">
 <!-- In this section Danilo writes down his notes, the things he has figured out about computer science, writes code and ocasionally poems.  -->
 <!-- In this section Danilo writes down his notes, the things he has figured out about computer science, and ocasionally when he is feeling inspired poems in spanish.  -->
 <!-- In this section Danilo writes about education, including sometimes computer software and ocasionally poems. -->

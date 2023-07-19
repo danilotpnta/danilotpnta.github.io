@@ -69,7 +69,8 @@ a.button, button {
 
 /* Changes the width of contents
 This is the guys that does the trick: calc( 950px - 3em )) <-- 950px increases width 
-This is the guys that does the trick: calc( 950px - 3em )) <-- 750px increases width DEFAULT
+This is the guys that does the trick: calc( 750px - 3em )) <-- 750px increases width DEFAULT
+This is the guys that does the trick: calc( 1250px - 3em )) <-- 1250px increases width LARGE Laptop
 Start of the Sidebar-margin: [body-end-outset] minmax(10px, 30px) <-- 30px makes the sidebar larger*/   
 @media (min-width: 992px) {
     body.floating .page-columns {

@@ -93,3 +93,15 @@ h3 {
     display: -webkit-flex;
     -webkit-flex-basis: auto;
 }
+
+
+/* CSS executes files fromm bottom down
+In index_post.css navbar-brand container is hided
+but because this file will be executed later, the 
+prev css styling would be replaced */
+
+@media (min-width: 570px){
+    .navbar-brand-container {
+        display: flex;
+    }
+}
