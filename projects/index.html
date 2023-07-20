@@ -169,18 +169,12 @@ ul.task-list li input[type="checkbox"] {
     </a>
   <p>
 </span> -->
-<!-- <p id="see-all-categories" align="center" style="visibility: hidden;" > -->
-<a href="../projects" style="text-decoration: none; font-style:italic ">
-<p id="see-all-categories" align="center">
+<!-- <p id="see-all-categories" align="center" style="visibility: hidden;" > // This makes des/appear the object  -->
+<a id="clickable-see-all-categories" href="../projects" style="text-decoration: none; font-style:italic; pointer-events: none; ">
+<p id="see-all-categories" align="center" style="color:grey;">
 Showing All Categories
 </p>
-</a><p><a href="../projects" style="text-decoration: none; font-style:italic "></a></p>
-<!-- :::{.center .show-anchor-link}
-## Projects {.unlisted .unnumbered }
-::: -->
-<!-- <p style>
-  In this section Danilo displays the hard work that with tears and effort he has put on to make this work available
-</p> -->
+</a><p><a id="clickable-see-all-categories" href="../projects" style="text-decoration: none; font-style:italic; pointer-events: none; "></a></p>
 <div id="listing-projects" class="quarto-listing quarto-listing-container-custom">
 
 <!-- attributes for item -->
@@ -416,7 +410,7 @@ Category[1]: Control Systems -->
  -->
 <div class="list grid" style="column-gap: 20px;">
         <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-categories="Computer Vision,Control Systems,TAGS,Python,Kaggle,Tensorflow" data-listing-date-sort="1685311200000" data-listing-file-modified-sort="1689269413898" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-categories="Computer Vision,Control Systems,TAGS,Python,Kaggle,Tensorflow" data-listing-date-sort="1685311200000" data-listing-file-modified-sort="1689774582731" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4">
             <!-- IMAGE -->
             <a href="../projects/computer-vision/index.html">
                 <div class="card-title change-title-background-color" style="text-align: center; padding-bottom: 0.4em;  padding-top: 0.4em; ">
@@ -444,24 +438,23 @@ Category[1]: Control Systems -->
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
-                <!-- <div class="listing-categories">
-                        Computer Vision
-                        Control Systems
-                        TAGS
-                        Python
-                        Kaggle
-                        Tensorflow
-                </div> -->
-                <!--  -->
-                <!-- 2 -->
+                <div style="display: none"> 
+                                1
+                                2
+                                3
+                                4
+                                5
+                </div>
                 <!-- Displays Categories -->    
-                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;">  
-                            <span class="listing-category">
+                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
+                    <!-- Keyword TAG in frontmatter not found 
+                        - Display the only ONE CATEGORY found --> 
+                            <span class="listing-category Computer Vision">
                                 <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Computer Vision">
                                     Computer Vision
                                 </a>   
                             </span>
-                            <span class="listing-category">
+                            <span class="listing-category Control Systems">
                                 <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Control Systems">
                                     Control Systems
                                 </a>   
@@ -471,13 +464,13 @@ Category[1]: Control Systems -->
                 <div class="listing-categories" style="padding-top: 0em;">
                     <!-- Displays Technology Tag + Icon -->
                     <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
-                        <a href="../projects">
-                            <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
-                        </a>
+                        <!-- <a  href="/projects"> -->
+                        <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
+                        <!-- </a> -->
                     </div>
-                    <!-- If there is NO || only ONE element in Categories then show "Other" as tag --> 
-                        <!-- Displays Reaiming TAGS items -->
-                            <div id="Python" class="listing-category-inactive">
+                    <!-- Keyword TAG in frontmatter not found 
+                         - If there is NO || only ONE element in Categories then show "Other" as tag --> 
+                            <div class="listing-category-inactive Python">
                                 <!-- Add 'Python icon' -->
                                     <!-- Disable for now uncomment ONLY FIRST line below to add icon -->
                                     <!-- <i class="fa-brands fa-python" style="color: #6c757d;"> </i> -->
@@ -486,13 +479,13 @@ Category[1]: Control Systems -->
                                         Python
                                     </a>   
                             </div>
-                            <div id="Kaggle" class="listing-category-inactive">
+                            <div class="listing-category-inactive Kaggle">
                                 <!-- Add 'Python icon' -->
                                     <a href="../projects/#category=Kaggle">
                                         Kaggle
                                     </a>   
                             </div>
-                            <div id="Tensorflow" class="listing-category-inactive">
+                            <div class="listing-category-inactive Tensorflow">
                                 <!-- Add 'Python icon' -->
                                     <a href="../projects/#category=Tensorflow">
                                         Tensorflow
@@ -542,22 +535,20 @@ Category[1]: Control Systems -->
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
-                <!-- <div class="listing-categories">
-                        Machine Learning
-                        Algorithms
-                        TAGS
-                        Python
-                </div> -->
-                <!--  -->
-                <!-- 2 -->
+                <div style="display: none"> 
+                                6
+                                7
+                </div>
                 <!-- Displays Categories -->    
-                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;">  
-                            <span class="listing-category">
+                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
+                    <!-- Keyword TAG in frontmatter not found 
+                        - Display the only ONE CATEGORY found --> 
+                            <span class="listing-category Machine Learning">
                                 <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Machine Learning">
                                     Machine Learning
                                 </a>   
                             </span>
-                            <span class="listing-category">
+                            <span class="listing-category Algorithms">
                                 <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Algorithms">
                                     Algorithms
                                 </a>   
@@ -567,13 +558,13 @@ Category[1]: Control Systems -->
                 <div class="listing-categories" style="padding-top: 0em;">
                     <!-- Displays Technology Tag + Icon -->
                     <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
-                        <a href="../projects">
-                            <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
-                        </a>
+                        <!-- <a  href="/projects"> -->
+                        <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
+                        <!-- </a> -->
                     </div>
-                    <!-- If there is NO || only ONE element in Categories then show "Other" as tag --> 
-                        <!-- Displays Reaiming TAGS items -->
-                            <div id="Python" class="listing-category-inactive">
+                    <!-- Keyword TAG in frontmatter not found 
+                         - If there is NO || only ONE element in Categories then show "Other" as tag --> 
+                            <div class="listing-category-inactive Python">
                                 <!-- Add 'Python icon' -->
                                     <!-- Disable for now uncomment ONLY FIRST line below to add icon -->
                                     <!-- <i class="fa-brands fa-python" style="color: #6c757d;"> </i> -->
@@ -626,17 +617,15 @@ Category[1]: Control Systems -->
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
-                <!-- <div class="listing-categories">
-                        Optimization
-                        TAGS
-                        Python
-                        Numba
-                </div> -->
-                <!--  -->
-                <!-- 1 -->
+                <div style="display: none"> 
+                                8
+                                9
+                </div>
                 <!-- Displays Categories -->    
-                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;">  
-                            <span class="listing-category">
+                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
+                    <!-- Keyword TAG in frontmatter not found 
+                        - Display the only ONE CATEGORY found --> 
+                            <span class="listing-category Optimization">
                                 <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Optimization">
                                     Optimization
                                 </a>   
@@ -646,13 +635,13 @@ Category[1]: Control Systems -->
                 <div class="listing-categories" style="padding-top: 0em;">
                     <!-- Displays Technology Tag + Icon -->
                     <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
-                        <a href="../projects">
-                            <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
-                        </a>
+                        <!-- <a  href="/projects"> -->
+                        <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
+                        <!-- </a> -->
                     </div>
-                    <!-- If there is NO || only ONE element in Categories then show "Other" as tag --> 
-                        <!-- Displays Reaiming TAGS items -->
-                            <div id="Python" class="listing-category-inactive">
+                    <!-- Keyword TAG in frontmatter not found 
+                         - If there is NO || only ONE element in Categories then show "Other" as tag --> 
+                            <div class="listing-category-inactive Python">
                                 <!-- Add 'Python icon' -->
                                     <!-- Disable for now uncomment ONLY FIRST line below to add icon -->
                                     <!-- <i class="fa-brands fa-python" style="color: #6c757d;"> </i> -->
@@ -661,7 +650,7 @@ Category[1]: Control Systems -->
                                         Python
                                     </a>   
                             </div>
-                            <div id="Numba" class="listing-category-inactive">
+                            <div class="listing-category-inactive Numba">
                                 <!-- Add 'Python icon' -->
                                     <a href="../projects/#category=Numba">
                                         Numba
@@ -711,17 +700,14 @@ Category[1]: Control Systems -->
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
-                <!-- <div class="listing-categories">
-                        Machine Learning
-                        TAGS
-                        Python
-                        OpenSpiel
-                </div> -->
-                <!--  -->
-                <!-- 1 -->
+                <div style="display: none"> 
+                                10
+                </div>
                 <!-- Displays Categories -->    
-                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;">  
-                            <span class="listing-category">
+                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
+                    <!-- Keyword TAG in frontmatter not found 
+                        - Display the only ONE CATEGORY found --> 
+                            <span class="listing-category Machine Learning">
                                 <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Machine Learning">
                                     Machine Learning
                                 </a>   
@@ -731,13 +717,13 @@ Category[1]: Control Systems -->
                 <div class="listing-categories" style="padding-top: 0em;">
                     <!-- Displays Technology Tag + Icon -->
                     <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
-                        <a href="../projects">
-                            <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
-                        </a>
+                        <!-- <a  href="/projects"> -->
+                        <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
+                        <!-- </a> -->
                     </div>
-                    <!-- If there is NO || only ONE element in Categories then show "Other" as tag --> 
-                        <!-- Displays Reaiming TAGS items -->
-                            <div id="Python" class="listing-category-inactive">
+                    <!-- Keyword TAG in frontmatter not found 
+                         - If there is NO || only ONE element in Categories then show "Other" as tag --> 
+                            <div class="listing-category-inactive Python">
                                 <!-- Add 'Python icon' -->
                                     <!-- Disable for now uncomment ONLY FIRST line below to add icon -->
                                     <!-- <i class="fa-brands fa-python" style="color: #6c757d;"> </i> -->
@@ -746,7 +732,7 @@ Category[1]: Control Systems -->
                                         Python
                                     </a>   
                             </div>
-                            <div id="OpenSpiel" class="listing-category-inactive">
+                            <div class="listing-category-inactive OpenSpiel">
                                 <!-- Add 'Python icon' -->
                                     <a href="../projects/#category=OpenSpiel">
                                         OpenSpiel
@@ -796,33 +782,39 @@ Category[1]: Control Systems -->
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
-                <!-- <div class="listing-categories">
-                        Electrical Engineering
-                </div> -->
-                <!--  -->
-                <!-- -1 -->
+                <div style="display: none"> 
+                                11
+                </div>
                 <!-- Displays Categories -->    
-                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;">  
-                            <span class="listing-category">
+                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
+                    <!-- Keyword TAG in frontmatter not found 
+                        - Display the only ONE CATEGORY found --> 
+                            <!-- <span id="Electrical Engineering"  class="listing-category Electrical Engineering" > -->
+                            <span class="listing-category Electrical Engineering">
                                 <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Electrical Engineering">
                                     Electrical Engineering
                                 </a>   
                             </span>
+                    <!-- When Keyword TAG is found in frontmatter 
+                         - Displays All CATEGORIES items -->
                 </div> 
                 <!-- Display TAGS -->
                 <div class="listing-categories" style="padding-top: 0em;">
                     <!-- Displays Technology Tag + Icon -->
                     <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
-                        <a href="../projects">
-                            <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
-                        </a>
+                        <!-- <a  href="/projects"> -->
+                        <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
+                        <!-- </a> -->
                     </div>
-                    <!-- If there is NO || only ONE element in Categories then show "Other" as tag --> 
+                    <!-- Keyword TAG in frontmatter not found 
+                         - If there is NO || only ONE element in Categories then show "Other" as tag --> 
                         <div id="Other" class="listing-category-inactive">
                             <a href="../projects">
                                 Other
                             </a>   
                         </div>
+                    <!-- When Keyword TAG is found in frontmatter 
+                         - Displays Reaiming TAGS items -->
                 </div> 
             </div>
             <!-- <div class="card-header py-1 px-2  bg-light">
@@ -867,18 +859,16 @@ Category[1]: Control Systems -->
                         Paper
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
-                <!-- <div class="listing-categories">
-                        Electrical Engineering
-                        TAGS
-                        C++
-                        LateX
-                        Arduino
-                </div> -->
-                <!--  -->
-                <!-- 1 -->
+                <div style="display: none"> 
+                                12
+                                13
+                                14
+                </div>
                 <!-- Displays Categories -->    
-                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;">  
-                            <span class="listing-category">
+                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
+                    <!-- Keyword TAG in frontmatter not found 
+                        - Display the only ONE CATEGORY found --> 
+                            <span class="listing-category Electrical Engineering">
                                 <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Electrical Engineering">
                                     Electrical Engineering
                                 </a>   
@@ -888,25 +878,25 @@ Category[1]: Control Systems -->
                 <div class="listing-categories" style="padding-top: 0em;">
                     <!-- Displays Technology Tag + Icon -->
                     <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
-                        <a href="../projects">
-                            <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
-                        </a>
+                        <!-- <a  href="/projects"> -->
+                        <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
+                        <!-- </a> -->
                     </div>
-                    <!-- If there is NO || only ONE element in Categories then show "Other" as tag --> 
-                        <!-- Displays Reaiming TAGS items -->
-                            <div id="C++" class="listing-category-inactive">
+                    <!-- Keyword TAG in frontmatter not found 
+                         - If there is NO || only ONE element in Categories then show "Other" as tag --> 
+                            <div class="listing-category-inactive C++">
                                 <!-- Add 'Python icon' -->
                                     <a href="../projects/#category=C++">
                                         C++
                                     </a>   
                             </div>
-                            <div id="LateX" class="listing-category-inactive">
+                            <div class="listing-category-inactive LateX">
                                 <!-- Add 'Python icon' -->
                                     <a href="../projects/#category=LateX">
                                         LateX
                                     </a>   
                             </div>
-                            <div id="Arduino" class="listing-category-inactive">
+                            <div class="listing-category-inactive Arduino">
                                 <!-- Add 'Python icon' -->
                                     <a href="../projects/#category=Arduino">
                                         Arduino
@@ -952,16 +942,14 @@ Category[1]: Control Systems -->
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
-                <!-- <div class="listing-categories">
-                        Software Engineering
-                        TAGS
-                        C++
-                </div> -->
-                <!--  -->
-                <!-- 1 -->
+                <div style="display: none"> 
+                                15
+                </div>
                 <!-- Displays Categories -->    
-                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;">  
-                            <span class="listing-category">
+                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
+                    <!-- Keyword TAG in frontmatter not found 
+                        - Display the only ONE CATEGORY found --> 
+                            <span class="listing-category Software Engineering">
                                 <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Software Engineering">
                                     Software Engineering
                                 </a>   
@@ -971,13 +959,13 @@ Category[1]: Control Systems -->
                 <div class="listing-categories" style="padding-top: 0em;">
                     <!-- Displays Technology Tag + Icon -->
                     <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
-                        <a href="../projects">
-                            <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
-                        </a>
+                        <!-- <a  href="/projects"> -->
+                        <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
+                        <!-- </a> -->
                     </div>
-                    <!-- If there is NO || only ONE element in Categories then show "Other" as tag --> 
-                        <!-- Displays Reaiming TAGS items -->
-                            <div id="C++" class="listing-category-inactive">
+                    <!-- Keyword TAG in frontmatter not found 
+                         - If there is NO || only ONE element in Categories then show "Other" as tag --> 
+                            <div class="listing-category-inactive C++">
                                 <!-- Add 'Python icon' -->
                                     <a href="../projects/#category=C++">
                                         C++
@@ -999,6 +987,51 @@ Category[1]: Control Systems -->
                  -->
         </div>
 </div>
+    <p class="array_categories" style="display: none"> 
+        Computer Vision
+    </p>
+    <p class="array_categories" style="display: none"> 
+        Control Systems
+    </p>
+    <p class="array_categories" style="display: none"> 
+        Python
+    </p>
+    <p class="array_categories" style="display: none"> 
+        Kaggle
+    </p>
+    <p class="array_categories" style="display: none"> 
+        Tensorflow
+    </p>
+    <p class="array_categories" style="display: none"> 
+        Machine Learning
+    </p>
+    <p class="array_categories" style="display: none"> 
+        Algorithms
+    </p>
+    <p class="array_categories" style="display: none"> 
+        Optimization
+    </p>
+    <p class="array_categories" style="display: none"> 
+        Numba
+    </p>
+    <p class="array_categories" style="display: none"> 
+        OpenSpiel
+    </p>
+    <p class="array_categories" style="display: none"> 
+        Electrical Engineering
+    </p>
+    <p class="array_categories" style="display: none"> 
+        C++
+    </p>
+    <p class="array_categories" style="display: none"> 
+        LateX
+    </p>
+    <p class="array_categories" style="display: none"> 
+        Arduino
+    </p>
+    <p class="array_categories" style="display: none"> 
+        Software Engineering
+    </p>
 <div class="listing-no-matching d-none">
 <p align="left">
 No matching items
@@ -1013,19 +1046,6 @@ No matching items
 </p>
 </div>
 </div>
-<script type="text/javascript">
-    window.onload = function(){
-        // var links = document.getElementsByTagName('a');
-        // window.alert(links);
-        // console.log("links:", links)
-
-        var paragraph = document.getElementById("see-all-categories");
-        paragraph.textContent = "Show All Categories";
-    
-    }
-</script>
-
-
 
 
 
@@ -1035,19 +1055,18 @@ No matching items
     var node;
     var showCategories = false;
     
+    // ------------------------- ON WINDOWS LOAD -------------------------
     window.onload = function(){
       var currentUrl = window.location.href;
       var index_hashtag = currentUrl.lastIndexOf("#");
       var index_slash = currentUrl.lastIndexOf("/");
-    //   window.alert("index_hashtag: " + index_hashtag + " index_slash: " + index_slash);
+      // window.alert("index_hashtag: " + index_hashtag + " index_slash: " + index_slash);
       
-    //   var filename1 = currentUrl.substr(index_hashtag);
+      var filename1 = currentUrl.substr(index_hashtag);
       var filename2 = currentUrl.substr(index_slash);
-    //   window.alert("path#: " + filename1 + " path/: " + filename2);
+      // window.alert("path#: " + filename1 + " path/: " + filename2);
 
       if (! (index_hashtag === -1) ){
-        var filename = currentUrl.substr(index_hashtag);
-        // window.alert("# found: " + filename);
         showCategories = true;
         // window.alert("Bool changed: " + showCategories);
         showhideCategory();
@@ -1058,33 +1077,131 @@ No matching items
         showhideCategory();
       }
 
+      // Defining variables to handle hover and  
+      // background when https:....../#category= is reloaded
+      var index_equal = currentUrl.lastIndexOf("=");
+      var id_name = currentUrl.substr(index_equal);
+      
+      // Slice symbol "=", Shows only Category
+      id_name = id_name.slice(1);
+      
+      // If contains special chr "%20" then replace it to "\ "
+      const substr = "%20";
+      if (id_name.includes(substr)){
+        id_name = id_name.replace(substr, "\ ");        
+      } 
+
+      // Makes remaining Categories/Tags have normal hover
+      document.querySelectorAll('.array_categories').forEach(item => {
+        item_cleaned = item.textContent.trim();
+        if (! (item_cleaned === id_name)){
+          handle_id(item_cleaned, "grey");
+        }
+      });
+
+      // Makes focused Category/Tag have green background
+      handle_id(id_name, "rgba(88, 226, 104, 0.21)")
+
     }
 
+    // ------------------------- ON # HASHTAG CHANGE -------------------------
     window.addEventListener('hashchange', function() { 
-    //   window.alert("location changed!"); 
+
+      var currentUrl = window.location.href;
+      var index_equal = currentUrl.lastIndexOf("=");
+      var id_name = currentUrl.substr(index_equal);
+      
+      // Slice symbol "=", Shows only Category
+      id_name = id_name.slice(1);
+      
+      // If contains special chr "%20" then replace it to "\ "
+      const substr = "%20";
+      if (id_name.includes(substr)){
+        id_name = id_name.replace(substr, "\ ");        
+      } 
+
+      // Makes remaining Categories/Tags have normal hover
+      document.querySelectorAll('.array_categories').forEach(item => {
+        item_cleaned = item.textContent.trim();
+        if (! (item_cleaned === id_name)){
+          handle_id(item_cleaned, "grey");
+        }
+      });
+
+      // Makes focused Category/Tag have green background
+      handle_id(id_name, "rgba(88, 226, 104, 0.21)")
+
       showCategories = true;
       showhideCategory();
     });
 
-    // if (splitText === "danilo") {
+    // ------------------------- HELPER FUNCTIONS -------------------------
+    function handle_id(name, color) {
 
+      var elms = document.getElementsByClassName(name);
 
-    function showhideCategory() {
-        // window.alert(showCategories); 
-        if (showCategories){
-            node = document.getElementById('see-all-categories');
-            node.style.visibility = 'visible';
-            // node.style.marginBottom = '0em';
-
+      function changeColor(color) {
+        for(var i = 0; i < elms.length; i ++) {
+          elms[i].style.backgroundColor = color;
         }
-        if (!showCategories){
-            node = document.getElementById('see-all-categories');
-            // node.style.marginBottom = '-3em';
-            // node.style.paddingBottom = '0.5em';
-            // node.remove();
+      }
+
+      function handle_class(color_class, order) {
+        for(var i = 0; i < elms.length; i ++) {
+          if (order === "add") {
+            elms[i].classList.add(color_class);
+          }
+          if (order === "remove") {
+            elms[i].classList.remove(color_class);
+          }
         }
+      }
+
+      for(var i = 0; i < elms.length; i ++) {
+        if (color == "grey"){
+          elms[i].classList.remove("hoverMainId")
+          // elms[i].onmouseover = function() { handle_class("hoverBg", "add"); };
+          // elms[i].onmouseout = function() { handle_class("hoverBg", "remove");};
+        } else {
+          // elms[i].style.backgroundColor = color;
+          elms[i].classList.add("hoverMainId")
+        }
+      }
     }
     
+
+    function showhideCategory() {
+      if (showCategories){
+
+          // MAKE APPEAR: style="visibility: hidden;"
+          // node = document.getElementById('see-all-categories');
+          // node.style.visibility = 'visible';
+
+          // MAKE SHOW: "Show All Categories"
+          var paragraph = document.getElementById("see-all-categories");
+          paragraph.textContent = "Show All Categories";  
+          paragraph.style.color = 'inherit';
+
+          // DISABLE LINK: clickable-see-all-categories
+          var link = document.getElementById("clickable-see-all-categories")
+          link.style.pointerEvents = "all"
+
+      }
+      if (!showCategories){
+          node = document.getElementById('see-all-categories');
+          // node.style.marginBottom = '-3em';
+          // node.style.paddingBottom = '0.5em';
+          // node.remove();
+      }
+
+    }
+    
+    // One liner function:
+    // const addCSS = css => document.head.appendChild(document.createElement("style")).innerHTML=css;
+
+    // Usage: 
+    // addCSS("span#Optimization { color: blue; }")
+    // addCSS(" span.listing-category.Machine.Learning:hover >  span.listing-category.Machine.Learning { color: blue; }")
 
 </script>
 <script id="quarto-html-after-body" type="application/javascript">

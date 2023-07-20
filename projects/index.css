@@ -91,20 +91,26 @@ Start of the Sidebar-margin: [body-end-outset] minmax(10px, 30px) <-- 30px makes
 }
 
 .listing-category-inactive {
-    border: transparent;
+    /* border: white; */
+    border-radius: .25rem;
+    text-transform: uppercase;
+    padding-top: .15em;
+    padding-bottom: .15em;
+
     padding-right: 0.25rem;
     padding-left: .25rem;
-    margin-right: 0;
-    margin-left: 0;
-    /* text-transform: capitalize; */
+    margin-right: 1px;
+    margin-left: 1px;
+
     font-size: 0.57em; 
+    /* font-size: .55em; */
+    padding-left: .3em;
+    padding-right: .3em;
+    margin-right: 4px;
+
+    margin-bottom: 4px;
 }
 
-
-.listing-category-inactive:hover {
-    /* text-decoration: solid;  */
-    background-color: #66666614;
-}
 
 div#tags:hover{
     background-color: transparent;
@@ -127,4 +133,46 @@ div#tags:hover{
 .collapse:not(.show) {
     display: -webkit-flex;
     -webkit-flex-basis: auto;
+}
+
+
+/* OJO remove and place it in 'light.theme' or 'dark.theme' 
+to apply different colors when 'Dark mode' */
+
+/* This makes across ALL cards from Projects
+to hover with the Red color */
+.hoverBg {
+    background-color: rgba(232, 41, 41, 0.757);
+}
+
+.hoverBg:hover {
+    background-color: rgba(232, 41, 41, 0.757);
+}
+
+
+/* This makes ONLY focused card from Projects
+to hover with the Green color */
+.hoverMainId{
+    background-color: rgba(88, 226, 104, 0.21);
+    pointer-events: none;
+    border: solid 1px transparent;
+}
+
+.hoverMainId:hover{
+    background-color: rgba(88, 226, 104, 0.21);
+    border: solid 1px transparent;
+    pointer-events: none;
+}
+
+div#tags{
+    padding-right: 2px;
+}
+
+div#tags:hover{
+    border: solid 1px transparent;
+}
+
+/* Changes how much image I can show */
+img.thumbnail-image.card-img {
+    height: 128px !important;
 }
