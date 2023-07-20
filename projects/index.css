@@ -62,10 +62,6 @@ a.button, button {
     }
 } */
 
-#see-all-categories{
-    padding-bottom: 1rem;
-}
-
 
 /* Changes the width of contents
 This is the guys that does the trick: calc( 950px - 3em )) <-- 950px increases width 
