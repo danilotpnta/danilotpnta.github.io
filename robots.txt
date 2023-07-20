@@ -1,1 +1,1 @@
-Sitemap: www.danilotpnta.com/sitemap.xml
+Sitemap: https://www.danilotpnta.com/sitemap.xml
