@@ -63,7 +63,7 @@ a.button, button {
 } */
 
 #see-all-categories{
-    padding-bottom: 1.3rem;
+    padding-bottom: 1rem;
 }
 
 
@@ -76,7 +76,7 @@ Start of the Sidebar-margin: [body-end-outset] minmax(10px, 30px) <-- 30px makes
     body.floating .page-columns {
         display: grid;
         gap: 0;
-        grid-template-columns: [screen-start] 1.5em [screen-start-inset] 5fr [page-start] minmax(5px, 10px) [page-start-inset] minmax(10px, 30px) [body-start-outset] minmax(5px, 10px) [body-start] 1.5em [body-content-start] minmax(500px, calc( 950px - 3em )) [body-content-end] 1.5em [body-end] minmax(5px, 10px) [body-end-outset] minmax(10px, 30px) [page-end-inset] minmax(5px, 10px) [page-end] 5fr [screen-end-inset] 1.5em [screen-end];
+        grid-template-columns: [screen-start] 1.5em [screen-start-inset] 5fr [page-start] minmax(5px, 10px) [page-start-inset] minmax(10px, 30px) [body-start-outset] minmax(5px, 10px) [body-start] 1.5em [body-content-start] minmax(500px, calc( 1050px - 3em )) [body-content-end] 1.5em [body-end] minmax(5px, 10px) [body-end-outset] minmax(10px, 30px) [page-end-inset] minmax(5px, 10px) [page-end] 5fr [screen-end-inset] 1.5em [screen-end];
     }
 }
 
@@ -147,21 +147,6 @@ to hover with the Red color */
 
 .hoverBg:hover {
     background-color: rgba(232, 41, 41, 0.757);
-}
-
-
-/* This makes ONLY focused card from Projects
-to hover with the Green color */
-.hoverMainId{
-    background-color: rgba(88, 226, 104, 0.21);
-    pointer-events: none;
-    border: solid 1px transparent;
-}
-
-.hoverMainId:hover{
-    background-color: rgba(88, 226, 104, 0.21);
-    border: solid 1px transparent;
-    pointer-events: none;
 }
 
 div#tags{

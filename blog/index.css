@@ -105,3 +105,10 @@ prev css styling would be replaced */
         display: flex;
     }
 }
+.padding-top-bottom{
+    padding: 7px 0px;
+}
+
+.padding_h1 h1{
+    margin-top: 0rem;
+}
