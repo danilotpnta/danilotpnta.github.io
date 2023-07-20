@@ -1,1 +1,1 @@
-Sitemap: https://danilotpnta.github.io/sitemap.xml
+Sitemap: www.danilotpnta.com/sitemap.xml
