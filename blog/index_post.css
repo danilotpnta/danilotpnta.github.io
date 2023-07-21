@@ -1,3 +1,5 @@
+/* Disables only DANILO TOAPANTA when opening
+new post from BLOG section */
 @media (min-width: 570px){
     .navbar-brand-container {
         display: none;
