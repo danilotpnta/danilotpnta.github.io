@@ -110,7 +110,7 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full" style="display: none;">
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full blog-page" style="display: none;">
     <div class="quarto-title-banner page-columns page-full">
         <div class="quarto-title column-body">
             <h1 class="title">Post With Code insane you will learn a lot, and beyond what you can comprehend</h1>
@@ -223,7 +223,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<main id="title-block-header" class="quarto-title-block default page-columns page-full">
+<main id="title-block-header" class="quarto-title-block default page-columns page-full" style="padding-bottom: 1em;">
 
     <div class="quarto-title column-body">
         <h1 class="title">Post With Code insane you will learn a lot, and beyond what you can comprehend</h1>
@@ -293,11 +293,15 @@ ul.task-list li input[type="checkbox"] {
 <p>Above we use the left option to specify items for the left side of the navigation bar. You can also use the right option to specify items for the right side.</p>
 <p>The text for navigation bar items will be taken from the underlying target document’s title. Note that in the above example we provide a custom text: “Home” value for index.qmd.</p>
 <p>You can also create a navigation bar menu by including a menu (which is a list of items much like left and right). For example:</p>
-<p>left: - text: “More” menu: - talks.qmd - about.qmd</p>
+<p>left: - text: “More” menu:</p>
+<pre><code>- talks.qmd
+
+- about.qmd</code></pre>
 <section id="this-is-a-title-6" class="level4" data-number="1.2.1.1">
 <h4 data-number="1.2.1.1" class="anchored" data-anchor-id="this-is-a-title-6"><span class="header-section-number">1.2.1.1</span> This is a title</h4>
 <p>Here are all of the options available for top navigation:</p>
-<p>Option Description title Navbar title (uses the site: title if none is specified). Use title: false to suppress the display of the title on the navbar. logo Logo image to be displayed left of the title. logo-alt Alternate text for the logo image. logo-href Target href from navbar logo / title. By default, the logo and title link to the root page of the site (/index.html). background Background color (“primary”, “secondary”, “success”, “danger”, “warning”, “info”, “light”, “dark”, or hex color) foreground Foreground color (“primary”, “secondary”, “success”, “danger”, “warning”, “info”, “light”, “dark”, or hex color). The foreground color will be used to color navigation elements, text and links that appear in the navbar. search Include a search box (true or false) tools List of navbar tools (e.g.&nbsp;link to github or twitter, etc.). See Navbar Tools for details. left / right Lists of navigation items for left and right side of navbar pinned Always show the navbar (true or false). Defaults to false, and uses headroom.js to automatically show the navbar when the user scrolls up on the page. collapse Collapse the navbar items into a hamburger menu when the display gets narrow (defaults to true) collapse-below Responsive breakpoint at which to collapse navbar items to a hamburger menu (“sm”, “md”, “lg”, “xl”, or “xxl”, defaults to “lg”) Here are the options available for individual navigation items:</p>
+<p>Option Description</p>
+<p>title Navbar title (uses the site: title if none is specified). Use title: false to suppress the display of the title on the navbar. logo Logo image to be displayed left of the title. logo-alt Alternate text for the logo image. logo-href Target href from navbar logo / title. By default, the logo and title link to the root page of the site (/index.html). background Background color (“primary”, “secondary”, “success”, “danger”, “warning”, “info”, “light”, “dark”, or hex color) foreground Foreground color (“primary”, “secondary”, “success”, “danger”, “warning”, “info”, “light”, “dark”, or hex color). The foreground color will be used to color navigation elements, text and links that appear in the navbar. search Include a search box (true or false) tools List of navbar tools (e.g.&nbsp;link to github or twitter, etc.). See Navbar Tools for details. left / right Lists of navigation items for left and right side of navbar pinned Always show the navbar (true or false). Defaults to false, and uses headroom.js to automatically show the navbar when the user scrolls up on the page. collapse Collapse the navbar items into a hamburger menu when the display gets narrow (defaults to true) collapse-below Responsive breakpoint at which to collapse navbar items to a hamburger menu (“sm”, “md”, “lg”, “xl”, or “xxl”, defaults to “lg”) Here are the options available for individual navigation items:</p>
 <p>Option Description href Link to file contained with the project or external URL. text Text to display for navigation item (defaults to the document title if not provided). icon Name of one of the standard Bootstrap 5 icons (e.g.&nbsp;“github”, “twitter”, “share”, etc.). aria-label Accessible label for the navigation item. rel Value for rel attribute. Multiple space-separated values are permitted. menu List of navigation items to populate a drop-down menu.</p>
 </section>
 </section>
@@ -333,6 +337,22 @@ ul.task-list li input[type="checkbox"] {
 </section>
 
 </main> <!-- /main -->
+<script id="script-part">  
+
+    window.onload = function(){
+      const headerEl = window.document.querySelector("header.fixed-top");
+      console.log("clientheight here!!: " + headerEl.clientHeight);
+
+      console.log(`Header is: ${headerEl.clientHeight}px`)
+      style = getComputedStyle(headerEl);
+
+      if( style.position === 'absolute'){
+        console.log("YES")
+      }
+      
+    }
+
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

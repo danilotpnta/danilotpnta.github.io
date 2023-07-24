@@ -68,9 +68,19 @@ window.document.addEventListener("DOMContentLoaded", function () {
 
   function headerOffset() {
     // Set an offset if there is are fixed top navbar
-    const headerEl = window.document.querySelector("header.fixed-top");
+    const headerEl = window.document.querySelector("header.fixed-top");    
     if (headerEl) {
-      return headerEl.clientHeight;
+      // If the page is a blog post then return the height as 0
+      const blogSection = window.document.querySelector("header.blog-page");
+      if (blogSection){
+        // Add extra padding to display well the navbar
+        document.getElementById("quarto-content").style.paddingTop = `${headerEl.clientHeight}px`
+        // returns 0 to fix the TOC where it displays the section
+        return 0
+      } else {
+        return headerEl.clientHeight;
+      }
+      
     } else {
       return 0;
     }
