@@ -29,7 +29,7 @@ h1, .h1 {
     gap: 0.35rem !important;
 }
 
-
+/* Remove top padding from callouts */
 .callout {
     margin-top: 0rem;
 }
