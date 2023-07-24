@@ -74,7 +74,7 @@ window.document.addEventListener("DOMContentLoaded", function () {
       const blogSection = window.document.querySelector("header.blog-page");
       if (blogSection){
         // Add extra padding to display well the navbar
-        document.getElementById("quarto-content").style.paddingTop = `${headerEl.clientHeight}px`
+        document.getElementById("quarto-content").style.paddingTop = `${headerEl.clientHeight-5}px`
         // returns 0 to fix the TOC where it displays the section
         return 0
       } else {
