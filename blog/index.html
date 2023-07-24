@@ -67,7 +67,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-date','listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
       
-      searchColumns: ["listing-project","listing-execute","listing-resources","listing-website","listing-format","listing-language","listing-freeze","listing-title-block-banner","listing-author","listing-css","listing-title","listing-date","listing-categories","listing-jupyter","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-image","listing-sidebar","listing-toc-depth","listing-number-sections","listing-include-after-body","listing-links","listing-coming-soon"],
+      searchColumns: ["listing-project","listing-execute","listing-resources","listing-website","listing-format","listing-language","listing-freeze","listing-title-block-banner","listing-author","listing-css","listing-title","listing-date","listing-categories","listing-jupyter","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-image","listing-sidebar","listing-toc-depth","listing-number-sections","listing-include-after-body","listing-links","listing-coming-soon","listing-toc"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -233,7 +233,67 @@ In this section Danilo writes down his notes, the things he has figured out abou
         </tr> -->
     
     <tbody class="list">
-                <tr id="even-row-blog" data-index="0" data-categories="Life" data-listing-date-sort="1687212000000" data-listing-file-modified-sort="1690193892105" data-listing-date-modified-sort="1690193892000" data-listing-reading-time-sort="3" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="even-row-blog" data-index="0" data-categories="DevOps,Python,Shiny" data-listing-date-sort="1690149600000" data-listing-file-modified-sort="1690227110058" data-listing-date-modified-sort="1690227110000" data-listing-reading-time-sort="2" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                        <td>
+                            <!-- DATE -->
+                                <span class="listing-date">Jul 24</span>
+                            <!-- TITLE -->
+                            <!-- CATEGORY -->
+                        </td>
+                        <td>
+                            <!-- DATE -->
+                            <!-- TITLE -->
+                                <a href="../blog/2023-07-24-the-right-tool/index.html" class="title listing-title">Picking the right tool to show your machine learning project</a>
+                            <!-- CATEGORY -->
+                        </td>
+                        <td>
+                            <!-- DATE -->
+                            <!-- TITLE -->
+                            <!-- CATEGORY -->
+                                    <!-- Box Surrounded Category -->
+                                    <!-- <div class="post-categories listing-categories">
+                                            <div class="post-category listing-category"
+                                                onclick="window.quartoListingCategory('DevOps'); return false;">
+                                                DevOps
+                                            </div>
+                                            <div class="post-category listing-category"
+                                                onclick="window.quartoListingCategory('Python'); return false;">
+                                                Python
+                                            </div>
+                                            <div class="post-category listing-category"
+                                                onclick="window.quartoListingCategory('Shiny'); return false;">
+                                                Shiny
+                                            </div>
+                                    </div> -->
+                                    <!-- Displays only the fist category -->
+                                    <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
+                                        <!-- <p style="margin-bottom: 0em;"> -->
+                                            <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=DevOps">
+                                                DevOps
+                                            </a>
+                                        <!-- </p> -->
+                                    </span>
+                                    <!-- Code text Category -->
+                                    <!-- 
+                                        <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
+                                                <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=DevOps">
+                                                    DevOps
+                                                </a>
+                                        </span>
+                                        <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
+                                                <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=Python">
+                                                    Python
+                                                </a>
+                                        </span>
+                                        <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
+                                                <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=Shiny">
+                                                    Shiny
+                                                </a>
+                                        </span>
+                                     -->
+                        </td>
+                </tr>
+                <tr id="odd-row-blog" data-index="1" data-categories="Life" data-listing-date-sort="1687212000000" data-listing-file-modified-sort="1690221242267" data-listing-date-modified-sort="1690221242000" data-listing-reading-time-sort="3" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Jun 20</span>
@@ -257,17 +317,25 @@ In this section Danilo writes down his notes, the things he has figured out abou
                                                 Life
                                             </div>
                                     </div> -->
+                                    <!-- Displays only the fist category -->
+                                    <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
+                                        <!-- <p style="margin-bottom: 0em;"> -->
+                                            <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=Life">
+                                                Life
+                                            </a>
+                                        <!-- </p> -->
+                                    </span>
                                     <!-- Code text Category -->
+                                    <!-- 
                                         <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                            <!-- <p style="margin-bottom: 0em;"> -->
-                                                <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=Life">
+                                                <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=Life">
                                                     Life
                                                 </a>
-                                            <!-- </p> -->
                                         </span>
+                                     -->
                         </td>
                 </tr>
-                <tr id="odd-row-blog" data-index="1" data-categories="Workflow" data-listing-date-sort="1686261600000" data-listing-file-modified-sort="1688571802851" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="even-row-blog" data-index="2" data-categories="Workflow" data-listing-date-sort="1686261600000" data-listing-file-modified-sort="1690220775413" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Jun 09</span>
@@ -291,17 +359,25 @@ In this section Danilo writes down his notes, the things he has figured out abou
                                                 Workflow
                                             </div>
                                     </div> -->
+                                    <!-- Displays only the fist category -->
+                                    <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
+                                        <!-- <p style="margin-bottom: 0em;"> -->
+                                            <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=Workflow">
+                                                Workflow
+                                            </a>
+                                        <!-- </p> -->
+                                    </span>
                                     <!-- Code text Category -->
+                                    <!-- 
                                         <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                            <!-- <p style="margin-bottom: 0em;"> -->
-                                                <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=Workflow">
+                                                <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=Workflow">
                                                     Workflow
                                                 </a>
-                                            <!-- </p> -->
                                         </span>
+                                     -->
                         </td>
                 </tr>
-                <tr id="even-row-blog" data-index="2" data-categories="Data Mining" data-listing-date-sort="1685916000000" data-listing-file-modified-sort="1690203404547" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="odd-row-blog" data-index="3" data-categories="Data Mining,Python" data-listing-date-sort="1685916000000" data-listing-file-modified-sort="1690226888814" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Jun 05</span>
@@ -324,18 +400,35 @@ In this section Danilo writes down his notes, the things he has figured out abou
                                                 onclick="window.quartoListingCategory('Data Mining'); return false;">
                                                 Data Mining
                                             </div>
+                                            <div class="post-category listing-category"
+                                                onclick="window.quartoListingCategory('Python'); return false;">
+                                                Python
+                                            </div>
                                     </div> -->
+                                    <!-- Displays only the fist category -->
+                                    <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
+                                        <!-- <p style="margin-bottom: 0em;"> -->
+                                            <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=Data Mining">
+                                                Data Mining
+                                            </a>
+                                        <!-- </p> -->
+                                    </span>
                                     <!-- Code text Category -->
+                                    <!-- 
                                         <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                            <!-- <p style="margin-bottom: 0em;"> -->
-                                                <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=Data Mining">
+                                                <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=Data Mining">
                                                     Data Mining
                                                 </a>
-                                            <!-- </p> -->
                                         </span>
+                                        <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
+                                                <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=Python">
+                                                    Python
+                                                </a>
+                                        </span>
+                                     -->
                         </td>
                 </tr>
-                <tr id="odd-row-blog" data-index="3" data-categories="Analysis" data-listing-date-sort="1685311200000" data-listing-file-modified-sort="1690194654953" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="even-row-blog" data-index="4" data-categories="Analysis" data-listing-date-sort="1685311200000" data-listing-file-modified-sort="1690194654953" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">May 29</span>
@@ -359,17 +452,25 @@ In this section Danilo writes down his notes, the things he has figured out abou
                                                 Analysis
                                             </div>
                                     </div> -->
+                                    <!-- Displays only the fist category -->
+                                    <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
+                                        <!-- <p style="margin-bottom: 0em;"> -->
+                                            <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=Analysis">
+                                                Analysis
+                                            </a>
+                                        <!-- </p> -->
+                                    </span>
                                     <!-- Code text Category -->
+                                    <!-- 
                                         <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                            <!-- <p style="margin-bottom: 0em;"> -->
-                                                <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=Analysis">
+                                                <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=Analysis">
                                                     Analysis
                                                 </a>
-                                            <!-- </p> -->
                                         </span>
+                                     -->
                         </td>
                 </tr>
-                <tr id="even-row-blog" data-index="4" data-categories="Analysis" data-listing-date-sort="1674946800000" data-listing-file-modified-sort="1689002624726" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="odd-row-blog" data-index="5" data-categories="Analysis" data-listing-date-sort="1674946800000" data-listing-file-modified-sort="1689002624726" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Jan 29</span>
@@ -393,17 +494,25 @@ In this section Danilo writes down his notes, the things he has figured out abou
                                                 Analysis
                                             </div>
                                     </div> -->
+                                    <!-- Displays only the fist category -->
+                                    <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
+                                        <!-- <p style="margin-bottom: 0em;"> -->
+                                            <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=Analysis">
+                                                Analysis
+                                            </a>
+                                        <!-- </p> -->
+                                    </span>
                                     <!-- Code text Category -->
+                                    <!-- 
                                         <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                            <!-- <p style="margin-bottom: 0em;"> -->
-                                                <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=Analysis">
+                                                <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=Analysis">
                                                     Analysis
                                                 </a>
-                                            <!-- </p> -->
                                         </span>
+                                     -->
                         </td>
                 </tr>
-                <tr id="odd-row-blog" data-index="5" data-categories="News" data-listing-date-sort="1673478000000" data-listing-file-modified-sort="1688739963142" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="even-row-blog" data-index="6" data-categories="News" data-listing-date-sort="1673478000000" data-listing-file-modified-sort="1688739963142" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Jan 12</span>
@@ -427,14 +536,22 @@ In this section Danilo writes down his notes, the things he has figured out abou
                                                 News
                                             </div>
                                     </div> -->
+                                    <!-- Displays only the fist category -->
+                                    <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
+                                        <!-- <p style="margin-bottom: 0em;"> -->
+                                            <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=News">
+                                                News
+                                            </a>
+                                        <!-- </p> -->
+                                    </span>
                                     <!-- Code text Category -->
+                                    <!-- 
                                         <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                            <!-- <p style="margin-bottom: 0em;"> -->
-                                                <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=News">
+                                                <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=News">
                                                     News
                                                 </a>
-                                            <!-- </p> -->
                                         </span>
+                                     -->
                         </td>
                 </tr>
     </tbody>
@@ -498,14 +615,22 @@ No matching items
                                                 Poems
                                             </div>
                                     </div> -->
+                                    <!-- Displays only the fist category -->
+                                    <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
+                                        <!-- <p style="margin-bottom: 0em;"> -->
+                                            <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=Poems">
+                                                Poems
+                                            </a>
+                                        <!-- </p> -->
+                                    </span>
                                     <!-- Code text Category -->
+                                    <!-- 
                                         <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                            <!-- <p style="margin-bottom: 0em;"> -->
-                                                <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=Poems">
+                                                <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=Poems">
                                                     Poems
                                                 </a>
-                                            <!-- </p> -->
                                         </span>
+                                     -->
                         </td>
                 </tr>
                 <tr id="odd-row-blog" data-index="1" data-categories="News" data-listing-date-sort="1667602800000" data-listing-file-modified-sort="1688995348725" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
@@ -532,14 +657,22 @@ No matching items
                                                 News
                                             </div>
                                     </div> -->
+                                    <!-- Displays only the fist category -->
+                                    <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
+                                        <!-- <p style="margin-bottom: 0em;"> -->
+                                            <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=News">
+                                                News
+                                            </a>
+                                        <!-- </p> -->
+                                    </span>
                                     <!-- Code text Category -->
+                                    <!-- 
                                         <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                            <!-- <p style="margin-bottom: 0em;"> -->
-                                                <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=News">
+                                                <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=News">
                                                     News
                                                 </a>
-                                            <!-- </p> -->
                                         </span>
+                                     -->
                         </td>
                 </tr>
     </tbody>
