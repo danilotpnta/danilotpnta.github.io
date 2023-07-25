@@ -15,9 +15,9 @@ new post from BLOG section */
 }
 
 /* Creates three colums for the dates in the post */
-#title-block-header.quarto-title-block.default .quarto-title-meta {
+/* #title-block-header.quarto-title-block.default .quarto-title-meta {
     grid-template-columns: repeat(3, 1fr);
-}
+} */
 
 /* Change the font weight of title */
 h1, .h1 {
@@ -32,4 +32,9 @@ h1, .h1 {
 /* Remove top padding from callouts */
 .callout {
     margin-top: 0rem;
+}
+
+/* Gives padding to all main body content */
+#quarto-content>* {
+    padding-top: 20px;
 }
