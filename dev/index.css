@@ -17,3 +17,24 @@
     opacity: 1;
 	/* pointer-events: none; */
 }
+
+/* .to-do .tab-pane>p {
+    padding-top: 0.5em;
+}
+.to-do p {
+    margin-top: 0;
+    margin-bottom: 0rem;
+} */
+
+.scrollableBox {
+    overflow-y: scroll; 
+    height:300px;
+}
+
+/* h3, .h3, h4, .h4 {
+    margin-top: 0rem; 
+} */
+
+.to-do{
+    padding-bottom: 10px;
+}
