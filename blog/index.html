@@ -67,7 +67,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-date','listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
       
-      searchColumns: ["listing-project","listing-execute","listing-resources","listing-website","listing-format","listing-language","listing-freeze","listing-title-block-banner","listing-author","listing-css","listing-title","listing-date","listing-categories","listing-jupyter","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-image","listing-sidebar","listing-toc-depth","listing-number-sections","listing-include-after-body","listing-links","listing-coming-soon"],
+      searchColumns: ["listing-project","listing-execute","listing-resources","listing-website","listing-format","listing-language","listing-freeze","listing-title-block-banner","listing-author","listing-css","listing-toc-title","listing-title","listing-date","listing-categories","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-jupyter","listing-links","listing-image","listing-sidebar","listing-toc-depth","listing-number-sections","listing-include-after-body","listing-coming-soon"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -95,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-date','listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
       
-      searchColumns: ["listing-project","listing-execute","listing-resources","listing-website","listing-format","listing-language","listing-freeze","listing-title-block-banner","listing-author","listing-css","listing-title","listing-date","listing-year","listing-categories","listing-tags","listing-navbar","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time"],
+      searchColumns: ["listing-project","listing-execute","listing-resources","listing-website","listing-format","listing-language","listing-freeze","listing-title-block-banner","listing-author","listing-css","listing-toc-title","listing-title","listing-date","listing-year","listing-categories","listing-tags","listing-keywords","listing-navbar","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -112,11 +112,13 @@ ul.task-list li input[type="checkbox"] {
     }
   })
   </script>
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="index_post.css">
+<link rel="stylesheet" href="index-post.css">
 <link rel="stylesheet" href="index.css">
 </head>
 
@@ -217,344 +219,44 @@ In this section Danilo writes down his notes, the things he has figured out abou
 ### 2023 {.unlisted .unnumbered} -->
 <div class="datePadding newFont_and_color">
 <div id="listing-posts-2023" class="quarto-listing quarto-listing-container-custom">
-
-<table class="quarto-listing-table table">
-    <!-- <col style="width:10%">
-    <col style="width:75%">
-    <col style="width:15%"> -->
-    <!-- <thead>
-        <tr>
-            <th>
-            </th>
-            <th>
-            </th>
-            <th>
-            </th>
-        </tr> -->
-    
-    <tbody class="list">
-                <tr id="even-row-blog" data-index="0" data-categories="DevOps,Python,Shiny" data-listing-date-sort="1690149600000" data-listing-file-modified-sort="1690232989890" data-listing-date-modified-sort="1690232989000" data-listing-reading-time-sort="2" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                        <td>
-                            <!-- DATE -->
-                                <span class="listing-date">Jul 24</span>
-                            <!-- TITLE -->
-                            <!-- CATEGORY -->
-                        </td>
-                        <td>
-                            <!-- DATE -->
-                            <!-- TITLE -->
-                                <a href="../blog/2023-07-24-the-right-tool/index.html" class="title listing-title">Picking the right tool to show your machine learning project</a>
-                            <!-- CATEGORY -->
-                        </td>
-                        <td>
-                            <!-- DATE -->
-                            <!-- TITLE -->
-                            <!-- CATEGORY -->
-                                    <!-- Box Surrounded Category -->
-                                    <!-- <div class="post-categories listing-categories">
-                                            <div class="post-category listing-category"
-                                                onclick="window.quartoListingCategory('DevOps'); return false;">
-                                                DevOps
-                                            </div>
-                                            <div class="post-category listing-category"
-                                                onclick="window.quartoListingCategory('Python'); return false;">
-                                                Python
-                                            </div>
-                                            <div class="post-category listing-category"
-                                                onclick="window.quartoListingCategory('Shiny'); return false;">
-                                                Shiny
-                                            </div>
-                                    </div> -->
-                                    <!-- Displays only the fist category -->
-                                    <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                        <!-- <p style="margin-bottom: 0em;"> -->
-                                            <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=DevOps">
-                                                DevOps
-                                            </a>
-                                        <!-- </p> -->
-                                    </span>
-                                    <!-- Code text Category -->
-                                    <!-- 
-                                        <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                                <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=DevOps">
-                                                    DevOps
-                                                </a>
-                                        </span>
-                                        <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                                <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=Python">
-                                                    Python
-                                                </a>
-                                        </span>
-                                        <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                                <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=Shiny">
-                                                    Shiny
-                                                </a>
-                                        </span>
-                                     -->
-                        </td>
-                </tr>
-                <tr id="odd-row-blog" data-index="1" data-categories="Life" data-listing-date-sort="1687212000000" data-listing-file-modified-sort="1690231210235" data-listing-date-modified-sort="1690231210000" data-listing-reading-time-sort="3" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                        <td>
-                            <!-- DATE -->
-                                <span class="listing-date">Jun 20</span>
-                            <!-- TITLE -->
-                            <!-- CATEGORY -->
-                        </td>
-                        <td>
-                            <!-- DATE -->
-                            <!-- TITLE -->
-                                <a href="../blog/2023-06-20-running-my-first-marathon/index.html" class="title listing-title">Running my first Marathon</a>
-                            <!-- CATEGORY -->
-                        </td>
-                        <td>
-                            <!-- DATE -->
-                            <!-- TITLE -->
-                            <!-- CATEGORY -->
-                                    <!-- Box Surrounded Category -->
-                                    <!-- <div class="post-categories listing-categories">
-                                            <div class="post-category listing-category"
-                                                onclick="window.quartoListingCategory('Life'); return false;">
-                                                Life
-                                            </div>
-                                    </div> -->
-                                    <!-- Displays only the fist category -->
-                                    <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                        <!-- <p style="margin-bottom: 0em;"> -->
-                                            <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=Life">
-                                                Life
-                                            </a>
-                                        <!-- </p> -->
-                                    </span>
-                                    <!-- Code text Category -->
-                                    <!-- 
-                                        <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                                <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=Life">
-                                                    Life
-                                                </a>
-                                        </span>
-                                     -->
-                        </td>
-                </tr>
-                <tr id="even-row-blog" data-index="2" data-categories="Workflow" data-listing-date-sort="1686261600000" data-listing-file-modified-sort="1690233046605" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                        <td>
-                            <!-- DATE -->
-                                <span class="listing-date">Jun 09</span>
-                            <!-- TITLE -->
-                            <!-- CATEGORY -->
-                        </td>
-                        <td>
-                            <!-- DATE -->
-                            <!-- TITLE -->
-                                <a href="../blog/2023-06-09-lua-shorcuts/index.html" class="title listing-title">On the topic of Optimization</a>
-                            <!-- CATEGORY -->
-                        </td>
-                        <td>
-                            <!-- DATE -->
-                            <!-- TITLE -->
-                            <!-- CATEGORY -->
-                                    <!-- Box Surrounded Category -->
-                                    <!-- <div class="post-categories listing-categories">
-                                            <div class="post-category listing-category"
-                                                onclick="window.quartoListingCategory('Workflow'); return false;">
-                                                Workflow
-                                            </div>
-                                    </div> -->
-                                    <!-- Displays only the fist category -->
-                                    <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                        <!-- <p style="margin-bottom: 0em;"> -->
-                                            <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=Workflow">
-                                                Workflow
-                                            </a>
-                                        <!-- </p> -->
-                                    </span>
-                                    <!-- Code text Category -->
-                                    <!-- 
-                                        <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                                <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=Workflow">
-                                                    Workflow
-                                                </a>
-                                        </span>
-                                     -->
-                        </td>
-                </tr>
-                <tr id="odd-row-blog" data-index="3" data-categories="Data Mining,Python" data-listing-date-sort="1685916000000" data-listing-file-modified-sort="1690226888814" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                        <td>
-                            <!-- DATE -->
-                                <span class="listing-date">Jun 05</span>
-                            <!-- TITLE -->
-                            <!-- CATEGORY -->
-                        </td>
-                        <td>
-                            <!-- DATE -->
-                            <!-- TITLE -->
-                                <a href="../blog/2023-06-05-how-hash-table-works/how-hash-table-works.html" class="title listing-title">How PCY Algorithm works</a>
-                            <!-- CATEGORY -->
-                        </td>
-                        <td>
-                            <!-- DATE -->
-                            <!-- TITLE -->
-                            <!-- CATEGORY -->
-                                    <!-- Box Surrounded Category -->
-                                    <!-- <div class="post-categories listing-categories">
-                                            <div class="post-category listing-category"
-                                                onclick="window.quartoListingCategory('Data Mining'); return false;">
-                                                Data Mining
-                                            </div>
-                                            <div class="post-category listing-category"
-                                                onclick="window.quartoListingCategory('Python'); return false;">
-                                                Python
-                                            </div>
-                                    </div> -->
-                                    <!-- Displays only the fist category -->
-                                    <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                        <!-- <p style="margin-bottom: 0em;"> -->
-                                            <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=Data Mining">
-                                                Data Mining
-                                            </a>
-                                        <!-- </p> -->
-                                    </span>
-                                    <!-- Code text Category -->
-                                    <!-- 
-                                        <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                                <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=Data Mining">
-                                                    Data Mining
-                                                </a>
-                                        </span>
-                                        <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                                <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=Python">
-                                                    Python
-                                                </a>
-                                        </span>
-                                     -->
-                        </td>
-                </tr>
-                <tr id="even-row-blog" data-index="4" data-categories="Analysis" data-listing-date-sort="1685311200000" data-listing-file-modified-sort="1690194654953" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                        <td>
-                            <!-- DATE -->
-                                <span class="listing-date">May 29</span>
-                            <!-- TITLE -->
-                            <!-- CATEGORY -->
-                        </td>
-                        <td>
-                            <!-- DATE -->
-                            <!-- TITLE -->
-                                <a href="../blog/2023-05-29-post-with-code/index.html" class="title listing-title">Post With Code insane you will learn a lot, and beyond what you can comprehend</a>
-                            <!-- CATEGORY -->
-                        </td>
-                        <td>
-                            <!-- DATE -->
-                            <!-- TITLE -->
-                            <!-- CATEGORY -->
-                                    <!-- Box Surrounded Category -->
-                                    <!-- <div class="post-categories listing-categories">
-                                            <div class="post-category listing-category"
-                                                onclick="window.quartoListingCategory('Analysis'); return false;">
-                                                Analysis
-                                            </div>
-                                    </div> -->
-                                    <!-- Displays only the fist category -->
-                                    <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                        <!-- <p style="margin-bottom: 0em;"> -->
-                                            <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=Analysis">
-                                                Analysis
-                                            </a>
-                                        <!-- </p> -->
-                                    </span>
-                                    <!-- Code text Category -->
-                                    <!-- 
-                                        <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                                <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=Analysis">
-                                                    Analysis
-                                                </a>
-                                        </span>
-                                     -->
-                        </td>
-                </tr>
-                <tr id="odd-row-blog" data-index="5" data-categories="Analysis" data-listing-date-sort="1674946800000" data-listing-file-modified-sort="1689002624726" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                        <td>
-                            <!-- DATE -->
-                                <span class="listing-date">Jan 29</span>
-                            <!-- TITLE -->
-                            <!-- CATEGORY -->
-                        </td>
-                        <td>
-                            <!-- DATE -->
-                            <!-- TITLE -->
-                                <a href="../blog/2023-01-29-Python-project copy/Python-demo.html" class="title listing-title">Post that shows Quarto Basics</a>
-                            <!-- CATEGORY -->
-                        </td>
-                        <td>
-                            <!-- DATE -->
-                            <!-- TITLE -->
-                            <!-- CATEGORY -->
-                                    <!-- Box Surrounded Category -->
-                                    <!-- <div class="post-categories listing-categories">
-                                            <div class="post-category listing-category"
-                                                onclick="window.quartoListingCategory('Analysis'); return false;">
-                                                Analysis
-                                            </div>
-                                    </div> -->
-                                    <!-- Displays only the fist category -->
-                                    <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                        <!-- <p style="margin-bottom: 0em;"> -->
-                                            <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=Analysis">
-                                                Analysis
-                                            </a>
-                                        <!-- </p> -->
-                                    </span>
-                                    <!-- Code text Category -->
-                                    <!-- 
-                                        <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                                <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=Analysis">
-                                                    Analysis
-                                                </a>
-                                        </span>
-                                     -->
-                        </td>
-                </tr>
-                <tr id="even-row-blog" data-index="6" data-categories="News" data-listing-date-sort="1673478000000" data-listing-file-modified-sort="1688739963142" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                        <td>
-                            <!-- DATE -->
-                                <span class="listing-date">Jan 12</span>
-                            <!-- TITLE -->
-                            <!-- CATEGORY -->
-                        </td>
-                        <td>
-                            <!-- DATE -->
-                            <!-- TITLE -->
-                                <a href="../blog/2023-01-12-2022-into-2023/index.html" class="title listing-title">2022 into 2023</a>
-                            <!-- CATEGORY -->
-                        </td>
-                        <td>
-                            <!-- DATE -->
-                            <!-- TITLE -->
-                            <!-- CATEGORY -->
-                                    <!-- Box Surrounded Category -->
-                                    <!-- <div class="post-categories listing-categories">
-                                            <div class="post-category listing-category"
-                                                onclick="window.quartoListingCategory('News'); return false;">
-                                                News
-                                            </div>
-                                    </div> -->
-                                    <!-- Displays only the fist category -->
-                                    <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                        <!-- <p style="margin-bottom: 0em;"> -->
-                                            <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=News">
-                                                News
-                                            </a>
-                                        <!-- </p> -->
-                                    </span>
-                                    <!-- Code text Category -->
-                                    <!-- 
-                                        <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                                <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=News">
-                                                    News
-                                                </a>
-                                        </span>
-                                     -->
-                        </td>
-                </tr>
-    </tbody>
+<table class="quarto-listing-table table" data-quarto-postprocess="true">
+<tbody class="list">
+<tr id="even-row-blog" class="odd" data-index="0" data-categories="DevOps,TAGS,Python,Shiny" data-listing-date-sort="1690149600000" data-listing-file-modified-sort="1690383902293" data-listing-date-modified-sort="1690383902000" data-listing-reading-time-sort="2" data-<!--="" data-i="3" data-col,="" data-date,="" data-title,="" data-category="" data---="">
+<td><span class="listing-date">Jul 24</span></td>
+<td><a href="../blog/2023-07-24_the-right-tool/index.html" class="title listing-title">Picking the right tool to show your machine learning project</a></td>
+<td><span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;"> <a href="../blog/#category=DevOps" style="color: inherit; font-size: 0.95em;">DevOps</a> </span></td>
+</tr>
+<tr id="odd-row-blog" class="even" data-index="1" data-categories="Life" data-listing-date-sort="1687212000000" data-listing-file-modified-sort="1690231210235" data-listing-date-modified-sort="1690231210000" data-listing-reading-time-sort="3" data-<!--="" data-i="3" data-col,="" data-date,="" data-title,="" data-category="" data---="">
+<td><span class="listing-date">Jun 20</span></td>
+<td><a href="../blog/2023-06-20_running-my-first-marathon/index.html" class="title listing-title">Running my first Marathon</a></td>
+<td><span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;"> <a href="../blog/#category=Life" style="color: inherit; font-size: 0.95em;">Life</a> </span></td>
+</tr>
+<tr id="even-row-blog" class="odd" data-index="2" data-categories="Workflow" data-listing-date-sort="1686261600000" data-listing-file-modified-sort="1690233046605" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-<!--="" data-i="3" data-col,="" data-date,="" data-title,="" data-category="" data---="">
+<td><span class="listing-date">Jun 09</span></td>
+<td><a href="../blog/2023-06-09_lua-shorcuts/index.html" class="title listing-title">On the topic of Optimization</a></td>
+<td><span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;"> <a href="../blog/#category=Workflow" style="color: inherit; font-size: 0.95em;">Workflow</a> </span></td>
+</tr>
+<tr id="odd-row-blog" class="even" data-index="3" data-categories="Data Mining,Python" data-listing-date-sort="1685916000000" data-listing-file-modified-sort="1690226888814" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-<!--="" data-i="3" data-col,="" data-date,="" data-title,="" data-category="" data---="">
+<td><span class="listing-date">Jun 05</span></td>
+<td><a href="../blog/2023-06-05_how-hash-table-works/how-hash-table-works.html" class="title listing-title">How PCY Algorithm works</a></td>
+<td><span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;"> <a href="../blog/#category=Data Mining" style="color: inherit; font-size: 0.95em;">Data Mining</a> </span></td>
+</tr>
+<tr id="even-row-blog" class="odd" data-index="4" data-categories="Analysis" data-listing-date-sort="1685311200000" data-listing-file-modified-sort="1690194654953" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-<!--="" data-i="3" data-col,="" data-date,="" data-title,="" data-category="" data---="">
+<td><span class="listing-date">May 29</span></td>
+<td><a href="../blog/2023-05-29_post-with-code/index.html" class="title listing-title">Post With Code insane you will learn a lot, and beyond what you can comprehend</a></td>
+<td><span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;"> <a href="../blog/#category=Analysis" style="color: inherit; font-size: 0.95em;">Analysis</a> </span></td>
+</tr>
+<tr id="odd-row-blog" class="even" data-index="5" data-categories="Analysis" data-listing-date-sort="1674946800000" data-listing-file-modified-sort="1689002624726" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-<!--="" data-i="3" data-col,="" data-date,="" data-title,="" data-category="" data---="">
+<td><span class="listing-date">Jan 29</span></td>
+<td><a href="../blog/2023-01-29_Python-project copy/Python-demo.html" class="title listing-title">Post that shows Quarto Basics</a></td>
+<td><span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;"> <a href="../blog/#category=Analysis" style="color: inherit; font-size: 0.95em;">Analysis</a> </span></td>
+</tr>
+<tr id="even-row-blog" class="odd" data-index="6" data-categories="News" data-listing-date-sort="1673478000000" data-listing-file-modified-sort="1688739963142" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-<!--="" data-i="3" data-col,="" data-date,="" data-title,="" data-category="" data---="">
+<td><span class="listing-date">Jan 12</span></td>
+<td><a href="../blog/2023-01-12_2022-into-2023/index.html" class="title listing-title">2022 into 2023</a></td>
+<td><span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;"> <a href="../blog/#category=News" style="color: inherit; font-size: 0.95em;">News</a> </span></td>
+</tr>
+</tbody>
 </table>
 <div class="listing-no-matching d-none">
 <p align="left">
@@ -575,107 +277,19 @@ No matching items
 <h3 class="unlisted unnumbered h3-margins anchored" data-anchor-id="section">2022</h3>
 <div class="datePadding newFont_and_color">
 <div id="listing-posts-2022" class="quarto-listing quarto-listing-container-custom">
-
-<table class="quarto-listing-table table">
-    <!-- <col style="width:10%">
-    <col style="width:75%">
-    <col style="width:15%"> -->
-    <!-- <thead>
-        <tr>
-            <th>
-            </th>
-            <th>
-            </th>
-            <th>
-            </th>
-        </tr> -->
-    
-    <tbody class="list">
-                <tr id="even-row-blog" data-index="0" data-categories="Poems" data-listing-date-sort="1672268400000" data-listing-file-modified-sort="1690267303398" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                        <td>
-                            <!-- DATE -->
-                                <span class="listing-date">Dec 29</span>
-                            <!-- TITLE -->
-                            <!-- CATEGORY -->
-                        </td>
-                        <td>
-                            <!-- DATE -->
-                            <!-- TITLE -->
-                                <a href="../blog/2022-12-29-cuando-miras-al-cielo/index.html" class="title listing-title">Cuando miras al cielo</a>
-                            <!-- CATEGORY -->
-                        </td>
-                        <td>
-                            <!-- DATE -->
-                            <!-- TITLE -->
-                            <!-- CATEGORY -->
-                                    <!-- Box Surrounded Category -->
-                                    <!-- <div class="post-categories listing-categories">
-                                            <div class="post-category listing-category"
-                                                onclick="window.quartoListingCategory('Poems'); return false;">
-                                                Poems
-                                            </div>
-                                    </div> -->
-                                    <!-- Displays only the fist category -->
-                                    <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                        <!-- <p style="margin-bottom: 0em;"> -->
-                                            <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=Poems">
-                                                Poems
-                                            </a>
-                                        <!-- </p> -->
-                                    </span>
-                                    <!-- Code text Category -->
-                                    <!-- 
-                                        <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                                <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=Poems">
-                                                    Poems
-                                                </a>
-                                        </span>
-                                     -->
-                        </td>
-                </tr>
-                <tr id="odd-row-blog" data-index="1" data-categories="News" data-listing-date-sort="1667602800000" data-listing-file-modified-sort="1688995348725" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                        <td>
-                            <!-- DATE -->
-                                <span class="listing-date">Nov 05</span>
-                            <!-- TITLE -->
-                            <!-- CATEGORY -->
-                        </td>
-                        <td>
-                            <!-- DATE -->
-                            <!-- TITLE -->
-                                <a href="../blog/2022-11-05-welcome/index.html" class="title listing-title">Welcome To My Blog</a>
-                            <!-- CATEGORY -->
-                        </td>
-                        <td>
-                            <!-- DATE -->
-                            <!-- TITLE -->
-                            <!-- CATEGORY -->
-                                    <!-- Box Surrounded Category -->
-                                    <!-- <div class="post-categories listing-categories">
-                                            <div class="post-category listing-category"
-                                                onclick="window.quartoListingCategory('News'); return false;">
-                                                News
-                                            </div>
-                                    </div> -->
-                                    <!-- Displays only the fist category -->
-                                    <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                        <!-- <p style="margin-bottom: 0em;"> -->
-                                            <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=News">
-                                                News
-                                            </a>
-                                        <!-- </p> -->
-                                    </span>
-                                    <!-- Code text Category -->
-                                    <!-- 
-                                        <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
-                                                <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=News">
-                                                    News
-                                                </a>
-                                        </span>
-                                     -->
-                        </td>
-                </tr>
-    </tbody>
+<table class="quarto-listing-table table" data-quarto-postprocess="true">
+<tbody class="list">
+<tr id="even-row-blog" class="odd" data-index="0" data-categories="Poems" data-listing-date-sort="1672268400000" data-listing-file-modified-sort="1690372574033" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-<!--="" data-i="3" data-col,="" data-date,="" data-title,="" data-category="" data---="">
+<td><span class="listing-date">Dec 29</span></td>
+<td><a href="../blog/2022-12-29_cuando-miras-al-cielo/index.html" class="title listing-title">Cuando miras al cielo</a></td>
+<td><span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;"> <a href="../blog/#category=Poems" style="color: inherit; font-size: 0.95em;">Poems</a> </span></td>
+</tr>
+<tr id="odd-row-blog" class="even" data-index="1" data-categories="News,TAGS,Spanish,Testing" data-listing-date-sort="1667602800000" data-listing-file-modified-sort="1690380643919" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-<!--="" data-i="3" data-col,="" data-date,="" data-title,="" data-category="" data---="">
+<td><span class="listing-date">Nov 05</span></td>
+<td><a href="../blog/2022-11-05_welcome/index.html" class="title listing-title">Welcome To My Blog</a></td>
+<td><span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;"> <a href="../blog/#category=News" style="color: inherit; font-size: 0.95em;">News</a> </span></td>
+</tr>
+</tbody>
 </table>
 <div class="listing-no-matching d-none">
 <p align="left">

@@ -14,15 +14,15 @@
   {
     "listing": "/blog/index.html",
     "items": [
-      "/blog/2023-07-24-the-right-tool/index.html",
-      "/blog/2023-06-20-running-my-first-marathon/index.html",
-      "/blog/2023-06-09-lua-shorcuts/index.html",
-      "/blog/2023-06-05-how-hash-table-works/how-hash-table-works.html",
-      "/blog/2023-05-29-post-with-code/index.html",
-      "/blog/2023-01-29-Python-project copy/Python-demo.html",
-      "/blog/2023-01-12-2022-into-2023/index.html",
-      "/blog/2022-12-29-cuando-miras-al-cielo/index.html",
-      "/blog/2022-11-05-welcome/index.html"
+      "/blog/2023-07-24_the-right-tool/index.html",
+      "/blog/2023-06-20_running-my-first-marathon/index.html",
+      "/blog/2023-06-09_lua-shorcuts/index.html",
+      "/blog/2023-06-05_how-hash-table-works/how-hash-table-works.html",
+      "/blog/2023-05-29_post-with-code/index.html",
+      "/blog/2023-01-29_Python-project copy/Python-demo.html",
+      "/blog/2023-01-12_2022-into-2023/index.html",
+      "/blog/2022-12-29_cuando-miras-al-cielo/index.html",
+      "/blog/2022-11-05_welcome/index.html"
     ]
   }
 ]
