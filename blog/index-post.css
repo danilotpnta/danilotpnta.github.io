@@ -34,9 +34,11 @@ h1, .h1 {
     margin-top: 0rem;
 }
 
-/* Gives padding to all main body content */
-#quarto-content>* {
-    padding-top: 20px;
+@media (min-width: 570px){
+    /* Gives padding to all main body content */
+    #quarto-content>* {
+        padding-top: 20px;
+    }
 }
 
 /* .tags-icon {
@@ -48,12 +50,10 @@ h1, .h1 {
 .tags-title {
     color: #000000 !important;
     background-color: #efefef !important;
-    border: none !important;
+    border: solid 1px !important;
+    border-color: #efefef !important;
 }
 
-.quarto-categories.tag-categories {
-    margin-top: 5px;
-}
 
 .quarto-title .quarto-categories {
     display: inline-flex;
@@ -65,7 +65,8 @@ h1, .h1 {
 }
 
 #tag-icon-blog {
-    color: #272727 !important;
+    color: #000000 !important;
+    /* color: #272727 !important; */
     /* padding-right: 0px !important; */
     background-color: white !important;
     border: solid 1px !important;
@@ -83,3 +84,37 @@ div#TAGS-from-here ~ * {
     display: inline !important;
 }
 
+/* Erase padding of BLOG title */
+/* .quarto-title h1.title {
+    padding-bottom: 0px !important;
+} */
+
+
+.material-icons-outlined {
+    font-size: 13px !important;
+    vertical-align: text-bottom;
+}
+
+.quick-links-title{
+    padding-top: 13px;
+}
+
+/* Controls the padding between AUTHOR and QUICK LINKS */
+#title-block-header.quarto-title-block.default .quarto-title-meta-heading {
+    /* margin-top: 0.3em !important; */
+    margin-top: 1em !important;
+}
+
+/* Controls top margin CATEGORIES */
+.quarto-title .quarto-categories {
+    /* margin-top: .75em !important;  */
+     margin-top: 1em !important; 
+}
+
+.quarto-categories.tag-categories {
+    margin-top: 5px !important;
+}
+
+.number-grey{
+    color:#5a6570;
+}
