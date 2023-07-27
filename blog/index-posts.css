@@ -1,0 +1,102 @@
+/* Disables only DANILO TOAPANTA when opening
+new post from BLOG section */
+@media (min-width: 570px){
+    .navbar-brand-container {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    body.floating .page-columns {
+        display: grid;
+        gap: 0;
+        grid-template-columns: [screen-start] 1.5em [screen-start-inset] 5fr [page-start] minmax(25px, 50px) [page-start-inset] minmax(50px, 150px) [body-start-outset] minmax(25px, 50px) [body-start] 1.5em [body-content-start] minmax(500px, calc( 750px - 3em )) [body-content-end] 1.5em [body-end] minmax(25px, 50px) [body-end-outset] minmax(50px, 150px) [page-end-inset] minmax(25px, 50px) [page-end] 5fr [screen-end-inset] 1.5em [screen-end] !important;
+    }
+}
+
+/* Creates three colums for the dates in the post */
+/* #title-block-header.quarto-title-block.default .quarto-title-meta {
+    grid-template-columns: repeat(3, 1fr);
+} */
+
+/* Change the font weight of title */
+h1, .h1 {
+    font-weight: 500;
+}
+
+/* Adjust Gap of LINKS in posts */
+.gap-1 {
+    gap: 0.35rem !important;
+}
+
+/* Remove top padding from callouts */
+.callout {
+    margin-top: 0rem;
+}
+
+@media (min-width: 570px){
+    /* Gives padding to all main body content */
+    #quarto-content>* {
+        padding-top: 20px;
+    }
+}
+
+/* .tags-icon {
+    color: #000000 !important;
+    background-color: transparent !important;
+    border: none !important;
+} */
+
+
+.quarto-title .quarto-categories {
+    display: inline-flex;
+}
+
+.quarto-category.tags-title {
+    /* padding: 0.5em 5px !important; */
+    font-size: .67em !important;
+}
+
+/* Hides all elements after TAGS delimiter */
+div#TAGS ~ * {
+    display: none;
+}
+
+div#TAGS-from-here ~ * {
+    display: inline !important;
+}
+
+/* Erase padding of BLOG title */
+/* .quarto-title h1.title {
+    padding-bottom: 0px !important;
+} */
+
+
+.material-icons-outlined {
+    font-size: 13px !important;
+    vertical-align: text-bottom;
+}
+
+.quick-links-title{
+    padding-top: 13px;
+}
+
+/* Controls the padding between AUTHOR and QUICK LINKS */
+#title-block-header.quarto-title-block.default .quarto-title-meta-heading {
+    /* margin-top: 0.3em !important; */
+    margin-top: 1em !important;
+}
+
+/* Controls top margin CATEGORIES */
+.quarto-title .quarto-categories {
+    /* margin-top: .75em !important;  */
+     margin-top: 1em !important; 
+}
+
+.quarto-categories.tag-categories {
+    margin-top: 5px !important;
+}
+
+.number-grey{
+    color:#5a6570;
+}
