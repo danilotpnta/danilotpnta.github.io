@@ -47,13 +47,6 @@ h1, .h1 {
     border: none !important;
 } */
 
-.tags-title {
-    color: #000000 !important;
-    background-color: #efefef !important;
-    border: solid 1px !important;
-    border-color: #efefef !important;
-}
-
 
 .quarto-title .quarto-categories {
     display: inline-flex;
@@ -62,17 +55,6 @@ h1, .h1 {
 .quarto-category.tags-title {
     /* padding: 0.5em 5px !important; */
     font-size: .67em !important;
-}
-
-#tag-icon-blog {
-    color: #000000 !important;
-    /* color: #272727 !important; */
-    /* padding-right: 0px !important; */
-    background-color: white !important;
-    border: solid 1px !important;
-    border-radius: .25rem;
-    border-color: #c8c8c8d1 !important;
-    opacity: .6;
 }
 
 /* Hides all elements after TAGS delimiter */
