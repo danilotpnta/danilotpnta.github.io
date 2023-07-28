@@ -37,7 +37,7 @@ h1, .h1 {
 @media (min-width: 570px){
     /* Gives padding to all main body content */
     #quarto-content>* {
-        padding-top: 20px;
+        padding-top: 35px;
     }
 }
 
