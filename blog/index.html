@@ -120,7 +120,7 @@ ul.task-list li input[type="checkbox"] {
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="index-posts.css">
-<link rel="stylesheet" href="index-main.css">
+<link rel="stylesheet" href="index.css">
 </head>
 
 <body class="floating nav-fixed">
@@ -218,13 +218,13 @@ Show All Posts <i style="padding-left:2px;" class="bi bi-arrow-counterclockwise"
 </div>
 <div id="show-tag-cat-selected" style="display:none;">
 <p style="padding-top:40px; padding-bottom:5px; margin-bottom:0px; color: #838383;">
-<span style="padding-bottom:0px; margin-bottom:0px; color: green;"> # </span> <!-- posts tagged: --> posts categorized:
+<span id="green_number_blog" style="padding-bottom:0px; margin-bottom:0px; color: green;"> # </span> posts <span id="tagged_categorized_as"> published: </span>
 </p>
 <h1 id="tag_category_name" style="padding:0px 0px; margin: 0px 0px; padding-bottom:15px; border-bottom: none">
 Python
 </h1>
 </div>
-<h3 class="unlisted unnumbered anchored" style="margin-top: 0px; padding-top:30px; padding-bottom: 8px; font-size: 1.6rem;">
+<h3 class="unlisted unnumbered no_anchor_link anchored" style="margin-top: 0px; padding-top:30px; padding-bottom: 8px; font-size: 1.6rem;">
 2023
 </h3>
 <!-- ```{=html}
@@ -260,72 +260,74 @@ Python
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
             <!-- Poems  -->
-                1
+            1
         <!-- if there is no TAG written then do not continue this for-loop  -->
             <!-- +1 to avoid inserting the name TAG -->
-                Spanish
-                    1
+                <!-- Spanish -->
+                1
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
             <!-- DevOps  -->
-                2
+            2
             <!-- New  -->
-                3
+            3
         <!-- if there is no TAG written then do not continue this for-loop  -->
             <!-- +1 to avoid inserting the name TAG -->
-                Python
-                    2
-                Shiny
-                    3
+                <!-- Python -->
+                2
+                <!-- Shiny -->
+                3
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
             <!-- Life  -->
-                4
+            4
         <!-- if there is no TAG written then do not continue this for-loop  -->
             <!-- +1 to avoid inserting the name TAG -->
-                Amsterdam
-                    4
-                Running
-                    5
+                <!-- Amsterdam -->
+                4
+                <!-- Running -->
+                5
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
             <!-- Workflow  -->
-                5
+            5
         <!-- if there is no TAG written then do not continue this for-loop  -->
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
             <!-- Data Mining  -->
-                6
+            6
         <!-- if there is no TAG written then do not continue this for-loop  -->
             <!-- +1 to avoid inserting the name TAG -->
-                Python
+                <!-- Python -->
+                6
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
             <!-- Analysis  -->
-                7
+            7
         <!-- if there is no TAG written then do not continue this for-loop  -->
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
             <!-- Analysis  -->
+            8
         <!-- if there is no TAG written then do not continue this for-loop  -->
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
             <!-- News  -->
-                8
+            9
         <!-- if there is no TAG written then do not continue this for-loop  -->
 </div>
 
@@ -397,6 +399,9 @@ Python
             Analysis
         </p>
         <p class="array_categories"> 
+            Analysis
+        </p>
+        <p class="array_categories"> 
             News
         </p>
         <p class="array_tags"> 
@@ -413,6 +418,9 @@ Python
         </p>
         <p class="array_tags"> 
             Running
+        </p>
+        <p class="array_tags"> 
+            Python
         </p>
 </div>
 <div class="listing-no-matching d-none">
@@ -431,7 +439,7 @@ No matching items
 </div>
 </div>
 <!-- ### 2022 {.unlisted .unnumbered .h3-margins} -->
-<h3 class="unlisted unnumbered anchored" style="margin-top: 0px; padding-top:20px; padding-bottom: 8px; font-size: 1.6rem;">
+<h3 class="unlisted unnumbered no_anchor_link anchored" style="margin-top: 0px; padding-top:20px; padding-bottom: 8px; font-size: 1.6rem;">
 2022
 </h3>
 <div class="datePadding newFont_and_color">
@@ -442,22 +450,23 @@ No matching items
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
             <!-- Poems  -->
-                1
+            1
         <!-- if there is no TAG written then do not continue this for-loop  -->
             <!-- +1 to avoid inserting the name TAG -->
-                Spanish
-                    1
+                <!-- Spanish -->
+                1
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
             <!-- News  -->
-                2
+            2
         <!-- if there is no TAG written then do not continue this for-loop  -->
             <!-- +1 to avoid inserting the name TAG -->
-                Spanish
-                Testing
-                    2
+                <!-- Spanish -->
+                2
+                <!-- Testing -->
+                3
 </div>
 
 <table class="quarto-listing-table table" data-quarto-postprocess="true">
@@ -481,6 +490,9 @@ No matching items
         </p>
         <p class="array_categories"> 
             News
+        </p>
+        <p class="array_tags"> 
+            Spanish
         </p>
         <p class="array_tags"> 
             Spanish
@@ -512,7 +524,8 @@ No matching items
 <script id="script-part">
     var node;
     var showCategories = false;
-  
+
+
     // ------------------------- ON WINDOWS LOAD -------------------------
     window.onload = function(){
       var currentUrl = window.location.href;
@@ -546,10 +559,31 @@ No matching items
         id_name = id_name.replace(substr, "\ ");        
       } 
 
-      // If it is not empty then display contents
-      if ( !(id_name === "") ) {
+      var raw_array_categories = [];
+      var raw_array_tags = [];
+      var array_categories = {};
+      var array_tags = {};
+
+      getElements_from_array('.array_categories', raw_array_categories)
+      getElements_from_array('.array_tags', raw_array_tags)
+      countElements(raw_array_categories, array_categories);
+      countElements(raw_array_tags, array_tags);
+
+      console.log(id_name)
+      // display the text only if there is a name for the tag or category
+      // and if is array of tags or categories
+      if( !(id_name === "") && ( (raw_array_categories.includes(id_name))  || (raw_array_tags.includes(id_name))  )) {
         changeText(id_name);
       }
+
+      if (raw_array_categories.includes(id_name)){
+        console.log(`accesing dict category: ${array_categories[id_name]}, with id: ${id_name}`);
+        changeGreenNumber(array_categories[id_name], 'categorized:' );
+      } else {
+        console.log(`accesing dict tags: ${array_tags[id_name]}, with id: ${id_name}`);
+        changeGreenNumber(array_tags[id_name],'tagged:');
+      }
+
 
     }
 
@@ -581,19 +615,69 @@ No matching items
         id_name = id_name.replace(substr, "\ ");        
       } 
 
-      changeText(id_name);
+      var raw_array_categories = [];
+      var raw_array_tags = [];
+      var array_categories = {};
+      var array_tags = {};
+
+      getElements_from_array('.array_categories', raw_array_categories)
+      getElements_from_array('.array_tags', raw_array_tags)
+      countElements(raw_array_categories, array_categories);
+      countElements(raw_array_tags, array_tags);
+
+      console.log(id_name)
+      // display the text only if there is a name for the tag or category
+      // and if is array of tags or categories
+      if( !(id_name === "") && ( (raw_array_categories.includes(id_name))  || (raw_array_tags.includes(id_name))  )) {
+        changeText(id_name);
+      }
+
+      if (raw_array_categories.includes(id_name)){
+        console.log(`accesing dict category: ${array_categories[id_name]}, with id: ${id_name}`);
+        changeGreenNumber(array_categories[id_name], 'categorized:' );
+      } else {
+        console.log(`accesing dict tags: ${array_tags[id_name]}, with id: ${id_name}`);
+        changeGreenNumber(array_tags[id_name],'tagged:');
+      }
+
 
     });
 
     // ------------------------- HELPER FUNCTIONS -------------------------
 
+    // Count same elements in array
+    function countElements (array_to_be_counted,array_counts){
+      array_to_be_counted.forEach(function (x) { array_counts[x] = (array_counts[x] || 0) + 1; });
+    }
+    
+    // Get all the elements store in an array and push it to array name
+    function getElements_from_array (class_name, array_name){
+        document.querySelectorAll(class_name).forEach(item => {
+          item_cleaned = item.textContent.trim();
+          array_name.push(item_cleaned);
+        });
+    }
+
+    // Places the number of CATEGORY or TAG posts counted
+    // and changes where is category or tag
+
+    function changeGreenNumber (number, is_cat_or_tag){
+      var number_green = document.getElementById("green_number_blog");
+      number_green.textContent = number;
+
+      var tag_cat_label = document.getElementById("tagged_categorized_as");
+      tag_cat_label.textContent = is_cat_or_tag;
+
+    }
+
+    //Places the CATEGORY or TAG name to display
     function changeText(name_tu_put){
+      var tag_cat_name = document.getElementById("tag_category_name");
+      tag_cat_name.textContent = name_tu_put;  
 
-          var tag_cat_name = document.getElementById("tag_category_name");
-          tag_cat_name.textContent = name_tu_put;  
+      var show_info_tag_cat = document.getElementById("show-tag-cat-selected");
+      show_info_tag_cat.style.display = "contents"  
 
-          var show_info_tag_cat = document.getElementById("show-tag-cat-selected");
-          show_info_tag_cat.style.display = "contents"
     }
 
 
@@ -606,7 +690,6 @@ No matching items
           // node.style.visibility = 'visible';
           // node.style.marginBottom = '0em';
 
-          console.log("enter here")
           // MAKE SHOW: "Show All Posts"
           var paragraph = document.getElementById("see-all-posts");
           paragraph.style.display = "none"

@@ -1,4 +1,4 @@
-/* Alterign the DEFAULT Category listing */
+/* Altering the DEFAULT Category listing */
 div.quarto-post .metadata {
 	font-size: 1em;
 	flex-basis: 13%
@@ -116,4 +116,9 @@ prev css styling would be replaced */
 /* Capitalizes the title blog links */
 table.quarto-listing-table a {
     text-transform: capitalize;
+}
+
+/* Disables anchor link for 2023 2022 ... */
+.no_anchor_link .anchorjs-link {
+    display: none;
 }
