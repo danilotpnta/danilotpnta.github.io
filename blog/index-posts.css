@@ -100,3 +100,18 @@ div#TAGS-from-here ~ * {
 .number-grey{
     color:#5a6570;
 }
+
+
+.mysite-change {
+    display: none;
+}
+
+.navbar-brand-change {
+    opacity: 0.1 !important;
+    font-weight: 400;
+}
+
+.disablePointerEvents{
+    pointer-events: none;
+}
+

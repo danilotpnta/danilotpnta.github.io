@@ -131,7 +131,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Danilo Toapanta <a class="mysite" href="../../../../../sites/">MySites</a></span>
+    <span class="navbar-title"><span id="danilo_topanta_brand"> Danilo Toapanta</span> <a id="mysite" class="mysite" href="../../../../../sites/">MySites</a></span>
     </a>
   </div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
@@ -499,7 +499,7 @@ No matching items
 <div class="sidebar-blog">
   
   <div class="post-sidebar-card">
-    <p style="font-size: 14px; font-weight: 550; color: #2c2c2c; margin-bottom: 12px">
+    <p class="post-sidebar-card-title" style="font-size: 14px; font-weight: 550; margin-bottom: 12px">
     CATEGORIES
     </p>  
     <div id="list-blog-categories" class="list-blog">
@@ -513,7 +513,7 @@ No matching items
   </div>
   
   <div class="post-sidebar-card">
-    <p style="font-size: 14px; font-weight: 550; color: #2c2c2c; margin-bottom: 12px">
+    <p class="post-sidebar-card-title" style="font-size: 14px; font-weight: 550; margin-bottom: 12px">
       TAGS
     </p>
     <div id="list-blog-tags" class="list-blog"></div>  
@@ -600,7 +600,6 @@ Object.keys(array_tags).forEach((item) => {
 });
 
 
-
 </script>
 </div>
 
@@ -608,6 +607,24 @@ Object.keys(array_tags).forEach((item) => {
 
 
 </main> <!-- /main -->
+<script>
+
+window.onload = function(){
+    var currentUrl = window.location.href;
+    console.log(currentUrl)
+
+    let mysite = document.getElementById("mysite");
+    mysite.classList.add("mysite-change");
+
+    let navbar = document.getElementById("danilo_topanta_brand");
+    navbar.classList.add("navbar-brand-change");
+    navbar.innerHTML = 'Reading mode <span style="font-size:40px; vertical-align: sub;" class="material-icons-round"> auto_awesome </span>';
+
+    let link = document.getElementsByClassName("navbar-brand")[0];
+    link.classList.add("disablePointerEvents");
+}
+</script>
+
 <script id="script-part">
     var node;
     var showCategories = false;

@@ -140,8 +140,6 @@ table.quarto-listing-table a {
 /* } */
 
 .sidebar-blog {
-    /* background-color: #f3f3f37d; */
-    /* padding: 15px; */
     padding-top: 20px;
     margin-top:35px;
 }
@@ -155,9 +153,6 @@ table.quarto-listing-table a {
 }
 
 .post-sidebar-card {
-    background: #f9f9f9;
-    /* background: white; */
-    /* border: 1px solid #ddd; */
     border-radius: 6px;
     margin: 1rem 0rem;
     padding: 1.2rem;
@@ -172,15 +167,12 @@ a.category {
 
 .list-blog a {
     background-color: transparent;
-    color: #666;
     font-size: 1rem;
-    /* font-weight: 600; */
     margin: 0 -.3rem;
     padding: .0rem .5rem;
 }
 
 .category .count {
-    color: #a4a4a4;
     font-family: Menlo,"IBM Plex Mono";
     font-size: .9rem;
     font-weight: 200;
@@ -196,3 +188,7 @@ a.category {
 }
 
 
+.datePadding .table td:nth-child(2) {
+    padding-left: 3px;
+    padding-right: 42px;
+}
