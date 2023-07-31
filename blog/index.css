@@ -204,6 +204,27 @@ a.category {
     vertical-align: text-bottom;
 }
 
-span.new_label_post ~ * {
+
+/* Only show new in current year */
+div#listing-posts-2022 .new_label_post {
     display: none;
 }
+
+
+/* Disable the sidebar and gap when screen is small */
+@media (max-width: 670px){
+    .grid {
+        gap: 0rem;
+        grid-template-columns: auto 0px;
+    }
+
+    .sidebar-blog {
+        display: none;
+    }
+
+    /* Reduces the padding to give more space to title of blog */
+    .datePadding .table td:nth-child(2) {
+        padding-right: 3.5px;
+    }
+}
+

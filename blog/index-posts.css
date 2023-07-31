@@ -72,11 +72,13 @@ div#TAGS-from-here ~ * {
 } */
 
 
+/* This is to insert YOU ARE READING DANILOS BLOG */
 .material-icons-outlined {
     font-size: 13px !important;
     vertical-align: text-bottom;
 }
 
+/* This is to insert YOU ARE READING DANILOS BLOG */
 .quick-links-title{
     padding-top: 13px;
 }
@@ -101,26 +103,26 @@ div#TAGS-from-here ~ * {
     color:#5a6570;
 }
 
+@media (min-width: 570px){
+    /* This is to display none mysite when reading a blog */
+    .mysite-change {
+        display: none;
+    }
 
-.mysite-change {
-    display: none;
+    /* This is to change opacity of DANILO TOPANTA reading a blog */
+    .navbar-brand-change {
+        opacity: 0.1 !important;
+        font-weight: 400;
+    }
+    
+    /* Disables clicking on DANILO TOAPANTA when reading a blog post */
+    .disablePointerEvents{
+        pointer-events: none;
+    }
 }
 
-.navbar-brand-change {
-    opacity: 0.1 !important;
-    font-weight: 400;
-}
-
-.disablePointerEvents{
-    pointer-events: none;
-}
-
+/* Center back again the COMING SOON because of custom title-block.html */
 #main_404 {
     top: 55%;
-}
-
-/* Only show new in current year */
-div#listing-posts-2022 .new_label_post {
-    display: none;
 }
 
