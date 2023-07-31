@@ -497,40 +497,112 @@ No matching items
 </div>
 </div>
 <div class="sidebar-blog">
+  
   <div class="post-sidebar-card">
     <p style="font-size: 14px; font-weight: 550; color: #2c2c2c; margin-bottom: 12px">
     CATEGORIES
-    </p>
-    <div class="list-blog">
-      <a class="category" href="../categories/dev-ops"><div class="name">DevOps</div><div class="count">2</div></a>
-      <a class="category" href="../categories/dev-ops"><div class="name">Life</div><div class="count">1</div></a>
-      <a class="category" href="../categories/dev-ops"><div class="name">Poems</div><div class="count">1</div></a>
-      <a class="category" href="../categories/dev-ops"><div class="name">News</div><div class="count">3</div></a>
+    </p>  
+    <div id="list-blog-categories" class="list-blog">
+      
+      <!-- <a class="category" href="/categories/dev-ops">
+        <div class="name">DevOps</div>
+        <div class="count">#</div>
+      </a> -->
+
     </div>  
   </div>
   
   <div class="post-sidebar-card">
     <p style="font-size: 14px; font-weight: 550; color: #2c2c2c; margin-bottom: 12px">
-    TAGS
+      TAGS
     </p>
-    <div class="list-blog">
-      <a class="category" href="../categories/dev-ops"><div class="name">DevOps</div><div class="count">2</div></a>
-      <a class="category" href="../categories/dev-ops"><div class="name">Life</div><div class="count">1</div></a>
-      <a class="category" href="../categories/dev-ops"><div class="name">Poems</div><div class="count">1</div></a>
-      <a class="category" href="../categories/dev-ops"><div class="name">News</div><div class="count">3</div></a>
-    </div>  
+    <div id="list-blog-tags" class="list-blog"></div>  
   </div>
 
 </div>
 </div>
+<ul id="myList2">
+</ul>
 <div class="cell">
 <script type="text/javascript">
-var icon_reload = document.getElementById('reload-posts-icon');
-icon_reload.style.display = "contents";
+
+// This message is excecuted first before the js from show-all-postMessage.html
+// console.log("hello")
+
+var raw_array_categories = [];
+var raw_array_tags = [];
+var array_categories = {};
+var array_tags = {};
+
+getElements_from_array('.array_categories', raw_array_categories);
+getElements_from_array('.array_tags', raw_array_tags);
+countElements(raw_array_categories, array_categories);
+countElements(raw_array_tags, array_tags);
+
+// Get all the elements store in an array and push it to array name
+function getElements_from_array (class_name, array_name){
+    document.querySelectorAll(class_name).forEach(item => {
+      item_cleaned = item.textContent.trim();
+      array_name.push(item_cleaned);
+    });
+}
+
+// Count same elements in array
+function countElements (array_to_be_counted,array_counts){
+  array_to_be_counted.forEach(function (x) { array_counts[x] = (array_counts[x] || 0) + 1; });
+}
+
+console.log(raw_array_categories)
+console.log(raw_array_tags)
+console.log(array_categories)
+console.log(array_tags)
+
+let list_categories = document.getElementById("list-blog-categories");
+
+Object.keys(array_categories).forEach((item) => {
+    let a = document.createElement("a");
+    a.className = "category";
+    a.href = `#category=${item}`
+    // a.id = `${item}` 
+
+    var div_name = document.createElement('div');
+    div_name.className = "name";
+    div_name.innerText = item;
+    a.appendChild(div_name);
+
+    var div_count = document.createElement('div');
+    div_count.className = "count";
+    div_count.innerText = array_categories[item];
+    a.appendChild(div_count);
+
+    list_categories.appendChild(a);
+});
+
+let list_tags = document.getElementById("list-blog-tags");
+
+Object.keys(array_tags).forEach((item) => {
+    let a = document.createElement("a");
+    a.className = "category";
+    a.href = `#category=${item}`
+    // a.id = `${item}` 
+
+    var div_name = document.createElement('div');
+    div_name.className = "name";
+    div_name.innerText = item;
+    a.appendChild(div_name);
+
+    var div_count = document.createElement('div');
+    div_count.className = "count";
+    div_count.innerText = array_tags[item];
+    a.appendChild(div_count);
+
+    list_tags.appendChild(a);
+});
+
+
 
 </script>
 </div>
-<p>here we go</p>
 
 
 
