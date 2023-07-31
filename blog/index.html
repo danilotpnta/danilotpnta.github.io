@@ -193,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
 
         let navbar = document.getElementById("danilo_topanta_brand");
         navbar.classList.add("navbar-brand-change");
-        navbar.innerHTML = 'Reading mode <span style="font-size:40px; vertical-align: sub;" class="material-icons-round"> auto_awesome </span>';
+        navbar.innerHTML = 'Reading mode<span style="font-size:35px; vertical-align: middle; opacity: 0.65; padding-bottom: 6px; padding-left: 14px;" class="material-icons-round"> auto_awesome </span>';
 
         let link = document.getElementsByClassName("navbar-brand")[0];
         link.classList.add("disablePointerEvents");
@@ -571,10 +571,10 @@ function countElements (array_to_be_counted,array_counts){
   array_to_be_counted.forEach(function (x) { array_counts[x] = (array_counts[x] || 0) + 1; });
 }
 
-console.log(raw_array_categories)
-console.log(raw_array_tags)
-console.log(array_categories)
-console.log(array_tags)
+// console.log(raw_array_categories)
+// console.log(raw_array_tags)
+// console.log(array_categories)
+// console.log(array_tags)
 
 let list_categories = document.getElementById("list-blog-categories");
 
@@ -618,8 +618,6 @@ Object.keys(array_tags).forEach((item) => {
     list_tags.appendChild(a);
 });
 
-
-
 </script>
 </div>
 
@@ -637,7 +635,7 @@ Object.keys(array_tags).forEach((item) => {
       var currentUrl = window.location.href;
       var index_hashtag = currentUrl.lastIndexOf("#");
       var index_slash = currentUrl.lastIndexOf("/");
-      console.log("index_hashtag: " + index_hashtag + " index_slash: " + index_slash);
+      // console.log("index_hashtag: " + index_hashtag + " index_slash: " + index_slash);
     
       var filename2 = currentUrl.substr(index_slash);
     
@@ -675,7 +673,7 @@ Object.keys(array_tags).forEach((item) => {
       countElements(raw_array_categories, array_categories);
       countElements(raw_array_tags, array_tags);
 
-      console.log(id_name)
+      // console.log(id_name)
       // display the text only if there is a name for the tag or category
       // and if is array of tags or categories
       if( !(id_name === "") && ( (raw_array_categories.includes(id_name))  || (raw_array_tags.includes(id_name))  )) {
@@ -683,10 +681,10 @@ Object.keys(array_tags).forEach((item) => {
       }
 
       if (raw_array_categories.includes(id_name)){
-        console.log(`accesing dict category: ${array_categories[id_name]}, with id: ${id_name}`);
+        // console.log(`accesing dict category: ${array_categories[id_name]}, with id: ${id_name}`);
         changeGreenNumber(array_categories[id_name], 'categorized:' );
       } else {
-        console.log(`accesing dict tags: ${array_tags[id_name]}, with id: ${id_name}`);
+        // console.log(`accesing dict tags: ${array_tags[id_name]}, with id: ${id_name}`);
         changeGreenNumber(array_tags[id_name],'tagged:');
       }
 
@@ -731,7 +729,7 @@ Object.keys(array_tags).forEach((item) => {
       countElements(raw_array_categories, array_categories);
       countElements(raw_array_tags, array_tags);
 
-      console.log(id_name)
+      // console.log(id_name)
       // display the text only if there is a name for the tag or category
       // and if is array of tags or categories
       if( !(id_name === "") && ( (raw_array_categories.includes(id_name))  || (raw_array_tags.includes(id_name))  )) {
@@ -739,10 +737,10 @@ Object.keys(array_tags).forEach((item) => {
       }
 
       if (raw_array_categories.includes(id_name)){
-        console.log(`accesing dict category: ${array_categories[id_name]}, with id: ${id_name}`);
+        // console.log(`accesing dict category: ${array_categories[id_name]}, with id: ${id_name}`);
         changeGreenNumber(array_categories[id_name], 'categorized:' );
       } else {
-        console.log(`accesing dict tags: ${array_tags[id_name]}, with id: ${id_name}`);
+        // console.log(`accesing dict tags: ${array_tags[id_name]}, with id: ${id_name}`);
         changeGreenNumber(array_tags[id_name],'tagged:');
       }
 
