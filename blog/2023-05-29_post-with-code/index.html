@@ -57,23 +57,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/material-icons-0.14.2/mi.css" rel="stylesheet">
-<script>
-
-window.onload = function(){
-
-    let mysite = document.getElementById("mysite");
-    mysite.classList.add("mysite-change");
-
-    let navbar = document.getElementById("danilo_topanta_brand");
-    navbar.classList.add("navbar-brand-change");
-    navbar.innerHTML = 'Reading mode <span style="font-size:40px; vertical-align: sub;" class="material-icons-round"> auto_awesome </span>';
-
-    let link = document.getElementsByClassName("navbar-brand")[0];
-    link.classList.add("disablePointerEvents");
-}
-
-</script>
-
 
 
 <link rel="stylesheet" href="../index-posts.css">
@@ -229,6 +212,22 @@ window.onload = function(){
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+<script>
+    var currentUrl = window.location.href;
+    if (!(currentUrl.slice(-6) === "/blog/")){
+        let mysite = document.getElementById("mysite");
+        mysite.classList.add("mysite-change");
+
+        let navbar = document.getElementById("danilo_topanta_brand");
+        navbar.classList.add("navbar-brand-change");
+        navbar.innerHTML = 'Reading mode <span style="font-size:40px; vertical-align: sub;" class="material-icons-round"> auto_awesome </span>';
+
+        let link = document.getElementsByClassName("navbar-brand")[0];
+        link.classList.add("disablePointerEvents");
+    }
+
+</script>
+
 
 <!-- <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">

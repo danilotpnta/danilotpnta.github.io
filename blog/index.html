@@ -115,23 +115,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/material-icons-0.14.2/mi.css" rel="stylesheet">
-<script>
-
-window.onload = function(){
-
-    let mysite = document.getElementById("mysite");
-    mysite.classList.add("mysite-change");
-
-    let navbar = document.getElementById("danilo_topanta_brand");
-    navbar.classList.add("navbar-brand-change");
-    navbar.innerHTML = 'Reading mode <span style="font-size:40px; vertical-align: sub;" class="material-icons-round"> auto_awesome </span>';
-
-    let link = document.getElementsByClassName("navbar-brand")[0];
-    link.classList.add("disablePointerEvents");
-}
-
-</script>
-
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -202,6 +185,22 @@ window.onload = function(){
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
+<script>
+    var currentUrl = window.location.href;
+    if (!(currentUrl.slice(-6) === "/blog/")){
+        let mysite = document.getElementById("mysite");
+        mysite.classList.add("mysite-change");
+
+        let navbar = document.getElementById("danilo_topanta_brand");
+        navbar.classList.add("navbar-brand-change");
+        navbar.innerHTML = 'Reading mode <span style="font-size:40px; vertical-align: sub;" class="material-icons-round"> auto_awesome </span>';
+
+        let link = document.getElementsByClassName("navbar-brand")[0];
+        link.classList.add("disablePointerEvents");
+    }
+
+</script>
+
 
 
 
@@ -544,11 +543,8 @@ No matching items
 
 </div>
 </div>
-<ul id="myList2">
-</ul>
 <div class="cell">
 <script type="text/javascript">
-
 // This message is excecuted first before the js from show-all-postMessage.html
 // console.log("hello")
 
@@ -621,6 +617,7 @@ Object.keys(array_tags).forEach((item) => {
 
     list_tags.appendChild(a);
 });
+
 
 
 </script>
