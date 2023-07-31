@@ -194,3 +194,16 @@ a.category {
     padding-left: 3px;
     padding-right: 42px;
 }
+
+/* Gives Styling to new Button */
+.new_label_post{
+    font-size: 12px;
+    border-radius: 4px;
+    padding: 0px 2px;
+    margin-left: 3px;
+    vertical-align: text-bottom;
+}
+
+span.new_label_post ~ * {
+    display: none;
+}

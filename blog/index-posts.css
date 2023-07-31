@@ -118,3 +118,9 @@ div#TAGS-from-here ~ * {
 #main_404 {
     top: 55%;
 }
+
+/* Only show new in current year */
+div#listing-posts-2022 .new_label_post {
+    display: none;
+}
+
