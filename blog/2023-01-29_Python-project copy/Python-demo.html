@@ -217,7 +217,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 <script>
     var currentUrl = window.location.href;
-    if (!(currentUrl.slice(-6) === "/blog/")){
+    var index_init_post = currentUrl.lastIndexOf("/20");
+    var string_init_post= currentUrl.slice(index_init_post, index_init_post+3 );
+
+    console.log("currentUrl: " + currentUrl);
+    console.log("index: " + index_init_post);
+    console.log("string: " + string_init_post);
+
+    // If is equal to /blog/20... then make navbar title READING MODE
+    if (string_init_post === "/20"){
         let mysite = document.getElementById("mysite");
         mysite.classList.add("mysite-change");
 
@@ -228,7 +236,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         let link = document.getElementsByClassName("navbar-brand")[0];
         link.classList.add("disablePointerEvents");
     }
-
 </script>
 
 

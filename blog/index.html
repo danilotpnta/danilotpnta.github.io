@@ -187,7 +187,15 @@ ul.task-list li input[type="checkbox"] {
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 <script>
     var currentUrl = window.location.href;
-    if (!(currentUrl.slice(-6) === "/blog/")){
+    var index_init_post = currentUrl.lastIndexOf("/20");
+    var string_init_post= currentUrl.slice(index_init_post, index_init_post+3 );
+
+    console.log("currentUrl: " + currentUrl);
+    console.log("index: " + index_init_post);
+    console.log("string: " + string_init_post);
+
+    // If is equal to /blog/20... then make navbar title READING MODE
+    if (string_init_post === "/20"){
         let mysite = document.getElementById("mysite");
         mysite.classList.add("mysite-change");
 
@@ -198,7 +206,6 @@ ul.task-list li input[type="checkbox"] {
         let link = document.getElementsByClassName("navbar-brand")[0];
         link.classList.add("disablePointerEvents");
     }
-
 </script>
 
 
@@ -233,7 +240,7 @@ Show All Posts <i style="padding-left:2px;" class="bi bi-arrow-counterclockwise"
 <div class="main-content-blog">
 <div id="show-tag-cat-selected" style="display:none;">
 <p style="padding-top:40px; padding-bottom:5px; margin-bottom:0px; color: #838383;">
-<span id="green_number_blog" style="padding-bottom:0px; margin-bottom:0px; color: green;"> # </span> posts <span id="tagged_categorized_as"> published: </span>
+<span id="green_number_blog" style="padding-bottom:0px; margin-bottom:0px; color: #14ae73;"> # </span> posts <span id="tagged_categorized_as"> published: </span>
 </p>
 <h1 id="tag_category_name" style="padding:0px 0px; margin: 0px 0px; padding-bottom:15px; border-bottom: none">
 Python
@@ -555,6 +562,11 @@ var array_tags = {};
 
 getElements_from_array('.array_categories', raw_array_categories);
 getElements_from_array('.array_tags', raw_array_tags);
+
+// Sorting arrays alphabetically
+raw_array_categories.sort();
+raw_array_tags.sort();
+
 countElements(raw_array_categories, array_categories);
 countElements(raw_array_tags, array_tags);
 
