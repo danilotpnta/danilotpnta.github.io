@@ -23,12 +23,19 @@
     font-family: monospace; 
     line-height: 1.2; 
     font-style: normal; 
-    background: #d3d3d324;
 }
 
 
 #title-block-header {
     padding-bottom: 15px !important;
+}
+
+#title-block-header a {
+    color: currentcolor;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(163, 166, 168, 0.40);
 }
 
 

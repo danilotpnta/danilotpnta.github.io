@@ -31,6 +31,14 @@
     padding-bottom: 15px !important;
 }
 
+#title-block-header a {
+    color: currentcolor;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(163, 166, 168, 0.40);
+}
+
 
 #title-block-header.quarto-title-block.default .quarto-title-meta {
     display: none;
