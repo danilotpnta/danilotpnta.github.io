@@ -199,6 +199,20 @@ ul.task-list li input[type="checkbox"] {
 
         // This will render a new title saying READING DANILOS BLOG
         // navbar.innerHTML = 'You are Reading Danilo\'s Blog<span style="font-size:35px; vertical-align: middle; opacity: 0.65; padding-bottom: 6px; padding-left: 14px;" class="material-icons-round"> auto_awesome </span>';
+        
+        const smallDevice = window.matchMedia("(min-width: 570px)");
+        smallDevice.addListener(handleDeviceChange);
+
+        function handleDeviceChange(mediaQuery) {
+            if (mediaQuery.matches) {
+                navbar.innerHTML = "<-- You are Reading Danilo's Blog -->";
+            } else  {
+                navbar.innerHTML = "Danilo Toapanta";
+            }
+        }
+
+        // Run it initially
+        handleDeviceChange(smallDevice);
 
         let link = document.getElementsByClassName("navbar-brand")[0];
         link.classList.add("disablePointerEvents");

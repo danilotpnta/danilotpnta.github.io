@@ -118,6 +118,10 @@ div#TAGS-from-here ~ * {
     /* Disables clicking on DANILO TOAPANTA when reading a blog post */
     .disablePointerEvents{
         pointer-events: none;
+        font-size: 100% !important;
+        padding-top: 7px !important;
+        padding-right: 17px !important;
+        padding-bottom: 0px !important;
     }
 }
 
@@ -125,4 +129,9 @@ div#TAGS-from-here ~ * {
 #main_404 {
     top: 55%;
 }
+
+
+
+
+
 

@@ -9,7 +9,7 @@
 <meta name="author" content="Danilo Toapanta">
 <meta name="dcterms.date" content="2023-07-29">
 
-<title>Danilo Toapanta - Cafe Negro color Miel</title>
+<title>Danilo Toapanta - Cafe Negro color Miel by Danilo Toapanta</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,7 +70,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full blog-page" style="display: none;">
     <div class="quarto-title-banner page-columns page-full">
         <div class="quarto-title column-body">
-            <h1 class="title">Cafe Negro color Miel</h1>
+            <h1 class="title">Cafe Negro color Miel <span class="by-danilo-toapanta">by Danilo Toapanta</span></h1>
                 
             <!-- Description Block -->
                         
@@ -153,6 +153,20 @@ ul.task-list li input[type="checkbox"] {
 
         // This will render a new title saying READING DANILOS BLOG
         // navbar.innerHTML = 'You are Reading Danilo\'s Blog<span style="font-size:35px; vertical-align: middle; opacity: 0.65; padding-bottom: 6px; padding-left: 14px;" class="material-icons-round"> auto_awesome </span>';
+        
+        const smallDevice = window.matchMedia("(min-width: 570px)");
+        smallDevice.addListener(handleDeviceChange);
+
+        function handleDeviceChange(mediaQuery) {
+            if (mediaQuery.matches) {
+                navbar.innerHTML = "<-- You are Reading Danilo's Blog -->";
+            } else  {
+                navbar.innerHTML = "Danilo Toapanta";
+            }
+        }
+
+        // Run it initially
+        handleDeviceChange(smallDevice);
 
         let link = document.getElementsByClassName("navbar-brand")[0];
         link.classList.add("disablePointerEvents");
@@ -189,7 +203,7 @@ ul.task-list li input[type="checkbox"] {
 <main id="title-block-header" class="quarto-title-block default page-columns page-full" style="padding-bottom: 40px;">
 
     <div class="quarto-title column-body" style="margin-bottom: 1em;">
-        <h1 class="title" style="padding-bottom:8px" ;="">Cafe Negro color Miel</h1>
+        <h1 class="title" style="padding-bottom:8px" ;="">Cafe Negro color Miel <span class="by-danilo-toapanta">by Danilo Toapanta</span></h1>
         
         <!-- Description Block -->
         
@@ -279,10 +293,10 @@ ul.task-list li input[type="checkbox"] {
     
 </main>
 
-<div class="crop">
-    <img src="https://www.lavoz.com.ar/resizer/J7Pne9dYD4AZumu7Ef4CE-5cgl4=/980x640/smart/filters:quality(75):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/grupoclarin/BPD7MOV2QVEXXBX4KT72ZB7UB4.png">
+<div style="font-weight:300; font-size: 14  px;">
+<p><a href="../../blog/" style="text-decoration: none;">Blog </a> <a style="text-decoration: none; pointer-events: none;" href="">&gt;</a> <a href="../../blog/#category=Poems" style="text-decoration: none;">Poems</a></p>
 </div>
-<div style="font-family: monospace; line-height: 1.2; font-style: normal; background: #d3d3d324; padding-top: 10px; padding-left: 10px; padding-right: 10px;">
+<div class="poem-text">
 <p>Tus ojos son misterio</p>
 <p>cafes negros</p>
 <p>mi reflejo en ti</p>
@@ -297,10 +311,6 @@ ul.task-list li input[type="checkbox"] {
 <p>ellos estan</p>
 <p>platicando como tortolos</p>
 </div>
-<div style="padding-top: 25px;">
-
-</div>
-<p><a href="../../blog" style="text-decoration: none;">← Blog</a></p>
 
 
 
