@@ -41,8 +41,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No results",
@@ -69,7 +67,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-image','listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
       
-      searchColumns: ["listing-project","listing-execute","listing-resources","listing-website","listing-format","listing-language","listing-freeze","listing-title-block-banner","listing-author","listing-title","listing-image","listing-date","listing-categories","listing-jupyter","listing-paper","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-source","listing-subtitle","listing-sidebar"],
+      searchColumns: ["listing-project","listing-execute","listing-resources","listing-website","listing-format","listing-language","listing-freeze","listing-title-block-banner","listing-author","listing-title","listing-image","listing-date","listing-categories","listing-source","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-jupyter","listing-paper","listing-sidebar","listing-subtitle"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -86,6 +84,9 @@ ul.task-list li input[type="checkbox"] {
     }
   })
   </script>
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/material-icons-0.14.2/mi.css" rel="stylesheet">
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -232,8 +233,8 @@ Show All Projects <i style="padding-left:2px;" class="bi bi-arrow-counterclockwi
       file-modified,
       reading-time,
       sortableValues -->
-<!-- Computer Vision
-Control Systems -->
+<!-- HTML
+Javascript -->
 <!-- When it is undefined then you get errors using lenght and also can't acceses variables -->
 <!-- - Title: CV Project
 All Categories: Computer Vision,Control Systems
@@ -247,12 +248,12 @@ Category[0]: Computer Vision
 Category[1]: Control Systems -->
 <!-- 
     </br>
-    - Title: CV Project
+    - Title: Website
     <br>
-    All Categories: Computer Vision,Control Systems,TAGS,Python,Kaggle,Tensorflow
+    All Categories: HTML,Javascript,SCSS,TAGS,Blog,Research
     <br> -->
     <!-- Without the undefined detector error ocurrs -->
-    <!-- Categories[0]: Computer Vision  
+    <!-- Categories[0]: HTML  
     <br>
     typeof: object
     <br>   
@@ -267,83 +268,25 @@ Category[1]: Control Systems -->
     <!-- Now I can loop over the categories, before I couldnt because
     one post has categories as Undefined -->
     <!-- 
-        Category[0]: Computer Vision
+        Category[0]: HTML
         <br> 
-        Category[1]: Control Systems
+        Category[1]: Javascript
         <br> 
-        Category[2]: TAGS
+        Category[2]: SCSS
         <br> 
-        Category[3]: Python
+        Category[3]: TAGS
         <br> 
-        Category[4]: Kaggle
+        Category[4]: Blog
         <br> 
-        Category[5]: Tensorflow
-        <br> 
-    </br>
-    - Title: AI Project
-    <br>
-    All Categories: Machine Learning,Algorithms,TAGS,Python
-    <br> -->
-    <!-- Without the undefined detector error ocurrs -->
-    <!-- Categories[0]: Machine Learning  
-    <br>
-    typeof: object
-    <br>   
-    isArray: true
-    <br> 
-    Length: 4
-    <br> 
-    Length: 4
-    <br> 
-    Object.keys: 0,1,2,3
-    <br>  -->
-    <!-- Now I can loop over the categories, before I couldnt because
-    one post has categories as Undefined -->
-    <!-- 
-        Category[0]: Machine Learning
-        <br> 
-        Category[1]: Algorithms
-        <br> 
-        Category[2]: TAGS
-        <br> 
-        Category[3]: Python
-        <br> 
-    </br>
-    - Title: EA Project
-    <br>
-    All Categories: Optimization,TAGS,Python,Numba
-    <br> -->
-    <!-- Without the undefined detector error ocurrs -->
-    <!-- Categories[0]: Optimization  
-    <br>
-    typeof: object
-    <br>   
-    isArray: true
-    <br> 
-    Length: 4
-    <br> 
-    Length: 4
-    <br> 
-    Object.keys: 0,1,2,3
-    <br>  -->
-    <!-- Now I can loop over the categories, before I couldnt because
-    one post has categories as Undefined -->
-    <!-- 
-        Category[0]: Optimization
-        <br> 
-        Category[1]: TAGS
-        <br> 
-        Category[2]: Python
-        <br> 
-        Category[3]: Numba
+        Category[5]: Research
         <br> 
     </br>
     - Title: ML Project
     <br>
-    All Categories: Machine Learning,TAGS,Python,OpenSpiel
+    All Categories: Python,OpenSpiel,TAGS,Machine Learning
     <br> -->
     <!-- Without the undefined detector error ocurrs -->
-    <!-- Categories[0]: Machine Learning  
+    <!-- Categories[0]: Python  
     <br>
     typeof: object
     <br>   
@@ -358,44 +301,83 @@ Category[1]: Control Systems -->
     <!-- Now I can loop over the categories, before I couldnt because
     one post has categories as Undefined -->
     <!-- 
-        Category[0]: Machine Learning
+        Category[0]: Python
         <br> 
-        Category[1]: TAGS
+        Category[1]: OpenSpiel
         <br> 
-        Category[2]: Python
+        Category[2]: TAGS
         <br> 
-        Category[3]: OpenSpiel
+        Category[3]: Machine Learning
         <br> 
     </br>
-    - Title: Control Systems Project
+    - Title: EA Project
     <br>
-    All Categories: Electrical Engineering
+    All Categories: Python,Numba,TAGS,Optimization
     <br> -->
     <!-- Without the undefined detector error ocurrs -->
-    <!-- Categories[0]: Electrical Engineering  
+    <!-- Categories[0]: Python  
     <br>
     typeof: object
     <br>   
     isArray: true
     <br> 
-    Length: 1
+    Length: 4
     <br> 
-    Length: 1
+    Length: 4
     <br> 
-    Object.keys: 0
+    Object.keys: 0,1,2,3
     <br>  -->
     <!-- Now I can loop over the categories, before I couldnt because
     one post has categories as Undefined -->
     <!-- 
-        Category[0]: Electrical Engineering
+        Category[0]: Python
+        <br> 
+        Category[1]: Numba
+        <br> 
+        Category[2]: TAGS
+        <br> 
+        Category[3]: Optimization
         <br> 
     </br>
-    - Title: BSc Thesis
+    - Title: CV Project
     <br>
-    All Categories: Electrical Engineering,TAGS,C++,LateX,Arduino
+    All Categories: Python,Kaggle,Tensorflow,TAGS,Computer Vision,Control Systems
     <br> -->
     <!-- Without the undefined detector error ocurrs -->
-    <!-- Categories[0]: Electrical Engineering  
+    <!-- Categories[0]: Python  
+    <br>
+    typeof: object
+    <br>   
+    isArray: true
+    <br> 
+    Length: 6
+    <br> 
+    Length: 6
+    <br> 
+    Object.keys: 0,1,2,3,4,5
+    <br>  -->
+    <!-- Now I can loop over the categories, before I couldnt because
+    one post has categories as Undefined -->
+    <!-- 
+        Category[0]: Python
+        <br> 
+        Category[1]: Kaggle
+        <br> 
+        Category[2]: Tensorflow
+        <br> 
+        Category[3]: TAGS
+        <br> 
+        Category[4]: Computer Vision
+        <br> 
+        Category[5]: Control Systems
+        <br> 
+    </br>
+    - Title: AI Project
+    <br>
+    All Categories: Python,LateX,TAGS,Machine Learning,Algorithms
+    <br> -->
+    <!-- Without the undefined detector error ocurrs -->
+    <!-- Categories[0]: Python  
     <br>
     typeof: object
     <br>   
@@ -410,23 +392,54 @@ Category[1]: Control Systems -->
     <!-- Now I can loop over the categories, before I couldnt because
     one post has categories as Undefined -->
     <!-- 
-        Category[0]: Electrical Engineering
+        Category[0]: Python
         <br> 
-        Category[1]: TAGS
+        Category[1]: LateX
         <br> 
-        Category[2]: C++
+        Category[2]: TAGS
         <br> 
-        Category[3]: LateX
+        Category[3]: Machine Learning
         <br> 
-        Category[4]: Arduino
+        Category[4]: Algorithms
+        <br> 
+    </br>
+    - Title: BSc Thesis
+    <br>
+    All Categories: C++,LateX,Arduino,TAGS,Electrical Engineering
+    <br> -->
+    <!-- Without the undefined detector error ocurrs -->
+    <!-- Categories[0]: C++  
+    <br>
+    typeof: object
+    <br>   
+    isArray: true
+    <br> 
+    Length: 5
+    <br> 
+    Length: 5
+    <br> 
+    Object.keys: 0,1,2,3,4
+    <br>  -->
+    <!-- Now I can loop over the categories, before I couldnt because
+    one post has categories as Undefined -->
+    <!-- 
+        Category[0]: C++
+        <br> 
+        Category[1]: LateX
+        <br> 
+        Category[2]: Arduino
+        <br> 
+        Category[3]: TAGS
+        <br> 
+        Category[4]: Electrical Engineering
         <br> 
     </br>
     - Title: C++ Project
     <br>
-    All Categories: Software Engineering,TAGS,C++
+    All Categories: C++,TAGS,Software Engineering
     <br> -->
     <!-- Without the undefined detector error ocurrs -->
-    <!-- Categories[0]: Software Engineering  
+    <!-- Categories[0]: C++  
     <br>
     typeof: object
     <br>   
@@ -441,40 +454,67 @@ Category[1]: Control Systems -->
     <!-- Now I can loop over the categories, before I couldnt because
     one post has categories as Undefined -->
     <!-- 
-        Category[0]: Software Engineering
+        Category[0]: C++
         <br> 
         Category[1]: TAGS
         <br> 
-        Category[2]: C++
+        Category[2]: Software Engineering
+        <br> 
+    </br>
+    - Title: Control Systems Project
+    <br>
+    All Categories: 20-sim,TAGS,Electrical Engineering
+    <br> -->
+    <!-- Without the undefined detector error ocurrs -->
+    <!-- Categories[0]: 20-sim  
+    <br>
+    typeof: object
+    <br>   
+    isArray: true
+    <br> 
+    Length: 3
+    <br> 
+    Length: 3
+    <br> 
+    Object.keys: 0,1,2
+    <br>  -->
+    <!-- Now I can loop over the categories, before I couldnt because
+    one post has categories as Undefined -->
+    <!-- 
+        Category[0]: 20-sim
+        <br> 
+        Category[1]: TAGS
+        <br> 
+        Category[2]: Electrical Engineering
         <br> 
  -->
 <div class="list grid" style="column-gap: 20px;">
         <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-categories="Computer Vision,Control Systems,TAGS,Python,Kaggle,Tensorflow" data-listing-date-sort="1685311200000" data-listing-file-modified-sort="1689865951244" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-categories="HTML,Javascript,SCSS,TAGS,Blog,Research" data-listing-date-sort="1688162400000" data-listing-file-modified-sort="1690899625783" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
             <!-- IMAGE -->
-            <a href="../projects/computer-vision/index.html">
+            <a href="../projects/2023-07-01_website/index.html">
                 <div class="card-title change-title-background-color" style="text-align: center; padding-bottom: 0.4em;  padding-top: 0.4em; ">
-                    CV Project
+                    Website
                 </div>
-                <img src="../projects/computer-vision/image.jpg" alt="" class="thumbnail-image card-img" style="height: 150px;">
+                <img src="../projects/2023-07-01_website/image2.png" alt="" class="thumbnail-image card-img" style="height: 150px;">
             </a>
             <!-- <div class="card-header py-1 px-2  bg-light"> -->
                 <!-- <a href="" class="listing-title">
-                    CV Project
+                    Website
                 </a>  -->
                 <!-- <small class="card-text text-nowrap inline-block">
                     <a href="" class="listing-title">
-                        CV Project
+                        Website
                     </a> 
                 </small> -->
                 <!-- <a class="button small flex" href="https://github.com/taniarascia/takenote" target="_blank" rel="noreferrer">Source 
                 </a> -->
             <!-- </div> -->
             <div class="card-body post-contents">
-                <a class="button small flex" href="../projects/computer-vision/index.html">
+                <a class="button small flex" href="../projects/2023-07-01_website/index.html">
                     Article
                     </a> 
-                    <a class="button small flex" href="https://github.com/danilotpnta/ComputerVission" target="_blank" rel="noreferrer">
+                    <a class="button small flex" href="https://github.com/danilotpnta/danilotpnta.github.io" target="_blank" rel="noreferrer">
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
@@ -489,108 +529,19 @@ Category[1]: Control Systems -->
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
                     <!-- Keyword TAG in frontmatter not found 
                         - Display the only ONE CATEGORY found --> 
-                            <span class="listing-category Computer Vision">
-                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Computer Vision">
-                                    Computer Vision
+                            <span class="listing-category HTML">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=HTML">
+                                    HTML
                                 </a>   
                             </span>
-                            <span class="listing-category Control Systems">
-                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Control Systems">
-                                    Control Systems
+                            <span class="listing-category Javascript">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Javascript">
+                                    Javascript
                                 </a>   
                             </span>
-                </div> 
-                <!-- Display TAGS -->
-                <div class="listing-categories" style="padding-top: 0em;">
-                    <!-- Displays Technology Tag + Icon -->
-                    <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
-                        <!-- <a  href="/projects"> -->
-                        <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
-                        <!-- </a> -->
-                    </div>
-                    <!-- Keyword TAG in frontmatter not found 
-                         - If there is NO || only ONE element in Categories then show "Other" as tag --> 
-                            <div class="listing-category-inactive Python">
-                                <!-- Add 'Python icon' -->
-                                    <!-- Disable for now uncomment ONLY FIRST line below to add icon -->
-                                    <!-- <i class="fa-brands fa-python" style="color: #6c757d;"> </i> -->
-                                    <!--  -->
-                                    <a href="../projects/#category=Python">
-                                        Python
-                                    </a>   
-                            </div>
-                            <div class="listing-category-inactive Kaggle">
-                                <!-- Add 'Python icon' -->
-                                    <a href="../projects/#category=Kaggle">
-                                        Kaggle
-                                    </a>   
-                            </div>
-                            <div class="listing-category-inactive Tensorflow">
-                                <!-- Add 'Python icon' -->
-                                    <a href="../projects/#category=Tensorflow">
-                                        Tensorflow
-                                    </a>   
-                            </div>
-                </div> 
-            </div>
-            <!-- <div class="card-header py-1 px-2  bg-light">
-                    <a  class="button small flex" href="https://github.com/danilotpnta/ComputerVission" target="_blank" rel="noreferrer">
-                        Source
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
-                    </a> 
-            </div> -->
-            <!-- Display Publication date if any -->
-            <!-- 
-                <b class="listing-publicationdate">
-                    May 29, 2023
-                </b>
-                 -->
-        </div>
-        <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="1" data-categories="Machine Learning,Algorithms,TAGS,Python" data-listing-date-sort="1685311200000" data-listing-file-modified-sort="1689866672914" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-            <!-- IMAGE -->
-            <a href="../projects/artificial-intelligence/index.html">
-                <div class="card-title change-title-background-color" style="text-align: center; padding-bottom: 0.4em;  padding-top: 0.4em; ">
-                    AI Project
-                </div>
-                <img src="../projects/artificial-intelligence/image.jpg" alt="" class="thumbnail-image card-img" style="height: 150px;">
-            </a>
-            <!-- <div class="card-header py-1 px-2  bg-light"> -->
-                <!-- <a href="" class="listing-title">
-                    AI Project
-                </a>  -->
-                <!-- <small class="card-text text-nowrap inline-block">
-                    <a href="" class="listing-title">
-                        AI Project
-                    </a> 
-                </small> -->
-                <!-- <a class="button small flex" href="https://github.com/taniarascia/takenote" target="_blank" rel="noreferrer">Source 
-                </a> -->
-            <!-- </div> -->
-            <div class="card-body post-contents">
-                <a class="button small flex" href="../projects/artificial-intelligence/index.html">
-                    Article
-                    </a> 
-                    <a class="button small flex" href="https://github.com/danilotpnta/CS188_Artificial-Intelligence-Berkeley" target="_blank" rel="noreferrer">
-                        Source
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
-                    </a> 
-                <div style="display: none"> 
-                                6
-                                7
-                </div>
-                <!-- Displays Categories -->    
-                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
-                    <!-- Keyword TAG in frontmatter not found 
-                        - Display the only ONE CATEGORY found --> 
-                            <span class="listing-category Machine Learning">
-                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Machine Learning">
-                                    Machine Learning
-                                </a>   
-                            </span>
-                            <span class="listing-category Algorithms">
-                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Algorithms">
-                                    Algorithms
+                            <span class="listing-category SCSS">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=SCSS">
+                                    SCSS
                                 </a>   
                             </span>
                 </div> 
@@ -604,19 +555,22 @@ Category[1]: Control Systems -->
                     </div>
                     <!-- Keyword TAG in frontmatter not found 
                          - If there is NO || only ONE element in Categories then show "Other" as tag --> 
-                            <div class="listing-category-inactive Python">
+                            <div class="listing-category-inactive Blog">
                                 <!-- Add 'Python icon' -->
-                                    <!-- Disable for now uncomment ONLY FIRST line below to add icon -->
-                                    <!-- <i class="fa-brands fa-python" style="color: #6c757d;"> </i> -->
-                                    <!--  -->
-                                    <a href="../projects/#category=Python">
-                                        Python
+                                    <a href="../projects/#category=Blog">
+                                        Blog
+                                    </a>   
+                            </div>
+                            <div class="listing-category-inactive Research">
+                                <!-- Add 'Python icon' -->
+                                    <a href="../projects/#category=Research">
+                                        Research
                                     </a>   
                             </div>
                 </div> 
             </div>
             <!-- <div class="card-header py-1 px-2  bg-light">
-                    <a  class="button small flex" href="https://github.com/danilotpnta/CS188_Artificial-Intelligence-Berkeley" target="_blank" rel="noreferrer">
+                    <a  class="button small flex" href="https://github.com/danilotpnta/danilotpnta.github.io" target="_blank" rel="noreferrer">
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
@@ -624,101 +578,18 @@ Category[1]: Control Systems -->
             <!-- Display Publication date if any -->
             <!-- 
                 <b class="listing-publicationdate">
-                    May 29, 2023
+                    Jul 1, 2023
                 </b>
                  -->
         </div>
         <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="2" data-categories="Optimization,TAGS,Python,Numba" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1690321700477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="1" data-categories="Python,OpenSpiel,TAGS,Machine Learning" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1690895908823" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
             <!-- IMAGE -->
-            <a href="../projects/travel-sales-project/index.html">
-                <div class="card-title change-title-background-color" style="text-align: center; padding-bottom: 0.4em;  padding-top: 0.4em; ">
-                    EA Project
-                </div>
-                <img src="../projects/travel-sales-project/image.jpeg" alt="" class="thumbnail-image card-img" style="height: 150px;">
-            </a>
-            <!-- <div class="card-header py-1 px-2  bg-light"> -->
-                <!-- <a href="" class="listing-title">
-                    EA Project
-                </a>  -->
-                <!-- <small class="card-text text-nowrap inline-block">
-                    <a href="" class="listing-title">
-                        EA Project
-                    </a> 
-                </small> -->
-                <!-- <a class="button small flex" href="https://github.com/taniarascia/takenote" target="_blank" rel="noreferrer">Source 
-                </a> -->
-            <!-- </div> -->
-            <div class="card-body post-contents">
-                <a class="button small flex" href="../projects/travel-sales-project/index.html">
-                    Article
-                    </a> 
-                    <a class="button small flex" href="https://github.com/danilotpnta/TSP_EA" target="_blank" rel="noreferrer">
-                        Source
-                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
-                    </a> 
-                <div style="display: none"> 
-                                8
-                                9
-                </div>
-                <!-- Displays Categories -->    
-                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
-                    <!-- Keyword TAG in frontmatter not found 
-                        - Display the only ONE CATEGORY found --> 
-                            <span class="listing-category Optimization">
-                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Optimization">
-                                    Optimization
-                                </a>   
-                            </span>
-                </div> 
-                <!-- Display TAGS -->
-                <div class="listing-categories" style="padding-top: 0em;">
-                    <!-- Displays Technology Tag + Icon -->
-                    <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
-                        <!-- <a  href="/projects"> -->
-                        <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
-                        <!-- </a> -->
-                    </div>
-                    <!-- Keyword TAG in frontmatter not found 
-                         - If there is NO || only ONE element in Categories then show "Other" as tag --> 
-                            <div class="listing-category-inactive Python">
-                                <!-- Add 'Python icon' -->
-                                    <!-- Disable for now uncomment ONLY FIRST line below to add icon -->
-                                    <!-- <i class="fa-brands fa-python" style="color: #6c757d;"> </i> -->
-                                    <!--  -->
-                                    <a href="../projects/#category=Python">
-                                        Python
-                                    </a>   
-                            </div>
-                            <div class="listing-category-inactive Numba">
-                                <!-- Add 'Python icon' -->
-                                    <a href="../projects/#category=Numba">
-                                        Numba
-                                    </a>   
-                            </div>
-                </div> 
-            </div>
-            <!-- <div class="card-header py-1 px-2  bg-light">
-                    <a  class="button small flex" href="https://github.com/danilotpnta/TSP_EA" target="_blank" rel="noreferrer">
-                        Source
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
-                    </a> 
-            </div> -->
-            <!-- Display Publication date if any -->
-            <!-- 
-                <b class="listing-publicationdate">
-                    May 26, 2023
-                </b>
-                 -->
-        </div>
-        <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="3" data-categories="Machine Learning,TAGS,Python,OpenSpiel" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1690321655813" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-            <!-- IMAGE -->
-            <a href="../projects/mlp/index.html">
+            <a href="../projects/2023-05-26_mlp/index.html">
                 <div class="card-title change-title-background-color" style="text-align: center; padding-bottom: 0.4em;  padding-top: 0.4em; ">
                     ML Project
                 </div>
-                <img src="../projects/mlp/image.png" alt="" class="thumbnail-image card-img" style="height: 150px;">
+                <img src="../projects/2023-05-26_mlp/image.png" alt="" class="thumbnail-image card-img" style="height: 150px;">
             </a>
             <!-- <div class="card-header py-1 px-2  bg-light"> -->
                 <!-- <a href="" class="listing-title">
@@ -733,7 +604,7 @@ Category[1]: Control Systems -->
                 </a> -->
             <!-- </div> -->
             <div class="card-body post-contents">
-                <a class="button small flex" href="../projects/mlp/index.html">
+                <a class="button small flex" href="../projects/2023-05-26_mlp/index.html">
                     Article
                     </a> 
                     <a class="button small flex" href="https://github.com/danilotpnta/MachineLearning" target="_blank" rel="noreferrer">
@@ -741,15 +612,22 @@ Category[1]: Control Systems -->
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
                 <div style="display: none"> 
-                                10
+                                6
+                                7
+                                8
                 </div>
                 <!-- Displays Categories -->    
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
                     <!-- Keyword TAG in frontmatter not found 
                         - Display the only ONE CATEGORY found --> 
-                            <span class="listing-category Machine Learning">
-                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Machine Learning">
-                                    Machine Learning
+                            <span class="listing-category Python">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Python">
+                                    Python
+                                </a>   
+                            </span>
+                            <span class="listing-category OpenSpiel">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=OpenSpiel">
+                                    OpenSpiel
                                 </a>   
                             </span>
                 </div> 
@@ -763,19 +641,10 @@ Category[1]: Control Systems -->
                     </div>
                     <!-- Keyword TAG in frontmatter not found 
                          - If there is NO || only ONE element in Categories then show "Other" as tag --> 
-                            <div class="listing-category-inactive Python">
+                            <div class="listing-category-inactive Machine Learning">
                                 <!-- Add 'Python icon' -->
-                                    <!-- Disable for now uncomment ONLY FIRST line below to add icon -->
-                                    <!-- <i class="fa-brands fa-python" style="color: #6c757d;"> </i> -->
-                                    <!--  -->
-                                    <a href="../projects/#category=Python">
-                                        Python
-                                    </a>   
-                            </div>
-                            <div class="listing-category-inactive OpenSpiel">
-                                <!-- Add 'Python icon' -->
-                                    <a href="../projects/#category=OpenSpiel">
-                                        OpenSpiel
+                                    <a href="../projects/#category=Machine Learning">
+                                        Machine Learning
                                     </a>   
                             </div>
                 </div> 
@@ -794,49 +663,52 @@ Category[1]: Control Systems -->
                  -->
         </div>
         <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="4" data-categories="Electrical Engineering" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1690321686703" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="2" data-categories="Python,Numba,TAGS,Optimization" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1690894961227" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
             <!-- IMAGE -->
-            <a href="../projects/segway/index.html">
+            <a href="../projects/2022-11-29_travel-sales-project/index.html">
                 <div class="card-title change-title-background-color" style="text-align: center; padding-bottom: 0.4em;  padding-top: 0.4em; ">
-                    Control Systems Project
+                    EA Project
                 </div>
-                <img src="../projects/segway/image.png" alt="" class="thumbnail-image card-img" style="height: 150px;">
+                <img src="../projects/2022-11-29_travel-sales-project/image.jpeg" alt="" class="thumbnail-image card-img" style="height: 150px;">
             </a>
             <!-- <div class="card-header py-1 px-2  bg-light"> -->
                 <!-- <a href="" class="listing-title">
-                    Control Systems Project
+                    EA Project
                 </a>  -->
                 <!-- <small class="card-text text-nowrap inline-block">
                     <a href="" class="listing-title">
-                        Control Systems Project
+                        EA Project
                     </a> 
                 </small> -->
                 <!-- <a class="button small flex" href="https://github.com/taniarascia/takenote" target="_blank" rel="noreferrer">Source 
                 </a> -->
             <!-- </div> -->
             <div class="card-body post-contents">
-                <a class="button small flex" href="../projects/segway/index.html">
+                <a class="button small flex" href="../projects/2022-11-29_travel-sales-project/index.html">
                     Article
                     </a> 
-                    <a class="button small flex" href="https://github.com/danilotpnta/Segway" target="_blank" rel="noreferrer">
+                    <a class="button small flex" href="https://github.com/danilotpnta/TSP_EA" target="_blank" rel="noreferrer">
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
                 <div style="display: none"> 
-                                11
+                                9
+                                10
                 </div>
                 <!-- Displays Categories -->    
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
                     <!-- Keyword TAG in frontmatter not found 
                         - Display the only ONE CATEGORY found --> 
-                            <!-- <span id="Electrical Engineering"  class="listing-category Electrical Engineering" > -->
-                            <span class="listing-category Electrical Engineering">
-                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Electrical Engineering">
-                                    Electrical Engineering
+                            <span class="listing-category Python">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Python">
+                                    Python
                                 </a>   
                             </span>
-                    <!-- When Keyword TAG is found in frontmatter 
-                         - Displays All CATEGORIES items -->
+                            <span class="listing-category Numba">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Numba">
+                                    Numba
+                                </a>   
+                            </span>
                 </div> 
                 <!-- Display TAGS -->
                 <div class="listing-categories" style="padding-top: 0em;">
@@ -848,17 +720,16 @@ Category[1]: Control Systems -->
                     </div>
                     <!-- Keyword TAG in frontmatter not found 
                          - If there is NO || only ONE element in Categories then show "Other" as tag --> 
-                        <div id="Other" class="listing-category-inactive">
-                            <a href="../projects">
-                                Other
-                            </a>   
-                        </div>
-                    <!-- When Keyword TAG is found in frontmatter 
-                         - Displays Reaiming TAGS items -->
+                            <div class="listing-category-inactive Optimization">
+                                <!-- Add 'Python icon' -->
+                                    <a href="../projects/#category=Optimization">
+                                        Optimization
+                                    </a>   
+                            </div>
                 </div> 
             </div>
             <!-- <div class="card-header py-1 px-2  bg-light">
-                    <a  class="button small flex" href="https://github.com/danilotpnta/Segway" target="_blank" rel="noreferrer">
+                    <a  class="button small flex" href="https://github.com/danilotpnta/TSP_EA" target="_blank" rel="noreferrer">
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
@@ -871,13 +742,190 @@ Category[1]: Control Systems -->
                  -->
         </div>
         <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="5" data-categories="Electrical Engineering,TAGS,C++,LateX,Arduino" data-listing-date-sort="1674946800000" data-listing-file-modified-sort="1690321860122" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="3" data-categories="Python,Kaggle,Tensorflow,TAGS,Computer Vision,Control Systems" data-listing-date-sort="1669676400000" data-listing-file-modified-sort="1690895996899" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
             <!-- IMAGE -->
-            <a href="../projects/bsc-thesis/Python-demo.html">
+            <a href="../projects/2023-05-29_computer-vision/index.html">
+                <div class="card-title change-title-background-color" style="text-align: center; padding-bottom: 0.4em;  padding-top: 0.4em; ">
+                    CV Project
+                </div>
+                <img src="../projects/2023-05-29_computer-vision/image.jpg" alt="" class="thumbnail-image card-img" style="height: 150px;">
+            </a>
+            <!-- <div class="card-header py-1 px-2  bg-light"> -->
+                <!-- <a href="" class="listing-title">
+                    CV Project
+                </a>  -->
+                <!-- <small class="card-text text-nowrap inline-block">
+                    <a href="" class="listing-title">
+                        CV Project
+                    </a> 
+                </small> -->
+                <!-- <a class="button small flex" href="https://github.com/taniarascia/takenote" target="_blank" rel="noreferrer">Source 
+                </a> -->
+            <!-- </div> -->
+            <div class="card-body post-contents">
+                <a class="button small flex" href="../projects/2023-05-29_computer-vision/index.html">
+                    Article
+                    </a> 
+                    <a class="button small flex" href="https://github.com/danilotpnta/ComputerVission" target="_blank" rel="noreferrer">
+                        Source
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
+                    </a> 
+                <div style="display: none"> 
+                                11
+                                12
+                                13
+                                14
+                </div>
+                <!-- Displays Categories -->    
+                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
+                    <!-- Keyword TAG in frontmatter not found 
+                        - Display the only ONE CATEGORY found --> 
+                            <span class="listing-category Python">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Python">
+                                    Python
+                                </a>   
+                            </span>
+                            <span class="listing-category Kaggle">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Kaggle">
+                                    Kaggle
+                                </a>   
+                            </span>
+                            <span class="listing-category Tensorflow">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Tensorflow">
+                                    Tensorflow
+                                </a>   
+                            </span>
+                </div> 
+                <!-- Display TAGS -->
+                <div class="listing-categories" style="padding-top: 0em;">
+                    <!-- Displays Technology Tag + Icon -->
+                    <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
+                        <!-- <a  href="/projects"> -->
+                        <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
+                        <!-- </a> -->
+                    </div>
+                    <!-- Keyword TAG in frontmatter not found 
+                         - If there is NO || only ONE element in Categories then show "Other" as tag --> 
+                            <div class="listing-category-inactive Computer Vision">
+                                <!-- Add 'Python icon' -->
+                                    <a href="../projects/#category=Computer Vision">
+                                        Computer Vision
+                                    </a>   
+                            </div>
+                            <div class="listing-category-inactive Control Systems">
+                                <!-- Add 'Python icon' -->
+                                    <a href="../projects/#category=Control Systems">
+                                        Control Systems
+                                    </a>   
+                            </div>
+                </div> 
+            </div>
+            <!-- <div class="card-header py-1 px-2  bg-light">
+                    <a  class="button small flex" href="https://github.com/danilotpnta/ComputerVission" target="_blank" rel="noreferrer">
+                        Source
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
+                    </a> 
+            </div> -->
+            <!-- Display Publication date if any -->
+            <!-- 
+                <b class="listing-publicationdate">
+                    Nov 29, 2022
+                </b>
+                 -->
+        </div>
+        <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="4" data-categories="Python,LateX,TAGS,Machine Learning,Algorithms" data-listing-date-sort="1668207600000" data-listing-file-modified-sort="1690898223582" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+            <!-- IMAGE -->
+            <a href="../projects/2022-11-12_artificial-intelligence/index.html">
+                <div class="card-title change-title-background-color" style="text-align: center; padding-bottom: 0.4em;  padding-top: 0.4em; ">
+                    AI Project
+                </div>
+                <img src="../projects/2022-11-12_artificial-intelligence/image5.png" alt="" class="thumbnail-image card-img" style="height: 150px;">
+            </a>
+            <!-- <div class="card-header py-1 px-2  bg-light"> -->
+                <!-- <a href="" class="listing-title">
+                    AI Project
+                </a>  -->
+                <!-- <small class="card-text text-nowrap inline-block">
+                    <a href="" class="listing-title">
+                        AI Project
+                    </a> 
+                </small> -->
+                <!-- <a class="button small flex" href="https://github.com/taniarascia/takenote" target="_blank" rel="noreferrer">Source 
+                </a> -->
+            <!-- </div> -->
+            <div class="card-body post-contents">
+                <a class="button small flex" href="../projects/2022-11-12_artificial-intelligence/index.html">
+                    Article
+                    </a> 
+                    <a class="button small flex" href="https://github.com/danilotpnta/CS188_Artificial-Intelligence-Berkeley" target="_blank" rel="noreferrer">
+                        Source
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
+                    </a> 
+                <div style="display: none"> 
+                                15
+                                16
+                </div>
+                <!-- Displays Categories -->    
+                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
+                    <!-- Keyword TAG in frontmatter not found 
+                        - Display the only ONE CATEGORY found --> 
+                            <span class="listing-category Python">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Python">
+                                    Python
+                                </a>   
+                            </span>
+                            <span class="listing-category LateX">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=LateX">
+                                    LateX
+                                </a>   
+                            </span>
+                </div> 
+                <!-- Display TAGS -->
+                <div class="listing-categories" style="padding-top: 0em;">
+                    <!-- Displays Technology Tag + Icon -->
+                    <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
+                        <!-- <a  href="/projects"> -->
+                        <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
+                        <!-- </a> -->
+                    </div>
+                    <!-- Keyword TAG in frontmatter not found 
+                         - If there is NO || only ONE element in Categories then show "Other" as tag --> 
+                            <div class="listing-category-inactive Machine Learning">
+                                <!-- Add 'Python icon' -->
+                                    <a href="../projects/#category=Machine Learning">
+                                        Machine Learning
+                                    </a>   
+                            </div>
+                            <div class="listing-category-inactive Algorithms">
+                                <!-- Add 'Python icon' -->
+                                    <a href="../projects/#category=Algorithms">
+                                        Algorithms
+                                    </a>   
+                            </div>
+                </div> 
+            </div>
+            <!-- <div class="card-header py-1 px-2  bg-light">
+                    <a  class="button small flex" href="https://github.com/danilotpnta/CS188_Artificial-Intelligence-Berkeley" target="_blank" rel="noreferrer">
+                        Source
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
+                    </a> 
+            </div> -->
+            <!-- Display Publication date if any -->
+            <!-- 
+                <b class="listing-publicationdate">
+                    Nov 12, 2022
+                </b>
+                 -->
+        </div>
+        <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="5" data-categories="C++,LateX,Arduino,TAGS,Electrical Engineering" data-listing-date-sort="1625176800000" data-listing-file-modified-sort="1690895816726" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+            <!-- IMAGE -->
+            <a href="../projects/2021-07-02_bsc-thesis/Python-demo.html">
                 <div class="card-title change-title-background-color" style="text-align: center; padding-bottom: 0.4em;  padding-top: 0.4em; ">
                     BSc Thesis
                 </div>
-                <img src="../projects/bsc-thesis/image.jpg" alt="" class="thumbnail-image card-img" style="height: 150px;">
+                <img src="../projects/2021-07-02_bsc-thesis/image.jpg" alt="" class="thumbnail-image card-img" style="height: 150px;">
             </a>
             <!-- <div class="card-header py-1 px-2  bg-light"> -->
                 <!-- <a href="" class="listing-title">
@@ -892,7 +940,7 @@ Category[1]: Control Systems -->
                 </a> -->
             <!-- </div> -->
             <div class="card-body post-contents">
-                <a class="button small flex" href="../projects/bsc-thesis/Python-demo.html">
+                <a class="button small flex" href="../projects/2021-07-02_bsc-thesis/Python-demo.html">
                     Article
                     </a> 
                     <a class="button small flex" href="http://essay.utwente.nl/87385/" target="_blank" rel="noreferrer">
@@ -900,17 +948,27 @@ Category[1]: Control Systems -->
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
                 <div style="display: none"> 
-                                12
-                                13
-                                14
+                                17
+                                18
+                                19
                 </div>
                 <!-- Displays Categories -->    
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
                     <!-- Keyword TAG in frontmatter not found 
                         - Display the only ONE CATEGORY found --> 
-                            <span class="listing-category Electrical Engineering">
-                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Electrical Engineering">
-                                    Electrical Engineering
+                            <span class="listing-category C++">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=C++">
+                                    C++
+                                </a>   
+                            </span>
+                            <span class="listing-category LateX">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=LateX">
+                                    LateX
+                                </a>   
+                            </span>
+                            <span class="listing-category Arduino">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Arduino">
+                                    Arduino
                                 </a>   
                             </span>
                 </div> 
@@ -924,22 +982,10 @@ Category[1]: Control Systems -->
                     </div>
                     <!-- Keyword TAG in frontmatter not found 
                          - If there is NO || only ONE element in Categories then show "Other" as tag --> 
-                            <div class="listing-category-inactive C++">
+                            <div class="listing-category-inactive Electrical Engineering">
                                 <!-- Add 'Python icon' -->
-                                    <a href="../projects/#category=C++">
-                                        C++
-                                    </a>   
-                            </div>
-                            <div class="listing-category-inactive LateX">
-                                <!-- Add 'Python icon' -->
-                                    <a href="../projects/#category=LateX">
-                                        LateX
-                                    </a>   
-                            </div>
-                            <div class="listing-category-inactive Arduino">
-                                <!-- Add 'Python icon' -->
-                                    <a href="../projects/#category=Arduino">
-                                        Arduino
+                                    <a href="../projects/#category=Electrical Engineering">
+                                        Electrical Engineering
                                     </a>   
                             </div>
                 </div> 
@@ -949,18 +995,18 @@ Category[1]: Control Systems -->
             <!-- Display Publication date if any -->
             <!-- 
                 <b class="listing-publicationdate">
-                    Jan 29, 2023
+                    Jul 2, 2021
                 </b>
                  -->
         </div>
         <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="6" data-categories="Software Engineering,TAGS,C++" data-listing-date-sort="1674946800000" data-listing-file-modified-sort="1690321898874" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="6" data-categories="C++,TAGS,Software Engineering" data-listing-date-sort="1589234400000" data-listing-file-modified-sort="1690895882385" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
             <!-- IMAGE -->
-            <a href="../projects/cpp-project/Python-demo.html">
+            <a href="../projects/2020-05-12_cpp-project/Python-demo.html">
                 <div class="card-title change-title-background-color" style="text-align: center; padding-bottom: 0.4em;  padding-top: 0.4em; ">
                     C++ Project
                 </div>
-                <img src="../projects/cpp-project/image.png" alt="" class="thumbnail-image card-img" style="height: 150px;">
+                <img src="../projects/2020-05-12_cpp-project/image.png" alt="" class="thumbnail-image card-img" style="height: 150px;">
             </a>
             <!-- <div class="card-header py-1 px-2  bg-light"> -->
                 <!-- <a href="" class="listing-title">
@@ -975,7 +1021,7 @@ Category[1]: Control Systems -->
                 </a> -->
             <!-- </div> -->
             <div class="card-body post-contents">
-                <a class="button small flex" href="../projects/cpp-project/Python-demo.html">
+                <a class="button small flex" href="../projects/2020-05-12_cpp-project/Python-demo.html">
                     Article
                     </a> 
                     <a class="button small flex" href="https://github.com/danilotpnta/PacmanGame" target="_blank" rel="noreferrer">
@@ -983,15 +1029,15 @@ Category[1]: Control Systems -->
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
                 <div style="display: none"> 
-                                15
+                                20
                 </div>
                 <!-- Displays Categories -->    
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
                     <!-- Keyword TAG in frontmatter not found 
                         - Display the only ONE CATEGORY found --> 
-                            <span class="listing-category Software Engineering">
-                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Software Engineering">
-                                    Software Engineering
+                            <span class="listing-category C++">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=C++">
+                                    C++
                                 </a>   
                             </span>
                 </div> 
@@ -1005,10 +1051,10 @@ Category[1]: Control Systems -->
                     </div>
                     <!-- Keyword TAG in frontmatter not found 
                          - If there is NO || only ONE element in Categories then show "Other" as tag --> 
-                            <div class="listing-category-inactive C++">
+                            <div class="listing-category-inactive Software Engineering">
                                 <!-- Add 'Python icon' -->
-                                    <a href="../projects/#category=C++">
-                                        C++
+                                    <a href="../projects/#category=Software Engineering">
+                                        Software Engineering
                                     </a>   
                             </div>
                 </div> 
@@ -1022,19 +1068,113 @@ Category[1]: Control Systems -->
             <!-- Display Publication date if any -->
             <!-- 
                 <b class="listing-publicationdate">
-                    Jan 29, 2023
+                    May 12, 2020
+                </b>
+                 -->
+        </div>
+        <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="7" data-categories="20-sim,TAGS,Electrical Engineering" data-listing-date-sort="1585778400000" data-listing-file-modified-sort="1690895934864" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+            <!-- IMAGE -->
+            <a href="../projects/2020-04-02_segway/index.html">
+                <div class="card-title change-title-background-color" style="text-align: center; padding-bottom: 0.4em;  padding-top: 0.4em; ">
+                    Control Systems Project
+                </div>
+                <img src="../projects/2020-04-02_segway/image.png" alt="" class="thumbnail-image card-img" style="height: 150px;">
+            </a>
+            <!-- <div class="card-header py-1 px-2  bg-light"> -->
+                <!-- <a href="" class="listing-title">
+                    Control Systems Project
+                </a>  -->
+                <!-- <small class="card-text text-nowrap inline-block">
+                    <a href="" class="listing-title">
+                        Control Systems Project
+                    </a> 
+                </small> -->
+                <!-- <a class="button small flex" href="https://github.com/taniarascia/takenote" target="_blank" rel="noreferrer">Source 
+                </a> -->
+            <!-- </div> -->
+            <div class="card-body post-contents">
+                <a class="button small flex" href="../projects/2020-04-02_segway/index.html">
+                    Article
+                    </a> 
+                    <a class="button small flex" href="https://github.com/danilotpnta/Segway" target="_blank" rel="noreferrer">
+                        Source
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
+                    </a> 
+                <div style="display: none"> 
+                                21
+                </div>
+                <!-- Displays Categories -->    
+                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
+                    <!-- Keyword TAG in frontmatter not found 
+                        - Display the only ONE CATEGORY found --> 
+                            <span class="listing-category 20-sim">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=20-sim">
+                                    20-sim
+                                </a>   
+                            </span>
+                </div> 
+                <!-- Display TAGS -->
+                <div class="listing-categories" style="padding-top: 0em;">
+                    <!-- Displays Technology Tag + Icon -->
+                    <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
+                        <!-- <a  href="/projects"> -->
+                        <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
+                        <!-- </a> -->
+                    </div>
+                    <!-- Keyword TAG in frontmatter not found 
+                         - If there is NO || only ONE element in Categories then show "Other" as tag --> 
+                            <div class="listing-category-inactive Electrical Engineering">
+                                <!-- Add 'Python icon' -->
+                                    <a href="../projects/#category=Electrical Engineering">
+                                        Electrical Engineering
+                                    </a>   
+                            </div>
+                </div> 
+            </div>
+            <!-- <div class="card-header py-1 px-2  bg-light">
+                    <a  class="button small flex" href="https://github.com/danilotpnta/Segway" target="_blank" rel="noreferrer">
+                        Source
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
+                    </a> 
+            </div> -->
+            <!-- Display Publication date if any -->
+            <!-- 
+                <b class="listing-publicationdate">
+                    Apr 2, 2020
                 </b>
                  -->
         </div>
 </div>
     <p class="array_categories" style="display: none"> 
-        Computer Vision
+        HTML
     </p>
     <p class="array_categories" style="display: none"> 
-        Control Systems
+        Javascript
+    </p>
+    <p class="array_categories" style="display: none"> 
+        SCSS
+    </p>
+    <p class="array_categories" style="display: none"> 
+        Blog
+    </p>
+    <p class="array_categories" style="display: none"> 
+        Research
     </p>
     <p class="array_categories" style="display: none"> 
         Python
+    </p>
+    <p class="array_categories" style="display: none"> 
+        OpenSpiel
+    </p>
+    <p class="array_categories" style="display: none"> 
+        Machine Learning
+    </p>
+    <p class="array_categories" style="display: none"> 
+        Numba
+    </p>
+    <p class="array_categories" style="display: none"> 
+        Optimization
     </p>
     <p class="array_categories" style="display: none"> 
         Kaggle
@@ -1043,34 +1183,31 @@ Category[1]: Control Systems -->
         Tensorflow
     </p>
     <p class="array_categories" style="display: none"> 
-        Machine Learning
+        Computer Vision
     </p>
     <p class="array_categories" style="display: none"> 
-        Algorithms
-    </p>
-    <p class="array_categories" style="display: none"> 
-        Optimization
-    </p>
-    <p class="array_categories" style="display: none"> 
-        Numba
-    </p>
-    <p class="array_categories" style="display: none"> 
-        OpenSpiel
-    </p>
-    <p class="array_categories" style="display: none"> 
-        Electrical Engineering
-    </p>
-    <p class="array_categories" style="display: none"> 
-        C++
+        Control Systems
     </p>
     <p class="array_categories" style="display: none"> 
         LateX
     </p>
     <p class="array_categories" style="display: none"> 
+        Algorithms
+    </p>
+    <p class="array_categories" style="display: none"> 
+        C++
+    </p>
+    <p class="array_categories" style="display: none"> 
         Arduino
     </p>
     <p class="array_categories" style="display: none"> 
+        Electrical Engineering
+    </p>
+    <p class="array_categories" style="display: none"> 
         Software Engineering
+    </p>
+    <p class="array_categories" style="display: none"> 
+        20-sim
     </p>
 <div class="listing-no-matching d-none">
 <p align="left">
