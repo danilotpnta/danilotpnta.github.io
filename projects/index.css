@@ -165,3 +165,25 @@ img.thumbnail-image.card-img {
         padding-top: 20px;
     }
 }
+
+
+.modal-header {
+    padding: 10px 1rem;
+}
+.modal-content {
+    border: transparent;
+}
+
+button.close.custom-modal-button{
+    background-color: #ffffff00;
+    border: transparent;
+    border-radius: 0px;
+    margin-right: 0px;
+    padding: 3px;
+} 
+
+@media (min-width: 576px){
+    .modal-dialog {
+        max-width: 1150px;
+    }
+}

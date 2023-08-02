@@ -132,7 +132,7 @@ table.quarto-listing-table a {
 }
 
 /* @media (min-width: 992px){ */
-.grid {
+.grid-blog {
     display: grid;
     gap: 3.2rem;
     grid-template-columns: auto 245px;
@@ -213,7 +213,7 @@ div#listing-posts-2022 .new_label_post {
 
 /* Disable the sidebar and gap when screen is small */
 @media (max-width: 670px){
-    .grid {
+    .grid-blog {
         gap: 0rem;
         grid-template-columns: auto 0px;
     }
