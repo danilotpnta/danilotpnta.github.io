@@ -162,6 +162,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+<!-- <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Go to modal</a> -->
 <!-- <span id="see-all-categories" align="center" style="padding: 0rem; padding-bottom:15px ;margin: 0rem; font-weight: 425" >
   <p style="padding: 0rem; margin: 0rem; font-weight: 425">
     Showing: 
@@ -492,100 +493,103 @@ Category[1]: Control Systems -->
         <br> 
  -->
 <div class="list grid" style="column-gap: 20px;">
-        <!-- Modal -->
-        <div class="modal" id="Website" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title anchored" id="exampleModalLongTitle">Website</h5>
-                    <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                    <div class="grid">
-                        <div class="g-col-12 g-col-md-7 " style="background:grey;">
-                            <img src="../projects/2023-07-01_website/image2.png" class="img-fluid" alt="image">
-                        </div>
-                        <div class="g-col-12 g-col-md-5">
-                            <!-- Here starts content of Modal -->
-                            <div class="card-body post-contents">
-                                <a class="button small flex" href="../projects/2023-07-01_website/index.html">
-                                    Article
-                                    </a> 
-                                    <a class="button small flex" href="https://github.com/danilotpnta/danilotpnta.github.io" target="_blank" rel="noreferrer">
-                                        Source
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
-                                    </a> 
-                                <div style="display: none"> 
-                                                1
-                                                2
-                                                3
-                                                4
-                                                5
+        <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-categories="HTML,Javascript,SCSS,TAGS,Blog,Research" data-listing-date-sort="1688162400000" data-listing-file-modified-sort="1691231239617" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+            <!-- Starting of MODAL -->
+            <div class="modal" id="Website" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title anchored" id="exampleModalLongTitle">Website</h5>
+                        <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="grid modal-content-grid">
+                            <!-- Here STARTS content of MODAL -->
+                                <!-- LEFT Content -->
+                                <div class="g-col-12 g-col-md-7 img-center">
+                                    <img src="../projects/2023-07-01_website/image2.png" class="img-fluid" alt="image">
                                 </div>
-                                <!-- Displays Categories -->    
-                                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
-                                    <!-- Keyword TAG in frontmatter not found 
-                                        - Display the only ONE CATEGORY found --> 
-                                            <span class="listing-category HTML">
-                                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=HTML">
-                                                    HTML
-                                                </a>   
-                                            </span>
-                                            <span class="listing-category Javascript">
-                                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Javascript">
-                                                    Javascript
-                                                </a>   
-                                            </span>
-                                            <span class="listing-category SCSS">
-                                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=SCSS">
-                                                    SCSS
-                                                </a>   
-                                            </span>
-                                </div> 
-                                <!-- Display TAGS -->
-                                <div class="listing-categories" style="padding-top: 0em;">
-                                    <!-- Displays Technology Tag + Icon -->
-                                    <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
-                                        <!-- <a  href="/projects"> -->
-                                        <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
-                                        <!-- </a> -->
+                                <!-- RIGHT Content -->
+                                <div class="g-col-12 g-col-md-5">
+                                    <div class="card-body post-contents links-handler">
+                                            <p>
+                                                In this project I have created a website to hold my notes, show my projects, share my contact details. If you are interested in the project make sure to click on the source icon to take a look at the complete source. Cheers 
+                                            </p>
+                                        <!-- <a  class="button small flex" href="/projects/2023-07-01_website/index.qmd" > -->
+                                        <a class="button small flex" href="#" style="pointer-events: none;">
+                                            About
+                                        </a> 
+                                            <a class="button small flex" href="https://github.com/danilotpnta/danilotpnta.github.io" target="_blank" rel="noreferrer">
+                                                Source
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
+                                            </a> 
+                                        <!-- Displays CATEGORIES -->    
+                                        <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
+                                            <!-- Keyword TAG in frontmatter not found 
+                                                - Display the only ONE CATEGORY found --> 
+                                                    <span class="listing-category HTML">
+                                                        <!-- <a style="color: inherit; font-size: 0.95em;" href="/projects/#category=HTML"> -->
+                                                        <a onclick="location.href='/projects/#category=HTML';" data-bs-dismiss="modal" style="color: inherit; font-size: 0.95em;">
+                                                            HTML
+                                                        </a>   
+                                                    </span>
+                                                    <span class="listing-category Javascript">
+                                                        <!-- <a style="color: inherit; font-size: 0.95em;" href="/projects/#category=Javascript"> -->
+                                                        <a onclick="location.href='/projects/#category=Javascript';" data-bs-dismiss="modal" style="color: inherit; font-size: 0.95em;">
+                                                            Javascript
+                                                        </a>   
+                                                    </span>
+                                                    <span class="listing-category SCSS">
+                                                        <!-- <a style="color: inherit; font-size: 0.95em;" href="/projects/#category=SCSS"> -->
+                                                        <a onclick="location.href='/projects/#category=SCSS';" data-bs-dismiss="modal" style="color: inherit; font-size: 0.95em;">
+                                                            SCSS
+                                                        </a>   
+                                                    </span>
+                                        </div> 
+                                        <!-- Display TAGS -->
+                                        <div class="listing-categories" style="padding-top: 0em;">
+                                            <!-- Displays Technology Tag + Icon -->
+                                            <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
+                                                <!-- <a  href="/projects"> -->
+                                                <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
+                                                <!-- </a> -->
+                                            </div>
+                                            <!-- Keyword TAG in frontmatter not found 
+                                                - If there is NO || only ONE element in Categories then show "Other" as tag --> 
+                                                    <div class="listing-category-inactive Blog">
+                                                        <!-- Add 'Python icon' -->
+                                                            <a href="../projects/#category=Blog">
+                                                                Blog
+                                                            </a>   
+                                                    </div>
+                                                    <div class="listing-category-inactive Research">
+                                                        <!-- Add 'Python icon' -->
+                                                            <a href="../projects/#category=Research">
+                                                                Research
+                                                            </a>   
+                                                    </div>
+                                        </div> 
                                     </div>
-                                    <!-- Keyword TAG in frontmatter not found 
-                                         - If there is NO || only ONE element in Categories then show "Other" as tag --> 
-                                            <div class="listing-category-inactive Blog">
-                                                <!-- Add 'Python icon' -->
-                                                    <a href="../projects/#category=Blog">
-                                                        Blog
-                                                    </a>   
-                                            </div>
-                                            <div class="listing-category-inactive Research">
-                                                <!-- Add 'Python icon' -->
-                                                    <a href="../projects/#category=Research">
-                                                        Research
-                                                    </a>   
-                                            </div>
-                                </div> 
+                                <!-- Here ENDS content of MODAL -->
+                                </div>
                             </div>
-                            <!-- Here finishes content of Modal -->
                         </div>
                     </div>
                     </div>
-                </div>
                 </div>
             </div>
-        </div>
-        <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-categories="HTML,Javascript,SCSS,TAGS,Blog,Research" data-listing-date-sort="1688162400000" data-listing-file-modified-sort="1690899625783" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+            <!-- End of MODAL -->
             <!-- IMAGE -->
             <!-- <a href="/projects/2023-07-01_website/index.qmd"> -->
             <a href="#" data-bs-toggle="modal" data-bs-target="#Website">
                 <div class="card-title change-title-background-color" style="text-align: center; padding-bottom: 0.4em;  padding-top: 0.4em; ">
                     Website
                 </div>
-                <img src="../projects/2023-07-01_website/image2.png" alt="" class="thumbnail-image card-img" style="height: 150px;">
+                <img src="../projects/2023-07-01_website/image2.png" alt="In this project I have created a website to hold my notes, show my projects, share my contact details. If you are interested in the project make sure to click on the source icon to take a look at the complete source. Cheers " class="thumbnail-image card-img" style="height: 150px;">
             </a>
             <!-- <div class="card-header py-1 px-2  bg-light"> -->
                 <!-- <a href="" class="listing-title">
@@ -600,14 +604,20 @@ Category[1]: Control Systems -->
                 </a> -->
             <!-- </div> -->
             <div class="card-body post-contents">
-                <a class="button small flex" href="../projects/2023-07-01_website/index.html">
-                    Article
-                    </a> 
+                <!-- <a  class="button small flex" href="/projects/2023-07-01_website/index.qmd" > -->
+                <a class="button small flex" href="#" data-bs-toggle="modal" data-bs-target="#Website">
+                    About
+                </a> 
                     <a class="button small flex" href="https://github.com/danilotpnta/danilotpnta.github.io" target="_blank" rel="noreferrer">
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
                 <div style="display: none"> 
+                                1
+                                2
+                                3
+                                4
+                                5
                 </div>
                 <!-- Displays Categories -->    
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
@@ -666,80 +676,84 @@ Category[1]: Control Systems -->
                 </b>
                  -->
         </div>
-        <!-- Modal -->
-        <div class="modal" id="MLProject" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title anchored" id="exampleModalLongTitle">ML Project</h5>
-                    <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                    <div class="grid">
-                        <div class="g-col-12 g-col-md-7 " style="background:grey;">
-                            <img src="../projects/2023-05-26_mlp/image.png" class="img-fluid" alt="image">
-                        </div>
-                        <div class="g-col-12 g-col-md-5">
-                            <!-- Here starts content of Modal -->
-                            <div class="card-body post-contents">
-                                <a class="button small flex" href="../projects/2023-05-26_mlp/index.html">
-                                    Article
-                                    </a> 
-                                    <a class="button small flex" href="https://github.com/danilotpnta/MachineLearning" target="_blank" rel="noreferrer">
-                                        Source
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
-                                    </a> 
-                                <div style="display: none"> 
-                                                6
-                                                7
-                                                8
-                                </div>
-                                <!-- Displays Categories -->    
-                                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
-                                    <!-- Keyword TAG in frontmatter not found 
-                                        - Display the only ONE CATEGORY found --> 
-                                            <span class="listing-category Python">
-                                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Python">
-                                                    Python
-                                                </a>   
-                                            </span>
-                                            <span class="listing-category OpenSpiel">
-                                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=OpenSpiel">
-                                                    OpenSpiel
-                                                </a>   
-                                            </span>
-                                </div> 
-                                <!-- Display TAGS -->
-                                <div class="listing-categories" style="padding-top: 0em;">
-                                    <!-- Displays Technology Tag + Icon -->
-                                    <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
-                                        <!-- <a  href="/projects"> -->
-                                        <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
-                                        <!-- </a> -->
-                                    </div>
-                                    <!-- Keyword TAG in frontmatter not found 
-                                         - If there is NO || only ONE element in Categories then show "Other" as tag --> 
-                                            <div class="listing-category-inactive Machine Learning">
-                                                <!-- Add 'Python icon' -->
-                                                    <a href="../projects/#category=Machine Learning">
-                                                        Machine Learning
-                                                    </a>   
-                                            </div>
-                                </div> 
-                            </div>
-                            <!-- Here finishes content of Modal -->
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
         <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
         <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="1" data-categories="Python,OpenSpiel,TAGS,Machine Learning" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1690895908823" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+            <!-- Starting of MODAL -->
+            <div class="modal" id="MLProject" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title anchored" id="exampleModalLongTitle">ML Project</h5>
+                        <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="grid modal-content-grid">
+                            <!-- Here STARTS content of MODAL -->
+                                <!-- LEFT Content -->
+                                <div class="g-col-12 g-col-md-7 img-center">
+                                    <img src="../projects/2023-05-26_mlp/image.png" class="img-fluid" alt="image">
+                                </div>
+                                <!-- RIGHT Content -->
+                                <div class="g-col-12 g-col-md-5">
+                                    <div class="card-body post-contents links-handler">
+                                            <p>
+                                                
+                                            </p>
+                                        <!-- <a  class="button small flex" href="/projects/2023-05-26_mlp/index.qmd" > -->
+                                        <a class="button small flex" href="#" style="pointer-events: none;">
+                                            About
+                                        </a> 
+                                            <a class="button small flex" href="https://github.com/danilotpnta/MachineLearning" target="_blank" rel="noreferrer">
+                                                Source
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
+                                            </a> 
+                                        <!-- Displays CATEGORIES -->    
+                                        <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
+                                            <!-- Keyword TAG in frontmatter not found 
+                                                - Display the only ONE CATEGORY found --> 
+                                                    <span class="listing-category Python">
+                                                        <!-- <a style="color: inherit; font-size: 0.95em;" href="/projects/#category=Python"> -->
+                                                        <a onclick="location.href='/projects/#category=Python';" data-bs-dismiss="modal" style="color: inherit; font-size: 0.95em;">
+                                                            Python
+                                                        </a>   
+                                                    </span>
+                                                    <span class="listing-category OpenSpiel">
+                                                        <!-- <a style="color: inherit; font-size: 0.95em;" href="/projects/#category=OpenSpiel"> -->
+                                                        <a onclick="location.href='/projects/#category=OpenSpiel';" data-bs-dismiss="modal" style="color: inherit; font-size: 0.95em;">
+                                                            OpenSpiel
+                                                        </a>   
+                                                    </span>
+                                        </div> 
+                                        <!-- Display TAGS -->
+                                        <div class="listing-categories" style="padding-top: 0em;">
+                                            <!-- Displays Technology Tag + Icon -->
+                                            <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
+                                                <!-- <a  href="/projects"> -->
+                                                <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
+                                                <!-- </a> -->
+                                            </div>
+                                            <!-- Keyword TAG in frontmatter not found 
+                                                - If there is NO || only ONE element in Categories then show "Other" as tag --> 
+                                                    <div class="listing-category-inactive Machine Learning">
+                                                        <!-- Add 'Python icon' -->
+                                                            <a href="../projects/#category=Machine Learning">
+                                                                Machine Learning
+                                                            </a>   
+                                                    </div>
+                                        </div> 
+                                    </div>
+                                <!-- Here ENDS content of MODAL -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of MODAL -->
             <!-- IMAGE -->
             <!-- <a href="/projects/2023-05-26_mlp/index.qmd"> -->
             <a href="#" data-bs-toggle="modal" data-bs-target="#MLProject">
@@ -761,14 +775,18 @@ Category[1]: Control Systems -->
                 </a> -->
             <!-- </div> -->
             <div class="card-body post-contents">
-                <a class="button small flex" href="../projects/2023-05-26_mlp/index.html">
-                    Article
-                    </a> 
+                <!-- <a  class="button small flex" href="/projects/2023-05-26_mlp/index.qmd" > -->
+                <a class="button small flex" href="#" data-bs-toggle="modal" data-bs-target="#MLProject">
+                    About
+                </a> 
                     <a class="button small flex" href="https://github.com/danilotpnta/MachineLearning" target="_blank" rel="noreferrer">
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
                 <div style="display: none"> 
+                                6
+                                7
+                                8
                 </div>
                 <!-- Displays Categories -->    
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
@@ -816,79 +834,84 @@ Category[1]: Control Systems -->
                 </b>
                  -->
         </div>
-        <!-- Modal -->
-        <div class="modal" id="EAProject" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title anchored" id="exampleModalLongTitle">EA Project</h5>
-                    <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                    <div class="grid">
-                        <div class="g-col-12 g-col-md-7 " style="background:grey;">
-                            <img src="../projects/2022-11-29_travel-sales-project/image.jpeg" class="img-fluid" alt="image">
-                        </div>
-                        <div class="g-col-12 g-col-md-5">
-                            <!-- Here starts content of Modal -->
-                            <div class="card-body post-contents">
-                                <a class="button small flex" href="../projects/2022-11-29_travel-sales-project/index.html">
-                                    Article
-                                    </a> 
-                                    <a class="button small flex" href="https://github.com/danilotpnta/TSP_EA" target="_blank" rel="noreferrer">
-                                        Source
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
-                                    </a> 
-                                <div style="display: none"> 
-                                                9
-                                                10
-                                </div>
-                                <!-- Displays Categories -->    
-                                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
-                                    <!-- Keyword TAG in frontmatter not found 
-                                        - Display the only ONE CATEGORY found --> 
-                                            <span class="listing-category Python">
-                                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Python">
-                                                    Python
-                                                </a>   
-                                            </span>
-                                            <span class="listing-category Numba">
-                                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Numba">
-                                                    Numba
-                                                </a>   
-                                            </span>
-                                </div> 
-                                <!-- Display TAGS -->
-                                <div class="listing-categories" style="padding-top: 0em;">
-                                    <!-- Displays Technology Tag + Icon -->
-                                    <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
-                                        <!-- <a  href="/projects"> -->
-                                        <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
-                                        <!-- </a> -->
-                                    </div>
-                                    <!-- Keyword TAG in frontmatter not found 
-                                         - If there is NO || only ONE element in Categories then show "Other" as tag --> 
-                                            <div class="listing-category-inactive Optimization">
-                                                <!-- Add 'Python icon' -->
-                                                    <a href="../projects/#category=Optimization">
-                                                        Optimization
-                                                    </a>   
-                                            </div>
-                                </div> 
-                            </div>
-                            <!-- Here finishes content of Modal -->
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
         <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
         <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="2" data-categories="Python,Numba,TAGS,Optimization" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1690894961227" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+            <!-- Starting of MODAL -->
+            <div class="modal" id="EAProject" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title anchored" id="exampleModalLongTitle">EA Project</h5>
+                        <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="grid modal-content-grid">
+                            <!-- Here STARTS content of MODAL -->
+                                <!-- LEFT Content -->
+                                <div class="g-col-12 g-col-md-7 img-center">
+                                    <img src="../projects/2022-11-29_travel-sales-project/image.jpeg" class="img-fluid" alt="image">
+                                </div>
+                                <!-- RIGHT Content -->
+                                <div class="g-col-12 g-col-md-5">
+                                    <div class="card-body post-contents links-handler">
+                                            <p>
+                                                
+                                            </p>
+                                        <!-- <a  class="button small flex" href="/projects/2022-11-29_travel-sales-project/index.qmd" > -->
+                                        <a class="button small flex" href="#" style="pointer-events: none;">
+                                            About
+                                        </a> 
+                                            <a class="button small flex" href="https://github.com/danilotpnta/TSP_EA" target="_blank" rel="noreferrer">
+                                                Source
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
+                                            </a> 
+                                        <!-- Displays CATEGORIES -->    
+                                        <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
+                                            <!-- Keyword TAG in frontmatter not found 
+                                                - Display the only ONE CATEGORY found --> 
+                                                    <span class="listing-category Python">
+                                                        <!-- <a style="color: inherit; font-size: 0.95em;" href="/projects/#category=Python"> -->
+                                                        <a onclick="location.href='/projects/#category=Python';" data-bs-dismiss="modal" style="color: inherit; font-size: 0.95em;">
+                                                            Python
+                                                        </a>   
+                                                    </span>
+                                                    <span class="listing-category Numba">
+                                                        <!-- <a style="color: inherit; font-size: 0.95em;" href="/projects/#category=Numba"> -->
+                                                        <a onclick="location.href='/projects/#category=Numba';" data-bs-dismiss="modal" style="color: inherit; font-size: 0.95em;">
+                                                            Numba
+                                                        </a>   
+                                                    </span>
+                                        </div> 
+                                        <!-- Display TAGS -->
+                                        <div class="listing-categories" style="padding-top: 0em;">
+                                            <!-- Displays Technology Tag + Icon -->
+                                            <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
+                                                <!-- <a  href="/projects"> -->
+                                                <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
+                                                <!-- </a> -->
+                                            </div>
+                                            <!-- Keyword TAG in frontmatter not found 
+                                                - If there is NO || only ONE element in Categories then show "Other" as tag --> 
+                                                    <div class="listing-category-inactive Optimization">
+                                                        <!-- Add 'Python icon' -->
+                                                            <a href="../projects/#category=Optimization">
+                                                                Optimization
+                                                            </a>   
+                                                    </div>
+                                        </div> 
+                                    </div>
+                                <!-- Here ENDS content of MODAL -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of MODAL -->
             <!-- IMAGE -->
             <!-- <a href="/projects/2022-11-29_travel-sales-project/index.qmd"> -->
             <a href="#" data-bs-toggle="modal" data-bs-target="#EAProject">
@@ -910,14 +933,17 @@ Category[1]: Control Systems -->
                 </a> -->
             <!-- </div> -->
             <div class="card-body post-contents">
-                <a class="button small flex" href="../projects/2022-11-29_travel-sales-project/index.html">
-                    Article
-                    </a> 
+                <!-- <a  class="button small flex" href="/projects/2022-11-29_travel-sales-project/index.qmd" > -->
+                <a class="button small flex" href="#" data-bs-toggle="modal" data-bs-target="#EAProject">
+                    About
+                </a> 
                     <a class="button small flex" href="https://github.com/danilotpnta/TSP_EA" target="_blank" rel="noreferrer">
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
                 <div style="display: none"> 
+                                9
+                                10
                 </div>
                 <!-- Displays Categories -->    
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
@@ -965,92 +991,96 @@ Category[1]: Control Systems -->
                 </b>
                  -->
         </div>
-        <!-- Modal -->
-        <div class="modal" id="CVProject" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title anchored" id="exampleModalLongTitle">CV Project</h5>
-                    <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                    <div class="grid">
-                        <div class="g-col-12 g-col-md-7 " style="background:grey;">
-                            <img src="../projects/2023-05-29_computer-vision/image.jpg" class="img-fluid" alt="image">
-                        </div>
-                        <div class="g-col-12 g-col-md-5">
-                            <!-- Here starts content of Modal -->
-                            <div class="card-body post-contents">
-                                <a class="button small flex" href="../projects/2023-05-29_computer-vision/index.html">
-                                    Article
-                                    </a> 
-                                    <a class="button small flex" href="https://github.com/danilotpnta/ComputerVission" target="_blank" rel="noreferrer">
-                                        Source
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
-                                    </a> 
-                                <div style="display: none"> 
-                                                11
-                                                12
-                                                13
-                                                14
-                                </div>
-                                <!-- Displays Categories -->    
-                                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
-                                    <!-- Keyword TAG in frontmatter not found 
-                                        - Display the only ONE CATEGORY found --> 
-                                            <span class="listing-category Python">
-                                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Python">
-                                                    Python
-                                                </a>   
-                                            </span>
-                                            <span class="listing-category Kaggle">
-                                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Kaggle">
-                                                    Kaggle
-                                                </a>   
-                                            </span>
-                                            <span class="listing-category Tensorflow">
-                                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Tensorflow">
-                                                    Tensorflow
-                                                </a>   
-                                            </span>
-                                </div> 
-                                <!-- Display TAGS -->
-                                <div class="listing-categories" style="padding-top: 0em;">
-                                    <!-- Displays Technology Tag + Icon -->
-                                    <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
-                                        <!-- <a  href="/projects"> -->
-                                        <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
-                                        <!-- </a> -->
-                                    </div>
-                                    <!-- Keyword TAG in frontmatter not found 
-                                         - If there is NO || only ONE element in Categories then show "Other" as tag --> 
-                                            <div class="listing-category-inactive Computer Vision">
-                                                <!-- Add 'Python icon' -->
-                                                    <a href="../projects/#category=Computer Vision">
-                                                        Computer Vision
-                                                    </a>   
-                                            </div>
-                                            <div class="listing-category-inactive Control Systems">
-                                                <!-- Add 'Python icon' -->
-                                                    <a href="../projects/#category=Control Systems">
-                                                        Control Systems
-                                                    </a>   
-                                            </div>
-                                </div> 
-                            </div>
-                            <!-- Here finishes content of Modal -->
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
         <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
         <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="3" data-categories="Python,Kaggle,Tensorflow,TAGS,Computer Vision,Control Systems" data-listing-date-sort="1669676400000" data-listing-file-modified-sort="1690895996899" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+            <!-- Starting of MODAL -->
+            <div class="modal" id="CVProject" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title anchored" id="exampleModalLongTitle">CV Project</h5>
+                        <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="grid modal-content-grid">
+                            <!-- Here STARTS content of MODAL -->
+                                <!-- LEFT Content -->
+                                <div class="g-col-12 g-col-md-7 img-center">
+                                    <img src="../projects/2023-05-29_computer-vision/image.jpg" class="img-fluid" alt="image">
+                                </div>
+                                <!-- RIGHT Content -->
+                                <div class="g-col-12 g-col-md-5">
+                                    <div class="card-body post-contents links-handler">
+                                            <p>
+                                                
+                                            </p>
+                                        <!-- <a  class="button small flex" href="/projects/2023-05-29_computer-vision/index.qmd" > -->
+                                        <a class="button small flex" href="#" style="pointer-events: none;">
+                                            About
+                                        </a> 
+                                            <a class="button small flex" href="https://github.com/danilotpnta/ComputerVission" target="_blank" rel="noreferrer">
+                                                Source
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
+                                            </a> 
+                                        <!-- Displays CATEGORIES -->    
+                                        <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
+                                            <!-- Keyword TAG in frontmatter not found 
+                                                - Display the only ONE CATEGORY found --> 
+                                                    <span class="listing-category Python">
+                                                        <!-- <a style="color: inherit; font-size: 0.95em;" href="/projects/#category=Python"> -->
+                                                        <a onclick="location.href='/projects/#category=Python';" data-bs-dismiss="modal" style="color: inherit; font-size: 0.95em;">
+                                                            Python
+                                                        </a>   
+                                                    </span>
+                                                    <span class="listing-category Kaggle">
+                                                        <!-- <a style="color: inherit; font-size: 0.95em;" href="/projects/#category=Kaggle"> -->
+                                                        <a onclick="location.href='/projects/#category=Kaggle';" data-bs-dismiss="modal" style="color: inherit; font-size: 0.95em;">
+                                                            Kaggle
+                                                        </a>   
+                                                    </span>
+                                                    <span class="listing-category Tensorflow">
+                                                        <!-- <a style="color: inherit; font-size: 0.95em;" href="/projects/#category=Tensorflow"> -->
+                                                        <a onclick="location.href='/projects/#category=Tensorflow';" data-bs-dismiss="modal" style="color: inherit; font-size: 0.95em;">
+                                                            Tensorflow
+                                                        </a>   
+                                                    </span>
+                                        </div> 
+                                        <!-- Display TAGS -->
+                                        <div class="listing-categories" style="padding-top: 0em;">
+                                            <!-- Displays Technology Tag + Icon -->
+                                            <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
+                                                <!-- <a  href="/projects"> -->
+                                                <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
+                                                <!-- </a> -->
+                                            </div>
+                                            <!-- Keyword TAG in frontmatter not found 
+                                                - If there is NO || only ONE element in Categories then show "Other" as tag --> 
+                                                    <div class="listing-category-inactive Computer Vision">
+                                                        <!-- Add 'Python icon' -->
+                                                            <a href="../projects/#category=Computer Vision">
+                                                                Computer Vision
+                                                            </a>   
+                                                    </div>
+                                                    <div class="listing-category-inactive Control Systems">
+                                                        <!-- Add 'Python icon' -->
+                                                            <a href="../projects/#category=Control Systems">
+                                                                Control Systems
+                                                            </a>   
+                                                    </div>
+                                        </div> 
+                                    </div>
+                                <!-- Here ENDS content of MODAL -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of MODAL -->
             <!-- IMAGE -->
             <!-- <a href="/projects/2023-05-29_computer-vision/index.qmd"> -->
             <a href="#" data-bs-toggle="modal" data-bs-target="#CVProject">
@@ -1072,14 +1102,19 @@ Category[1]: Control Systems -->
                 </a> -->
             <!-- </div> -->
             <div class="card-body post-contents">
-                <a class="button small flex" href="../projects/2023-05-29_computer-vision/index.html">
-                    Article
-                    </a> 
+                <!-- <a  class="button small flex" href="/projects/2023-05-29_computer-vision/index.qmd" > -->
+                <a class="button small flex" href="#" data-bs-toggle="modal" data-bs-target="#CVProject">
+                    About
+                </a> 
                     <a class="button small flex" href="https://github.com/danilotpnta/ComputerVission" target="_blank" rel="noreferrer">
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
                 <div style="display: none"> 
+                                11
+                                12
+                                13
+                                14
                 </div>
                 <!-- Displays Categories -->    
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
@@ -1138,85 +1173,90 @@ Category[1]: Control Systems -->
                 </b>
                  -->
         </div>
-        <!-- Modal -->
-        <div class="modal" id="AIProject" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title anchored" id="exampleModalLongTitle">AI Project</h5>
-                    <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                    <div class="grid">
-                        <div class="g-col-12 g-col-md-7 " style="background:grey;">
-                            <img src="../projects/2022-11-12_artificial-intelligence/image5.png" class="img-fluid" alt="image">
-                        </div>
-                        <div class="g-col-12 g-col-md-5">
-                            <!-- Here starts content of Modal -->
-                            <div class="card-body post-contents">
-                                <a class="button small flex" href="../projects/2022-11-12_artificial-intelligence/index.html">
-                                    Article
-                                    </a> 
-                                    <a class="button small flex" href="https://github.com/danilotpnta/CS188_Artificial-Intelligence-Berkeley" target="_blank" rel="noreferrer">
-                                        Source
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
-                                    </a> 
-                                <div style="display: none"> 
-                                                15
-                                                16
-                                </div>
-                                <!-- Displays Categories -->    
-                                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
-                                    <!-- Keyword TAG in frontmatter not found 
-                                        - Display the only ONE CATEGORY found --> 
-                                            <span class="listing-category Python">
-                                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Python">
-                                                    Python
-                                                </a>   
-                                            </span>
-                                            <span class="listing-category LateX">
-                                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=LateX">
-                                                    LateX
-                                                </a>   
-                                            </span>
-                                </div> 
-                                <!-- Display TAGS -->
-                                <div class="listing-categories" style="padding-top: 0em;">
-                                    <!-- Displays Technology Tag + Icon -->
-                                    <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
-                                        <!-- <a  href="/projects"> -->
-                                        <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
-                                        <!-- </a> -->
-                                    </div>
-                                    <!-- Keyword TAG in frontmatter not found 
-                                         - If there is NO || only ONE element in Categories then show "Other" as tag --> 
-                                            <div class="listing-category-inactive Machine Learning">
-                                                <!-- Add 'Python icon' -->
-                                                    <a href="../projects/#category=Machine Learning">
-                                                        Machine Learning
-                                                    </a>   
-                                            </div>
-                                            <div class="listing-category-inactive Algorithms">
-                                                <!-- Add 'Python icon' -->
-                                                    <a href="../projects/#category=Algorithms">
-                                                        Algorithms
-                                                    </a>   
-                                            </div>
-                                </div> 
-                            </div>
-                            <!-- Here finishes content of Modal -->
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
         <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
         <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="4" data-categories="Python,LateX,TAGS,Machine Learning,Algorithms" data-listing-date-sort="1668207600000" data-listing-file-modified-sort="1690898223582" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+            <!-- Starting of MODAL -->
+            <div class="modal" id="AIProject" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title anchored" id="exampleModalLongTitle">AI Project</h5>
+                        <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="grid modal-content-grid">
+                            <!-- Here STARTS content of MODAL -->
+                                <!-- LEFT Content -->
+                                <div class="g-col-12 g-col-md-7 img-center">
+                                    <img src="../projects/2022-11-12_artificial-intelligence/image5.png" class="img-fluid" alt="image">
+                                </div>
+                                <!-- RIGHT Content -->
+                                <div class="g-col-12 g-col-md-5">
+                                    <div class="card-body post-contents links-handler">
+                                            <p>
+                                                
+                                            </p>
+                                        <!-- <a  class="button small flex" href="/projects/2022-11-12_artificial-intelligence/index.qmd" > -->
+                                        <a class="button small flex" href="#" style="pointer-events: none;">
+                                            About
+                                        </a> 
+                                            <a class="button small flex" href="https://github.com/danilotpnta/CS188_Artificial-Intelligence-Berkeley" target="_blank" rel="noreferrer">
+                                                Source
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
+                                            </a> 
+                                        <!-- Displays CATEGORIES -->    
+                                        <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
+                                            <!-- Keyword TAG in frontmatter not found 
+                                                - Display the only ONE CATEGORY found --> 
+                                                    <span class="listing-category Python">
+                                                        <!-- <a style="color: inherit; font-size: 0.95em;" href="/projects/#category=Python"> -->
+                                                        <a onclick="location.href='/projects/#category=Python';" data-bs-dismiss="modal" style="color: inherit; font-size: 0.95em;">
+                                                            Python
+                                                        </a>   
+                                                    </span>
+                                                    <span class="listing-category LateX">
+                                                        <!-- <a style="color: inherit; font-size: 0.95em;" href="/projects/#category=LateX"> -->
+                                                        <a onclick="location.href='/projects/#category=LateX';" data-bs-dismiss="modal" style="color: inherit; font-size: 0.95em;">
+                                                            LateX
+                                                        </a>   
+                                                    </span>
+                                        </div> 
+                                        <!-- Display TAGS -->
+                                        <div class="listing-categories" style="padding-top: 0em;">
+                                            <!-- Displays Technology Tag + Icon -->
+                                            <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
+                                                <!-- <a  href="/projects"> -->
+                                                <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
+                                                <!-- </a> -->
+                                            </div>
+                                            <!-- Keyword TAG in frontmatter not found 
+                                                - If there is NO || only ONE element in Categories then show "Other" as tag --> 
+                                                    <div class="listing-category-inactive Machine Learning">
+                                                        <!-- Add 'Python icon' -->
+                                                            <a href="../projects/#category=Machine Learning">
+                                                                Machine Learning
+                                                            </a>   
+                                                    </div>
+                                                    <div class="listing-category-inactive Algorithms">
+                                                        <!-- Add 'Python icon' -->
+                                                            <a href="../projects/#category=Algorithms">
+                                                                Algorithms
+                                                            </a>   
+                                                    </div>
+                                        </div> 
+                                    </div>
+                                <!-- Here ENDS content of MODAL -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of MODAL -->
             <!-- IMAGE -->
             <!-- <a href="/projects/2022-11-12_artificial-intelligence/index.qmd"> -->
             <a href="#" data-bs-toggle="modal" data-bs-target="#AIProject">
@@ -1238,14 +1278,17 @@ Category[1]: Control Systems -->
                 </a> -->
             <!-- </div> -->
             <div class="card-body post-contents">
-                <a class="button small flex" href="../projects/2022-11-12_artificial-intelligence/index.html">
-                    Article
-                    </a> 
+                <!-- <a  class="button small flex" href="/projects/2022-11-12_artificial-intelligence/index.qmd" > -->
+                <a class="button small flex" href="#" data-bs-toggle="modal" data-bs-target="#AIProject">
+                    About
+                </a> 
                     <a class="button small flex" href="https://github.com/danilotpnta/CS188_Artificial-Intelligence-Berkeley" target="_blank" rel="noreferrer">
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
                 <div style="display: none"> 
+                                15
+                                16
                 </div>
                 <!-- Displays Categories -->    
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
@@ -1299,85 +1342,90 @@ Category[1]: Control Systems -->
                 </b>
                  -->
         </div>
-        <!-- Modal -->
-        <div class="modal" id="BScThesis" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title anchored" id="exampleModalLongTitle">BSc Thesis</h5>
-                    <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                    <div class="grid">
-                        <div class="g-col-12 g-col-md-7 " style="background:grey;">
-                            <img src="../projects/2021-07-02_bsc-thesis/image.jpg" class="img-fluid" alt="image">
-                        </div>
-                        <div class="g-col-12 g-col-md-5">
-                            <!-- Here starts content of Modal -->
-                            <div class="card-body post-contents">
-                                <a class="button small flex" href="../projects/2021-07-02_bsc-thesis/Python-demo.html">
-                                    Article
-                                    </a> 
-                                    <a class="button small flex" href="http://essay.utwente.nl/87385/" target="_blank" rel="noreferrer">
-                                        Paper
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
-                                    </a> 
-                                <div style="display: none"> 
-                                                17
-                                                18
-                                                19
-                                </div>
-                                <!-- Displays Categories -->    
-                                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
-                                    <!-- Keyword TAG in frontmatter not found 
-                                        - Display the only ONE CATEGORY found --> 
-                                            <span class="listing-category C++">
-                                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=C++">
-                                                    C++
-                                                </a>   
-                                            </span>
-                                            <span class="listing-category LateX">
-                                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=LateX">
-                                                    LateX
-                                                </a>   
-                                            </span>
-                                            <span class="listing-category Arduino">
-                                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Arduino">
-                                                    Arduino
-                                                </a>   
-                                            </span>
-                                </div> 
-                                <!-- Display TAGS -->
-                                <div class="listing-categories" style="padding-top: 0em;">
-                                    <!-- Displays Technology Tag + Icon -->
-                                    <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
-                                        <!-- <a  href="/projects"> -->
-                                        <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
-                                        <!-- </a> -->
-                                    </div>
-                                    <!-- Keyword TAG in frontmatter not found 
-                                         - If there is NO || only ONE element in Categories then show "Other" as tag --> 
-                                            <div class="listing-category-inactive Electrical Engineering">
-                                                <!-- Add 'Python icon' -->
-                                                    <a href="../projects/#category=Electrical Engineering">
-                                                        Electrical Engineering
-                                                    </a>   
-                                            </div>
-                                </div> 
-                            </div>
-                            <!-- Here finishes content of Modal -->
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
         <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
         <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="5" data-categories="C++,LateX,Arduino,TAGS,Electrical Engineering" data-listing-date-sort="1625176800000" data-listing-file-modified-sort="1690895816726" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+            <!-- Starting of MODAL -->
+            <div class="modal" id="BScThesis" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title anchored" id="exampleModalLongTitle">BSc Thesis</h5>
+                        <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="grid modal-content-grid">
+                            <!-- Here STARTS content of MODAL -->
+                                <!-- LEFT Content -->
+                                <div class="g-col-12 g-col-md-7 img-center">
+                                    <img src="../projects/2021-07-02_bsc-thesis/image.jpg" class="img-fluid" alt="image">
+                                </div>
+                                <!-- RIGHT Content -->
+                                <div class="g-col-12 g-col-md-5">
+                                    <div class="card-body post-contents links-handler">
+                                            <p>
+                                                
+                                            </p>
+                                        <!-- <a  class="button small flex" href="/projects/2021-07-02_bsc-thesis/Python-demo.ipynb" > -->
+                                        <a class="button small flex" href="#" style="pointer-events: none;">
+                                            About
+                                        </a> 
+                                            <a class="button small flex" href="http://essay.utwente.nl/87385/" target="_blank" rel="noreferrer">
+                                                Paper
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
+                                            </a> 
+                                        <!-- Displays CATEGORIES -->    
+                                        <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
+                                            <!-- Keyword TAG in frontmatter not found 
+                                                - Display the only ONE CATEGORY found --> 
+                                                    <span class="listing-category C++">
+                                                        <!-- <a style="color: inherit; font-size: 0.95em;" href="/projects/#category=C++"> -->
+                                                        <a onclick="location.href='/projects/#category=C++';" data-bs-dismiss="modal" style="color: inherit; font-size: 0.95em;">
+                                                            C++
+                                                        </a>   
+                                                    </span>
+                                                    <span class="listing-category LateX">
+                                                        <!-- <a style="color: inherit; font-size: 0.95em;" href="/projects/#category=LateX"> -->
+                                                        <a onclick="location.href='/projects/#category=LateX';" data-bs-dismiss="modal" style="color: inherit; font-size: 0.95em;">
+                                                            LateX
+                                                        </a>   
+                                                    </span>
+                                                    <span class="listing-category Arduino">
+                                                        <!-- <a style="color: inherit; font-size: 0.95em;" href="/projects/#category=Arduino"> -->
+                                                        <a onclick="location.href='/projects/#category=Arduino';" data-bs-dismiss="modal" style="color: inherit; font-size: 0.95em;">
+                                                            Arduino
+                                                        </a>   
+                                                    </span>
+                                        </div> 
+                                        <!-- Display TAGS -->
+                                        <div class="listing-categories" style="padding-top: 0em;">
+                                            <!-- Displays Technology Tag + Icon -->
+                                            <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
+                                                <!-- <a  href="/projects"> -->
+                                                <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
+                                                <!-- </a> -->
+                                            </div>
+                                            <!-- Keyword TAG in frontmatter not found 
+                                                - If there is NO || only ONE element in Categories then show "Other" as tag --> 
+                                                    <div class="listing-category-inactive Electrical Engineering">
+                                                        <!-- Add 'Python icon' -->
+                                                            <a href="../projects/#category=Electrical Engineering">
+                                                                Electrical Engineering
+                                                            </a>   
+                                                    </div>
+                                        </div> 
+                                    </div>
+                                <!-- Here ENDS content of MODAL -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of MODAL -->
             <!-- IMAGE -->
             <!-- <a href="/projects/2021-07-02_bsc-thesis/Python-demo.ipynb"> -->
             <a href="#" data-bs-toggle="modal" data-bs-target="#BScThesis">
@@ -1399,14 +1447,18 @@ Category[1]: Control Systems -->
                 </a> -->
             <!-- </div> -->
             <div class="card-body post-contents">
-                <a class="button small flex" href="../projects/2021-07-02_bsc-thesis/Python-demo.html">
-                    Article
-                    </a> 
+                <!-- <a  class="button small flex" href="/projects/2021-07-02_bsc-thesis/Python-demo.ipynb" > -->
+                <a class="button small flex" href="#" data-bs-toggle="modal" data-bs-target="#BScThesis">
+                    About
+                </a> 
                     <a class="button small flex" href="http://essay.utwente.nl/87385/" target="_blank" rel="noreferrer">
                         Paper
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
                 <div style="display: none"> 
+                                17
+                                18
+                                19
                 </div>
                 <!-- Displays Categories -->    
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
@@ -1455,73 +1507,78 @@ Category[1]: Control Systems -->
                 </b>
                  -->
         </div>
-        <!-- Modal -->
-        <div class="modal" id="CProject" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title anchored" id="exampleModalLongTitle">C++ Project</h5>
-                    <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                    <div class="grid">
-                        <div class="g-col-12 g-col-md-7 " style="background:grey;">
-                            <img src="../projects/2020-05-12_cpp-project/image.png" class="img-fluid" alt="image">
-                        </div>
-                        <div class="g-col-12 g-col-md-5">
-                            <!-- Here starts content of Modal -->
-                            <div class="card-body post-contents">
-                                <a class="button small flex" href="../projects/2020-05-12_cpp-project/Python-demo.html">
-                                    Article
-                                    </a> 
-                                    <a class="button small flex" href="https://github.com/danilotpnta/PacmanGame" target="_blank" rel="noreferrer">
-                                        Source
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
-                                    </a> 
-                                <div style="display: none"> 
-                                                20
-                                </div>
-                                <!-- Displays Categories -->    
-                                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
-                                    <!-- Keyword TAG in frontmatter not found 
-                                        - Display the only ONE CATEGORY found --> 
-                                            <span class="listing-category C++">
-                                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=C++">
-                                                    C++
-                                                </a>   
-                                            </span>
-                                </div> 
-                                <!-- Display TAGS -->
-                                <div class="listing-categories" style="padding-top: 0em;">
-                                    <!-- Displays Technology Tag + Icon -->
-                                    <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
-                                        <!-- <a  href="/projects"> -->
-                                        <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
-                                        <!-- </a> -->
-                                    </div>
-                                    <!-- Keyword TAG in frontmatter not found 
-                                         - If there is NO || only ONE element in Categories then show "Other" as tag --> 
-                                            <div class="listing-category-inactive Software Engineering">
-                                                <!-- Add 'Python icon' -->
-                                                    <a href="../projects/#category=Software Engineering">
-                                                        Software Engineering
-                                                    </a>   
-                                            </div>
-                                </div> 
-                            </div>
-                            <!-- Here finishes content of Modal -->
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
         <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
         <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="6" data-categories="C++,TAGS,Software Engineering" data-listing-date-sort="1589234400000" data-listing-file-modified-sort="1690895882385" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+            <!-- Starting of MODAL -->
+            <div class="modal" id="CProject" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title anchored" id="exampleModalLongTitle">C++ Project</h5>
+                        <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="grid modal-content-grid">
+                            <!-- Here STARTS content of MODAL -->
+                                <!-- LEFT Content -->
+                                <div class="g-col-12 g-col-md-7 img-center">
+                                    <img src="../projects/2020-05-12_cpp-project/image.png" class="img-fluid" alt="image">
+                                </div>
+                                <!-- RIGHT Content -->
+                                <div class="g-col-12 g-col-md-5">
+                                    <div class="card-body post-contents links-handler">
+                                            <p>
+                                                
+                                            </p>
+                                        <!-- <a  class="button small flex" href="/projects/2020-05-12_cpp-project/Python-demo.ipynb" > -->
+                                        <a class="button small flex" href="#" style="pointer-events: none;">
+                                            About
+                                        </a> 
+                                            <a class="button small flex" href="https://github.com/danilotpnta/PacmanGame" target="_blank" rel="noreferrer">
+                                                Source
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
+                                            </a> 
+                                        <!-- Displays CATEGORIES -->    
+                                        <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
+                                            <!-- Keyword TAG in frontmatter not found 
+                                                - Display the only ONE CATEGORY found --> 
+                                                    <span class="listing-category C++">
+                                                        <!-- <a style="color: inherit; font-size: 0.95em;" href="/projects/#category=C++"> -->
+                                                        <a onclick="location.href='/projects/#category=C++';" data-bs-dismiss="modal" style="color: inherit; font-size: 0.95em;">
+                                                            C++
+                                                        </a>   
+                                                    </span>
+                                        </div> 
+                                        <!-- Display TAGS -->
+                                        <div class="listing-categories" style="padding-top: 0em;">
+                                            <!-- Displays Technology Tag + Icon -->
+                                            <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
+                                                <!-- <a  href="/projects"> -->
+                                                <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
+                                                <!-- </a> -->
+                                            </div>
+                                            <!-- Keyword TAG in frontmatter not found 
+                                                - If there is NO || only ONE element in Categories then show "Other" as tag --> 
+                                                    <div class="listing-category-inactive Software Engineering">
+                                                        <!-- Add 'Python icon' -->
+                                                            <a href="../projects/#category=Software Engineering">
+                                                                Software Engineering
+                                                            </a>   
+                                                    </div>
+                                        </div> 
+                                    </div>
+                                <!-- Here ENDS content of MODAL -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of MODAL -->
             <!-- IMAGE -->
             <!-- <a href="/projects/2020-05-12_cpp-project/Python-demo.ipynb"> -->
             <a href="#" data-bs-toggle="modal" data-bs-target="#CProject">
@@ -1543,14 +1600,16 @@ Category[1]: Control Systems -->
                 </a> -->
             <!-- </div> -->
             <div class="card-body post-contents">
-                <a class="button small flex" href="../projects/2020-05-12_cpp-project/Python-demo.html">
-                    Article
-                    </a> 
+                <!-- <a  class="button small flex" href="/projects/2020-05-12_cpp-project/Python-demo.ipynb" > -->
+                <a class="button small flex" href="#" data-bs-toggle="modal" data-bs-target="#CProject">
+                    About
+                </a> 
                     <a class="button small flex" href="https://github.com/danilotpnta/PacmanGame" target="_blank" rel="noreferrer">
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
                 <div style="display: none"> 
+                                20
                 </div>
                 <!-- Displays Categories -->    
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
@@ -1593,73 +1652,78 @@ Category[1]: Control Systems -->
                 </b>
                  -->
         </div>
-        <!-- Modal -->
-        <div class="modal" id="ControlSystemsProject" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title anchored" id="exampleModalLongTitle">Control Systems Project</h5>
-                    <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="container">
-                    <div class="grid">
-                        <div class="g-col-12 g-col-md-7 " style="background:grey;">
-                            <img src="../projects/2020-04-02_segway/image.png" class="img-fluid" alt="image">
-                        </div>
-                        <div class="g-col-12 g-col-md-5">
-                            <!-- Here starts content of Modal -->
-                            <div class="card-body post-contents">
-                                <a class="button small flex" href="../projects/2020-04-02_segway/index.html">
-                                    Article
-                                    </a> 
-                                    <a class="button small flex" href="https://github.com/danilotpnta/Segway" target="_blank" rel="noreferrer">
-                                        Source
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
-                                    </a> 
-                                <div style="display: none"> 
-                                                21
-                                </div>
-                                <!-- Displays Categories -->    
-                                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
-                                    <!-- Keyword TAG in frontmatter not found 
-                                        - Display the only ONE CATEGORY found --> 
-                                            <span class="listing-category 20-sim">
-                                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=20-sim">
-                                                    20-sim
-                                                </a>   
-                                            </span>
-                                </div> 
-                                <!-- Display TAGS -->
-                                <div class="listing-categories" style="padding-top: 0em;">
-                                    <!-- Displays Technology Tag + Icon -->
-                                    <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
-                                        <!-- <a  href="/projects"> -->
-                                        <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
-                                        <!-- </a> -->
-                                    </div>
-                                    <!-- Keyword TAG in frontmatter not found 
-                                         - If there is NO || only ONE element in Categories then show "Other" as tag --> 
-                                            <div class="listing-category-inactive Electrical Engineering">
-                                                <!-- Add 'Python icon' -->
-                                                    <a href="../projects/#category=Electrical Engineering">
-                                                        Electrical Engineering
-                                                    </a>   
-                                            </div>
-                                </div> 
-                            </div>
-                            <!-- Here finishes content of Modal -->
-                        </div>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-        </div>
         <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
         <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="7" data-categories="20-sim,TAGS,Electrical Engineering" data-listing-date-sort="1585778400000" data-listing-file-modified-sort="1690895934864" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+            <!-- Starting of MODAL -->
+            <div class="modal" id="ControlSystemsProject" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title anchored" id="exampleModalLongTitle">Control Systems Project</h5>
+                        <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="grid modal-content-grid">
+                            <!-- Here STARTS content of MODAL -->
+                                <!-- LEFT Content -->
+                                <div class="g-col-12 g-col-md-7 img-center">
+                                    <img src="../projects/2020-04-02_segway/image.png" class="img-fluid" alt="image">
+                                </div>
+                                <!-- RIGHT Content -->
+                                <div class="g-col-12 g-col-md-5">
+                                    <div class="card-body post-contents links-handler">
+                                            <p>
+                                                
+                                            </p>
+                                        <!-- <a  class="button small flex" href="/projects/2020-04-02_segway/index.qmd" > -->
+                                        <a class="button small flex" href="#" style="pointer-events: none;">
+                                            About
+                                        </a> 
+                                            <a class="button small flex" href="https://github.com/danilotpnta/Segway" target="_blank" rel="noreferrer">
+                                                Source
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
+                                            </a> 
+                                        <!-- Displays CATEGORIES -->    
+                                        <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
+                                            <!-- Keyword TAG in frontmatter not found 
+                                                - Display the only ONE CATEGORY found --> 
+                                                    <span class="listing-category 20-sim">
+                                                        <!-- <a style="color: inherit; font-size: 0.95em;" href="/projects/#category=20-sim"> -->
+                                                        <a onclick="location.href='/projects/#category=20-sim';" data-bs-dismiss="modal" style="color: inherit; font-size: 0.95em;">
+                                                            20-sim
+                                                        </a>   
+                                                    </span>
+                                        </div> 
+                                        <!-- Display TAGS -->
+                                        <div class="listing-categories" style="padding-top: 0em;">
+                                            <!-- Displays Technology Tag + Icon -->
+                                            <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
+                                                <!-- <a  href="/projects"> -->
+                                                <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;"></i> Tags:
+                                                <!-- </a> -->
+                                            </div>
+                                            <!-- Keyword TAG in frontmatter not found 
+                                                - If there is NO || only ONE element in Categories then show "Other" as tag --> 
+                                                    <div class="listing-category-inactive Electrical Engineering">
+                                                        <!-- Add 'Python icon' -->
+                                                            <a href="../projects/#category=Electrical Engineering">
+                                                                Electrical Engineering
+                                                            </a>   
+                                                    </div>
+                                        </div> 
+                                    </div>
+                                <!-- Here ENDS content of MODAL -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of MODAL -->
             <!-- IMAGE -->
             <!-- <a href="/projects/2020-04-02_segway/index.qmd"> -->
             <a href="#" data-bs-toggle="modal" data-bs-target="#ControlSystemsProject">
@@ -1681,14 +1745,16 @@ Category[1]: Control Systems -->
                 </a> -->
             <!-- </div> -->
             <div class="card-body post-contents">
-                <a class="button small flex" href="../projects/2020-04-02_segway/index.html">
-                    Article
-                    </a> 
+                <!-- <a  class="button small flex" href="/projects/2020-04-02_segway/index.qmd" > -->
+                <a class="button small flex" href="#" data-bs-toggle="modal" data-bs-target="#ControlSystemsProject">
+                    About
+                </a> 
                     <a class="button small flex" href="https://github.com/danilotpnta/Segway" target="_blank" rel="noreferrer">
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
                 <div style="display: none"> 
+                                21
                 </div>
                 <!-- Displays Categories -->    
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
@@ -1815,82 +1881,6 @@ No matching items
   <p>This is how it will work but let us see</p>
   <img src="https://images.unsplash.com/photo-1687360440094-949b8fe71c8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" style="width: 200px;" alt="image" />
 </a> -->
-
-<!-- <div style="text-align: center">
-  <button type="button" class="btn btn-modal" data-bs-toggle="modal" data-target="#learnMore1">
-    Learn More
-  </button>
-</div>
-
-
-<div class="modal fade" id="learnMore1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-
-      <div class="modal-body">
-        <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        </br>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-8">
-             <img src="http://numbots.com/wp-content/uploads/2018/12/Fairybot-with-shadow.png" alt="" width=80%/>
-          </div>
-          <div class="col-sm-4 align-self-center"> 
-            <h5 class="intro-title"> intro title </h5>
-            <h3> TITLE </h3>
-            <p> some other content, some other, content </p>
-            
-          </div>          
-        </div>  
-      </div>
-      
-      </div>
-
-    </div>
-  </div>
-</div> -->
-
-
-<!-- Button trigger modal -->
-<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">
-  Vertical Modal
-</button>
-
-<a href="#" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Go to modal</a> -->
-
-
-<!-- Modal -->
-<div class="modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title anchored" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>
-      </div>
-
-      <div class="modal-body">
-        <div class="container">
-          <div class="grid">
-            <div class="g-col-12 g-col-md-7 " style="background:grey;">
-                <img src="2023-05-26_mlp/image.png" class="img-fluid" alt="image">
-            </div>
-            <div class="g-col-12 g-col-md-5" style="background:lightgrey;">
-              Categories:
-            </div>
-          </div>
-        </div>
-      </div>
-
-
-    </div>
-  </div>
-</div>
-
-
 <div class="cell">
 <script type="text/javascript">
 
@@ -1900,8 +1890,6 @@ document.addEventListener("DOMContentLoaded", function() {
         mobileModal.show();
     }
 });
-
-
 </script>
 </div>
 

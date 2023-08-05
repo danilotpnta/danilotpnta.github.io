@@ -160,7 +160,7 @@ img.thumbnail-image.card-img {
 
 
 @media (min-width: 570px){
-    /* Gives padding to all main body content */
+    /* Gives paddinmodalg to all main body content */
     #quarto-content>* {
         padding-top: 20px;
     }
@@ -168,7 +168,7 @@ img.thumbnail-image.card-img {
 
 
 .modal-header {
-    padding: 10px 1rem;
+    padding: 6px 1rem;
 }
 .modal-content {
     border: transparent;
@@ -180,10 +180,47 @@ button.close.custom-modal-button{
     border-radius: 0px;
     margin-right: 0px;
     padding: 3px;
+    font-size: 1.4rem;
 } 
 
+/* Width of the modal card */
 @media (min-width: 576px){
     .modal-dialog {
-        max-width: 1150px;
+        max-width: 800px;
+        /* max-width: max-content; */
     }
+
+    .img-center{
+        height: 400px !important;
+    }
+    
 }
+
+.img-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 480px; */
+    width: fit-content;
+    height: 225px;
+    object-fit: contain;
+    overflow: hidden;
+    padding: 1em;
+}
+
+.modal-body{
+    padding: 0px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.card-body.post-contents.links-handler a{
+    text-decoration: none;
+}
+
+.grid.modal-content-grid{
+    column-gap: 0px;
+}
+
