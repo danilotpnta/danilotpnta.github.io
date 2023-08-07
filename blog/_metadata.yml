@@ -1,0 +1,34 @@
+# Options specified here will apply to all blog in this folder
+
+# freeze computational output
+freeze: true
+
+# Enable banner style title blocks
+title-block-banner: true
+
+# Default Author Name
+author:
+  - name: Danilo Toapanta
+    url: https://danilotpnta.github.io/
+
+format:
+  html:
+    template-partials:
+      - ../_partials/blog/title-block.html
+    code-overflow: wrap
+    include-in-header: 
+      - add-icons.html
+    include-before-body:
+      - change-title.html
+
+css: index-posts.css
+# navbar: false
+
+
+# Default for table of contents
+toc-title: Table of contents
+
+
+
+
+

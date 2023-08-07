@@ -1,0 +1,16 @@
+<script id='script-part'>  
+
+    window.onload = function(){
+      const headerEl = window.document.querySelector("header.fixed-top");
+      console.log("clientheight here!!: " + headerEl.clientHeight);
+
+      console.log(`Header is: ${headerEl.clientHeight}px`)
+      style = getComputedStyle(headerEl);
+
+      if( style.position === 'absolute'){
+        console.log("YES")
+      }
+      
+    }
+
+</script>

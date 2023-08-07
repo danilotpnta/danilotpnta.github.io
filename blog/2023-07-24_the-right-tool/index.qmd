@@ -1,0 +1,57 @@
+---
+title: "Picking the right tool to show your Machine Learning project"
+date: "2023-07-24"
+# date-modified: last-modified
+# categories: [ <i class='bi bi-archive'></i> DevOps, TAGS, Python, Shiny]                    // Bootstrap Icons
+# categories: [ "<i class='material-icons'>account_circle</i>",  DevOps, TAGS, Python, Shiny] // Material Icons
+categories: [DevOps, TAGS, Python, Shiny]
+format:
+  html:
+    toc: true
+---
+
+
+:::{.callout-note}
+# Disclaimer
+
+For sake of keeping my thoughts run smoothly this page may contain typos. Bear with Danilo.
+:::
+
+![](https://1.bp.blogspot.com/-sd4T7ClIXO0/X_G3pLu1yjI/AAAAAAAAlXs/aDcsKH4a9Hwk-p4ZyIVzWnoW9gXVYHqYgCLcBGAsYHQ/w1200-h630-p-k-no-nu/Python%2Bvs%2BJavaScript%2Bwhich%2Bis%2Bbetter%2Bto%2Blearn%2BCoding%2Bfor%2Bbeginners.png)
+
+### The reason 
+I have come across the question on where to host the models that I have trained and display its outputs in an interactive way.
+
+While doing some googling I came across different technologies which much of which have been recently launched, provided the pletora of machine learning application these days. So here a couple of things that I have learnt:
+
+### Static websites just got better!
+For static websites, there is pretty much not too many available options. Statics sites like this one make use of javascript as the backbone to run expensive tasks and usually data science tools these days operate with Python, Julia or R.
+
+Being said that, [pyscript](https://pyscript.net/) seems to pose a first steps on how to run python in HTML. Found this was a relief because then I discovered that Python code is able to be written in a portable binary-code format [WASM](https://g.co/kgs/RjZ9FK), which in turn means you can write Python and run it at the server side. For a more thorugh explanation about this you can check this [video](https://youtu.be/kwLu3hxwn5M?t=412) explanation.
+
+### If Python available which technology to use?
+
+Here gets tricky, if you want to have a fast and easy to deployment usually there is no much customization, and by that I mean curky ads and logos like: made by.. not to much fan of those. Following a simple chart that I have found really usefull to solve my enquires, I am attaching the source link here for reference.
+
+![](https://global-uploads.webflow.com/5d3ec351b1eba4332d213004/5fa3b0d4a2043bcf84d49134_z87mnMfsPGOF7L3sGULQBusJnJTWGZHWtoizufuDR1q1A6JggFWO9IYHXf8wFyqgKhuG6hEGOPM4Acb-qmNXxwCFW95DPX9r7Syewkejb7itbmm8I_os2XI8bightYGJq7Gg-FXo.png)
+Source: [1](https://www.datarevenue.com/en-blog/data-dashboarding-streamlit-vs-dash-vs-shiny-vs-voila)
+
+### The decision
+
+All set and stone, I have only some requirements to jump into learning a new technology and those are 
+
+- Scalable: I want to be able to not just use it for my blog but for future work as well
+- On the look: if it has not been used for the last couple of years then something new is on the look
+- Balance-learning-curve: I have learnt [Haskell](https://www.google.com/search?q=which+type+of+language+is+haskell&sxsrf=AB5stBjdOjc5HiRUxNEP_nxbOOjJK0_F8Q%3A1690220246103&ei=1ra-ZNrlBd6O9u8P6Y-UsA4&ved=0ahUKEwjaqPGK8aeAAxVeh_0HHekHBeYQ4dUDCA8&uact=5&oq=which+type+of+language+is+haskell&gs_lp=Egxnd3Mtd2l6LXNlcnAiIXdoaWNoIHR5cGUgb2YgbGFuZ3VhZ2UgaXMgaGFza2VsbEgAUABYAHAAeACQAQCYAQCgAQCqAQC4AQPIAQDiAwQYACBB&sclient=gws-wiz-serp) and let me tell you, prototyping and designing code is another world in functional language. So I want be a eager learning while still discovering more tools next couple of months in the road.
+
+Considering these facts: I am planing to stick with Shiny for the time being.
+
+
+
+
+
+
+
+
+
+

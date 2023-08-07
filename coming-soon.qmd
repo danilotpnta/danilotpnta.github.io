@@ -1,0 +1,22 @@
+---
+#title: ""
+pagetitle: 'Danilo Toapanta - Coming Soon'
+sidebar: false
+format: html
+---
+
+
+```{=html}
+<div id="main_404">
+    <div class="center">
+        <div class="fof">
+            <h1>Coming Soon</h1>
+        </div>
+    </div>
+    
+        <p>
+            The page you requested is under construction.
+        </p>
+</div>
+
+```

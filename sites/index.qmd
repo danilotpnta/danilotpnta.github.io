@@ -1,0 +1,81 @@
+---
+#title: "Our market share is `r round(100 * 3, 2)`% now!"
+sidebar: false
+css: index.css
+include-after-body: insert-welcomes.html
+---
+
+::: {.grid}
+
+::: {.g-col-12}
+<!-- [# Hello and welcome!]{.home-header} -->
+# MySite
+:::
+
+::: {.g-col-12 .g-col-md-4}
+<div class="card h-100" id="card-first-color">
+<div class="card-body d-flex flex-column">
+<p class="card-text">About me, my interests and experience, and my work as a AI Research Engineer.</p>
+<div style="margin-top: auto;"><a class="site-links" href="../about/" class="card-link heading-font">ABOUT</a></div>
+</div>
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-4}
+<div class="card h-100" id="card-second-color">
+<div class="card-body d-flex flex-column">
+<p class="card-text">I sometimes write about what I'm doing and learning, mostly about CS and building websites.</p>
+<div style="margin-top: auto;"><a class="site-links" href="../blog/" class="card-link second-color-link heading-font">BLOG</a></div>
+</div>
+</div>
+:::
+
+
+::: {.g-col-12 .g-col-md-4}
+<div class="card h-100" id="card-second-color">
+<div class="card-body d-flex flex-column">
+<p class="card-text">I have worked on big-scale projects. Here are links to their repos, websites and any other resources. </p>
+<div style="margin-top: auto;"><a class="site-links" href="../projects/" class="card-link second-color-link heading-font">PROJECTS</a></div>
+</div>
+</div>
+:::
+
+
+::: {.g-col-12 .g-col-md-4}
+<div class="card h-100" id="card-third-color">
+<div class="card-body d-flex flex-column">
+<p class="card-text">Slides and resources from talks I've given for educational purposes or conferences.</p>
+<div style="margin-top: auto;"><a class="site-links" href="../coming-soon.qmd" class="card-link third-color-link heading-font">SLIDES</a></div>
+</div>
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-4}
+<div class="card h-100" id="card-third-color">
+<div class="card-body d-flex flex-column">
+<p class="card-text">I am small frame dude, knowing abut tailoring its a plus! Here I help you imo how to dress better.</p>
+<div style="margin-top: auto;"><a class="site-links" href="../tailor/" class="card-link third-color-link heading-font">TAILOR</a></div>
+</div>
+</div>
+:::
+
+::: {.g-col-12 .g-col-md-4}
+<div class="card h-100" id="card-first-color">
+<div class="card-body d-flex flex-column">
+<p class="card-text">What I have read and I am reading at the moment. Recomendations? I'd love to hear from you!</p>
+<div style="margin-top: auto;"><a class="site-links" href="../books/" class="card-link heading-font">BOOKS</a></div>
+</div>
+</div>
+:::
+
+:::
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,28 @@
+<script id='script-part'>
+
+  // ------------------------- ON WINDOWS LOAD -------------------------
+  window.onload = function(){
+    change_text('home-welcome-msg');
+    disable_link('nav-link')
+  }
+
+  // ------------------------- HELPER FUNCTIONS -------------------------
+  function change_text(id_name) {
+
+    // MAKE SHOW: "Show All Categories"
+    var msg = document.getElementById(id_name);
+    msg.textContent = "Hello and Welcome!";  
+    msg.style.pointerEvents = "none"
+
+  } 
+
+  function disable_link(class_name) {
+    var links = document.getElementsByClassName(class_name);
+
+    // Disables the first li element that is HOME link
+    links[0].style.pointerEvents = "none" //Disable for the moment
+  }
+
+
+
+</script>

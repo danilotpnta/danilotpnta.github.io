@@ -1,0 +1,80 @@
+---
+title: "On the topic of Optimization"
+description: "Below the apps I use in a daily basis to make my life easier"
+date: "2023-06-09"
+categories: [Workflow, TAGS, Lua]
+links:
+  - icon: file-slides-fill
+    name: Slides
+    url: https://www.google.com/
+  - icon: github
+    name: Code
+    url: https://www.google.com/
+  - icon: play-btn-fill
+    name: Video
+    url: https://www.google.com/
+# coming-soon: true
+---
+
+### 1. Microsoft Edge
+> Prefer this over Safari because of add-ons. Chrome is the same
+
+I used it to install apps like YouTube or Google Translator so that when I hit a [shortcut command](#hammerspoon), it opens that app.
+Here it's an example.
+
+<img src="https://winaero.com/blog/wp-content/uploads/2019/12/Edge-Install-PWA-Site.png" alt="8" width="500" />
+
+### 2. Hammerspoon
+
+> [App Link](https://www.hammerspoon.org/). Creates global shortcuts
+
+Uses `Lua` programming language to assign keybindings to certain actions. Here a sneak peek of what can you do.
+```lua
+--- Open App
+function open(name)
+    return function()
+        hs.application.launchOrFocus(name)
+        if name == 'Finder' then
+            hs.appfinder.appFromName(name):activate()
+        end
+    end
+end
+```
+The above function can be called to open an `app: Google Maps` by an i.e. the shortcut: `⌘ + M`
+```lua
+--- Binding Keys
+hs.hotkey.bind({ "cmd" }, "M", open("Google Maps"))
+```
+
+For complete implementation visit, this [repo](https://github.com/danilotpnta/hammerspoon-config).
+
+For Windows alternative see the code below:
+<details><summary>Code</summary>
+    #MaxHotkeysPerInterval 200
+    !WheelUp::Volume_Up
+    !WheelDown::Volume_Down
+    !MButton::Volume_Mute
+    <#!e::
+    Run, %WINDIR%\explorer.exe
+    return
+    !q::Send !{F4}
+    return
+    <#!x::
+    Run, msedge.exe
+    return
+    !y::
+    Run, C:\Users\datoapnta\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\YouTube.lnk
+    return
+</details>
+
+
+### Honourable Mentions
+
+> The apps above can do the same, but I like the UX interface.
+
+| App                                       | Description                             |
+| ----------------------------------------- | --------------------------------------- |
+| [BetterTouchTool](https://folivora.ai/)   | Enables trackpad new gestures shortcuts |
+| [AutoHotkey](https://www.autohotkey.com/) | Same as Hammerspoon but for Windows     |
+| [Tiles](https://freemacsoft.net/tiles/)   | Windows manager (allows keybindings)    |
+

@@ -1,0 +1,794 @@
+/*-- scss:defaults --*/
+
+// -------- TWO ROW COLUMS -----------
+$body-bg: #2f3333; // New Background colour
+$navbar-bg: #2f3333; // navbar Default
+
+// Base document colors
+// $body-bg: #181818; // background whole page Defualt
+// $navbar-bg: #181818; // navbar Default
+
+
+$body-color: white;
+$link-color: #75AADB;
+
+// Code blocks
+$code-block-bg-alpha: -.8;
+
+
+$font-size-base: 1.02rem;
+
+/*-- scss:rules --*/
+// Moves Nav Items to left
+// .ms-auto {
+//     margin-right: 0 !important;
+//     margin-left: 0 !important;
+// //     margin-bottom: -10px !important;
+// }
+
+// // Change Dark mode tinyurl.com/2nuz8dxm
+// .navbar .quarto-color-scheme-toggle.alternate .bi::before {
+//     background-image: url(data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KDTwhLS0gVXBsb2FkZWQgdG86IFNWRyBSZXBvLCB3d3cuc3ZncmVwby5jb20sIFRyYW5zZm9ybWVkIGJ5OiBTVkcgUmVwbyBNaXhlciBUb29scyAtLT4KPHN2ZyBoZWlnaHQ9IjgwMHB4IiB3aWR0aD0iODAwcHgiIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIiBmaWxsPSIjZmZmZmZmIj4KDTxnIGlkPSJTVkdSZXBvX2JnQ2FycmllciIgc3Ryb2tlLXdpZHRoPSIwIi8+Cg08ZyBpZD0iU1ZHUmVwb190cmFjZXJDYXJyaWVyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KDTxnIGlkPSJTVkdSZXBvX2ljb25DYXJyaWVyIj4gPHBhdGggc3R5bGU9ImZpbGw6I2ZmZmZmZjsiIGQ9Ik01MDkuNjcxLDM1Ny4wNjNjLTIuNTQzLTIuODI1LTYuNTc1LTMuNzY3LTEwLjEwNi0yLjM2MWMtMzAuNzczLDEyLjI1NC02My40NTgsMTguNDY2LTk3LjE0NywxOC40NjYgYy0yNy45NTMsMC01NS40NzItNC4zNTItODEuNzk4LTEyLjkzOGwtMjYuOTktMTAuNDg4Yy00NS40NjktMjAuNjI5LTg0LjA0OC01My42MzktMTExLjU3Mi05NS40NjggYy0yOC4yOC00Mi45ODItNDMuMjI5LTkzLjAxNi00My4yMjktMTQ0LjY5MmMwLTMzLjY5LDYuMjEzLTY2LjM3MywxOC40NjYtOTcuMTQ0YzEuNDA2LTMuNTMxLDAuNDYzLTcuNTY0LTIuMzYxLTEwLjEwNiBjLTIuODI1LTIuNTQyLTYuOTM0LTMuMDU0LTEwLjI5OS0xLjI4NkM1NS40MjEsNDcuOTg4LDAsMTM5Ljg5NywwLDI0MC45MDVjMCwxNDkuNDgsMTIxLjYxMiwyNzEuMDkyLDI3MS4wOTIsMjcxLjA5MiBjMTAxLjAxLDAsMTkyLjkyLTU1LjQyMSwyMzkuODYzLTE0NC42MzZDNTEyLjcyNSwzNjMuOTk4LDUxMi4yMTIsMzU5Ljg4OCw1MDkuNjcxLDM1Ny4wNjN6Ii8+IDxwYXRoIHN0eWxlPSJvcGFjaXR5OjAuMTtmaWxsOiNmZmZmZmY7ZW5hYmxlLWJhY2tncm91bmQ6bmV3IDsiIGQ9Ik0yODQuMTQsNDk4LjM4MmMtMTQ5LjQ4LDAtMjcxLjA5Mi0xMjEuNjEyLTI3MS4wOTItMjcxLjA5MiBjMC02Ny45NDcsMjUuMDc5LTEzMS43NzYsNjguNjU0LTE4MC41NzFDMzAuMTI2LDk2LjkyNCwwLDE2Ni40NCwwLDI0MC45MDVjMCwxNDkuNDgsMTIxLjYxMiwyNzEuMDkyLDI3MS4wOTIsMjcxLjA5MiBjNzguNDQ1LDAsMTUxLjM5NC0zMy40MywyMDIuMDY0LTkwLjE1QzQyMy40MDMsNDcwLjI2MSwzNTYuMDgyLDQ5OC4zODIsMjg0LjE0LDQ5OC4zODJ6Ii8+IDwvZz4KDTwvc3ZnPg==);
+//     background-size: 16px;
+//     opacity: 0.5;
+// }
+
+
+// --------------------------- NEW PAGES LAYOUT -----------------------//
+// Default values for the width of layout components
+
+// sidebar-width	250px
+// body-width	    800px
+// margin-width	    250px
+// gutter-width	    1.5em
+
+
+// ---------------------- TWO ROWS Navbar --------------------------//
+
+// Change background of card in PROJECTS
+.card {
+    background-color: #1c2020 !important;
+}
+
+// Change background of card in PROJECTS
+.change-title-background-color {
+    background-color: #242727;
+}
+
+// Change opacity of title in PROJECTS
+.card-title {
+    opacity: 1 !important;
+}
+
+
+@media (min-width: 570px){
+
+    .mysite{
+        padding-left:12px; 
+        padding-bottom:12px; 
+        text-decoration-color:rgba(163, 166, 168, 0.40); 
+        color: grey;
+    }
+     
+    nav .nav-item:not(.compact) {
+        line-height: 30px !important; // 25px default
+    }
+
+    li.nav-item.compact {
+        margin: 0px 0px !important;
+        padding: 0px 0px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .navbar-collapse:not(.show) {
+        display: flex !important;
+        padding: 6px 0px;
+    }
+
+
+    // For the POSTS area under header
+    .quarto-title-banner {
+        background: #2f3333 !important;
+    }
+
+    .navbar .quarto-navbar-tools {
+        display: inherit !important;
+    }
+
+    .navbar>.container-fluid {
+        display: block;
+    }
+
+    // Navbar elements
+    .collapse:not(.show) {
+        background-color: #27292a;
+        justify-content: center;
+    }
+
+    @media (min-width: 992px){
+        .navbar-container {
+            width: 100% !important;
+        }
+
+        .navbar-brand-container {
+            margin-right: 0em !important;
+        }
+    }
+
+    .navbar-brand-container {
+        justify-content: center;
+        max-width: -webkit-fill-available !important;
+        background-color: #171818;
+
+        // Increases padding up/down DANILO TOAPANTA
+        padding: 6px 0px;
+        
+    }
+
+
+    .navbar {
+        padding-left: 0em !important;
+        padding-right: 0em !important;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+
+
+    .navbar-brand {
+        padding-right: 0rem !important;
+        padding-left: 0rem !important;
+        padding-top: 20px !important;
+        padding-bottom: 12px !important;
+        margin-right: 0rem !important;
+        margin-left: 0rem !important;
+        font-size: 215% !important;  
+        font-family: "Fira Code Light", monospace;
+        color: #ffffffe5 !important;
+    }
+
+
+    // Makes second row to center
+    @media (max-width: 991.98px){
+        .navbar .quarto-navbar-tools {
+            margin-right: inherit;
+        }
+    }
+
+    @media (max-width: 695px){
+        .navbar .quarto-navbar-tools {
+            margin-top: 0rem !important;
+            margin-bottom: 0rem !important;
+            padding: 0px 5px !important;
+        }
+
+        .navbar-nav{
+            margin: 0rem 0rem !important;
+        }
+
+        
+    }
+
+    // Hides the HAMBURGER Button
+    .navbar-dark .navbar-toggler {
+        display: none;
+    }
+
+    nav .nav-item:not(.compact) {
+        font-size: 1rem !important;
+        font-weight: 350;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+    }
+
+    nav .nav-item.compact .nav-link {
+        padding: 0px 7px !important;
+    }
+
+    nav .nav-item.compact .nav-link {
+        // margin: 11px 0px !important;
+    }
+
+    // MOON 
+    .navbar .quarto-navbar-tools {
+        padding: 0px 5px !important;
+        margin-top: -0.1em !important;
+    }
+}
+
+// --------------------------- NAV BAR -----------------------//
+
+// New changes to page width:
+@media (min-width: 992px){
+    .navbar-container {
+        // width: 905px;  // This changes the width of the main container | Default: 716px
+        width: 705px;
+        background-color:#262626;
+    }
+
+    .navbar .quarto-navbar-tools {
+        padding-right: 10px;
+    }
+    
+    // Moves left DANILO TOAPANTA
+    .navbar-brand {
+        padding-left: 16.5px;
+    }
+}
+
+.navbar-collapse {
+    -webkit-flex-grow: 0;
+}
+
+
+// Makes NavBar always centered
+// @media (max-width: 991px){
+//     .navbar-container {
+//         width: auto;
+//     }  
+// }
+
+.navbar .quarto-navbar-tools {
+    padding-bottom: 0px;
+}
+
+// Opasiy in Blog's Title
+h1, .h1, h2, .h2 {
+    opacity: 1;
+    color: #fff;
+}
+// Helps Have more Room for ON THIS PAGE
+#quarto-sidebar>* {
+    padding-right: 0.2em;
+    padding-left: 0em;
+    margin-left: -1em;
+}
+
+
+// How below the article/blog/post starts
+@media (min-width: 992px){
+    .quarto-title-banner {
+        padding-bottom: 0em !important;
+    }
+}
+
+// ---------------------- TABLES GENERAL  ---------------------- //
+
+table, .table {
+    margin-bottom: 0rem;
+}
+       
+thead, tbody, tfoot, tr, td, th {
+    border-color: transparent;
+}
+
+// Adds padding RIGHT to all cells
+.table>:not(caption)>*>* {
+    padding-right: 0rem;
+}
+
+
+//Change Rows Table
+tr#odd-row-blog {
+    background: #272a2a;
+    
+}
+// --------------------------- BLOG  -------------------------- //
+
+// Change font and color of CATEGORIES colum of BLOG
+.newFont_and_color .table td:last-child, .newFont_and_color .table th:last-child {
+    // font-family: "IBM Plex Mono", monospace;
+    color: #747b81;
+}
+
+/// Gives some padding to the DATE of BLOG
+.datePadding .table td:first-child {
+    width: 4em !important;
+    padding-right: 0.5em;
+    padding-left: 2px;    // Padding of first column
+    white-space: nowrap;
+}
+
+// Gives some padding to the TITLE of BLOG
+.datePadding .table td:nth-child(2) {
+    // width: 70%;
+    padding-right: 18px; // 8.5px default
+}
+
+// 70+11 = 81 then I have 19% for Title
+
+// Gives some padding to the CATEGORIES of BLOG
+.datePadding .table td:last-child {
+    width: 6.5em;
+    white-space: nowrap;
+    // padding-left: 0em;
+}
+
+@media (max-width: 570px){
+    // Gives some padding to the CATEGORIES of BLOG
+    .datePadding  .table td:last-child {
+        width: 5.5em !important;
+        white-space:normal !important;
+        // padding-left: 0em;
+    }
+}
+
+// Gives color to categories in Post of BLOG
+.quarto-title .quarto-categories .quarto-category{
+    background-color:#3d1f31;
+    color: #eab8d7;
+    border-color: #c58eb0;
+}
+
+// Adds hover color to CATEGORIES of BLOG
+.listing-categories-hover:hover{
+	color: #d63384;
+}
+
+// Change color of ALL CATEGORIES
+.color-showAllCategories{
+    color: #d63384;
+}
+
+// Eliminates apdding in NOT MATCHING in BLOG
+.listing-no-matching {
+    text-align: inherit;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    font-style: italic;
+    color: #747b81;
+    }
+
+// Color of background cell jupyter notebook post
+pre.sourceCode {
+    background-color: rgb(31 34 37);
+}
+
+// Changing colors for BLOG post TAGS
+.tags-title {
+    color: #e9e9e9 !important;
+    background-color: #373a3a !important;
+}
+
+#tag-icon-blog {
+    color: #2f3333 !important;
+    background-color: #bbbbbb !important;
+    border-color: #bbbbbb !important;
+}
+
+// Changes background box color of "Show all Posts" color
+.background-color-show-posts {
+    background: #282a2a;
+}
+
+// Changes "Show all Posts" color
+.color-show-posts{
+    color: #8a8c8d;
+}
+
+// Changes the color of title CATEGORIES or TAGS in BLOG
+.post-sidebar-card-title{
+    color: #c1c1c1;
+}
+
+// Background of the two cards for CATEGORIES, TAGS 
+.post-sidebar-card {
+    background: #272a2a;
+}
+
+// Title of the CATEGORIES or TAGS
+.list-blog a {
+    color: #8a8c8d;
+}
+
+// Change color of numbers
+.category .count {
+    color: #a2a7ae87;
+}
+
+/* Gives Styling to new Button */
+.new_label_post{
+    color: #8a8c8d;
+    border: 1px grey solid;
+}
+
+
+// Changes the background box of the poems page
+.poem-text {
+    background: #282a2a;
+}
+
+// Changes in poems the color
+.by-danilo-toapanta {
+    color: lightgrey;
+}
+
+
+// ---------------------------- NAV BAR ---------------------------- //
+
+// Nav Toggler switch hamburger icon to right
+.navbar .navbar-toggler{
+    order: 0
+}
+
+// Fixes order of items when collapse. Default was column
+.navbar-nav {
+    -webkit-flex-direction: row;
+    display: inline-flex;
+}
+
+.navbar .quarto-navbar-tools {
+    display: inline-flex;
+    vertical-align: text-bottom;
+    margin-top: 0em;
+    padding-top: 0em;
+}
+
+// Removes Space between CATEGORIES and AUTHORS
+.quarto-title .quarto-categories {
+    padding-bottom: 0em;
+}
+
+#title-block-header {
+    margin-block-end: 0rem;
+}
+
+// To make left corner of grid shift to left
+// @media (min-width: 992px){
+//     body.floating .page-columns {
+//         display: grid;
+//         gap: 0;
+//         grid-template-columns: [screen-start] 1.5em [screen-start-inset] 15fr [page-start page-start-inset] 35px [body-start-outset] 35px [body-start] 1.5em [body-content-start] minmax(500px, calc( 750px - 3em )) [body-content-end] 1.5em [body-end] 35px [body-end-outset] minmax(75px, 145px) [page-end-inset] 35px [page-end] 5fr [screen-end-inset] 1.5em [screen-end];
+//     }
+// }
+
+// Sets from where to start grid from left to right
+@media (min-width: 992px){
+    .page-columns .column-page-left {
+        grid-column: page-start/body-content-end;
+        grid-column-start: 4;
+        grid-column-end: body-content-end;
+        margin-left: 5em;
+        margin-bottom: 0em;
+    }
+}
+
+
+// Fixes Sidebar in Posts
+@media (min-width: 992px) {
+    body.floating.slimcontent .page-columns {
+        display: grid;
+        gap: 0;
+        grid-template-columns: [screen-start] 1.5em [screen-start-inset] 5fr [page-start] minmax(25px, 50px) [page-start-inset] minmax(50px, 150px) [body-start-outset] minmax(25px, 50px) [body-start] 1.5em [body-content-start] minmax(500px, calc( 700px - 3em )) [body-content-end] 1.5em [body-end] minmax(25px, 50px) [body-end-outset] minmax(50px, 150px) [page-end-inset] minmax(25px, 50px) [page-end] 5fr [screen-end-inset] 1.5em [screen-end];
+    }
+}
+
+
+// Reduces the title of the grid card
+.quarto-grid-item div.post-contents h5, .h5 {
+    font-size: 0.8rem;
+}
+
+// Reduces font size of MACHINE
+.quarto-grid-item .listing-categories .listing-category {
+    color: #6c757d;
+    border: solid 1px #dee2e6;
+    border-radius: .25rem;
+    text-transform: uppercase;
+    font-size: .5em;
+}
+
+// Categories content of one card
+.quarto-grid-item .listing-categories {
+    padding-bottom: 0px;
+    padding-top: 6px;
+}
+
+// Card adjust padding
+.card-body {
+    padding-bottom: 1rem;
+    padding-top:0.4rem;
+}
+
+// For the pagination buttons
+.page-item.active .page-link {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+.page-link {
+    color: #fff;
+    background-color: #333;
+    border-color: #333;
+}
+
+// Disables the border line around code block
+div.sourceCode {
+    border: 0
+}
+
+// About Padding top 
+div.quarto-about-solana {
+    padding-top: 1em !important;
+    padding-bottom: 0em;
+}
+
+// Make round the picture
+.rounded {
+    border-radius: .42rem !important;
+}
+
+// Change CATEGORIES 
+#quarto-margin-sidebar .quarto-listing-category-title {
+    // color:#a3a6a8a2;
+    // font-weight: 450;
+    font-size: 0.97rem;
+}
+
+// Change CATEGORIES 
+#quarto-margin-sidebar .quarto-listing-category {
+    // color:#b6b6b69f; 
+    font-size: 0.92rem;
+}
+
+
+// Change CATEGORIES 
+.quarto-listing-category .category.active {
+    color: #d63384;
+}
+
+// Buttons LINKS Color
+.btn-secondary {
+    // background-color:#67696a70;
+    background-color: #27292a;
+    border-color: transparent;
+}
+
+// Buttons LINKS Color
+.btn {
+    padding-top:    0.275rem;
+    padding-bottom: 0.275rem;
+    padding-right:  0.75rem;
+    padding-left:   0.75rem;
+    font-size: 0.9rem;
+}
+
+// Buttons LINKS Color
+.btn-secondary:hover {
+    color: #fff;
+    background-color: #27292a;
+    border-color: transparent;
+}
+
+// Include Title block for the icons in post of 'Blog' page
+.justify-content-center {
+    justify-content: inherit !important;
+}
+
+// Include Title block for the icons in post of 'Blog' page
+.mt-4 {
+    margin-top: 0.25rem !important;
+}
+
+
+//Shows always MENU BAR items
+.collapse:not(.show) {
+    display: contents;
+}
+
+// makes title stay centered
+.ms-auto {
+    margin-left: inherit !important;
+}
+
+
+.navbar-dark .navbar>.container-xxl, .navbar>.container-xl, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container, .navbar>.container-fluid {
+    max-width: inherit;
+}
+
+// Remove transition when clicking HAMBURGUER
+.collapsing {
+    height: 0;
+    overflow: hidden;
+    transition: height .0s ease;;
+  }
+
+// Change HAMBIRGER icon size
+.navbar-toggler {
+    font-size: 1rem;
+}
+
+  // Adding padding to the MOON
+.navbar .quarto-navbar-tools{
+    padding-top: 20px;
+    padding-bottom: 1.1rem;
+
+}
+
+@media (max-width: 992px){
+    // Hides HAMBURGUER icon
+    .navbar-toggler-icon {
+        display: none !important;
+    }
+
+    // Eliminates padding ABOUT main text
+    div.quarto-about-solana .about-contents {
+        padding-right: 0em;
+    }
+}
+
+@media (max-width: 695px){
+
+    // Shows HAMBURGUER icon
+    .navbar-toggler-icon {
+        display: inline-block !important;
+    }
+
+    // Makes up BLOG, PRJCT ...
+    .navbar-nav {
+        margin-top: -1rem;
+        margin-bottom: -1rem;
+    }
+
+    // Makes up MOON
+    .navbar .quarto-navbar-tools{
+        margin-top: -1rem;
+        margin-bottom: -1rem;
+    }
+
+    // Makes ABOUT text align left
+    div.quarto-about-solana .about-entity {
+        text-align: inherit;
+    }
+}
+
+
+@media (max-width: 372px){
+    // For small screen make MOON padding
+    .navbar .quarto-navbar-tools{
+        padding-left: 7px;
+        padding-top: 2rem;
+    }
+    // // For small screen make DANILO TOAPANTA to clip
+    // .navbar-brand {
+    //     overflow: scroll !important;
+    //     text-overflow: clip;     
+    // }
+    
+    // Hides HAMBURGUER icon
+    .navbar-toggler-icon {
+        display: none !important;
+    }
+}
+
+// Hides Table of Contents When Body column too small
+@media (max-width: 991px){
+    nav[role=doc-toc] {
+        display: none;
+    }
+}
+
+// Elimnates last row
+.page-rows-contents {
+    grid-template-rows: [content-top] minmax(max-content, 1fr) [content-bottom] minmax(0px, max-content) [page-bottom];
+}
+
+// Moves up Contents of post
+@media (min-width: 992px){
+    #quarto-sidebar {
+        display: block;
+    }
+}
+
+
+// --------------------------- PROJECT  -------------------------- //
+
+
+// This Fixes the BUTTON of 'Projects' page
+a.button.small, button.small {
+    font-size: .8rem;
+    padding: .35rem .5rem;
+}
+
+// This Fixes the BUTTON of 'Projects' page
+a.button, button {
+    align-items: center;
+    background: #343939;
+    border: 1px;
+    border-color:  #343939;
+    border-style: solid;
+    border-radius: 6px;
+    color: inherit;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 1rem;
+    font-weight: 500;
+    gap: .25rem;
+    letter-spacing: 0;
+    line-height: 1;
+    padding: .75rem 1.2rem;
+    white-space: nowrap;
+}
+
+// This Fixes the BUTTON of 'Projects' page
+a.button:hover {
+    border-color: #666666;
+}
+
+// Card of 'Projects' page
+.card{
+    background-color: #1f1f1f;
+    border-width: 1pt !important;
+    border-color: #282828ee !important;
+    
+}
+
+// stayling Categories of .card of 'Projects' page
+.listing-category {
+    border: solid 1px #3e3e3e;
+    color: #a9acaf;
+}
+
+// stayling Categories of .card of 'Projects' page
+.listing-category:hover {
+    border-color: #9a9a9a;
+}
+
+// styling for new TAGS
+.listing-category-inactive{
+    // border: solid 1px #3e3e3e;
+    color: #a9acaf;
+}
+
+
+// Reduces Gap in GRID of 'Projects'
+.grid{
+    row-gap: 0.8rem;
+}
+
+// styling for new TAGS
+.listing-category-inactive{
+    border: solid 1px #00000000;
+}
+
+.listing-category-inactive:hover {
+    /* text-decoration: solid;  */
+    // background-color: rgba(154, 165, 166, 0.189);
+    border: solid 1px #9a9a9a;
+}
+
+/* This makes ONLY focused card from Projects
+to hover with the Green color */
+.hoverMainId{
+    background-color: rgba(182, 45, 200, 0.31) !important;
+    pointer-events: none;
+    border: solid 1px transparent;
+}
+
+// Gives background color to the modal card
+.modal-content {
+    background: #27292a;
+}
+
+// Gives bacground to title of modal
+.modal-header {
+    background: #181a1a;
+}
+
+.modal{
+    background: #2d303580;
+}
+
+
+
+// ------------------------------- DEV -------------------------
+
+/* Gives color to the Building Blocks title */
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: #ffffff !important;
+}
+

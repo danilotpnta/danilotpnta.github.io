@@ -1,0 +1,23 @@
+# Options specified here will apply to all project in this folder
+
+# freeze computational output
+freeze: true
+
+# Enable banner style title blocks
+title-block-banner: true
+
+# Default Author Name
+author:
+  - name: Danilo Toapanta
+    url: https://danilotpnta.github.io/
+
+format:
+  html:
+    template-partials:
+      - ../_partials/projects/title-block.html
+    include-in-header: 
+      - add-dependencies.html
+    code-overflow: wrap
+    # grid:
+    #   body-width: 700px
+    #   sidebar-width: 250px

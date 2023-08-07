@@ -1,0 +1,200 @@
+---
+pagetitle: "Danilo Toapanta - Books"
+css: index.css
+sidebar: false
+---
+
+:::{.center .show-anchor-link}
+## Books{.unlisted .unnumbered}
+:::
+
+<!-- ## Books {.unlisted .unnumbered} -->
+This section covers various books that I have read and think are worth reading.
+
+
+::: {.callout-tip collapse="false"}
+## Goal of this section
+
+- Refer to this page when my friends ask me what I read
+- Keep a colection of books including the author's name
+:::
+
+<pre></pre>
+<!-- </br> -->
+<!-- --- -->
+
+```{=html}
+<ul class="c-gridview">
+
+        <li>
+            <a href="https://www.amazon.com/dp/0735211299/?tag=nonoma-20" target="_blank">
+                <img src="https://nono.imgix.net/img/u/book-atomic-habits-james-clear.jpg?auto=compress&amp;">
+                Atomic Habits
+                <small>James Clear</small>
+            </a>
+        </li>
+
+
+        <li>
+            <a href="https://www.amazon.com/dp/1439150478/?tag=nonoma-20" target="_blank">
+                <img src="https://nono.imgix.net/img/u/book-unclutter-your-life-in-one-week-erin-rooney-doland.jpg?auto=compress&amp;fit=fillmax&amp;ixlib=php-3.3.1&amp;q=60&amp;w=600" alt="Unclutter Your Life in One Week by Erin Rooney Doland">
+                Unclutter Your Life in One Week
+                <small>Erin Rooney Doland</small>
+            </a>
+        </li>
+
+
+
+         <li>
+            <a href="https://www.amazon.com/dp/0316679070/?tag=nonoma-20" target="_blank">
+                <img src="https://nono.imgix.net/img/u/book-gladwell-malcolm-the-tipping-point.jpg?auto=compress&amp;fit=fillmax&amp;ixlib=php-3.3.1&amp;q=60&amp;w=600" alt="The Tipping Point by Malcolm Gladwell">
+                <div >
+                    The Tipping Point
+                    <small>Malcolm Gladwell</small>
+                </div>
+            </a>
+        </li>
+
+
+
+        <li>
+            <a href="https://www.amazon.com/dp/0345472322/?tag=nonoma-20" target="_blank">
+                <img src="https://nono.imgix.net/img/u/book-mindset-carol-s-dweck.jpg?auto=compress&amp;fit=fillmax&amp;ixlib=php-3.3.1&amp;q=60&amp;w=600" alt="Mindset by Carol S. Dweck">
+                Mindset
+                <small>Carol S. Dweck</small>
+            </a>
+        </li>
+
+
+
+        <li>
+            <a href="https://www.amazon.com/dp/0307465357/?tag=nonoma-20" target="_blank">
+                <img src="https://m.media-amazon.com/images/I/81qW97ndkvL._SL1500_.jpg" alt="The Four-Hour Workweek by Tim Ferriss">
+                The Four-Hour Workweek
+                <small>Tim Ferriss</small>
+            </a>
+        </li>
+
+
+
+        <li>
+            <a href="https://www.amazon.com/dp/0316010669/?tag=nonoma-20" target="_blank">
+                <img src="https://nono.imgix.net/img/u/book-gladwell-malcolm-blink.jpg?auto=compress&amp;fit=fillmax&amp;ixlib=php-3.3.1&amp;q=60&amp;w=600" alt="Blink by Malcolm Gladwell">
+                Blink
+                <small>Malcolm Gladwell</small>
+            </a>
+        </li>
+
+
+
+        <li>
+            <a href="https://www.amazon.com/dp/0316679070/?tag=nonoma-20" target="_blank">
+                <img src="https://nono.imgix.net/img/u/book-gladwell-malcolm-the-tipping-point.jpg?auto=compress&amp;fit=fillmax&amp;ixlib=php-3.3.1&amp;q=60&amp;w=600" alt="The Tipping Point by Malcolm Gladwell">
+                The Tipping Point
+                <small>Malcolm Gladwell</small>
+            </a>
+        </li>
+
+
+
+        <li>
+            <a href="https://www.amazon.com/dp/1400096235/?tag=nonoma-20" target="_blank">
+                <img src="https://nono.imgix.net/img/u/book-the-information-james-gleick.jpg?auto=compress&amp;fit=fillmax&amp;ixlib=php-3.3.1&amp;q=60&amp;w=600" alt="The Information by James Gleick">
+                The Information
+                <small>James Gleick</small>
+            </a>
+        </li>
+
+
+
+        <li>
+            <a href="https://www.amazon.com/dp/0593328973/?tag=nonoma-20" target="_blank">
+                <img src="https://nono.imgix.net/img/u/book-godin-seth-the-practice.jpg?auto=compress&amp;fit=fillmax&amp;ixlib=php-3.3.1&amp;q=60&amp;w=600" alt="The Practice by Seth Godin">
+                The Practice
+                <small>Seth Godin</small>
+            </a>
+        </li>
+
+
+
+        <li>
+            <a href="https://www.amazon.com/dp/1591845335/?tag=nonoma-20" target="_blank">
+                <img src="https://nono.imgix.net/img/u/book-godin-seth-all-marketers-are-liars.jpg?auto=compress&amp;fit=fillmax&amp;ixlib=php-3.3.1&amp;q=60&amp;w=600" alt="All Marketers are Liars by Seth Godin">
+                All Marketers are Liars
+                <small>Seth Godin</small>
+            </a>
+        </li>
+
+
+
+        <li>
+            <a href="https://www.amazon.com/dp/055338371X/?tag=nonoma-20" target="_blank">
+                <img src="https://nono.imgix.net/img/u/book-emotional-intelligence-daniel-goleman.jpg?auto=compress&amp;fit=fillmax&amp;ixlib=php-3.3.1&amp;q=60&amp;w=600" alt="Emotional Intelligence by Daniel Goleman">
+                Emotional Intelligence
+                <small>Daniel Goleman</small>
+            </a>
+        </li>
+
+
+
+        <li>
+            <a href="https://www.amazon.com/dp/014312885X/?tag=nonoma-20" target="_blank">
+                <img src="https://nono.imgix.net/img/u/book-grant-adam-originals.jpg?auto=compress&amp;fit=fillmax&amp;ixlib=php-3.3.1&amp;q=60&amp;w=600" alt="Originals by Adam Grant">
+                Originals
+                <small>Adam Grant</small>
+            </a>
+        </li>
+
+
+
+        <li>
+            <a href="https://www.amazon.com/dp/0738215546/?tag=nonoma-20" target="_blank">
+                <img src="https://nono.imgix.net/img/u/book-you-cant-make-this-stuff-up-lee-gutkind.jpg?auto=compress&amp;fit=fillmax&amp;ixlib=php-3.3.1&amp;q=60&amp;w=600" alt="You Can't Make This Stuff Up by Lee Gutkind">
+                You Can't Make This Stuff Up
+                <small>Lee Gutkind</small>
+            </a>
+        </li>
+
+
+
+        <li>
+            <a href="https://www.amazon.com/dp/B004HWOOXG/?tag=nonoma-20" target="_blank">
+                <img src="https://nono.imgix.net/img/u/book-mindfulness-in-plain-english-bhante-henepola-gunaratana.jpg?auto=compress&amp;fit=fillmax&amp;ixlib=php-3.3.1&amp;q=60&amp;w=600" alt="Mindfulness in Plain English by Bhante Henepola Gunaratana">
+                Mindfulness in Plain English
+                <small>Bhante Henepola Gunaratana</small>
+            </a>
+        </li>
+
+
+
+        <li>
+            <a href="https://www.amazon.com/dp/1452155186/?tag=nonoma-20" target="_blank">
+                <img src="https://nono.imgix.net/img/u/book-the-joy-of-less-francine-jay.jpg?auto=compress&amp;fit=fillmax&amp;ixlib=php-3.3.1&amp;q=60&amp;w=600" alt="The Joy of Less by Francine Jay">
+                The Joy of Less
+                <small>Francine Jay</small>
+            </a>
+        </li>
+
+
+
+        <li>
+            <a href="https://www.amazon.com/dp/1594488215/?tag=nonoma-20" target="_blank">
+                <img src="https://nono.imgix.net/img/u/book-farsighted-steven-johnson.jpg?auto=compress&amp;fit=fillmax&amp;ixlib=php-3.3.1&amp;q=60&amp;w=600" alt="Farsighted by Steven Johnson">
+                Farsighted
+                <small>Steven Johnson</small>
+            </a>
+        </li>
+
+
+
+        <li>
+            <a href="https://www.amazon.com/dp/1594485380/?tag=nonoma-20" target="_blank">
+                <img src="https://nono.imgix.net/img/u/book-where-good-ideas-come-from-steven-johnson.jpg?auto=compress&amp;fit=fillmax&amp;ixlib=php-3.3.1&amp;q=60&amp;w=600" alt="Where Good Ideas Come From by Steven Johnson">
+                Where Good Ideas Come From
+                <small>Steven Johnson</small>
+            </a>
+        </li>
+
+</ul>
+
+```

@@ -1,0 +1,1386 @@
+/*-- scss:defaults --*/
+$light-sage-green: #D1D9CE;
+$dark-sage-green: #98A08D;
+$cream: #FDFBF7;
+$gray: #64605f;
+$light-gray: #949799;
+$purple: #AE8BD1;
+$navbar-bg: white; // navbar
+// $bs-root-font-size: 12px;
+$font-size-base: 1.02rem;
+
+
+/*-- scss:rules --*/
+// --------------------------- NEW PAGES LAYOUT -----------------------//
+// Default values for the width of layout components
+
+// sidebar-width	250px
+// body-width	    800px
+// margin-width	    250px
+// gutter-width	    1.5em
+
+
+// ---------------------- TWO ROWS Navbar --------------------------//
+
+// Reducing the line spacing in navbar items
+
+// @media (min-width: 992px){
+// 	.navbar-expand-lg .navbar-collapse {
+// 	    padding: 6px 0px !important;
+// 	}
+// }
+
+// @media (min-width: 570px){
+// 	.navbar-expand-lg .navbar-nav .nav-link {
+//     	padding-top: 0rem !important;
+// 	}
+// }
+
+
+
+// When screen is little delete HOME link from navbar
+@media (max-width: 569px){
+    ul.navbar-nav.navbar-nav-scroll.ms-auto li.nav-item:first-child {
+        display: none;
+        text-decoration-color:rgba(163, 166, 168, 0.40); 
+        color: grey;
+    }
+
+    .mysite{
+        padding-left:0px; 
+        padding-bottom:12px; 
+        color: #5b60628f;
+        text-decoration-color:rgba(163, 166, 168, 0.40); 
+        visibility: hidden;
+        
+    }
+}
+
+@media (min-width: 570px){
+
+    .mysite{
+        padding-left:12px; 
+        padding-bottom:12px; 
+        text-decoration-color:rgba(163, 166, 168, 0.40); 
+        color: dimgrey;
+        font-size: 13.3px;
+        // font-size: 16.7px;
+    }
+    
+    nav .nav-item:not(.compact) {
+        line-height: 30px !important; // 25px default
+    }
+
+    li.nav-item.compact {
+        margin: 0px 0px !important;
+        padding: 0px 0px !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    
+    .navbar-collapse:not(.show) {
+        display: flex !important;
+        padding: 6px 0px;
+    }
+
+    .navbar .quarto-navbar-tools {
+        display: inherit !important;
+    }
+
+    .navbar>.container-fluid {
+        display: block;
+    }
+
+
+    .collapse:not(.show) {
+        background-color: #f0f0f088;
+        // background-color: #f0f0f0;
+        justify-content: center;
+    }
+
+    @media (min-width: 992px){
+        .navbar-container {
+            width: 100% !important;
+        }
+
+        .navbar-brand-container {
+            margin-right: 0em !important;
+        }
+    }
+
+    .navbar-brand-container {
+        justify-content: center;
+        // max-width: -webkit-fill-available !important;
+        max-width: inherit !important;
+        background-color: #d9d9d98e;
+        // background-color: #d9d9d9;
+
+        // Increases padding up/down DANILO TOAPANTA
+        padding: 6px 0px;
+    } 
+
+
+
+    .navbar {
+        padding-left: 0em !important;
+        padding-right: 0em !important;
+        padding-top: 0px !important;
+        padding-bottom: 0px !important;
+    }
+
+
+    .navbar-brand {
+        padding-right: 0rem !important;
+        padding-left: 0rem !important;
+        padding-top: 20px !important;
+        padding-bottom: 12px !important;
+        margin-right: 0rem !important;
+        margin-left: 0rem !important;
+        // font-size: 225% !important; //  Default  
+        font-size: 215% !important;  
+        font-family: "Fira Code Light", monospace;
+        color: #212121 !important;
+    }
+
+
+    // Makes second row to center
+    @media (max-width: 991.98px){
+        .navbar .quarto-navbar-tools {
+            margin-right: inherit;
+        }
+    }
+
+    @media (max-width: 695px){
+        .navbar .quarto-navbar-tools {
+            margin-top: 0rem !important;
+            margin-bottom: 0rem !important;
+            padding: 0px 5px !important;
+        }
+
+        .navbar-nav{
+            margin: 0rem 0rem !important;
+        }
+
+        
+    }
+
+    // Hides the HAMBURGER Button
+    .navbar-dark .navbar-toggler {
+        display: none;
+    }
+
+    nav .nav-item:not(.compact) {
+        font-size: 1rem !important;
+        font-weight: 400 !important;
+    }
+
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-top: 0rem;
+        padding-bottom: 0rem;
+    }
+
+    nav .nav-item.compact .nav-link {
+        padding: 0px 7px !important;
+    }
+
+    nav .nav-item.compact .nav-link {
+        // margin: 11px 0px !important;
+    }
+
+    // MOON 
+    .navbar .quarto-navbar-tools {
+        padding: 0px 5px !important;
+        margin-top: -0.1em !important;
+    }
+}
+
+// --------------------------- NAV BAR -----------------------//
+
+// New changes to page width:
+@media (min-width: 992px){
+    .navbar-container {
+        // width: 905px;  // This changes the width of the main container | Default: 716px
+        width: 705px;
+        // background-color: rgba(211, 211, 211, 0.44);
+        background-color: #f0f0f088;
+    }
+    
+    // Moves left DANILO TOAPANTA
+    .navbar-brand {
+        padding-left: 16.5px;
+    }
+
+}
+// Removes bottom padding DANILO TOAPANTA
+.navbar-dark .navbar-brand {
+    padding-bottom: 0px;
+}
+
+// Gives Padding to the MOON
+.navbar .quarto-navbar-tools {
+    padding-right: 10px;
+}
+
+.navbar-collapse {
+    -webkit-flex-grow: 0;
+}
+
+// // Makes NavBar always centered
+// @media (max-width: 991px){
+//     .navbar-container {
+//         width: auto;
+//     }  
+// }
+
+.navbar-dark .navbar>.container-xxl, .navbar>.container-xl, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container, .navbar>.container-fluid{
+    max-width: 670px; // 670px default
+    margin: 0 auto;
+//     margin-left: 529px ;   // move all header to left
+}
+
+// .navbar{
+//   justify-content: center;
+// }
+
+// Nav Toggler switch hamburger icon to right
+.navbar .navbar-toggler{
+    order: 0
+}
+
+// Fixes order of items when collapse. Default was column
+.navbar-nav {
+    -webkit-flex-direction: row;
+     display: inline-flex;
+
+}
+.navbar .quarto-navbar-tools {
+    display: inline-flex;
+    vertical-align: text-bottom;
+    margin-top: 0em;
+    padding-top: 0em;
+    padding-bottom: 0px;
+    // margin-right: 0rem;
+}
+
+
+// Fixes METADATA from post
+// @media (min-width: 992px) {
+//     #title-block-header.quarto-title-block.default .quarto-title-meta {
+//         display: grid;
+//         grid-template-columns: initial;
+//         display: inline-flex;
+//         gap: 12em
+//     }
+// }
+
+// Fxes METADATA Spacing
+#title-block-header.quarto-title-block.default .quarto-title-meta-heading {
+    // margin-top: 0em;
+    font-size: .7em !important;
+    opacity: .7 !important;
+}
+
+// Fxes METADATA Spacing
+.quarto-title .quarto-categories {
+    padding-bottom: 0em !important;
+}
+
+// Fxes METADATA Spacing
+#title-block-header {
+    margin-block-end: 0rem !important;
+}
+
+.quarto-title-banner {
+    padding-bottom: 0em !important;
+}
+
+// Increases Font Size of Nav Brand
+.navbar-dark .navbar-brand {
+    font-size:  1.85rem;
+    margin-bottom: 7px !important;
+    letter-spacing: -.01rem;
+    font-weight: 500;
+    opacity: 0.95;
+    // color: #595959;
+    vertical-align: text-bottom;
+    overflow: inherit;
+}
+
+// // Robot-like font and sizing & increases Font Size of Nav Brand
+// .navbar-dark .navbar-brand {
+//     font-size: $font-size-base * 1.85;
+//     letter-spacing: -.10rem;
+//     font-weight: 450;
+//     opacity: 0.90;
+//     font-family: "Fira Code Light", monospace;
+//     vertical-align: text-bottom;
+// }
+
+// Opacity in Blog's Title
+h1, .h1, h2, .h2 {
+    opacity: 1;
+    // color: #4a4c4e;
+}
+
+// Increases Font Size of Nav Items
+nav .nav-item:not(.compact) {
+    font-weight: 500;
+    line-height: 50px;
+    font-size: 1.25rem;
+}
+
+// Fixes Github Icons
+nav .nav-item.compact .nav-link {
+    padding-top: 20px;
+//     padding-bottom: 0px;
+}
+
+// Change toggle icon
+// .navbar-dark .navbar-toggler-icon {
+//     background-image: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23595959' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0'/%3e%3c/svg%3e);
+// }
+
+// Adding Padding to Nav-Top
+footer.footer .nav-footer, #quarto-header>nav {
+    padding-top: 15px;
+    // color: #afafaf;
+    // font-weight: 300;
+
+}
+
+
+
+// Moves Nav Items to left
+// .navbar-dark .ms-auto {
+//     margin-right: 0 !important;
+//     margin-left: 100px !important;  // move items from nav-brand to left
+//     margin-bottom: -10px !important;
+// }
+
+// Change Dark mode tinyurl.com/2nuz8dxm
+// .navbar .quarto-color-scheme-toggle:not(.alternate) .bi::before {
+//     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIgZmlsbD0iY3VycmVudENvbG9yIiBjbGFzcz0iYmkgYmktbW9vbiIgdmlld0JveD0iMCAwIDE2IDE2Ij4KICA8cGF0aCBkPSJNNiAuMjc4YS43NjguNzY4IDAgMCAxIC4wOC44NTggNy4yMDggNy4yMDggMCAwIDAtLjg3OCAzLjQ2YzAgNC4wMjEgMy4yNzggNy4yNzcgNy4zMTggNy4yNzcuNTI3IDAgMS4wNC0uMDU1IDEuNTMzLS4xNmEuNzg3Ljc4NyAwIDAgMSAuODEuMzE2LjczMy43MzMgMCAwIDEtLjAzMS44OTNBOC4zNDkgOC4zNDkgMCAwIDEgOC4zNDQgMTZDMy43MzQgMTYgMCAxMi4yODYgMCA3LjcxIDAgNC4yNjYgMi4xMTQgMS4zMTIgNS4xMjQuMDZBLjc1Mi43NTIgMCAwIDEgNiAuMjc4ek00Ljg1OCAxLjMxMUE3LjI2OSA3LjI2OSAwIDAgMCAxLjAyNSA3LjcxYzAgNC4wMiAzLjI3OSA3LjI3NiA3LjMxOSA3LjI3NmE3LjMxNiA3LjMxNiAwIDAgMCA1LjIwNS0yLjE2MmMtLjMzNy4wNDItLjY4LjA2My0xLjAyOS4wNjMtNC42MSAwLTguMzQzLTMuNzE0LTguMzQzLTguMjkgMC0xLjE2Ny4yNDItMi4yNzguNjgxLTMuMjg2eiIvPgo8L3N2Zz4=);
+//     opacity: 0.65;
+// }
+
+
+// ---------------------- TABLES GENERAL  ---------------------- //
+
+
+table, .table {
+//     caption-side: top;
+    margin-bottom: 0rem;
+    margin-top: -0.5rem;
+}
+
+// Make borders of table transparent
+thead, tbody, tfoot, tr, td, th {
+    border-color: transparent;
+}
+
+// Adds padding RIGHT to all cells
+.table>:not(caption)>*>* {
+    padding-right: 0rem
+}
+
+// --------------------------- BLOG  -------------------------- //
+
+// Change font and color of CATEGORIES colum of BLOG
+.newFont_and_color .table td:last-child, .newFont_and_color .table th:last-child {
+    // font-family: "IBM Plex Mono", monospace;
+    // color: #838383;
+    color: #a1a4a7e8;
+
+}
+
+// Gives some padding to the DATE of BLOG
+.datePadding .table td:first-child {
+    width: 4em !important;
+    padding-right: 0.5em;
+    padding-left: 2px;    // Padding of first column
+    white-space: nowrap;
+    opacity: 0.8;
+}
+
+// Gives some padding to the TITLE of BLOG
+.datePadding .table td:nth-child(2) {
+    // width: 70%;
+    padding-right: 18px; // 8.5px default
+    // padding-left: 0em;
+}
+
+// Gives some padding to the CATEGORIES of BLOG
+.datePadding .table td:last-child {
+    width: 6.5em;
+    white-space: nowrap;
+    padding-left: 0em;
+    padding-right: 0.5em;
+}
+
+@media (max-width: 570px){
+
+    // Gives some padding to the TITLE of BLOG
+    .datePadding .table td:nth-child(2) {
+        padding-right: 3.5px;
+        padding-left: 3.5px;
+    }
+    
+
+    // Gives some padding to the CATEGORIES of BLOG
+    .datePadding  .table td:last-child {
+        width: 5.5em !important;
+        white-space:normal !important;
+        padding-left: 0em;
+        padding-right: 0em;
+        display: none;
+    }
+}
+
+
+// Gives color to categories in Post of BLOG
+.quarto-title .quarto-categories .quarto-category{
+    background-color: #f9e9f3;
+    color: #5c2a48;
+}
+
+// Eliminates padding in NOT MATCHING in BLOG
+.listing-no-matching {
+    text-align: inherit;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    font-style: italic;
+    color: #969696;
+    font-weight: 400;
+}
+
+// Adds hover color to CATEGORIES of BLOG
+.listing-categories-hover:hover{
+	color: #a626a4;
+}
+
+// Change color of ALL CATEGORIES
+.color-showAllCategories{
+    color: #a626a4;
+}
+
+// Changes color of ROW Blog 
+tr#odd-row-blog {
+    // border-radius: 26px;
+    background: #f0f0f088;
+  
+}
+
+// Disables the darkmode toggle when navbar false 
+.top-right {
+    display: none !important;
+}
+
+// Capitalizes all words the BLOG title
+// h1.title, .title.h1 {
+    // margin-top: 0;
+    // text-transform: capitalize;
+    // font-weight: 300 !important;
+// }
+
+
+// h1.title, .title.h1 {
+//     font-size: 2.6rem !important;
+// }
+
+/* Avoids wrapping of cell output  */
+code {
+    white-space-collapse: auto !important;
+    text-wrap: wrap !important;
+}
+
+// Changing colors for BLOG post TAGS
+.tags-title {
+    color: #000000 !important;
+    background-color: #efefef !important;
+    border: solid 1px !important;
+    border-color: #efefef !important;
+}
+
+#tag-icon-blog {
+    color: #000000 !important;
+    /* color: #272727 !important; */
+    /* padding-right: 0px !important; */
+    background-color: white !important;
+    border: solid 1px !important;
+    border-radius: .25rem;
+    border-color: #c8c8c8d1 !important;
+    opacity: .6;
+}
+
+
+// Changes "Show all Posts" color
+.color-show-posts{
+    color: #969696;
+}
+
+// Changes background box color of "Show all Posts" color
+.background-color-show-posts {
+    background: #f3f3f37d;
+}
+
+// Changes the Table of contents color scheme
+
+// .sidebar .quarto-alternate-notebooks ul li a, .sidebar .quarto-alternate-formats ul li a, .sidebar nav[role=doc-toc]>ul li a {
+//     color: rgb(101, 112, 124);
+// }
+
+// .sidebar .quarto-alternate-notebooks ul li a, .sidebar .quarto-alternate-formats ul li a, .sidebar nav[role=doc-toc]>ul li a {
+//     color: rgb(101, 112, 124);
+// }
+
+
+// .sidebar nav[role=doc-toc] ul>li>a.active, .sidebar nav[role=doc-toc] ul>li>ul>li>a.active {
+//     border-left: 2px solid #0d6efd;
+//     color: rgb(68, 76, 84)!important;
+// }
+
+// .sidebar .quarto-alternate-notebooks ul li a, .sidebar .quarto-alternate-formats ul li a, .sidebar nav[role=doc-toc]>ul li a {
+//     color: #65707ce6;
+// }
+
+
+// Changes the color of title CATEGORIES or TAGS in BLOG
+.post-sidebar-card-title{
+    color: #2c2c2c;
+}
+
+// Background of the two cards for CATEGORIES, TAGS 
+.post-sidebar-card {
+    background: #f9f9f9;
+}
+
+// Title of the CATEGORIES or TAGS
+.list-blog a {
+    // color: #666; // Default
+    color: #7a7b7b;
+}
+
+// Change color of numbers
+.category .count {
+    // color: #a4a4a4; // Default
+    color: #bcbcbc;
+}
+
+a.category.active, a.category.active .count, a.category:hover .count, a.category:hover .name {
+    color: #14ae73;
+}
+
+
+/* Gives Styling to new Button */
+.new_label_post{
+    color: #969799;
+    border: 1px #808080a8 solid;
+}
+
+// Changes the background box of the poems page
+.poem-text {
+    background: #d3d3d324;
+}
+
+
+// --------------------------- PROJECT  -------------------------- //
+
+.change-title-background-color {
+    // background-color: rgba(241, 241, 241, 0.759);
+    background-color: #f5f5f5;
+}
+
+// Change color of ALL CATEGORIES
+.color-showAllCategories{
+    color: #a626a4;
+}
+
+// Hides the Category TAGS from being formed as red block rounded
+div#TAGS {
+    display: none;
+}
+
+// This Fixes the BUTTON of 'Projects' page
+a.button.small, button.small {
+    font-size: .8rem;
+    padding: .35rem .5rem;
+    opacity: .85;
+}
+
+// This Fixes the BUTTON of 'Projects' page
+a.button, button {
+    align-items: center;
+    background: #f6f6f6;
+    border: 1px;
+    border-color:  #dddddd64;
+    border-style: solid;
+    border-radius: 6px;
+    color: inherit;
+    cursor: pointer;
+    display: inline-flex;
+    font-size: 1rem;
+    font-weight: 500;
+    gap: .25rem;
+    letter-spacing: 0;
+    line-height: 1;
+    padding: .75rem 1.2rem;
+    white-space: nowrap;
+}
+
+// This Fixes the BUTTON of 'Projects' page
+a.button:hover {
+    border-color: #666666;
+}
+
+// stayling Categories of .card of 'Projects' page
+.listing-categories {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 6px;
+    // padding-top: 6px;
+}
+
+// stayling Categories of .card of 'Projects' page
+.listing-category {
+    color: #6c757d;
+    border: solid 1px #dee2e6;
+    border-radius: .25rem;
+    text-transform: uppercase;
+    font-size: .58em;
+    padding-left: .5em;
+    padding-right: .5em;
+    padding-top: .15em;
+    padding-bottom: .15em;
+    cursor: pointer;
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+
+// stayling Categories of .card of 'Projects' page
+.listing-category:hover {
+    border-color: #666666;
+    // background-color: #66666614;
+    
+}
+
+.listing-category-inactive .card a {
+    text-decoration: solid; 
+    text-decoration-color: #666666;
+}
+
+// styling for new TAGS
+.listing-category-inactive{
+    color: #6c757d;
+    border: solid 1px #dee2e600;
+}
+
+
+/* The below was moved to dark mode to change color of hover */
+.listing-category-inactive:hover {
+    /* text-decoration: solid;  */
+    // background-color: #66666614;
+    border: solid 1px #666666;
+}
+
+
+// Reduces Gap in GRID of 'Projects'
+.grid{
+    row-gap: 0.8rem;
+}
+
+/* This makes ONLY focused card from Projects
+to hover with the Green color */
+.hoverMainId{
+    background-color: rgba(88, 226, 104, 0.21);
+    pointer-events: none;
+    border: solid 1px transparent;
+}
+
+.hoverMainId:hover{
+    background-color: rgba(88, 226, 104, 0.21);
+    border: solid 1px transparent;
+    pointer-events: none;
+}
+
+// Gives bacground to title of modal
+.modal-header {
+    background: #f5f5f5;
+}
+
+// -------------------------- INDEX  --------------------------- //
+
+// Custom table for NEWS
+.noPadding-Table .table>:not(caption)>*>* {
+    padding: 0;
+}
+
+// Custom table for NEWS
+.noLines-Table .table>:not(caption)>*:not(:last-child)>* {
+    border-bottom-color: #ffffff;
+}
+
+// Custom table for NEWS
+.dateSpace-Table .table td:first-child {
+    width: 5em;
+}
+
+// Custom table for NEWS
+.noTopPadding-Table .table {
+    margin-top: 0rem;
+}
+
+// Custom list for NEWS
+.news-list span {
+    display:inline-block;
+    width: 79px;
+    text-align:left;
+}
+
+// Custom list for NEWS
+.news-list span:first-of-type {
+    text-align:left
+}
+
+
+// Helps Have more Room for ON THIS PAGE
+#quarto-sidebar>* {
+    padding-right: 0.2em;
+    padding-left: 0em;
+    margin-left: -1em;
+    padding-top: 1.1em;
+}
+
+// #quarto-margin-sidebar{
+//     margin-right: -40px;
+// //     margin-left: 200px;
+// }
+
+// Move Button to top, more left
+#quarto-back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    background-color: #fff;
+    border-radius: .25rem;
+    box-shadow: 0 0.2rem 0.2rem #6c757d, 0 0 0.05rem #6c757d;
+    color: #4078f2;
+    text-decoration: none;
+    font-size: .9em;
+    text-align: center;
+    left: 50%;
+    padding: .4rem .8rem;
+    transform: translate(-50%, 0);
+}
+
+
+// Fixes Sidebar in Posts
+@media (min-width: 992px) {
+    body.floating.slimcontent .page-columns {
+        display: grid;
+        gap: 0;
+        grid-template-columns: [screen-start] 1.5em [screen-start-inset] 5fr [page-start] minmax(25px, 50px) [page-start-inset] minmax(50px, 150px) [body-start-outset] minmax(25px, 50px) [body-start] 1.5em [body-content-start] minmax(500px, calc( 700px - 3em )) [body-content-end] 1.5em [body-end] minmax(25px, 50px) [body-end-outset] minmax(50px, 150px) [page-end-inset] minmax(25px, 50px) [page-end] 5fr [screen-end-inset] 1.5em [screen-end];
+    }
+}
+
+// How below the article/blog/post starts
+@media (min-width: 992px){
+    .quarto-title-banner {
+        padding-bottom: 0em;
+    }
+}
+
+.test h1 {
+  text-align: center;
+}
+
+.center h1.title {
+  text-align: center;
+}
+
+.fun header #title-block-header h1.title {
+  display: none;
+}
+
+
+// For 404 Page
+.page-not-found{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+
+// Fancy Error 404
+#main_404{
+//     display: table;
+//     top: 50%;
+//     left: 50%;
+//     width: 75%;
+//     height: 75vh;
+//     text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+}
+
+@media (max-width: 709px){
+    #main_404 {
+        padding-top: 0.4em;
+    }
+}
+
+@media (max-width: 626px){
+    #main_404 {
+        padding-top: 2em;
+    }
+}
+
+.fof{
+	  display: table-cell;
+	  vertical-align: middle;
+}
+.fof h1{
+	  font-size: 50px;
+	  display: inline-block;
+	  padding-right: 12px;
+	  animation: type .5s alternate infinite;
+}
+@keyframes type{
+	  from{box-shadow: inset -3px 0px 0px #888;}
+	  to{box-shadow: inset -3px 0px 0px transparent;}
+}
+
+// To fix to do list, spacing and indentation
+#to-do.level3 ul {   // level 3 only works for h3
+    display: block;
+//     list-style-type: none;
+    margin-block-start: -1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 20px;
+}
+input, button, select, optgroup, textarea {
+    margin-right: 10px;
+}
+
+// Disables the color of link for a text
+.disable-link-color a {
+    color: #343a40;
+}
+
+.disable-link-color-grey a {
+    color: grey;
+}
+
+.disable-link-underline a {
+    text-decoration:  none;
+}
+
+.grey-link-underline a {
+    text-decoration-color:#a3a6a8a1;
+}
+
+// Margin top of page
+.no-top-margin #main.quarto-document-content.content p {
+   margin-top: -0em;
+   margin-block-start: 0em;
+}
+
+// Padding for picture
+.padding_img{
+    // padding-left: 100px;
+    // margin-top: 1rem;
+}
+
+// To justify text
+.justify-text {
+    text-align: justify !important
+}
+
+// Fix Background of card for Darkmode
+div.card {
+    background-color: #fff0;
+}
+
+// .page-columns .column-page-left {
+//     grid-column: page-start/body-content-end;
+//
+// }
+
+// .move-grid-left main {
+//     padding-left: 10em;
+// }
+
+// .quarto-listing-container-grid {
+//     padding-left: 10em;
+// }
+
+// .page-columns .column-page-left {
+//     grid-column: page-start/body-content-end +10p;
+//     grid-column-start: page-start;
+// }
+
+// Reduces 5fr to 15fr, move grid left
+// .center-body {
+//     @media (min-width: 992px){
+//         body.floating .page-columns  {
+//             display: grid;
+//             gap: 0;
+//             grid-template-columns: [screen-start] 1.5em [screen-start-inset] 15fr [page-start page-start-inset] 35px [body-start-outset] 35px [body-start] 1.5em [body-content-start] minmax(500px, calc( 750px - 3em )) [body-content-end] 1.5em [body-end] 35px [body-end-outset] minmax(75px, 145px) [page-end-inset] 35px [page-end] 5fr [screen-end-inset] 1.5em [screen-end];
+//         }
+//     }
+// }
+
+
+// @media (min-width: 992px){
+//     div.quarto-content body.floating .page-columns  {
+//         display: grid;
+//         gap: 0;
+//         grid-template-columns: [screen-start] 1.5em [screen-start-inset] 15fr [page-start page-start-inset] 35px [body-start-outset] 35px [body-start] 1.5em [body-content-start] minmax(500px, calc( 750px - 3em )) [body-content-end] 1.5em [body-end] 35px [body-end-outset] minmax(75px, 145px) [page-end-inset] 35px [page-end] 5fr [screen-end-inset] 1.5em [screen-end];
+//     }
+// }
+
+// page-end] 2.5fr This makes CATEGORIES shift to right
+
+// @media (min-width: 992px){
+//     body.floating .page-columns {
+//         display: grid;
+//         gap: 0;
+//         grid-template-columns: [screen-start] 1.5em [screen-start-inset] 5fr [page-start] minmax(25px, 50px) [page-start-inset] minmax(50px, 150px) [body-start-outset] minmax(25px, 50px) [body-start] 1.5em [body-content-start] minmax(500px, calc( 700px - 3em )) [body-content-end] 1.5em [body-end] minmax(25px, 50px) [body-end-outset] minmax(50px, 150px) [page-end-inset] minmax(25px, 50px) [page-end] 2.5fr [screen-end-inset] 1.5em [screen-end];
+//     }
+// }
+
+// margin-left: 2em; Sets from where to start grid from left to right
+@media (min-width: 992px){
+    .page-columns .column-page-left {
+        grid-column: page-start/body-content-end;
+        grid-column-start: 4;
+        grid-column-end: body-content-end;
+        margin-left: 5em;
+        margin-bottom: 0em;
+    }
+}
+
+// Reduces the title of the grid card
+.quarto-grid-item div.post-contents h5, .h5 {
+    font-size: 0.8rem;
+}
+
+// Reduces font size of MACHINE of PROJECTS
+.quarto-grid-item .listing-categories .listing-category {
+    color: #6c757d;
+    border: solid 1px #dee2e6;
+    border-radius: .25rem;
+    text-transform: uppercase;
+    font-size: .5em;
+}
+
+// Categories content of one card
+.quarto-grid-item .listing-categories {
+    padding-bottom: 0px;
+    padding-top: 6px;
+}
+
+// Card adjust padding
+.card-body {
+    padding-bottom: 1rem;
+    padding-top:0.4rem;
+}
+
+// For the pagination buttons
+.page-item.active .page-link {
+    color: #333;
+    background-color: #dee2e6;
+    border-color: #dee2e6;
+}
+.page-link {
+    color: #333;
+}
+
+// For Pandas Table
+.dataframe thead th {
+    text-align: left !important;
+}
+
+// Disables the border line around code block
+div.sourceCode {
+    border: 0
+}
+
+
+div.quarto-about-solana {
+    padding-top: 1em;
+    padding-bottom: 0em;
+}
+
+// Make round the picture
+.rounded {
+    border-radius: .42rem !important;
+    width: 100%;
+    height: auto;
+}
+
+// Change CATEGORIES 
+#quarto-margin-sidebar .quarto-listing-category-title {
+    // color:#a3a6a8a2;
+    // font-weight: 450;
+    font-size: 0.97rem;
+}
+
+// Change CATEGORIES 
+#quarto-margin-sidebar .quarto-listing-category {
+    // color:#b6b6b69f; 
+    font-size: 0.92rem;
+}
+
+// Change CATEGORIES 
+.quarto-listing-category .category:hover {
+    color: #3B75CB; 
+}
+
+// Change CATEGORIES 
+#quarto-margin-sidebar .quarto-listing-category-title:hover{
+    color: #3B75CB; 
+}
+
+// Change CATEGORIES 
+.quarto-listing-category .category.active {
+    background-color: #babcbd28;
+    font-weight: 500;
+    color: #a626a4;
+}
+
+// Make scrollable Box  
+.scrollableBox {
+    overflow-y: scroll; 
+    // background-color: #b7b7b725;
+}
+
+/* Scrollbar styles */
+.scrollableBox::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+/* Scrollbar styles */
+.scrollableBox::-webkit-scrollbar-track {
+    // border: 1px solid #b7b7b7;
+    background: #a2a2a219;  
+    // border-radius: 10px;
+}
+
+/* Scrollbar styles */
+.scrollableBox::-webkit-scrollbar-thumb {
+    background: #c3c3c3;  
+    // border-radius: 10px;
+}
+
+/* Scrollbar styles */
+.scrollableBox::-webkit-scrollbar-thumb:hover {
+background: #b7b7b7;  
+}
+
+
+// Buttons LINKS Color
+.btn-secondary {
+    color: #686868;
+    background-color: rgb(245 245 245);
+    border-color: #f5f5f5;
+}
+
+// Buttons LINKS Color
+.btn {
+    padding: 3px 9px;
+    font-size: 0.84em;
+}
+
+
+.btn {
+    padding-top: .275rem;
+    padding-bottom: .275rem;
+    padding-right: .75rem;
+    padding-left: .75rem;
+    font-size: .9rem;
+}
+
+.btn-secondary {
+    color: #676666;
+    background-color: rgb(243 243 243);
+    border-color: #f3f3f3;
+}
+
+.btn-secondary:hover {
+    color: #676666;
+    background-color: rgb(243 243 243);
+    border-color: #787878;
+}
+
+
+// Include Title block for the icons in post of 'Blog' page
+.justify-content-center {
+    justify-content: inherit !important;
+}
+
+// Include Title block for the icons in post of 'Blog' page
+.mt-4 {
+    margin-top: 0.25rem !important;
+}
+
+//Shows always MENU BAR items
+// .collapse {
+//     // visibility: collapse;
+//     // display: contents;
+//     overflow: visible!important
+// }
+
+// .collapse:not(.show) {
+//     display: contents;
+// }
+
+// .navbar .navbar-toggler {
+//     display: block!important;
+// }
+
+// Change HAMBIRGER icon size
+.navbar-toggler {
+    font-size: 1rem;
+    padding-top: 0.75rem;
+    padding-right: 0rem;
+    padding-bottom: 0.75rem;
+    padding-left: 0rem;
+}
+
+// move DANILO TOAPANTA to left
+@media (max-width: 991px){
+    .navbar-brand {
+        padding-left: 0.55rem;
+    }
+}
+
+// makes title stay centered
+.ms-auto {
+    margin-left: inherit !important;
+}
+
+// Adding padding to the MOON
+.navbar .quarto-navbar-tools{
+    padding-top: 20px;
+    padding-bottom: 1.1rem;
+}
+
+
+@media (max-width: 992px){
+    // Hides HAMBURGUER icon
+    .navbar-toggler-icon {
+        display: none !important;
+    }
+
+    // Eliminates padding ABOUT main text
+    div.quarto-about-solana .about-contents {
+        padding-right: 0em;
+        padding-left: 0.2em;
+    }
+}
+
+
+@media (max-width: 695px){
+    // Shows HAMBURGUER icon
+    .navbar-toggler-icon {
+        display: inline-block !important;
+    }
+
+    // Makes up BLOG, PRJCT ...
+    .navbar-nav {
+        margin-top: -1rem;
+        margin-bottom: -1rem;
+    }
+
+    // Makes up MOON
+    .navbar .quarto-navbar-tools{
+        margin-top: -1rem;
+        margin-bottom: -1rem;
+    }
+    
+    // Makes ABOUT text align left
+    div.quarto-about-solana .about-entity {
+        text-align: left;
+    }
+
+}
+
+@media (max-width: 372px){
+    // For small screen make MOON padding
+    .navbar .quarto-navbar-tools{
+        padding-left: 7px;
+        padding-top: 2rem;
+    }
+
+    // For small screen make DANILO TOAPANTA to clip
+    // .navbar-brand {
+        // overflow: scroll !important;
+        // text-overflow: clip;  
+        // font-size: small;   
+    // }
+    
+    // Hides HAMBURGUER icon
+    .navbar-toggler-icon {
+        display: none !important;
+    }
+
+    // Hide "Maintaned by DANILO TOAPANTA"
+    .footerDaniloToapanta {
+        display: none;
+    }
+
+}
+
+.navbar-dark .navbar>.container-xxl, .navbar>.container-xl, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container, .navbar>.container-fluid {
+    max-width: inherit;
+}
+
+// Make padding to the right of DANILO TOAPANTA
+.navbar-brand {
+    padding-right: 3.8rem ;
+}
+
+// Make always SHOW when clicking Hamburger icon
+.collapse {
+    display: none;
+    &:not(.show) {
+      display: contents;
+    }
+}
+
+// Remove transition when clicking HAMBURGUER
+.collapsing {
+    height: 0;
+    overflow: hidden;
+    transition: height .0s ease;;
+  }
+
+  
+// Hides Table of Contents When Body column too small
+@media (max-width: 991px){
+    nav[role=doc-toc] {
+        display: none;
+    }
+}
+
+// This disables ANIMATION Header coming up
+// Or down when scrolling
+.navbar {
+    position: static;
+}
+
+// This disables ANIMATION Header coming up
+.fixed-top {
+    position: absolute !important;
+}
+
+// This disables ANIMATION Header coming up
+header.headroom--pinned {
+    // transform: translateY(0%); 
+    transform: none !important; 
+}
+
+// This disables ANIMATION Header coming up
+header.headroom--unpinned {
+    transform: none !important; 
+}
+
+// This disables ANIMATION Header coming up
+.headroom-target, header.headroom {
+    will-change: unset;
+    transition: none;
+    transition: none;
+}
+
+// Change surrounding color when pressing 
+// HAMBURGUER icon
+.navbar-dark .navbar-toggler {
+    color:#ffffff00
+}
+
+.a-padding-footer a{
+    padding-left: 1em;
+}
+
+// Allows to display Complete Footer
+.nav-footer-center {
+    min-width: 100%;
+    white-space: nowrap
+}
+
+// Elimnates last row
+.page-rows-contents {
+    grid-template-rows: [content-top] minmax(max-content, 1fr) [content-bottom] minmax(0px, max-content) [page-bottom];
+}
+
+// Eliminates padding-top FOOTER
+.nav-footer-center {
+    margin-top: 0em;
+}
+
+
+/* Alterign the DEFAULT Category listing */
+
+div.quarto-post .metadata {
+	font-size: 1em;
+	flex-basis: 13%
+} 
+
+div.quarto-post {
+    gap: 0em;
+}
+
+// Delete padding from bottom page
+// #quarto-content>* {
+//     margin-bottom: 0px;
+// }
+
+
+// Moves up Contents of post
+@media (min-width: 992px){
+    #quarto-sidebar {
+        // display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-height: 100vh !important;
+        top: 0px !important;
+    }
+}
+
+// allows to see the content
+.navbar-collapse:not(.show) {
+    display: flex !important;
+}
+
+
+
+.icon-line {
+    display: block;
+    background: #d4006a;
+    width: 100%;
+    height: 6px;
+    margin: auto;
+    display: table;
+    margin-top: -6px;
+    margin-bottom: -6px;
+}
+

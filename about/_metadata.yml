@@ -1,0 +1,14 @@
+# Options specified here will apply to all blog in this folder
+
+# freeze computational output
+freeze: true
+
+# Enable banner style title blocks
+title-block-banner: true
+
+
+# Default Author Name
+author:
+  - name: Danilo Toapanta
+    url: https://danilotpnta.github.io/
+

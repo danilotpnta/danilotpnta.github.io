@@ -1,0 +1,14 @@
+{
+  "hash": "f93def1b0029a4dbd881529212cbcf74",
+  "result": {
+    "markdown": "---\npagetitle: \"Danilo Toapanta - About\"\nsidebar: false\ncss: index.css\n---\n\n::: {.cell}\n\n:::\n\n\n:::{.disable-link-underline}\n\n<!-- This is how you cna share your searches \nhttps://www.google.com/search?q=university+of+twente -->\n\n\n```{=html}\n<div class=\"quarto-about-solana column-body\" >\n    <div class=\"about-entity\">\n        <div class=\"entity-contents\">\n            <div class=\"about-contents\">\n                <main class=\"content\" id=\"quarto-document-content\">\n                    <p>\n                        <code>Hi, there! This is Danilo.</code>\n                    </p>\n                    <p>I’m an AI researcher based in the Netherlands.</p>\n                    <p>I studied Electrical Engineering at University of Twente and now I am doing my master in Artificial Intelligence.</p>\n                    <p>When I am not trying to figure out how my computer works, I like to <a href=\"../books/index.qmd\" style=\"color:inherit; text-decoration:underline;text-decoration-color:#a3a6a8a1 \">read books</a>, go for a run/swim, <a href=\"../tailor/index.qmd\" style=\"color:inherit; text-decoration:underline;text-decoration-color:#a3a6a8a1 \">tailor my clothes</a>, and spend some quality time with my family.</p>\n                    <p>\n                        You can look me up on <a href=\"https://github.com/danilotpnta?tab=repositories\" target=\"_blank\">Github</a>↗.<br> \n                        Check out my <a href=\"https://www.linkedin.com/in/DaniloToapnta/\" target=\"_blank\">LinkedIn</a>↗.<br> \n                        Read my lastest <a href=\"../blog/2023-07-26_testing_post-directory-copy\">post</a>.<br> \n                        <!-- My (outdated) <a href=\"404.qmd\">résumé</a>.<br>  -->\n                        <a href=\"mailto:danilotpnta@gmail.com?subject=%5BWebsite%5D%20-%20%27Insert%20Subject%20Here%27\" target=\"_blank\">\n                            Message me</a>↗.<br>\n                        Or see <a href=\"../now/index.qmd\">what I’m working right now</a>.\n                    </p>\n                </main>\n            </div>\n        </div>\n        <img src=\"../assets/Danilo.jpeg\" class=\"about-image rounded\" style=\"width: 15em;\">\n    </div>\n</div>\n\n```\n\n:::\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

@@ -1,0 +1,125 @@
+```{=html}
+<% let array_categories = [] %>
+<% let array_tags = [] %>
+<div style="display: none;">     
+    <% for (const post of items) {  %>
+        <% var tags_index = post.categories.indexOf("TAGS") %>
+
+        <!-- If -1 means there is no TAG written so go over the loop because
+        the rest of the array CATEGORIES could be "categories"  -->
+        <%  if (tags_index === -1) { %>
+            <% tags_index = post.categories.length %>
+        <% } %>
+
+        <!--  If there is no CATEGORY written in post skip
+        adding this to the array_categories -->
+        <% for(var k=0; k < tags_index;  k++ ) { %>                                               
+            <!-- <%= post.categories[k] %>  -->
+            <%= array_categories.push(post.categories[k]) %>
+        <% } %>
+        
+
+        <!-- if there is no TAG written then do not continue this for-loop  -->
+        <%  if ( !(post.categories.indexOf("TAGS") === -1)) { %> 
+            <!-- +1 to avoid inserting the name TAG -->
+            <% for(var j=tags_index +1; j< post.categories.length;  j++ ) { %>
+                <!-- <%= post.categories[j] %> -->
+                <%= array_tags.push(post.categories[j]) %>
+            <% } %>
+        <% } %>
+    <% } %>
+</div>
+
+<table class="quarto-listing-table table">
+    <tbody class="list">
+        <% var counter = 0 %>
+        <% var even_odd = "none" %>
+        <% for (const post of items) {  %>
+
+            <% if (post.title) { %>
+
+                <% if ( counter % 2 == 1) { %>
+                    <% even_odd = "odd-row-blog" %>
+                <% } else{ %>
+                    <% even_odd = "even-row-blog" %>
+                <% } %>  
+
+                <tr id="<%= even_odd %>" <%=metadataAttrs(post) %>
+                    
+                    <!-- i=3 col, Date, Title, Category -->
+                    <% for(var i=0; i < 4; i++) { %>
+                        <td>
+                            <!-- DATE -->
+                            <% if (i === 0) { %>
+                                <span class="listing-date"><%= post.date %></span>
+                            <% } %>
+                            
+                            <!-- TITLE -->
+                            <% if (i === 1) { %>
+                                <a href="<%- post.path %>" class="title listing-title">
+                                    <% if (counter === 0) { %>
+                                        <%= post.title %> <span class="new_label_post">NEW</span>
+                                    <% } else{ %>
+                                        <%= post.title %>
+                                    <% } %>
+                                    
+                                </a>
+                            
+                            <% } %>
+                            
+                            <!-- CATEGORY -->
+                            <% if (i === 2 ) { %>
+    
+                                <% if (post.categories) { %>
+                                    
+                                    <!-- Box Surrounded Category -->
+                                    <!-- <div class="post-categories listing-categories">
+                                        <% for (const category of post.categories) { %>
+                                            <div class="post-category listing-category"
+                                                onclick="window.quartoListingCategory('<%=category%>'); return false;">
+                                                <%= category %>
+                                            </div>
+                                        <% } %>
+                                    </div> -->
+
+
+                                    <!-- Displays only the fist category -->
+                                    <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
+                                            <a style="color: inherit; font-size: 0.95em;" href="/blog/#category=<%= (post.categories)[0] %>">
+                                                <%= (post.categories)[0] %>
+                                            </a>
+                                    </span>                                    
+                                <% } %>
+    
+                            <% } %>
+
+                            <!-- DATE -->
+                            <% if (i === 3) { %>
+                                <span class="listing-date"><%= post.date %></span>
+                            <% } %>
+    
+                        </td>
+                    <% } %>
+                </tr>
+                <% counter += 1 %>
+            <% } %>
+            
+            
+        <% } %>
+    </tbody>
+</table>
+
+<div style="display: none">
+    <% for(var i=0; i < array_categories.length; i++) { %>   
+        <p class="array_categories" > 
+            <%= array_categories[i] %>
+        </p>
+    <% } %>
+    <% for(var i=0; i < array_tags.length; i++) { %>   
+        <p class="array_tags" > 
+            <%= array_tags[i] %>
+        </p>
+    <% } %>
+</div>
+
+```

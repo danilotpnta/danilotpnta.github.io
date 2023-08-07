@@ -1,0 +1,432 @@
+```{=html}
+<!-- attributes for item -->
+<!--  freeze,
+      title-block-banner,
+      title,
+      author,
+      date,
+      categories,
+      image,
+      path,
+      image-alt,
+      description,
+      filename,
+      file-modified,
+      reading-time,
+      sortableValues -->
+
+
+<!-- <%= items[0].categories[0] %>
+<%= items[0].categories[1] %> -->
+
+<!-- When it is undefined then you get errors using lenght and also can't acceses variables -->
+
+<!-- - Title: CV Project
+All Categories: Computer Vision,Control Systems
+Categories[0]: Computer Vision
+typeof: object
+isArray: true
+Length: 2
+Length: 2
+Object.keys: 0,1
+Category[0]: Computer Vision
+Category[1]: Control Systems -->
+
+<!-- <% for (const here of items) { %>
+    </br>
+    <%= `- Title: ${here.title}` %>
+    <br>
+    <% if (typeof here.categories === 'undefined') { %>
+        <%= `YES`%>
+        <% continue %>
+        <br>  
+        <% } %>
+      
+    <%= `All Categories: ${ here.categories}` %>
+    <br> -->
+    <!-- Without the undefined detector error ocurrs -->
+    <!-- <%= `Categories[0]: ${ here.categories[0]}` %>  
+    <br>
+    <%= `typeof: ${typeof here.categories}` %>
+    <br>   
+    <%= `isArray: ${Array.isArray(here.categories)}` %>
+    <br> 
+    <%= `Length: ${(here.categories)?.length}` %>
+    <br> 
+    <%= `Length: ${here.categories.length}` %>
+    <br> 
+    <%= `Object.keys: ${Object.keys(here.categories)}` %>
+    <br>  -->
+
+    <!-- Now I can loop over the categories, before I couldnt because
+    one post has categories as Undefined -->
+    <!-- <% for(var i=0; i < here.categories.length; i++) { %>
+        <%= `Category[${i}]: ${here.categories[i]}` %>
+        <br> 
+        <% } %>
+    
+<% } %> -->
+
+<% let array_categories = [] %>
+<% let id_modals = [] %>
+<div class="list grid" style="column-gap: 20px;">
+    <% for (const item of items) { %>
+
+
+        <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" <%=metadataAttrs(item) %>>
+
+
+            <!-- Starting of MODAL -->
+            <div class="modal" id="<%= item.title.replace(/[^a-zA-Z ]/g, '').replace(/\s/g, '') %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                
+                <% id_modals.push(item.title.replace(/[^a-zA-Z ]/g, '').replace(/\s/g, '')) %>   
+                
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle"><%= item.title %></h5>
+                        <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="grid modal-content-grid">
+
+                            <!-- Here STARTS content of MODAL -->
+
+                                <!-- LEFT Content -->
+                                <div class="g-col-12 g-col-md-7 img-center">
+                                    <img src="<%- item.image %>" class="img-fluid" alt="image" />
+                                </div>
+                                
+                                <!-- RIGHT Content -->
+                                <div class="g-col-12 g-col-md-5">
+                                    <div class="card-body post-contents links-handler">
+                                        
+                                        <% if (item.description) { %>
+                                            <p class="p-description">
+                                                <%= item.description %>
+                                            </p>
+                                        
+                                        <% } %>
+
+                                        <!-- <a  class="button small flex" href="<%- item.path %>" > -->
+                                        <a  class="button small flex" href="#" style="pointer-events: none;">
+                                            About
+                                        </a> 
+                                        
+                                        <% if (item.demo) { %>
+                                            <a  class="button small flex" href="<%- item.demo %>" target="_blank" rel="noreferrer">
+                                                Demo
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
+                                            </a> 
+                                        <% } %>
+                        
+                                        <% if (item.paper) { %>
+                                            <a  class="button small flex" href="<%- item.paper %>" target="_blank" rel="noreferrer">
+                                                Paper
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
+                                            </a> 
+                                        <% } %>
+                        
+                                        <% if (item.source) { %>
+                                            <a  class="button small flex" href="<%- item.source %>" target="_blank" rel="noreferrer">
+                                                Source
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
+                                            </a> 
+                                        <% } %>
+                                            
+                                        <% var tags_index = item.categories.indexOf("TAGS") %>
+                        
+                                        <!-- Displays CATEGORIES -->    
+                                        <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
+                                        
+                                            <!-- Keyword TAG in frontmatter not found 
+                                                - Display the only ONE CATEGORY found --> 
+                                            <% if ( tags_index == -1 ) { %>
+                                                <% for(var i=0; i < item.categories.length; i++) { %>    
+                                                    <!-- <span id="<%= item.categories[i] %>"  class="listing-category <%= item.categories[i] %>" > -->
+                                                    <span class="listing-category <%= item.categories[i] %>" >
+                                                        <a onclick="location.href='/projects/#category=<%= item.categories[i] %>';" data-bs-dismiss="modal" style="color: inherit; font-size: 0.95em;">
+                                                            <%= item.categories[i] %>
+                                                        </a>   
+                                                    </span>
+                                                <% } %>
+                                            
+                                            <!-- When Keyword TAG is found in frontmatter 
+                                                - Displays All CATEGORIES items -->
+                                            <% } else{ %>
+                                                <% for(var i=0; i < tags_index; i++) { %>
+                                                    <span class="listing-category <%= item.categories[i] %>" >
+                                                        <!-- <a style="color: inherit; font-size: 0.95em;" href="/projects/#category=<%= item.categories[i] %>"> -->
+                                                        <a onclick="location.href='/projects/#category=<%= item.categories[i] %>';" data-bs-dismiss="modal" style="color: inherit; font-size: 0.95em;">
+                                                            <%= item.categories[i] %>
+                                                        </a>   
+                                                    </span>
+                                                <% } %>
+                                            <% } %>
+                                        </div> 
+                        
+                                        <!-- Display TAGS -->
+                                        <div class="listing-categories" style="padding-top: 0em;">
+                                            
+                                            <!-- Displays Technology Tag + Icon -->
+                                            <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;" >
+                                                <!-- <a  href="/projects"> -->
+                                                <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;" ></i> Tags:
+                                                <!-- </a> -->
+                                            </div>
+                                                                    
+                                            <!-- Keyword TAG in frontmatter not found 
+                                                - If there is NO || only ONE element in Categories then show "Other" as tag --> 
+                                            <% if ( tags_index == -1 ) { %>
+                                                <div id="Other" class="listing-category-inactive" >
+                                                    <a onclick="location.href='/projects';" data-bs-dismiss="modal" >
+                                                        Other
+                                                    </a>   
+                                                </div>
+                                            
+                                            <!-- When Keyword TAG is found in frontmatter 
+                                                - Displays Reaiming TAGS items -->
+                                            <% } else{ %>
+                                                <% for(var i=tags_index+1; i < item.categories.length; i++) { %>
+                                                    
+                                                    <div class="listing-category-inactive <%= item.categories[i] %>" >
+                                                        <!-- Add 'Python icon' -->
+                                                        <% if ( item.categories[i] === 'Python') { %>
+                                                            <!-- Disable for now uncomment ONLY FIRST line below to add icon -->
+                                                            <!-- <i class="fa-brands fa-python" style="color: #6c757d;"> </i> -->
+                                                            <!-- {{< fa thumbs-up >}} -->
+                        
+                                                            <a onclick="location.href='/projects/#category=<%= item.categories[i] %>';" data-bs-dismiss="modal">
+                                                                <%= item.categories[i] %>
+                                                            </a>   
+                        
+                                                        <% } else{ %>
+                                                            <a onclick="location.href='/projects/#category=<%= item.categories[i] %>';" data-bs-dismiss="modal">
+                                                                <%= item.categories[i] %>
+                                                            </a>   
+                                                        <% } %>   
+                                                    </div>
+                                                <% } %>
+                                            <% } %>
+                                        </div> 
+                                    </div>
+                                    
+                                <!-- Here ENDS content of MODAL -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <!-- End of MODAL -->
+
+
+            <!-- IMAGE -->
+            <!-- <a href="<%- item.path %>"> -->
+            <a href="#" data-bs-toggle="modal" data-bs-target="#<%= item.title.replace(/[^a-zA-Z ]/g, '').replace(/\s/g, '') %>">
+
+                <div class="card-title change-title-background-color" style="text-align: center; padding-bottom: 0.4em;  padding-top: 0.4em; ">
+                    <%= item.title %>
+                </div>
+
+                <img src="<%- item.image %>" alt="<%- item.description %>" class="thumbnail-image card-img" style="height: 150px;">
+
+            </a>
+
+            <!-- <div class="card-header py-1 px-2  bg-light"> -->
+                <!-- <a href="<%- item.href %>" class="listing-title">
+                    <%= item.title %>
+                </a>  -->
+
+                <!-- <small class="card-text text-nowrap inline-block">
+                    <a href="<%- item.href %>" class="listing-title">
+                        <%= item.title %>
+                    </a> 
+
+                </small> -->
+                
+                <!-- <a class="button small flex" href="https://github.com/taniarascia/takenote" target="_blank" rel="noreferrer">Source 
+                </a> -->
+
+            <!-- </div> -->
+
+
+            <div class="card-body post-contents">
+
+                <!-- <a  class="button small flex" href="<%- item.path %>" > -->
+                <a class="button small flex" href="#" data-bs-toggle="modal" data-bs-target="#<%= item.title.replace(/[^a-zA-Z ]/g, '').replace(/\s/g, '') %>">
+                    About
+                </a> 
+                
+
+                <% if (item.demo) { %>
+                    <a  class="button small flex" href="<%- item.demo %>" target="_blank" rel="noreferrer">
+                        Demo
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
+                    </a> 
+                <% } %>
+
+                <% if (item.paper) { %>
+                    <a  class="button small flex" href="<%- item.paper %>" target="_blank" rel="noreferrer">
+                        Paper
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
+                    </a> 
+                <% } %>
+
+                <% if (item.source) { %>
+                    <a  class="button small flex" href="<%- item.source %>" target="_blank" rel="noreferrer">
+                        Source
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
+                    </a> 
+                <% } %>
+
+                
+                    
+                <% var tags_index = item.categories.indexOf("TAGS") %>
+
+                <div style="display: none"> 
+                    <% for(var i=0; i < item.categories.length; i++) { %> 
+                        <%  if ( !(item.categories[i]=="TAGS") )  { %>
+                            <%  if ( !array_categories.includes(item.categories[i]) ) { %>
+                                <%= array_categories.push(item.categories[i]) %>
+                            <% } %>
+                        <% } %>                                                                                                     
+                    <% } %>
+                </div>
+
+                <!-- Displays Categories -->    
+                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
+                
+                    <!-- Keyword TAG in frontmatter not found 
+                        - Display the only ONE CATEGORY found --> 
+                    <% if ( tags_index == -1 ) { %>
+                        <% for(var i=0; i < item.categories.length; i++) { %>    
+                            <!-- <span id="<%= item.categories[i] %>"  class="listing-category <%= item.categories[i] %>" > -->
+                            <span class="listing-category <%= item.categories[i] %>" >
+                                <a style="color: inherit; font-size: 0.95em;" href="/projects/#category=<%= item.categories[i] %>">
+                                    <%= item.categories[i] %>
+                                </a>   
+                            </span>
+                        <% } %>
+                    
+                    <!-- When Keyword TAG is found in frontmatter 
+                         - Displays All CATEGORIES items -->
+                    <% } else{ %>
+                        <% for(var i=0; i < tags_index; i++) { %>
+                            <span class="listing-category <%= item.categories[i] %>" >
+                                <a style="color: inherit; font-size: 0.95em;" href="/projects/#category=<%= item.categories[i] %>">
+                                    <%= item.categories[i] %>
+                                </a>   
+                            </span>
+                        <% } %>
+                    <% } %>
+                </div> 
+
+                <!-- Display TAGS -->
+                <div class="listing-categories" style="padding-top: 0em;">
+                    
+                    <!-- Displays Technology Tag + Icon -->
+                    <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;" >
+                        <!-- <a  href="/projects"> -->
+                        <i class="fa-solid fa-tag fa-rotate-90" style="color: #6c757dc9;" ></i> Tags:
+                        <!-- </a> -->
+                    </div>
+                                            
+                    <!-- Keyword TAG in frontmatter not found 
+                         - If there is NO || only ONE element in Categories then show "Other" as tag --> 
+                    <% if ( tags_index == -1 ) { %>
+                        <div id="Other" class="listing-category-inactive" >
+                            <a  href="/projects">
+                                Other
+                            </a>   
+                        </div>
+                    
+                    <!-- When Keyword TAG is found in frontmatter 
+                         - Displays Reaiming TAGS items -->
+                    <% } else{ %>
+                        <% for(var i=tags_index+1; i < item.categories.length; i++) { %>
+                            
+                            <div class="listing-category-inactive <%= item.categories[i] %>" >
+                                <!-- Add 'Python icon' -->
+                                <% if ( item.categories[i] === 'Python') { %>
+                                    <!-- Disable for now uncomment ONLY FIRST line below to add icon -->
+                                    <!-- <i class="fa-brands fa-python" style="color: #6c757d;"> </i> -->
+                                    <!-- {{< fa thumbs-up >}} -->
+
+                                    <a  href="/projects/#category=<%= item.categories[i] %>">
+                                        <%= item.categories[i] %>
+                                    </a>   
+
+                                <% } else{ %>
+                                    <a  href="/projects/#category=<%= item.categories[i] %>">
+                                        <%= item.categories[i] %>
+                                    </a>   
+                                <% } %>   
+                            </div>
+                         <% } %>
+                    <% } %>
+                </div> 
+                
+                
+                
+               
+            
+               
+            </div>
+
+            <!-- <div class="card-header py-1 px-2  bg-light">
+
+                <% if (item.demo) { %>
+                    <a  class="button small flex" href="<%- item.demo %>" target="_blank" rel="noreferrer">
+                        Demo
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
+                    </a> 
+                <% } %>
+
+                <% if (item.source) { %>
+                    <a  class="button small flex" href="<%- item.source %>" target="_blank" rel="noreferrer">
+                        Source
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
+                    </a> 
+                <% } %>
+
+            </div> -->
+           
+            
+            <!-- Display Publication date if any -->
+            <!-- <% if (item.date) { %>
+                <b class="listing-publicationdate">
+                    <%= item.date %>
+                </b>
+                <% } %> -->
+
+        </div>
+
+
+
+        <% } %>
+</div>
+
+<% for(var i=0; i < array_categories.length; i++) { %>   
+    <p class="array_categories" style="display: none"> 
+        <%= array_categories[i] %>
+    </p>
+<% } %>
+
+<% for(var i=0; i < id_modals.length; i++) { %>   
+    <p class="array_id_modals" style="display: none"> 
+        <%= id_modals[i] %>
+    </p>
+<% } %>
+
+```

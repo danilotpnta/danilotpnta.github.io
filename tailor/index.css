@@ -1,0 +1,33 @@
+/* Start here */
+.show-anchor-link .anchorjs-link {
+    opacity: 1;
+}
+
+.updated-on-date{
+    margin-top: -0.3em;
+    padding-bottom: 1.2em;
+    color:#a1a1a1; 
+    font-weight: 350;
+    font-size: 0.95rem;
+}
+
+hr{
+    border-width: 1px;
+    border-style: solid;
+    border-color: #dee2e6;
+}
+
+.panel-caption, .figure-caption, figcaption {
+    color: #c8c8c8;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+figure>figcaption {
+    margin-top: 0em;
+}
+
+.rounded img {
+    border-radius: .42rem !important;
+}
+

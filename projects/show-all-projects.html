@@ -1,0 +1,158 @@
+<script id='script-part'>
+    var node;
+    var showCategories = false;
+    
+    // ------------------------- ON WINDOWS LOAD -------------------------
+    window.onload = function(){
+      var currentUrl = window.location.href;
+      var index_hashtag = currentUrl.lastIndexOf("#");
+      var index_slash = currentUrl.lastIndexOf("/");
+      // window.alert("index_hashtag: " + index_hashtag + " index_slash: " + index_slash);
+      
+      var filename1 = currentUrl.substr(index_hashtag);
+      var filename2 = currentUrl.substr(index_slash);
+      // window.alert("path#: " + filename1 + " path/: " + filename2);
+
+      if (! (index_hashtag === -1) ){
+        showCategories = true;
+        // window.alert("Bool changed: " + showCategories);
+        showhideCategory();
+      }
+
+      if (filename2 === "/"){
+        showCategories = false;
+        showhideCategory();
+      }
+
+      // Defining variables to handle hover and  
+      // background when https:....../#category= is reloaded
+      var index_equal = currentUrl.lastIndexOf("=");
+      var id_name = currentUrl.substr(index_equal);
+      
+      // Slice symbol "=", Shows only Category
+      id_name = id_name.slice(1);
+      
+      // If contains special chr "%20" then replace it to "\ "
+      const substr = "%20";
+      if (id_name.includes(substr)){
+        id_name = id_name.replace(substr, "\ ");        
+      } 
+
+      // Makes remaining Categories/Tags have normal hover
+      document.querySelectorAll('.array_categories').forEach(item => {
+        item_cleaned = item.textContent.trim();
+        if (! (item_cleaned === id_name)){
+          handle_id(item_cleaned, "grey");
+        }
+      });
+
+      // Makes focused Category/Tag have green background
+      handle_id(id_name, "rgba(88, 226, 104, 0.21)")
+
+    }
+
+    // ------------------------- ON # HASHTAG CHANGE -------------------------
+    window.addEventListener('hashchange', function() { 
+
+      var currentUrl = window.location.href;
+      var index_equal = currentUrl.lastIndexOf("=");
+      var id_name = currentUrl.substr(index_equal);
+      
+      // Slice symbol "=", Shows only Category
+      id_name = id_name.slice(1);
+      
+      // If contains special chr "%20" then replace it to "\ "
+      const substr = "%20";
+      if (id_name.includes(substr)){
+        id_name = id_name.replace(substr, "\ ");        
+      } 
+
+      // Makes remaining Categories/Tags have normal hover
+      document.querySelectorAll('.array_categories').forEach(item => {
+        item_cleaned = item.textContent.trim();
+        if (! (item_cleaned === id_name)){
+          handle_id(item_cleaned, "grey");
+        }
+      });
+
+      // Makes focused Category/Tag have green background
+      handle_id(id_name, "rgba(88, 226, 104, 0.21)")
+
+      showCategories = true;
+      showhideCategory();
+    });
+
+    // ------------------------- HELPER FUNCTIONS -------------------------
+    function handle_id(name, color) {
+
+      var elms = document.getElementsByClassName(name);
+
+      function changeColor(color) {
+        for(var i = 0; i < elms.length; i ++) {
+          elms[i].style.backgroundColor = color;
+        }
+      }
+
+      function handle_class(color_class, order) {
+        for(var i = 0; i < elms.length; i ++) {
+          if (order === "add") {
+            elms[i].classList.add(color_class);
+          }
+          if (order === "remove") {
+            elms[i].classList.remove(color_class);
+          }
+        }
+      }
+
+      for(var i = 0; i < elms.length; i ++) {
+        if (color == "grey"){
+          elms[i].classList.remove("hoverMainId")
+          // elms[i].onmouseover = function() { handle_class("hoverBg", "add"); };
+          // elms[i].onmouseout = function() { handle_class("hoverBg", "remove");};
+        } else {
+          // elms[i].style.backgroundColor = color;
+          elms[i].classList.add("hoverMainId")
+        }
+      }
+    }
+    
+
+    function showhideCategory() {
+      if (showCategories){
+
+          // DISABLE LINK: clickable-see-all-categories
+          var link = document.getElementById("clickable-see-all-categories")
+          link.style.pointerEvents = "all"
+
+          // Displays the arrow back
+          var div_reload = document.getElementById('reload-posts');
+          div_reload.style.display = "flex";
+          console.log("entering here")
+
+          // Displays the arrow back
+          var icon_reload = document.getElementById('reload-posts-icon');
+          icon_reload.style.display = "contents";
+          icon_reload.style.pointerEvents = "all"
+          icon_reload.classList.remove("color-show-posts")
+
+          var icon_reload_padding = document.getElementById('reload-posts-icon-padding');
+          icon_reload_padding.style.paddingBottom = "26px";
+
+      }
+      if (!showCategories){
+          node = document.getElementById('see-all-categories');
+          // node.style.marginBottom = '-3em';
+          // node.style.paddingBottom = '0.5em';
+          // node.remove();
+      }
+
+    }
+    
+    // One liner function:
+    // const addCSS = css => document.head.appendChild(document.createElement("style")).innerHTML=css;
+
+    // Usage: 
+    // addCSS("span#Optimization { color: blue; }")
+    // addCSS(" span.listing-category.Machine.Learning:hover >  span.listing-category.Machine.Learning { color: blue; }")
+
+</script>

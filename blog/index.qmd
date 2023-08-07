@@ -1,0 +1,568 @@
+---
+pagetitle: "Danilo Toapanta - Blog"
+listing:
+    - id: posts-2023
+      template: listing-blog.ejs
+      type: custom
+      contents: /
+      exclude: 
+        year: "2022"
+      sort: "date desc"
+      fields: [date, title, categories]
+      field-display-names:
+        date: " "
+        title: "  "
+        categories: " "
+      categories: false
+      sort-ui: false
+      filter-ui: false
+      date-format: MMM DD
+    - id: posts-2022
+      template: listing-blog.ejs
+      type: custom
+      contents: /
+      include: 
+        year: "2022"
+      sort: "date desc"
+      fields: [date, title, categories]
+      field-display-names:
+        date: " "
+        title: "  "
+        categories: " "
+      categories: false
+      sort-ui: false
+      filter-ui: false
+      date-format: MMM DD
+navbar: true
+title-block-banner: true
+sidebar: false
+include-after-body: show-all-posts.html
+css: index.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+```
+
+
+<!-- This activates option to run Javascript
+from garrick -->
+<!-- ```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE, warning = FALSE, message = FALSE
+)
+``` -->
+
+<!-- :::{.center .show-anchor-link .disable-border-bottom .padding_h1 .padding-top-bottom}
+# Writing {.unlisted .unnumbered }
+::: -->
+
+<p style="margin-bottom: 0px; padding-bottom: 30px;">
+  In this section Danilo writes down his notes, the things he has figured out about his computer, and ocasionally when feeling inspired he writes poems. 
+</p>
+
+<div class="background-color-show-posts" style="display: flex; justify-content: center; padding: 5px 0px;">
+<!-- <div style="display: flex; justify-content: center; padding-top: 10px; padding-bottom 8px;"> -->
+  <a id="clickable-see-all-posts" href="/blog" style="text-decoration: none; pointer-events: none;">
+    <p align="center" id="see-all-posts" class="color-show-posts" style="font-weight: 400; margin: 0px; padding: 0px; font-style:italic">
+        Showing All Posts 
+    </p>
+  </a>
+  <a id="clickable-see-all-posts" href="/blog" style="text-decoration: none; pointer-events: none;">
+    <p align="center" id="reload-posts-icon" class="color-show-posts" style="display:none; font-weight: 400; margin: 0px; padding: 0px; font-style:italic;">
+      Show All Posts <i style="padding-left:2px;" class='bi bi-arrow-counterclockwise'></i> 
+    </p>
+  </a>
+</div>
+
+:::{.grid-blog}
+:::{.main-content-blog}
+
+<div id= "show-tag-cat-selected" style="display:none;">
+  <p style="padding-top:40px; padding-bottom:5px; margin-bottom:0px; color: #838383;">
+    <span id="green_number_blog" style="padding-bottom:0px; margin-bottom:0px; color: #14ae73;">
+      # 
+    </span>
+    posts 
+    <span id="tagged_categorized_as" >
+      published:
+    </span>
+  </p>
+  <h1 id="tag_category_name" style="padding:0px 0px; margin: 0px 0px; padding-bottom:15px; border-bottom: none">Python</h1>
+</div>
+
+
+<h3 class="unlisted unnumbered no_anchor_link" style="margin-top: 0px; padding-top:30px; padding-bottom: 8px; font-size: 1.6rem;">2023</h3>
+
+:::{.datePadding .newFont_and_color}
+:::{#posts-2023}
+:::
+:::
+
+<h3 class="unlisted unnumbered no_anchor_link" style="margin-top: 0px; padding-top:20px; padding-bottom: 8px; font-size: 1.6rem;">2022</h3>
+
+:::{.datePadding .newFont_and_color}
+:::{#posts-2022}
+:::
+:::
+
+:::
+
+```{=html}
+<div class="sidebar-blog">
+  
+  <div class="post-sidebar-card">
+    <p class="post-sidebar-card-title" style="font-size: 14px; font-weight: 550; margin-bottom: 12px">
+    CATEGORIES
+    </p>  
+    <div id="list-blog-categories" class="list-blog">
+      
+      <!-- <a class="category" href="/categories/dev-ops">
+        <div class="name">DevOps</div>
+        <div class="count">#</div>
+      </a> -->
+
+    </div>  
+  </div>
+  
+  <div class="post-sidebar-card">
+    <p class="post-sidebar-card-title" style="font-size: 14px; font-weight: 550; margin-bottom: 12px">
+      TAGS
+    </p>
+    <div id="list-blog-tags" class="list-blog"></div>  
+  </div>
+
+</div>
+```
+
+:::
+
+
+```{js echo=FALSE}
+// This message is excecuted first before the js from show-all-postMessage.html
+// console.log("hello")
+
+var raw_array_categories = [];
+var raw_array_tags = [];
+var array_categories = {};
+var array_tags = {};
+
+getElements_from_array('.array_categories', raw_array_categories);
+getElements_from_array('.array_tags', raw_array_tags);
+
+// Sorting arrays alphabetically
+raw_array_categories.sort();
+raw_array_tags.sort();
+
+countElements(raw_array_categories, array_categories);
+countElements(raw_array_tags, array_tags);
+
+// Get all the elements store in an array and push it to array name
+function getElements_from_array (class_name, array_name){
+    document.querySelectorAll(class_name).forEach(item => {
+      item_cleaned = item.textContent.trim();
+      array_name.push(item_cleaned);
+    });
+}
+
+// Count same elements in array
+function countElements (array_to_be_counted,array_counts){
+  array_to_be_counted.forEach(function (x) { array_counts[x] = (array_counts[x] || 0) + 1; });
+}
+
+// console.log(raw_array_categories)
+// console.log(raw_array_tags)
+// console.log(array_categories)
+// console.log(array_tags)
+
+let list_categories = document.getElementById("list-blog-categories");
+
+Object.keys(array_categories).forEach((item) => {
+    let a = document.createElement("a");
+    a.className = "category";
+    a.href = `#category=${item}`
+    // a.id = `${item}` 
+
+    var div_name = document.createElement('div');
+    div_name.className = "name";
+    div_name.innerText = item;
+    a.appendChild(div_name);
+
+    var div_count = document.createElement('div');
+    div_count.className = "count";
+    div_count.innerText = array_categories[item];
+    a.appendChild(div_count);
+
+    list_categories.appendChild(a);
+});
+
+let list_tags = document.getElementById("list-blog-tags");
+
+Object.keys(array_tags).forEach((item) => {
+    let a = document.createElement("a");
+    a.className = "category";
+    a.href = `#category=${item}`
+    // a.id = `${item}` 
+
+    var div_name = document.createElement('div');
+    div_name.className = "name";
+    div_name.innerText = item;
+    a.appendChild(div_name);
+
+    var div_count = document.createElement('div');
+    div_count.className = "count";
+    div_count.innerText = array_tags[item];
+    a.appendChild(div_count);
+
+    list_tags.appendChild(a);
+});
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

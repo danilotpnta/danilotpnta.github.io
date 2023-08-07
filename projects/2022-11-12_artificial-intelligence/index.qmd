@@ -1,0 +1,16 @@
+---
+title: "AI Project"
+subtitle: "here you will learn how to blab lab"
+date: "2022-11-12"
+categories: [Python, LateX,  TAGS, Machine Learning, Algorithms]
+image: "image5.png"
+sidebar: false
+#number-sections: true
+source: https://github.com/danilotpnta/CS188_Artificial-Intelligence-Berkeley
+---
+
+
+
+
+
+

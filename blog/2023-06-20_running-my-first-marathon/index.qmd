@@ -1,0 +1,61 @@
+---
+title: "Running my first Marathon"
+description: "I will be running at the 42km TCS Amsterdam 2023, 15th October"
+date: "2023-06-20"
+# date-modified: last-modified
+categories: [Life, TAGS, Amsterdam, Running]
+links:
+  - icon: file-slides-fill
+    name: Slides
+    url: https://www.google.com/
+  - icon: github
+    name: Code
+    url: https://www.google.com/
+  - icon: play-btn-fill
+    name: Video
+    url: https://www.google.com/
+coming-soon: true
+---
+<!-- {{< mi account_circle >}} -->
+
+![TCS Marathon 2022 | Amsterdam, The Netherlands ](https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/polar-marathon-amsterdam-1665995197.jpeg)
+
+The idea of running a marathon its exiting. Specially when I did a half-marathon and reach the goal feeling a champ.  
+
+:::{.callout-note title="Disclamer"}
+I am in no way or shape perform at a competition level, but my interest and the environment that surounds running has pulled me the triger to get information from many sources. Thus, in this post I want to share my experience how I am training.
+:::
+
+# Background
+
+I have some experience running. In 2015, I joined the athletics team at my high-school. At the age of 17 years old there was I running long distances. Little do I know however on how to compete for more than 15km. Even though I have finished a half-marathon that was a long time ago (man how times flies).
+
+Thus, the thing that I consider important and among the ones I remember can be cited as follows:
+
+- 6 week day training
+- proper shoes
+- what you eat what you are
+- time tracking its important
+
+The question that comes to my mind is then: what is the difference between training for 10km or 42km. I will come back to this point and dont want to make it rocket science but for the rest of this post I will be sharing my learnings
+
+# The sources 
+One of the important resources that I consider is Youtube. Predictable, well yeah. I think tree quartes of my training have been done by watching at other people advise. It's also not surpisisng why I also would like to spend some time looking for the proper training schedule to prepare for the marathon.
+
+Statistics say that around 14 weeks are the bare minimum to prepare for a competition. At the time of writing this it would be around that limit so I feel confident that I would do well.
+
+## During the training
+To prepare runnign at be acustomed during the competition after looking at some post and blogs I have decided to come up with my own plan, the idea is to prepare it by my own because I will be still be bussy during the month of October
+
+For that reason, I have compelled the following traning plan, after looking analysis how other do it.
+
+
+
+## During the marathon
+
+### The pace
+
+From experience I know it can be tricky to fall into the tramp or going as fast as other people will do it. I have made this mistake and I find myself not sticking to my goals. The whole purpose of training its to test how capable I am and compare myself with myself. Thus, to avoid 'hittin the wall' I would like to analalize...
+
+
+
