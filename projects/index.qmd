@@ -1,0 +1,307 @@
+---
+pagetitle: "Danilo Toapanta - Projects"
+listing:
+    - id: projects
+      template: listing-projects.ejs
+      page-size: 25
+      contents: /
+      sort: "date desc"
+      type: grid
+      image-height: 150px
+      fields: [image, title, categories]
+      #field-display-names:
+        #date: " "
+        #title: "Title "
+      categories: false 
+      grid-columns: 3
+      #sort-ui: false
+      #filter-ui: true
+      #date-format: YYYY-MM-D
+sidebar: false
+# page-layout: full
+page-layout: article
+css: index.css
+include-after-body: show-all-projects.html
+# filters:
+#    - lightbox
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(knitr)
+```
+
+
+
+
+<!-- STARTING -->
+<!-- <div id="reload-posts" class="background-color-show-posts" style="display:none; justify-content: center; padding: 5px 0px;">
+  <a id="clickable-see-all-categories" href="/projects" style="text-decoration: none; pointer-events: none;">
+    <p align="center"  id="reload-posts-icon" class="color-show-posts" style="display:none; font-weight: 400; margin: 0px; padding: 0px; font-style:italic;">
+      Show All Projects <i style="padding-left:2px;" class='bi bi-arrow-counterclockwise'></i> 
+    </p>
+  </a>
+</div>
+<div id="reload-posts-icon-padding" style="padding-bottom:10px"></div> -->
+<!-- FINISHING -->
+
+```{=html}
+<div class="grid">
+
+  <div class="g-col-12 g-col-md-8 ">
+    <div id= "show-tag-cat-selected" style="display:contents;">
+      <p style="padding-top:0px; padding-bottom:5px; margin-bottom:0px; color: #838383;">
+        <span id="green_number_blog" style="padding-bottom:0px; margin-bottom:0px; color: #14ae73;">
+          # 
+        </span>
+        <span id="tagged_categorized_as" >
+          projects:
+        </span>
+      </p>
+      <h1 id="tag_category_name" style="padding:0px 0px; margin: 0px 0px; padding-bottom:25px; border-bottom: none">Published</h1>
+    </div>
+  </div>
+
+  <div class="g-col-12 g-col-md-4 ">
+    <div id="reload-posts" class="background-color-show-posts " style="display:none; justify-content: center; padding: 5px 0px;">
+      <a id="clickable-see-all-categories" href="/projects" style="text-decoration: none; pointer-events: none;">
+        <p align="center"  id="reload-posts-icon" class="color-show-posts" style="display:none; font-weight: 400; margin: 0px; padding: 0px; font-style:italic;">
+          Show All Projects <i style="padding-left:2px;" class='bi bi-arrow-counterclockwise'></i> 
+        </p>
+      </a>
+    </div>
+  </div>
+  
+</div>
+```
+
+:::{#projects}
+:::
+
+<!-- Here we go AGAIN-->
+
+
+<!-- ![](https://vimeo.com/115041822){.lightbox}
+
+<a href="https://vimeo.com/115041822" class="lightbox">
+  <p>This is how it will work but let us see</p>
+  <img src="https://images.unsplash.com/photo-1687360440094-949b8fe71c8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" style="width: 200px;" alt="image" />
+</a> -->
+
+
+
+
+```{js echo=FALSE}
+
+// document.addEventListener("DOMContentLoaded", function() {
+
+//   for (let step = 0; step < 5; step++) {
+  
+// 	if (window.location.href.indexOf("#exampleModalCenter") > -1) {
+// 		var mobileModal = new bootstrap.Modal(document.getElementById('exampleModalCenter'));
+// 		mobileModal.show();
+// 	}
+// });
+
+// var raw_id_modals = [];
+// getElements_from_array('.array_id_modals', raw_id_modals);
+// console.log(raw_id_modals);
+
+// // Get all the elements store in an array and push it to array name
+//     function getElements_from_array (class_name, array_name){
+//         document.querySelectorAll(class_name).forEach(item => {
+//           item_cleaned = item.textContent.trim();
+//           array_name.push(item_cleaned);
+//         });
+//     }
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
