@@ -1,0 +1,89 @@
+project:
+  type: website
+  preview:
+    port: 4200
+  output-dir: docs
+
+execute:
+  freeze: auto
+
+resources: 
+  - "CNAME"
+
+website:
+  back-to-top-navigation: false
+  favicon: 'assets/Danilo.png'
+#  site-path: "/danilotpnta.github.io/"  # when commented 404.html renders correctly
+  # site-url: https://danilotpnta.github.io/
+  site-url: "https://www.danilotpnta.com"
+  
+  title: "Danilo Toapanta"
+  # title: "danilo.dev"
+  search: false
+  navbar:
+    title: "<span id='danilo_topanta_brand'> Danilo Toapanta</span> <a id='mysite' class='mysite' href= '../../../../../sites/'>MySites</a>"
+    # logo-href: ../../../../../../sites/
+    right:
+      - text: "<span id='home-welcome-msg'>Home</span>"
+        file: index.qmd
+      - text: "Blog"
+        href: blog/index.qmd
+      - text: "Projects"
+        href: projects/index.qmd
+      - text: "About"
+        file: about/index.qmd
+      - icon: github
+        href: https://github.com/danilotpnta?tab=repositories
+        target: _blank
+      - icon: braces
+        # href: /dev/ # Replace for actual url
+        href: dev/ # Replace for actual url
+      # - icon: moon
+      #   href: about/qmd
+
+  page-footer:
+    center: 
+      # - text: "Mantained by Danilo Toapanta 
+      #        [[Newsletter](coming-soon.qmd)]{.a-padding-footer .disable-link-underline}
+      #        [[RSS](docs/sitemap.xml)]{.a-padding-footer .disable-link-underline}
+      #        "
+      - text: "[Mantained by Danilo Toapanta]{.footerDaniloToapanta}"
+        file: about/index.qmd
+      - text: "Newsletter"
+        file: coming-soon.qmd
+      - text: "RSS"
+        file: docs/sitemap.xml
+      # - icon: github
+      #   href: https://github.com/
+    # center: "Mantained by Danilo Toapanta </br> [[Source](https://github.com/danilotpnta/danilotpnta.github.io)]{.grey-link-underline} | License "
+#    right:
+#      - icon: github
+#        href: https://github.com/
+#      - icon: twitter
+#        href: https://twitter.com/
+
+format:
+  html:
+    page-layout: article
+    theme:
+      light: [default, styling/theme-light.scss]
+      dark:  [default, styling/theme-dark.scss]
+    grid:
+      body-width: 750px
+      sidebar-width: 250px
+    toc: true
+    toc-location: left
+    code-link: true
+    code-fold: show
+    highlight-style:
+      light: styling/atom-one-light.theme
+      dark: styling/dracula.theme
+
+#  output:
+#    html_document:
+#      includes:
+#        after_body: external-links/include_footer.html
+
+
+
+
