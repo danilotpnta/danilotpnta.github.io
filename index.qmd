@@ -65,9 +65,6 @@ This website is under construction. To review changes visit <a href="dev/index.q
 
 
 
-<!-- Here a change -->
-
-
 
 
 
