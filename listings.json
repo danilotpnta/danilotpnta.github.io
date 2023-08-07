@@ -1,18 +1,5 @@
 [
   {
-    "listing": "/projects/index.html",
-    "items": [
-      "/projects/2023-07-01_website/index.html",
-      "/projects/2023-05-26_mlp/index.html",
-      "/projects/2022-11-29_travel-sales-project/index.html",
-      "/projects/2023-05-29_computer-vision/index.html",
-      "/projects/2022-11-12_artificial-intelligence/index.html",
-      "/projects/2021-07-02_bsc-thesis/Python-demo.html",
-      "/projects/2020-05-12_cpp-project/Python-demo.html",
-      "/projects/2020-04-02_segway/index.html"
-    ]
-  },
-  {
     "listing": "/blog/index.html",
     "items": [
       "/blog/2023-07-29_cafe-negro-color-miel/index.html",
@@ -25,6 +12,19 @@
       "/blog/2023-01-12_2022-into-2023/index.html",
       "/blog/2022-12-29_cuando-miras-al-cielo/index.html",
       "/blog/2022-11-05_welcome/index.html"
+    ]
+  },
+  {
+    "listing": "/projects/index.html",
+    "items": [
+      "/projects/2023-07-01_website/index.html",
+      "/projects/2023-05-26_mlp/index.html",
+      "/projects/2022-11-29_travel-sales-project/index.html",
+      "/projects/2023-05-29_computer-vision/index.html",
+      "/projects/2022-11-12_artificial-intelligence/index.html",
+      "/projects/2021-07-02_bsc-thesis/Python-demo.html",
+      "/projects/2020-05-12_cpp-project/Python-demo.html",
+      "/projects/2020-04-02_segway/index.html"
     ]
   }
 ]

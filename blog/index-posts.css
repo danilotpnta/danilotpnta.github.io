@@ -123,12 +123,20 @@ div#TAGS-from-here ~ * {
         padding-right: 17px !important;
         padding-bottom: 0px !important;
     }
+
+    /* Makes a long grey line instead of Danilo Toapanta */
+    .navbar-brand-container-new-padding {
+        padding: 3px 0px;
+    }
 }
 
 /* Center back again the COMING SOON because of custom title-block.html */
 #main_404 {
     top: 55%;
 }
+
+
+
 
 
 

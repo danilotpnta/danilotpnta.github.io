@@ -66,10 +66,21 @@ window.document.addEventListener("DOMContentLoaded", function () {
     };
   }
 
+  // function headerOffset() {
+  //   // Set an offset if there is are fixed top navbar
+  //   const headerEl = window.document.querySelector("header.fixed-top");
+  //   if (headerEl) {
+  //     return headerEl.clientHeight;
+  //   } else {
+  //     return 0;
+  //   }
+  // }
+
   function headerOffset() {
     // Set an offset if there is are fixed top navbar
     const headerEl = window.document.querySelector("header.fixed-top");    
     if (headerEl) {
+
       // If the page is a blog post then return the height as 0
       const blogSection = window.document.querySelector("header.blog-page");
       if (blogSection){
