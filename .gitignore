@@ -3,3 +3,4 @@
 /.luarc.json
 /bin
 .DS_Store
+.idea
