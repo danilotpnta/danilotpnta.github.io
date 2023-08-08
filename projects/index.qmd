@@ -52,7 +52,7 @@ library(knitr)
   </div>
 
   <div class="g-col-12 g-col-md-4 order-1 order-md-2">
-    <div id="reload-posts" class="background-color-show-posts " style="display:flex; justify-content: center; padding: 5px 0px;">
+    <div id="reload-posts" class="background-color-show-posts " style="display:flex; justify-content: center; padding: 5px 0px; border-radius: 6px;">
       <a id="clickable-see-all-categories" href="/projects" style="text-decoration: none;">
         <p align="center"  id="reload-posts-icon" style=" font-weight: 400; margin: 0px; padding: 0px; font-style:italic;">
           Show All Projects <i style="padding-left:2px;" class='bi bi-arrow-counterclockwise'></i> 
@@ -67,6 +67,30 @@ library(knitr)
 
 :::{#projects}
 :::
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
