@@ -261,7 +261,7 @@ Show All Posts <i style="padding-left:2px;" class="bi bi-arrow-counterclockwise"
 <div class="main-content-blog">
 <div id="show-tag-cat-selected" style="display:none;">
 <p style="padding-top:40px; padding-bottom:5px; margin-bottom:0px; color: #838383;">
-<span id="green_number_blog" style="padding-bottom:0px; margin-bottom:0px; color: #14ae73;"> # </span> posts <span id="tagged_categorized_as"> published: </span>
+<span id="green_number_blog" style="padding-bottom:0px; margin-bottom:0px; color: #14ae73;"> # </span> <span id="tagged_categorized_as"> published: </span>
 </p>
 <h1 id="tag_category_name" style="padding:0px 0px; margin: 0px 0px; padding-bottom:15px; border-bottom: none">
 Python
@@ -553,8 +553,7 @@ No matching items
 </div>
 <div class="cell">
 <script type="text/javascript">
-// This message is excecuted first before the js from show-all-postMessage.html
-// console.log("hello")
+// This message is executed first before the js from show-all-postMessage.html
 
 var raw_array_categories = [];
 var raw_array_tags = [];
@@ -583,11 +582,6 @@ function getElements_from_array (class_name, array_name){
 function countElements (array_to_be_counted,array_counts){
   array_to_be_counted.forEach(function (x) { array_counts[x] = (array_counts[x] || 0) + 1; });
 }
-
-// console.log(raw_array_categories)
-// console.log(raw_array_tags)
-// console.log(array_categories)
-// console.log(array_tags)
 
 let list_categories = document.getElementById("list-blog-categories");
 
@@ -783,9 +777,18 @@ Object.keys(array_tags).forEach((item) => {
       number_green.textContent = number;
 
       var tag_cat_label = document.getElementById("tagged_categorized_as");
-      tag_cat_label.textContent = is_cat_or_tag;
+      let text1 = "post";
+      let text2 = "posts";
 
+      if (number == 1){
+        tag_cat_label.textContent = text1.concat(" ", is_cat_or_tag);
+      }
+      else{ 
+        tag_cat_label.textContent = text2.concat(" ", is_cat_or_tag);
+      }
+      
     }
+
 
     //Places the CATEGORY or TAG name to display
     function changeText(name_tu_put){
@@ -799,19 +802,11 @@ Object.keys(array_tags).forEach((item) => {
 
 
     function showhideCategory() {
-        // window.alert(showCategories); 
         if (showCategories){
         
-          // Makes VISIBLE an Element 
-          // node = document.getElementById('if-part');
-          // node.style.visibility = 'visible';
-          // node.style.marginBottom = '0em';
-
           // MAKE SHOW: "Show All Posts"
           var paragraph = document.getElementById("see-all-posts");
           paragraph.style.display = "none"
-          // paragraph.textContent = "Show All Posts";  
-          // paragraph.classList.remove("color-show-posts")
 
           // DISABLE LINK: clickable-see-all-categories
           var link = document.getElementById("clickable-see-all-posts")
@@ -823,15 +818,8 @@ Object.keys(array_tags).forEach((item) => {
           icon_reload.style.pointerEvents = "all"
           icon_reload.classList.remove("color-show-posts")
 
-
         }
-        if (!showCategories){
 
-          // node = document.getElementById('if-part');
-          // node.style.marginBottom = '-3em';
-          // node.style.paddingBottom = '0.5em';
-          // node.remove();
-        }
     }
     
 
