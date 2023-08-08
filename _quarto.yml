@@ -78,9 +78,6 @@ format:
     highlight-style:
       light: styling/atom-one-light.theme
       dark: styling/dracula.theme
-
-#  output:
-#    html_document:
-#      includes:
-#        after_body: external-links/include_footer.html
+    include-in-header:
+      - file: _partials/icons/add-icons.html
 

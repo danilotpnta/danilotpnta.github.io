@@ -16,8 +16,6 @@ format:
     template-partials:
       - ../_partials/blog/title-block.html
     code-overflow: wrap
-    include-in-header: 
-      - add-icons.html
     include-before-body:
       - change-title.html
 

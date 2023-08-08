@@ -15,8 +15,6 @@ format:
   html:
     template-partials:
       - ../_partials/projects/title-block.html
-    include-in-header: 
-      - add-dependencies.html
     code-overflow: wrap
     # grid:
     #   body-width: 700px
