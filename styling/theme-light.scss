@@ -442,8 +442,10 @@ thead, tbody, tfoot, tr, td, th {
 .quarto-title .quarto-categories .quarto-category{
     background-color: #f9e9f3;
     color: #5c2a48;
-    border-color: #5c2a486b;
+    border-color: #4e08321a;
+    // border-color: #f9e9f3;
 }
+
 
 // Eliminates padding in NOT MATCHING in BLOG
 .listing-no-matching {
@@ -500,7 +502,9 @@ code {
     color: #000000 !important;
     background-color: #efefef !important;
     border: solid 1px !important;
-    border-color: #efefef !important;
+    border-color: #e2e2e2 !important;
+    // border-color: #efefef !important;
+
 }
 
 #tag-icon-blog {
@@ -1378,4 +1382,5 @@ div.quarto-post {
     margin-top: -6px;
     margin-bottom: -6px;
 }
+
 
