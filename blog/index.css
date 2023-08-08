@@ -104,6 +104,9 @@ prev css styling would be replaced */
     .navbar-brand-container {
         display: flex;
     }
+    .navbar-collapse:not(.show) {
+        padding: 6px 0px;
+    }
 }
 .padding-top-bottom{
     padding: 7px 0px;
@@ -230,4 +233,9 @@ div#listing-posts-2022 .new_label_post {
 
 .by-danilo-toapanta{
     display: none;
+}
+
+/* Gives some opacity for the hastag icon */
+span.hasth-tag {
+    opacity: 0.4;
 }

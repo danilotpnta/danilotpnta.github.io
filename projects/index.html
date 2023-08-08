@@ -217,261 +217,112 @@ ul.task-list li input[type="checkbox"] {
       file-modified,
       reading-time,
       sortableValues -->
-<!-- HTML
-Javascript -->
-<!-- When it is undefined then you get errors using lenght and also can't acceses variables -->
-<!-- - Title: CV Project
-All Categories: Computer Vision,Control Systems
-Categories[0]: Computer Vision
-typeof: object
-isArray: true
-Length: 2
-Length: 2
-Object.keys: 0,1
-Category[0]: Computer Vision
-Category[1]: Control Systems -->
-<!-- 
-    </br>
-    - Title: Website
-    <br>
-    All Categories: HTML,Javascript,SCSS,TAGS,Blog,Research
-    <br> -->
-    <!-- Without the undefined detector error ocurrs -->
-    <!-- Categories[0]: HTML  
-    <br>
-    typeof: object
-    <br>   
-    isArray: true
-    <br> 
-    Length: 6
-    <br> 
-    Length: 6
-    <br> 
-    Object.keys: 0,1,2,3,4,5
-    <br>  -->
-    <!-- Now I can loop over the categories, before I couldnt because
-    one post has categories as Undefined -->
-    <!-- 
-        Category[0]: HTML
-        <br> 
-        Category[1]: Javascript
-        <br> 
-        Category[2]: SCSS
-        <br> 
-        Category[3]: TAGS
-        <br> 
-        Category[4]: Blog
-        <br> 
-        Category[5]: Research
-        <br> 
-    </br>
-    - Title: ML Project
-    <br>
-    All Categories: Python,OpenSpiel,TAGS,Machine Learning
-    <br> -->
-    <!-- Without the undefined detector error ocurrs -->
-    <!-- Categories[0]: Python  
-    <br>
-    typeof: object
-    <br>   
-    isArray: true
-    <br> 
-    Length: 4
-    <br> 
-    Length: 4
-    <br> 
-    Object.keys: 0,1,2,3
-    <br>  -->
-    <!-- Now I can loop over the categories, before I couldnt because
-    one post has categories as Undefined -->
-    <!-- 
-        Category[0]: Python
-        <br> 
-        Category[1]: OpenSpiel
-        <br> 
-        Category[2]: TAGS
-        <br> 
-        Category[3]: Machine Learning
-        <br> 
-    </br>
-    - Title: EA Project
-    <br>
-    All Categories: Python,Numba,TAGS,Optimization
-    <br> -->
-    <!-- Without the undefined detector error ocurrs -->
-    <!-- Categories[0]: Python  
-    <br>
-    typeof: object
-    <br>   
-    isArray: true
-    <br> 
-    Length: 4
-    <br> 
-    Length: 4
-    <br> 
-    Object.keys: 0,1,2,3
-    <br>  -->
-    <!-- Now I can loop over the categories, before I couldnt because
-    one post has categories as Undefined -->
-    <!-- 
-        Category[0]: Python
-        <br> 
-        Category[1]: Numba
-        <br> 
-        Category[2]: TAGS
-        <br> 
-        Category[3]: Optimization
-        <br> 
-    </br>
-    - Title: CV Project
-    <br>
-    All Categories: Python,Kaggle,Tensorflow,TAGS,Computer Vision,Control Systems
-    <br> -->
-    <!-- Without the undefined detector error ocurrs -->
-    <!-- Categories[0]: Python  
-    <br>
-    typeof: object
-    <br>   
-    isArray: true
-    <br> 
-    Length: 6
-    <br> 
-    Length: 6
-    <br> 
-    Object.keys: 0,1,2,3,4,5
-    <br>  -->
-    <!-- Now I can loop over the categories, before I couldnt because
-    one post has categories as Undefined -->
-    <!-- 
-        Category[0]: Python
-        <br> 
-        Category[1]: Kaggle
-        <br> 
-        Category[2]: Tensorflow
-        <br> 
-        Category[3]: TAGS
-        <br> 
-        Category[4]: Computer Vision
-        <br> 
-        Category[5]: Control Systems
-        <br> 
-    </br>
-    - Title: AI Project
-    <br>
-    All Categories: Python,LateX,TAGS,Machine Learning,Algorithms
-    <br> -->
-    <!-- Without the undefined detector error ocurrs -->
-    <!-- Categories[0]: Python  
-    <br>
-    typeof: object
-    <br>   
-    isArray: true
-    <br> 
-    Length: 5
-    <br> 
-    Length: 5
-    <br> 
-    Object.keys: 0,1,2,3,4
-    <br>  -->
-    <!-- Now I can loop over the categories, before I couldnt because
-    one post has categories as Undefined -->
-    <!-- 
-        Category[0]: Python
-        <br> 
-        Category[1]: LateX
-        <br> 
-        Category[2]: TAGS
-        <br> 
-        Category[3]: Machine Learning
-        <br> 
-        Category[4]: Algorithms
-        <br> 
-    </br>
-    - Title: BSc Thesis
-    <br>
-    All Categories: C++,LateX,Arduino,TAGS,Electrical Engineering
-    <br> -->
-    <!-- Without the undefined detector error ocurrs -->
-    <!-- Categories[0]: C++  
-    <br>
-    typeof: object
-    <br>   
-    isArray: true
-    <br> 
-    Length: 5
-    <br> 
-    Length: 5
-    <br> 
-    Object.keys: 0,1,2,3,4
-    <br>  -->
-    <!-- Now I can loop over the categories, before I couldnt because
-    one post has categories as Undefined -->
-    <!-- 
-        Category[0]: C++
-        <br> 
-        Category[1]: LateX
-        <br> 
-        Category[2]: Arduino
-        <br> 
-        Category[3]: TAGS
-        <br> 
-        Category[4]: Electrical Engineering
-        <br> 
-    </br>
-    - Title: C++ Project
-    <br>
-    All Categories: C++,TAGS,Software Engineering
-    <br> -->
-    <!-- Without the undefined detector error ocurrs -->
-    <!-- Categories[0]: C++  
-    <br>
-    typeof: object
-    <br>   
-    isArray: true
-    <br> 
-    Length: 3
-    <br> 
-    Length: 3
-    <br> 
-    Object.keys: 0,1,2
-    <br>  -->
-    <!-- Now I can loop over the categories, before I couldnt because
-    one post has categories as Undefined -->
-    <!-- 
-        Category[0]: C++
-        <br> 
-        Category[1]: TAGS
-        <br> 
-        Category[2]: Software Engineering
-        <br> 
-    </br>
-    - Title: Control Systems Project
-    <br>
-    All Categories: 20-sim,TAGS,Electrical Engineering
-    <br> -->
-    <!-- Without the undefined detector error ocurrs -->
-    <!-- Categories[0]: 20-sim  
-    <br>
-    typeof: object
-    <br>   
-    isArray: true
-    <br> 
-    Length: 3
-    <br> 
-    Length: 3
-    <br> 
-    Object.keys: 0,1,2
-    <br>  -->
-    <!-- Now I can loop over the categories, before I couldnt because
-    one post has categories as Undefined -->
-    <!-- 
-        Category[0]: 20-sim
-        <br> 
-        Category[1]: TAGS
-        <br> 
-        Category[2]: Electrical Engineering
-        <br> 
- -->
+<div style="display: none;">     
+        <!-- If -1 means there is no TAG written so go over the loop because
+        the rest of the array CATEGORIES could be "categories"  -->
+        <!--  If there is no CATEGORY written in post skip
+        adding this to the array_categories -->
+            <!-- HTML  -->
+            1
+            <!-- Javascript  -->
+            2
+            <!-- SCSS  -->
+            3
+        <!-- if there is no TAG written then do not continue this for-loop  -->
+            <!-- +1 to avoid inserting the name TAG -->
+                <!-- Blog -->
+                1
+                <!-- Research -->
+                2
+        <!-- If -1 means there is no TAG written so go over the loop because
+        the rest of the array CATEGORIES could be "categories"  -->
+        <!--  If there is no CATEGORY written in post skip
+        adding this to the array_categories -->
+            <!-- Python  -->
+            4
+            <!-- OpenSpiel  -->
+            5
+        <!-- if there is no TAG written then do not continue this for-loop  -->
+            <!-- +1 to avoid inserting the name TAG -->
+                <!-- Machine Learning -->
+                3
+        <!-- If -1 means there is no TAG written so go over the loop because
+        the rest of the array CATEGORIES could be "categories"  -->
+        <!--  If there is no CATEGORY written in post skip
+        adding this to the array_categories -->
+            <!-- Python  -->
+            6
+            <!-- Numba  -->
+            7
+        <!-- if there is no TAG written then do not continue this for-loop  -->
+            <!-- +1 to avoid inserting the name TAG -->
+                <!-- Optimization -->
+                4
+        <!-- If -1 means there is no TAG written so go over the loop because
+        the rest of the array CATEGORIES could be "categories"  -->
+        <!--  If there is no CATEGORY written in post skip
+        adding this to the array_categories -->
+            <!-- Python  -->
+            8
+            <!-- Kaggle  -->
+            9
+            <!-- Tensorflow  -->
+            10
+        <!-- if there is no TAG written then do not continue this for-loop  -->
+            <!-- +1 to avoid inserting the name TAG -->
+                <!-- Computer Vision -->
+                5
+                <!-- Control Systems -->
+                6
+        <!-- If -1 means there is no TAG written so go over the loop because
+        the rest of the array CATEGORIES could be "categories"  -->
+        <!--  If there is no CATEGORY written in post skip
+        adding this to the array_categories -->
+            <!-- Python  -->
+            11
+            <!-- LateX  -->
+            12
+        <!-- if there is no TAG written then do not continue this for-loop  -->
+            <!-- +1 to avoid inserting the name TAG -->
+                <!-- Machine Learning -->
+                7
+                <!-- Algorithms -->
+                8
+        <!-- If -1 means there is no TAG written so go over the loop because
+        the rest of the array CATEGORIES could be "categories"  -->
+        <!--  If there is no CATEGORY written in post skip
+        adding this to the array_categories -->
+            <!-- C++  -->
+            13
+            <!-- LateX  -->
+            14
+            <!-- Arduino  -->
+            15
+        <!-- if there is no TAG written then do not continue this for-loop  -->
+            <!-- +1 to avoid inserting the name TAG -->
+                <!-- Electrical Engineering -->
+                9
+        <!-- If -1 means there is no TAG written so go over the loop because
+        the rest of the array CATEGORIES could be "categories"  -->
+        <!--  If there is no CATEGORY written in post skip
+        adding this to the array_categories -->
+            <!-- C++  -->
+            16
+        <!-- if there is no TAG written then do not continue this for-loop  -->
+            <!-- +1 to avoid inserting the name TAG -->
+                <!-- Software Engineering -->
+                10
+        <!-- If -1 means there is no TAG written so go over the loop because
+        the rest of the array CATEGORIES could be "categories"  -->
+        <!--  If there is no CATEGORY written in post skip
+        adding this to the array_categories -->
+            <!-- 20-sim  -->
+            17
+        <!-- if there is no TAG written then do not continue this for-loop  -->
+            <!-- +1 to avoid inserting the name TAG -->
+                <!-- Electrical Engineering -->
+                11
+</div>
 <div class="list grid" style="column-gap: 23px; row-gap: .9rem;">
         <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
         <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-categories="HTML,Javascript,SCSS,TAGS,Blog,Research" data-listing-date-sort="1688162400000" data-listing-file-modified-sort="1691419960979" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
@@ -592,13 +443,6 @@ Category[1]: Control Systems -->
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
-                <div style="display: none"> 
-                                1
-                                2
-                                3
-                                4
-                                5
-                </div>
                 <!-- Displays Categories -->    
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
                     <!-- Keyword TAG in frontmatter not found 
@@ -763,11 +607,6 @@ Category[1]: Control Systems -->
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
-                <div style="display: none"> 
-                                6
-                                7
-                                8
-                </div>
                 <!-- Displays Categories -->    
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
                     <!-- Keyword TAG in frontmatter not found 
@@ -921,10 +760,6 @@ Category[1]: Control Systems -->
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
-                <div style="display: none"> 
-                                9
-                                10
-                </div>
                 <!-- Displays Categories -->    
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
                     <!-- Keyword TAG in frontmatter not found 
@@ -1090,12 +925,6 @@ Category[1]: Control Systems -->
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
-                <div style="display: none"> 
-                                11
-                                12
-                                13
-                                14
-                </div>
                 <!-- Displays Categories -->    
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
                     <!-- Keyword TAG in frontmatter not found 
@@ -1266,10 +1095,6 @@ Category[1]: Control Systems -->
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
-                <div style="display: none"> 
-                                15
-                                16
-                </div>
                 <!-- Displays Categories -->    
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
                     <!-- Keyword TAG in frontmatter not found 
@@ -1435,11 +1260,6 @@ Category[1]: Control Systems -->
                         Paper
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
-                <div style="display: none"> 
-                                17
-                                18
-                                19
-                </div>
                 <!-- Displays Categories -->    
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
                     <!-- Keyword TAG in frontmatter not found 
@@ -1588,9 +1408,6 @@ Category[1]: Control Systems -->
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
-                <div style="display: none"> 
-                                20
-                </div>
                 <!-- Displays Categories -->    
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
                     <!-- Keyword TAG in frontmatter not found 
@@ -1733,9 +1550,6 @@ Category[1]: Control Systems -->
                         Source
                         <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg>
                     </a> 
-                <div style="display: none"> 
-                                21
-                </div>
                 <!-- Displays Categories -->    
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
                     <!-- Keyword TAG in frontmatter not found 
@@ -1778,93 +1592,116 @@ Category[1]: Control Systems -->
                  -->
         </div>
 </div>
-    <p class="array_categories" style="display: none"> 
-        HTML
-    </p>
-    <p class="array_categories" style="display: none"> 
-        Javascript
-    </p>
-    <p class="array_categories" style="display: none"> 
-        SCSS
-    </p>
-    <p class="array_categories" style="display: none"> 
-        Blog
-    </p>
-    <p class="array_categories" style="display: none"> 
-        Research
-    </p>
-    <p class="array_categories" style="display: none"> 
-        Python
-    </p>
-    <p class="array_categories" style="display: none"> 
-        OpenSpiel
-    </p>
-    <p class="array_categories" style="display: none"> 
-        Machine Learning
-    </p>
-    <p class="array_categories" style="display: none"> 
-        Numba
-    </p>
-    <p class="array_categories" style="display: none"> 
-        Optimization
-    </p>
-    <p class="array_categories" style="display: none"> 
-        Kaggle
-    </p>
-    <p class="array_categories" style="display: none"> 
-        Tensorflow
-    </p>
-    <p class="array_categories" style="display: none"> 
-        Computer Vision
-    </p>
-    <p class="array_categories" style="display: none"> 
-        Control Systems
-    </p>
-    <p class="array_categories" style="display: none"> 
-        LateX
-    </p>
-    <p class="array_categories" style="display: none"> 
-        Algorithms
-    </p>
-    <p class="array_categories" style="display: none"> 
-        C++
-    </p>
-    <p class="array_categories" style="display: none"> 
-        Arduino
-    </p>
-    <p class="array_categories" style="display: none"> 
-        Electrical Engineering
-    </p>
-    <p class="array_categories" style="display: none"> 
-        Software Engineering
-    </p>
-    <p class="array_categories" style="display: none"> 
-        20-sim
-    </p>
-    <p class="array_id_modals" style="display: none"> 
-        Website
-    </p>
-    <p class="array_id_modals" style="display: none"> 
-        MLProject
-    </p>
-    <p class="array_id_modals" style="display: none"> 
-        EAProject
-    </p>
-    <p class="array_id_modals" style="display: none"> 
-        CVProject
-    </p>
-    <p class="array_id_modals" style="display: none"> 
-        AIProject
-    </p>
-    <p class="array_id_modals" style="display: none"> 
-        BScThesis
-    </p>
-    <p class="array_id_modals" style="display: none"> 
-        CProject
-    </p>
-    <p class="array_id_modals" style="display: none"> 
-        ControlSystemsProject
-    </p>
+<div style="display: none">
+        <p class="array_categories"> 
+            HTML
+        </p>
+        <p class="array_categories"> 
+            Javascript
+        </p>
+        <p class="array_categories"> 
+            SCSS
+        </p>
+        <p class="array_categories"> 
+            Python
+        </p>
+        <p class="array_categories"> 
+            OpenSpiel
+        </p>
+        <p class="array_categories"> 
+            Python
+        </p>
+        <p class="array_categories"> 
+            Numba
+        </p>
+        <p class="array_categories"> 
+            Python
+        </p>
+        <p class="array_categories"> 
+            Kaggle
+        </p>
+        <p class="array_categories"> 
+            Tensorflow
+        </p>
+        <p class="array_categories"> 
+            Python
+        </p>
+        <p class="array_categories"> 
+            LateX
+        </p>
+        <p class="array_categories"> 
+            C++
+        </p>
+        <p class="array_categories"> 
+            LateX
+        </p>
+        <p class="array_categories"> 
+            Arduino
+        </p>
+        <p class="array_categories"> 
+            C++
+        </p>
+        <p class="array_categories"> 
+            20-sim
+        </p>
+        <p class="array_tags"> 
+            Blog
+        </p>
+        <p class="array_tags"> 
+            Research
+        </p>
+        <p class="array_tags"> 
+            Machine Learning
+        </p>
+        <p class="array_tags"> 
+            Optimization
+        </p>
+        <p class="array_tags"> 
+            Computer Vision
+        </p>
+        <p class="array_tags"> 
+            Control Systems
+        </p>
+        <p class="array_tags"> 
+            Machine Learning
+        </p>
+        <p class="array_tags"> 
+            Algorithms
+        </p>
+        <p class="array_tags"> 
+            Electrical Engineering
+        </p>
+        <p class="array_tags"> 
+            Software Engineering
+        </p>
+        <p class="array_tags"> 
+            Electrical Engineering
+        </p>
+        <p class="array_id_modals"> 
+            Website
+        </p>
+        <p class="array_id_modals"> 
+            MLProject
+        </p>
+        <p class="array_id_modals"> 
+            EAProject
+        </p>
+        <p class="array_id_modals"> 
+            CVProject
+        </p>
+        <p class="array_id_modals"> 
+            AIProject
+        </p>
+        <p class="array_id_modals"> 
+            BScThesis
+        </p>
+        <p class="array_id_modals"> 
+            CProject
+        </p>
+        <p class="array_id_modals"> 
+            ControlSystemsProject
+        </p>
+</div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
@@ -1958,6 +1795,38 @@ No matching items
       // Makes focused Category/Tag have green background
       handle_id(id_name, "rgba(88, 226, 104, 0.21)")
 
+      var raw_array_categories = [];
+      var raw_array_tags = [];
+      var array_categories = {};
+      var array_tags = {};
+
+      getElements_from_array('.array_categories', raw_array_categories)
+      getElements_from_array('.array_tags', raw_array_tags)
+      countElements(raw_array_categories, array_categories);
+      countElements(raw_array_tags, array_tags);
+
+      console.log(raw_array_categories)
+      console.log(raw_array_tags)
+
+
+      // console.log(id_name)
+      // display the text only if there is a name for the tag or category
+      // and if is array of tags or categories
+      if( !(id_name === "") && ( (raw_array_categories.includes(id_name))  || (raw_array_tags.includes(id_name))  )) {
+        changeText(id_name);
+      }
+
+      if (raw_array_categories.includes(id_name)){
+        // console.log(`accesing dict category: ${array_categories[id_name]}, with id: ${id_name}`);
+        changeGreenNumber(array_categories[id_name], 'categorized:' );
+      } else {
+        // console.log(`accesing dict tags: ${array_tags[id_name]}, with id: ${id_name}`);
+        changeGreenNumber(array_tags[id_name],'tagged:');
+      }
+
+
+
+
     }
 
     // ------------------------- ON # HASHTAG CHANGE -------------------------
@@ -1989,21 +1858,46 @@ No matching items
 
       showCategories = true;
       showhideCategory();
+
+      var raw_array_categories = [];
+      var raw_array_tags = [];
+      var array_categories = {};
+      var array_tags = {};
+
+      getElements_from_array('.array_categories', raw_array_categories)
+      getElements_from_array('.array_tags', raw_array_tags)
+      countElements(raw_array_categories, array_categories);
+      countElements(raw_array_tags, array_tags);
+
+      // console.log(id_name)
+      // display the text only if there is a name for the tag or category
+      // and if is array of tags or categories
+      if( !(id_name === "") && ( (raw_array_categories.includes(id_name))  || (raw_array_tags.includes(id_name))  )) {
+        changeText(id_name);
+      }
+
+      if (raw_array_categories.includes(id_name)){
+        // console.log(`accesing dict category: ${array_categories[id_name]}, with id: ${id_name}`);
+        changeGreenNumber(array_categories[id_name], 'categorized:' );
+      } else {
+        // console.log(`accesing dict tags: ${array_tags[id_name]}, with id: ${id_name}`);
+        changeGreenNumber(array_tags[id_name],'tagged:');
+      }
+
     });
 
     // ------------------------- HELPER FUNCTIONS -------------------------
     function handle_id(name, color) {
-
       var elms = document.getElementsByClassName(name);
 
       function changeColor(color) {
-        for(var i = 0; i < elms.length; i ++) {
+        for (var i = 0; i < elms.length; i++) {
           elms[i].style.backgroundColor = color;
         }
       }
 
       function handle_class(color_class, order) {
-        for(var i = 0; i < elms.length; i ++) {
+        for (var i = 0; i < elms.length; i++) {
           if (order === "add") {
             elms[i].classList.add(color_class);
           }
@@ -2013,18 +1907,49 @@ No matching items
         }
       }
 
-      for(var i = 0; i < elms.length; i ++) {
+      for (var i = 0; i < elms.length; i ++) {
         if (color == "grey"){
           elms[i].classList.remove("hoverMainId")
-          // elms[i].onmouseover = function() { handle_class("hoverBg", "add"); };
-          // elms[i].onmouseout = function() { handle_class("hoverBg", "remove");};
         } else {
-          // elms[i].style.backgroundColor = color;
           elms[i].classList.add("hoverMainId")
         }
       }
     }
     
+    // Count same elements in array
+    function countElements (array_to_be_counted,array_counts){
+      array_to_be_counted.forEach(function (x) { array_counts[x] = (array_counts[x] || 0) + 1; });
+    }
+    
+    // Get all the elements store in an array and push it to array name
+    function getElements_from_array (class_name, array_name){
+        document.querySelectorAll(class_name).forEach(item => {
+          item_cleaned = item.textContent.trim();
+          array_name.push(item_cleaned);
+        });
+    }
+
+    // Places the number of CATEGORY or TAG posts counted
+    // and changes where is category or tag
+
+    function changeGreenNumber (number, is_cat_or_tag){
+      var number_green = document.getElementById("green_number_blog");
+      number_green.textContent = number;
+
+      var tag_cat_label = document.getElementById("tagged_categorized_as");
+      tag_cat_label.textContent = is_cat_or_tag;
+
+    }
+
+    //Places the CATEGORY or TAG name to display
+    function changeText(name_tu_put){
+      var tag_cat_name = document.getElementById("tag_category_name");
+      tag_cat_name.textContent = name_tu_put;  
+
+      var show_info_tag_cat = document.getElementById("show-tag-cat-selected");
+      show_info_tag_cat.style.display = "contents"  
+
+    }
 
     function showhideCategory() {
       if (showCategories){
