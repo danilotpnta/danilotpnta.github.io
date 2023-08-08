@@ -98,6 +98,7 @@ div#TAGS-from-here ~ * {
 .quarto-title .quarto-categories {
     /* margin-top: .75em !important;  */
      margin-top: 1em !important; 
+     padding-right: 2.5px;
 }
 
 .quarto-categories.tag-categories {
@@ -139,10 +140,6 @@ div#TAGS-from-here ~ * {
 #main_404 {
     top: 55%;
 }
-
-
-
-
 
 
 
