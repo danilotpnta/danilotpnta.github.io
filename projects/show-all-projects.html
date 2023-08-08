@@ -120,39 +120,18 @@
     function showhideCategory() {
       if (showCategories){
 
-          // DISABLE LINK: clickable-see-all-categories
-          var link = document.getElementById("clickable-see-all-categories")
-          link.style.pointerEvents = "all"
-
-          // Displays the arrow back
-          var div_reload = document.getElementById('reload-posts');
-          div_reload.style.display = "flex";
-          console.log("entering here")
-
-          // Displays the arrow back
-          var icon_reload = document.getElementById('reload-posts-icon');
-          icon_reload.style.display = "contents";
-          icon_reload.style.pointerEvents = "all"
-          icon_reload.classList.remove("color-show-posts")
+          // Displays two col grid
+          var icon_reload = document.getElementById('show-div-two-grid');
+          icon_reload.style.display = "grid";
 
           var icon_reload_padding = document.getElementById('reload-posts-icon-padding');
-          icon_reload_padding.style.paddingBottom = "26px";
+          icon_reload_padding.style.paddingBottom = "0px";
 
       }
       if (!showCategories){
           node = document.getElementById('see-all-categories');
-          // node.style.marginBottom = '-3em';
-          // node.style.paddingBottom = '0.5em';
-          // node.remove();
       }
 
     }
-    
-    // One liner function:
-    // const addCSS = css => document.head.appendChild(document.createElement("style")).innerHTML=css;
-
-    // Usage: 
-    // addCSS("span#Optimization { color: blue; }")
-    // addCSS(" span.listing-category.Machine.Learning:hover >  span.listing-category.Machine.Learning { color: blue; }")
 
 </script>

@@ -159,10 +159,10 @@ img.thumbnail-image.card-img {
 }
 
 
-@media (min-width: 570px){
-    /* Gives paddinmodalg to all main body content */
+@media (min-width: 992px){
+    /* Gives padding to all main body content */
     #quarto-content>* {
-        padding-top: 20px;
+        padding-top: 16px;
     }
 }
 

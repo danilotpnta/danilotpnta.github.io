@@ -47,7 +47,7 @@ library(knitr)
 <!-- FINISHING -->
 
 ```{=html}
-<div class="grid align-items-center" style="padding-bottom:25px;">
+<div id="show-div-two-grid" class="grid align-items-center" style="display:none; padding-bottom:25px;">
 
   <div class="g-col-12 g-col-md-8 order-2 order-md-1">
     <div id= "show-tag-cat-selected" style="display:contents;">
@@ -64,9 +64,9 @@ library(knitr)
   </div>
 
   <div class="g-col-12 g-col-md-4 order-1 order-md-2">
-    <div id="reload-posts" class="background-color-show-posts " style="display:none; justify-content: center; padding: 5px 0px;">
-      <a id="clickable-see-all-categories" href="/projects" style="text-decoration: none; pointer-events: none;">
-        <p align="center"  id="reload-posts-icon" class="color-show-posts" style="display:none; font-weight: 400; margin: 0px; padding: 0px; font-style:italic;">
+    <div id="reload-posts" class="background-color-show-posts " style="display:flex; justify-content: center; padding: 5px 0px;">
+      <a id="clickable-see-all-categories" href="/projects" style="text-decoration: none;">
+        <p align="center"  id="reload-posts-icon" style=" font-weight: 400; margin: 0px; padding: 0px; font-style:italic;">
           Show All Projects <i style="padding-left:2px;" class='bi bi-arrow-counterclockwise'></i> 
         </p>
       </a>
@@ -74,7 +74,10 @@ library(knitr)
   </div>
   
 </div>
+<div id="reload-posts-icon-padding" style="padding-bottom:10px"></div> 
 ```
+
+
 
 
 :::{#projects}
