@@ -84,7 +84,6 @@ knitr::opts_chunk$set(
     <span id="green_number_blog" style="padding-bottom:0px; margin-bottom:0px; color: #14ae73;">
       # 
     </span>
-    posts 
     <span id="tagged_categorized_as" >
       published:
     </span>
@@ -140,8 +139,7 @@ knitr::opts_chunk$set(
 
 
 ```{js echo=FALSE}
-// This message is excecuted first before the js from show-all-postMessage.html
-// console.log("hello")
+// This message is executed first before the js from show-all-postMessage.html
 
 var raw_array_categories = [];
 var raw_array_tags = [];
@@ -170,11 +168,6 @@ function getElements_from_array (class_name, array_name){
 function countElements (array_to_be_counted,array_counts){
   array_to_be_counted.forEach(function (x) { array_counts[x] = (array_counts[x] || 0) + 1; });
 }
-
-// console.log(raw_array_categories)
-// console.log(raw_array_tags)
-// console.log(array_categories)
-// console.log(array_tags)
 
 let list_categories = document.getElementById("list-blog-categories");
 
@@ -219,6 +212,8 @@ Object.keys(array_tags).forEach((item) => {
 });
 
 ```
+
+
 
 
 
