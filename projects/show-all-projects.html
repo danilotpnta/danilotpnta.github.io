@@ -49,6 +49,38 @@
       // Makes focused Category/Tag have green background
       handle_id(id_name, "rgba(88, 226, 104, 0.21)")
 
+      var raw_array_categories = [];
+      var raw_array_tags = [];
+      var array_categories = {};
+      var array_tags = {};
+
+      getElements_from_array('.array_categories', raw_array_categories)
+      getElements_from_array('.array_tags', raw_array_tags)
+      countElements(raw_array_categories, array_categories);
+      countElements(raw_array_tags, array_tags);
+
+      console.log(raw_array_categories)
+      console.log(raw_array_tags)
+
+
+      // console.log(id_name)
+      // display the text only if there is a name for the tag or category
+      // and if is array of tags or categories
+      if( !(id_name === "") && ( (raw_array_categories.includes(id_name))  || (raw_array_tags.includes(id_name))  )) {
+        changeText(id_name);
+      }
+
+      if (raw_array_categories.includes(id_name)){
+        // console.log(`accesing dict category: ${array_categories[id_name]}, with id: ${id_name}`);
+        changeGreenNumber(array_categories[id_name], 'categorized:' );
+      } else {
+        // console.log(`accesing dict tags: ${array_tags[id_name]}, with id: ${id_name}`);
+        changeGreenNumber(array_tags[id_name],'tagged:');
+      }
+
+
+
+
     }
 
     // ------------------------- ON # HASHTAG CHANGE -------------------------
@@ -80,21 +112,46 @@
 
       showCategories = true;
       showhideCategory();
+
+      var raw_array_categories = [];
+      var raw_array_tags = [];
+      var array_categories = {};
+      var array_tags = {};
+
+      getElements_from_array('.array_categories', raw_array_categories)
+      getElements_from_array('.array_tags', raw_array_tags)
+      countElements(raw_array_categories, array_categories);
+      countElements(raw_array_tags, array_tags);
+
+      // console.log(id_name)
+      // display the text only if there is a name for the tag or category
+      // and if is array of tags or categories
+      if( !(id_name === "") && ( (raw_array_categories.includes(id_name))  || (raw_array_tags.includes(id_name))  )) {
+        changeText(id_name);
+      }
+
+      if (raw_array_categories.includes(id_name)){
+        // console.log(`accesing dict category: ${array_categories[id_name]}, with id: ${id_name}`);
+        changeGreenNumber(array_categories[id_name], 'categorized:' );
+      } else {
+        // console.log(`accesing dict tags: ${array_tags[id_name]}, with id: ${id_name}`);
+        changeGreenNumber(array_tags[id_name],'tagged:');
+      }
+
     });
 
     // ------------------------- HELPER FUNCTIONS -------------------------
     function handle_id(name, color) {
-
       var elms = document.getElementsByClassName(name);
 
       function changeColor(color) {
-        for(var i = 0; i < elms.length; i ++) {
+        for (var i = 0; i < elms.length; i++) {
           elms[i].style.backgroundColor = color;
         }
       }
 
       function handle_class(color_class, order) {
-        for(var i = 0; i < elms.length; i ++) {
+        for (var i = 0; i < elms.length; i++) {
           if (order === "add") {
             elms[i].classList.add(color_class);
           }
@@ -104,18 +161,49 @@
         }
       }
 
-      for(var i = 0; i < elms.length; i ++) {
+      for (var i = 0; i < elms.length; i ++) {
         if (color == "grey"){
           elms[i].classList.remove("hoverMainId")
-          // elms[i].onmouseover = function() { handle_class("hoverBg", "add"); };
-          // elms[i].onmouseout = function() { handle_class("hoverBg", "remove");};
         } else {
-          // elms[i].style.backgroundColor = color;
           elms[i].classList.add("hoverMainId")
         }
       }
     }
     
+    // Count same elements in array
+    function countElements (array_to_be_counted,array_counts){
+      array_to_be_counted.forEach(function (x) { array_counts[x] = (array_counts[x] || 0) + 1; });
+    }
+    
+    // Get all the elements store in an array and push it to array name
+    function getElements_from_array (class_name, array_name){
+        document.querySelectorAll(class_name).forEach(item => {
+          item_cleaned = item.textContent.trim();
+          array_name.push(item_cleaned);
+        });
+    }
+
+    // Places the number of CATEGORY or TAG posts counted
+    // and changes where is category or tag
+
+    function changeGreenNumber (number, is_cat_or_tag){
+      var number_green = document.getElementById("green_number_blog");
+      number_green.textContent = number;
+
+      var tag_cat_label = document.getElementById("tagged_categorized_as");
+      tag_cat_label.textContent = is_cat_or_tag;
+
+    }
+
+    //Places the CATEGORY or TAG name to display
+    function changeText(name_tu_put){
+      var tag_cat_name = document.getElementById("tag_category_name");
+      tag_cat_name.textContent = name_tu_put;  
+
+      var show_info_tag_cat = document.getElementById("show-tag-cat-selected");
+      show_info_tag_cat.style.display = "contents"  
+
+    }
 
     function showhideCategory() {
       if (showCategories){

@@ -15,60 +15,39 @@
       reading-time,
       sortableValues -->
 
-
-<!-- <%= items[0].categories[0] %>
-<%= items[0].categories[1] %> -->
-
-<!-- When it is undefined then you get errors using lenght and also can't acceses variables -->
-
-<!-- - Title: CV Project
-All Categories: Computer Vision,Control Systems
-Categories[0]: Computer Vision
-typeof: object
-isArray: true
-Length: 2
-Length: 2
-Object.keys: 0,1
-Category[0]: Computer Vision
-Category[1]: Control Systems -->
-
-<!-- <% for (const here of items) { %>
-    </br>
-    <%= `- Title: ${here.title}` %>
-    <br>
-    <% if (typeof here.categories === 'undefined') { %>
-        <%= `YES`%>
-        <% continue %>
-        <br>  
-        <% } %>
-      
-    <%= `All Categories: ${ here.categories}` %>
-    <br> -->
-    <!-- Without the undefined detector error ocurrs -->
-    <!-- <%= `Categories[0]: ${ here.categories[0]}` %>  
-    <br>
-    <%= `typeof: ${typeof here.categories}` %>
-    <br>   
-    <%= `isArray: ${Array.isArray(here.categories)}` %>
-    <br> 
-    <%= `Length: ${(here.categories)?.length}` %>
-    <br> 
-    <%= `Length: ${here.categories.length}` %>
-    <br> 
-    <%= `Object.keys: ${Object.keys(here.categories)}` %>
-    <br>  -->
-
-    <!-- Now I can loop over the categories, before I couldnt because
-    one post has categories as Undefined -->
-    <!-- <% for(var i=0; i < here.categories.length; i++) { %>
-        <%= `Category[${i}]: ${here.categories[i]}` %>
-        <br> 
-        <% } %>
-    
-<% } %> -->
-
 <% let array_categories = [] %>
+<% let array_tags = [] %>
 <% let id_modals = [] %>
+
+<div style="display: none;">     
+    <% for (const post of items) {  %>
+        <% var tags_index = post.categories.indexOf("TAGS") %>
+
+        <!-- If -1 means there is no TAG written so go over the loop because
+        the rest of the array CATEGORIES could be "categories"  -->
+        <%  if (tags_index === -1) { %>
+            <% tags_index = post.categories.length %>
+        <% } %>
+
+        <!--  If there is no CATEGORY written in post skip
+        adding this to the array_categories -->
+        <% for(var k=0; k < tags_index;  k++ ) { %>                                               
+            <!-- <%= post.categories[k] %>  -->
+            <%= array_categories.push(post.categories[k]) %>
+        <% } %>
+        
+
+        <!-- if there is no TAG written then do not continue this for-loop  -->
+        <%  if ( !(post.categories.indexOf("TAGS") === -1)) { %> 
+            <!-- +1 to avoid inserting the name TAG -->
+            <% for(var j=tags_index +1; j< post.categories.length;  j++ ) { %>
+                <!-- <%= post.categories[j] %> -->
+                <%= array_tags.push(post.categories[j]) %>
+            <% } %>
+        <% } %>
+    <% } %>
+</div>
+
 <div class="list grid" style="column-gap: 23px; row-gap: .9rem;">
     <% for (const item of items) { %>
 
@@ -294,16 +273,6 @@ Category[1]: Control Systems -->
                     
                 <% var tags_index = item.categories.indexOf("TAGS") %>
 
-                <div style="display: none"> 
-                    <% for(var i=0; i < item.categories.length; i++) { %> 
-                        <%  if ( !(item.categories[i]=="TAGS") )  { %>
-                            <%  if ( !array_categories.includes(item.categories[i]) ) { %>
-                                <%= array_categories.push(item.categories[i]) %>
-                            <% } %>
-                        <% } %>                                                                                                     
-                    <% } %>
-                </div>
-
                 <!-- Displays Categories -->    
                 <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
                 
@@ -417,16 +386,28 @@ Category[1]: Control Systems -->
         <% } %>
 </div>
 
-<% for(var i=0; i < array_categories.length; i++) { %>   
-    <p class="array_categories" style="display: none"> 
-        <%= array_categories[i] %>
-    </p>
-<% } %>
+<div style="display: none">
+    <% for(var i=0; i < array_categories.length; i++) { %>   
+        <p class="array_categories" > 
+            <%= array_categories[i] %>
+        </p>
+    <% } %>
 
-<% for(var i=0; i < id_modals.length; i++) { %>   
-    <p class="array_id_modals" style="display: none"> 
-        <%= id_modals[i] %>
-    </p>
-<% } %>
+    <% for(var i=0; i < array_tags.length; i++) { %>   
+        <p class="array_tags" > 
+            <%= array_tags[i] %>
+        </p>
+    <% } %>
+    
+    <% for(var i=0; i < id_modals.length; i++) { %>   
+        <p class="array_id_modals" > 
+            <%= id_modals[i] %>
+        </p>
+    <% } %>
+
+</div>
+
 
 ```
+
+

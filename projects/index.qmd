@@ -78,8 +78,6 @@ library(knitr)
 ```
 
 
-
-
 :::{#projects}
 :::
 
@@ -120,6 +118,14 @@ library(knitr)
 //         });
 //     }
 ```
+
+
+
+
+
+
+
+
 
 
 
