@@ -14,9 +14,10 @@
       // window.alert("path#: " + filename1 + " path/: " + filename2);
 
       if (! (index_hashtag === -1) ){
-        showCategories = true;
-        // window.alert("Bool changed: " + showCategories);
-        showhideCategory();
+        if (currentUrl.includes("#category=")){
+          showCategories = true;
+          showhideCategory();
+        }
       }
 
       if (filename2 === "/"){
@@ -59,8 +60,8 @@
       countElements(raw_array_categories, array_categories);
       countElements(raw_array_tags, array_tags);
 
-      console.log(raw_array_categories)
-      console.log(raw_array_tags)
+      // console.log(raw_array_categories)
+      // console.log(raw_array_tags)
 
 
       // console.log(id_name)
@@ -110,8 +111,13 @@
       // Makes focused Category/Tag have green background
       handle_id(id_name, "rgba(88, 226, 104, 0.21)")
 
-      showCategories = true;
-      showhideCategory();
+      console.log()
+
+      if (currentUrl.includes("#category=")){
+        showCategories = true;
+        showhideCategory();
+      }
+
 
       var raw_array_categories = [];
       var raw_array_tags = [];
@@ -139,6 +145,9 @@
       }
 
     });
+
+
+
 
     // ------------------------- HELPER FUNCTIONS -------------------------
     function handle_id(name, color) {
@@ -214,6 +223,7 @@
     }
 
     function showhideCategory() {
+
       if (showCategories){
 
           // Displays two col grid
@@ -223,9 +233,6 @@
           var icon_reload_padding = document.getElementById('reload-posts-icon-padding');
           icon_reload_padding.style.paddingBottom = "0px";
 
-      }
-      if (!showCategories){
-          node = document.getElementById('see-all-categories');
       }
 
     }
