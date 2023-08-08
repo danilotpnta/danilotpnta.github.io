@@ -229,3 +229,32 @@ button.close.custom-modal-button{
 }
 
 
+.github-icon-projects{
+    font-size: 13px;
+    padding-left: 2px;
+}
+
+
+.listing-category {
+    font-size: 10.3px;
+}
+
+a.button, button {
+    font-size: 13.8px;
+}
+
+.tag-icon-projects{
+    /* color:#5f656ba1; */
+    color: #6c757dc9;
+    display: none !important;
+}
+
+.archive-icon-projects{
+    color: #6d757d;
+    font-size: 9.3px !important;
+}
+
+/* Disables the anchor from modal */
+a.anchorjs-link {
+    display: none;
+}
