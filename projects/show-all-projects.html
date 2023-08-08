@@ -191,8 +191,16 @@
       number_green.textContent = number;
 
       var tag_cat_label = document.getElementById("tagged_categorized_as");
-      tag_cat_label.textContent = is_cat_or_tag;
+      let text1 = "project";
+      let text2 = "projects";
 
+      if (number == 1){
+        tag_cat_label.textContent = text1.concat(" ", is_cat_or_tag);
+      }
+      else{ 
+        tag_cat_label.textContent = text2.concat(" ", is_cat_or_tag);
+      }
+      
     }
 
     //Places the CATEGORY or TAG name to display

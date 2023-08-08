@@ -5,7 +5,7 @@ date: "2023-07-01"
 categories: [ HTML, Javascript, SCSS, TAGS, Blog, Research]
 image: "image2.png"
 sidebar: false
-source: https://github.com/danilotpnta/danilotpnta.github.io
+source: https://github.com/danilotpnta/danilotpnta.github.io/tree/main
 ---
 
 
