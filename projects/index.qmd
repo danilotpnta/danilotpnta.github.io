@@ -29,10 +29,6 @@ knitr::opts_chunk$set(echo = TRUE)
 library(knitr)
 ```
 
-```{js echo=FALSE}
-// Insert code here
-```
-
 
 ```{=html}
 <div id="show-div-two-grid" class="grid align-items-center" style="display:none; padding-bottom:25px;">
@@ -67,6 +63,58 @@ library(knitr)
 
 :::{#projects}
 :::
+
+
+```{js echo=FALSE}
+
+var raw_id_modals = [];
+getElements_from_array('.array_id_modals', raw_id_modals);
+// console.log("here: " + raw_id_modals);
+
+// Get all the elements store in an array and push it to array name
+function getElements_from_array (class_name, array_name){
+    document.querySelectorAll(class_name).forEach(item => {
+      item_cleaned = item.textContent.trim();
+      array_name.push(item_cleaned);
+    });
+}
+
+var currentUrl = window.location.href;
+var index_hashtag = currentUrl.lastIndexOf("#");
+
+// If there is no # then result is -1
+if (index_hashtag > -1){
+
+  // Plus 1 to avoid getting the # symbol
+  var filename1 = currentUrl.substr(index_hashtag+1);
+  // console.log(`the filename: ${filename1} include: ${raw_id_modals.includes(filename1)}`)
+  // console.log("typeof: " + typeof filename1)
+
+  // If the name of the url is in the id modals then open modal
+  // this is useful when sharing links
+  if (raw_id_modals.includes(filename1)){
+    var mobileModal = new bootstrap.Modal(document.getElementById(filename1));
+    mobileModal.show();
+  }
+}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
