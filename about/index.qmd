@@ -38,7 +38,7 @@ https://www.google.com/search?q=university+of+twente -->
                 </main>
             </div>
         </div>
-        <img src="../assets/Danilo.jpeg" class="about-image rounded" style="width: 15em;">
+        <img src="../assets/danilo.jpeg" class="about-image rounded" style="width: 15em;">
     </div>
 </div>
 
