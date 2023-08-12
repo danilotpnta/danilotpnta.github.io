@@ -209,9 +209,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       
 
         <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-center justify-content-sm-start" role="group" aria-label="Post Links">
-                <a href="https://www.google.com/" class="btn btn-secondary"><i class="bi bi-file-slides-fill me-1"></i> Slides</a>
-                <a href="https://www.google.com/" class="btn btn-secondary"><i class="bi bi-github me-1"></i> Code</a>
-                <a href="https://www.google.com/" class="btn btn-secondary"><i class="bi bi-play-btn-fill me-1"></i> Video</a>
+                <a href="https://www.microsoft.com/en-us/edge/download?form=MA13FJ" class="btn btn-secondary"><i class="bi bi-download me-1"></i> Microsoft Edge</a>
+                <a href="https://github.com/danilotpnta/hammerspoon-config/blob/master/init.lua" class="btn btn-secondary"><i class="bi bi-github me-1"></i> Hammerspoon Code</a>
             </div>
     
 </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
@@ -221,9 +220,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#microsoft-edge" id="toc-microsoft-edge" class="nav-link active" data-scroll-target="#microsoft-edge">1. Microsoft Edge</a></li>
-  <li><a href="#hammerspoon" id="toc-hammerspoon" class="nav-link" data-scroll-target="#hammerspoon">2. Hammerspoon</a></li>
-  <li><a href="#honourable-mentions" id="toc-honourable-mentions" class="nav-link" data-scroll-target="#honourable-mentions">Honourable Mentions</a></li>
+  <li><a href="#microsoft-edge" id="toc-microsoft-edge" class="nav-link active" data-scroll-target="#microsoft-edge"><span class="header-section-number">1</span> Microsoft Edge</a></li>
+  <li><a href="#hammerspoon" id="toc-hammerspoon" class="nav-link" data-scroll-target="#hammerspoon"><span class="header-section-number">2</span> Hammerspoon</a>
+  <ul>
+  <li><a href="#windows-approach" id="toc-windows-approach" class="nav-link" data-scroll-target="#windows-approach"><span class="header-section-number">2.1</span> Windows Approach</a></li>
+  </ul></li>
+  <li><a href="#honourable-mentions" id="toc-honourable-mentions" class="nav-link" data-scroll-target="#honourable-mentions"><span class="header-section-number">3</span> Honourable Mentions</a></li>
   </ul>
 </nav>
 </nav>
@@ -411,28 +413,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <div class="quarto-title-meta-heading quick-links-title">Quick Links</div>
     <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-center justify-content-sm-start" role="group" aria-label="Post Links">
         <a id="quick-links-blog" href=" " class="btn btn-secondary" style="pointer-events: none; display: none;"><i class="bi bi-link-45deg me-1"></i> Quick Links:</a>
-                    <!-- Uses Bootstrap icons -->
-            <a href="https://www.google.com/" class="btn btn-secondary"><i class="bi bi-file-slides-fill me-1"></i> Slides</a>
-                    <!-- Uses Bootstrap icons -->
-            <a href="https://www.google.com/" class="btn btn-secondary"><i class="bi bi-github me-1"></i> Code</a>
-                    <!-- Uses Bootstrap icons -->
-            <a href="https://www.google.com/" class="btn btn-secondary"><i class="bi bi-play-btn-fill me-1"></i> Video</a>
+                                    <a href="https://www.microsoft.com/en-us/edge/download?form=MA13FJ" class="btn btn-secondary"><i class="bi bi-download me-1"></i> Microsoft Edge</a>
+                        
+                                    <a href="https://github.com/danilotpnta/hammerspoon-config/blob/master/init.lua" class="btn btn-secondary"><i class="bi bi-github me-1"></i> Hammerspoon Code</a>
+                        
             </div>
     
 </main>
 
-<section id="microsoft-edge" class="level3">
-<h3 class="anchored" data-anchor-id="microsoft-edge">1. Microsoft Edge</h3>
+<section id="microsoft-edge" class="level2 no-margin-top" data-number="1">
+<h2 class="no-margin-top anchored" data-number="1" data-anchor-id="microsoft-edge"><span class="header-section-number">1</span> Microsoft Edge</h2>
 <blockquote class="blockquote">
 <p>Prefer this over Safari because of add-ons. Chrome is the same</p>
 </blockquote>
 <p>I used it to install apps like YouTube or Google Translator so that when I hit a <a href="#hammerspoon">shortcut command</a>, it opens that app. Here it’s an example.</p>
 <p><img class="img-fluid" src="https://winaero.com/blog/wp-content/uploads/2019/12/Edge-Install-PWA-Site.png" alt="8" width="500"></p>
 </section>
-<section id="hammerspoon" class="level3">
-<h3 class="anchored" data-anchor-id="hammerspoon">2. Hammerspoon</h3>
+<section id="hammerspoon" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="hammerspoon"><span class="header-section-number">2</span> Hammerspoon</h2>
 <blockquote class="blockquote">
-<p><a href="https://www.hammerspoon.org/">App Link</a>. Creates global shortcuts</p>
+<p>I use this application to create global shortcuts. <a href="https://www.hammerspoon.org/">Donwload App</a></p>
 </blockquote>
 <p>Uses <code>Lua</code> programming language to assign keybindings to certain actions. Here a sneak peek of what can you do.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">--- Open App</span></span>
@@ -444,10 +444,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">end</span></span>
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">end</span></span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">end</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>For complete implementation visit this <a href="https://github.com/danilotpnta/hammerspoon-config">repo</a>.</p>
 <p>The above function can be called to open an <code>app: Google Maps</code> by an i.e.&nbsp;the shortcut: <code>⌘ + M</code></p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode lua code-with-copy"><code class="sourceCode lua"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">--- Binding Keys</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="va">hs</span><span class="op">.</span><span class="va">hotkey</span><span class="op">.</span>bind<span class="op">({</span> <span class="st">"cmd"</span> <span class="op">},</span> <span class="st">"M"</span><span class="op">,</span> open<span class="op">(</span><span class="st">"Google Maps"</span><span class="op">))</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>For complete implementation visit, this <a href="https://github.com/danilotpnta/hammerspoon-config">repo</a>.</p>
+<section id="windows-approach" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="windows-approach"><span class="header-section-number">2.1</span> Windows Approach</h3>
 For Windows alternative see the code below:
 <details>
 <summary>
@@ -470,8 +472,9 @@ Run, C:\Users\datoapnta\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Yo
 return</code></pre>
 </details>
 </section>
-<section id="honourable-mentions" class="level3">
-<h3 class="anchored" data-anchor-id="honourable-mentions">Honourable Mentions</h3>
+</section>
+<section id="honourable-mentions" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="honourable-mentions"><span class="header-section-number">3</span> Honourable Mentions</h2>
 <blockquote class="blockquote">
 <p>The apps above can do the same, but I like the UX interface.</p>
 </blockquote>

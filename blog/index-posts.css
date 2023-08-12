@@ -141,7 +141,21 @@ div#TAGS-from-here ~ * {
     top: 55%;
 }
 
+/* Disable h2 margin top */
+.no-margin-top{
+    margin-top: 0px;
+}
 
+/* Disables bottom border line in h2 title  */
 
+h2, .h2 {
+border-bottom: none;
+}
 
+#title-block-header.quarto-title-block.default .description, #title-block-header.quarto-title-block.default .abstract {
+    color: dimgray;
+}
 
+#title-block-header.quarto-title-block.default .quarto-title .title {
+    padding-bottom: 2px !important;
+}
