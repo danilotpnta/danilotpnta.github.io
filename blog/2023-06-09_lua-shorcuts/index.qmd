@@ -4,19 +4,24 @@ description: "Below the apps I use in a daily basis to make my life easier"
 date: "2023-06-09"
 categories: [Workflow, TAGS, Lua]
 links:
-  - icon: file-slides-fill
-    name: Slides
-    url: https://www.google.com/
+  #- icon: file-slides-fill
+   # name: Slides
+    #url: https://www.google.com/
+  - icon: download
+    name: Microsoft Edge
+    url: https://www.microsoft.com/en-us/edge/download?form=MA13FJ
   - icon: github
-    name: Code
-    url: https://www.google.com/
-  - icon: play-btn-fill
-    name: Video
-    url: https://www.google.com/
+    name: Hammerspoon Code
+    url: https://github.com/danilotpnta/hammerspoon-config/blob/master/init.lua
+ # - icon: play-btn-fill
+  #  name: Video
+   # url: https://www.google.com/
 # coming-soon: true
+toc-depth: 5
+number-sections: true
 ---
 
-### 1. Microsoft Edge
+## Microsoft Edge{.no-margin-top}
 > Prefer this over Safari because of add-ons. Chrome is the same
 
 I used it to install apps like YouTube or Google Translator so that when I hit a [shortcut command](#hammerspoon), it opens that app.
@@ -25,9 +30,9 @@ Here it's an example.
 <img class="img-fluid" src="https://winaero.com/blog/wp-content/uploads/2019/12/Edge-Install-PWA-Site.png" alt="8" width="500" />
 
 
-### 2. Hammerspoon
+## Hammerspoon
 
-> [App Link](https://www.hammerspoon.org/). Creates global shortcuts
+> I use this application to create global shortcuts. [Donwload App](https://www.hammerspoon.org/)
 
 Uses `Lua` programming language to assign keybindings to certain actions. Here a sneak peek of what can you do.
 ```lua
@@ -41,13 +46,17 @@ function open(name)
     end
 end
 ```
+
+For complete implementation visit this [repo](https://github.com/danilotpnta/hammerspoon-config).
+
 The above function can be called to open an `app: Google Maps` by an i.e. the shortcut: `⌘ + M`
 ```lua
 --- Binding Keys
 hs.hotkey.bind({ "cmd" }, "M", open("Google Maps"))
 ```
 
-For complete implementation visit, this [repo](https://github.com/danilotpnta/hammerspoon-config).
+
+### Windows Approach
 
 For Windows alternative see the code below:
 <details><summary>Code</summary>
@@ -69,7 +78,7 @@ For Windows alternative see the code below:
 </details>
 
 
-### Honourable Mentions
+## Honourable Mentions
 
 > The apps above can do the same, but I like the UX interface.
 
@@ -78,4 +87,6 @@ For Windows alternative see the code below:
 | [BetterTouchTool](https://folivora.ai/)   | Enables trackpad new gestures shortcuts |
 | [AutoHotkey](https://www.autohotkey.com/) | Same as Hammerspoon but for Windows     |
 | [Tiles](https://freemacsoft.net/tiles/)   | Windows manager (allows keybindings)    |
+
+
 
