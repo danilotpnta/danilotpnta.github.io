@@ -152,10 +152,3 @@ h2, .h2 {
 border-bottom: none;
 }
 
-#title-block-header.quarto-title-block.default .description, #title-block-header.quarto-title-block.default .abstract {
-    color: dimgray;
-}
-
-#title-block-header.quarto-title-block.default .quarto-title .title {
-    padding-bottom: 2px !important;
-}
