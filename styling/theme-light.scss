@@ -117,7 +117,7 @@ $font-size-base: 1.02rem;
         // background-color: #d9d9d9;
 
         // Increases padding up/down DANILO TOAPANTA
-        padding: 6px 0px;
+        padding: 7px 0px;
     } 
 
 
@@ -586,6 +586,10 @@ a.category.active, a.category.active .count, a.category:hover .count, a.category
 // Changes the background box of the poems page
 .poem-text {
     background: #d3d3d324;
+}
+
+#title-block-header.quarto-title-block.default .description, #title-block-header.quarto-title-block.default .abstract {
+    color: dimgray;
 }
 
 

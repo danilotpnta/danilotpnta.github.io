@@ -123,7 +123,7 @@ $font-size-base: 1.02rem;
         background-color: #171818;
 
         // Increases padding up/down DANILO TOAPANTA
-        padding: 6px 0px;
+        padding: 7px 0px;
         
     }
 
@@ -405,6 +405,10 @@ pre.sourceCode {
 // Changes in poems the color
 .by-danilo-toapanta {
     color: lightgrey;
+}
+
+#title-block-header.quarto-title-block.default .description, #title-block-header.quarto-title-block.default .abstract {
+    color: darkgrey;
 }
 
 
