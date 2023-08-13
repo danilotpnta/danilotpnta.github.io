@@ -2,7 +2,7 @@
 title: "Website"
 description: "In this project I have created a website to hold my notes, show my projects, share my contact details. If you are interested in the project make sure to click on the source icon to take a look at the complete source. Cheers "
 date: "2023-07-01"
-categories: [ HTML, Javascript, SCSS, TAGS, Blog, Research]
+categories: [All, HTML, Javascript, SCSS, TAGS, Blog, Research]
 image: "image2.png"
 sidebar: false
 source: https://github.com/danilotpnta/danilotpnta.github.io/tree/main

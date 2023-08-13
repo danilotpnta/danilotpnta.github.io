@@ -18,6 +18,7 @@
 <% let array_categories = [] %>
 <% let array_tags = [] %>
 <% let id_modals = [] %>
+<% let start_category_array = 1 %>
 
 <div style="display: none;">     
     <% for (const post of items) {  %>
@@ -126,7 +127,7 @@
                                                 <!-- Keyword TAG in frontmatter not found 
                                                     - Display the only ONE CATEGORY found --> 
                                                 <% if ( tags_index == -1 ) { %>
-                                                    <% for(var i=0; i < item.categories.length; i++) { %>    
+                                                    <% for(var i=start_category_array; i < item.categories.length; i++) { %>    
                                                         <!-- <span id="<%= item.categories[i] %>"  class="listing-category <%= item.categories[i] %>" > -->
                                                         <span class="listing-category <%= item.categories[i] %>" >
                                                             <a onclick="location.href='/projects/#category=<%= item.categories[i] %>';" data-bs-dismiss="modal" style="color: inherit; font-size: 0.95em;">
@@ -138,7 +139,7 @@
                                                 <!-- When Keyword TAG is found in frontmatter 
                                                     - Displays All CATEGORIES items -->
                                                 <% } else{ %>
-                                                    <% for(var i=0; i < tags_index; i++) { %>
+                                                    <% for(var i=start_category_array; i < tags_index; i++) { %>
                                                         <span class="listing-category <%= item.categories[i] %>" >
                                                             <!-- <a style="color: inherit; font-size: 0.95em;" href="/projects/#category=<%= item.categories[i] %>"> -->
                                                             <a onclick="location.href='/projects/#category=<%= item.categories[i] %>';" data-bs-dismiss="modal" style="color: inherit; font-size: 0.95em;">
@@ -262,7 +263,7 @@
                     <!-- Keyword TAG in frontmatter not found 
                         - Display the only ONE CATEGORY found --> 
                     <% if ( tags_index == -1 ) { %>
-                        <% for(var i=0; i < item.categories.length; i++) { %>    
+                        <% for(var i=start_category_array; i < item.categories.length; i++) { %>    
                             <!-- <span id="<%= item.categories[i] %>"  class="listing-category <%= item.categories[i] %>" > -->
                             <span class="listing-category <%= item.categories[i] %>" >
                                 <a style="color: inherit; font-size: 0.95em;" href="/projects/#category=<%= item.categories[i] %>">
@@ -274,7 +275,7 @@
                     <!-- When Keyword TAG is found in frontmatter 
                          - Displays All CATEGORIES items -->
                     <% } else{ %>
-                        <% for(var i=0; i < tags_index; i++) { %>
+                        <% for(var i=start_category_array; i < tags_index; i++) { %>
                             <span class="listing-category <%= item.categories[i] %>" >
                                 <a style="color: inherit; font-size: 0.95em;" href="/projects/#category=<%= item.categories[i] %>">
                                     <%= item.categories[i] %>

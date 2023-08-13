@@ -67,11 +67,7 @@
       // Display the text only if: There is a name for the tag or category
       // AND if that name is part of the array of tags or categories
       if( !(id_name === "")  &&  ( (raw_array_categories.includes(id_name))  || (raw_array_tags.includes(id_name))  )) {
-
-        // Display text if is NOT the id_name is: #category=All
-        if( !(id_name === "All")){
-          changeText(id_name);
-        }
+        changeText(id_name);
       }
 
       if (raw_array_categories.includes(id_name)){
@@ -130,7 +126,6 @@
         displayCategories(false);
       }  
         
-
       var raw_array_categories = [];
       var raw_array_tags = [];
       var array_categories = {};
@@ -145,11 +140,7 @@
       // Display the text only if: There is a name for the tag or category
       // AND if that name is part of the array of tags or categories
       if( !(id_name === "")  &&  ( (raw_array_categories.includes(id_name))  || (raw_array_tags.includes(id_name))  )) {
-
-        // Display text if is NOT the id_name is: #category=All
-        if( !(id_name === "All")){
-          changeText(id_name);
-        }
+        changeText(id_name);
       }
 
       if (raw_array_categories.includes(id_name)){
@@ -189,9 +180,7 @@
         });
     }
 
-    // Places the number of CATEGORY or TAG posts counted
-    // and changes where is category or tag
-
+    // Places the NUMBER counted and changes TEXT whether is category or tag
     function changeGreenNumber (number, is_cat_or_tag){
       var number_green = document.getElementById("green_number_blog");
       number_green.textContent = number;
@@ -235,6 +224,9 @@
       if (boolean == false) {
         var icon_reload = document.getElementById('show-div-two-grid');
         icon_reload.style.display = "none";
+
+        var icon_reload_padding = document.getElementById('reload-posts-icon-padding');
+        icon_reload_padding.style.paddingBottom = "10px";
       }
 
     }

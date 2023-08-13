@@ -2,7 +2,7 @@
 title: "CV Project"
 subtitle: "Project template showing an article"
 date: "2022-11-29"
-categories: [ Python, Kaggle, Tensorflow, TAGS, Computer Vision, Control Systems]
+categories: [All, Python, Kaggle, Tensorflow, TAGS, Computer Vision, Control Systems]
 image: "image.jpg"
 sidebar: false
 source: https://github.com/danilotpnta/ComputerVission

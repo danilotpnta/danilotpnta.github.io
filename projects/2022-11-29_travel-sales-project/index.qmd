@@ -2,6 +2,6 @@
 title: "EA Project"
 image: image.jpeg
 date: "2023-05-26"
-categories: [Python, Numba, TAGS, Optimization]
+categories: [All, Python, Numba, TAGS, Optimization]
 source: https://github.com/danilotpnta/TSP_EA
 ---

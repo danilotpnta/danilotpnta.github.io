@@ -2,6 +2,6 @@
 title: "Control Systems Project"
 image: image.png
 date: "2020-04-02"
-categories: [20-sim, TAGS, Electrical Engineering]
+categories: [All, 20-sim, TAGS, Electrical Engineering]
 source: https://github.com/danilotpnta/Segway
 ---
