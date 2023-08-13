@@ -58,11 +58,11 @@ knitr::opts_chunk$set(
 # Writing {.unlisted .unnumbered }
 ::: -->
 
-<p style="margin-bottom: 0px; padding-bottom: 30px;">
+<p style="margin-bottom: 0px; padding-bottom: 30px; display: none; ">
   In this section Danilo writes down his notes, the things he has figured out about his computer, and ocasionally when feeling inspired he writes poems. 
 </p>
 
-<div class="background-color-show-posts" style="display: flex; justify-content: center; padding: 5px 0px;">
+<div class="background-color-show-posts" style="display: flex; justify-content: center; padding: 5px 0px; border-radius: 5px;">
 <!-- <div style="display: flex; justify-content: center; padding-top: 10px; padding-bottom 8px;"> -->
   <a id="clickable-see-all-posts" href="/blog" style="text-decoration: none; pointer-events: none;">
     <p align="center" id="see-all-posts" class="color-show-posts" style="font-weight: 400; margin: 0px; padding: 0px; font-style:italic">
@@ -212,6 +212,10 @@ Object.keys(array_tags).forEach((item) => {
 });
 
 ```
+
+
+
+
 
 
 
