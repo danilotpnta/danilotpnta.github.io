@@ -17,7 +17,7 @@ css: index.css
 
 
 <span style="color:	rgb(128, 128, 128, 1); font-weight:550;">
-People also look at: 
+Quick links:
 </span>
 <a style = "text-decoration-color:rgba(163, 166, 168, 0.40); color: grey; )" href= "coming-soon.qmd">Slides</a>
 <span style="color:grey;"> |</span> 
