@@ -126,11 +126,20 @@ table.quarto-listing-table a {
     display: none;
 }
 
+
+:root{
+    /* --page-width: 950px; */
+    /* --col-cat-with: 245px; */
+
+    --page-width: 925px;
+    --col-cat-width: 218px;
+}
+
 @media (min-width: 992px) {
     body.floating .page-columns {
         display: grid;
         gap: 0;
-        grid-template-columns: [screen-start] 1.5em [screen-start-inset] 5fr [page-start] minmax(5px, 10px) [page-start-inset] minmax(10px, 30px) [body-start-outset] minmax(5px, 10px) [body-start] 1.5em [body-content-start] minmax(500px, calc( 950px - 3em )) [body-content-end] 1.5em [body-end] minmax(5px, 10px) [body-end-outset] minmax(10px, 30px) [page-end-inset] minmax(5px, 10px) [page-end] 5fr [screen-end-inset] 1.5em [screen-end] !important; 
+        grid-template-columns: [screen-start] 1.5em [screen-start-inset] 5fr [page-start] minmax(5px, 10px) [page-start-inset] minmax(10px, 30px) [body-start-outset] minmax(5px, 10px) [body-start] 1.5em [body-content-start] minmax(500px, calc( var(--page-width) - 3em )) [body-content-end] 1.5em [body-end] minmax(5px, 10px) [body-end-outset] minmax(10px, 30px) [page-end-inset] minmax(5px, 10px) [page-end] 5fr [screen-end-inset] 1.5em [screen-end] !important; 
     }
 }
 
@@ -138,7 +147,7 @@ table.quarto-listing-table a {
 .grid-blog {
     display: grid;
     gap: 3.2rem;
-    grid-template-columns: auto 245px;
+    grid-template-columns: auto var(--col-cat-width);
 }
 /* } */
 
@@ -238,4 +247,15 @@ div#listing-posts-2022 .new_label_post {
 /* Gives some opacity for the hastag icon */
 span.hasth-tag {
     opacity: 0.4;
+}
+
+/* reduces padding to right of number category  */
+.list-blog a {
+    padding-right: 7px;
+}
+
+@media (min-width: 570px){
+    #quarto-content>* {
+        padding-top: 24px;
+    }
 }
