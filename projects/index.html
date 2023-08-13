@@ -1653,7 +1653,6 @@ if (index_hashtag > -1){
       });
 
       // Makes focused Category/Tag have green background
-      // console.log("id_name: " +id_name);
       handle_id(id_name, "rgba(88, 226, 104, 0.21)")
 
       var raw_array_categories = [];
@@ -1687,7 +1686,7 @@ if (index_hashtag > -1){
     window.addEventListener('hashchange', function() { 
 
       var currentUrl = window.location.href;
-      console.log("currentUrl: " +currentUrl);
+      // console.log("currentUrl: " + currentUrl);
 
       var index_equal = currentUrl.lastIndexOf("=");
       var id_name = currentUrl.substr(index_equal);
@@ -1758,6 +1757,8 @@ if (index_hashtag > -1){
 
 
     // ------------------------- HELPER FUNCTIONS -------------------------
+
+    // Makes GREEN only to active category 
     function handle_id(name, color) {
       var elms = document.getElementsByClassName(name);
 

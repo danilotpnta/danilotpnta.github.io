@@ -159,6 +159,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
                     <!-- Display Categories -->
                                             <div class="quarto-category">
+                            <a href="../../blog/#category=All">
+                                All
+                            </a>
+                        </div> 
+                                            <div class="quarto-category">
                             <a href="../../blog/#category=Analysis">
                                 Analysis
                             </a>
@@ -220,9 +225,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     var index_init_post = currentUrl.lastIndexOf("/20");
     var string_init_post= currentUrl.slice(index_init_post, index_init_post+3 );
 
-    console.log("currentUrl: " + currentUrl);
-    console.log("index: " + index_init_post);
-    console.log("string: " + string_init_post);
+    // console.log("currentUrl: " + currentUrl);
+    // console.log("index: " + index_init_post);
+    // console.log("string: " + string_init_post);
 
     // If is equal to /blog/20... then make navbar title READING MODE
     if (string_init_post === "/20"){
@@ -301,6 +306,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
                         <i class="fa-solid fa-hashtag" ></i> Categories:
                     </div> -->
 
+                                            <div id="All" class="quarto-category">
+                            <a href="../../blog/#category=All">
+                                All
+                            </a>
+                        </div>
                                             <div id="Analysis" class="quarto-category">
                             <a href="../../blog/#category=Analysis">
                                 Analysis
@@ -321,6 +331,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
                     <!-- </div> -->
 
                     <!-- Display Tags -->
+                                            <div id="All-from-here" class="quarto-category tags-title" style="display: none;">
+                            <a href="../../blog/#category=All">
+                               <!-- <span class="hasth-tag">
+                                #
+                                </span> -->
+                                All
+                            </a>
+                        </div>
                                             <div id="Analysis-from-here" class="quarto-category tags-title" style="display: none;">
                             <a href="../../blog/#category=Analysis">
                                <!-- <span class="hasth-tag">

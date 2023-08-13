@@ -71,6 +71,10 @@ div#TAGS-from-here ~ * {
     display: inline !important;
 }
 
+div#All{
+    display: none;
+}
+
 /* Erase padding of BLOG title */
 /* .quarto-title h1.title {
     padding-bottom: 0px !important;
