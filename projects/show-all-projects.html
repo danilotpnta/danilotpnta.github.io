@@ -1,6 +1,4 @@
 <script id='script-part'>
-    var node;
-    var showCategories = false;
     
     // ------------------------- ON WINDOWS LOAD -------------------------
     window.onload = function(){
@@ -14,15 +12,9 @@
       // window.alert("path#: " + filename1 + " path/: " + filename2);
 
       if (! (index_hashtag === -1) ){
-        if (currentUrl.includes("#category=")){
-          showCategories = true;
-          showhideCategory();
+        if (currentUrl.includes("#category=") && !(currentUrl.includes("#category=All")) ){
+          displayCategories(true);
         }
-      }
-
-      if (filename2 === "/"){
-        showCategories = false;
-        showhideCategory();
       }
 
       // Defining variables to handle hover and  
@@ -39,15 +31,26 @@
         id_name = id_name.replace(substr, "\ ");        
       } 
 
-      // Makes remaining Categories/Tags have normal hover
+      // Makes remaining CATEGORIES have normal hover
       document.querySelectorAll('.array_categories').forEach(item => {
         item_cleaned = item.textContent.trim();
         if (! (item_cleaned === id_name)){
+          // console.log("item_cleaned_cat: " + item_cleaned);
+          handle_id(item_cleaned, "grey");
+        }
+      });
+
+      // Makes remaining TAGS have normal hover
+      document.querySelectorAll('.array_tags').forEach(item => {
+        item_cleaned = item.textContent.trim();
+        if (! (item_cleaned === id_name)){
+          // console.log("item_cleaned_tag: " + item_cleaned);
           handle_id(item_cleaned, "grey");
         }
       });
 
       // Makes focused Category/Tag have green background
+      // console.log("id_name: " +id_name);
       handle_id(id_name, "rgba(88, 226, 104, 0.21)")
 
       var raw_array_categories = [];
@@ -60,27 +63,24 @@
       countElements(raw_array_categories, array_categories);
       countElements(raw_array_tags, array_tags);
 
-      // console.log(raw_array_categories)
-      // console.log(raw_array_tags)
 
+      // Display the text only if: There is a name for the tag or category
+      // AND if that name is part of the array of tags or categories
+      if( !(id_name === "")  &&  ( (raw_array_categories.includes(id_name))  || (raw_array_tags.includes(id_name))  )) {
 
-      // console.log(id_name)
-      // display the text only if there is a name for the tag or category
-      // and if is array of tags or categories
-      if( !(id_name === "") && ( (raw_array_categories.includes(id_name))  || (raw_array_tags.includes(id_name))  )) {
-        changeText(id_name);
+        // Display text if is NOT the id_name is: #category=All
+        if( !(id_name === "All")){
+          changeText(id_name);
+        }
       }
 
       if (raw_array_categories.includes(id_name)){
-        // console.log(`accesing dict category: ${array_categories[id_name]}, with id: ${id_name}`);
+        // console.log(`accessing dict category: ${array_categories[id_name]}, with id: ${id_name}`);
         changeGreenNumber(array_categories[id_name], 'categorized:' );
       } else {
-        // console.log(`accesing dict tags: ${array_tags[id_name]}, with id: ${id_name}`);
+        // console.log(`accessing dict tags: ${array_tags[id_name]}, with id: ${id_name}`);
         changeGreenNumber(array_tags[id_name],'tagged:');
       }
-
-
-
 
     }
 
@@ -88,6 +88,8 @@
     window.addEventListener('hashchange', function() { 
 
       var currentUrl = window.location.href;
+      console.log("currentUrl: " +currentUrl);
+
       var index_equal = currentUrl.lastIndexOf("=");
       var id_name = currentUrl.substr(index_equal);
       
@@ -100,7 +102,7 @@
         id_name = id_name.replace(substr, "\ ");        
       } 
 
-      // Makes remaining Categories/Tags have normal hover
+      // Makes remaining CATEGORIES have normal hover
       document.querySelectorAll('.array_categories').forEach(item => {
         item_cleaned = item.textContent.trim();
         if (! (item_cleaned === id_name)){
@@ -108,16 +110,26 @@
         }
       });
 
+      // Makes remaining TAGS have normal hover
+      document.querySelectorAll('.array_tags').forEach(item => {
+        item_cleaned = item.textContent.trim();
+        if (! (item_cleaned === id_name)){
+          handle_id(item_cleaned, "grey");
+        }
+      });
+
       // Makes focused Category/Tag have green background
+      // console.log("id_name: " +id_name);
       handle_id(id_name, "rgba(88, 226, 104, 0.21)")
 
-      console.log()
-
-      if (currentUrl.includes("#category=")){
-        showCategories = true;
-        showhideCategory();
+      if (currentUrl.includes("#category=") ){
+        displayCategories(true);
       }
 
+      if (currentUrl.includes("#category=All")){
+        displayCategories(false);
+      }  
+        
 
       var raw_array_categories = [];
       var raw_array_tags = [];
@@ -129,11 +141,15 @@
       countElements(raw_array_categories, array_categories);
       countElements(raw_array_tags, array_tags);
 
-      // console.log(id_name)
-      // display the text only if there is a name for the tag or category
-      // and if is array of tags or categories
-      if( !(id_name === "") && ( (raw_array_categories.includes(id_name))  || (raw_array_tags.includes(id_name))  )) {
-        changeText(id_name);
+
+      // Display the text only if: There is a name for the tag or category
+      // AND if that name is part of the array of tags or categories
+      if( !(id_name === "")  &&  ( (raw_array_categories.includes(id_name))  || (raw_array_tags.includes(id_name))  )) {
+
+        // Display text if is NOT the id_name is: #category=All
+        if( !(id_name === "All")){
+          changeText(id_name);
+        }
       }
 
       if (raw_array_categories.includes(id_name)){
@@ -147,28 +163,9 @@
     });
 
 
-
-
     // ------------------------- HELPER FUNCTIONS -------------------------
     function handle_id(name, color) {
       var elms = document.getElementsByClassName(name);
-
-      function changeColor(color) {
-        for (var i = 0; i < elms.length; i++) {
-          elms[i].style.backgroundColor = color;
-        }
-      }
-
-      function handle_class(color_class, order) {
-        for (var i = 0; i < elms.length; i++) {
-          if (order === "add") {
-            elms[i].classList.add(color_class);
-          }
-          if (order === "remove") {
-            elms[i].classList.remove(color_class);
-          }
-        }
-      }
 
       for (var i = 0; i < elms.length; i ++) {
         if (color == "grey"){
@@ -222,17 +219,22 @@
 
     }
 
-    function showhideCategory() {
+    // Hides or Displays the two col grid div
+    function displayCategories(boolean) {
 
-      if (showCategories){
+      // Displays two col grid
+      if (boolean == true){
+        var icon_reload = document.getElementById('show-div-two-grid');
+        icon_reload.style.display = "grid";
 
-          // Displays two col grid
-          var icon_reload = document.getElementById('show-div-two-grid');
-          icon_reload.style.display = "grid";
+        var icon_reload_padding = document.getElementById('reload-posts-icon-padding');
+        icon_reload_padding.style.paddingBottom = "0px";
+      }
 
-          var icon_reload_padding = document.getElementById('reload-posts-icon-padding');
-          icon_reload_padding.style.paddingBottom = "0px";
-
+      // Hides two col grid
+      if (boolean == false) {
+        var icon_reload = document.getElementById('show-div-two-grid');
+        icon_reload.style.display = "none";
       }
 
     }
