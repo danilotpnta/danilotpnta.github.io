@@ -259,3 +259,8 @@ span.hasth-tag {
         padding-top: 24px;
     }
 }
+
+/* Always disable the message "No matching items" */
+.listing-no-matching{
+    display: none;
+}
