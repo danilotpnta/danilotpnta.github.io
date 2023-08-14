@@ -1,7 +1,5 @@
 <script id='script-part'>
-    var node;
     var showCategories = false;
-
 
     // ------------------------- ON WINDOWS LOAD -------------------------
     window.onload = function(){
@@ -51,6 +49,7 @@
       // and if is array of tags or categories
       if( !(id_name === "") && ( (raw_array_categories.includes(id_name))  || (raw_array_tags.includes(id_name))  )) {
         changeText(id_name);
+
       }
 
       if (raw_array_categories.includes(id_name)){
@@ -61,7 +60,59 @@
         changeGreenNumber(array_tags[id_name],'tagged:');
       }
 
+      // Changes back to normal dark grey div 'Showing all Posts'
+      if (currentUrl.includes("#category=All")){
+        displayCategories(false);
+        var show_info_tag_cat = document.getElementById("show-tag-cat-selected");
+        show_info_tag_cat.style.display = "none"  
+      }
 
+      // Makes remaining CATEGORIES have normal hover
+      document.querySelectorAll('.array_categories').forEach(item => {
+        item_cleaned = item.textContent.trim();
+        // console.log("item_cleaned_cat: " + item_cleaned);
+        if (! (item_cleaned === id_name)){
+          handle_id(item_cleaned, "grey");
+        }
+      });
+
+      // Makes remaining TAGS have normal hover
+      document.querySelectorAll('.array_tags').forEach(item => {
+        item_cleaned = item.textContent.trim();
+        // console.log("item_cleaned_tag: " + item_cleaned);
+        if (! (item_cleaned === id_name)){
+          handle_id(item_cleaned, "grey");
+        }
+      });
+
+      // Makes focused Category/Tag have green background
+      handle_id(id_name, "rgba(88, 226, 104, 0.21)")
+
+      // If the table listing does not have rows then erase "2023" and "No Matching..."
+      var raw_array_ids_tables = [];
+      getElements_from_array('.array_ids_tables', raw_array_ids_tables);
+
+      for (var i = 0; i < raw_array_ids_tables.length; i ++) {
+        // console.log(raw_array_ids_tables[i]);
+        let num_rows = document.getElementById(raw_array_ids_tables[i]).rows.length
+        // console.log(num_rows)
+
+        let titles_tables = document.getElementById(`${raw_array_ids_tables[i]}-title`);
+
+        if ( num_rows == 0 ){
+          titles_tables.style.display = "none" ; 
+        // } else if (currentUrl.includes("#category=All")){
+          // titles_tables.style.display = "inherit" ; 
+        } 
+        if ( num_rows > 0 ) {
+          titles_tables.style.display = "inherit" ; 
+        }
+        if (currentUrl.includes("#category=All")){
+          titles_tables.style.display = "inherit" ; 
+        }
+
+      }
+      
     }
 
     // ------------------------- ON # HASHTAG CHANGE -------------------------
@@ -102,7 +153,6 @@
       countElements(raw_array_categories, array_categories);
       countElements(raw_array_tags, array_tags);
 
-      // console.log(id_name)
       // display the text only if there is a name for the tag or category
       // and if is array of tags or categories
       if( !(id_name === "") && ( (raw_array_categories.includes(id_name))  || (raw_array_tags.includes(id_name))  )) {
@@ -117,10 +167,83 @@
         changeGreenNumber(array_tags[id_name],'tagged:');
       }
 
+      // Changes back to normal dark grey div 'Showing all Posts'
+      if (currentUrl.includes("#category=All")){
+        displayCategories(false);
+        var show_info_tag_cat = document.getElementById("show-tag-cat-selected");
+        show_info_tag_cat.style.display = "none"  
+      } 
+
+      // Makes remaining CATEGORIES have normal hover
+      document.querySelectorAll('.array_categories').forEach(item => {
+        item_cleaned = item.textContent.trim();
+        // console.log("item_cleaned_cat: " + item_cleaned);
+        if (! (item_cleaned === id_name)){
+          handle_id(item_cleaned, "grey");
+        }
+      });
+
+      // Makes remaining TAGS have normal hover
+      document.querySelectorAll('.array_tags').forEach(item => {
+        item_cleaned = item.textContent.trim();
+        // console.log("item_cleaned_tag: " + item_cleaned);
+        if (! (item_cleaned === id_name)){
+          handle_id(item_cleaned, "grey");
+        }
+      });
+
+      // Makes focused Category/Tag have green background
+      handle_id(id_name, "rgba(88, 226, 104, 0.21)")
+
+
+      // If the table listing does not have rows then erase "2023" and "No Matching..."
+      var raw_array_ids_tables = [];
+      getElements_from_array('.array_ids_tables', raw_array_ids_tables);
+
+      for (var i = 0; i < raw_array_ids_tables.length; i ++) {
+        // console.log(raw_array_ids_tables[i]);
+        let num_rows = document.getElementById(raw_array_ids_tables[i]).rows.length
+        // console.log(num_rows)
+
+        let titles_tables = document.getElementById(`${raw_array_ids_tables[i]}-title`);
+
+        if ( num_rows == 0 ){
+          titles_tables.style.display = "none" ; 
+        // } else if (currentUrl.includes("#category=All")){
+          // titles_tables.style.display = "inherit" ; 
+        } 
+        if ( num_rows > 0 ) {
+          titles_tables.style.display = "inherit" ; 
+        }
+
+        if (currentUrl.includes("#category=All")){
+          titles_tables.style.display = "inherit" ; 
+        }
+
+
+
+      }
 
     });
 
     // ------------------------- HELPER FUNCTIONS -------------------------
+
+    // Makes GREEN only to active category 
+    function handle_id(name, color) {
+      // console.log("name: " + name);
+      if ( !(name === "") && !(name === "All")  ){
+        // console.log("entering here");
+        var elm = document.getElementById(name);
+
+        if (color == "grey"){
+          elm.classList.remove("active")
+          elm.classList.remove("hoverMainId-blog")
+        } else {
+          elm.classList.add("active")
+          elm.classList.add("hoverMainId-blog")
+        }
+      }
+    }
 
     // Count same elements in array
     function countElements (array_to_be_counted,array_counts){
@@ -166,16 +289,61 @@
 
     }
 
+    // Hides or Displays the two col grid div
+    function displayCategories(boolean) {
+
+      // Displays "Show All Posts w/ Reload icon"
+      if (boolean == true){
+        
+        // HIDES: "Showing All Posts"
+        var paragraph = document.getElementById("showing-all-posts");
+        paragraph.style.display = "none"
+
+        // ENABLES LINK: clickable-show-all-categories
+        var link = document.getElementById("clickable-show-all-posts")
+        link.style.pointerEvents = "all"
+
+        // Displays the arrow back
+        var icon_reload = document.getElementById('reload-posts-icon');
+        icon_reload.style.display = "contents";
+        icon_reload.style.pointerEvents = "all"
+        icon_reload.classList.remove("color-show-posts")
+      }
+
+      // Hides "Show All Posts w/ Reload icon"
+      if (boolean == false) {
+
+        // HIDES: clickable-show-all-categories
+        // var link = document.getElementById("clickable-show-all-posts")
+        // link.style.display = "none"
+
+        // HIDES: "Showing All Posts "
+        var icon_reload = document.getElementById('reload-posts-icon');
+        icon_reload.style.display = "none";
+
+        // ENABLES: "Showing All Posts"
+        var paragraph = document.getElementById("showing-all-posts");
+        paragraph.style.display = "contents"
+
+        // DISABLE LINK: clickable-showing-all-categories
+        // var link = document.getElementById("clickable-showing-all-posts")
+        // link.style.pointerEvents = "none"
+
+
+      }
+
+    }
+    
 
     function showhideCategory() {
         if (showCategories){
         
-          // MAKE SHOW: "Show All Posts"
-          var paragraph = document.getElementById("see-all-posts");
+          // HIDES: "Showing All Posts"
+          var paragraph = document.getElementById("showing-all-posts");
           paragraph.style.display = "none"
 
-          // DISABLE LINK: clickable-see-all-categories
-          var link = document.getElementById("clickable-see-all-posts")
+          // ENABLES LINK: clickable-show-all-posts
+          var link = document.getElementById("clickable-show-all-posts")
           link.style.pointerEvents = "all"
 
           // Displays the arrow back

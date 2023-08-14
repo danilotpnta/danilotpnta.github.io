@@ -3,7 +3,7 @@ title: " Cuando miras al cielo <span class='by-danilo-toapanta'>by <a href='../.
 author: "Danilo Toapanta"
 date: "2022-12-29"
 year: "2022"
-categories: [Poems, TAGS, Spanish]
+categories: [All, Poems, TAGS, Spanish]
 navbar: false
 css: index.css
 ---

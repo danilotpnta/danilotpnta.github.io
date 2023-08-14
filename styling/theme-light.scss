@@ -576,6 +576,15 @@ a.category.active, a.category.active .count, a.category:hover .count, a.category
     color: #14ae73;
 }
 
+// a.category.active, a.category.active .count {
+//     color: #728371;
+// }
+
+
+// a.category:hover .count, a.category:hover .name {
+//     color: #14ae73;
+// }
+
 
 /* Gives Styling to new Button */
 .new_label_post{
@@ -590,6 +599,12 @@ a.category.active, a.category.active .count, a.category:hover .count, a.category
 
 #title-block-header.quarto-title-block.default .description, #title-block-header.quarto-title-block.default .abstract {
     color: dimgray;
+}
+
+.hoverMainId-blog{
+    // background-color: #75fc8845 !important;
+    pointer-events: none;
+    // border-radius: 4px;
 }
 
 
@@ -701,7 +716,7 @@ a.button:hover {
 /* This makes ONLY focused card from Projects
 to hover with the Green color */
 .hoverMainId{
-    background-color: rgba(88, 226, 104, 0.21);
+    background-color: rgba(88, 226, 104, 0.21) !important;
     pointer-events: none;
     border: solid 1px transparent;
 }

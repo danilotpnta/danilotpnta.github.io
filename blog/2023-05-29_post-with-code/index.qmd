@@ -1,7 +1,7 @@
 ---
 title: "Post With Code insane you will learn a lot, and beyond what you can comprehend"
 date: "2023-05-29"
-categories: [Analysis, TAGS, Testing]
+categories: [All, Analysis, TAGS, Testing]
 image: "image.jpg"
 sidebar: false
 toc-depth: 4

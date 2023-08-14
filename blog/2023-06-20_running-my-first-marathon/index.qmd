@@ -3,7 +3,7 @@ title: "Running my first Marathon"
 description: "I will be running at the 42km TCS Amsterdam 2023, 15th October"
 date: "2023-06-20"
 # date-modified: last-modified
-categories: [Life, TAGS, Amsterdam, Running]
+categories: [All, Life, TAGS, Amsterdam, Running]
 links:
   - icon: file-slides-fill
     name: Slides

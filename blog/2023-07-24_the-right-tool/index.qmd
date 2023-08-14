@@ -4,7 +4,7 @@ date: "2023-07-24"
 # date-modified: last-modified
 # categories: [ <i class='bi bi-archive'></i> DevOps, TAGS, Python, Shiny]                    // Bootstrap Icons
 # categories: [ "<i class='material-icons'>account_circle</i>",  DevOps, TAGS, Python, Shiny] // Material Icons
-categories: [DevOps, TAGS, Python, Shiny]
+categories: [All, DevOps, TAGS, Python, Shiny]
 format:
   html:
     toc: true

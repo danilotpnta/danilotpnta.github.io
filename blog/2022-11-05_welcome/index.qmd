@@ -3,7 +3,7 @@ title: "Welcome To My Blog"
 author: "Danilo Toapanta"
 date: "2022-11-05"
 year: "2022"
-categories: [News, TAGS, Spanish]
+categories: [All, News, TAGS, Spanish]
 
 ---
 

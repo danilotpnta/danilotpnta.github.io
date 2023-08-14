@@ -2,7 +2,7 @@
 title: "On the topic of Optimization"
 description: "Below the apps I use in a daily basis to make my life easier"
 date: "2023-06-09"
-categories: [Workflow, TAGS, Lua]
+categories: [All, Workflow, TAGS, Lua]
 links:
   #- icon: file-slides-fill
    # name: Slides
