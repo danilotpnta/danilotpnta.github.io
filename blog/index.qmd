@@ -3,6 +3,8 @@ pagetitle: "Danilo Toapanta - Blog"
 listing:
     - id: posts-2023
       template: listing-blog.ejs
+      template-params:
+        param1: "2023"
       type: custom
       contents: /
       exclude: 
@@ -19,6 +21,8 @@ listing:
       date-format: MMM DD
     - id: posts-2022
       template: listing-blog.ejs
+      template-params:
+        param1: "2022"
       type: custom
       contents: /
       include: 
@@ -40,23 +44,11 @@ include-after-body: show-all-posts.html
 css: index.css
 ---
 
+<!-- This activates option to run Javascript -->
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(knitr)
 ```
-
-
-<!-- This activates option to run Javascript
-from garrick -->
-<!-- ```{r setup, include=FALSE}
-knitr::opts_chunk$set(
-  echo = FALSE, warning = FALSE, message = FALSE
-)
-``` -->
-
-<!-- :::{.center .show-anchor-link .disable-border-bottom .padding_h1 .padding-top-bottom}
-# Writing {.unlisted .unnumbered }
-::: -->
 
 <p style="margin-bottom: 0px; padding-bottom: 30px; display: none; ">
   In this section Danilo writes down his notes, the things he has figured out about his computer, and ocasionally when feeling inspired he writes poems. 
@@ -64,17 +56,18 @@ knitr::opts_chunk$set(
 
 <div class="background-color-show-posts" style="display: flex; justify-content: center; padding: 5px 0px; border-radius: 5px;">
 <!-- <div style="display: flex; justify-content: center; padding-top: 10px; padding-bottom 8px;"> -->
-  <a id="clickable-see-all-posts" href="/blog" style="text-decoration: none; pointer-events: none;">
-    <p align="center" id="see-all-posts" class="color-show-posts" style="font-weight: 400; margin: 0px; padding: 0px; font-style:italic">
+  <a id="clickable-showing-all-posts" href="/blog" style="text-decoration: none; pointer-events: none;">
+    <p align="center" id="showing-all-posts" class="color-show-posts" style="font-weight: 400; margin: 0px; padding: 0px; font-style:italic">
         Showing All Posts 
     </p>
   </a>
-  <a id="clickable-see-all-posts" href="/blog" style="text-decoration: none; pointer-events: none;">
+  <a id="clickable-show-all-posts" href="/blog/#category=All" style="text-decoration: none; pointer-events: none;">
     <p align="center" id="reload-posts-icon" class="color-show-posts" style="display:none; font-weight: 400; margin: 0px; padding: 0px; font-style:italic;">
       Show All Posts <i style="padding-left:2px;" class='bi bi-arrow-counterclockwise'></i> 
     </p>
   </a>
 </div>
+
 
 :::{.grid-blog}
 :::{.main-content-blog}
@@ -91,15 +84,16 @@ knitr::opts_chunk$set(
   <h1 id="tag_category_name" style="padding:0px 0px; margin: 0px 0px; padding-bottom:15px; border-bottom: none">Python</h1>
 </div>
 
+<!-- <h3 class="unlisted unnumbered no_anchor_link" style="margin-top: 0px; padding-top:30px; padding-bottom: 8px; font-size: 1.6rem;">2023</h3> -->
 
-<h3 class="unlisted unnumbered no_anchor_link" style="margin-top: 0px; padding-top:30px; padding-bottom: 8px; font-size: 1.6rem;">2023</h3>
+<div style="padding-top:10px; "></div>
 
 :::{.datePadding .newFont_and_color}
 :::{#posts-2023}
 :::
 :::
 
-<h3 class="unlisted unnumbered no_anchor_link" style="margin-top: 0px; padding-top:20px; padding-bottom: 8px; font-size: 1.6rem;">2022</h3>
+<!-- <h3 class="unlisted unnumbered no_anchor_link" style="margin-top: 0px; padding-top:20px; padding-bottom: 8px; font-size: 1.6rem;">2022</h3> -->
 
 :::{.datePadding .newFont_and_color}
 :::{#posts-2022}
@@ -116,12 +110,6 @@ knitr::opts_chunk$set(
     CATEGORIES
     </p>  
     <div id="list-blog-categories" class="list-blog">
-      
-      <!-- <a class="category" href="/categories/dev-ops">
-        <div class="name">DevOps</div>
-        <div class="count">#</div>
-      </a> -->
-
     </div>  
   </div>
   
@@ -134,7 +122,6 @@ knitr::opts_chunk$set(
 
 </div>
 ```
-
 :::
 
 
@@ -150,6 +137,7 @@ getElements_from_array('.array_categories', raw_array_categories);
 getElements_from_array('.array_tags', raw_array_tags);
 
 // Sorting arrays alphabetically
+// console.log("raw_array_categories: " +  raw_array_categories)
 raw_array_categories.sort();
 raw_array_tags.sort();
 
@@ -172,15 +160,19 @@ function countElements (array_to_be_counted,array_counts){
 let list_categories = document.getElementById("list-blog-categories");
 
 Object.keys(array_categories).forEach((item) => {
+  
+  // Skips creating a Category NAME called "All"
+  if ( !(item === "All") ){
     let a = document.createElement("a");
     a.className = "category";
-    a.href = `#category=${item}`
-    // a.id = `${item}` 
+    a.href = `#category=${item}`;
+    a.setAttribute("id", item);
 
     var div_name = document.createElement('div');
     div_name.className = "name";
     div_name.innerText = item;
     a.appendChild(div_name);
+
 
     var div_count = document.createElement('div');
     div_count.className = "count";
@@ -188,6 +180,7 @@ Object.keys(array_categories).forEach((item) => {
     a.appendChild(div_count);
 
     list_categories.appendChild(a);
+  }
 });
 
 let list_tags = document.getElementById("list-blog-tags");
@@ -195,8 +188,8 @@ let list_tags = document.getElementById("list-blog-tags");
 Object.keys(array_tags).forEach((item) => {
     let a = document.createElement("a");
     a.className = "category";
-    a.href = `#category=${item}`
-    // a.id = `${item}` 
+    a.href = `#category=${item}`;
+    a.setAttribute("id", item);
 
     var div_name = document.createElement('div');
     div_name.className = "name";
@@ -211,7 +204,84 @@ Object.keys(array_tags).forEach((item) => {
     list_tags.appendChild(a);
 });
 
+
+
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
