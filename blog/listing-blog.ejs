@@ -1,7 +1,14 @@
 ```{=html}
 <% let array_categories = [] %>
 <% let array_tags = [] %>
+<% let start_category_array = 1 %>
+<% let array_id_tables = [] %>
+
 <div style="display: none;">     
+    
+    <!-- For loading the IDs NAMES from tables -->
+    <%  array_id_tables.push(`${templateParams.param1}-table`) %>
+
     <% for (const post of items) {  %>
         <% var tags_index = post.categories.indexOf("TAGS") %>
 
@@ -13,7 +20,7 @@
 
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
-        <% for(var k=0; k < tags_index;  k++ ) { %>                                               
+        <% for(var k=start_category_array; k < tags_index;  k++ ) { %>                                               
             <!-- <%= post.categories[k] %>  -->
             <%= array_categories.push(post.categories[k]) %>
         <% } %>
@@ -27,10 +34,15 @@
                 <%= array_tags.push(post.categories[j]) %>
             <% } %>
         <% } %>
+
     <% } %>
 </div>
 
-<table class="quarto-listing-table table">
+
+<table id="<%= templateParams.param1 %>-table" class="quarto-listing-table table">
+    
+    <h3 id="<%= templateParams.param1 %>-table-title" class="unlisted unnumbered no_anchor_link" style="margin-top: 0px; padding-top:20px; padding-bottom: 8px; font-size: 1.6rem;"><%= templateParams.param1 %></h3>
+
     <tbody class="list">
         <% var counter = 0 %>
         <% var even_odd = "none" %>
@@ -107,6 +119,11 @@
     <% for(var i=0; i < array_tags.length; i++) { %>   
         <p class="array_tags" > 
             <%= array_tags[i] %>
+        </p>
+    <% } %>
+    <% for(var i=0; i < array_id_tables.length; i++) { %>   
+        <p class="array_ids_tables" > 
+            <%= array_id_tables[i] %>
         </p>
     <% } %>
 </div>
