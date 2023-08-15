@@ -38,7 +38,8 @@ footer.footer {
     display:block;
     font-size: 16px;
     font-weight: 300;
-    padding-top: 5px;
+    padding-top: 3px;
+    padding-bottom: 4px;
 }
 
 .by-danilo-toapanta a{
@@ -58,3 +59,7 @@ footer.footer {
     margin-bottom: 0em !important;
 }
 
+h1.title, .title.h1 {
+    margin-bottom: 0px !important;
+    padding-bottom: 0px !important;
+}
