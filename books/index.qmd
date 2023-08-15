@@ -4,12 +4,13 @@ css: index.css
 sidebar: false
 ---
 
-:::{.center .show-anchor-link}
-## Books{.unlisted .unnumbered}
+<!-- :::{.center .show-anchor-link} -->
+:::{.center }
+# Books{.unlisted .unnumbered .mod-title}
 :::
 
 <!-- ## Books {.unlisted .unnumbered} -->
-This section covers various books that I have read and think are worth reading.
+This section covers various books that I have read and think are worth recommending.
 
 
 ::: {.callout-tip collapse="false"}
@@ -20,6 +21,7 @@ This section covers various books that I have read and think are worth reading.
 :::
 
 <pre></pre>
+
 <!-- </br> -->
 <!-- --- -->
 
