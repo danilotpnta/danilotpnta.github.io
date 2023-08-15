@@ -9,7 +9,16 @@ include-after-body: insert-welcomes.html
 
 ::: {.g-col-12}
 <!-- [# Hello and welcome!]{.home-header} -->
-# MySite
+# My Sites
+:::
+
+::: {.g-col-12 .g-col-md-4}
+<div class="card h-100" id="card-third-color">
+<div class="card-body d-flex flex-column">
+<p class="card-text">Main section where I keep track of important news about my professional carrier.</p>
+<div style="margin-top: auto;"><a class="site-links" href="../" class="card-link third-color-link heading-font">HOME</a></div>
+</div>
+</div>
 :::
 
 ::: {.g-col-12 .g-col-md-4}
@@ -50,14 +59,14 @@ include-after-body: insert-welcomes.html
 </div>
 :::
 
-::: {.g-col-12 .g-col-md-4}
+<!-- ::: {.g-col-12 .g-col-md-4}
 <div class="card h-100" id="card-third-color">
 <div class="card-body d-flex flex-column">
 <p class="card-text">I am small frame dude, knowing abut tailoring its a plus! Here I help you imo how to dress better.</p>
 <div style="margin-top: auto;"><a class="site-links" href="../tailor/" class="card-link third-color-link heading-font">TAILOR</a></div>
 </div>
 </div>
-:::
+::: -->
 
 ::: {.g-col-12 .g-col-md-4}
 <div class="card h-100" id="card-first-color">

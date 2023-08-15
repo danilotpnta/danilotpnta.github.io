@@ -21,7 +21,9 @@ Quick links:
 </span>
 <a style = "text-decoration-color:rgba(163, 166, 168, 0.40); color: grey; )" href= "coming-soon.qmd">Slides</a>
 <span style="color:grey;"> |</span> 
-<a style = "text-decoration-color:rgba(163, 166, 168, 0.40); color: grey; )" href= "tailor/">Tailor</a>
+<!-- <a style = "text-decoration-color:rgba(163, 166, 168, 0.40); color: grey; )" href= "tailor/">Tailor</a>
+<span style="color:grey;"> |</span>  -->
+<a style = "text-decoration-color:rgba(163, 166, 168, 0.40); color: grey; )" href= "projects/">Projects</a>
 <span style="color:grey;"> |</span> 
 <a style = "text-decoration-color:rgba(163, 166, 168, 0.40); color: grey;" href= "books/">Books</a>
 <span style="color:grey;"> |</span> 

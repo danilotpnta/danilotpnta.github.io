@@ -22,7 +22,8 @@ website:
   search: false
   navbar:
     title: "<span id='danilo_topanta_brand'> Danilo Toapanta</span> <a id='mysite' class='mysite' href= '../../../../../sites/'>MySites</a>"
-    # logo-href: ../../../../../../sites/
+    # title: "<span id='danilo_topanta_brand'> Danilo Toapanta</span>"
+    # logo-href: ../../../../../../../../../../../sites/
     right:
       - text: "<span id='home-welcome-msg'>Home</span>"
         file: index.qmd
