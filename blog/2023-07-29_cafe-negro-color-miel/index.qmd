@@ -1,16 +1,17 @@
 ---
-title: "Cafe Negro color Miel <span class='by-danilo-toapanta'>by <a href='../../about/'>Danilo Toapanta</a></span>"
+# title: "Cafe Negro color Miel <span class='byDaniloToapanta'>by <a href='../../about/'>Danilo Toapanta</a> </span>"
+title: "Cafe Negro color Miel"
 author: "Danilo Toapanta"
 date: "2023-07-29"
 categories: [All, Poems, TAGS, Spanish]
 navbar: false
-css: index.css
+css: ../css/index-poems.css
 ---
+<span class='by-danilo-toapanta'>by <a href='../../about/'>Danilo Toapanta</a> </span>
 
 <div style="font-weight:300;">
 <a href="../../blog/" style="text-decoration: none;" >Blog </a> <a style="text-decoration: none; pointer-events: none; font-weight: 250;" href="">></a> <a href="../../blog/#category=Poems" style="text-decoration: none;" >Poems</a>
 </div>
-
 
 
 <div class="poem-text">
@@ -42,6 +43,11 @@ ellos estan
 platicando como tortolos
 
 </div>
+
+
+
+
+
 
 
 

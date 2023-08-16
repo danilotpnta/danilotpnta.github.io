@@ -240,9 +240,6 @@ div#listing-posts-2022 .new_label_post {
     }
 }
 
-.by-danilo-toapanta{
-    display: none;
-}
 
 /* Gives some opacity for the hastag icon */
 span.hasth-tag {
@@ -264,3 +261,6 @@ span.hasth-tag {
 .listing-no-matching{
     display: none;
 }
+
+
+

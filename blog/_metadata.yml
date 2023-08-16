@@ -19,7 +19,7 @@ format:
     include-before-body:
       - change-title.html
 
-css: index-posts.css
+css: css/index-posts.css
 # navbar: false
 
 
