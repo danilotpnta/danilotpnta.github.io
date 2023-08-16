@@ -3,55 +3,76 @@ pagetitle: "Danilo Toapanta - Now"
 css: index.css
 sidebar: false
 ---
-<!-- </br> -->
 
-#### What I'm working on right now {.unlisted .unnumbered}
-<span style="color:#a1a1a1; font-weight:325 ">
-    *Updated on June 28th, 2023.*
-</span>
+<div style="padding-top: 1em;"></div>
 
+{{< include _2023-aug.qmd >}}
 
-<!-- ![](assets/banner2%20Large.jpeg) -->
-<!-- <img src="assets/banner2.jpeg" 
-    class="about-image rounded" 
-    style= "display: block;
-            /* margin-left: auto;
-            margin-right: auto; */
-            /* width: 60%; */
-            "> -->
-
-```{=html}
-<div class="crop">
-    <img src="https://www.wbcsd.org/var/site/storage/images/media/images/nature-action2/201159-1-eng-GB/Nature-Action_i1140.jpg">
+<div class="center" style="padding-top: 4.5em; padding-bottom: 1em;">
+<button style="padding: 10px; font-weight: 400; opacity: 0.8;" onclick="myFunction()">Archive <i style="padding-left:2px;" class='bi bi-archive'></i></button>
 </div>
+
+<div id="myDIV" style="display:none; padding-top: 0em;" >
+<div style="padding-top: 5em;"></div> 
+{{< include _2023-jul.qmd >}}
+<div class="divider"><div class="inner"></div></div>
+{{< include _2023-jun.qmd >}}
+</div>
+
+
+
+```{js}
+#| echo: false
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
 ```
 
 
 
 
-<!-- <img src="https://www.wbcsd.org/var/site/storage/images/media/images/nature-action2/201159-1-eng-GB/Nature-Action_i1140.jpg" 
-    class="crop" 
-    style= "
-            width: 400px;
-            height: 300px;
-            margin: -75px 0 -100px -200px;
-            "> -->
 
 
-**Core habits**
-
-- Read ≧ 20 min
-- Exercise ≧ 1 hour
-- Meditate ≧ 10 minutes
 
 
-**Website**
-
-- Start coding from scracth this site
-- Future features can be found at <a href="../dev/index.qmd" style="color:inherit; text-decoration-color:#a3a6a8a1 ">DEV</a>
 
 
-**Reading**
 
-- *12 Rules for Life* by Jordan Peterson
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

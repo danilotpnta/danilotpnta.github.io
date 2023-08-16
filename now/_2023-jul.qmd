@@ -1,0 +1,34 @@
+<h3 class="unlisted unnumbered" style="margin-top:10px; margin-bottom: 3px;">
+    What I'm working on right now
+</h3>
+
+<p style="color:#a1a1a1; font-weight:400; margin-bottom: 0px; ">
+    Updated on July 24th, 2023.
+</p>
+
+
+```{=html}
+<div class="crop" style="padding: 30px 0px">
+    <img style="object-position: center 20%;" src="
+    https://www.wbcsd.org/var/site/storage/images/media/images/nature-action2/201159-1-eng-GB/Nature-Action_i1140.jpg
+    ">
+</div>
+```
+
+#### Core habits
+
+- Read ≧ 20 min
+- Exercise ≧ 1 hour
+- Meditate ≧ 10 minutes
+
+
+#### Website
+
+- Get a domain to publish this site
+- Future features can be found at <a href="../dev/index.qmd" style="color:inherit; text-decoration-color:#a3a6a8a1 ">DEV</a>
+
+
+#### Reading
+
+- *12 Rules for Life* by Jordan Peterson
+

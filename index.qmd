@@ -16,7 +16,7 @@ css: index.css
 <img src="assets/banner.png" class="about-image rounded" style= "display: block border-radius: .65rem !important; width: 100%; height: auto; padding-top: 5px;">
 
 
-<span style="color:	rgb(128, 128, 128, 1); font-weight:550;">
+<span style="color:	rgb(128, 128, 128, 1); font-weight:550; padding-right: 2.5px;">
 Quick links:
 </span>
 <a style = "text-decoration-color:rgba(163, 166, 168, 0.40); color: grey; )" href= "coming-soon.qmd">Slides</a>

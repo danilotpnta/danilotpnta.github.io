@@ -87,3 +87,10 @@ Start of the Sidebar-margin: [body-end-outset] minmax(10px, 30px) <-- 30px makes
 }
 
 
+a.new-look-link {
+    box-shadow: none;
+    text-decoration: none;
+    border-bottom: 1px solid #dee3e8;
+    color:inherit
+}
+
