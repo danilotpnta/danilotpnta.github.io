@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2023-08-18">
 <meta name="description" content="A python solution to create blog posts from the command line">
 
-<title>Danilo Toapanta - Automating blog posts</title>
+<title>Danilo Toapanta - Automating Blog posts</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -151,7 +151,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full blog-page" style="display: none;">
     <div class="quarto-title-banner page-columns page-full">
         <div class="quarto-title column-body">
-            <h1 class="title">Automating blog posts</h1>
+            <h1 class="title">Automating Blog posts</h1>
                 
             <!-- Description Block -->
                         <div>
@@ -229,13 +229,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#motivation" id="toc-motivation" class="nav-link active" data-scroll-target="#motivation"><span class="header-section-number">1</span> Motivation</a>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link active" data-scroll-target="#motivation"><span class="header-section-number">1</span> Motivation</a></li>
+  <li><a href="#creating-the-script" id="toc-creating-the-script" class="nav-link" data-scroll-target="#creating-the-script"><span class="header-section-number">2</span> Creating the script</a>
   <ul class="collapse">
-  <li><a href="#creating-the-script" id="toc-creating-the-script" class="nav-link" data-scroll-target="#creating-the-script"><span class="header-section-number">1.1</span> Creating the script</a></li>
+  <li><a href="#make-a-directory" id="toc-make-a-directory" class="nav-link" data-scroll-target="#make-a-directory"><span class="header-section-number">2.1</span> Make a Directory</a></li>
+  <li><a href="#copy-move-edit-a-blogs-template" id="toc-copy-move-edit-a-blogs-template" class="nav-link" data-scroll-target="#copy-move-edit-a-blogs-template"><span class="header-section-number">2.2</span> Copy, move &amp; edit a Blog’s Template</a></li>
   </ul></li>
-  <li><a href="#fire-it-up-from-terminal" id="toc-fire-it-up-from-terminal" class="nav-link" data-scroll-target="#fire-it-up-from-terminal"><span class="header-section-number">2</span> Fire it up from terminal</a></li>
-  <li><a href="#moving-the-file-created-to-blog-section" id="toc-moving-the-file-created-to-blog-section" class="nav-link" data-scroll-target="#moving-the-file-created-to-blog-section"><span class="header-section-number">3</span> Moving the file created to blog section</a></li>
-  <li><a href="#create-an-script-to-split-views" id="toc-create-an-script-to-split-views" class="nav-link" data-scroll-target="#create-an-script-to-split-views"><span class="header-section-number">4</span> Create an script to split views</a></li>
+  <li><a href="#fire-it-up-from-terminal" id="toc-fire-it-up-from-terminal" class="nav-link" data-scroll-target="#fire-it-up-from-terminal"><span class="header-section-number">3</span> Fire it up from terminal</a></li>
+  <li><a href="#bonus---create-an-script-to-split-views" id="toc-bonus---create-an-script-to-split-views" class="nav-link" data-scroll-target="#bonus---create-an-script-to-split-views"><span class="header-section-number include-toc">Bonus -</span> Create an script to split views</a></li>
   </ul>
 </nav>
 </nav>
@@ -319,7 +320,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <main id="title-block-header" class="quarto-title-block default page-columns page-full" style="padding-bottom: 40px;">
 
     <div class="quarto-title column-body" style="margin-bottom: 1em;">
-        <h1 class="title" style="padding-bottom:8px" ;="">Automating blog posts</h1>
+        <h1 class="title" style="padding-bottom:8px" ;="">Automating Blog posts</h1>
         
         <!-- Description Block -->
                     <div>
@@ -456,16 +457,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     
 </main>
 
+<p><img class="img-fluid" src="demo.gif" style="border-radius: 7px"></p>
 <section id="motivation" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Motivation</h1>
 <p>When putting together a blog post, there are several steps that are time consuming. For instance, creating a directory with the date for the slug, then a title name and followed a YAML header that suits the format of the article. All this can be time consuming and hence in this post I will show how I have automated the creation of template posts to write code right away rather that setting this up</p>
 <ul>
-<li>Goal: from a simple command line i.e.&nbsp;<code>mkblog notebook 'How to create Dynamic plots'</code> a folder with the current date and the title-name i.e.&nbsp;<code>2023-08-18_how-to-create-dynamic-plots</code> will be created. Then the script should copy a pre-build post model that will modify the header’s date, title, href (for downloable Jupyter Notebooks) i.e:</li>
+<li>Goal: from a simple command line i.e.&nbsp;<code>mkblog notebook 'How to rock'</code> a folder with the current date and the title-name i.e.&nbsp;<code>2023-08-21_how-to-rock</code> will be created. Then the script should copy a pre-build post model that will modify the header’s date, title, href (for downloable Jupyter Notebooks) i.e:</li>
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"How to create Dynamic plots"</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">"2023-08-18"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<section id="creating-the-script" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="creating-the-script"><span class="header-section-number">1.1</span> Creating the script</h2>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">"2023-08-21"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="creating-the-script" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Creating the script</h1>
 <p>The first thing that came to my mind when creating the script was to the type of post. On a general level I have classify them in three categories</p>
 <ul>
 <li>post: this is a normal <code>qmd</code> file that can hold articles and is capable to run R, Python, JavaScript and so on.</li>
@@ -474,91 +477,227 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>The question is now how to set all this up. Reviewing at scripting languages and ways on how to create <a href="https://quarto.org/docs/extensions/">extension</a> for html files I realised all this could be done with <a href="../#category=Python">python</a>.</p>
 <p>Here down below the script that makes all this possible</p>
-<div class="cell" data-execution_count="1">
+<section id="make-a-directory" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="make-a-directory"><span class="header-section-number">2.1</span> Make a Directory</h2>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>create_dir.py</strong></pre>
+</div>
+<div class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os </span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> shutil</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell" data-execution_count="15">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_post(type_file, post_name):</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Save a copy only name</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    raw_post_name <span class="op">=</span> post_name</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Example: "how-to-rock"</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    post_name <span class="op">=</span> post_name.lower().replace(<span class="st">" "</span>, <span class="st">"-"</span>)</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Current Date: "2023-08-29"</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    current_date <span class="op">=</span> datetime.today().strftime(<span class="st">'%Y-%m-</span><span class="sc">%d</span><span class="st">'</span>)</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Folder name: "2023-08-29_how-to-rock"</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    folder_name <span class="op">=</span> current_date <span class="op">+</span> <span class="st">'_'</span> <span class="op">+</span> post_name</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Current Directory path</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    current_dir <span class="op">=</span> os.getcwd()</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Output Directory</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    output_path <span class="op">=</span> current_dir <span class="op">+</span> <span class="st">"/out"</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Folder Path: "../out/2023-08-29_how-to-rock"</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    path_folder <span class="op">=</span> os.path.join(output_path, folder_name)</span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Make a Directory</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    os.mkdir(path_folder)</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Directory '</span><span class="sc">% s</span><span class="st">' created!"</span> <span class="op">%</span> folder_name)</span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Name of Post</span></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="co"># 0 is the name of the py file</span></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 is the first argument</span></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>type_file <span class="op">=</span> <span class="st">"notebook"</span> <span class="co"># sys.argv[1]</span></span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>post_name <span class="op">=</span> <span class="st">"how to rock"</span> <span class="co"># sys.argv[2]             </span></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>create_post(type_file, post_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> shutil</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_post(type_file, post_name):</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Save a copy only name</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    raw_post_name <span class="op">=</span> post_name</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Example: "how-to-rock"</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    post_name <span class="op">=</span> post_name.lower().replace(<span class="st">" "</span>, <span class="st">"-"</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Current Date: "2023-08-21"</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    current_date <span class="op">=</span> datetime.today().strftime(<span class="st">'%Y-%m-</span><span class="sc">%d</span><span class="st">'</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Folder name: "2023-08-21_how-to-rock"</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    folder_name <span class="op">=</span> current_date <span class="op">+</span> <span class="st">'_'</span> <span class="op">+</span> post_name</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Current Directory path</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    current_dir <span class="op">=</span> os.getcwd()</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Output Directory</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    output_path <span class="op">=</span> current_dir <span class="op">+</span> <span class="st">"/out"</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Folder Path: "../out/2023-08-21_how-to-rock"</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    path_folder <span class="op">=</span> os.path.join(output_path, folder_name)</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Make a Directory</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    os.mkdir(path_folder)</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Directory '</span><span class="sc">% s</span><span class="st">' created!"</span> <span class="op">%</span> folder_name)</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Name of Post</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="co"># 0 is the name of the py file</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 is the first argument</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>type_file <span class="op">=</span> <span class="st">"notebook"</span> <span class="co"># sys.argv[1]</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>post_name <span class="op">=</span> <span class="st">"how to rock"</span> <span class="co"># sys.argv[2]             </span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>create_post(type_file, post_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Directory '2023-08-18_how-to-rock' created!</code></pre>
+<pre><code>Directory '2023-08-21_how-to-rock' created!</code></pre>
 </div>
 </div>
+</div></section>
+<section id="copy-move-edit-a-blogs-template" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="copy-move-edit-a-blogs-template"><span class="header-section-number">2.2</span> Copy, move &amp; edit a Blog’s Template</h2>
 <p>After we have created a folder, we can proceed to make a copy of a user-defined template with settings that we may want to use for that specific type of post. For instance for my <code>notebook</code> posts I want to modify the date of the header, its title name and the ref link to download the output of the Jupyter notebook.</p>
 <p>For this to scale and be able to fire the script from any directory I will point to a specific folder where I will make all this changes and then move those modified files to my <code>../blog</code> section.</p>
-<p>The structure of my files where the script is store is as follows:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>_extensions</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>└── mkpost</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    ├── create_dir.py</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    ├── out</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    ├── splitWin.app</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    └── templates</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        ├── notebook</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        │   └── index.ipynb</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        ├── poems</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        │   └── index.qmd</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>        └── post</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>            └── index.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The structure of my files where the script is stored is as follows:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>_extensions</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>└── mkpost</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    ├── create_dir.py</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    ├── out</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    ├── splitWin.app</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    └── templates</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        ├── notebook</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        │   └── index.ipynb</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        ├── poems</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        │   └── index.qmd</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        └── post</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>            └── index.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Handy
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>To print the tree structure I have use: <code>brew install tree</code> and then <code>tree path</code></p>
+<p>To print the tree structure you see above I have used: <code>brew install tree</code> and then <code>tree &lt;path&gt;</code></p>
 </div>
 </div>
+<p>In the folder view you find <code>mkpost</code> as the folder that holds the script previously shown. There is also <code>out</code> folder which contains the folder just created <code>2023-08-21_how-to-rock</code>. There is also splitWin.app which will talk in section <a href=""></a> and lastly a folder called <code>templates</code> where you can see <code>index.*</code> files that will be copied to our newly created folder.</p>
+<p>Following the continuation of the python script that does all the moving, copying and editing.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>create_dir.py</strong></pre>
+</div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_file(type_file):</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># -------------- CREATE FILE --------------</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Holds available extensions</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    dic <span class="op">=</span> {<span class="st">'post'</span>: <span class="st">'qmd'</span>, <span class="st">'poems'</span>:<span class="st">'qmd'</span>, <span class="st">'notebook'</span>:<span class="st">'ipynb'</span>}</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    file_extension <span class="op">=</span> dic[type_file]</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Source path: "../template/file_type/index.ext"</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    source_file <span class="op">=</span> <span class="ss">f"templates/</span><span class="sc">{</span>type_file<span class="sc">}</span><span class="ss">/index.</span><span class="sc">{</span>file_extension<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># File name "index.ext"</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    file_name <span class="op">=</span> <span class="ss">f"index.</span><span class="sc">{</span>file_extension<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Destination path: "../out/2023-08-21_how-to-rock/index.ext"</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    destination_file <span class="op">=</span> os.path.join(path_folder, file_name)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Creating a Copy from Template folder</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    shutil.copy(source_file, destination_file)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># -------------- UPDATE HEADER --------------</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    lines <span class="op">=</span> <span class="bu">open</span>(destination_file, <span class="st">'r'</span>).readlines()</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (type_file <span class="op">==</span> <span class="st">"notebook"</span>):</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>        title_row <span class="op">=</span> <span class="dv">9</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>        lines[title_row] <span class="op">=</span> <span class="ss">f'    </span><span class="ch">\"</span><span class="ss">title: </span><span class="ch">\\</span><span class="ss">"</span><span class="sc">{</span>raw_post_name<span class="sc">.</span>capitalize()<span class="sc">}</span><span class="ch">\\</span><span class="ss">"</span><span class="ch">\\</span><span class="ss">n</span><span class="ch">\"</span><span class="ss">,'</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>        date_row <span class="op">=</span> <span class="dv">11</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>        lines[date_row] <span class="op">=</span> <span class="ss">f'    </span><span class="ch">\"</span><span class="ss">date: </span><span class="ch">\\</span><span class="ss">"</span><span class="sc">{</span>current_date<span class="sc">}</span><span class="ch">\\</span><span class="ss">"</span><span class="ch">\\</span><span class="ss">n</span><span class="ch">\"</span><span class="ss">,'</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>        code_name_row <span class="op">=</span> <span class="dv">16</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>        post_code_name <span class="op">=</span> post_name <span class="op">+</span> <span class="st">'.out.ipynb'</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>        lines[code_name_row] <span class="op">=</span> <span class="ss">f'    </span><span class="ch">\"</span><span class="ss">      file-name: </span><span class="sc">{</span>post_code_name<span class="sc">}</span><span class="ch">\\</span><span class="ss">n</span><span class="ch">\"</span><span class="ss">,'</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>        title_row <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>        lines[title_row] <span class="op">=</span> <span class="ss">f'title: "</span><span class="sc">{</span>raw_post_name<span class="sc">.</span>capitalize()<span class="sc">}</span><span class="ss">"</span><span class="ch">\n</span><span class="ss">'</span></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>        date_row <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>        lines[date_row] <span class="op">=</span> <span class="ss">f'date: "</span><span class="sc">{</span>current_date<span class="sc">}</span><span class="ss">"</span><span class="ch">\n</span><span class="ss">'</span></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span> <span class="op">=</span> <span class="bu">open</span>(destination_file, <span class="st">'w'</span>)</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.writelines(lines)</span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.close()</span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>    <span class="co"># -------------- MOVE FILE --------------</span></span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Folder Path: "../out/2023-08-21_how-to-rock"</span></span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>    src <span class="op">=</span> path_folder</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Path to Blog</span></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>    dst <span class="op">=</span> <span class="st">"../../blog"</span></span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>    shutil.move(src, dst)       </span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (type_file <span class="op">==</span> <span class="st">"post"</span>):</span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>    create_file(<span class="st">"post"</span>)</span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> (type_file <span class="op">==</span> <span class="st">"notebook"</span>):</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>    create_file(<span class="st">"notebook"</span>)</span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> (type_file <span class="op">==</span> <span class="st">"poems"</span>):</span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>    create_file(<span class="st">"poems"</span>)</span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Wrong type_file: </span><span class="sc">{</span>type_file<span class="sc">}</span><span class="ss">. Available: 'post', 'poems' or 'notebook'"</span>)</span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>    sys.exit()</span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>    </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The code above does the following:</p>
+<ol type="1">
+<li>When the user inputs the name and the <code>type_file</code> it looks at the template folder with the specified extension and does the copying</li>
+<li>Updates the header changing <code>date</code> to the current date at the moment of creating the directory, <code>title</code> with the name we input in the terminal and, lastly if is a notebook it changes the <code>href</code> to enable the user download the notebook.</li>
+<li>Once all changes are done, the folder with the <code>index.*</code> file are move to the blog section.</li>
+</ol>
 </section>
 </section>
-<section id="fire-it-up-from-terminal" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Fire it up from terminal</h1>
+<section id="fire-it-up-from-terminal" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Fire it up from terminal</h1>
+<p>For convenience, no matter in which directory of your computer you are in, this section cover how to fire it up the script that we have created. For starters, if you are running macOS or Linux most likely you will be using bash, zsh or fish shells. These shells, as it comes to not surprise, can launch scripts with user-defined strings defined.</p>
+<p>For my liking I have decided to proceed with:</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>Terminal</strong></pre>
+</div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>mkblog [type_file] ["name_post"]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To enable this, you have to cd to your <code>.bash_profile</code> or <code>.zshrc</code> in my case. Then we will define the alias <code>mkblog</code> and will do the following:</p>
+<ol type="1">
+<li><code>cd</code> to the path where we have stored our python script. That is <code>_extensions</code></li>
+<li>Execute the script using python</li>
+<li>Open my workspace in Visual Studio</li>
+<li>Open the <code>index.*</code> we just created i.e.&nbsp;in the dir <code>"2023-08-21_how-to-rock"</code></li>
+<li>Make quarto render that file. Voila start coding!</li>
+</ol>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>.zshrc</strong></pre>
+</div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creates script to open blog post</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkblog()</span> <span class="kw">{</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">cd</span> ../path/more_path/_extensions/mkpost</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="ex">python</span> create_dir.py <span class="va">$1</span> <span class="va">$2</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">cd</span> ..</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">cd</span> ..</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="ex">code</span> website.code-workspace</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="va">BACKUPDIR</span><span class="op">=</span><span class="va">$(</span><span class="fu">ls</span> <span class="at">-td</span> blog/<span class="pp">*</span>/ <span class="kw">|</span> <span class="fu">head</span> <span class="at">-1</span><span class="va">)</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="bu">cd</span> <span class="va">$BACKUPDIR</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="va">FILENAME</span><span class="op">=</span><span class="va">$(</span><span class="fu">ls</span> <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-f</span><span class="va">)</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="ex">code</span> <span class="va">$FILENAME</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="ex">quarto</span> preview <span class="va">$FILENAME</span> </span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section>
-<section id="moving-the-file-created-to-blog-section" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Moving the file created to blog section</h1>
-</section>
-<section id="create-an-script-to-split-views" class="level1" data-number="4">
-<h1 data-number="4"><span class="header-section-number">4</span> Create an script to split views</h1>
-<p>https://stackoverflow.com/questions/57639834/error-1002-in-applescript-that-uses-key-code-when-called-from-macos-app#:~:text=To%20fix%20osascript,usr/bin/osascript)</p>
+<section id="bonus---create-an-script-to-split-views" class="level1 unnumbered">
+<h1 class="unnumbered"><span class="header-section-number include-toc">Bonus -</span> Create an script to split views</h1>
+<!-- https://stackoverflow.com/questions/57639834/error-1002-in-applescript-that-uses-key-code-when-called-from-macos-app#:~:text=To%20fix%20osascript,usr/bin/osascript) -->
+<p>When working with large screen I would like to place in the left side the file I created and in the right side my browser to preview the changes I made while editing my file. If you are familiar with AppleScript then you will be at home with the following lines.</p>
+<div class="code-with-filename">
+<div class="code-with-filename-file">
+<pre><strong>splitWin.app</strong></pre>
+</div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>activate application <span class="st">"Visual Studio Code"</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>repeat <span class="dv">1</span> times</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    tell application <span class="st">"System Events"</span> to key code <span class="dv">123</span> using {command down}</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>end repeat</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>activate application <span class="st">"Microsoft Edge"</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>repeat <span class="dv">1</span> times</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    tell application <span class="st">"System Events"</span> to key code <span class="dv">124</span> using {command down}</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>end repeat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Long story short, the script will send the keystrokes <code>cmd + ←</code>, <code>cmd + →</code> to each application and thus split the windows to left and right. How to accomplished this behavior? Glad you asked, I invite your to read this <a style="color: blue" class="new-look-link" href="../2023-06-09_on-the-topic/">post</a> where I go through how I made my life easier using Lua Shortcuts.</p>
 
 
 </section>
