@@ -2,122 +2,134 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.danilotpnta.com/dev/index.html</loc>
-    <lastmod>2023-08-21T13:37:23.987Z</lastmod>
+    <lastmod>2023-08-22T08:10:58.284Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/sites/index.html</loc>
-    <lastmod>2023-08-21T13:37:19.403Z</lastmod>
+    <lastmod>2023-08-22T08:10:54.658Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2022-11-05_welcome/index.html</loc>
-    <lastmod>2023-08-21T13:37:16.294Z</lastmod>
+    <lastmod>2023-08-22T08:10:51.968Z</lastmod>
   </url>
   <url>
-    <loc>https://www.danilotpnta.com/blog/2023-08-18_automating_blog_posts/index.html</loc>
-    <lastmod>2023-08-21T13:41:27.487Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/blog/2023-01-29_displaying-jupyter-notebooks/index.html</loc>
-    <lastmod>2023-08-21T13:37:12.875Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/blog/2023-06-05_how-hash-table-works/index.html</loc>
-    <lastmod>2023-08-21T13:37:10.317Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/blog/2023-06-09_on-the-topic/index.html</loc>
-    <lastmod>2023-08-21T13:37:08.232Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/blog/2023-07-29_cafe-negro-color-miel/index.html</loc>
-    <lastmod>2023-08-21T13:37:06.986Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/tailor/index.html</loc>
-    <lastmod>2023-08-21T13:37:04.710Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/books/index.html</loc>
-    <lastmod>2023-08-21T13:37:03.551Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/projects/2023-05-29_computer-vision/index.html</loc>
-    <lastmod>2023-08-21T13:37:00.541Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/projects/2023-07-01_website/index.html</loc>
-    <lastmod>2023-08-21T13:36:59.445Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/projects/index.html</loc>
-    <lastmod>2023-08-21T13:36:58.226Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/projects/2023-05-26_mlp/index.html</loc>
-    <lastmod>2023-08-21T13:36:55.955Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/projects/2020-04-02_segway/index.html</loc>
-    <lastmod>2023-08-21T13:36:54.830Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/coming-soon.html</loc>
-    <lastmod>2023-08-21T13:36:52.567Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/projects/2020-05-12_cpp-project/Python-demo.html</loc>
-    <lastmod>2023-08-21T13:36:55.399Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/projects/2021-07-02_bsc-thesis/Python-demo.html</loc>
-    <lastmod>2023-08-21T13:36:56.547Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/projects/2022-11-29_travel-sales-project/index.html</loc>
-    <lastmod>2023-08-21T13:36:58.871Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/projects/2022-11-12_artificial-intelligence/index.html</loc>
-    <lastmod>2023-08-21T13:36:59.993Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/about/index.html</loc>
-    <lastmod>2023-08-21T13:37:02.957Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/index.html</loc>
-    <lastmod>2023-08-21T13:37:04.104Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/blog/2022-12-29_cuando-miras-al-cielo/index.html</loc>
-    <lastmod>2023-08-21T13:37:06.398Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/blog/2023-01-12_2022-into-2023/index.html</loc>
-    <lastmod>2023-08-21T13:37:07.564Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/blog/2023-07-24_the-right-tool/index.html</loc>
-    <lastmod>2023-08-21T13:37:08.953Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/blog/index.html</loc>
-    <lastmod>2023-08-21T13:41:29.302Z</lastmod>
+    <loc>https://www.danilotpnta.com/blog/2023-08-21_automating-the-creating-of-blog-posts-/index.html</loc>
+    <lastmod>2023-08-22T08:10:50.648Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-08-18_how_to_use_widgets_in_jupyter_notebooks/index.html</loc>
-    <lastmod>2023-08-21T13:37:13.508Z</lastmod>
+    <lastmod>2023-08-22T08:10:48.747Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/index.html</loc>
+    <lastmod>2023-08-22T08:17:28.064Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-07-24_the-right-tool/index.html</loc>
+    <lastmod>2023-08-22T08:10:44.489Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-01-12_2022-into-2023/index.html</loc>
+    <lastmod>2023-08-22T08:10:43.049Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2022-12-29_cuando-miras-al-cielo/index.html</loc>
+    <lastmod>2023-08-22T08:10:41.880Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/index.html</loc>
+    <lastmod>2023-08-22T08:11:35.321Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/about/index.html</loc>
+    <lastmod>2023-08-22T08:10:38.196Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/projects/2022-11-12_artificial-intelligence/index.html</loc>
+    <lastmod>2023-08-22T08:10:34.488Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/projects/2022-11-29_travel-sales-project/index.html</loc>
+    <lastmod>2023-08-22T08:10:33.399Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/projects/2021-07-02_bsc-thesis/Python-demo.html</loc>
+    <lastmod>2023-08-22T08:10:31.143Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/projects/2020-05-12_cpp-project/Python-demo.html</loc>
+    <lastmod>2023-08-22T08:10:29.999Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/coming-soon.html</loc>
+    <lastmod>2023-08-22T08:10:27.201Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/projects/2020-04-02_segway/index.html</loc>
+    <lastmod>2023-08-22T08:10:29.445Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/projects/2023-05-26_mlp/index.html</loc>
+    <lastmod>2023-08-22T08:10:30.554Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/projects/index.html</loc>
+    <lastmod>2023-08-22T08:10:32.864Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/projects/2023-07-01_website/index.html</loc>
+    <lastmod>2023-08-22T08:10:33.958Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/projects/2023-05-29_computer-vision/index.html</loc>
+    <lastmod>2023-08-22T08:10:35.026Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/books/index.html</loc>
+    <lastmod>2023-08-22T08:10:38.752Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/tailor/index.html</loc>
+    <lastmod>2023-08-22T08:10:40.107Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-07-29_cafe-negro-color-miel/index.html</loc>
+    <lastmod>2023-08-22T08:10:42.475Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-06-09_on-the-topic/index.html</loc>
+    <lastmod>2023-08-22T08:10:43.764Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-06-05_how-hash-table-works/index.html</loc>
+    <lastmod>2023-08-22T08:10:45.747Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-01-29_displaying-jupyter-notebooks/index.html</loc>
+    <lastmod>2023-08-22T08:10:48.183Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-08-18_automating_blog_posts/index.html</loc>
+    <lastmod>2023-08-22T08:14:06.457Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-06-20_running-my-first-marathon/index.html</loc>
-    <lastmod>2023-08-21T13:37:15.671Z</lastmod>
+    <lastmod>2023-08-22T08:10:51.410Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-05-29_markdown-structure/index.html</loc>
-    <lastmod>2023-08-21T13:37:17.358Z</lastmod>
+    <lastmod>2023-08-22T08:10:52.932Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/now/index.html</loc>
-    <lastmod>2023-08-21T13:37:21.899Z</lastmod>
+    <lastmod>2023-08-22T08:10:56.265Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-08-18_how-to-automate-the-creation-of-blog-posts/index.html</loc>
+    <lastmod>2023-08-22T08:16:14.432Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-08-22_danilo-rules/index.html</loc>
+    <lastmod>2023-08-22T08:17:10.049Z</lastmod>
   </url>
 </urlset>
