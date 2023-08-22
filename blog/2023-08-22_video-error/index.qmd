@@ -15,10 +15,12 @@ format:
 Here down below should be a video:
 {{< video demo.mp4 >}}
 
+Here should be the same video
+<video src="demo.mp4" class="img-fluid" ></video>
 
 # This file
 
-```yaml
+```{.txt}
 ---
 title: "Video error"
 description: "Description of this Post"
@@ -30,10 +32,14 @@ toc: false
 
 # The problem
 Here down below should be a video:
-{{< demo.mp4 >}}
+{{< video demo.mp4 >}}
 
+Here should be the same video:
+<video src="demo.mp4" class="img-fluid" ></video>
 
 ```
+
+
 
 
 
