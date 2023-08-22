@@ -11,14 +11,15 @@ resources:
   - "CNAME"
 
 website:
+  favicon: assets/danilo.png
+  title: "Danilo Toapanta"
+  site-url: "https://www.danilotpnta.com"
+  description: Personal website, portfolio and blog
+  image: assets/danilo.png
   back-to-top-navigation: false
-  favicon: 'assets/Danilo.png'
 #  site-path: "/danilotpnta.github.io/"  # when commented 404.html renders correctly
   # site-url: https://danilotpnta.github.io/
-  site-url: "https://www.danilotpnta.com"
   
-  title: "Danilo Toapanta"
-  # title: "danilo.dev"
   search: false
   navbar:
     title: "<span id='danilo_topanta_brand'> Danilo Toapanta</span> <a id='mysite' class='mysite' href= '../../../../../sites/'>MySites</a>"
@@ -41,6 +42,7 @@ website:
         href: dev/ # Replace for actual url
       # - icon: moon
       #   href: about/qmd
+
 
   page-footer:
     center: 
@@ -77,9 +79,11 @@ format:
     code-link: true
     code-fold: show
     highlight-style:
-      light: styling/atom-one-light.theme
+      # light: styling/atom-one-light.theme
+      light: styling/arrow-light.theme
       dark: styling/dracula.theme
     include-in-header:
       - file: _partials/icons/add-icons.html
-
+      - text: |
+          <link rel = "shortcut icon" href = "../../../../../../../../../../../assets/danilo.ico" />
 
