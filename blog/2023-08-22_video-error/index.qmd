@@ -1,0 +1,35 @@
+---
+title: "Video error"
+description: "Description of this Post"
+date: "2023-08-22"
+categories: [All, Quarto]
+draft: true
+toc: false
+---
+
+# The problem
+Here down below should be a video:
+{{< demo.mp4 >}}
+
+
+# This file
+
+```yaml
+---
+title: "Video error"
+description: "Description of this Post"
+date: "2023-08-22"
+categories: [All, Quarto]
+draft: true
+toc: false
+---
+
+# The problem
+Here down below should be a video:
+{{< demo.mp4 >}}
+
+
+```
+
+
+
