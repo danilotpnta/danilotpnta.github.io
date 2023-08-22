@@ -211,7 +211,7 @@ $endif$
         $for(links)$
             $if(links.href)$
                 <!-- Uses Bootstrap icons -->
-                <a href="$links.href$" class="btn btn-secondary" download><i class="bi bi-$links.icon$ me-1"></i> $links.name$</a>
+                <a href="$links.href$" class="btn btn-secondary" download="$links.file-name$"><i class="bi bi-$links.icon$ me-1"></i> $links.name$</a>
             $else$
                 <a href="$links.url$" class="btn btn-secondary"><i class="bi bi-$links.icon$ me-1"></i> $links.name$</a>
             $endif$
