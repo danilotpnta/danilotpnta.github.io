@@ -1,0 +1,223 @@
+<!-- <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Running my first Marathon</h1>
+                  <div>
+        <div class="description">
+          I will be running at the 42km TCS Amsterdam 2023, 15th October
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">News</div>
+              </div>
+                  </div>
+  </div> -->
+
+  <!-- ---
+  coming-soon: true
+  tags: [Spanish]
+  --- -->
+
+
+$if(coming-soon)$
+    <head>
+        <style>
+            #quarto-content {display: none}
+            #quarto-sidebar {display: none}
+            #quarto-margin-sidebar {display: none}
+            /* #title-block-header {display: none} */
+            #main_404 {
+                display: block;
+                padding-top: 0em;
+            }
+
+
+        </style>
+    </head>
+
+    <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+        <div class="quarto-container page-columns page-full">
+
+            
+            <div class="quarto-title column-body">
+                <div id="main_404">
+                    <div class="center">
+                        <div class="fof">
+                            <h1>Coming Soon</h1>
+                        </div>
+                    </div>
+                    <div class="center">
+                        <p>
+                            <span style="color:grey">
+                                Page under construction. 
+                                $if(date-modified)$
+                                Last update on:
+                            </span>
+                            $date-modified$
+
+                            $endif$
+                        </p>
+                    </div>
+
+                        
+                </div>
+            </div>
+        </div>
+    </header>
+
+$endif$
+
+
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full blog-page" style="display: none;">
+    <div class="quarto-title-banner page-columns page-full">
+        <div class="quarto-title column-body">
+            <h1 class="title">$title$</h1>
+            $if(subtitle)$
+            <p class="subtitle lead">$subtitle$</p>
+            $endif$
+    
+            <!-- Description Block -->
+            $if(hide-description)$
+            $elseif(description)$
+            <div>
+                <div class="description">
+                    $description$
+                </div>
+            </div>
+            $endif$
+            
+            <!-- Categories Block -->
+            $if(categories)$
+                $if(quarto-template-params.title-block-categories)$
+                <div class="quarto-categories">
+
+                    <!-- Display Categories -->
+                    $for(categories)$
+                        <div class="quarto-category">
+                            <a href="/notes/#category=$categories$">
+                                $categories$
+                            </a>
+                        </div> 
+                    $endfor$
+
+                    <!-- Display Tags if any -->
+                    $if(tags)$
+                        $for(tags)$
+                            <div class="quarto-category">
+                                $tags$
+                            </div>
+                        $endfor$
+                    $endif$
+                </div>
+                $endif$
+            $endif$
+
+        </div>
+    </div>
+
+
+    $title-metadata.html()$
+
+    $if(links)$
+    <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-center justify-content-sm-start" role="group"
+        aria-label="Post Links">
+        $for(links)$
+        <a href="$links.url$" class="btn btn-secondary"><i class="bi bi-$links.icon$ me-1"></i> $links.name$</a>
+        $endfor$
+    </div>
+    $endif$
+
+</header>
+
+
+
+<main id="title-block-header" class="quarto-title-block default" style="padding-bottom: 40px;">
+
+    <div class="quarto-title column-body" style="margin-bottom: 1em;">
+        <h1 class="title" style="padding-bottom:8px"; >$title$</h1>
+        $if(subtitle)$
+        <p class="subtitle lead">$subtitle$</p>
+        $endif$
+
+        <!-- Description Block -->
+        $if(hide-description)$
+        $elseif(description)$
+            <div>
+                <div class="description">
+                    $description$
+                </div>
+            </div>
+        $endif$
+
+        <!-- Categories Block -->
+        $if(categories)$
+            $if(quarto-template-params.title-block-categories)$
+
+                <!-- Display Categories -->
+                <div class="quarto-categories">
+                    <!-- <div id="tag-icon-blog" class="quarto-category tags-title">
+                        <i class="fa-solid fa-hashtag" ></i> Categories:
+                    </div> -->
+
+                    $for(categories)$
+                        <div id="$categories$" class="quarto-category">
+                            <a href="/notes/#category=$categories$">
+                                $categories$
+                            </a>
+                        </div>
+                    $endfor$
+                </div>
+                
+
+
+                <div class="quarto-categories tag-categories">
+                    
+                    <!-- Tags Icon  -->
+                    <!-- <div id="tag-icon-blog" class="quarto-category tags-title"> -->
+                        <!-- <i class="fa-solid fa-tag" ></i> Tags: -->
+                        <!-- <i class="fa-solid fa-hashtag" ></i> Tags: -->
+                        <!-- <span class="material-icons-outlined" >local_offer</span> Tags: -->
+                        <!-- / -->
+                    <!-- </div> -->
+
+                    <!-- Display Tags -->
+                    $for(categories)$
+                        <div id="$categories$-from-here" class="quarto-category tags-title" style="display: none;">
+                            <a href="/notes/#category=$categories$">
+                               <!-- <span class="hasth-tag">
+                                #
+                                </span> -->
+                                $categories$
+                            </a>
+                        </div>
+                    $endfor$
+
+                    
+                </div>
+
+            $endif$
+        $endif$
+
+    </div>
+
+
+    $title-metadata.html()$
+
+    <!-- Current link: Font-awesome, Google icons, Bootstrap icons -->
+    $if(links)$
+    <div class="quarto-title-meta-heading quick-links-title">Quick Links</div>
+    <div class="mt-4 d-flex flex-row flex-wrap gap-1 justify-content-center justify-content-sm-start" role="group"
+        aria-label="Post Links">
+        <a id="quick-links-blog" href=" " class="btn btn-secondary" style="pointer-events: none; display: none;"><i class="bi bi-link-45deg me-1"></i> Quick Links:</a>
+        $for(links)$
+            $if(links.href)$
+                <!-- Uses Bootstrap icons -->
+                <a href="$links.href$" class="btn btn-secondary" download="$links.file-name$"><i class="bi bi-$links.icon$ me-1"></i> $links.name$</a>
+            $else$
+                <a href="$links.url$" class="btn btn-secondary"><i class="bi bi-$links.icon$ me-1"></i> $links.name$</a>
+            $endif$
+            
+        $endfor$
+    </div>
+    $endif$
+
+</main>
