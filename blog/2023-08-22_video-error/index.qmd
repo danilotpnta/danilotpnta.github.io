@@ -5,11 +5,15 @@ date: "2023-08-22"
 categories: [All, Quarto]
 draft: true
 toc: false
+format:
+  html:
+    code-fold: true
+    code-tools: true
 ---
 
 # The problem
 Here down below should be a video:
-{{< demo.mp4 >}}
+{{< video demo.mp4 >}}
 
 
 # This file
