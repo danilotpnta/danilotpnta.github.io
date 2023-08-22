@@ -1,11 +1,8 @@
 ---
 title: "2022 into 2023"
-author: "Danilo Toapanta"
 date: "2023-01-12"
 categories: [All, News]
 ---
-
-<!-- ![](thumbnail.jpg) -->
 
 Happy New Year! Time to write another year in review. This will be the first time I've done this. Here are all the previous ones:
 

@@ -1,7 +1,5 @@
 ---
-# title: "Cafe Negro color Miel <span class='byDaniloToapanta'>by <a href='../../about/'>Danilo Toapanta</a> </span>"
 title: "Cafe Negro color Miel"
-author: "Danilo Toapanta"
 date: "2023-07-29"
 categories: [All, Poems, TAGS, Spanish]
 navbar: false

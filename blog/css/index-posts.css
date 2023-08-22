@@ -156,3 +156,29 @@ h2, .h2 {
 border-bottom: none;
 }
 
+/* Hides the Other formats */
+.quarto-alternate-formats {
+    display: none;
+}
+
+/* Style the code */
+.code-with-filename .code-with-filename-file, .code-with-filename .code-with-filename-file pre {
+    background-color: rgba(219,219,219,.8);
+}
+
+.code-with-filename .code-with-filename-file {
+    margin-bottom: 0;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    padding-left: .7em;
+    border: var(--quarto-border-width) solid var(--quarto-border-color);
+    border-radius: var(--quarto-border-radius);
+    border-bottom: 0;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+
+/* Hides the videos from all posts */
+video.display-no-video.img-fluid {
+    display: none;
+}

@@ -1,6 +1,5 @@
 ---
 title: "Cuando miras al cielo"
-author: "Danilo Toapanta"
 date: "2022-12-29"
 year: "2022"
 categories: [All, Poems, TAGS, Spanish]
