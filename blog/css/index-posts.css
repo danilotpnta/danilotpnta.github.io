@@ -177,3 +177,8 @@ border-bottom: none;
     border-bottom-left-radius: 0%;
     border-bottom-right-radius: 0%;
 }
+
+/* Hides the videos from all posts */
+video.display-no-video.img-fluid {
+    display: none;
+}
