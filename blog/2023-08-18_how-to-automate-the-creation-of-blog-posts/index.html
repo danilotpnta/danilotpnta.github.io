@@ -238,7 +238,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#copy-move-edit-a-blogs-template" id="toc-copy-move-edit-a-blogs-template" class="nav-link" data-scroll-target="#copy-move-edit-a-blogs-template"><span class="header-section-number">2.2</span> Copy, move &amp; edit a Blog’s Template</a></li>
   </ul></li>
   <li><a href="#fire-it-up-from-terminal" id="toc-fire-it-up-from-terminal" class="nav-link" data-scroll-target="#fire-it-up-from-terminal"><span class="header-section-number">3</span> Fire it up from terminal</a></li>
-  <li><a href="#bonus---create-an-script-to-split-views" id="toc-bonus---create-an-script-to-split-views" class="nav-link" data-scroll-target="#bonus---create-an-script-to-split-views"><span class="header-section-number include-toc">Bonus -</span> Create an script to split views</a></li>
+  <li><a href="#bonus---create-an-script-to-split-views" id="toc-bonus---create-an-script-to-split-views" class="nav-link" data-scroll-target="#bonus---create-an-script-to-split-views"><span class="header-section-number">Bonus -</span> Create an script to split views</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.out.ipynb" download="index.out.ipynb"><i class="bi bi-journal-code"></i>Jupyter</a></li></ul></div></nav>
 </nav>
@@ -466,8 +466,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <video style="border-radius: 7px" class="img-fluid" autoplay="true" loop="true" muted="" playsinline="">
 <source src="demo.mp4" type="video/mp4">
 </video>
-<section id="motivation" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> Motivation</h1>
+<section id="motivation" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="motivation"><span class="header-section-number">1</span> Motivation</h2>
 <p>When putting together a blog post, there are several steps that are time consuming. For instance, creating a directory with the date for the slug, then a title name and followed a YAML header that suits the format of the article. All this can be time consuming and hence in this post I will show how I have automated the creation of template posts to write code right away rather that setting this up</p>
 <ul>
 <li>Goal: from a simple command line i.e.&nbsp;<code>mkblog notebook 'How to rock'</code> a folder with the current date and the title-name i.e.&nbsp;<code>2023-08-21_how-to-rock</code> will be created. Then the script should copy a pre-build post model that will modify the header’s date, title, href (for downloable Jupyter Notebooks) i.e:</li>
@@ -475,8 +475,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"How to create Dynamic plots"</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">"2023-08-21"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="creating-the-script" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Creating the script</h1>
+<section id="creating-the-script" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="creating-the-script"><span class="header-section-number">2</span> Creating the script</h2>
 <p>The first thing that came to my mind when creating the script was to the type of post. On a general level I have classify them in three categories</p>
 <ul>
 <li>post: this is a normal <code>qmd</code> file that can hold articles and is capable to run R, Python, JavaScript and so on.</li>
@@ -485,8 +485,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>The question is now how to set all this up. Reviewing at scripting languages and ways on how to create <a href="https://quarto.org/docs/extensions/">extension</a> for html files I realised all this could be done with <a href="../#category=Python">python</a>.</p>
 <p>Here down below the script that makes all this possible</p>
-<section id="make-a-directory" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="make-a-directory"><span class="header-section-number">2.1</span> Make a Directory</h2>
+<section id="make-a-directory" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="make-a-directory"><span class="header-section-number">2.1</span> Make a Directory</h3>
 <div class="code-with-filename">
 <div class="code-with-filename-file">
 <pre><strong>create_dir.py</strong></pre>
@@ -537,8 +537,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div></section>
-<section id="copy-move-edit-a-blogs-template" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="copy-move-edit-a-blogs-template"><span class="header-section-number">2.2</span> Copy, move &amp; edit a Blog’s Template</h2>
+<section id="copy-move-edit-a-blogs-template" class="level3" data-number="2.2">
+<h3 data-number="2.2" class="anchored" data-anchor-id="copy-move-edit-a-blogs-template"><span class="header-section-number">2.2</span> Copy, move &amp; edit a Blog’s Template</h3>
 <p>After we have created a folder, we can proceed to make a copy of a user-defined template with settings that we may want to use for that specific type of post. For instance for my <code>notebook</code> posts I want to modify the date of the header, its title name and the ref link to download the output of the Jupyter notebook.</p>
 <p>For this to scale and be able to fire the script from any directory I will point to a specific folder where I will make all this changes and then move those modified files to my <code>../blog</code> section.</p>
 <p>The structure of my files where the script is stored is as follows:</p>
@@ -650,8 +650,8 @@ Note
 </ol>
 </section>
 </section>
-<section id="fire-it-up-from-terminal" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Fire it up from terminal</h1>
+<section id="fire-it-up-from-terminal" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="fire-it-up-from-terminal"><span class="header-section-number">3</span> Fire it up from terminal</h2>
 <p>For convenience, no matter in which directory of your computer you are in, this section cover how to fire it up the script that we have created. For starters, if you are running macOS or Linux most likely you will be using bash, zsh or fish shells. These shells, as it comes to not surprise, can launch scripts with user-defined strings defined.</p>
 <p>For my liking I have decided to proceed with:</p>
 <div class="code-with-filename">
@@ -687,8 +687,8 @@ Note
 <span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="bonus---create-an-script-to-split-views" class="level1 unnumbered">
-<h1 class="unnumbered"><span class="header-section-number include-toc">Bonus -</span> Create an script to split views</h1>
+<section id="bonus---create-an-script-to-split-views" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="bonus---create-an-script-to-split-views"><span class="header-section-number">Bonus -</span> Create an script to split views</h2>
 <!-- https://stackoverflow.com/questions/57639834/error-1002-in-applescript-that-uses-key-code-when-called-from-macos-app#:~:text=To%20fix%20osascript,usr/bin/osascript) -->
 <p>When working with large screen I would like to place in the left side the file I created and in the right side my browser to preview the changes I made while editing my file. If you are familiar with AppleScript then you will be at home with the following lines.</p>
 <div class="code-with-filename">
@@ -706,6 +706,14 @@ Note
 <span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>end repeat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Long story short, the script will send the keystrokes <code>cmd + ←</code>, <code>cmd + →</code> to each application and thus split the windows to left and right. How to accomplished this behavior? Glad you asked, I invite your to read this <a style="color: blue" class="new-look-link" href="../2023-06-09_on-the-topic/">post</a> where I go through how I made my life easier using Lua Shortcuts.</p>
+</section>
+<section id="further-reading" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="further-reading">Further Reading</h2>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+</ul>
 
 
 </section>

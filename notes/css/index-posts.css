@@ -193,3 +193,18 @@ main#title-block-header {
 p {
     word-wrap: break-word;
 }
+
+.header-section-number {
+    padding-right: 1px;
+}
+
+h3, .h3, h4, .h4 {
+    /* margin-top: 2rem; */
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+}
+
+h1.title {
+    font-size: 37px;
+}
+
