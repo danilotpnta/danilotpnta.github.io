@@ -44,3 +44,4 @@ git checkout main   # Make sure you are in main branch
 quarto publish gh-pages
 ```
 
+

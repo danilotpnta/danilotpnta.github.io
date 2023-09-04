@@ -4,7 +4,7 @@ listing:
     - id: notes-2023
       template: listing-blog.ejs
       template-params:
-        param1: "2023"
+        param1: "Notes"
       type: custom
       contents: /
       exclude: 
