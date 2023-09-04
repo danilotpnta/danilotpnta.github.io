@@ -42,7 +42,7 @@ h1, .h1 {
 @media (min-width: 570px){
     /* Gives padding to all main body content */
     #quarto-content>* {
-        padding-top: 28px;
+        padding-top: 25px;
     }
 }
 
@@ -181,4 +181,18 @@ border-bottom: none;
 /* Hides the videos from all posts */
 video.display-no-video.img-fluid {
     display: none;
+}
+
+.header-section-number {
+    padding-right: 1px;
+}
+
+h3, .h3, h4, .h4 {
+    /* margin-top: 2rem; */
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+}
+
+h1.title {
+    font-size: 37px;
 }
