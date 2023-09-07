@@ -22,6 +22,7 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/2023-09-05_equation-for-ml1/index.html",
       "/blog/2023-09-04_mnist-classification/index.html",
       "/blog/2023-09-03_when-you-get-older/index.html",
       "/blog/2023-08-18_how-to-automate-the-creation-of-blog-posts/index.html",
