@@ -183,6 +183,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </ul></li>
   <li><a href="#how-to-create-an-environment" id="toc-how-to-create-an-environment" class="nav-link" data-scroll-target="#how-to-create-an-environment">How to create an environment</a>
   <ul class="collapse">
+  <li><a href="#how-to-erase-an-environment" id="toc-how-to-erase-an-environment" class="nav-link" data-scroll-target="#how-to-erase-an-environment">How to erase an environment</a></li>
   <li><a href="#echo-path" id="toc-echo-path" class="nav-link" data-scroll-target="#echo-path">echo $PATH</a></li>
   </ul></li>
   </ul>
@@ -432,6 +433,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> activate mypython3</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>When you are using that environment your prompt will change and will include (mypython3). To return to using your “base” environment you can de-activate the conda environment with:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> deactivate</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="how-to-erase-an-environment" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-erase-an-environment">How to erase an environment</h2>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> remove <span class="at">--name</span> ml1labs <span class="at">--all</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
 <section id="echo-path" class="level2">
 <h2 class="anchored" data-anchor-id="echo-path">echo $PATH</h2>
 <hr>
@@ -439,9 +444,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>We use sometimes <strong>ls</strong> or <strong>pwd</strong> or <strong>echo</strong> this is because there is a <strong>$PATH</strong> where this was. This list of pre-designated directories is stored in a special variable called “PATH”</p>
 <p>This is a colon-delimited list of all the directories the command line looks in by default for programs on the particular computer.</p>
 <p><strong>Example</strong></p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> <span class="er">(</span><span class="ex">progLab</span><span class="kw">)</span> <span class="ex">datoapanta@Danilos-MacBook-Pro</span> ~ % echo <span class="va">$PATH</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> <span class="er">(</span><span class="ex">progLab</span><span class="kw">)</span> <span class="ex">datoapanta@Danilos-MacBook-Pro</span> ~ % echo <span class="va">$PATH</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>/Users/datoapanta/opt/anaconda3/envs/progLab/bin:/Users/datoapanta/opt/anaconda3/condabin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/usr/local/share/dotnet:~/.dotnet/tools:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/datoapanta/.local/bin:/Users/datoapanta/.local/bin</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="va">$PATH</span> <span class="kw">|</span> <span class="fu">tr</span> <span class="st">":"</span> <span class="st">"\n"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="va">$PATH</span> <span class="kw">|</span> <span class="fu">tr</span> <span class="st">":"</span> <span class="st">"\n"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>/Users/datoapanta/opt/anaconda3/envs/progLab/bin /Users/datoapanta/opt/anaconda3/condabin /usr/local/bin /usr/bin /bin /usr/sbin /sbin /Library/TeX/texbin /usr/local/share/dotnet ~/.dotnet/tools /Library/Frameworks/Mono.framework/Versions/Current/Commands /Users/datoapanta/.local/bin /Users/datoapanta/.local/bin</p>
 <blockquote class="blockquote">
 <p>We can now more clearly see this is a list of directories. All of these places, stored in the variable called <strong>“PATH”</strong>, are searched whenever we are typing a command in the terminal window.</p>
