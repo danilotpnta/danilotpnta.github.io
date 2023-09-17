@@ -2,11 +2,12 @@
 pagetitle: "Danilo Toapanta - About"
 sidebar: false
 css: index.css
+execute:
+  freeze: false
 ---
-```{r}
-#| echo: false
+```{r echo=FALSE}
 dir_list <- list.dirs("../blog",recursive = FALSE) 
-latest_post <- dir_list[order(unlist(dir_list),decreasing=TRUE)][1]
+latest_post <- dir_list[order(unlist(dir_list),decreasing=TRUE)][2]
 ```
 
 :::{.disable-link-underline}
@@ -24,7 +25,7 @@ https://www.google.com/search?q=university+of+twente -->
                         <code>Hi, there! This is Danilo.</code>
                     </p>
                     <p>I’m an AI researcher based in the Netherlands.</p>
-                    <p>I studied Electrical Engineering at University of Twente and now I am doing my master in Artificial Intelligence.</p>
+                    <p>I studied Computer Science in my undergraduate programme and now I am doing my master in Artificial Intelligence.</p>
                     <p>When I am not trying to figure out how my computer works, I like to <a href="../books/index.qmd" style="color:inherit; text-decoration:underline;text-decoration-color:#a3a6a8a1 ">read books</a>, go for a run, and spend some quality time with my family.</p>
                     <!-- <a href="../tailor/index.qmd" style="color:inherit; text-decoration:underline;text-decoration-color:#a3a6a8a1 ">tailor my clothes</a>, -->
                     <p>
@@ -45,6 +46,7 @@ https://www.google.com/search?q=university+of+twente -->
 
 ```
 :::
+
 
 
 

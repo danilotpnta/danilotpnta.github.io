@@ -84,9 +84,9 @@ $font-size-base: 1.02rem;
         padding: 6px 0px;
     }
 
-    .navbar .quarto-navbar-tools {
-        display: inherit !important;
-    }
+    // .navbar .quarto-navbar-tools {
+    //     display: inherit !important;
+    // }
 
     .navbar>.container-fluid {
         display: block;
@@ -1409,4 +1409,47 @@ a.new-look-link {
     text-decoration: none;
     border-bottom: 1px solid #dee3e8;
     color:inherit
+}
+
+
+//---------------------------- NAVBAR ---------------------------//
+.navbar #quarto-search {
+    display: none;
+}
+
+.quarto-navbar-tools{
+    display: none !important;
+}
+
+
+//-------------------------- SEARCH ------------------------------//
+
+.aa-DetachedCancelButton {
+    display:none
+}
+
+.aa-DetachedFormContainer {
+    padding: 0em;
+    border-bottom: 1px solid #CDCFCF;
+    background-color: transparent;
+}
+
+
+.aa-DetachedContainer {
+    background: #ffffff59;
+}
+
+.aa-Autocomplete .aa-Form, .aa-DetachedFormContainer .aa-Form {
+    align-items: center;
+    background-color: #dededede;
+    border: 1px solid #dededede;
+}
+
+.aa-Autocomplete .aa-Form:focus-within, .aa-DetachedFormContainer .aa-Form:focus-within {
+    box-shadow: none;
+    outline: none;
+}
+
+.aa-SubmitIcon{
+    opacity: 0.7 !important;
 }

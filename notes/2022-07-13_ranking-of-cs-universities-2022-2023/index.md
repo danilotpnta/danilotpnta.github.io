@@ -5,6 +5,7 @@ date: "2022-07-13"
 categories: [All, TAGS]
 number-sections: true
 toc: false
+draft: true
 ---
 
 **World University Ranking**

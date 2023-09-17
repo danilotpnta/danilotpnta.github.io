@@ -93,9 +93,9 @@ $font-size-base: 1.02rem;
         background: #2f3333 !important;
     }
 
-    .navbar .quarto-navbar-tools {
-        display: inherit !important;
-    }
+    // .navbar .quarto-navbar-tools {
+    //     display: inherit !important;
+    // }
 
     .navbar>.container-fluid {
         display: block;
@@ -797,3 +797,47 @@ to hover with the Green color */
 }
 
 
+//---------------------------- NAVBAR ---------------------------//
+.navbar #quarto-search {
+    display: none;
+}
+
+.quarto-navbar-tools{
+    display: none !important;
+}
+
+
+//-------------------------- SEARCH ------------------------------//
+.aa-DetachedOverlay {
+    background-color: #75757566;
+}
+
+.aa-DetachedCancelButton {
+    display:none
+}
+
+.aa-DetachedFormContainer {
+    padding: 0em;
+    // border-bottom: 1px solid #CDCFCF;
+    background-color: transparent;
+}
+
+
+.aa-DetachedContainer {
+    background: #ffffff59;
+}
+
+.aa-Autocomplete .aa-Form, .aa-DetachedFormContainer .aa-Form {
+    align-items: center;
+    // background-color: #dededede;
+    // border: 1px solid #dededede;
+}
+
+.aa-Autocomplete .aa-Form:focus-within, .aa-DetachedFormContainer .aa-Form:focus-within {
+    box-shadow: none;
+    outline: none;
+}
+
+.aa-SubmitIcon{
+    opacity: 0.7 !important;
+}

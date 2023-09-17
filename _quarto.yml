@@ -11,6 +11,7 @@ resources:
   - "CNAME"
 
 website:
+
   favicon: assets/danilo.png
   title: "Danilo Toapanta"
   site-url: "https://www.danilotpnta.com"
@@ -20,7 +21,9 @@ website:
 #  site-path: "/danilotpnta.github.io/"  # when commented 404.html renders correctly
   # site-url: https://danilotpnta.github.io/
   
-  search: false
+  search: 
+    location: navbar
+    type: overlay
   navbar:
     title: "<span id='danilo_topanta_brand'> Danilo Toapanta</span> <a id='mysite' class='mysite' href= '../../../../../sites/'>MySites</a>"
     # title: "<span id='danilo_topanta_brand'> Danilo Toapanta</span>"
@@ -37,9 +40,10 @@ website:
       - icon: github
         href: https://github.com/danilotpnta?tab=repositories
         target: _blank
-      - icon: braces
-        # href: /dev/ # Replace for actual url
-        href: dev/ # Replace for actual url
+      # - icon: braces
+        # href: dev/ # Replace for actual url
+      # - icon: search 
+        # href: "#top"
       # - icon: moon
       #   href: about/qmd
 
@@ -86,4 +90,5 @@ format:
       - file: _partials/icons/add-icons.html
       - text: |
           <link rel = "shortcut icon" href = "../../../../../../../../../../../assets/danilo.ico" />
-
+    include-after-body:
+      - file: _partials/search.html

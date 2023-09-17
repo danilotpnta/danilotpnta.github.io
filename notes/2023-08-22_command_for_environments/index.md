@@ -85,6 +85,11 @@ When you are using that environment your prompt will change and will include (my
 ```bash
 source deactivate
 ```
+## How to erase an environment
+
+```bash
+conda remove --name ml1labs --all
+```
 
 ## echo $PATH
 
