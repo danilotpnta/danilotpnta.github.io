@@ -710,13 +710,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </footer>
 <script>
 
-    let navbar = document.getElementsByClassName("navbar-nav")[0]
+    let navbar = document.getElementsByClassName("navbar-nav")[0]    
+
+    let li2 = document.createElement("li");
+    li2.className = "nav-item compact";
+
+    let a2 = document.createElement("a");
+    a2.className = "nav-link quarto-color-scheme-toggle";
+    a2.style.cursor = "pointer"
+    li2.appendChild(a2)
+
+    let i2 = document.createElement("i");
+    i2.className = "bi bi-moon"
+    a2.append(i2)
+
+    navbar.appendChild(li2);
+
+    i2.onclick = function() {
+        window.quartoToggleColorScheme(); return false;
+    }
+    // <a href="http://localhost:4200/about/" class="quarto-color-scheme-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 
     let li = document.createElement("li");
     li.className = "nav-item compact";
 
     let a = document.createElement("a");
     a.className = "nav-link";
+    a.style.cursor = "pointer"
     li.appendChild(a)
 
     let i = document.createElement("i");
@@ -728,6 +748,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     i.onclick = function() {
         window.quartoOpenSearch()
     }
+
+
+    
 </script>
 
 
