@@ -262,7 +262,12 @@ span.hasth-tag {
     display: none;
 }
 
-
+/* Does the separation between the text and ShowAllCategories */
+.grid-text-showAllCateg{
+    display: grid;
+    gap: 0.8rem;
+    grid-template-columns: auto 218px;
+}
 
 
 
