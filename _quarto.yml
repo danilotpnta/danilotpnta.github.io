@@ -33,6 +33,12 @@ website:
         file: index.qmd
       - text: "Blog"
         href: blog/index.qmd
+      # - text: "Writing"
+      #   menu:
+      #   - text: Blog
+      #     href: blog/index.qmd
+      #   - text: Notes
+      #     href: notes/index.qmd
       - text: "Projects"
         href: projects/index.qmd
       - text: "About"

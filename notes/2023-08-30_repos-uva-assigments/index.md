@@ -1,12 +1,11 @@
 ---
-title: "Repos UvA Assignments"
+title: "MSc AI Resources"
 description: "Description of this Note"
 date: "2023-08-30"
 categories: [All, UvA, TAGS]
 number-sections: false
 toc: false
 search: true
-draft: true
 ---
 
 ## General Information {.unnumbered}

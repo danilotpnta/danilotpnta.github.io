@@ -151,6 +151,12 @@ table.quarto-listing-table a {
 }
 /* } */
 
+.grid-showAllCateg-Notes {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: auto 95px;
+}
+
 .sidebar-blog {
     /* padding-top: 15px; */
     padding-top: 20px;  

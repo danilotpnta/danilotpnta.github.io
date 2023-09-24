@@ -54,6 +54,7 @@ library(knitr)
   In this section Danilo writes down his notes, the things he has figured out about his computer, and ocasionally when feeling inspired he writes poems. 
 </p>
 
+<div class="grid-showAllCateg-Notes">
 <div class="background-color-show-posts" style="display: flex; justify-content: center; padding: 5px 0px; border-radius: 5px;">
 <!-- <div style="display: flex; justify-content: center; padding-top: 10px; padding-bottom 8px;"> -->
   <a id="clickable-showing-all-posts" href="/blog" style="text-decoration: none; pointer-events: none;">
@@ -66,6 +67,15 @@ library(knitr)
       Show All Posts <i style="padding-left:2px;" class='bi bi-arrow-counterclockwise'></i> 
     </p>
   </a>
+</div>
+<div class="background-color-show-posts" style="display: flex; justify-content: center; padding: 5px 0px; border-radius: 5px;">
+<!-- <div style="display: flex; justify-content: center; padding-top: 10px; padding-bottom 8px;"> -->
+  <a id="clickable-showing-all-posts" href="/notes" style="text-decoration: none;">
+    <p align="center" id="showing-all-posts" class="color-show-posts" style="font-weight: 400; margin: 0px; padding: 0px; ">
+        Notes
+    </p>
+  </a>
+</div>
 </div>
 
 

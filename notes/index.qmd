@@ -19,12 +19,13 @@ listing:
       sort-ui: false
       filter-ui: false
       date-format: MMM DD
-  
 navbar: true
 title-block-banner: true
 sidebar: false
 include-after-body: show-all-posts.html
 css: index.css
+toc: false
+number-sections: false
 ---
 
 <!-- This activates option to run Javascript -->
@@ -33,6 +34,24 @@ knitr::opts_chunk$set(echo = TRUE)
 library(knitr)
 ```
 
+<!-- <h1 style="padding: 0em; margin: 0em; padding-bottom: 1rem"> Notes </h1> -->
+
+<!-- <div class="grid-text-showAllCateg">
+<div>Hi there! Nice to see you around. This section contains information that I want to remember and does not fit into my <a href="../blog/" style="color:inherit; text-decoration-color:#a3a6a8a1">Blog</a> section.</div> 
+
+<div class="background-color-show-posts" style="display: flex; justify-content: center; align-items: center; padding: 5px 0px; border-radius: 5px;">
+  <a id="clickable-showing-all-posts" href="/notes" style="text-decoration: none; pointer-events: none;">
+    <p align="center" id="showing-all-posts" class="color-show-posts" style="font-weight: 400; margin: 0px; padding: 0px; font-style:italic">
+        Showing All Notes 
+    </p>
+  </a>
+  <a id="clickable-show-all-posts" href="/notes/#category=All" style="text-decoration: none; pointer-events: none;">
+    <p align="center" id="reload-posts-icon" class="color-show-posts" style="display:none; font-weight: 400; margin: 0px; padding: 0px; font-style:italic;">
+      Show All Notes <i style="padding-left:2px;" class='bi bi-arrow-counterclockwise'></i> 
+    </p>
+  </a>
+</div>
+</div> -->
 
 <div class="background-color-show-posts" style="display: flex; justify-content: center; padding: 5px 0px; border-radius: 5px;">
   <a id="clickable-showing-all-posts" href="/notes" style="text-decoration: none; pointer-events: none;">

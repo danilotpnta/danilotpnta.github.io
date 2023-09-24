@@ -22,9 +22,7 @@ format:
 css: css/index-posts.css
 
 # Hides the navbar
-navbar: false
-
-
+navbar: true
 
 # Default for table of contents
 toc-title: Table of contents
