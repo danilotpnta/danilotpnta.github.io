@@ -68,6 +68,13 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/material-icons-0.14.2/mi.css" rel="stylesheet">
+<script>
+window.MathJax = {
+  tex: {
+    tags: 'ams'
+  }
+};
+</script>
 <link rel="shortcut icon" href="../../../../../../../../../../../assets/danilo.ico">
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -408,15 +415,99 @@ ul.task-list li input[type="checkbox"] {
     
 </main>
 
-<section id="probability-theory-equations" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="probability-theory-equations"><span class="header-section-number">1</span> Probability Theory Equations</h2>
-<p><span class="math display">\[\begin{align}
+<section id="rules-of-probability-theory" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="rules-of-probability-theory"><span class="header-section-number">1</span> Rules of Probability Theory</h2>
+<p>Sum Rule used in Marginalization <span class="math display">\[
+\begin{align}
+p(x) &amp;= \sum_{y \in Y }^{} p(x,y) \\
+     &amp;= \sum_{y \in Y }^{} p(x|y)p(y) \nonumber
+\end{align}
+\]</span></p>
+<p>Product Rule used in the Join Probability <span class="math display">\[
+\begin{align}
+p(x,y) = p(x|y)p(y)
+\end{align}
+\]</span></p>
+</section>
+<section id="expectation-rules" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="expectation-rules"><span class="header-section-number">2</span> Expectation Rules</h2>
+<p><span class="math display">\[
+\begin{align}
+    \mathbb{E}[f(x)+g(x)] &amp;= \mathbb{E}[f(x)] + \mathbb{E}[g(x)]\\
+    \mathbb{E}[cf(x)] &amp;= c\mathbb{E}[f(x)]\\
+    \mathbb{E}[c] &amp;= c\\
+    \mathbb{E}[\mathbb{E}[f(x)]] &amp;= \mathbb{E}[f(x)]^2\\
+\end{align}
+\]</span></p>
+</section>
+<section id="probability-theory-equations" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="probability-theory-equations"><span class="header-section-number">3</span> Probability Theory Equations</h2>
+<p><span class="math display">\[
+\begin{align}
     \mathbb{E}[x] &amp;= \int_{x}x \, p(x) \, dx\\
     var[x] &amp;= \mathbb{E}[(x-\mathbb{E}[x])^2] \nonumber\\
     &amp;=\mathbb{E}[f(x)^2] - \mathbb{E}[f(x)]^2\\
     cov[x,y] &amp;= \mathbb{E}[xy]-\mathbb{E}[x]\mathbb{E}[y]\\  
     \mathcal{N}(x|\mu , \sigma^2) &amp;= \frac{1}{\sqrt{2 \pi  \sigma^2}} \exp^{\{-\frac{1}{2 \sigma^2}(x-\mu)^2\}}\\
-\end{align}\]</span></p>
+    \mathcal{N}(x|\mu , \Sigma ) &amp;= (2 \pi)^{-k/2} |\Sigma|^{-1/2} \exp^{\{-\frac{1}{2}(x-\mu)^T \Sigma^-1 (x-\mu)\}}\\
+\end{align}
+\]</span></p>
+<p>This is our model. This is what we estimate: <span class="math display">\[
+\begin{align}
+y(\underline{x})
+\end{align}
+\]</span></p>
+<p>The observations can be sampled from (signal + noise): <span class="math display">\[
+\begin{align}
+t = sin(\underline{x}) + \varepsilon
+\end{align}
+\]</span></p>
+<p>Data Pair: For a given <span class="math inline">\(x\)</span>, I can get a target value <span class="math inline">\(t\)</span> (the observation) <span class="math display">\[
+\begin{align}
+(t, x)  
+\end{align}
+\]</span></p>
+<p>For instance, we have a sampled data D, and for each <span class="math inline">\(x\)</span> we have seen <span class="math inline">\(t\)</span> and that is our excel file we can work with</p>
+</section>
+<section id="bayessian-linear-regression" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="bayessian-linear-regression"><span class="header-section-number">4</span> Bayessian Linear Regression</h2>
+<p>We do not want to average over models but this time we want to find the best parameters over only one Data set (without splitting it) and change only our parameters.</p>
+<p>For this we would consider the posterior. So what is the probability that this parameters <span class="math inline">\(w\)</span> represent the actual data.</p>
+<p>Goal recover the probability distribution that may have generated this data (the posterior)</p>
+<section id="dimensions" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="dimensions"><span class="header-section-number">4.1</span> Dimensions</h3>
+<p><span class="math display">\[
+\begin{align}
+\underline{t} &amp;\in \mathbb{R}^{Nx1}, \text{ $N$ amount of linear regressions}\\
+\underline{w} &amp;\in \mathbb{R}^{Mx1}, \text{ $M$ amount of parameters}\\
+X &amp;\in \mathbb{R}^{NxD}, \text{ $N$ amount of observ, $D$ amount of models}\\
+% \underline{x_i} &amp;\in \mathbb{R}^{Dx1}, \text{ $i$ the $i_{th}$ experiment} \\
+&amp;= [\underline{x_{1}}, \underline{x_{2}}, ... ,\underline{x_{N}}] \nonumber \\
+\underline{x_{1}} &amp;\in \mathbb{R}^{Nx1} = [x_1, x_2,...,x_N]\\
+\underline{\phi}(\underline{x}) &amp;\in \mathbb{R}^{Dx1} \to \mathbb{R}^{Mx1}\\
+\phi_{1}(\underline{x}) &amp;\in \mathbb{R}^{Nx1} \to \mathbb{R}^{1x1}\\
+\Phi &amp;\in \mathbb{R}^{NxM}
+\end{align}
+\]</span></p>
+</section>
+</section>
+<section id="sequential-bayesian-learning" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="sequential-bayesian-learning"><span class="header-section-number">5</span> Sequential Bayesian Learning</h2>
+<p>Here our goal is to find the parameters of w. So we want to find the values w that discribe best the distribution of our data points meaning we want to find the posterior described as:</p>
+<p><span class="math inline">\(p(w|x_1,t_1, \alpha, \beta)\)</span></p>
+<ul>
+<li>We have a prior, we assume initial values</li>
+<li>We sample one data point and apply Gaussian distribution to obtain a likelihood</li>
+<li>With the prior and likelihood we get the posterior (what we want)</li>
+</ul>
+</section>
+<section id="predictive-distribution" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="predictive-distribution"><span class="header-section-number">6</span> Predictive Distribution</h2>
+<p>If we are given a new input x’, then we want to be able to compute its new distribution meaning we want to compute the new likelihood that looks as follows:</p>
+<p><span class="math inline">\(p(t'|x', X, t, \alpha, \beta)\)</span></p>
+<ul>
+<li>Here we are given all data points and we get the parameters for w. With that we can get a prior. Those are the assumptions of how the weigths should be.</li>
+</ul>
 
 
 </section>
