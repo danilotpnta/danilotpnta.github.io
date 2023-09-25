@@ -23,6 +23,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -454,9 +488,257 @@ Classification
 </section>
 <section id="decision-theory" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="decision-theory"><span class="header-section-number">3</span> Decision Theory</h2>
-<p>Here we talked about when we consider a classifier a good classifier.</p>
+<p>Here we talked about when we consider a classifier (a model) a good classifier.</p>
+<ul>
+<li>We talk about the Bayes Error Rate</li>
+<li>How to minimize the misclassification rate</li>
+</ul>
+<p>Model that you start with:</p>
+<ul>
+<li>Class-conditional densities: <span class="math inline">\(p(\underline{x}|C_k)\)</span></li>
+<li>Prior class probabilities: <span class="math inline">\(p(C_k)\)</span></li>
+</ul>
+<p>From these two you can derive:</p>
+<ol type="1">
+<li>The Joint distribution (<strong>Likelihood</strong>) <span class="math inline">\(p(\underline{x}, C_k)\)</span></li>
+</ol>
+<p><span class="math display">\[
+\begin{align}
+p(\underline{x}, C_k)=p(\underline{x}|C_k)p(C_k)
+\end{align}
+\]</span></p>
+<ol start="2" type="1">
+<li>The <strong>Posterior</strong> <span class="math inline">\(p(C_k|\underline{x})\)</span>.</li>
+</ol>
+<p><span class="math display">\[
+\begin{align}
+p(C_k|\underline{x}) = \frac{p(\underline{x}, C_k)p(C_k)}{P(\underline{x})}
+\end{align}
+\]</span></p>
+<ul>
+<li>Decision Theory tell us that the best prediction for input <span class="math inline">\(\underline{x}\)</span> is to choose the class with highest joint (<strong>Likelihood</strong>) <span class="math inline">\(p(\underline{x}, C_k)\)</span></li>
+<li>Or equivalently: choose class with the highest posterior <span class="math inline">\(p(C_k|\underline{x})\)</span></li>
+<li>Decision boundary between <span class="math inline">\(C_k\)</span> and <span class="math inline">\(C_j\)</span> are at <span class="math inline">\(p(C_k | \underline{x})=p(C_j | \underline{x})\)</span></li>
+</ul>
+</section>
+<section id="from-bayes-rule-to-bayes-classifiers" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="from-bayes-rule-to-bayes-classifiers"><span class="header-section-number">4</span> From Bayes Rule to Bayes Classifiers</h2>
+<p><span class="math display">\[
+\begin{align}
+p(C|X) = \frac{P(X|C)P(C)}{P(X)} \\
+\end{align}
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(P(C|X)\)</span> is the <strong>Posterior</strong> (Given the data what is the prob of being class C_k)</li>
+<li><span class="math inline">\(P(X|C)\)</span> is the <strong>Likelihood</strong> (How the data is distributed given C)</li>
+<li><span class="math inline">\(P(C)\)</span> is the <strong>Prior</strong></li>
+<li><span class="math inline">\(P(X)\)</span> is the <strong>Evidence</strong>/ Marginal likelihood</li>
+</ul>
+<p>The evidence <span class="math inline">\(P(X)\)</span> can also be decomposed in:</p>
+<p><span class="math display">\[
+\begin{align}
+P(X) &amp;= \sum_{j}{}P(X,C_j)\\
+     &amp;= \sum_{j}{}P(X|C_j)P(C_j) \\
+\end{align}
+\]</span></p>
+<p>Unlike regression, I will have one likelihood per each class, mainly:</p>
+<p><span class="math display">\[
+\begin{align}
+p(X|C_0) \quad \text{and} \quad p(X|C_1) \\
+\end{align}
+\]</span></p>
+<p>For instance for <span class="math inline">\(K=2\)</span> two classes. This means per each class we are going to have our own model</p>
+<p>The decicion boundary then becomes equal when both likelihoods are equal:</p>
+<p><span class="math display">\[
+\begin{align}
+p(C_0|X) &amp;= p(C_1|X) \quad \text{Decision Boundary}\\
+P(X, C_0) &amp;= p(X, C_1) \nonumber
+\end{align}
+\]</span></p>
+<p>Here:</p>
+<ul>
+<li><span class="math inline">\(P(C_0|X)\)</span> is the <strong>Posterior</strong> probability</li>
+</ul>
+</section>
+<section id="types-of-classification" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="types-of-classification"><span class="header-section-number">5</span> Types of Classification</h2>
+<ul>
+<li>Decision Trees</li>
+<li>Logistic Regressions</li>
+<li>Bayes Classifiers (Generative): first fit P(x|C) and then use Bayes Rule to flip it and tell which type of class correspond <span class="math inline">\(x\)</span>
+<ul>
+<li>Naive Bayes: you put an x and it gives you to which class <span class="math inline">\(K\)</span> correponds</li>
+<li>Gaussian Likelihood: here <span class="math inline">\(p(x|C_k) = N(\mu_k, \Sigma_k)\)</span><br>
+QDA: Quadratic discriminant analysis
+<ul>
+<li>Shared Parameters<br>
+LDA: Linear Discriminant Analysis</li>
+</ul></li>
+</ul></li>
+</ul>
+<section id="gaussian-generative-classifiers" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="gaussian-generative-classifiers"><span class="header-section-number">5.1</span> Gaussian Generative Classifiers</h3>
+<p>Here we assume arbitrary covariance matrices for each class</p>
+<p><span class="math display">\[
+\begin{align}
+p(x|C_k) = N(\mu_k, \Sigma_k)
+\end{align}
+\]</span></p>
+<ul>
+<li>Each class <span class="math inline">\(K\)</span> is going to have its normal distribution. And each of these distributions would be completely different from the others.</li>
+</ul>
+<section id="quadratic-discriminant-analysis" class="level4 unnumbered unlisted">
+<h4 class="unnumbered unlisted anchored" data-anchor-id="quadratic-discriminant-analysis">Quadratic Discriminant Analysis</h4>
+<p>Here the decision boundary would be quadratic.</p>
+<p>Here the covariances would different for each class, like so:</p>
+<p><span class="math display">\[
+\begin{align}
+1&amp;=\frac{p(x, C_2)}{p(x, C_1)} \\
+&amp;=\frac{p(x| C_2)p(C_2)}{p(x| C_1)p(C_1)} \nonumber
+\end{align}
+\]</span></p>
+<p>Taking the log at both sides</p>
+<p><span class="math display">\[
+\begin{align}
+0 &amp;= log N(\mu_2, \Sigma_2) - log N(\mu_1, \Sigma_1) + log \frac{p(C_2)}{p(C_1)}
+\end{align}
+\]</span></p>
+<p>If you solve the equation above then you end up with quadratic terms.</p>
+<p>This tell us that now we can handle non-linear separate cases now the data can needs to be quadratic separable.</p>
+</section>
+<section id="shared-parameters" class="level4" data-number="5.1.1">
+<h4 data-number="5.1.1" class="anchored" data-anchor-id="shared-parameters"><span class="header-section-number">5.1.1</span> Shared Parameters</h4>
+</section>
+<section id="linear-discriminant-analysis" class="level4 unnumbered unlisted">
+<h4 class="unnumbered unlisted anchored" data-anchor-id="linear-discriminant-analysis">Linear Discriminant Analysis</h4>
+<p>Here the decision boundary would be linear.</p>
+<p>Here the covariances would be the same: 1 covariance matrix like so:</p>
+<p><span class="math display">\[
+\begin{align}
+0 &amp;= log N(\mu_2, \Sigma) - log N(\mu_1, \Sigma) + log \frac{p(C_2)}{p(C_1)}
+\end{align}
+\]</span></p>
+<p>Here we do not impose <span class="math inline">\(diag\{\Sigma_k\}\)</span>, we can have Naive Bayes approach here. The latter meaning we can indeeed if we want have the covariance matrices to be <span class="math inline">\(diag\{\Sigma_k\}\)</span>. In this called we called. <em>Naive Bayes applied to LDA</em>.</p>
+<ul>
+<li>Naive Bayes applied to LDA: same/shared parameters for <span class="math inline">\(\Sigma_k\)</span> and <span class="math inline">\(diag\{\Sigma_k\}\)</span></li>
+</ul>
+</section>
+</section>
+<section id="understanding-covariance-and-variance" class="level3 unlisted unnumbered">
+<h3 class="unlisted unnumbered anchored" data-anchor-id="understanding-covariance-and-variance">Understanding Covariance and Variance</h3>
+<div class="cell" data-freeze="true" data-execution_count="1">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> multivariate_normal</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.colorbar <span class="im">as</span> cbar</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the mean and covariance matrix for the original case</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>mean <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">0</span>]</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>covariance_matrix <span class="op">=</span> [[<span class="dv">2</span>, <span class="dv">1</span>], [<span class="dv">1</span>, <span class="dv">2</span>]]  <span class="co"># Example covariance matrix</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a grid of points</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>x, y <span class="op">=</span> np.meshgrid(np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">100</span>), np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">100</span>))</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>pos <span class="op">=</span> np.dstack((x, y))</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a multivariate Gaussian distribution for the original case</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>rv <span class="op">=</span> multivariate_normal(mean, covariance_matrix)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the probability density at each point in the grid for the original case</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>pdf <span class="op">=</span> rv.pdf(pos)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate eigenvalues and eigenvectors for the original case</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>eigenvalues, eigenvectors <span class="op">=</span> np.linalg.eig(covariance_matrix)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the scale factor for the arrows</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>scale_factor <span class="op">=</span> <span class="fl">2.0</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the first subplot for the original case</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>plt.contourf(x, y, pdf, cmap<span class="op">=</span><span class="st">'viridis'</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">2</span>):</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    plt.arrow(</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>        mean[<span class="dv">0</span>],</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>        mean[<span class="dv">1</span>],</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>        eigenvectors[i, <span class="dv">0</span>] <span class="op">*</span> np.sqrt(eigenvalues[i]) <span class="op">*</span> scale_factor,</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>        eigenvectors[i, <span class="dv">1</span>] <span class="op">*</span> np.sqrt(eigenvalues[i]) <span class="op">*</span> scale_factor,</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>        head_width<span class="op">=</span><span class="fl">0.2</span>,</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>        head_length<span class="op">=</span><span class="fl">0.2</span>,</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>        fc<span class="op">=</span><span class="st">'r'</span>,</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>        ec<span class="op">=</span><span class="st">'r'</span>,</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>plt.annotate(<span class="ss">f'Var(X) = </span><span class="sc">{</span>eigenvalues[<span class="dv">0</span>]<span class="sc">:.2f}</span><span class="ss">'</span>, xy<span class="op">=</span>(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>), color<span class="op">=</span><span class="st">'white'</span>)</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>plt.annotate(<span class="ss">f'Var(Y) = </span><span class="sc">{</span>eigenvalues[<span class="dv">1</span>]<span class="sc">:.2f}</span><span class="ss">'</span>, xy<span class="op">=</span>(<span class="op">-</span><span class="dv">3</span>, <span class="dv">2</span>), color<span class="op">=</span><span class="st">'white'</span>)</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>plt.annotate(<span class="ss">f'Cov(X, Y) = </span><span class="sc">{</span>covariance_matrix[<span class="dv">0</span>][<span class="dv">1</span>]<span class="sc">:.2f}</span><span class="ss">'</span>, xy<span class="op">=</span>(<span class="op">-</span><span class="dv">3</span>, <span class="dv">1</span>), color<span class="op">=</span><span class="st">'white'</span>)</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Original Case (Covariance ≠ 0)'</span>)</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the mean and covariance matrix for the equal variance case</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>equal_variance_cov_matrix <span class="op">=</span> np.diag([<span class="dv">2</span>, <span class="dv">2</span>])  <span class="co"># Equal variance along both dimensions</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a multivariate Gaussian distribution for the equal variance case</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>rv_equal_variance <span class="op">=</span> multivariate_normal(mean, equal_variance_cov_matrix)</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the probability density at each point in the grid for the equal variance case</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>pdf_equal_variance <span class="op">=</span> rv_equal_variance.pdf(pos)</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the second subplot for the equal variance case</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>)</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>plt.contourf(x, y, pdf_equal_variance, cmap<span class="op">=</span><span class="st">'viridis'</span>)</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>plt.annotate(<span class="ss">f'Var(X) = </span><span class="sc">{</span>equal_variance_cov_matrix[<span class="dv">0</span>, <span class="dv">0</span>]<span class="sc">:.2f}</span><span class="ss">'</span>, xy<span class="op">=</span>(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>), color<span class="op">=</span><span class="st">'white'</span>)</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>plt.annotate(<span class="ss">f'Var(Y) = </span><span class="sc">{</span>equal_variance_cov_matrix[<span class="dv">1</span>, <span class="dv">1</span>]<span class="sc">:.2f}</span><span class="ss">'</span>, xy<span class="op">=</span>(<span class="op">-</span><span class="dv">3</span>, <span class="dv">2</span>), color<span class="op">=</span><span class="st">'white'</span>)</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Equal Variance Case (Covariance = 0)'</span>)</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="co"># Set common labels</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax <span class="kw">in</span> plt.gcf().axes:</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(<span class="st">'X'</span>)</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>    ax.set_ylabel(<span class="st">'Y'</span>)</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a><span class="co"># Ensure equal aspect ratio for both subplots</span></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> ax <span class="kw">in</span> plt.gcf().axes:</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>    ax.set_aspect(<span class="st">'equal'</span>, adjustable<span class="op">=</span><span class="st">'box'</span>)</span>
+<span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new axes for the legend with adjusted width</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>cax <span class="op">=</span> plt.gcf().add_axes([<span class="fl">0.96</span>, <span class="fl">0.3</span>, <span class="fl">0.02</span>, <span class="fl">0.4</span>])  <span class="co"># Adjust the width and position as needed</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot vertical colorbar for the legend</span></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>cbar.ColorbarBase(cax, cmap<span class="op">=</span><span class="st">'viridis'</span>, orientation<span class="op">=</span><span class="st">'vertical'</span>, label<span class="op">=</span><span class="st">'Probability Density'</span>)</span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a><span class="co"># Adjust the overall layout</span></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>plt.subplots_adjust(wspace<span class="op">=</span><span class="fl">0.3</span>)</span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><img src="index_files/figure-html/cell-2-output-1.png" width="690" height="306"></p>
+</div>
+</div>
+<p>This plot visually illustrates how variance represents the spread along each dimension, and the arrows depict how the covariance matrix encodes the relationships between the dimensions in a Gaussian distribution.</p>
+<ol type="1">
+<li><strong>Original Case (Covariance ≠ 0):</strong></li>
+</ol>
+<ul>
+<li>In the first plot (Original Case), the color yellow represents regions where the probability density is higher. In a Gaussian distribution, the probability density is highest at the mean (center) of the distribution and decreases as you move away from the mean. The color yellow typically corresponds to higher probability values in this context.</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Equal Variance Case (Covariance = 0):</strong></li>
+</ol>
+<ul>
+<li>In the second plot (Equal Variance Case), the color yellow also represents regions of higher probability density. Even though the covariance is zero, meaning there is no linear relationship between the X and Y dimensions, the multivariate Gaussian distribution still has a peak at the mean (center) in each dimension. The color yellow again corresponds to higher probability values in this context.</li>
+</ul>
+<center>
+<img class="img-fluid" width="450px" src="img_m.jpeg">
+</center>
+<ol type="1">
+<li><p><strong>QDA:</strong> they have separate Covariances</p></li>
+<li><p><strong>LDA:</strong> they share a non-zero covariance</p></li>
+<li><p>Here the shared variances mean for example 3 in the y-direction and 1 in the x-direction, they however contain a non-zero covariance</p></li>
+<li><p>Here the shared variances mean for example 1 in the y-direction and 1 in the x-direction, they however contain a zero covariance.</p></li>
+</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
