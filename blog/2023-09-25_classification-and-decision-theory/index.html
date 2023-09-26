@@ -495,12 +495,12 @@ Classification
 </ul>
 <p>Model that you start with:</p>
 <ul>
-<li>Class-conditional densities: <span class="math inline">\(p(\underline{x}|C_k)\)</span></li>
-<li>Prior class probabilities: <span class="math inline">\(p(C_k)\)</span></li>
+<li>Class-conditional densities: <span class="math inline">\(p(\underline{x}|C_k)\)</span> <em>aka</em> (<strong>Likelihood</strong>)</li>
+<li><strong>Prior</strong> class probabilities: <span class="math inline">\(p(C_k)\)</span></li>
 </ul>
 <p>From these two you can derive:</p>
 <ol type="1">
-<li>The Joint distribution (<strong>Likelihood</strong>) <span class="math inline">\(p(\underline{x}, C_k)\)</span></li>
+<li>The Joint distribution <span class="math inline">\(p(\underline{x}, C_k)\)</span></li>
 </ol>
 <p><span class="math display">\[
 \begin{align}
@@ -512,11 +512,11 @@ p(\underline{x}, C_k)=p(\underline{x}|C_k)p(C_k)
 </ol>
 <p><span class="math display">\[
 \begin{align}
-p(C_k|\underline{x}) = \frac{p(\underline{x}, C_k)p(C_k)}{P(\underline{x})}
+p(C_k|\underline{x}) = \frac{p(\underline{x}| C_k)p(C_k)}{p(\underline{x})}
 \end{align}
 \]</span></p>
 <ul>
-<li>Decision Theory tell us that the best prediction for input <span class="math inline">\(\underline{x}\)</span> is to choose the class with highest joint (<strong>Likelihood</strong>) <span class="math inline">\(p(\underline{x}, C_k)\)</span></li>
+<li>Decision Theory tell us that the best prediction for input <span class="math inline">\(\underline{x}\)</span> is to choose the class with highest joint <span class="math inline">\(p(\underline{x}, C_k)\)</span></li>
 <li>Or equivalently: choose class with the highest posterior <span class="math inline">\(p(C_k|\underline{x})\)</span></li>
 <li>Decision boundary between <span class="math inline">\(C_k\)</span> and <span class="math inline">\(C_j\)</span> are at <span class="math inline">\(p(C_k | \underline{x})=p(C_j | \underline{x})\)</span></li>
 </ul>
@@ -553,7 +553,7 @@ p(X|C_0) \quad \text{and} \quad p(X|C_1) \\
 <p><span class="math display">\[
 \begin{align}
 p(C_0|X) &amp;= p(C_1|X) \quad \text{Decision Boundary}\\
-P(X, C_0) &amp;= p(X, C_1) \nonumber
+% P(X, C_0) &amp;= p(X, C_1) \nonumber
 \end{align}
 \]</span></p>
 <p>Here:</p>
@@ -736,6 +736,111 @@ p(x|C_k) = N(\mu_k, \Sigma_k)
 <li><p>Here the shared variances mean for example 3 in the y-direction and 1 in the x-direction, they however contain a non-zero covariance</p></li>
 <li><p>Here the shared variances mean for example 1 in the y-direction and 1 in the x-direction, they however contain a zero covariance.</p></li>
 </ol>
+</section>
+</section>
+<section id="probabilistic-generative-models-k2" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="probabilistic-generative-models-k2"><span class="header-section-number">6</span> Probabilistic Generative Models <span class="math inline">\(K=2\)</span></h2>
+<p><span class="math display">\[
+\begin{align}
+P(C_1|x) &amp;= \frac{p(x|C_1)p(C_1)}{p(x|C_1)p(C_1)p(x|C_2)p(C_2)}\\
+&amp;= \frac{1}{1+e^-a}\nonumber\\
+\end{align}
+\]</span></p>
+<p>Where <span class="math inline">\(a\)</span> is the log odds:</p>
+<p><span class="math display">\[
+\begin{align}
+a &amp;= \ln\frac{p(x|C_1)p(C_1)}{p(x|C_2)p(C_2)}\label{log_odds}\\
+\end{align}
+\]</span></p>
+<p>This can be expressed as the Sigmoid Function:</p>
+<p><span class="math display">\[
+\begin{align}
+\sigma &amp;= \frac{1}{1+e^{(-a)}}\\
+\end{align}
+\]</span></p>
+<ul>
+<li>When the log odds its possitive in the sigmud function it will converge to 1. This means I am certain it will be class <span class="math inline">\(C_1\)</span></li>
+<li>If the log odds is equal meaning not clue which class to assign. The probability of classifing the target to either class is 0.5.
+<ul>
+<li>For <span class="math inline">\(a\)</span> to be equal to zero. I need <span class="math inline">\(a=\ln(1)\)</span>. This 1 means <span class="math inline">\(p(x|C_1)p(C_1)=p(x|C_2)p(C_2)\)</span></li>
+</ul></li>
+<li>When the log odds its negative, the sigmoid function will go to zero. This means I am certain it will be class <span class="math inline">\(C_2\)</span></li>
+</ul>
+</section>
+<section id="probabilistic-generative-models-generalk" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="probabilistic-generative-models-generalk"><span class="header-section-number">7</span> Probabilistic Generative Models, general:<span class="math inline">\(K\)</span></h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Remember
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You are given:</p>
+<ul>
+<li>Class-conditional densities: <span class="math inline">\(p(x|C_k)\)</span> <em>aka</em> <strong>Likelihood</strong></li>
+<li><strong>Prior</strong> class probabilities: <span class="math inline">\(p(Ck)\)</span></li>
+</ul>
+<p>With these two guys you can get:</p>
+<ul>
+<li>Joint Distribution: <span class="math inline">\(p(x,C_k) = p(x|C_k)p(C_k)\)</span> the <em>numerator</em></li>
+<li>The <strong>Posterior</strong> <span class="math inline">\(p(C_k|x)=\frac{p(x|C_k)p(C_k)}{p(x)}\)</span></li>
+</ul>
+<p>Goal:</p>
+<ul>
+<li>Find <span class="math inline">\(p(C_k|x)\)</span> so that you can determine the class of <span class="math inline">\(x\)</span> by knowing the Decision boundaries<br>
+</li>
+</ul>
+</div>
+</div>
+<p><span class="math display">\[
+\begin{align}
+P(C_k|x) &amp;= \frac{p(x|C_k)p(C_k)}{\sum_{j=1}^{K}p(x|C_j)p(C_j)}\\
+&amp;= \frac{e^{a_k}}{\sum_{j=1}^{K}e^{a_j}}\label{softmax}\\
+a_k &amp;= \ln(p(x|C_k)p(C_k)) \nonumber
+\end{align}
+\]</span></p>
+<p>Where <span class="math inline">\(\ref{softmax}\)</span> is called the <strong>Softmax</strong>:</p>
+<ul>
+<li>if <span class="math inline">\(a_k&gt;&gt;a_j\)</span> for all <span class="math inline">\(j \neq k\)</span> then <span class="math inline">\(p(C_k|x)=1\)</span> and <span class="math inline">\(p(C_j|x)=0\)</span></li>
+<li>The <strong>Softmax</strong> reduces to the <strong>Simoid</strong> function when <span class="math inline">\(K=2\)</span></li>
+</ul>
+<section id="how-to-parametrize-class-conditional-densities-aka-the-likelihood" class="level4" data-number="7.0.1">
+<h4 data-number="7.0.1" class="anchored" data-anchor-id="how-to-parametrize-class-conditional-densities-aka-the-likelihood"><span class="header-section-number">7.0.1</span> How to parametrize Class Conditional Densities (<em>aka</em> The Likelihood)?</h4>
+<p>With Gaussians!</p>
+<p><span class="math display">\[
+\begin{align}
+p(x|C_k)&amp;=\mathcal{N}(x|\mu_k , \Sigma_k ) \\
+        &amp;= \frac{1}{(2 \pi)^{D/2}} \frac{1}{|\Sigma_k|^{1/2}} \exp^{\{-\frac{1}{2}(x-\mu_k)^T \Sigma_k^-1 (x-\mu_k)\}} \label{gaussian_lda}\\
+\end{align}
+\]</span></p>
+<ul>
+<li>Where the Gaussian is going to be multivariate and it will be <span class="math inline">\(D\)</span>-dimensional due to the input being <span class="math inline">\(x \in \mathbb{R}^{D}\)</span>
+<ul>
+<li>This means for each <span class="math inline">\(\mu_k\)</span> and <span class="math inline">\(\Sigma_k\)</span> I would have a different Gaussian distribution</li>
+</ul></li>
+<li><span class="math inline">\(\Sigma_k\)</span> determines the shape of my distribution. Like in the python plot above in the left graph</li>
+</ul>
+<p>When we assume each of these Gaussian share the same the Covariance matrix: <span class="math inline">\(\Sigma_k\)</span> then we are talking about LDA</p>
+<p>To determine the decision boundary we have that:</p>
+<p><span class="math display">\[
+\begin{align}
+p(C_1|X) &amp;= \frac{1}{1+e^(-a)} = \sigma(a)\\
+\end{align}
+\]</span></p>
+<p>Where <span class="math inline">\(a\)</span> is defined was defined as the log odds. So replacing <span class="math inline">\(p(x|C_k)\)</span> so replacing <span class="math inline">\(\ref{gaussian_lda}\)</span> (the Gaussians) in the log odds <span class="math inline">\(\ref{log_odds}\)</span> give us The Generalized Linear Model:</p>
+<p><span class="math display">\[
+\begin{align}
+p(C_1|x) &amp;= \sigma(\underline{w}^T\underline{x}+w_o)\\
+\end{align}
+\]</span></p>
+<p>And now recall that the decision boundary happens when <span class="math inline">\(p(C_1|x) = p(C_2|x)\)</span>.</p>
+<ul>
+<li>This all means if we want to make decisions based on the posterior distributions, then <span class="math inline">\(a=0\)</span> meaning the prob/prob is 1 or the <span class="math inline">\(\sigma(a) = \frac{1}{2}\)</span></li>
+</ul>
 
 
 </section>
