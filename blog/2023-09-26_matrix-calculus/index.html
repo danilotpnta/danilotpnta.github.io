@@ -8,9 +8,9 @@
 
 <meta name="author" content="Danilo Toapanta">
 <meta name="dcterms.date" content="2023-09-26">
-<meta name="description" content="MLE vs MAP in the context of parameter estimation">
+<meta name="description" content="Derivatives of vectors, matrix and other utils">
 
-<title>Danilo Toapanta - Maximum Likelihood vs Maximum a Posteriori Estimation</title>
+<title>Danilo Toapanta - Matrix Calculus</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -117,7 +117,7 @@ window.MathJax = {
 <link rel="stylesheet" href="../css/index-posts.css">
 </head>
 
-<body class="floating nav-fixed fullcontent">
+<body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -167,12 +167,12 @@ window.MathJax = {
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full blog-page" style="display: none;">
     <div class="quarto-title-banner page-columns page-full">
         <div class="quarto-title column-body">
-            <h1 class="title">Maximum Likelihood vs Maximum a Posteriori Estimation</h1>
+            <h1 class="title">Matrix Calculus</h1>
                 
             <!-- Description Block -->
                         <div>
                 <div class="description">
-                    MLE vs MAP in the context of parameter estimation
+                    Derivatives of vectors, matrix and other utils
                 </div>
             </div>
                         
@@ -186,8 +186,18 @@ window.MathJax = {
                             </a>
                         </div> 
                                             <div class="quarto-category">
+                            <a href="../../blog/#category=Education">
+                                Education
+                            </a>
+                        </div> 
+                                            <div class="quarto-category">
                             <a href="../../blog/#category=TAGS">
                                 TAGS
+                            </a>
+                        </div> 
+                                            <div class="quarto-category">
+                            <a href="../../blog/#category=Vector Calculus">
+                                Vector Calculus
                             </a>
                         </div> 
                     
@@ -223,11 +233,18 @@ window.MathJax = {
 </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#transpose-properties" id="toc-transpose-properties" class="nav-link active" data-scroll-target="#transpose-properties">Transpose Properties</a></li>
+  </ul>
+</nav>
 </nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 <script>
@@ -304,12 +321,12 @@ window.MathJax = {
 <main id="title-block-header" class="quarto-title-block default page-columns page-full" style="padding-bottom: 40px;">
 
     <div class="quarto-title column-body" style="margin-bottom: 1em;">
-        <h1 class="title" style="padding-bottom:8px" ;="">Maximum Likelihood vs Maximum a Posteriori Estimation</h1>
+        <h1 class="title" style="padding-bottom:8px" ;="">Matrix Calculus</h1>
         
         <!-- Description Block -->
                     <div>
                 <div class="description">
-                    MLE vs MAP in the context of parameter estimation
+                    Derivatives of vectors, matrix and other utils
                 </div>
             </div>
         
@@ -326,9 +343,19 @@ window.MathJax = {
                                 All
                             </a>
                         </div>
+                                            <div id="Education" class="quarto-category">
+                            <a href="../../blog/#category=Education">
+                                Education
+                            </a>
+                        </div>
                                             <div id="TAGS" class="quarto-category">
                             <a href="../../blog/#category=TAGS">
                                 TAGS
+                            </a>
+                        </div>
+                                            <div id="Vector Calculus" class="quarto-category">
+                            <a href="../../blog/#category=Vector Calculus">
+                                Vector Calculus
                             </a>
                         </div>
                                     </div>
@@ -354,12 +381,28 @@ window.MathJax = {
                                 All
                             </a>
                         </div>
+                                            <div id="Education-from-here" class="quarto-category tags-title" style="display: none;">
+                            <a href="../../blog/#category=Education">
+                               <!-- <span class="hasth-tag">
+                                #
+                                </span> -->
+                                Education
+                            </a>
+                        </div>
                                             <div id="TAGS-from-here" class="quarto-category tags-title" style="display: none;">
                             <a href="../../blog/#category=TAGS">
                                <!-- <span class="hasth-tag">
                                 #
                                 </span> -->
                                 TAGS
+                            </a>
+                        </div>
+                                            <div id="Vector Calculus-from-here" class="quarto-category tags-title" style="display: none;">
+                            <a href="../../blog/#category=Vector Calculus">
+                               <!-- <span class="hasth-tag">
+                                #
+                                </span> -->
+                                Vector Calculus
                             </a>
                         </div>
                     
@@ -395,95 +438,70 @@ window.MathJax = {
     
 </main>
 
-<section id="definition" class="level2">
-<h2 class="anchored" data-anchor-id="definition">Definition</h2>
-<p>Maximum Likelihood Estimation (MLE) and Maximum A Posteriori Estimation (MAP) are two common statistical methods used for parameter estimation in various fields, including machine learning and statistics. They are often used in the context of estimating parameters of a statistical model or distribution. Here are the key differences between MLE and MAP:</p>
-</section>
-<section id="objective" class="level2">
-<h2 class="anchored" data-anchor-id="objective">Objective:</h2>
-<ol type="1">
-<li><p><strong>MLE (Maximum Likelihood Estimation):</strong> MLE aims to find the parameter values that maximize the likelihood function, which measures how well the observed data fits the model. In other words, it seeks the parameter values that make the observed data most probable under the assumed model.</p>
-<p>Basically, I have prob density ie a Gaussian. I take its log and then compute the derivate of it w/ rspect to some variable of interest i.e <span class="math inline">\(\mu\)</span>, or <span class="math inline">\(\underline{w}\)</span></p></li>
-</ol>
-<div class="cell" data-execution_count="1">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate random data from a Gaussian distribution</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>mean <span class="op">=</span> <span class="dv">0</span>  <span class="co"># Mean of the Gaussian distribution</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>std_dev <span class="op">=</span> <span class="dv">1</span>  <span class="co"># Standard deviation of the Gaussian distribution</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>sample_size <span class="op">=</span> <span class="dv">10000</span>  <span class="co"># Number of data points</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> np.random.normal(mean, std_dev, sample_size)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a figure with two subplots</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">3</span>))</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the Gaussian distribution on the left subplot</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>ax1.hist(data, bins<span class="op">=</span><span class="dv">50</span>, density<span class="op">=</span><span class="va">True</span>, color<span class="op">=</span><span class="st">'blue'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>, label<span class="op">=</span><span class="st">'Gaussian Data'</span>)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>ax1.set_xlabel(<span class="st">'x'</span>)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>ax1.set_ylabel(<span class="st">'PDF'</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">'Gaussian Distribution'</span>)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>ax1.grid(<span class="va">True</span>)</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the PDF of the Gaussian distribution for plotting</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(mean <span class="op">-</span> <span class="dv">4</span> <span class="op">*</span> std_dev, mean <span class="op">+</span> <span class="dv">4</span> <span class="op">*</span> std_dev, <span class="dv">1000</span>)</span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>pdf <span class="op">=</span> norm.pdf(x, mean, std_dev)</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the log PDF on the right subplot</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>log_pdf <span class="op">=</span> np.log(pdf)</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>ax2.plot(x, log_pdf, <span class="st">'r-'</span>, label<span class="op">=</span><span class="st">'Log PDF of Gaussian'</span>)</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>ax2.set_xlabel(<span class="st">'x'</span>)</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>ax2.set_ylabel(<span class="st">'Log PDF'</span>)</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">'Log PDF of Gaussian Distribution'</span>)</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>ax2.grid(<span class="va">True</span>)</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Show legends</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>ax1.legend()</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>ax2.legend()</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<p><img src="index_files/figure-html/cell-2-output-1.png" width="588" height="276"></p>
-</div>
-</div>
-<ol start="2" type="1">
-<li><strong>MAP (Maximum A Posteriori Estimation):</strong> MAP, on the other hand, incorporates prior information about the parameters into the estimation process. It seeks the parameter values that maximize the posterior probability, which combines the likelihood of the data and the prior probability of the parameters.</li>
-</ol>
-<div class="callout callout-style-default callout-note callout-titled">
+<section id="transpose-properties" class="level2">
+<h2 class="anchored" data-anchor-id="transpose-properties">Transpose Properties</h2>
+<p>If <span class="math inline">\(\Sigma\)</span> is symmetric:</p>
+<p><span class="math display">\[
+\begin{align}
+\Sigma = \Sigma^T\\
+\end{align}
+\]</span></p>
+<p>The inverse of a symmetric matrix is also symmetric</p>
+<p><span class="math display">\[
+\begin{align}
+(\Sigma^{-1})^T = (\Sigma^T)^{-1} = \Sigma^{-1} \label{cov_trans_inv} \\
+\end{align}
+\]</span></p>
+<div class="callout callout-style-simple callout-note no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
-<i class="callout-icon"></i>
+<i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Want to know more?
+Proof Eq. <span class="math inline">\(\ref{cov_trans_inv}\)</span>
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<section id="incorporation-of-prior-information" class="level2">
-<h2 class="anchored" data-anchor-id="incorporation-of-prior-information">Incorporation of Prior Information:</h2>
-<p>MLE: MLE does not consider any prior information or beliefs about the parameters. It solely relies on the likelihood of the observed data. MAP: MAP explicitly incorporates prior beliefs or information about the parameters through the prior probability distribution. This makes MAP especially useful when you have some prior knowledge about the parameters.</p>
-</section>
-<section id="formulation" class="level2">
-<h2 class="anchored" data-anchor-id="formulation">Formulation:</h2>
-<p>MLE: The MLE estimate for a parameter is obtained by maximizing the likelihood function, typically by taking the derivative of the likelihood function with respect to the parameter and setting it to zero. MAP: The MAP estimate for a parameter is obtained by maximizing the posterior probability, which is proportional to the product of the likelihood and the prior probability. Mathematically, it involves finding the mode of the posterior distribution.</p>
-</section>
-<section id="robustness-to-small-sample-sizes" class="level2">
-<h2 class="anchored" data-anchor-id="robustness-to-small-sample-sizes">Robustness to Small Sample Sizes:</h2>
-<p>MLE: MLE can be sensitive to small sample sizes because it tends to overfit the data when the sample size is small. MAP: MAP can provide more stable estimates in situations with limited data because it incorporates prior information, which can act as regularization.</p>
-</section>
-<section id="interpretability" class="level2">
-<h2 class="anchored" data-anchor-id="interpretability">Interpretability:</h2>
-<p>MLE: MLE estimates tend to be more data-driven and may not incorporate external knowledge. They are often considered more objective. MAP: MAP estimates can be influenced by prior information, which can introduce subjectivity into the estimation process. The choice of the prior distribution can significantly impact the MAP estimates.</p>
-<p>In summary, the main difference between MLE and MAP is the incorporation of prior information. MLE seeks the parameter values that maximize the likelihood of the data, while MAP combines the likelihood with prior information to find parameter values that maximize the posterior probability. The choice between MLE and MAP depends on the specific problem and the availability of prior knowledge about the parameters.</p>
-</section>
+<div class="cell" data-execution_count="1">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a symmetric matrix</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> np.array([[<span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">2</span>],</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">1</span>, <span class="dv">5</span>, <span class="dv">3</span>],</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">6</span>]])</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if A is symmetric</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>is_symmetric <span class="op">=</span> np.allclose(A, A.T)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> is_symmetric:</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the inverse of the symmetric matrix</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    A_inv <span class="op">=</span> np.linalg.inv(A)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Original symmetric matrix A:"</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(A)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Inverse of A:"</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(A_inv)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"The matrix A is not symmetric."</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Original symmetric matrix A:
+[[4 1 2]
+ [1 5 3]
+ [2 3 6]]
+
+Inverse of A:
+[[ 0.3         0.         -0.1       ]
+ [ 0.          0.28571429 -0.14285714]
+ [-0.1        -0.14285714  0.27142857]]</code></pre>
+</div>
+</div>
+<p>Here we have shown that the inverse of a symmetric matrix its also a symmetric matrix. It is not the same because doing the inverse you do other calculations but is symmetric around the diagonal</p>
 </div>
 </div>
 </div>

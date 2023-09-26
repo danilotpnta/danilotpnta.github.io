@@ -841,6 +841,96 @@ p(C_1|x) &amp;= \sigma(\underline{w}^T\underline{x}+w_o)\\
 <ul>
 <li>This all means if we want to make decisions based on the posterior distributions, then <span class="math inline">\(a=0\)</span> meaning the prob/prob is 1 or the <span class="math inline">\(\sigma(a) = \frac{1}{2}\)</span></li>
 </ul>
+</section>
+</section>
+<section id="lda-maximum-likelihood-for-k2" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="lda-maximum-likelihood-for-k2"><span class="header-section-number">8</span> LDA: Maximum Likelihood for K=2</h2>
+<blockquote class="blockquote">
+<p><strong>Goal:</strong> recover the Gaussian distributions (the join distribution = p(X, C_k)) that have generated the data. To accomplished that we need to take the MLE over the the Gaussian conditional densities aka the likelihood and solve for <span class="math inline">\(u_k\)</span>, <span class="math inline">\(\Sigma\)</span> and priors <span class="math inline">\(p(C_k)\)</span></p>
+</blockquote>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Isometric Covariance definition
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>It is a special case of a covariance matrix where all off-diagonal elements are zero, and the diagonal elements are equal, representing a constant variance or dispersion in all dimensions.</p>
+<p>Mathematically, an isometric covariance matrix Σ can be represented as:</p>
+<ul>
+<li>Σ = σ² * I</li>
+</ul>
+<p>Where:</p>
+<ul>
+<li>Σ is the covariance matrix.</li>
+<li>σ² is the common variance or dispersion parameter.</li>
+<li>I is the identity matrix, which has ones on the diagonal and zeros elsewhere.</li>
+</ul>
+<p>In this form, each element along the diagonal of the covariance matrix Σ is equal to σ², and all off-diagonal elements are zero. This implies that the variables in a multivariate distribution with an isometric covariance matrix have equal variances and are uncorrelated with each other.</p>
+</div>
+</div>
+</div>
+<p>Given:</p>
+<ol type="1">
+<li>Gaussian conditional densities aka <strong>Likelihoods</strong>:</li>
+</ol>
+<p><span class="math display">\[
+\begin{align}
+p(x|C_k) = \frac{1}{(2 \pi)^{D/2}} \frac{1}{|\Sigma_k|^{1/2}} \exp^{\{-\frac{1}{2}(x-\mu_k)^T \Sigma_k^-1 (x-\mu_k)\}} \nonumber\\
+\end{align}
+\]</span></p>
+<ol start="2" type="1">
+<li>Prior <span class="math inline">\(p(C_k)\)</span><br>
+Because we have <span class="math inline">\(k=2\)</span> then we can assign <span class="math inline">\(p(C_1) = q\)</span> and <span class="math inline">\(p(C_2) = 1-q\)</span></li>
+</ol>
+<p>With 1. and 2. we can solve for the Joint distributions:</p>
+<p>For <span class="math inline">\(x_n\)</span> with <span class="math inline">\(t_n =1\)</span>: <span class="math display">\[
+\begin{align}
+p(x_n, C_1) &amp;= p(x_n|C_1)p(C_1) = q \, N(x_n|\mu_1,\Sigma) \\
+\end{align}
+\]</span></p>
+<p>For <span class="math inline">\(x_n\)</span> with <span class="math inline">\(t_n =0\)</span>: <span class="math display">\[
+\begin{align}
+p(x_n, C_2) &amp;= p(x_n|C_2)p(C_2) = (1-q) \, N(x_n|\mu_2, \Sigma)\\
+\end{align}
+\]</span></p>
+<ul>
+<li><span class="math inline">\(t_n\)</span> is binary if I do <span class="math inline">\(\sum t_n\)</span> here I am counting the number of times <span class="math inline">\(t_n\)</span> is equals to 1.</li>
+</ul>
+<section id="deriving-q_ml" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="deriving-q_ml"><span class="header-section-number">8.1</span> Deriving <span class="math inline">\(q_{ML}\)</span></h3>
+<p><span class="math display">\[
+\begin{align}
+q_{ML} &amp;= \frac{1}{N} \sum_{n=1}^{N} t_n = \frac{N_1}{N}\\
+\end{align}
+\]</span></p>
+<ul>
+<li><span class="math inline">\(q\)</span> is the prior probability of observing class <span class="math inline">\(K=1\)</span>. The result above means the total number of observations that I have observed <span class="math inline">\(t_n=1\)</span></li>
+</ul>
+</section>
+<section id="deriving-muml" class="level3" data-number="8.2">
+<h3 data-number="8.2" class="anchored" data-anchor-id="deriving-muml"><span class="header-section-number">8.2</span> Deriving <span class="math inline">\(\mu{ML}\)</span></h3>
+<p><span class="math display">\[
+\begin{align}
+\mu_{1,ML} &amp;= \frac{1}{N_1} \sum_{n=1}^{N} t_n \, x_n\\
+\end{align}
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\mu_{1,Ml}\)</span> is the sample mean of all my observations where <span class="math inline">\(x_n\)</span> belongs to class <span class="math inline">\(K=1\)</span>. Here $t_n =1 $ when the class is 1</li>
+</ul>
+<p><span class="math display">\[
+\begin{align}
+\mu_{2,ML} &amp;= \frac{1}{N_2} \sum_{n=1}^{N} (1-t_n) \, x_n\\
+\end{align}
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\mu_{2,Ml}\)</span> is the sample mean of all my observations where <span class="math inline">\(x_n\)</span> belongs to class <span class="math inline">\(K=2\)</span></li>
+</ul>
 
 
 </section>
