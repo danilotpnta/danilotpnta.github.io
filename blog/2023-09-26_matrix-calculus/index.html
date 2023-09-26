@@ -117,7 +117,7 @@ window.MathJax = {
 <link rel="stylesheet" href="../css/index-posts.css">
 </head>
 
-<body class="floating nav-fixed">
+<body class="floating nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -233,18 +233,11 @@ window.MathJax = {
 </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#transpose-properties" id="toc-transpose-properties" class="nav-link active" data-scroll-target="#transpose-properties">Transpose Properties</a></li>
-  </ul>
-</nav>
+    
 </nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    </div>
+    
 <!-- main -->
 <main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 <script>
@@ -505,6 +498,19 @@ Inverse of A:
 </div>
 </div>
 </div>
+</section>
+<section id="partial-derivatives" class="level2">
+<h2 class="anchored" data-anchor-id="partial-derivatives">Partial Derivatives</h2>
+<p><span class="math display">\[
+\begin{align}
+\frac{\partial \textbf{a}^T\textbf{X}\textbf{b}}{\partial\textbf{X}} &amp;= \textbf{a}\textbf{b}^T\\
+\frac{\partial \textbf{a}^T\textbf{X}^{-1}\textbf{b}}{\partial\textbf{X}} &amp;= -(\textbf{X}^{-1})^T\textbf{a}\textbf{b}^T(\textbf{X}^{-1})^T\\
+&amp; = - (\textbf{X}^{-1})\textbf{a}\textbf{b}^T(\textbf{X}^{-1})\quad &amp;\text{If $\textbf{X}$ is symmetric} \nonumber \\
+\frac{\partial (\textbf{x}-\textbf{A}\textbf{s})^T\textbf{W}(\textbf{x}-\textbf{A}\textbf{s})}{\partial\textbf{A}} &amp;= -2\textbf{W}(\textbf{x}-\textbf{A}\textbf{s})\textbf{s}^T \quad &amp;\text{If $\textbf{W}$ is symmetric} \\
+\frac{\partial (\textbf{x}-\textbf{A}\textbf{s})^T\textbf{W}(\textbf{x}-\textbf{A}\textbf{s})}{\partial\textbf{s}} &amp;= -2(\textbf{x}-\textbf{A}\textbf{s})\textbf{W}\textbf{A} \quad &amp;\text{If $\textbf{W}$ is symmetric} \\
+\frac{\partial (\textbf{x}-\textbf{s})^T\textbf{W}(\textbf{x}-\textbf{s})}{\partial\textbf{s}} &amp;= -2(\textbf{x}-\textbf{s})\textbf{W} \quad &amp;\text{If $\textbf{W}$ is symmetric}
+\end{align}
+\]</span></p>
 
 
 </section>
