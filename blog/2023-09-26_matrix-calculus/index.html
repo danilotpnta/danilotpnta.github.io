@@ -507,8 +507,8 @@ Inverse of A:
 \frac{\partial \textbf{a}^T\textbf{X}^{-1}\textbf{b}}{\partial\textbf{X}} &amp;= -(\textbf{X}^{-1})^T\textbf{a}\textbf{b}^T(\textbf{X}^{-1})^T\\
 &amp; = - (\textbf{X}^{-1})\textbf{a}\textbf{b}^T(\textbf{X}^{-1})\quad &amp;\text{If $\textbf{X}$ is symmetric} \nonumber \\
 \frac{\partial (\textbf{x}-\textbf{A}\textbf{s})^T\textbf{W}(\textbf{x}-\textbf{A}\textbf{s})}{\partial\textbf{A}} &amp;= -2\textbf{W}(\textbf{x}-\textbf{A}\textbf{s})\textbf{s}^T \quad &amp;\text{If $\textbf{W}$ is symmetric} \\
-\frac{\partial (\textbf{x}-\textbf{A}\textbf{s})^T\textbf{W}(\textbf{x}-\textbf{A}\textbf{s})}{\partial\textbf{s}} &amp;= -2(\textbf{x}-\textbf{A}\textbf{s})\textbf{W}\textbf{A} \quad &amp;\text{If $\textbf{W}$ is symmetric} \\
-\frac{\partial (\textbf{x}-\textbf{s})^T\textbf{W}(\textbf{x}-\textbf{s})}{\partial\textbf{s}} &amp;= -2(\textbf{x}-\textbf{s})\textbf{W} \quad &amp;\text{If $\textbf{W}$ is symmetric}
+\frac{\partial (\textbf{x}-\textbf{A}\textbf{s})^T\textbf{W}(\textbf{x}-\textbf{A}\textbf{s})}{\partial\textbf{s}} &amp;= -2(\textbf{x}-\textbf{A}\textbf{s})\textbf{W}^T\textbf{A} \quad &amp;\text{If $\textbf{W}$ is symmetric} \\
+\frac{\partial (\textbf{x}-\textbf{s})^T\textbf{W}(\textbf{x}-\textbf{s})}{\partial\textbf{s}} &amp;= -2(\textbf{x}-\textbf{s})\textbf{W}^T \quad &amp;\text{If $\textbf{W}$ is symmetric}
 \end{align}
 \]</span></p>
 
