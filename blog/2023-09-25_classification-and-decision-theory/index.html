@@ -1027,8 +1027,105 @@ y(x,\overline{w})&amp;=f(\overline{w}^t \boldsymbol{\phi}) \\
 </section>
 <section id="least-squares-for-classification" class="level2" data-number="11">
 <h2 data-number="11" class="anchored" data-anchor-id="least-squares-for-classification"><span class="header-section-number">11</span> Least Squares for Classification</h2>
+<p>We are gonna have for each <span class="math inline">\(K\)</span> a linear model (discriminant function)</p>
+<p><span class="math display">\[
+\begin{align}
+y_k = (\textbf{x}) = \textbf{w}_{k}^{T}\textbf{x} + w_{k0}
+\end{align}
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li><p>Inputs: <span class="math inline">\(\textbf{x} \in \mathbb{R}^{Dx1}\)</span>, <span class="math inline">\(D\)</span>-Dimensional feature vector (data points that describe each vector)<br>
+i.e for <span class="math inline">\(D=10\)</span> we have <span class="math inline">\(\textbf{x}_n = (x1, x2, ...,x_D)^T = (0,1,0,...0)\)</span><br>
+For instance in the document classifier form the practicals, we have that each word from the document will add up to form a <span class="math inline">\(D\)</span> vector. Each element in this vector correspond <span class="math inline">\(0\)</span> or <span class="math inline">\(1\)</span> indicating whether a word belongs or not to the document.</p></li>
+<li><p><span class="math inline">\(\textbf{w}_k^T \in \mathbb{R}^{1xD}\)</span> is the weight vector for class <span class="math inline">\(k\)</span><br>
+<span class="math inline">\(w_{k0}\)</span> is the bias term.</p></li>
+</ul>
+<p>We can generalize this not only for one <span class="math inline">\(y_k\)</span> but for all <span class="math inline">\(K\text{s}\)</span> like so:</p>
+<p><span class="math display">\[
+\begin{align}
+\textbf{y} =  \mathbf{\widetilde W}^T \mathbf{\tilde x}
+\end{align}
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li>Matrix <span class="math inline">\(\mathbf{\widetilde W} \in \mathbb{R}^{MxK}\)</span>: has in the kth column <span class="math inline">\(\mathbf{\tilde w}_k = (w_{k0}, \textbf{w})^T \in \mathbb{R}^{(D+1)x1} \in \mathbb{R}^{Mx1}\)</span><br>
+Matrix <span class="math inline">\(\mathbf{\widetilde W}^T \in \mathbb{R}^{KxM}\)</span></li>
+<li><span class="math inline">\(\mathbf{\tilde{x}} = (1, \textbf{w})^T \in \mathbb{R}^{(D+1)x1}\in \mathbb{R}^{Mx1}\)</span></li>
+<li>Vector: <span class="math inline">\(\textbf{y(x)} \in \mathbb{R}^{Kx1}\)</span></li>
+</ul>
+<p>Remember at the end <span class="math inline">\(y_k\)</span> is just a number (you can think of a number that tells you how far <span class="math inline">\(x\)</span> is from the decision surface)so we are going to assign <span class="math inline">\(\textbf{x}\)</span> to class <span class="math inline">\(C_k\)</span> if: <span class="math display">\[
+\DeclareMathOperator*{\argmax}{argmax}
+\begin{align}
+k = \argmax_{j} \, y_j(\textbf{x})\\
+\end{align}
+\]</span></p>
+<p>Now, for this to work we need target values so that we can minimize our error function:</p>
+<p><span class="math display">\[
+\begin{align}
+E_D(\mathbf{\widetilde W})=\frac{1}{2}Tr[(\mathbf{\widetilde X}\mathbf{\widetilde W} - \mathbf{\widetilde T})^T(\mathbf{\widetilde X}\mathbf{\widetilde W} - \mathbf{\widetilde T})]
+\end{align}
+\]</span></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Remember: What was Linear Regresion &amp; Do we get the target values?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>In simple linear regression, there is one target value, whereas in multiple linear regression, there can be multiple target values.</p>
+<p>In a typical linear regression problem, you are given the input features (independent variables) and the corresponding target values (dependent variables) as training data. The goal of linear regression is to learn a linear relationship between the input features and the target values</p>
+<p><strong>Input Features (Independent Variables):</strong> These are the variables that you use to make predictions. Each data point in the dataset has a set of input features.</p>
+<p><strong>Target Values (Dependent Variables):</strong> These are the values you are trying to predict or estimate based on the input features. Each data point in the dataset has a corresponding target value.</p>
+<p>The linear regression model is trained using this dataset to find the coefficients (weights) for the input features that minimize the mean squared error between the predicted values and the actual target values. Once the model is trained, you can use it to make predictions on new or unseen data.</p>
+</div>
+</div>
+</div>
+<p>In the above equation <span class="math inline">\(E_D\)</span>:</p>
+<ul>
+<li><span class="math inline">\(X \in \mathbb{R}^{Nx(D+1)} \in \mathbb{R}^{NxM}\)</span>, where each row is a different observation (a different number of document like in the practicals) represented by the vector <span class="math inline">\(\mathbf{\tilde{x}}_n\)</span></li>
+<li>Target: <span class="math inline">\(T \in \mathbb{R}^{NxK}\)</span>, where each row is a different one-hot encoded vector that is trying to predict what is the class that <span class="math inline">\(\mathbf{\tilde{x}}_n\)</span> belongs to. The one-hot enconding means that for that particular kth value is 1 meaning it belongs to the kth class and for the rest is zero.</li>
+<li><span class="math inline">\(t \in \mathbb{R}^{Kx1}\)</span> where <span class="math inline">\(t \in \{C_1, C_2, ..., C_k\}\)</span> and <span class="math inline">\(K\)</span> classes<br>
+i.e for <span class="math inline">\(K=4\)</span> for binary classification we have we have <span class="math inline">\(t = (0, 0, 0, 1)^T\)</span>. The latter would be the one-hot encoding for <span class="math inline">\(K=4\)</span> documents<br>
+i.e if <span class="math inline">\(k=5\)</span> my one-hot encoding when it is predicting for class k=3 would be. <span class="math inline">\(t_n=(0,0,1,0,0)^T\)</span><br>
+</li>
+<li><span class="math inline">\(Tr\)</span>: Sum of the diagonal matrix</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Goal</strong>: Now that we have defined our error we want to minimize it as a function of <span class="math inline">\(W\)</span> so that when we new values for <span class="math inline">\(x\)</span> come, then we multiply with our computed <span class="math inline">\(W\)</span> and finally get our predicted <span class="math inline">\(y(x)\)</span>.</p>
+</blockquote>
+<p>Solution:</p>
+<p><span class="math display">\[
+\begin{align}
+\mathbf{\widetilde W}_{LS} = (\mathbf{\widetilde X}^T\mathbf{\widetilde X})^{-1}\mathbf{\widetilde X}^T\textbf{T} = \mathbf{\widetilde X}^\dagger\textbf{T}
+\end{align}
+\]</span></p>
+<p>Finally to predict the label for <span class="math inline">\(\mathbf{\tilde{x}}\)</span> we use our discriminant function: <span class="math display">\[
+\begin{align}
+\textbf{y}_{LS}(\textbf{x})&amp;=\mathbf{\widetilde W}_{LS}^T\mathbf{\tilde{x}}\\
+&amp; \in \mathbb{R}^{KxM} \, \in \mathbb{R}^{Mx1} \nonumber\\
+&amp;\in \mathbb{R}^{Kx1}\nonumber
+\end{align}
+\]</span></p>
+<p>So one number per each class. We get a vector with dimensions <span class="math inline">\(K\)</span> because this vector was one-hot encoded so that means we have to look at the value that contains <span class="math inline">\(1\)</span> and that <span class="math inline">\(k_{th}\)</span> element would be our class <span class="math inline">\(C_k\)</span></p>
+<ul>
+<li><strong>Discriminant functions</strong> are used to classify data points into different classes based on the values of the discriminant function</li>
+</ul>
+<section id="why-linear-regresion-for-classification-is-not-a-good-idea" class="level3" data-number="11.1">
+<h3 data-number="11.1" class="anchored" data-anchor-id="why-linear-regresion-for-classification-is-not-a-good-idea"><span class="header-section-number">11.1</span> Why Linear Regresion for Classification is not a good idea?</h3>
+<ul>
+<li>The decision boundaries are sensitive to outliers. Our Linear Regresion wants our distance to be as close to <span class="math inline">\(y(x)=1\)</span> if the target value is also <span class="math inline">\(1\)</span>, but if there is outliers then these points will influence the decision boundary skewing it.</li>
+<li>For <span class="math inline">\(k&gt;2\)</span> some decision regions can become very small or are even completely ignored</li>
+<li>The components of the <span class="math inline">\(\textbf{y}_{LS}(\textbf{x})\)</span> are not real probabilities</li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
