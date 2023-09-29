@@ -8,7 +8,7 @@
 
 <meta name="author" content="Danilo Toapanta">
 <meta name="dcterms.date" content="2023-09-25">
-<meta name="description" content="Formulas for the course at UvA: Machine Learning 1">
+<meta name="description" content="Notes for the course at UvA: Machine Learning 1">
 
 <title>Danilo Toapanta - Classification and Decision Theory</title>
 <style>
@@ -172,7 +172,7 @@ window.MathJax = {
             <!-- Description Block -->
                         <div>
                 <div class="description">
-                    Formulas for the course at UvA: Machine Learning 1
+                    Notes for the course at UvA: Machine Learning 1
                 </div>
             </div>
                         
@@ -324,7 +324,7 @@ window.MathJax = {
         <!-- Description Block -->
                     <div>
                 <div class="description">
-                    Formulas for the course at UvA: Machine Learning 1
+                    Notes for the course at UvA: Machine Learning 1
                 </div>
             </div>
         
@@ -976,16 +976,18 @@ How to classify a new data point?
 <p>So far:</p>
 </section>
 </section>
-<section id="parametrizing-the-class-conditional-desnsitiy-with-other-distributions" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="parametrizing-the-class-conditional-desnsitiy-with-other-distributions"><span class="header-section-number">9</span> Parametrizing the class-conditional desnsitiy with other distributions</h2>
+<section id="probabilistic-generative-models-discrete" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="probabilistic-generative-models-discrete"><span class="header-section-number">9</span> Probabilistic Generative Models: Discrete</h2>
+<p>In this section we parametrize the class-conditional density with other distributions</p>
 <ul>
 <li><p>So far we parametrize the Class conditional distributions with Gaussians. We can use however different ones. This is necessary when ie. the data it is not continuous and for instance its discrete.</p></li>
 <li><p>In the Continuous space the number of parameters does not scales as much as in the discrete where then we have for i.e a binary classification to <span class="math inline">\(2^D\)</span> parameters. The reasons is that we cannot fit anymore a Gaussains distribution to the discrete variables</p></li>
 </ul>
 <p>To contrast the huge num. of parameters then we are going to make a model assumption that is:</p>
 <ul>
-<li>Naive Bayes assumption: feature value are treated as independent when conditioned on class <span class="math inline">\(C_k\)</span>. That means:</li>
+<li>Naive Bayes assumption: feature value are treated as independent when conditioned on class <span class="math inline">\(C_k\)</span>.</li>
 </ul>
+<p>The above means that we are going to model each feature value with its own distribution. This in turn means that to model <span class="math inline">\(p(x|C_k, \lambda_1,...,\lambda_D)\)</span> we will have <span class="math inline">\(D\)</span> number of parameters. The following equation accounts for that using the product symbol.</p>
 <p>Given:</p>
 <ul>
 <li>Class-conditional probabilities: <span class="math display">\[
@@ -1000,6 +1002,105 @@ p(x|C_k) &amp;= \prod_{i=1}^{D} \, p(x_i|C_k) \\
 <li><span class="math inline">\(x_i\)</span> takes the value <span class="math inline">\(0\)</span> or <span class="math inline">\(1\)</span> given my class <span class="math inline">\(C_k\)</span></li>
 </ul>
 <p>The above equation was modeled using the bernoulli equation</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Effect of changing parameters in Bernoulli distribution
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>The Bernoulli distribution is a discrete probability distribution that models a random experiment with two possible outcomes, often referred to as “success” and “failure.” It is named after Swiss mathematician Jacob Bernoulli. The Bernoulli distribution is used to represent situations where an event can result in one of two possible outcomes, typically denoted as 1 (success) or 0 (failure).</p>
+<p>Here are the key characteristics and properties of the Bernoulli distribution:</p>
+<ol type="1">
+<li><p><strong>Parameters</strong>: The Bernoulli distribution has a single parameter, denoted as “p,” which represents the probability of success (or the probability of the outcome being 1). The parameter “q” represents the probability of failure (q = 1 - p).</p></li>
+<li><p><strong>Probability Mass Function (PMF)</strong>: The probability mass function of the Bernoulli distribution is defined as follows:</p>
+<p>P(X = x) = p^x * q^(1-x)</p>
+<p>Where:</p>
+<ul>
+<li>P(X = x) is the probability of the random variable X taking the value x (either 0 or 1).</li>
+<li>p is the probability of success (X = 1).</li>
+<li>q is the probability of failure (X = 0).</li>
+</ul></li>
+<li><p><strong>Mean and Variance</strong>:</p>
+<ul>
+<li>The mean (expected value) of a Bernoulli random variable is E(X) = p.</li>
+<li>The variance of a Bernoulli random variable is Var(X) = p(1-p).</li>
+</ul></li>
+<li><p><strong>Support</strong>: The Bernoulli distribution is defined over the set of values {0, 1}.</p></li>
+</ol>
+<p>Applications of the Bernoulli distribution: - Modeling coin flips (heads or tails). - Modeling success/failure outcomes, such as whether a product is defective (failure) or non-defective (success). - Modeling binary decisions, such as whether a customer makes a purchase (success) or does not make a purchase (failure).</p>
+<p><strong>Example Scenario</strong>: Suppose you have a coin that is not fair; it is biased. When you flip this biased coin, it does not have an equal chance of landing on heads (H) or tails (T). Instead, it has a higher probability of landing on heads.</p>
+<p><strong>Probability of Success (Heads)</strong>: In this example, we have a probability of success (getting heads) denoted as “p.” Let’s say that “p” is equal to 0.6. This means that when you flip the coin, there is a 60% chance of getting heads (H) and a 40% chance of getting tails (T).</p>
+<p><strong>Using the Bernoulli Distribution</strong>: To model this coin-flipping scenario, you can use a Bernoulli distribution. In this context:</p>
+<ul>
+<li>The outcome “1” can represent success (getting heads).</li>
+<li>The outcome “0” can represent failure (getting tails).</li>
+</ul>
+<p>The Bernoulli distribution allows you to calculate the probability of success (1) or failure (0) for each coin flip.</p>
+<p><strong>Bernoulli Distribution Parameters</strong>: - Parameter “p” is the probability of success (1), which is 0.6 in this case. - Parameter “q” is the probability of failure (0), which is 1 - p, or 0.4 in this case.</p>
+<p><strong>Using the Bernoulli PMF</strong>: The Bernoulli probability mass function (PMF) allows you to calculate the probability of each outcome:</p>
+<ul>
+<li>P(X = 1) represents the probability of getting heads (success), which is equal to “p” or 0.6.</li>
+<li>P(X = 0) represents the probability of getting tails (failure), which is equal to “q” or 0.4.</li>
+</ul>
+<p><strong>Interpreting the Results</strong>: When you flip this biased coin multiple times, the Bernoulli distribution helps you understand the likelihood of getting heads (success) or tails (failure) for each individual flip. For example:</p>
+<ul>
+<li>If you flip the coin 10 times, you would expect to get heads approximately 6 times (0.6 * 10) on average.</li>
+<li>However, the actual outcomes in any given sequence of 10 flips may vary around this expected value due to randomness.</li>
+</ul>
+<p>The Bernoulli distribution provides a mathematical framework to model and analyze such binary outcomes in scenarios like coin flipping, where there are two possible results with different probabilities of occurrence.</p>
+<div class="cell" data-execution_count="2">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> bernoulli</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the probability of success (getting heads)</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="fl">0.6</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Number of coin flips</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>num_flips <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulate the outcomes of flipping the biased coin 10 times</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>outcomes <span class="op">=</span> bernoulli.rvs(p, size<span class="op">=</span>num_flips)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the PMF of the Bernoulli distribution</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> [<span class="dv">0</span>, <span class="dv">1</span>]</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>pmf <span class="op">=</span> bernoulli.pmf(x, p)</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a bar plot to visualize the PMF</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">1</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>plt.bar(x, pmf, align<span class="op">=</span><span class="st">'center'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>plt.xticks(x)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Outcome'</span>)</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Probability'</span>)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f'Bernoulli Distribution PMF (p=</span><span class="sc">{</span>p<span class="sc">}</span><span class="ss">)'</span>)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>plt.subplot(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">2</span>)</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>plt.bar(<span class="bu">range</span>(num_flips), outcomes, align<span class="op">=</span><span class="st">'center'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>plt.xticks(<span class="bu">range</span>(num_flips))</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Coin Flip'</span>)</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Outcome (0 or 1)'</span>)</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="ss">f'Outcomes of </span><span class="sc">{</span>num_flips<span class="sc">}</span><span class="ss"> Coin Flips (p=</span><span class="sc">{</span>p<span class="sc">}</span><span class="ss">)'</span>)</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><img src="index_files/figure-html/cell-3-output-1.png" width="667" height="468"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
 <ul>
 <li><span class="math inline">\(\pi_{k_i}=p(x_i=1|C_k)\)</span><br>
 </li>
@@ -1067,7 +1168,7 @@ E_D(\mathbf{\widetilde W})=\frac{1}{2}Tr[(\mathbf{\widetilde X}\mathbf{\widetild
 \end{align}
 \]</span></p>
 <div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -1076,7 +1177,7 @@ Remember: What was Linear Regresion &amp; Do we get the target values?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <p>In simple linear regression, there is one target value, whereas in multiple linear regression, there can be multiple target values.</p>
 <p>In a typical linear regression problem, you are given the input features (independent variables) and the corresponding target values (dependent variables) as training data. The goal of linear regression is to learn a linear relationship between the input features and the target values</p>
@@ -1123,9 +1224,210 @@ i.e if <span class="math inline">\(k=5\)</span> my one-hot encoding when it is p
 <li>For <span class="math inline">\(k&gt;2\)</span> some decision regions can become very small or are even completely ignored</li>
 <li>The components of the <span class="math inline">\(\textbf{y}_{LS}(\textbf{x})\)</span> are not real probabilities</li>
 </ul>
-
-
 </section>
+</section>
+<section id="faq" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="faq"><span class="header-section-number">12</span> FAQ</h2>
+<div class="callout callout-style-simple callout-none no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+1. Why if correlated features are treated independently, the evidence for a class will be overcounted?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>I apologize for any confusion. Let me break down that fragment for better clarity:</p>
+<ol type="1">
+<li><p><strong>Evidence for a Class</strong>: When we talk about “evidence for a class” in a classification problem, we’re referring to the information or characteristics of a data point’s features that suggest or indicate which class that data point should belong to. This evidence is essentially the input data that the classification algorithm uses to make predictions.</p></li>
+<li><p><strong>Correlated Features</strong>: Correlated features are features that have some degree of statistical relationship or similarity between them. In the context of a classification problem, correlated features might provide similar or redundant information about the data.</p></li>
+<li><p><strong>Redundant or Overlapping Information</strong>: When features are correlated, it means that some of the information they provide is redundant or overlapping. In other words, these features may convey the same or very similar details about the data point. For example, if you have two highly correlated features, knowing the value of one feature might give you a good idea about the value of the other.</p></li>
+<li><p><strong>Treating Features Independently</strong>: In some classification algorithms, especially simple ones like Naive Bayes, each feature is treated as if it is completely independent of the others. This assumption simplifies the modeling process but can be problematic when features are correlated.</p></li>
+<li><p><strong>Counting Shared Information Multiple Times</strong>: When you treat correlated features independently, you essentially consider the shared or overlapping information multiple times. For example, if two features are highly correlated and you treat them independently, you might effectively count the same information twice, once for each correlated feature. This can lead to an overestimation of the importance of that shared information.</p></li>
+</ol>
+<p>To illustrate this concept, consider a classification task where you’re trying to predict whether an email is spam (class 1) or not spam (class 0) based on two features: the number of times the word “money” appears in the email and the number of times the word “cash” appears. If these two features are highly correlated (i.e., they tend to occur together), treating them independently might lead to double-counting the evidence related to financial terms, which could skew the classification result. Therefore, it’s important to handle correlated features appropriately in order to make accurate predictions.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-none no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+2. What is the Köppen climate classification system?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>It consists of five primary climate groups, which are further subdivided into various climate types. Here’s a breakdown of the primary climate groups and their associated climate types:</p>
+<ol type="1">
+<li><strong>Group A: Tropical Climates</strong>:
+<ul>
+<li>Af: Tropical rainforest climate</li>
+<li>Am: Tropical monsoon climate</li>
+<li>Aw: Tropical wet and dry or savanna climate</li>
+</ul></li>
+<li><strong>Group B: Dry Climates</strong>:
+<ul>
+<li>BWh: Hot desert climate</li>
+<li>BWk: Cold desert climate</li>
+<li>BSh: Hot semi-arid climate</li>
+<li>BSk: Cold semi-arid climate</li>
+</ul></li>
+<li><strong>Group C: Temperate Climates</strong>:
+<ul>
+<li>Cfa: Humid subtropical climate</li>
+<li>Cwa: Monsoon-influenced humid subtropical climate</li>
+<li>Cfb: Oceanic or maritime climate</li>
+<li>Cfc: Subpolar oceanic climate</li>
+<li>Csa: Mediterranean climate</li>
+<li>Csb: Mediterranean climate with dry summer</li>
+<li>Cwa: Monsoon-influenced humid subtropical climate</li>
+<li>Cwc: Cold subtropical highland climate</li>
+</ul></li>
+<li><strong>Group D: Continental Climates</strong>:
+<ul>
+<li>Dfa: Hot-summer humid continental climate</li>
+<li>Dfb: Warm-summer humid continental climate</li>
+<li>Dfc: Subarctic or boreal climate</li>
+<li>Dwa: Hot-summer subarctic climate</li>
+<li>Dwb: Warm-summer subarctic climate</li>
+</ul></li>
+<li><strong>Group E: Polar Climates</strong>:
+<ul>
+<li>ET: Tundra climate</li>
+<li>EF: Ice cap climate</li>
+</ul></li>
+</ol>
+<p>Additionally, there is a <strong>Group H: Highland Climates</strong> category for high-altitude regions with their own unique climate characteristics.</p>
+<p>So, there are a total of 12 primary climate types within the Köppen climate classification system, and each of these primary types can be further refined with additional letters and numbers to provide more specific details about temperature and precipitation patterns.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-none no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+3. What are Generative Models?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>In machine learning, generative models are a class of models used to learn the underlying probability distribution of the data. These models are called “generative” because they can generate new data samples that resemble the training data. In other words, they capture the structure and patterns within the data and can be used to create synthetic data points that are statistically similar to the real data.</p>
+<ul>
+<li><strong>How NB is a generative model?</strong></li>
+</ul>
+<p>In generative models we model two things: 1. the class-conditional densities p(x|C_k) 2. the class priors p(C_k). With these two we can compute the join distribution.</p>
+<p>Furthermore, one can use Bayes Theorem to compute the posterior p(C_k|x). Looking at the equation above we see that we have defined the numerator as the joint distribution obtained from our generative model. For the denominator part, we have computed the evidence by marginalising over the k classes.</p>
+<p>Having done this, (we have used Naive Bayes to model the distribution of our features values as independent to decrease the number of parameters) we have obtain the posterior probability which can be used to determine class membership for each new input x.</p>
+<p>As referred in Bishop, approaches that explicit or implicitly model the distribution of input as well as the outputs are known as generative models. They called generative models because by sampling from them it is possible to generate synthetic data points in the input space.</p>
+<ul>
+<li><strong>What does it mean by Generative models?</strong></li>
+</ul>
+<p>In Bishop we have:</p>
+<blockquote class="blockquote">
+<p>Approaches that explicitly or implicitly model the distribution of inputs as well as outputs are known as generative models, because by sampling from them it is possible to generate synthetic data points in the input space.</p>
+</blockquote>
+<p>The statement you provided highlights a key characteristic of generative models and explains why they are called “generative.” Let’s break down the meaning of this statement:</p>
+<ol type="1">
+<li><p><strong>Approaches that explicitly or implicitly model the distribution of inputs as well as outputs</strong>: This part of the statement refers to machine learning models that are designed to not only capture the relationship between inputs and outputs but also to learn the underlying probability distribution of the inputs. In other words, these models aim to understand how the input data is generated probabilistically.</p></li>
+<li><p><strong>Known as generative models</strong>: These models are commonly referred to as “generative models” because they have the capability to generate synthetic data points that resemble the real data. This is achieved by sampling from the learned distribution of inputs. In essence, generative models can create new data instances that are statistically similar to the training data.</p></li>
+<li><p><strong>By sampling from them it is possible to generate synthetic data points in the input space</strong>: This part of the statement explains the practical significance of generative models. Once a generative model has learned the data distribution, you can use it to create new data points. These new data points are generated by sampling from the probability distribution of inputs that the model has learned during training.</p></li>
+</ol>
+<p>Here’s a simple example to illustrate this concept: Consider a generative model trained on a dataset of images of cats. The model learns not only to recognize cats but also the underlying distribution of features that define what a cat looks like. Once trained, you can sample from this model, and it will generate new images of cats that resemble those in the training data. These generated images are synthetic data points in the input space because they represent new, artificial cat images that the model has “generated” based on what it has learned about cats.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-none no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+4. Convex regions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Let’s consider a 2D space, and we have a convex region “C1.” We’ll choose two points within this region, x0 and x1. Then, we’ll create a line segment by varying λ between 0 and 1 and plot the points on the line segment. If all points on the line segment remain within C1, it indicates that C1 is convex.</p>
+<div class="cell" data-execution_count="3">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the convex region C1 (a circle for this example)</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>radius <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>center <span class="op">=</span> (<span class="dv">0</span>, <span class="dv">0</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate random points within C1</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span> <span class="op">*</span> np.pi, <span class="dv">100</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>x0 <span class="op">=</span> center[<span class="dv">0</span>] <span class="op">+</span> radius <span class="op">*</span> np.cos(theta)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>y0 <span class="op">=</span> center[<span class="dv">1</span>] <span class="op">+</span> radius <span class="op">*</span> np.sin(theta)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Choose two points x0 and x1 within C1</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>x0_point <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>x1_point <span class="op">=</span> (<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a figure and axis</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot C1 as a filled circle</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>ax.fill(x0, y0, <span class="st">'b'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the two chosen points x0 and x1</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>ax.plot(x0_point[<span class="dv">0</span>], x0_point[<span class="dv">1</span>], <span class="st">'ro'</span>, label<span class="op">=</span><span class="st">'x0'</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>ax.plot(x1_point[<span class="dv">0</span>], x1_point[<span class="dv">1</span>], <span class="st">'go'</span>, label<span class="op">=</span><span class="st">'x1'</span>)</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate points along the line segment defined by x0 and x1</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>lambdas <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">50</span>)</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>line_points <span class="op">=</span> [(<span class="dv">1</span> <span class="op">-</span> l) <span class="op">*</span> np.array(x0_point) <span class="op">+</span> l <span class="op">*</span> np.array(x1_point) <span class="cf">for</span> l <span class="kw">in</span> lambdas]</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if all points on the line segment are within C1</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>all_inside_c1 <span class="op">=</span> <span class="bu">all</span>(np.linalg.norm(p <span class="op">-</span> center) <span class="op">&lt;=</span> radius <span class="cf">for</span> p <span class="kw">in</span> line_points)</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Highlight the line segment</span></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> all_inside_c1:</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    ax.plot([p[<span class="dv">0</span>] <span class="cf">for</span> p <span class="kw">in</span> line_points], [p[<span class="dv">1</span>] <span class="cf">for</span> p <span class="kw">in</span> line_points], <span class="st">'k-'</span>, label<span class="op">=</span><span class="st">'Line Segment (Convex)'</span>)</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    ax.plot([p[<span class="dv">0</span>] <span class="cf">for</span> p <span class="kw">in</span> line_points], [p[<span class="dv">1</span>] <span class="cf">for</span> p <span class="kw">in</span> line_points], <span class="st">'r-'</span>, label<span class="op">=</span><span class="st">'Line Segment (Not Convex)'</span>)</span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Set axis limits</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>)</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>)</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Add labels and legend</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'X-axis'</span>)</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Y-axis'</span>)</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Convex Region and Line Segment'</span>)</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><img src="index_files/figure-html/cell-4-output-1.png" width="592" height="449"></p>
+</div>
+</div>
+<p>In this example, we define a convex region “C1” as a circle. We choose two points, x0 and x1, within C1 and create a line segment by interpolating between them using λ values. If all points on the line segment remain within the circle (C1), it indicates that C1 is convex. The plot will show the circle, the two chosen points, and the line segment along with labels and a legend.</p>
+<center>
+<img class="img-fluid" width="450px" src="http://tinyurl.com/yuykwjc9">
+</center>
+</div>
+</div>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->
