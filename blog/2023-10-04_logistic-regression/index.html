@@ -733,11 +733,134 @@ Here we pick a random point <span class="math inline">\(i\)</span> and we multip
 </section>
 <section id="gradient-calculation" class="level2" data-number="10">
 <h2 data-number="10" class="anchored" data-anchor-id="gradient-calculation"><span class="header-section-number">10</span> Gradient Calculation</h2>
+<center>
+<img src="2023-10-03-19-36-33.png" class="w300 img-fluid">
+</center>
+<center>
+<img src="2023-10-03-19-36-56.png" class="w350 img-fluid">
+</center>
+<center>
+<img src="2023-10-03-19-41-28.png" class="w450 img-fluid">
+</center>
+<center>
+<img src="2023-10-03-19-39-58.png" class="w450 img-fluid">
+</center>
+<p>The answer look identical to the one proposed for the perceptron in our prev <a href="../2023-10-03_the-perceptron/#perceptron-learning-as-gradient-descent">post</a></p>
+<center>
+<img src="2023-10-03-21-16-01.png" class="w350 img-fluid">
+</center>
+<ul>
+<li>The difference with the perceptron its that the update for the weights its softer.</li>
+<li>The Gradient descent with logistic regresion will keep updating until <span class="math inline">\(t_i-\sigma(\textbf{w}_t^T\textbf{x}_i)\)</span> is close to zero, whereas the perceptron because of this <span class="math inline">\(f(w^T\phi)&gt;0\)</span> condition will be: <span class="math inline">\(t_i-\sigma(\textbf{w}_t^T\textbf{x}_i)\)</span> this is close enough (review the inequality <a href="../2023-10-03_the-perceptron/#the-perceptron-model">post</a>) to zero then we do not update the weight.</li>
+</ul>
 </section>
-<section id="faq" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="faq"><span class="header-section-number">11</span> FAQ</h2>
-<div class="callout callout-style-simple callout-none no-icon callout-titled">
+<section id="stochastic-gradient-descent" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="stochastic-gradient-descent"><span class="header-section-number">11</span> Stochastic Gradient Descent</h2>
+<p>Here the perceptron choose only misclassified, here in Stochastic Gradient Descent we would pick any point randomly. Even if it’s well classified already.</p>
+<center>
+<img src="2023-10-03-21-31-30.png" class="w450 img-fluid">
+</center>
+<p>Now the question is: how do I set this parameter <span class="math inline">\(\eta\)</span> the learning rate. The answer to that is a method that help us find that. It’s called Newton-Raphson</p>
+</section>
+<section id="setting-learning-rate" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="setting-learning-rate"><span class="header-section-number">12</span> Setting learning rate</h2>
+<p>It is a difficult task:</p>
+<ul>
+<li>too small —&gt; long time to reach minimum</li>
+<li>too big —&gt; bounce around and never converge</li>
+</ul>
+</section>
+<section id="idea-use-2nd-derivative" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="idea-use-2nd-derivative"><span class="header-section-number">13</span> Idea: Use 2nd Derivative</h2>
+<p>The second derivative corresponds to the curvature of the loss function, thus</p>
+<p>This captures the notion of curvature</p>
+<center>
+<img src="2023-10-03-22-31-31.png" class="w400 img-fluid">
+</center>
+<ul>
+<li><p><strong>Small second derivative –&gt; large learning rate</strong><br>
+So if these two purple arrows are pointing in the same direction it means there their second derivative is small because there is no much change which then means we can increase the learning rate because there is still a curvature meaning we have not reach to global minimum</p></li>
+<li><p><strong>Large second derivative –&gt; small learning rate</strong><br>
+In the second case with the green arrows, this time the second derivative is large because there is a substantial change from pointing down to now pointing in almost horizontal direction. Then that means that we are getting closer to a deep and this we want to make the learning rate small</p></li>
+</ul>
+<section id="computing-2nd-derivative-for-scalar" class="level3" data-number="13.1">
+<h3 data-number="13.1" class="anchored" data-anchor-id="computing-2nd-derivative-for-scalar"><span class="header-section-number">13.1</span> Computing 2nd Derivative (for scalar)</h3>
+<center>
+<img src="2023-10-03-22-37-44.png" class="w400 img-fluid">
+</center>
+<p>Here the second derivative <span class="math inline">\(\frac{\partial^2}{\partial w_t^2}\)</span> represents the curvature of the loss function so the answer that we will show below is just the graph of how this curvature would look like.</p>
+<center>
+<img src="2023-10-03-22-56-20.png" class="w400 img-fluid">
+</center>
+<ol type="1">
+<li><p>The error curvature would be maximized when the model is uncertain. The intuition is that if you have a lot of points next to the decision boundary then</p></li>
+<li><p>It is small when the model is certain.</p></li>
+</ol>
+<center>
+<img src="2023-10-03-23-43-59.png" class="w400 img-fluid">
+</center>
+<p>Where we have introduce the normalization term</p>
+</section>
+</section>
+<section id="steepest-descent-vs-newton-raphson" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="steepest-descent-vs-newton-raphson"><span class="header-section-number">14</span> Steepest DEscent vs Newton-Raphson</h2>
+<center>
+<img src="2023-10-03-23-48-19.png" class="w400 img-fluid">
+</center>
+<pre></pre>
+<p>Thus, we see tha the Newton-Raphson takes a more direct path because it considers the curvature of the error loss.</p>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Derivative of vector^T with respect to vector
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>The notation <span class="math inline">\(\partial (x^T) / \partial x\)</span> represents the derivative of a row vector <span class="math inline">\(x^T\)</span> with respect to a column vector <span class="math inline">\(x\)</span>. In this context, the derivative is a Jacobian matrix.</p>
+<p>If <span class="math inline">\(x\)</span> is an <span class="math inline">\(n\)</span>-dimensional column vector and <span class="math inline">\(x^T\)</span> is the corresponding <span class="math inline">\(n\)</span>-dimensional row vector, then the derivative <span class="math inline">\(\partial (x^T) / \partial x\)</span> is a <span class="math inline">\(n \times n\)</span> Jacobian matrix.</p>
+<p>Each element <span class="math inline">\((\partial (x^T)_i / \partial x_j)\)</span> of this Jacobian matrix is the partial derivative of the <span class="math inline">\(i\)</span>-th element of <span class="math inline">\(x^T\)</span> with respect to the <span class="math inline">\(j\)</span>-th element of <span class="math inline">\(x\)</span>. Since each element of <span class="math inline">\(x^T\)</span> is just a scalar, this derivative is straightforward to calculate:</p>
+<p><span class="math inline">\((\partial (x^T)_i / \partial x_j) = \delta_{ij}\)</span></p>
+<p>where <span class="math inline">\(\delta_{ij}\)</span> is the Kronecker delta, which is equal to 1 when <span class="math inline">\(i = j\)</span> and 0 otherwise.</p>
+<p>Therefore, the Jacobian matrix <span class="math inline">\(\partial (x^T) / \partial x\)</span> is a diagonal matrix with 1s on the diagonal and 0s off the diagonal. It’s an identity matrix of size <span class="math inline">\(n \times n\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="newton-raphson-iterative-optimization" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="newton-raphson-iterative-optimization"><span class="header-section-number">15</span> Newton-Raphson Iterative Optimization</h2>
+<center>
+<img src="2023-10-04-00-06-19.png" class="w400 img-fluid">
+</center>
+<center>
+<img src="2023-10-04-00-07-50.png" class="img-fluid">
+</center>
+<section id="what-is-the-h" class="level3" data-number="15.1">
+<h3 data-number="15.1" class="anchored" data-anchor-id="what-is-the-h"><span class="header-section-number">15.1</span> What is the H?</h3>
+<center>
+<img src="2023-10-04-00-15-24.png" class="w350 img-fluid">
+</center>
+<pre></pre>
+<p>The blue highlighted section means that we have taken the second derivative over the error of the log-likelihood which has a minus hence why the blue hihglited parts vary in order.</p>
+</section>
+</section>
+<section id="newton-rpahson-iterative-optimization" class="level2" data-number="16">
+<h2 data-number="16" class="anchored" data-anchor-id="newton-rpahson-iterative-optimization"><span class="header-section-number">16</span> Newton-Rpahson Iterative Optimization</h2>
+<center>
+<img src="2023-10-04-00-20-39.png" class="w400 img-fluid">
+</center>
+<!-- ## Iterative Reweighted Least Squares
+
+One way of thinking Raphson its like Iterative Reweighted Least Squares -->
+</section>
+<section id="faq" class="level2" data-number="17">
+<h2 data-number="17" class="anchored" data-anchor-id="faq"><span class="header-section-number">17</span> FAQ</h2>
+<div class="callout callout-style-simple callout-none no-icon callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon no-icon"></i>
 </div>
@@ -746,7 +869,7 @@ What are linear features in binary classification?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
 <p>In binary classification, linear features refer to features that can be effectively separated by a straight line (or a hyperplane in higher dimensions) when plotting them on a graph. These features are sometimes called linearly separable features because you can draw a line that cleanly separates the two classes, making it easy for a linear classifier like logistic regression or a linear support vector machine (SVM) to classify the data accurately.</p>
 <p>Here’s an example to illustrate linear features in binary classification:</p>

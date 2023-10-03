@@ -1,0 +1,967 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Danilo Toapanta">
+
+<title>Danilo Toapanta - Automating the creation of Blog posts</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/danilo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/material-icons-0.14.2/mi.css" rel="stylesheet">
+<script>
+window.MathJax = {
+  tex: {
+    tags: 'ams'
+  }
+};
+</script>
+<link rel="shortcut icon" href="../../../../../../../../../../../assets/danilo.ico">
+
+
+<link rel="stylesheet" href="../css/index-posts.css">
+</head>
+
+<body class="floating nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title"><span id="danilo_topanta_brand"> Danilo Toapanta</span> <a id="mysite" class="mysite" href="../../../../../sites/">MySites</a></span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text"><span id="home-welcome-msg">Home</span></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog/index.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects/index.html" rel="" target="">
+ <span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about/index.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/danilotpnta?tab=repositories" rel="" target="_blank"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full blog-page" style="display: none;">
+    <div class="quarto-title-banner page-columns page-full">
+        <div class="quarto-title column-body">
+            <h1 class="title">Automating the creation of Blog posts</h1>
+                
+            <!-- Description Block -->
+                        
+            <!-- Categories Block -->
+            
+        </div>
+    </div>
+
+
+    
+    <div class="quarto-title-meta">
+
+        <div>
+        <div class="quarto-title-meta-heading">Author</div>
+        <div class="quarto-title-meta-contents">
+                 <p><a href="https://danilotpnta.github.io/">Danilo Toapanta</a> </p>
+              </div>
+      </div>
+        
+      
+        
+      </div>
+      
+
+    
+</header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link active" data-scroll-target="#motivation">1 Motivation</a></li>
+  <li><a href="#creating-the-script" id="toc-creating-the-script" class="nav-link" data-scroll-target="#creating-the-script">2 Creating the script</a>
+  <ul class="collapse">
+  <li><a href="#make-a-directory" id="toc-make-a-directory" class="nav-link" data-scroll-target="#make-a-directory">2.1 Make a Directory</a></li>
+  <li><a href="#copy-move-edit-a-blogs-template" id="toc-copy-move-edit-a-blogs-template" class="nav-link" data-scroll-target="#copy-move-edit-a-blogs-template">2.2 Copy, move &amp; edit a Blog’s Template</a></li>
+  </ul></li>
+  <li><a href="#fire-it-up-from-terminal" id="toc-fire-it-up-from-terminal" class="nav-link" data-scroll-target="#fire-it-up-from-terminal">3 Fire it up from terminal</a></li>
+  <li><a href="#bonus---create-an-script-to-split-views" id="toc-bonus---create-an-script-to-split-views" class="nav-link" data-scroll-target="#bonus---create-an-script-to-split-views"><span class="header-section-number">Bonus -</span> Create an script to split views</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further Reading</a></li>
+  </ul>
+</nav>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+<script>
+    var currentUrl = window.location.href;
+    var index_init_post = currentUrl.lastIndexOf("/20");
+    var string_init_post= currentUrl.slice(index_init_post, index_init_post+3 );
+
+    // console.log("currentUrl: " + currentUrl);
+    // console.log("index: " + index_init_post);
+    // console.log("string: " + string_init_post);
+
+    // If is equal to /blog/20... then make navbar title READING MODE
+    if (string_init_post === "/20"){
+        let mysite = document.getElementById("mysite");
+        mysite.classList.add("mysite-change");
+
+        let navbar = document.getElementById("danilo_topanta_brand");
+        navbar.classList.add("navbar-brand-change");
+
+        // This will render a new title saying READING DANILOS BLOG
+        // navbar.innerHTML = 'You are Reading Danilo\'s Blog<span style="font-size:35px; vertical-align: middle; opacity: 0.65; padding-bottom: 6px; padding-left: 14px;" class="material-icons-round"> auto_awesome </span>';
+        
+        const smallDevice = window.matchMedia("(min-width: 570px)");
+        smallDevice.addListener(handleDeviceChange);
+
+        function handleDeviceChange(mediaQuery) {
+            if (mediaQuery.matches) {
+                navbar.innerHTML = "";
+                // navbar.innerHTML = "<-- You are Reading Danilo's Blog -->";
+            } else  {
+                navbar.innerHTML = "Danilo Toapanta";
+            }
+        }
+
+        // Run it initially
+        handleDeviceChange(smallDevice);
+
+        let link = document.getElementsByClassName("navbar-brand")[0];
+        link.classList.add("disablePointerEvents");
+
+        let brand_container = document.getElementsByClassName("navbar-brand-container")[0];
+        brand_container.classList.add("navbar-brand-container-new-padding");
+
+    }
+</script>
+
+
+<!-- <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Running my first Marathon</h1>
+                  <div>
+        <div class="description">
+          I will be running at the 42km TCS Amsterdam 2023, 15th October
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">News</div>
+              </div>
+                  </div>
+  </div> -->
+
+  <!-- ---
+  coming-soon: true
+  tags: [Spanish]
+  --- -->
+
+
+
+
+
+
+
+
+<main id="title-block-header" class="quarto-title-block default page-columns page-full" style="padding-bottom: 40px;">
+
+    <div class="quarto-title column-body" style="margin-bottom: 1em;">
+        <h1 class="title" style="padding-bottom:8px" ;="">Automating the creation of Blog posts</h1>
+        
+        <!-- Description Block -->
+        
+        <!-- Categories Block -->
+        
+    </div>
+
+
+    
+    <div class="quarto-title-meta">
+
+        <div>
+        <div class="quarto-title-meta-heading">Author</div>
+        <div class="quarto-title-meta-contents">
+                 <p><a href="https://danilotpnta.github.io/">Danilo Toapanta</a> </p>
+              </div>
+      </div>
+        
+      
+        
+      </div>
+      
+
+    <!-- Current link: Font-awesome, Google icons, Bootstrap icons -->
+    
+</main>
+
+<p>| <a href="">Danilo Toapanta</a><br>
+2023-08-21</p>
+<p><video src="index.out_files/figure-html/a873cdf2-bb5b-4625-957f-fcfc1631cc4b-1-demo.mp4" class="img-fluid" controls=""><a href="index.out_files/figure-html/a873cdf2-bb5b-4625-957f-fcfc1631cc4b-1-demo.mp4">Video</a></video></p>
+<video style="border-radius: 7px" class="img-fluid" autoplay="true" loop="true" muted="" playsinline="">
+<source src="demo.mp4" type="video/mp4">
+</video>
+<section id="motivation" class="level2">
+<h2 class="anchored" data-anchor-id="motivation">1 Motivation</h2>
+<p>When putting together a blog post, there are several steps that are time consuming. For instance, creating a directory with the date for the slug, then a title name and followed a YAML header that suits the format of the article. All this can be time consuming and hence in this post I will show how I have automated the creation of template posts to write code right away rather that setting this up</p>
+<ul>
+<li>Goal: from a simple command line i.e.&nbsp;<code>mkblog notebook 'How to rock'</code> a folder with the current date and the title-name i.e.&nbsp;<code>2023-08-21_how-to-rock</code> will be created. Then the script should copy a pre-build post model that will modify the header’s date, title, href (for downloable Jupyter Notebooks) i.e:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"How to create Dynamic plots"</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">date</span><span class="kw">:</span><span class="at"> </span><span class="st">"2023-08-21"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="creating-the-script" class="level2">
+<h2 class="anchored" data-anchor-id="creating-the-script">2 Creating the script</h2>
+<p>The first thing that came to my mind when creating the script was to the type of post. On a general level I have classify them in three categories</p>
+<ul>
+<li>post: this is a normal <code>qmd</code> file that can hold articles and is capable to run R, Python, JavaScript and so on.</li>
+<li>poems: this is a <code>qmd</code> modified version that enables the formatting that you see in my <a href="../#category=Poems">poems</a>.</li>
+<li>notebook: this is a <code>ipynb</code> file that can be executed using my conda environments</li>
+</ul>
+<p>The question is now how to set all this up. Reviewing at scripting languages and ways on how to create <a href="https://quarto.org/docs/extensions/">extension</a> for html files I realised all this could be done with <a href="../#category=Python">python</a>.</p>
+<p>Here down below the script that makes all this possible</p>
+<section id="make-a-directory" class="level3">
+<h3 class="anchored" data-anchor-id="make-a-directory">2.1 Make a Directory</h3>
+<div class="code-with-filename">
+<pre><strong>create_dir.py</strong></pre>
+<div class="cell" data-execution_count="1">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> shutil</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_post(type_file, post_name):</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Save a copy only name</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    raw_post_name <span class="op">=</span> post_name</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Example: "how-to-rock"</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    post_name <span class="op">=</span> post_name.lower().replace(<span class="st">" "</span>, <span class="st">"-"</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Current Date: "2023-08-21"</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    current_date <span class="op">=</span> datetime.today().strftime(<span class="st">'%Y-%m-</span><span class="sc">%d</span><span class="st">'</span>)</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Folder name: "2023-08-21_how-to-rock"</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    folder_name <span class="op">=</span> current_date <span class="op">+</span> <span class="st">'_'</span> <span class="op">+</span> post_name</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Current Directory path</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    current_dir <span class="op">=</span> os.getcwd()</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Output Directory</span></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    output_path <span class="op">=</span> current_dir <span class="op">+</span> <span class="st">"/out"</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Folder Path: "../out/2023-08-21_how-to-rock"</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    path_folder <span class="op">=</span> os.path.join(output_path, folder_name)</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Make a Directory</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    os.mkdir(path_folder)</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Directory '</span><span class="sc">% s</span><span class="st">' created!"</span> <span class="op">%</span> folder_name)</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Name of Post</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="co"># 0 is the name of the py file</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 is the first argument</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>type_file <span class="op">=</span> <span class="st">"notebook"</span> <span class="co"># sys.argv[1]</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>post_name <span class="op">=</span> <span class="st">"how to rock"</span> <span class="co"># sys.argv[2]             </span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>create_post(type_file, post_name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Directory '2023-08-21_how-to-rock' created!</code></pre>
+</div>
+</div>
+</div></section>
+<section id="copy-move-edit-a-blogs-template" class="level3">
+<h3 class="anchored" data-anchor-id="copy-move-edit-a-blogs-template">2.2 Copy, move &amp; edit a Blog’s Template</h3>
+<p>After we have created a folder, we can proceed to make a copy of a user-defined template with settings that we may want to use for that specific type of post. For instance for my <code>notebook</code> posts I want to modify the date of the header, its title name and the ref link to download the output of the Jupyter notebook.</p>
+<p>For this to scale and be able to fire the script from any directory I will point to a specific folder where I will make all this changes and then move those modified files to my <code>../blog</code> section.</p>
+<p>The structure of my files where the script is stored is as follows:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>_extensions</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>└── mkpost</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    ├── create_dir.py</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    ├── out</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    ├── splitWin.app</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    └── templates</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        ├── notebook</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        │   └── index.ipynb</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        ├── poems</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        │   └── index.qmd</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        └── post</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>            └── index.qmd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<blockquote class="blockquote">
+<p><strong>Note</strong></p>
+<p>To print the tree structure you see above I have used: <code>brew install tree</code> and then <code>tree &lt;path&gt;</code></p>
+</blockquote>
+<p>In the folder view you find <code>mkpost</code> as the folder that holds the script previously shown. There is also <code>out</code> folder which contains the folder just created <code>2023-08-21_how-to-rock</code>. There is also splitWin.app which will talk in section <a href=""></a> and lastly a folder called <code>templates</code> where you can see <code>index.*</code> files that will be copied to our newly created folder.</p>
+<p>Following the continuation of the python script that does all the moving, copying and editing.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> create_file(type_file):</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># -------------- CREATE FILE --------------</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Holds available extensions</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    dic <span class="op">=</span> {<span class="st">'post'</span>: <span class="st">'qmd'</span>, <span class="st">'poems'</span>:<span class="st">'qmd'</span>, <span class="st">'notebook'</span>:<span class="st">'ipynb'</span>}</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    file_extension <span class="op">=</span> dic[type_file]</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Source path: "../template/file_type/index.ext"</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    source_file <span class="op">=</span> <span class="ss">f"templates/</span><span class="sc">{</span>type_file<span class="sc">}</span><span class="ss">/index.</span><span class="sc">{</span>file_extension<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># File name "index.ext"</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    file_name <span class="op">=</span> <span class="ss">f"index.</span><span class="sc">{</span>file_extension<span class="sc">}</span><span class="ss">"</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Destination path: "../out/2023-08-21_how-to-rock/index.ext"</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    destination_file <span class="op">=</span> os.path.join(path_folder, file_name)</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Creating a Copy from Template folder</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    shutil.copy(source_file, destination_file)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># -------------- UPDATE HEADER --------------</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    lines <span class="op">=</span> <span class="bu">open</span>(destination_file, <span class="st">'r'</span>).readlines()</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (type_file <span class="op">==</span> <span class="st">"notebook"</span>):</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>        title_row <span class="op">=</span> <span class="dv">9</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>        lines[title_row] <span class="op">=</span> <span class="ss">f'    </span><span class="ch">\"</span><span class="ss">title: </span><span class="ch">\\</span><span class="ss">"</span><span class="sc">{</span>raw_post_name<span class="sc">.</span>capitalize()<span class="sc">}</span><span class="ch">\\</span><span class="ss">"</span><span class="ch">\\</span><span class="ss">n</span><span class="ch">\"</span><span class="ss">,'</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>        date_row <span class="op">=</span> <span class="dv">11</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>        lines[date_row] <span class="op">=</span> <span class="ss">f'    </span><span class="ch">\"</span><span class="ss">date: </span><span class="ch">\\</span><span class="ss">"</span><span class="sc">{</span>current_date<span class="sc">}</span><span class="ch">\\</span><span class="ss">"</span><span class="ch">\\</span><span class="ss">n</span><span class="ch">\"</span><span class="ss">,'</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>        code_name_row <span class="op">=</span> <span class="dv">16</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>        post_code_name <span class="op">=</span> post_name <span class="op">+</span> <span class="st">'.out.ipynb'</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>        lines[code_name_row] <span class="op">=</span> <span class="ss">f'    </span><span class="ch">\"</span><span class="ss">      file-name: </span><span class="sc">{</span>post_code_name<span class="sc">}</span><span class="ch">\\</span><span class="ss">n</span><span class="ch">\"</span><span class="ss">,'</span></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>        title_row <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>        lines[title_row] <span class="op">=</span> <span class="ss">f'title: "</span><span class="sc">{</span>raw_post_name<span class="sc">.</span>capitalize()<span class="sc">}</span><span class="ss">"</span><span class="ch">\n</span><span class="ss">'</span></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>        date_row <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>        lines[date_row] <span class="op">=</span> <span class="ss">f'date: "</span><span class="sc">{</span>current_date<span class="sc">}</span><span class="ss">"</span><span class="ch">\n</span><span class="ss">'</span></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span> <span class="op">=</span> <span class="bu">open</span>(destination_file, <span class="st">'w'</span>)</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.writelines(lines)</span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>    <span class="bu">file</span>.close()</span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>    <span class="co"># -------------- MOVE FILE --------------</span></span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Folder Path: "../out/2023-08-21_how-to-rock"</span></span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>    src <span class="op">=</span> path_folder</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Path to Blog</span></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>    dst <span class="op">=</span> <span class="st">"../../blog"</span></span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>    shutil.move(src, dst)       </span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (type_file <span class="op">==</span> <span class="st">"post"</span>):</span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>    create_file(<span class="st">"post"</span>)</span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> (type_file <span class="op">==</span> <span class="st">"notebook"</span>):</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>    create_file(<span class="st">"notebook"</span>)</span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> (type_file <span class="op">==</span> <span class="st">"poems"</span>):</span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>    create_file(<span class="st">"poems"</span>)</span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Wrong type_file: </span><span class="sc">{</span>type_file<span class="sc">}</span><span class="ss">. Available: 'post', 'poems' or 'notebook'"</span>)</span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>    sys.exit()</span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>    </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The code above does the following:</p>
+<ol type="1">
+<li>When the user inputs the name and the <code>type_file</code> it looks at the template folder with the specified extension and does the copying</li>
+<li>Updates the header changing <code>date</code> to the current date at the moment of creating the directory, <code>title</code> with the name we input in the terminal and, lastly if is a notebook it changes the <code>href</code> to enable the user download the notebook.</li>
+<li>Once all changes are done, the folder with the <code>index.*</code> file are move to the blog section.</li>
+</ol>
+</section>
+</section>
+<section id="fire-it-up-from-terminal" class="level2">
+<h2 class="anchored" data-anchor-id="fire-it-up-from-terminal">3 Fire it up from terminal</h2>
+<p>For convenience, no matter in which directory of your computer you are in, this section cover how to fire it up the script that we have created. For starters, if you are running macOS or Linux most likely you will be using bash, zsh or fish shells. These shells, as it comes to not surprise, can launch scripts with user-defined strings defined.</p>
+<p>For my liking I have decided to proceed with:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode txt code-with-copy"><code class="sourceCode default"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>mkblog [type_file] ["name_post"]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>To enable this, you have to cd to your <code>.bash_profile</code> or <code>.zshrc</code> in my case. Then we will define the alias <code>mkblog</code> and will do the following:</p>
+<ol type="1">
+<li><code>cd</code> to the path where we have stored our python script. That is <code>_extensions</code></li>
+<li>Execute the script using python</li>
+<li>Open my workspace in Visual Studio</li>
+<li>Open the <code>index.*</code> we just created i.e.&nbsp;in the dir <code>"2023-08-21_how-to-rock"</code></li>
+<li>Make quarto render that file. Voila start coding!</li>
+</ol>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Creates script to open blog post</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mkblog()</span> <span class="kw">{</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">cd</span> ../path/more_path/_extensions/mkpost</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="ex">python</span> create_dir.py <span class="va">$1</span> <span class="va">$2</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="bu">cd</span> ..</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">cd</span> ..</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="ex">code</span> website.code-workspace</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="va">BACKUPDIR</span><span class="op">=</span><span class="va">$(</span><span class="fu">ls</span> <span class="at">-td</span> blog/<span class="pp">*</span>/ <span class="kw">|</span> <span class="fu">head</span> <span class="at">-1</span><span class="va">)</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="bu">cd</span> <span class="va">$BACKUPDIR</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  <span class="va">FILENAME</span><span class="op">=</span><span class="va">$(</span><span class="fu">ls</span> <span class="kw">|</span> <span class="fu">sort</span> <span class="at">-f</span><span class="va">)</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  <span class="ex">code</span> <span class="va">$FILENAME</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  <span class="ex">quarto</span> preview <span class="va">$FILENAME</span> </span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="kw">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="bonus---create-an-script-to-split-views" class="level2">
+<h2 class="anchored" data-anchor-id="bonus---create-an-script-to-split-views"><span class="header-section-number">Bonus -</span> Create an script to split views</h2>
+<!-- https://stackoverflow.com/questions/57639834/error-1002-in-applescript-that-uses-key-code-when-called-from-macos-app#:~:text=To%20fix%20osascript,usr/bin/osascript) -->
+<p>When working with large screen I would like to place in the left side the file I created and in the right side my browser to preview the changes I made while editing my file. If you are familiar with AppleScript then you will be at home with the following lines.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>activate application <span class="st">"Visual Studio Code"</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>repeat <span class="dv">1</span> times</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    tell application <span class="st">"System Events"</span> to key code <span class="dv">123</span> using {command down}</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>end repeat</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>activate application <span class="st">"Microsoft Edge"</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>repeat <span class="dv">1</span> times</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    tell application <span class="st">"System Events"</span> to key code <span class="dv">124</span> using {command down}</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>end repeat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Long story short, the script will send the keystrokes <code>cmd + ←</code>, <code>cmd + →</code> to each application and thus split the windows to left and right. How to accomplished this behavior? Glad you asked, I invite your to read this <a style="color: blue" class="new-look-link" href="../2023-06-09_on-the-topic/">post</a> where I go through how I made my life easier using Lua Shortcuts.</p>
+</section>
+<section id="further-reading" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading">Further Reading</h2>
+<ul>
+<li></li>
+<li></li>
+<li></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../about/index.html"><span class="footerDaniloToapanta">Mantained by Danilo Toapanta</span></a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../coming-soon.html">Newsletter</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../docs/sitemap.xml">RSS</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>
+
+    let navbar = document.getElementsByClassName("navbar-nav")[0]    
+
+    let li2 = document.createElement("li");
+    li2.className = "nav-item compact";
+
+    let a2 = document.createElement("a");
+    a2.className = "nav-link quarto-color-scheme-toggle";
+    a2.style.cursor = "pointer"
+    li2.appendChild(a2)
+
+    let i2 = document.createElement("i");
+    i2.className = "bi bi-moon"
+    a2.append(i2)
+
+    navbar.appendChild(li2);
+
+    i2.onclick = function() {
+        window.quartoToggleColorScheme(); return false;
+    }
+    // <a href="http://localhost:4200/about/" class="quarto-color-scheme-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+
+    let li = document.createElement("li");
+    li.className = "nav-item compact";
+
+    let a = document.createElement("a");
+    a.className = "nav-link";
+    a.style.cursor = "pointer"
+    li.appendChild(a)
+
+    let i = document.createElement("i");
+    i.className = "bi bi-search"
+    a.append(i)
+
+    // let span = document.createElement("span");
+    // span.className = "menu-text"
+    // a.append(span)
+
+    navbar.appendChild(li);
+
+    a.onclick = function() {
+        window.quartoOpenSearch()
+    }
+
+
+</script>
+
+
+
+</body></html>
