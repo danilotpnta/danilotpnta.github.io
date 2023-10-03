@@ -1226,8 +1226,79 @@ i.e if <span class="math inline">\(k=5\)</span> my one-hot encoding when it is p
 </ul>
 </section>
 </section>
-<section id="faq" class="level2" data-number="12">
-<h2 data-number="12" class="anchored" data-anchor-id="faq"><span class="header-section-number">12</span> FAQ</h2>
+<section id="multi-class-logistic-regression" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="multi-class-logistic-regression"><span class="header-section-number">12</span> Multi-class Logistic Regression</h2>
+<p>Consider logistic regresion for <span class="math inline">\(K\)</span> classes with <span class="math inline">\(N\)</span> training vectors <span class="math inline">\(\{x_n\}_{n=1}^{N}\)</span>. Each of these vectors is mapped to a different feature vector.</p>
+<p><span class="math display">\[
+\begin{align}
+\phi_n = \phi(x_n) = (\phi_0(x_n), \phi_1(x_n), ..., \phi_{M-1}(x_n))^T
+\end{align}
+\]</span></p>
+<ul>
+<li>Each vector <span class="math inline">\(x_n\)</span> has a target vector <span class="math inline">\(t_n\)</span> of size <span class="math inline">\(K\)</span></li>
+</ul>
+<p><span class="math display">\[
+\begin{align}
+t_n = (t_{n1}, t_{n2}, ..., t_{nK})^T
+\end{align}
+\]</span></p>
+<p>Where, <span class="math inline">\(t_{nk} = 1\)</span> if <span class="math inline">\(x_n \in C_k\)</span>, <span class="math inline">\(0\)</span> otherwise.</p>
+<ul>
+<li>The input data can be collected in a matrix <span class="math inline">\(X\)</span> such that the n-th row is given by <span class="math inline">\(\textbf{x}_{n}^{T}\)</span>. The targets can also be collected in a matrix <span class="math inline">\(T\)</span> where each n-th row is given by <span class="math inline">\(\textbf{t}_{n}^{T}\)</span></li>
+</ul>
+<p>We have:</p>
+<p><span class="math display">\[
+\begin{align}
+y_k(\phi) = p(C_k|\phi(x), \textbf{w}_1,...,\textbf{w}_K) = \frac{exp(a_k)}{\sum_{j=1}^{K}exp(a_j)}
+\end{align}
+\]</span></p>
+<p>Where we have <span class="math inline">\(a_k = \textbf{w}_{k}^{T}\phi\)</span></p>
+<p>Dimensions:</p>
+<p><span class="math display">\[
+\begin{align}
+\textbf{y(x)} &amp;= (y_1(x),...,y_k(x) )^T &amp;\in \mathbb{R}^{Kx1} \nonumber\\
+\phi &amp;= \phi(x) = (\phi_0(x), ..., \phi_{M-1}(x))^T &amp;\in \mathbb{R}^{Mx1}\nonumber\\
+\mathbf{\phi}_n &amp;= \phi(x_n) = (\phi_0(x_n), ..., \phi_{M-1}(x_n))^T\nonumber\\
+\Phi &amp;= (\phi_1, \phi_2, ..., \phi_{N})^T &amp;\in \mathbb{R}^{NxM}\nonumber\\
+\mathbf{w}_k &amp;= (w_{k0},...,w_{k(M-1)})^T \in \mathbb{R}^{(D+1)x1} &amp;\in \mathbb{R}^{Mx1}\nonumber\\
+X &amp;= (\textbf{x}_1,...,\textbf{x}_N)^T \in \mathbb{R}^{Nx(D+1)} &amp;\in \mathbb{R}^{NxM}\nonumber\\
+\textbf{t}_n &amp;= (t_{n1}, ...,t_{nK})^T  &amp;\in \mathbb{R}^{1xK}\nonumber\\
+T &amp;= (\textbf{t}_1,...,\textbf{t}_N)^T &amp;\in \mathbb{R}^{NxK}\nonumber\\
+\end{align}
+\]</span></p>
+<section id="multivariate-gaussian-distribution" class="level3" data-number="12.1">
+<h3 data-number="12.1" class="anchored" data-anchor-id="multivariate-gaussian-distribution"><span class="header-section-number">12.1</span> Multivariate Gaussian Distribution</h3>
+<p>The PDF: <span class="math display">\[
+\begin{align}
+f(\mathbf{x} | \boldsymbol{\mu}, \boldsymbol{\Sigma}) = \frac{1}{(2\pi)^{\frac{n}{2}} |\boldsymbol{\Sigma}|^{\frac{1}{2}}} \exp\left(-\frac{1}{2} (\mathbf{x} - \boldsymbol{\mu})^T \boldsymbol{\Sigma}^{-1} (\mathbf{x} - \boldsymbol{\mu})\right)\\
+\end{align}
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(\mathbf{x}\)</span> represents the vector of random variables (n-dimensional).</li>
+<li><span class="math inline">\(\boldsymbol{\mu}\)</span> is the mean vector, which is also an n-dimensional vector.</li>
+<li><span class="math inline">\(\boldsymbol{\Sigma}\)</span> is the covariance matrix, which is an n x n symmetric positive-definite matrix.</li>
+<li><span class="math inline">\(|\boldsymbol{\Sigma}|\)</span> represents the determinant of the covariance matrix.</li>
+<li><span class="math inline">\((\mathbf{x} - \boldsymbol{\mu})^T\)</span> represents the transpose of the vector <span class="math inline">\((\mathbf{x} - \boldsymbol{\mu}\)</span>).</li>
+<li><span class="math inline">\(\boldsymbol{\Sigma}^{-1}\)</span> is the inverse of the covariance matrix.</li>
+</ul>
+</section>
+</section>
+<section id="fixed-bssis-functions" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="fixed-bssis-functions"><span class="header-section-number">13</span> Fixed Bssis Functions</h2>
+<p>In the context of basis functions, the statement “Easy way to define nonlinear models (wrt the original features) via linear models (in the parameters)” means that you can represent complex, nonlinear relationships between your input features and the output variable by using a linear model in terms of transformed or “basis” functions. Let’s break down what this statement implies:</p>
+<ol type="1">
+<li><p><strong>Nonlinear Models</strong>: Nonlinear models are those that cannot be expressed as simple linear relationships between the input features and the output. In many real-world problems, the relationships between variables are not linear, which makes modeling them directly with linear models (like linear regression) challenging.</p></li>
+<li><p><strong>Original Features</strong>: These are the raw input features of your data. For example, if you’re working with a dataset of house prices, the original features might include the number of bedrooms, square footage, and location.</p></li>
+<li><p><strong>Basis Functions</strong>: Basis functions are mathematical functions that transform the original features into a new set of features. These new features are designed to capture the underlying nonlinear relationships in the data. Common basis functions include polynomial functions (e.g., squaring a feature to capture quadratic relationships) and radial basis functions (used in radial basis function networks).</p></li>
+<li><p><strong>Linear Models (in the Parameters)</strong>: Despite the use of basis functions to transform the input features, the model’s structure is still linear in terms of its parameters. This means that you can express the output variable as a linear combination of the transformed features, where the coefficients of this linear combination are the parameters of the model. For example, you might have a model like:</p>
+<pre><code>y = w0 + w1 * basis_function1(x) + w2 * basis_function2(x) + ... + wn * basis_functionn(x)</code></pre>
+<p>Here, <code>w0, w1, w2, ..., wn</code> are the model parameters, and <code>basis_function1(x), basis_function2(x), ...</code> are the transformed features created by the basis functions.</p></li>
+</ol>
+<p>So, the statement is highlighting that by using basis functions to transform the original features, you can still use a linear model in terms of its parameters to capture complex, nonlinear relationships in the data. This approach makes it easier to model nonlinear data patterns while benefiting from the simplicity and interpretability of linear models when it comes to parameter estimation and inference.</p>
+</section>
+<section id="faq" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="faq"><span class="header-section-number">14</span> FAQ</h2>
 <div class="callout callout-style-simple callout-none no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -1362,58 +1433,58 @@ i.e if <span class="math inline">\(k=5\)</span> my one-hot encoding when it is p
 <div class="cell" data-execution_count="3">
 <details>
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the convex region C1 (a circle for this example)</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>radius <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>center <span class="op">=</span> (<span class="dv">0</span>, <span class="dv">0</span>)</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate random points within C1</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span> <span class="op">*</span> np.pi, <span class="dv">100</span>)</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>x0 <span class="op">=</span> center[<span class="dv">0</span>] <span class="op">+</span> radius <span class="op">*</span> np.cos(theta)</span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>y0 <span class="op">=</span> center[<span class="dv">1</span>] <span class="op">+</span> radius <span class="op">*</span> np.sin(theta)</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Choose two points x0 and x1 within C1</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>x0_point <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">1</span>)</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>x1_point <span class="op">=</span> (<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a figure and axis</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot C1 as a filled circle</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>ax.fill(x0, y0, <span class="st">'b'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the two chosen points x0 and x1</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>ax.plot(x0_point[<span class="dv">0</span>], x0_point[<span class="dv">1</span>], <span class="st">'ro'</span>, label<span class="op">=</span><span class="st">'x0'</span>)</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>ax.plot(x1_point[<span class="dv">0</span>], x1_point[<span class="dv">1</span>], <span class="st">'go'</span>, label<span class="op">=</span><span class="st">'x1'</span>)</span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate points along the line segment defined by x0 and x1</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>lambdas <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">50</span>)</span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>line_points <span class="op">=</span> [(<span class="dv">1</span> <span class="op">-</span> l) <span class="op">*</span> np.array(x0_point) <span class="op">+</span> l <span class="op">*</span> np.array(x1_point) <span class="cf">for</span> l <span class="kw">in</span> lambdas]</span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if all points on the line segment are within C1</span></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>all_inside_c1 <span class="op">=</span> <span class="bu">all</span>(np.linalg.norm(p <span class="op">-</span> center) <span class="op">&lt;=</span> radius <span class="cf">for</span> p <span class="kw">in</span> line_points)</span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Highlight the line segment</span></span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> all_inside_c1:</span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    ax.plot([p[<span class="dv">0</span>] <span class="cf">for</span> p <span class="kw">in</span> line_points], [p[<span class="dv">1</span>] <span class="cf">for</span> p <span class="kw">in</span> line_points], <span class="st">'k-'</span>, label<span class="op">=</span><span class="st">'Line Segment (Convex)'</span>)</span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    ax.plot([p[<span class="dv">0</span>] <span class="cf">for</span> p <span class="kw">in</span> line_points], [p[<span class="dv">1</span>] <span class="cf">for</span> p <span class="kw">in</span> line_points], <span class="st">'r-'</span>, label<span class="op">=</span><span class="st">'Line Segment (Not Convex)'</span>)</span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Set axis limits</span></span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>)</span>
-<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>)</span>
-<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Add labels and legend</span></span>
-<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'X-axis'</span>)</span>
-<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Y-axis'</span>)</span>
-<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Convex Region and Line Segment'</span>)</span>
-<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
-<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
-<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
-<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the convex region C1 (a circle for this example)</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>radius <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>center <span class="op">=</span> (<span class="dv">0</span>, <span class="dv">0</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate random points within C1</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>theta <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">2</span> <span class="op">*</span> np.pi, <span class="dv">100</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>x0 <span class="op">=</span> center[<span class="dv">0</span>] <span class="op">+</span> radius <span class="op">*</span> np.cos(theta)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>y0 <span class="op">=</span> center[<span class="dv">1</span>] <span class="op">+</span> radius <span class="op">*</span> np.sin(theta)</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Choose two points x0 and x1 within C1</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>x0_point <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>x1_point <span class="op">=</span> (<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a figure and axis</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot C1 as a filled circle</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>ax.fill(x0, y0, <span class="st">'b'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the two chosen points x0 and x1</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>ax.plot(x0_point[<span class="dv">0</span>], x0_point[<span class="dv">1</span>], <span class="st">'ro'</span>, label<span class="op">=</span><span class="st">'x0'</span>)</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>ax.plot(x1_point[<span class="dv">0</span>], x1_point[<span class="dv">1</span>], <span class="st">'go'</span>, label<span class="op">=</span><span class="st">'x1'</span>)</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate points along the line segment defined by x0 and x1</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>lambdas <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">50</span>)</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>line_points <span class="op">=</span> [(<span class="dv">1</span> <span class="op">-</span> l) <span class="op">*</span> np.array(x0_point) <span class="op">+</span> l <span class="op">*</span> np.array(x1_point) <span class="cf">for</span> l <span class="kw">in</span> lambdas]</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if all points on the line segment are within C1</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>all_inside_c1 <span class="op">=</span> <span class="bu">all</span>(np.linalg.norm(p <span class="op">-</span> center) <span class="op">&lt;=</span> radius <span class="cf">for</span> p <span class="kw">in</span> line_points)</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a><span class="co"># Highlight the line segment</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> all_inside_c1:</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>    ax.plot([p[<span class="dv">0</span>] <span class="cf">for</span> p <span class="kw">in</span> line_points], [p[<span class="dv">1</span>] <span class="cf">for</span> p <span class="kw">in</span> line_points], <span class="st">'k-'</span>, label<span class="op">=</span><span class="st">'Line Segment (Convex)'</span>)</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>    ax.plot([p[<span class="dv">0</span>] <span class="cf">for</span> p <span class="kw">in</span> line_points], [p[<span class="dv">1</span>] <span class="cf">for</span> p <span class="kw">in</span> line_points], <span class="st">'r-'</span>, label<span class="op">=</span><span class="st">'Line Segment (Not Convex)'</span>)</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Set axis limits</span></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>ax.set_xlim(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>)</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>ax.set_ylim(<span class="op">-</span><span class="dv">3</span>, <span class="dv">3</span>)</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Add labels and legend</span></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'X-axis'</span>)</span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Y-axis'</span>)</span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Convex Region and Line Segment'</span>)</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>ax.legend()</span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>)</span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <p><img src="index_files/figure-html/cell-4-output-1.png" width="592" height="449"></p>

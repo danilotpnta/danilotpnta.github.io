@@ -2,206 +2,210 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.danilotpnta.com/dev/index.html</loc>
-    <lastmod>2023-10-01T20:48:28.791Z</lastmod>
+    <lastmod>2023-10-03T00:13:29.908Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/notes/2023-09-03_commands-terminal/index.html</loc>
-    <lastmod>2023-10-01T20:48:24.040Z</lastmod>
+    <lastmod>2023-10-03T00:13:25.131Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/notes/2023-08-22_commands-for-quarto/index.html</loc>
-    <lastmod>2023-10-01T20:48:22.341Z</lastmod>
+    <lastmod>2023-10-03T00:13:23.513Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/notes/2023-09-04_how-to-create-a-jupyther-kernel/index.html</loc>
-    <lastmod>2023-10-01T20:48:20.989Z</lastmod>
+    <lastmod>2023-10-03T00:13:22.222Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/notes/2023-08-22_commands-for-jupyter/index.html</loc>
-    <lastmod>2023-10-01T20:48:19.533Z</lastmod>
+    <lastmod>2023-10-03T00:13:20.751Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/notes/2023-08-27_features,-tools-&-improvements-website-/index.html</loc>
-    <lastmod>2023-10-01T20:48:17.143Z</lastmod>
+    <lastmod>2023-10-03T00:13:18.314Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/notes/2023-08-22_commands-for-shells/index.html</loc>
-    <lastmod>2023-10-01T20:48:13.524Z</lastmod>
+    <lastmod>2023-10-03T00:13:14.726Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/notes/2023-08-27_changes-to-vanilla-quarto/index.html</loc>
-    <lastmod>2023-10-01T20:48:12.043Z</lastmod>
+    <lastmod>2023-10-03T00:13:13.227Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/notes/2023-08-26_how-to-highlight-lines-of-code-in-github/index.html</loc>
-    <lastmod>2023-10-01T20:48:10.453Z</lastmod>
+    <lastmod>2023-10-03T00:13:11.606Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/sites/index.html</loc>
-    <lastmod>2023-10-01T20:48:08.151Z</lastmod>
+    <lastmod>2023-10-03T00:13:09.274Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-05-29_markdown-structure/index.html</loc>
-    <lastmod>2023-10-01T20:48:05.900Z</lastmod>
+    <lastmod>2023-10-03T00:13:06.958Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-10-01_logistic-regression/index.html</loc>
-    <lastmod>2023-10-01T20:48:03.110Z</lastmod>
+    <lastmod>2023-10-03T00:13:04.097Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2022-11-05_welcome/index.html</loc>
-    <lastmod>2023-10-01T20:48:00.936Z</lastmod>
+    <lastmod>2023-10-03T00:13:01.819Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-09-03_when-you-get-older/index.html</loc>
-    <lastmod>2023-10-01T20:47:59.644Z</lastmod>
+    <lastmod>2023-10-03T00:13:00.414Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-01-29_displaying-jupyter-notebooks/index.html</loc>
-    <lastmod>2023-10-01T20:47:58.377Z</lastmod>
+    <lastmod>2023-10-03T00:12:59.190Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-09-26_maximum-likelihood-estimation-(mle)-vs-maximum-a-posteriori-estimation-(map)/index.html</loc>
-    <lastmod>2023-10-01T20:47:55.835Z</lastmod>
+    <lastmod>2023-10-03T00:12:56.604Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-09-05_equation-for-ml1/index.html</loc>
-    <lastmod>2023-10-01T20:47:53.556Z</lastmod>
+    <lastmod>2023-10-03T00:12:54.286Z</lastmod>
   </url>
   <url>
-    <loc>https://www.danilotpnta.com/blog/2023-09-25_classification-and-decision-theory/index.html</loc>
-    <lastmod>2023-10-01T20:47:52.203Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/blog/2023-06-09_on-the-topic/index.html</loc>
-    <lastmod>2023-10-01T20:47:47.803Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/blog/2023-07-29_cafe-negro-color-miel/index.html</loc>
-    <lastmod>2023-10-01T20:47:46.585Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/blog/2023-09-04_mnist-classification/index.html</loc>
-    <lastmod>2023-10-01T20:47:45.452Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/books/index.html</loc>
-    <lastmod>2023-10-01T20:47:42.794Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/projects/2023-05-29_computer-vision/index.html</loc>
-    <lastmod>2023-10-01T20:47:38.806Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/projects/2023-07-01_website/index.html</loc>
-    <lastmod>2023-10-01T20:47:37.737Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/projects/index.html</loc>
-    <lastmod>2023-10-01T20:47:36.665Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/projects/2023-05-26_mlp/index.html</loc>
-    <lastmod>2023-10-01T20:47:34.530Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/projects/2020-04-02_segway/index.html</loc>
-    <lastmod>2023-10-01T20:47:33.477Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/coming-soon.html</loc>
-    <lastmod>2023-10-01T20:47:31.342Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/projects/2020-05-12_cpp-project/Python-demo.html</loc>
-    <lastmod>2023-10-01T20:47:33.999Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/projects/2021-07-02_bsc-thesis/Python-demo.html</loc>
-    <lastmod>2023-10-01T20:47:35.084Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/projects/2022-11-29_travel-sales-project/index.html</loc>
-    <lastmod>2023-10-01T20:47:37.185Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/projects/2022-11-12_artificial-intelligence/index.html</loc>
-    <lastmod>2023-10-01T20:47:38.269Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/about/index.html</loc>
-    <lastmod>2023-10-01T20:47:42.227Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/index.html</loc>
-    <lastmod>2023-10-01T20:47:43.325Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/blog/2022-12-29_cuando-miras-al-cielo/index.html</loc>
-    <lastmod>2023-10-01T20:47:46.019Z</lastmod>
-  </url>
-  <url>
-    <loc>https://www.danilotpnta.com/blog/2023-01-12_2022-into-2023/index.html</loc>
-    <lastmod>2023-10-01T20:47:47.146Z</lastmod>
+    <loc>https://www.danilotpnta.com/blog/2023-10-03_the-perceptron/index.html</loc>
+    <lastmod>2023-10-03T00:12:52.883Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-09-26_matrix-calculus/index.html</loc>
-    <lastmod>2023-10-01T20:47:49.249Z</lastmod>
+    <lastmod>2023-10-03T00:12:48.750Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-01-12_2022-into-2023/index.html</loc>
+    <lastmod>2023-10-03T00:12:46.578Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2022-12-29_cuando-miras-al-cielo/index.html</loc>
+    <lastmod>2023-10-03T00:12:45.397Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/index.html</loc>
+    <lastmod>2023-10-03T00:12:42.539Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/about/index.html</loc>
+    <lastmod>2023-10-03T00:12:41.380Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/projects/2022-11-12_artificial-intelligence/index.html</loc>
+    <lastmod>2023-10-03T00:12:37.383Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/projects/2022-11-29_travel-sales-project/index.html</loc>
+    <lastmod>2023-10-03T00:12:36.211Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/projects/2021-07-02_bsc-thesis/Python-demo.html</loc>
+    <lastmod>2023-10-03T00:12:34.016Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/projects/2020-05-12_cpp-project/Python-demo.html</loc>
+    <lastmod>2023-10-03T00:12:32.909Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/coming-soon.html</loc>
+    <lastmod>2023-10-03T00:12:30.113Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/projects/2020-04-02_segway/index.html</loc>
+    <lastmod>2023-10-03T00:12:32.336Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/projects/2023-05-26_mlp/index.html</loc>
+    <lastmod>2023-10-03T00:12:33.463Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/projects/index.html</loc>
+    <lastmod>2023-10-03T00:12:35.661Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/projects/2023-07-01_website/index.html</loc>
+    <lastmod>2023-10-03T00:12:36.826Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/projects/2023-05-29_computer-vision/index.html</loc>
+    <lastmod>2023-10-03T00:12:37.934Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/books/index.html</loc>
+    <lastmod>2023-10-03T00:12:41.984Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-09-04_mnist-classification/index.html</loc>
+    <lastmod>2023-10-03T00:12:44.805Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-07-29_cafe-negro-color-miel/index.html</loc>
+    <lastmod>2023-10-03T00:12:45.990Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-06-09_on-the-topic/index.html</loc>
+    <lastmod>2023-10-03T00:12:47.288Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-09-25_classification-and-decision-theory/index.html</loc>
+    <lastmod>2023-10-03T00:12:51.916Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-07-24_the-right-tool/index.html</loc>
-    <lastmod>2023-10-01T20:47:52.875Z</lastmod>
+    <lastmod>2023-10-03T00:12:53.570Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-06-05_how-hash-table-works/index.html</loc>
-    <lastmod>2023-10-01T20:47:54.755Z</lastmod>
+    <lastmod>2023-10-03T00:12:55.520Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/index.html</loc>
-    <lastmod>2023-10-01T20:47:57.714Z</lastmod>
+    <lastmod>2023-10-03T00:12:58.484Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-08-18_how_to_use_widgets_in_jupyter_notebooks/index.html</loc>
-    <lastmod>2023-10-01T20:47:58.980Z</lastmod>
+    <lastmod>2023-10-03T00:12:59.768Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-06-20_running-my-first-marathon/index.html</loc>
-    <lastmod>2023-10-01T20:48:00.364Z</lastmod>
+    <lastmod>2023-10-03T00:13:01.231Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-08-18_how-to-automate-the-creation-of-blog-posts/index.html</loc>
-    <lastmod>2023-10-01T20:48:04.941Z</lastmod>
+    <lastmod>2023-10-03T00:13:05.964Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-09-24_color-rosa/index.html</loc>
-    <lastmod>2023-10-01T20:48:06.480Z</lastmod>
+    <lastmod>2023-10-03T00:13:07.570Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/notes/2023-09-03_create-website-using-local/index.html</loc>
-    <lastmod>2023-10-01T20:48:11.032Z</lastmod>
+    <lastmod>2023-10-03T00:13:12.208Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/notes/index.html</loc>
-    <lastmod>2023-10-01T20:48:15.135Z</lastmod>
+    <lastmod>2023-10-03T00:13:16.336Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/notes/2023-08-22_commands-for-github/index.html</loc>
-    <lastmod>2023-10-01T20:48:17.722Z</lastmod>
+    <lastmod>2023-10-03T00:13:18.918Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/notes/2023-08-30_repos-uva-assigments/index.html</loc>
-    <lastmod>2023-10-01T20:48:18.964Z</lastmod>
+    <lastmod>2023-10-03T00:13:20.171Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/notes/2023-08-22_command_for_environments/index.html</loc>
-    <lastmod>2023-10-01T20:48:21.707Z</lastmod>
+    <lastmod>2023-10-03T00:13:22.941Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/notes/2023-09-11_how-to-create-conda-environment-using-yml-file/index.html</loc>
-    <lastmod>2023-10-01T20:48:23.348Z</lastmod>
+    <lastmod>2023-10-03T00:13:24.439Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/now/index.html</loc>
-    <lastmod>2023-10-01T20:48:26.812Z</lastmod>
+    <lastmod>2023-10-03T00:13:27.828Z</lastmod>
   </url>
 </urlset>
