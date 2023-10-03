@@ -15,8 +15,8 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/2023-10-04_logistic-regression/index.html",
       "/blog/2023-10-03_the-perceptron/index.html",
-      "/blog/2023-10-01_logistic-regression/index.html",
       "/blog/2023-09-26_matrix-calculus/index.html",
       "/blog/2023-09-26_maximum-likelihood-estimation-(mle)-vs-maximum-a-posteriori-estimation-(map)/index.html",
       "/blog/2023-09-25_classification-and-decision-theory/index.html",
