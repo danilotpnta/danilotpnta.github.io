@@ -8,7 +8,7 @@
 
 <meta name="author" content="Danilo Toapanta">
 <meta name="dcterms.date" content="2023-10-04">
-<meta name="description" content="Lecture Notes UvA on 28-9-2023">
+<meta name="description" content="Lecture Notes UvA on 26-9-2023">
 
 <title>Danilo Toapanta - Neural networks</title>
 <style>
@@ -77,6 +77,8 @@ window.MathJax = {
 </script>
 <link rel="shortcut icon" href="../../../../../../../../../../../assets/danilo.ico">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../css/index-posts.css">
 </head>
@@ -136,7 +138,7 @@ window.MathJax = {
             <!-- Description Block -->
                         <div>
                 <div class="description">
-                    Lecture Notes UvA on 28-9-2023
+                    Lecture Notes UvA on 26-9-2023
                 </div>
             </div>
                         
@@ -288,7 +290,7 @@ window.MathJax = {
         <!-- Description Block -->
                     <div>
                 <div class="description">
-                    Lecture Notes UvA on 28-9-2023
+                    Lecture Notes UvA on 26-9-2023
                 </div>
             </div>
         
@@ -413,9 +415,56 @@ window.MathJax = {
     
 </main>
 
-<p>here</p>
+<p>The only difference between the normal perceptron and the logistic regression its how we compute the activation function the f(x)</p>
+<center>
+<img src="2023-10-04-10-44-53.png" class="w400 img-fluid">
+</center>
+<ul>
+<li>When we use Logistic REgression we get an answer in terms of probabilities so from 0 to 1, the perceptron did not have this property. It will just give us a <span class="math inline">\(+1\)</span> or <span class="math inline">\(-1\)</span></li>
+</ul>
+<p>The perceptron cannot solve the XOR problem also the logistic regression. To get around this problem, we stack perceptron like in a layer fashion model. This is called <strong>Multilayer Perceptron</strong></p>
+<p>But because people start to use the logistic regression instead of the actual hardcore perceptron output (so <span class="math inline">\(+1\)</span> or <span class="math inline">\(-1\)</span>) then we now call it. <strong>Multilayer Logistic Regression</strong></p>
+<p>So instead of that we are gonna have different activation functions</p>
+<center>
+<img src="2023-10-04-10-56-48.png" class="w400 img-fluid">
+</center>
+<p>We also talked about QDA this is a non linear model classifier</p>
+<center>
+<img src="2023-10-04-15-49-21.png" class="w400 img-fluid">
+</center>
+<p>We call the computation from going to the input to the ouput as forward propagation</p>
+<center>
+<img src="2023-10-04-15-54-45.png" class="w400 img-fluid">
+</center>
+<p>The number of parameters for Logistic Regression is <span class="math inline">\(D+1\)</span> vs Gaussian Classifier contains <span class="math inline">\(D^2\)</span>. all these computation.</p>
+<p>So when you get scared about the number of layers then you just remember the previous layers they were just a type of basis funtions and the last layer is a linear model like so:</p>
+<center>
+<img src="2023-10-04-16-03-12.png" class="w400 img-fluid">
+</center>
+<p>The difference between linear models with adaptive basis is that the Neural Networks <strong>learn</strong> the basis functions.</p>
+<p>With Neural Netweoks we do not have to have heuristics for this basis functions but they learn by themselves.</p>
+<center>
+<img src="2023-10-04-16-24-56.png" class="w300 img-fluid">
+</center>
+<p>We see that to separate our data from above we can use one hidden layer with tree units:</p>
+<center>
+<img src="2023-10-04-16-24-32.png" class="w400 img-fluid">
+</center>
+<p>Recall from the previous lecture that with our Logistic Regression we neede to have some radial functions, the difference here its that we can now gotten learnt this basis functions with our Neural Network.</p>
+<p>NN start with low level features and keeps increasing until it calculates the features it find relevant to take a decision.</p>
+<center>
+<img src="2023-10-04-16-30-50.png" class="w400 img-fluid">
+</center>
+<ul>
+<li><strong>Recurrent Neural Networks</strong>: good for sentences analysis because the new hidden layer depend on the ouput of the previous hidden layers before.</li>
+<li><strong>Convolution Neural Networks</strong>: you can recognize objects.</li>
+</ul>
+<p>It is spacial invariant because you are moving your kernel along all dimensions.</p>
+<section id="universal-approximators" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="universal-approximators"><span class="header-section-number">1</span> Universal Approximators</h2>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
