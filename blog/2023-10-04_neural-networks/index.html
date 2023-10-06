@@ -442,7 +442,7 @@ window.MathJax = {
 <img src="2023-10-04-16-03-12.png" class="w400 img-fluid">
 </center>
 <p>The difference between linear models with adaptive basis is that the Neural Networks <strong>learn</strong> the basis functions.</p>
-<p>With Neural Netbooks we do not have to have heuristics for this basis functions but they learn by themselves.</p>
+<p>With Neural Networks we do not have to have heuristics for this basis functions but they learn by themselves.</p>
 <center>
 <img src="2023-10-04-16-24-56.png" class="w300 img-fluid">
 </center>
@@ -575,6 +575,58 @@ Here it gives you more complexity, so its recommended, End result have deeper NN
 <img src="2023-10-06-15-01-07.png" class="w475 img-fluid">
 </center>
 <p>With cyclic learning rate we could explore three local minima</p>
+<blockquote class="blockquote">
+<p>Note: We used to compute Logistic Regression with Gradient Descent, here its the same with NN. More mathematically we cannot compute a closed form of the weights hence we use GD.</p>
+</blockquote>
+</section>
+<section id="chain-rule-through-layers" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="chain-rule-through-layers"><span class="header-section-number">10</span> Chain Rule through Layers</h2>
+<ul>
+<li>Forward Propagation: is to evaluate the full network from inputs to ouputs</li>
+<li>Backward Propagation: is to send error signals back though the network</li>
+</ul>
+<center>
+<img src="2023-10-06-20-06-20.png" class="w400 img-fluid">
+</center>
+<p>Remember <span class="math inline">\(h_l = \sigma(a)\)</span>. Meaning the ouput of the sigmoid is the new <span class="math inline">\(h_l\)</span>. With this in mind because we want to tune the parameters aka weights we send the error back to the inputs, this as we said before it’s called backpropagation.</p>
+<p>Now, because we want to send the error back so that we can reduce it, we would compute the derivative. Here is the same, we will compute the derivatives and because the NN its like a chain of multiplication due to the chain rule, here we can make use of optimization techniques. That is:</p>
+<ul>
+<li>Backpropagation is simply the chain rule implemented with cached values of intermediate computations.</li>
+<li>We have the tradeoff between computational complexity for memory. In other words we have saved in computation complexity (carry out many derivatives) because we have cached these <span class="math inline">\(h_{l,j}\)</span> which is exactly the result of computing the derivatives to reduce the error and thus carry out backpropagation.</li>
+</ul>
+<p>In summary when we do backprogation due to the symmetry of the hidden layers, we can save in computing all the times the derivatives and instead trade it for memory to cache these <span class="math inline">\(h_{l,j}\)</span></p>
+<p>The above is what distinguishes the chain rule from backpropagation. Backpropagation uses the notion of reusing information.</p>
+<center>
+<img src="2023-10-06-20-23-31.png" class="w350 img-fluid">
+</center>
+</section>
+<section id="downside-numerical-issues" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="downside-numerical-issues"><span class="header-section-number">11</span> Downside: Numerical Issues</h2>
+<center>
+<img src="2023-10-06-20-27-49.png" class="w400 img-fluid">
+</center>
+<p>Two things can go wrong with this approach:</p>
+<ol type="1">
+<li><strong>Exploding gradients:</strong>
+<ul>
+<li><em>Problem:</em> The multiplication of an intermediate derivate value could be large so then wehn you continue multiplying with the rest of the layers then it will become a huge number.<br>
+</li>
+<li><em>Solution:</em> can usually be handled by ‘clipping’ values or regularizing weights to be small.</li>
+</ul></li>
+<li><strong>Vanishing gradients:</strong>
+<ul>
+<li><em>Problem:</em> When the ouput of the sigmoid is close to <span class="math inline">\(1\)</span> or <span class="math inline">\(0\)</span> we would have that the derivative <span class="math inline">\(h_{l,j}*(1-h_{l,j})\)</span> where recall that <span class="math inline">\(\textbf{h}_l=\sigma(\textbf{a})\)</span> meaning when sigmoid evaluates to this extremes then the derivative would become zero. In other words, if zero because <span class="math inline">\(h_{l,j}\)</span> can be <span class="math inline">\(1\)</span> or <span class="math inline">\(0\)</span> then all derivatives to earlier layers will be zero. See figure below:</li>
+</ul>
+<center>
+<img src="2023-10-06-20-43-56.png" class="w400 img-fluid">
+</center>
+The figure above then means that if one derivative becomes zero then learning cannot happen.
+<ul>
+<li><em>Possible Solution1:</em> there is no proper solution because if you say you want to clip this derivative not to yield <span class="math inline">\(1\)</span> or <span class="math inline">\(0\)</span> then your next question its to how much close to these extremes I should set the derivative. (In practice however the sigmoid will not evaluate to perfect <span class="math inline">\(1\)</span> or <span class="math inline">\(0\)</span> but it will be small enough to make the multiplication of the other derivatives in the chain rule significantly deleterious to proceed training).<br>
+</li>
+<li><em>Possible Solution2:</em> In the neural networks we add a line that connect the current output layer <span class="math inline">\(h_l\)</span> with the previous outout layer <span class="math inline">\(h_{l-1}\)</span></li>
+</ul></li>
+</ol>
 
 
 </section>
