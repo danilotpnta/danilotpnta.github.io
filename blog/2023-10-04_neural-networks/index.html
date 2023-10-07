@@ -627,6 +627,102 @@ The figure above then means that if one derivative becomes zero then learning ca
 <li><em>Possible Solution2:</em> In the neural networks we add a line that connect the current output layer <span class="math inline">\(h_l\)</span> with the previous outout layer <span class="math inline">\(h_{l-1}\)</span></li>
 </ul></li>
 </ol>
+</section>
+<section id="scalar-neural-network" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="scalar-neural-network"><span class="header-section-number">12</span> Scalar Neural Network</h2>
+<center>
+<img src="2023-10-07-01-16-22.png" class="w475 img-fluid">
+</center>
+<pre></pre>
+<p>Recall that when we do linear regression we do not need to have an activation function <span class="math inline">\(f\)</span> like softmax or logistic, we just have the identity which means <span class="math inline">\(f(w_2 \cdot h)\)</span> becomes just <span class="math inline">\(w_2 \cdot h\)</span>.</p>
+<center>
+<img src="2023-10-07-01-18-20.png" class="w350 img-fluid">
+</center>
+<pre></pre>
+<section id="computing-the-error-loss-on-w_1" class="level3" data-number="12.1">
+<h3 data-number="12.1" class="anchored" data-anchor-id="computing-the-error-loss-on-w_1"><span class="header-section-number">12.1</span> Computing the Error loss on <span class="math inline">\(w_1\)</span></h3>
+<center>
+<img src="2023-10-07-01-18-41.png" class="w400 img-fluid">
+</center>
+<p>If we would compute the error but now with activation function <span class="math inline">\(a\)</span> equals <strong>Relu</strong></p>
+<center>
+<img src="2023-10-07-01-27-37.png" class="w350 img-fluid">
+</center>
+<p>This could be a bad idea because if <span class="math inline">\(w_1 \cdot x\)</span> is lower than <span class="math inline">\(0\)</span> then the whole error loss would be evaluated to zero and thus cannot train the network because you keep getting derivatives of zero. This is called the <em>Dead Relu problem</em>. In practice people initialize the input to a positive value. Also people use Leaky Relu depicted below</p>
+<center>
+<img src="2023-10-07-01-34-19.png" class="w450 img-fluid">
+</center>
+</section>
+</section>
+<section id="vector-neural-network" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="vector-neural-network"><span class="header-section-number">13</span> Vector Neural Network</h2>
+<blockquote class="blockquote">
+<p>We will have a <strong>scalar</strong> input and <strong>scalar</strong> ouput but with hidden layers as <strong>vectors</strong>.</p>
+</blockquote>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Derivative</strong> is a row vector: <span class="math display">\[
+\begin{align}
+\frac{\partial f}{\partial \textbf{x}} = \left[\frac{\partial f}{\partial x_1},...,\frac{\partial f}{\partial x_D} \right]
+\end{align}
+\]</span></li>
+<li><strong>Gradient</strong> is the transpose of the Derivative vector: <span class="math display">\[
+\begin{align}
+\nabla_{w_1}f = \left[\frac{\partial f}{\partial \textbf{w}_1} \right]^T
+\end{align}
+\]</span> We do the transpose because we are tryng to get the same shape as our paramter <span class="math inline">\(\textbf{W}\)</span>. So in this case if <span class="math inline">\(W\)</span> would have been a two-row vector then with the transpose we ensure that.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="computations-in-2d" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="computations-in-2d"><span class="header-section-number">14</span> Computations in 2D</h2>
+<center>
+<img src="2023-10-07-18-05-27.png" class="img-fluid">
+</center>
+<p>A rule of thumb is:</p>
+<ul>
+<li>Output linear operator <strong>Rows</strong></li>
+<li>The model parameters as <strong>Columns</strong></li>
+</ul>
+<center>
+<img src="2023-10-07-18-26-26.png" class="w475 img-fluid">
+</center>
+</section>
+<section id="two-modes-forward-and-reverse" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="two-modes-forward-and-reverse"><span class="header-section-number">15</span> Two Modes: Forward and Reverse</h2>
+<p>In Pytorch, you can compute the forward or reverse computation we saw before. The only difference is which direction you cache from.</p>
+<ol type="1">
+<li><strong>Forward mode:</strong> you start with the partial derivatives at the beginning of the NN. For instance in the image below, from dh1/dw1 (the first layer) to df/dh2 (the last layer).
+<ul>
+<li>Better when ouput dim &gt;&gt; input dim</li>
+</ul></li>
+</ol>
+<center>
+<img src="2023-10-07-18-33-51.png" class="w300 img-fluid">
+</center>
+<ol start="2" type="1">
+<li><strong>Reverse mode:</strong> you start from the ouput to the input.
+<ul>
+<li>Better when ouput dim &lt;&lt; input dim</li>
+</ul></li>
+</ol>
+<center>
+<img src="2023-10-07-18-34-12.png" class="w300 img-fluid">
+</center>
+<pre></pre>
+<p>This is telling us that i.e to be more <strong>efficient</strong> in an image classifier then you would prefer the <em>Reverse mode</em> because you have that your input would be a huge array of numbers whereas your ouput would be a few classes. So here it applies: dim ouput &lt;&lt; dim input.</p>
+<p>The reason for ie in forward mode is that you would compute small derivatives because your input is small so then you delay to compute much more multiplication to the end</p>
+<p>Another examples why is more efficient, say your outputs &gt;&gt; inputs, then if you start by computing the ouput derivatives then you are going to accumulate and carry all those dimensions due to the large ouput derivatives. Then you carry all these computations to the input layer that has fewer computations but you already have a hug baggage and its not efficient. <strong>Summary</strong>: you want to do the large multiplication until the end so that you do not carry unnecessary derivation.</p>
 
 
 </section>
