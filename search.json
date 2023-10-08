@@ -984,7 +984,154 @@
     "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html",
     "title": "Latent Variable Models & K-Means Clustering",
     "section": "",
-    "text": "Latent Variable Models & K-Means Clustering\n        \n        \n                    \n                \n                    Lecture Notes UvA on 2-10-2023\n                \n            \n        \n        \n                    \n                \n                \n                    \n\n                                            \n                            \n                                All\n                            \n                        \n                                            \n                            \n                                Education\n                            \n                        \n                                            \n                            \n                                Machine Learning\n                            \n                        \n                                            \n                            \n                                TAGS\n                            \n                        \n                                            \n                            \n                                Python\n                            \n                        \n                                    \n                \n\n\n                \n                    \n                    \n                    \n                        \n                        \n                        \n                        \n                    \n\n                    \n                                            \n                            \n                               \n                                All\n                            \n                        \n                                            \n                            \n                               \n                                Education\n                            \n                        \n                                            \n                            \n                               \n                                Machine Learning\n                            \n                        \n                                            \n                            \n                               \n                                TAGS\n                            \n                        \n                                            \n                            \n                               \n                                Python\n                            \n                        \n                    \n                    \n                \n\n                    \n    \n\n\n    \n    \n\n        \n        Author\n        \n                 Danilo Toapanta \n              \n      \n        \n        \n        Published\n        \n          October 7, 2023"
+    "text": "Lecture Notes UvA on 2-10-2023\n                \n            \n        \n        \n                    \n                \n                \n                    \n\n                                            \n                            \n                                All\n                            \n                        \n                                            \n                            \n                                Education\n                            \n                        \n                                            \n                            \n                                Machine Learning\n                            \n                        \n                                            \n                            \n                                TAGS\n                            \n                        \n                                            \n                            \n                                Python\n                            \n                        \n                                    \n                \n\n\n                \n                    \n                    \n                    \n                        \n                        \n                        \n                        \n                    \n\n                    \n                                            \n                            \n                               \n                                All\n                            \n                        \n                                            \n                            \n                               \n                                Education\n                            \n                        \n                                            \n                            \n                               \n                                Machine Learning\n                            \n                        \n                                            \n                            \n                               \n                                TAGS\n                            \n                        \n                                            \n                            \n                               \n                                Python\n                            \n                        \n                    \n                    \n                \n\n                    \n    \n\n\n    \n    \n\n        \n        Author\n        \n                 Danilo Toapanta \n              \n      \n        \n        \n        Published\n        \n          October 7, 2023"
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#supervised-learning",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#supervised-learning",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "1 Supervised Learning",
+    "text": "1 Supervised Learning\nHere the mission of the model is to learn the relation between the labels and the features."
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#unsupervised-learning",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#unsupervised-learning",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "2 Unsupervised Learning",
+    "text": "2 Unsupervised Learning\nYou do not have labels you only have features.\nThe mission of the model is to discover latent or hidden structures\n\n\n\n\nUnsupervised learning is understanding the data discovering properties to exploit."
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#unsupervised-vs.-supervised-learning",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#unsupervised-vs.-supervised-learning",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "3 Unsupervised vs. Supervised learning",
+    "text": "3 Unsupervised vs. Supervised learning"
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#latent-variable-models",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#latent-variable-models",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "4 Latent variable Models",
+    "text": "4 Latent variable Models\n\n\n\n\nIn Unsupervised learning:\nYou have Latent variable \\(Z\\) and that generates \\(X\\).\nIn supervised learning:\nFor instance in Classification you would have features \\(X\\) and that generates some label \\(y\\).\n\n\nSo you could think of Unsupervised learning as we are given our labels and we need to learn the features that generate the label\n\n\\(Z\\) in the figure above are the labels. We want to get the distriution of the data in the continuous case i.e. by marginalizing over \\(z\\) to get the probability of the data alone."
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#examples",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#examples",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "5 Examples",
+    "text": "5 Examples\n\n\n\n\n\nFor instance in Clustering we are given scattered plot data and you want to find the hidden groups.\nFor instance in Dimensionality Reduction you are given a 2-dim data and you wonder whether you can learn a lower representation that could describe my data"
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#k-means-clustering",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#k-means-clustering",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "6 K-Means Clustering",
+    "text": "6 K-Means Clustering\n\nGoal: Automatically partition unlabeled data into groups of similar data points.\n\n\nUseful for:\n\nAutomatically organizing data.\nUnderstanding hidden structure in data.\nPreprocessing for downstream analysis."
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#applications",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#applications",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "7 Applications",
+    "text": "7 Applications"
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#clustering-with-k-means",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#clustering-with-k-means",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "8 Clustering with K-means",
+    "text": "8 Clustering with K-means\n\nGoal: minimize distance between data points and \\(k\\) cluster representations"
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#k-means",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#k-means",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "9 K-means",
+    "text": "9 K-means\n\n\n\n\n\nYou need to set \\(K\\) the number of clusters ahead of time\nThe mean \\(m_j\\) per ach cluster\nThe cluster that corresponds \\(C_j\\)\nYou only compute the \\(x_n\\) that belongs to that cluster \\(C_j\\) so that we do not compute for all data points\n\n\n\n\n\n\\(|C_j|\\) is the number of datapoints assigned to that cluster \\(j\\)"
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#k-means-clustering-example",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#k-means-clustering-example",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "10 K-Means Clustering Example",
+    "text": "10 K-Means Clustering Example\n0. Randomly initialize \\(k=3\\) means to data points. (That means we will end up with \\(3\\) Clusters)\n\n\n\n\n1. Assign point to cluster with nearest representation.\n\n\n\n\n2. Compute new cluster representation by taking mean of currently assigned points.\n\n\n\n\nThe coloured points you see above are the new computed means. They are NOT data points they are just the locations where the mean should be.\nRepeat: Step 1 -&gt; 2\n1. Assign point to cluster with nearest representation.\n\n\n\n\n2. Compute new cluster representation by taking mean of currently assigned points.\n\n\n\n\nRepeat: Step 1 -&gt; 2\n1. Assign point to cluster with nearest representation.\n\n\n\n\n2. Compute new cluster representation by taking mean of currently assigned points.\n\n\n\n\nConverging\n1. Assign point to cluster with nearest representation.\n\n\n\n\n\nNote: The algorithm has converged: the cluster assignments do not change. So stop here\n\n\nFinal means and cluster assignments"
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#k-means-clustering-pipeline",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#k-means-clustering-pipeline",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "11 K-Means Clustering Pipeline",
+    "text": "11 K-Means Clustering Pipeline\nOur model is represented by our \\(k\\) mean vectors: \\(\\{{m_j\\}}_{j=1}^{k}\\)"
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#k-means-optimization",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#k-means-optimization",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "12 K-Means: Optimization",
+    "text": "12 K-Means: Optimization\n\nThe number of iterations to get the same error is lower in the second run\nThe cost in the same iteration number is higuer in the first iteration\n\n\n\n\n\n\n\nAlgorithm guaranteed to decrease error at each iteration, but not guaranteed to obtain Global Optimum.\nIn between:\n\nIn Linear Regression you can find the global minimum\nIn Neural Networks we cannot never find the global optima, we need to adjust our steep size\nIn K-means you guarantee to reduce error but not guaranteed that if you keep decreasing you will find global minimum.\n\n\nFor the last reason above (the not guaranteeing thing people in practice re-run algorithm multiple times (and take solution with lowest cost, for instance)"
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#k-means-overfitting",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#k-means-overfitting",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "13 K-Means: Overfitting",
+    "text": "13 K-Means: Overfitting\n\n\n\nThe more clusters we have, the better the chance that a cluster mean will be near held-out data, thus improving the validation error. Thus, looking at validation error alone is not helpful.\nSo how do we quantify this, because the more clusters then the lower the validation error. How do we choose an appropriate \\(k\\)-number: Answer with the Elbow method discussed below"
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#k-means-choosing-k",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#k-means-choosing-k",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "14 k-Means: Choosing \\(k\\)",
+    "text": "14 k-Means: Choosing \\(k\\)\n\nMethod 1\n\nElbow method: is called like this because think about the error function and your arm. Now we look at the point of hinge where the error loss changes significantly.\n\nFor instance in the image below you find your elbow point where adding more cluster does not improve the error.\n\n\n\n\n\nMethod 2\nAnother method to choose an appropiate \\(k\\) value is: to have a modified error function that account for the number of clusters:\n\n\n\n\nFor instance if I have \\(k=1\\) then the newly introduced term becomes zero. But if you have more than one cluster it is going to get penalize with a factor \\(\\lambda\\)\n\n\nMethod 3\nHere you do external supervision, that means i.e. you have houses clustering by price and size, if you new or wanted to group some houses intentionally then you could stop the \\(k\\)-size number increasing because you have knowledge domain. Thus you control the granularity.\n\n\nMethod 4\n\n\n\n\nYou want the Dunn index to be large, meaning you want in the numerator to be large meaning the minimum distance between cluster representations (so between means) should be large and conversely you want the denominator to be small meaning that you want the maximum distance between points within the cluster to be close to one another (meaning we want to have all point very close to the mean of this cluster)"
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#k-means-generalizations",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#k-means-generalizations",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "15 K-Means: Generalizations",
+    "text": "15 K-Means: Generalizations\nYou could also compute the error function \\(E\\) with other function rather than squarer error, you could for instance use another distance function like Hamming, or medians like below:"
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#improvements-for-big-data",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#improvements-for-big-data",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "16 Improvements for Big Data",
+    "text": "16 Improvements for Big Data\n\nWhen the data is long then we may take a lot of time to compute one iteration, the solution for this could be to use:\n\nStochastic gradient: for each datapoint, update nearest cluster mean”\n\n\nWhat this equation is allowing us is to compute the mean not looking at all the data points, again we have the value \\(\\eta\\) which is our learning rate\nThe mean that we are computing its only nearest to the cluster we compute it"
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#application-image-compression",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#application-image-compression",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "17 Application: image compression",
+    "text": "17 Application: image compression"
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#failures-of-k-means",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#failures-of-k-means",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "18 Failures of K-Means",
+    "text": "18 Failures of K-Means\nThis is because of the reliance of square distance, then the points close to the means do not preserve the non-euclidean aspect of this data\n\n\n\n\nHere we should expect to see three clusters: 2 ears and 1 face. The explanation to this is because we cannot modify how th distance will be computed. That means we cannot say that the region of the ears to have a smaller distance, compared to the face’s mean.\n\n\n\n\nAnother way to look at this problems is that, you cannot change the scale of the clusters, every cluster would have more or less the same square distance around its cluster mean. That means that you cannot have tighter distance for the ears and more relaxed notion of distance for the same. They are gonna have same squared distances with equal weight."
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#pros-cons-of-k-means",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#pros-cons-of-k-means",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "19 Pros & Cons of K-Means",
+    "text": "19 Pros & Cons of K-Means\n\nGood:\n\nSimple to implement\nFast\n\nBad:\n\nLocal minima\nModel only “spherical” clusters that cannot change size\nSensitive to the features scale\nNumber of clusters \\(K\\) to be chosen in advance\nCluster assignments are “hard”, not probabilistic =&gt; next topic, Gaussian Mixture Model"
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#minimize-error-em-algorithm",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#minimize-error-em-algorithm",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "20 Minimize Error (EM Algorithm)",
+    "text": "20 Minimize Error (EM Algorithm)\n\nThe above algorithm can be formalized in the Expectation Maximization\n\n\nThe E step computes the assignments\nThe M step computes the means\n\n\n\n\n\nSame as computing:\n\n\n\n\n\n20.1 Derivation of M-Step"
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#constrained-optimization",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#constrained-optimization",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "21 Constrained optimization",
+    "text": "21 Constrained optimization\n\n\n\n\n\n21.1 Lagrange Constrained Optimization: Example"
   },
   {
     "objectID": "blog/2023-05-29_markdown-structure/index.html",
