@@ -425,7 +425,8 @@ window.MathJax = {
 <section id="unsupervised-learning" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="unsupervised-learning"><span class="header-section-number">2</span> Unsupervised Learning</h2>
 <p>You <strong>do not</strong> have labels you only have features.</p>
-<p>The mission of the model is to discover latent or hidden structures</p>
+<p>The mission of the model is to discover latent or hidden structures.</p>
+<p>Latent means to be not measurable, to be hidden i.e.&nbsp;thoughts –&gt; words. You can sample words, you have data from the words, but for thoughts you don’t have data available, the variable is hidden</p>
 <center>
 <img src="2023-10-07-22-39-04.png" class="w400 img-fluid">
 </center>
@@ -746,9 +747,210 @@ For instance in Classification you would have features <span class="math inline"
 <img src="2023-10-08-20-28-16.png" class="w575 img-fluid">
 </center>
 <pre></pre>
-
-
 </section>
+</section>
+<section id="probabilistic-version-of-k-means-clustering" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="probabilistic-version-of-k-means-clustering">Probabilistic version of k-Means Clustering</h2>
+<blockquote class="blockquote">
+<p>In this section we talked about the probabilistic side of k-means</p>
+</blockquote>
+</section>
+<section id="clustering-with-gaussian-mixture-model-gmm" class="level2" data-number="22">
+<h2 data-number="22" class="anchored" data-anchor-id="clustering-with-gaussian-mixture-model-gmm"><span class="header-section-number">22</span> Clustering with Gaussian Mixture Model (GMM)</h2>
+<ul>
+<li>We assume that the data follows a generative model. Recall what a generative model is:</li>
+</ul>
+<blockquote class="blockquote">
+<p>Approaches that explicitly or implicitly model the distribution of inputs as well as outputs are known as generative models, because by sampling from them it is possible to generate synthetic data points in the input space.</p>
+</blockquote>
+<ul>
+<li>We also assume that with each observation there is an associated discrete latent variable. Recall what latent variable is:</li>
+</ul>
+<blockquote class="blockquote">
+<p>A latent variable is a variable that is not directly observed is hidden like our thoughs, that is z</p>
+</blockquote>
+<p>For instance: in the image below we see that the purple data, each of these dots is related to a latent variable <span class="math inline">\(z\)</span>, for instance a discrete class <span class="math inline">\(z\)</span> i.e, that can take on the values {red, green, or blue}. Now these latent variables are hidden is not directly observable, you dont’ know them. Here the latent variable is discrete can take values like: red, green and so on, can also be like the example of the houses, it can be boat houses, studios and so on.</p>
+<p>Recap from the upper text. It means that we are no seeing the bottom left graph with the distinctions between classes but we only see the purple dots</p>
+<ul>
+<li>We also assume there is a join distribution <span class="math inline">\((x,z) \sim p(x,z)\)</span> so in this case in the left plot</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Goal:</strong> given our unlabelled data <span class="math inline">\(x \sim p(x)\)</span> (purple dots) you want to go to a cluster ( from our latent variable) assignment. Mathematically you want to be able to compute <span class="math inline">\(p(z|\textbf{x})\)</span> which is the right bottom graph where you see all datapoints assigned one color. For instance you want to say that a purple dot in the corner belows to class <span class="math inline">\(z = green\)</span> or another dot that belongs to <span class="math inline">\(z = blue\)</span>. How do we do this? Sol: in a probabilistic way using Multiple Gaussians hence called Gaussian Mixture models.</p>
+</blockquote>
+<center>
+<img src="2023-10-10-23-15-02.png" class="img-fluid">
+</center>
+<pre></pre>
+</section>
+<section id="modelling-assumptions" class="level2" data-number="23">
+<h2 data-number="23" class="anchored" data-anchor-id="modelling-assumptions"><span class="header-section-number">23</span> Modelling assumptions</h2>
+<ul>
+<li>We model our prior with a Generalized Bernoulli distribution</li>
+</ul>
+<p><strong>Categorical Distribution:</strong> <span class="math display">\[
+P(X = x_i) = p_i, \quad \text{for } i = 1, 2, \ldots, K
+\]</span></p>
+<p>where <span class="math inline">\(p_i\)</span> is the probability of outcome <span class="math inline">\(x_i\)</span>, and <span class="math inline">\(\sum_{i=1}^{K} p_i = 1\)</span>.</p>
+<p><strong>Generalized Bernoulli:</strong> <span class="math display">\[
+P(X = x) = \theta^x (1 - \theta)^{1 - x}, \quad \text{for } x = 0, 1
+\]</span></p>
+<p>where <span class="math inline">\(\theta\)</span> is the probability of <span class="math inline">\(X = 1\)</span>, and <span class="math inline">\((1 - \theta)\)</span> is the probability of <span class="math inline">\(X = 0\)</span></p>
+<ul>
+<li><p>The second part part of our generative model is the latent class or conditional distributions <span class="math inline">\(p(\textbf{x}|z_k)\)</span> modelled with Gaussians. <strong>NOTE this is not the likelihood</strong></p>
+<ul>
+<li><span class="math inline">\(p(\textbf{x}|z_k)\)</span>: is the probability that if I know the class <span class="math inline">\(z_k\)</span> then I will observed the data in i.e the red region, see picture above in orange highlighted</li>
+</ul></li>
+<li><p>The <span class="math inline">\(\pi_k\)</span>, <span class="math inline">\(\mu_k\)</span>, <span class="math inline">\(\Sigma_k\)</span> are learnable parameters</p></li>
+<li><p>With the prior and the latent conditional distribution we can compute the joint <span class="math inline">\(p(\textbf{x},z_k =1)\)</span>. That is, we compute the probability for each class</p></li>
+<li><p>Given this model we can define a <span class="math inline">\(p(x)\)</span> for the entire data set which is simply the marginalization over <span class="math inline">\(z\)</span>. But this is gonna be a sum of Gaussians, see the equation at bottom of slide. Because of the sum of gaussians we call it <strong>Gaussian mixture model</strong></p></li>
+</ul>
+<center>
+<img src="2023-10-10-23-44-06.png" class="img-fluid">
+</center>
+<pre></pre>
+<p>This is how we model <span class="math inline">\(p(x)\)</span> but now we want to optimize it and since we are working in a probabilistic setting: we can compute the posterior <span class="math inline">\(p(z_k=1|\textbf{x})\)</span> which we know we can get it with Bayes rule.</p>
+<ul>
+<li><span class="math inline">\(p(z_k=1|\textbf{x})\)</span> I have a observation x and we want to know to which class <span class="math inline">\(z\)</span> it belongs. But this will give a opacity meaning its not totally certain</li>
+</ul>
+<blockquote class="blockquote">
+<p>Recall our goal is to get: <span class="math inline">\(p(z_k=1|\textbf{x})\)</span>. Also recall that in k-means we have a hard assignment of labels. in this case because we are using probabilities then we will end up with soft assignment which means that we will have i.e.&nbsp;one point as green color but also a bit transparent with a red color.</p>
+</blockquote>
+<section id="the-posterior" class="level3" data-number="23.1">
+<h3 data-number="23.1" class="anchored" data-anchor-id="the-posterior"><span class="header-section-number">23.1</span> The Posterior</h3>
+<center>
+<img src="2023-10-11-00-01-39.png" class="img-fluid">
+</center>
+<pre></pre>
+</section>
+<section id="the-log-likelihood" class="level3" data-number="23.2">
+<h3 data-number="23.2" class="anchored" data-anchor-id="the-log-likelihood"><span class="header-section-number">23.2</span> The Log-likelihood</h3>
+<ul>
+<li>The <strong>likelihood</strong> can be optimized i,e by taking the log and then derivative with respect to its parameters <span class="math inline">\(\mu_k\)</span>, <span class="math inline">\(\Sigma_k\)</span></li>
+</ul>
+<p>Wait a min, but when you replace the gaussian (which is how we assume to model the data) then because of the sumation over <span class="math inline">\(\pi_k\)</span> things get matematically and analitically complicated and then we need to resort in another optimization rather just taking the derivative and set it to zero. Thus <strong>Expecation Maximization</strong> comes into play</p>
+<p>Crucial bit why we are taking the log-likelihood as <span class="math inline">\(p(\text{x})\)</span>. See this below:</p>
+<center>
+<img src="2023-10-11-00-24-31.png" class="img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li>That is why we compute:</li>
+</ul>
+<center>
+<img src="2023-10-11-00-47-40.png" class="w500 img-fluid">
+</center>
+<pre></pre>
+</section>
+</section>
+<section id="expectation-maximization-algorithm-em" class="level2" data-number="24">
+<h2 data-number="24" class="anchored" data-anchor-id="expectation-maximization-algorithm-em"><span class="header-section-number">24</span> Expectation-Maximization algorithm (EM)</h2>
+<ul>
+<li>Here we assume the posteriors <span class="math inline">\(\gamma(z_k)\)</span> do not depend on the parameters</li>
+</ul>
+<p>How to get to teh answers for the parameters?</p>
+<ol type="1">
+<li>With the values for the parameters anc compute the expected posterior</li>
+<li>Maximize for parameters</li>
+</ol>
+<p>The cycle repeats</p>
+<center>
+<img src="2023-10-11-00-56-29.png" class="img-fluid">
+</center>
+<pre></pre>
+</section>
+<section id="example-gmm" class="level2" data-number="25">
+<h2 data-number="25" class="anchored" data-anchor-id="example-gmm"><span class="header-section-number">25</span> Example: GMM</h2>
+<ul>
+<li>Here the optimization of the likelihood is called <strong>Maximization</strong></li>
+</ul>
+<center>
+<img src="2023-10-11-01-02-47.png" class="w575 img-fluid">
+</center>
+<pre></pre>
+<p>In K-means I only updated the cluster centers whereas here I update all the parameters <span class="math inline">\(\pi_k\)</span>, <span class="math inline">\(\mu_k\)</span>, <span class="math inline">\(\Sigma_k\)</span></p>
+</section>
+<section id="derivations-for-em-algorithm" class="level2" data-number="26">
+<h2 data-number="26" class="anchored" data-anchor-id="derivations-for-em-algorithm"><span class="header-section-number">26</span> Derivations for EM algorithm</h2>
+<blockquote class="blockquote">
+<p>Refer to slides</p>
+</blockquote>
+</section>
+<section id="the-mouse-data-again" class="level2" data-number="27">
+<h2 data-number="27" class="anchored" data-anchor-id="the-mouse-data-again"><span class="header-section-number">27</span> The mouse data again</h2>
+<center>
+<img src="2023-10-11-01-27-55.png" class="w575 img-fluid">
+</center>
+<pre></pre>
+<p><strong>Differences between K-Means and GMM:</strong> - K-means can only custer groups of the same size, so same distances from each mean cluster - GMM can compensate for this</p>
+</section>
+<section id="how-do-we-assign-points-to-cluster" class="level2" data-number="28">
+<h2 data-number="28" class="anchored" data-anchor-id="how-do-we-assign-points-to-cluster"><span class="header-section-number">28</span> How do we assign points to cluster?</h2>
+<center>
+<img src="2023-10-11-01-30-30.png" class="w500 img-fluid">
+</center>
+<pre></pre>
+</section>
+<section id="final-remarks" class="level2" data-number="29">
+<h2 data-number="29" class="anchored" data-anchor-id="final-remarks"><span class="header-section-number">29</span> Final remarks</h2>
+<center>
+<img src="2023-10-11-01-32-15.png" class="w500 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li>We need more initializations in GMM because of different parameters so the trick its to do it with k-means</li>
+<li>Same as k-means we cannot expect to find the best solution so the global minimum for the parameters because the problem its not convex. That means the final solution depends on how you initializes the model parameters</li>
+<li>The last point refers that GMM is for unsupervised learning so you compute things with the latent variable whereas in QDA its for supervised learning.</li>
+</ul>
+</section>
+<section id="faq" class="level2" data-number="30">
+<h2 data-number="30" class="anchored" data-anchor-id="faq"><span class="header-section-number">30</span> FAQ</h2>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" style="simple">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What is Latent variable?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>A latent variable is a variable that is not directly observed but is inferred or estimated from other observed variables</p>
+<p>For example, in psychology, intelligence is a latent variable because it cannot be directly measured. Instead, researchers use various observable indicators, such as IQ test scores, academic performance, and problem-solving abilities, to infer a person’s level of intelligence.</p>
+<p><strong>Latent class analysis</strong> (LCA) is a statistical technique used to identify unobservable or latent classes or groups within a population based on patterns of responses to a set of observed categorical variables</p>
+<p><strong>What do we use Latent variables for?</strong></p>
+<p>The primary role of the latent variables is to allow a complicated distribution over the observed variables to be represented in terms of a model constructed from simpler (typically exponential family) conditional distributions.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-style-simple callout-none no-icon callout-titled" style="simple">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Categorical Distribution AND Generalized Bernoulli Distribution:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>The categorical distribution describes the probability distribution of a discrete random variable with <span class="math inline">\(K\)</span> possible outcomes or categories. The probability mass function (PMF) of the categorical distribution is given by:</p>
+<p><span class="math display">\[
+P(X = x_i) = p_i, \quad \text{for } i = 1, 2, \ldots, K
+\]</span></p>
+<p>where <span class="math inline">\(p_i\)</span> is the probability of outcome <span class="math inline">\(x_i\)</span>, and <span class="math inline">\(\sum_{i=1}^{K} p_i = 1\)</span>.</p>
+<p>Generalized Bernoulli Distribution: The generalized Bernoulli distribution is a distribution for a binary random variable that can take on values 0 or 1 with different probabilities. The PMF of the generalized Bernoulli distribution is given by:</p>
+<p><span class="math display">\[
+P(X = x) = \theta^x (1 - \theta)^{1 - x}, \quad \text{for } x = 0, 1
+\]</span></p>
+<p>where <span class="math inline">\(\theta\)</span> is the probability of <span class="math inline">\(X = 1\)</span>, and <span class="math inline">\((1 - \theta)\)</span> is the probability of <span class="math inline">\(X = 0\)</span>. This distribution is sometimes used when modeling binary data with different success probabilities.</p>
+</div>
+</div>
+</div>
+
+
 </section>
 
 </main> <!-- /main -->

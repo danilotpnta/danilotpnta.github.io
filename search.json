@@ -298,7 +298,7 @@
     "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#unsupervised-learning",
     "title": "Latent Variable Models & K-Means Clustering",
     "section": "2 Unsupervised Learning",
-    "text": "2 Unsupervised Learning\nYou do not have labels you only have features.\nThe mission of the model is to discover latent or hidden structures\n\n\n\n\nUnsupervised learning is understanding the data discovering properties to exploit."
+    "text": "2 Unsupervised Learning\nYou do not have labels you only have features.\nThe mission of the model is to discover latent or hidden structures.\nLatent means to be not measurable, to be hidden i.e. thoughts –&gt; words. You can sample words, you have data from the words, but for thoughts you don’t have data available, the variable is hidden\n\n\n\n\nUnsupervised learning is understanding the data discovering properties to exploit."
   },
   {
     "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#unsupervised-vs.-supervised-learning",
@@ -432,6 +432,76 @@
     "title": "Latent Variable Models & K-Means Clustering",
     "section": "21 Constrained optimization",
     "text": "21 Constrained optimization\n\n\n\n\n\n21.1 Lagrange Constrained Optimization: Example"
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#probabilistic-version-of-k-means-clustering",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#probabilistic-version-of-k-means-clustering",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "Probabilistic version of k-Means Clustering",
+    "text": "Probabilistic version of k-Means Clustering\n\nIn this section we talked about the probabilistic side of k-means"
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#clustering-with-gaussian-mixture-model-gmm",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#clustering-with-gaussian-mixture-model-gmm",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "22 Clustering with Gaussian Mixture Model (GMM)",
+    "text": "22 Clustering with Gaussian Mixture Model (GMM)\n\nWe assume that the data follows a generative model. Recall what a generative model is:\n\n\nApproaches that explicitly or implicitly model the distribution of inputs as well as outputs are known as generative models, because by sampling from them it is possible to generate synthetic data points in the input space.\n\n\nWe also assume that with each observation there is an associated discrete latent variable. Recall what latent variable is:\n\n\nA latent variable is a variable that is not directly observed is hidden like our thoughs, that is z\n\nFor instance: in the image below we see that the purple data, each of these dots is related to a latent variable \\(z\\), for instance a discrete class \\(z\\) i.e, that can take on the values {red, green, or blue}. Now these latent variables are hidden is not directly observable, you dont’ know them. Here the latent variable is discrete can take values like: red, green and so on, can also be like the example of the houses, it can be boat houses, studios and so on.\nRecap from the upper text. It means that we are no seeing the bottom left graph with the distinctions between classes but we only see the purple dots\n\nWe also assume there is a join distribution \\((x,z) \\sim p(x,z)\\) so in this case in the left plot\n\n\nGoal: given our unlabelled data \\(x \\sim p(x)\\) (purple dots) you want to go to a cluster ( from our latent variable) assignment. Mathematically you want to be able to compute \\(p(z|\\textbf{x})\\) which is the right bottom graph where you see all datapoints assigned one color. For instance you want to say that a purple dot in the corner belows to class \\(z = green\\) or another dot that belongs to \\(z = blue\\). How do we do this? Sol: in a probabilistic way using Multiple Gaussians hence called Gaussian Mixture models."
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#modelling-assumptions",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#modelling-assumptions",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "23 Modelling assumptions",
+    "text": "23 Modelling assumptions\n\nWe model our prior with a Generalized Bernoulli distribution\n\nCategorical Distribution: \\[\nP(X = x_i) = p_i, \\quad \\text{for } i = 1, 2, \\ldots, K\n\\]\nwhere \\(p_i\\) is the probability of outcome \\(x_i\\), and \\(\\sum_{i=1}^{K} p_i = 1\\).\nGeneralized Bernoulli: \\[\nP(X = x) = \\theta^x (1 - \\theta)^{1 - x}, \\quad \\text{for } x = 0, 1\n\\]\nwhere \\(\\theta\\) is the probability of \\(X = 1\\), and \\((1 - \\theta)\\) is the probability of \\(X = 0\\)\n\nThe second part part of our generative model is the latent class or conditional distributions \\(p(\\textbf{x}|z_k)\\) modelled with Gaussians. NOTE this is not the likelihood\n\n\\(p(\\textbf{x}|z_k)\\): is the probability that if I know the class \\(z_k\\) then I will observed the data in i.e the red region, see picture above in orange highlighted\n\nThe \\(\\pi_k\\), \\(\\mu_k\\), \\(\\Sigma_k\\) are learnable parameters\nWith the prior and the latent conditional distribution we can compute the joint \\(p(\\textbf{x},z_k =1)\\). That is, we compute the probability for each class\nGiven this model we can define a \\(p(x)\\) for the entire data set which is simply the marginalization over \\(z\\). But this is gonna be a sum of Gaussians, see the equation at bottom of slide. Because of the sum of gaussians we call it Gaussian mixture model\n\n\n\n\n\nThis is how we model \\(p(x)\\) but now we want to optimize it and since we are working in a probabilistic setting: we can compute the posterior \\(p(z_k=1|\\textbf{x})\\) which we know we can get it with Bayes rule.\n\n\\(p(z_k=1|\\textbf{x})\\) I have a observation x and we want to know to which class \\(z\\) it belongs. But this will give a opacity meaning its not totally certain\n\n\nRecall our goal is to get: \\(p(z_k=1|\\textbf{x})\\). Also recall that in k-means we have a hard assignment of labels. in this case because we are using probabilities then we will end up with soft assignment which means that we will have i.e. one point as green color but also a bit transparent with a red color.\n\n\n23.1 The Posterior\n\n\n\n\n\n\n23.2 The Log-likelihood\n\nThe likelihood can be optimized i,e by taking the log and then derivative with respect to its parameters \\(\\mu_k\\), \\(\\Sigma_k\\)\n\nWait a min, but when you replace the gaussian (which is how we assume to model the data) then because of the sumation over \\(\\pi_k\\) things get matematically and analitically complicated and then we need to resort in another optimization rather just taking the derivative and set it to zero. Thus Expecation Maximization comes into play\nCrucial bit why we are taking the log-likelihood as \\(p(\\text{x})\\). See this below:\n\n\n\n\n\nThat is why we compute:"
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#expectation-maximization-algorithm-em",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#expectation-maximization-algorithm-em",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "24 Expectation-Maximization algorithm (EM)",
+    "text": "24 Expectation-Maximization algorithm (EM)\n\nHere we assume the posteriors \\(\\gamma(z_k)\\) do not depend on the parameters\n\nHow to get to teh answers for the parameters?\n\nWith the values for the parameters anc compute the expected posterior\nMaximize for parameters\n\nThe cycle repeats"
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#example-gmm",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#example-gmm",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "25 Example: GMM",
+    "text": "25 Example: GMM\n\nHere the optimization of the likelihood is called Maximization\n\n\n\n\n\nIn K-means I only updated the cluster centers whereas here I update all the parameters \\(\\pi_k\\), \\(\\mu_k\\), \\(\\Sigma_k\\)"
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#derivations-for-em-algorithm",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#derivations-for-em-algorithm",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "26 Derivations for EM algorithm",
+    "text": "26 Derivations for EM algorithm\n\nRefer to slides"
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#the-mouse-data-again",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#the-mouse-data-again",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "27 The mouse data again",
+    "text": "27 The mouse data again\n\n\n\n\nDifferences between K-Means and GMM: - K-means can only custer groups of the same size, so same distances from each mean cluster - GMM can compensate for this"
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#how-do-we-assign-points-to-cluster",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#how-do-we-assign-points-to-cluster",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "28 How do we assign points to cluster?",
+    "text": "28 How do we assign points to cluster?"
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#final-remarks",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#final-remarks",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "29 Final remarks",
+    "text": "29 Final remarks\n\n\n\n\n\nWe need more initializations in GMM because of different parameters so the trick its to do it with k-means\nSame as k-means we cannot expect to find the best solution so the global minimum for the parameters because the problem its not convex. That means the final solution depends on how you initializes the model parameters\nThe last point refers that GMM is for unsupervised learning so you compute things with the latent variable whereas in QDA its for supervised learning."
+  },
+  {
+    "objectID": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#faq",
+    "href": "blog/2023-10-07_latent-variable-models-&-k-means-clustering/index.html#faq",
+    "title": "Latent Variable Models & K-Means Clustering",
+    "section": "30 FAQ",
+    "text": "30 FAQ\n\n\n\n\n\n\nWhat is Latent variable?\n\n\n\n\n\nA latent variable is a variable that is not directly observed but is inferred or estimated from other observed variables\nFor example, in psychology, intelligence is a latent variable because it cannot be directly measured. Instead, researchers use various observable indicators, such as IQ test scores, academic performance, and problem-solving abilities, to infer a person’s level of intelligence.\nLatent class analysis (LCA) is a statistical technique used to identify unobservable or latent classes or groups within a population based on patterns of responses to a set of observed categorical variables\nWhat do we use Latent variables for?\nThe primary role of the latent variables is to allow a complicated distribution over the observed variables to be represented in terms of a model constructed from simpler (typically exponential family) conditional distributions.\n\n\n\n\n\n\n\n\n\nCategorical Distribution AND Generalized Bernoulli Distribution:\n\n\n\n\n\nThe categorical distribution describes the probability distribution of a discrete random variable with \\(K\\) possible outcomes or categories. The probability mass function (PMF) of the categorical distribution is given by:\n\\[\nP(X = x_i) = p_i, \\quad \\text{for } i = 1, 2, \\ldots, K\n\\]\nwhere \\(p_i\\) is the probability of outcome \\(x_i\\), and \\(\\sum_{i=1}^{K} p_i = 1\\).\nGeneralized Bernoulli Distribution: The generalized Bernoulli distribution is a distribution for a binary random variable that can take on values 0 or 1 with different probabilities. The PMF of the generalized Bernoulli distribution is given by:\n\\[\nP(X = x) = \\theta^x (1 - \\theta)^{1 - x}, \\quad \\text{for } x = 0, 1\n\\]\nwhere \\(\\theta\\) is the probability of \\(X = 1\\), and \\((1 - \\theta)\\) is the probability of \\(X = 0\\). This distribution is sometimes used when modeling binary data with different success probabilities."
   },
   {
     "objectID": "blog/2023-06-20_running-my-first-marathon/index.html",
