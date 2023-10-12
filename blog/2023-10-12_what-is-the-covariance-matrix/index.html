@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Danilo Toapanta">
-<meta name="dcterms.date" content="2023-10-11">
+<meta name="dcterms.date" content="2023-10-12">
 <meta name="description" content="Description of this Post">
 
-<title>Danilo Toapanta - Principal Component Analysis (PCA)</title>
+<title>Danilo Toapanta - The Covariance Matrix and relation with PCA</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -133,7 +167,7 @@ window.MathJax = {
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full blog-page" style="display: none;">
     <div class="quarto-title-banner page-columns page-full">
         <div class="quarto-title column-body">
-            <h1 class="title">Principal Component Analysis PCA</h1>
+            <h1 class="title">The Covariance Matrix?</h1>
                 
             <!-- Description Block -->
                         <div>
@@ -177,7 +211,7 @@ window.MathJax = {
         <div>
         <div class="quarto-title-meta-heading">Published</div>
         <div class="quarto-title-meta-contents">
-          <p class="date">October 11, 2023</p>
+          <p class="date">October 12, 2023</p>
         </div>
       </div>
       
@@ -270,7 +304,7 @@ window.MathJax = {
 <main id="title-block-header" class="quarto-title-block default page-columns page-full" style="padding-bottom: 40px;">
 
     <div class="quarto-title column-body" style="margin-bottom: 1em;">
-        <h1 class="title" style="padding-bottom:8px" ;="">Principal Component Analysis PCA</h1>
+        <h1 class="title" style="padding-bottom:8px" ;="">The Covariance Matrix?</h1>
         
         <!-- Description Block -->
                     <div>
@@ -349,7 +383,7 @@ window.MathJax = {
         <div>
         <div class="quarto-title-meta-heading">Published</div>
         <div class="quarto-title-meta-contents">
-          <p class="date">October 11, 2023</p>
+          <p class="date">October 12, 2023</p>
         </div>
       </div>
       
@@ -361,60 +395,112 @@ window.MathJax = {
     
 </main>
 
-<section id="continuous-latent-space" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="continuous-latent-space"><span class="header-section-number">1</span> Continuous latent space</h2>
-<p>The idea is of latent variables is that the data is described in the low dimensional latent space and somehow it can map it to this hight dimensional space.</p>
-</section>
-<section id="principal-component-analysis-pca" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="principal-component-analysis-pca"><span class="header-section-number">2</span> Principal Component Analysis (PCA)</h2>
-<p>Imagine I have the bottom right plot in multiple dimensions so not only 2D dimensions. I can compute a mean and a covariance matrix to fit this data.</p>
-<p>Now I pick only line and I will fit the data in 1D-dimension i.e using Gaussian with the mean and convariance from the original plot. This mapping depends on the direction on the line for the PCA, imagine now the green line below then the gaussian will look different</p>
+<blockquote class="blockquote">
+<p>Recall: Variance measures the variation of a single random variable (like the height of a person in a population), whereas covariance is a measure of how much two random variables vary together (like the height of a person and the weight of a person in a population)</p>
+</blockquote>
+<p>In a 2D dimensional feature space with 10 data points, the covariance matrix provides a measure of the relationship between the two features (dimensions) and how they vary together. The covariance matrix is a 2x2 matrix that quantifies the degree to which the two features change together</p>
+<p>Let’s say you have two features, <span class="math inline">\(\textbf{x}\)</span> and <span class="math inline">\(\textbf{y}\)</span>, and you have 10 data points with values (x_1, y_1), (x_2, y_2), …, (x_10, y_10). The covariance matrix Σ is calculated as:</p>
+<p><span class="math display">\[
+\Sigma = \begin{bmatrix}
+\text{cov}(\textbf{x}, \textbf{x}) &amp; \text{cov}(\textbf{x}, \textbf{y}) \\
+\text{cov}(\textbf{y}, \textbf{x}) &amp; \text{cov}(\textbf{y}, \textbf{y})
+\end{bmatrix}
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li>cov(<span class="math inline">\(\textbf{x}\)</span>, <span class="math inline">\(\textbf{x}\)</span>) is the covariance between feature <span class="math inline">\(\textbf{x}\)</span> and itself (the variance of <span class="math inline">\(\textbf{x}\)</span>).</li>
+<li>cov(<span class="math inline">\(\textbf{y}\)</span>, <span class="math inline">\(\textbf{y}\)</span>) is the covariance between feature <span class="math inline">\(\textbf{y}\)</span> and itself (the variance of <span class="math inline">\(\textbf{y}\)</span>).</li>
+<li>cov(<span class="math inline">\(\textbf{x}\)</span>, <span class="math inline">\(\textbf{y}\)</span>) and cov(<span class="math inline">\(\textbf{y}\)</span>, <span class="math inline">\(\textbf{x}\)</span>) are the covariances between feature <span class="math inline">\(\textbf{x}\)</span> and feature <span class="math inline">\(\textbf{y}\)</span>.</li>
+</ul>
+<p>The covariances of two random variables (the two features) are calculated using the formula:</p>
+<p><span class="math display">\[
+\text{cov}(\textbf{x}, \textbf{y}) = \frac{1}{N} \sum_{n=1}^{N} (x_n - {\bar{x}})({y}_n - \bar{y})
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li>$x_n $ is a scalar value i.e.&nbsp;on the x-axis (1st feature: number of flors of the house)</li>
+<li><span class="math inline">\(y_n\)</span> is a scalar value i.e.&nbsp;on the y-axis (2nd feature: size in <span class="math inline">\(m^2\)</span> of the house)</li>
+<li><span class="math inline">\(\bar{x}\)</span> and <span class="math inline">\(\bar{y}\)</span> are scalars means of the 1D-features vectors</li>
+</ul>
+<p><strong>Note:</strong></p>
+<ul>
+<li><span class="math inline">\(\Sigma\)</span> the covariance matrix is symetric which means <span class="math inline">\(\text{cov}(\textbf{x}, \textbf{y}) = \text{cov}(\textbf{y}, \textbf{x})\)</span></li>
+<li>The diagonal entries of the covariance matrix are the variances and the other entries are the covariances.</li>
+</ul>
+<p>The calculation for the covariance matrix can be also expressed as:</p>
+<p><span class="math display">\[
+\Sigma = \frac{1}{N} \sum_{n=1}^{N} (\textbf{x}_n - \mathbf{\bar{x}})(\textbf{x}_n - \mathbf{\bar{x}})^T
+\]</span></p>
+<p>Where:</p>
+<ul>
+<li><span class="math inline">\(\textbf{x}_n \in \mathbb{R}^{Dx1}\)</span> where <span class="math inline">\(D\)</span> is the number of features (or number of dimensions i.e.&nbsp;with two features then 2-dimensions, with three features 3-dimensions)</li>
+<li><span class="math inline">\(\mathbf{\bar{x}} \in \mathbb{R}^{Dx1}\)</span></li>
+</ul>
+<p>Below some example:</p>
 <center>
-<img src="2023-10-11-08-34-05.png" class="w500 img-fluid">
+<img src="2023-10-12-17-19-45.png" class="img-fluid">
+</center>
+<pre></pre>
+<section id="python-example" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="python-example"><span class="header-section-number">1</span> Python Example</h2>
+<div class="cell" data-execution_count="1">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">'ggplot'</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.rcParams['figure.figsize'] = (12, 8)</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Normal distributed x and y vector with mean 0 and standard deviation 1</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">500</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">500</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.vstack((x, y)).T</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>plt.scatter(X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>])</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Generated Data'</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>plt.axis(<span class="st">'equal'</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><img src="index_files/figure-html/cell-2-output-1.png" width="569" height="434"></p>
+</div>
+</div>
+<p>If two feature vectors are independent (or uncorrelated) the matrix matrix would be:</p>
+<p><span class="math display">\[
+\Sigma = \begin{bmatrix}
+\text{cov}(\textbf{x}, \textbf{x}) &amp; 0 \\
+0 &amp; \text{cov}(\textbf{y}, \textbf{y})
+\end{bmatrix}
+\]</span></p>
+<p>If this data was generated with unit cov(x,x) and unit cov(y,y) then we have a Identity covariance matrix</p>
+<center>
+<img src="2023-10-12-17-33-35.png" class="w300 img-fluid">
 </center>
 <pre></pre>
 <ul>
-<li>So we want to find the direction in which it maximizes the variance data. This is important because if you have a low variance then all the points map to this compressed graph and may look like one point when in reality there are plenty.</li>
+<li>As x1 increases x2 increases too, because we have 0.8. We have a positive correlation on the data.</li>
 </ul>
 </section>
-<section id="recall-orthonomal-projections" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="recall-orthonomal-projections"><span class="header-section-number">3</span> Recall orthonomal projections</h2>
-<ul>
-<li>The <a href="https://youtu.be/9-9uJPMN7rc?si=C-39unaxbvIqEpER&amp;t=81">span</a> of a vector.</li>
-</ul>
-</section>
-<section id="d-projection" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="d-projection"><span class="header-section-number">4</span> 1D Projection</h2>
-<p>Remarks:</p>
-<ul>
-<li>Here the <span class="math inline">\(z_1\)</span> is the projected point into the 1D-dimensional space if we would like more than one dimension then this z_1 would be now a vector <span class="math inline">\(\textbf{z}_1\)</span> with dimensions <span class="math inline">\(M\)</span></li>
-</ul>
-</section>
-<section id="maximizing-the-variance-of-1-component" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="maximizing-the-variance-of-1-component"><span class="header-section-number">5</span> Maximizing the variance of 1 component</h2>
-<p>The principal components are the <span class="math inline">\(u_1\)</span> the lines (the directions)</p>
+<section id="relation-with-pca" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="relation-with-pca"><span class="header-section-number">2</span> Relation with PCA</h2>
+<p>When you multiply the <span class="math inline">\(\Sigma\)</span> covariance matrix times a vector and then again and again you end up with a vector that points to directions where you have the greatest variance in the data. So like where all points are spread out.</p>
 <center>
-<img src="2023-10-12-20-20-56.png" class="w575 img-fluid">
+<img src="2023-10-12-17-41-50.png" class="img-fluid">
 </center>
 <pre></pre>
-</section>
-<section id="reminder-eigen-de-composition" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="reminder-eigen-de-composition"><span class="header-section-number">6</span> Reminder: eigen de-composition</h2>
+<ul>
+<li>If I multiply the vector <span class="math inline">\(e2\)</span> by the cov matrix it will not turn but will get longer and longer but will point in the same direction</li>
+<li>Thus we want to find some vector <span class="math inline">\(e\)</span> that when we multiply it with the cov matrix do not change direction. The vectors are called eigenvectors and the lambdas so the scalar version will be called eigenvalues.</li>
+<li>The later point will be called our principal components which are the eigenvectors with the largest eigenvalues</li>
+</ul>
 <center>
-<img src="2023-10-12-20-20-09.png" class="w550 img-fluid">
+<img src="2023-10-12-17-52-01.png" class="img-fluid">
 </center>
 <pre></pre>
-<p>Remarks:</p>
-<ul>
-<li>The total variance of our datapoints in the new dimensional space can be calculated by summing up the eigenvalues</li>
-<li>We should think of <span class="math inline">\(U\)</span> as a change of basis from the D-dimensional space to the new dimensional space. This new dimensional space its determined by how many eigevector at the end we choose</li>
-<li>Because the eigenvectors are orthonormal that means when we apply do the change of basis with the A_weird we are decorrelating our data.</li>
-</ul>
-</section>
-<section id="how-to-choose-m" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="how-to-choose-m"><span class="header-section-number">7</span> How to choose M?</h2>
 <center>
-<img src="2023-10-12-20-27-46.png" class="w550 img-fluid">
+<img src="2023-10-12-17-57-37.png" class="img-fluid">
 </center>
 <pre></pre>
 

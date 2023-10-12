@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Danilo Toapanta">
-<meta name="dcterms.date" content="2023-10-11">
+<meta name="dcterms.date" content="2023-10-12">
 <meta name="description" content="Description of this Post">
 
-<title>Danilo Toapanta - Principal Component Analysis (PCA)</title>
+<title>Danilo Toapanta - Bayes Rule Equation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -133,7 +133,7 @@ window.MathJax = {
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full blog-page" style="display: none;">
     <div class="quarto-title-banner page-columns page-full">
         <div class="quarto-title column-body">
-            <h1 class="title">Principal Component Analysis PCA</h1>
+            <h1 class="title">Bayes Rule Equation</h1>
                 
             <!-- Description Block -->
                         <div>
@@ -152,8 +152,18 @@ window.MathJax = {
                             </a>
                         </div> 
                                             <div class="quarto-category">
+                            <a href="../../blog/#category=Education">
+                                Education
+                            </a>
+                        </div> 
+                                            <div class="quarto-category">
                             <a href="../../blog/#category=TAGS">
                                 TAGS
+                            </a>
+                        </div> 
+                                            <div class="quarto-category">
+                            <a href="../../blog/#category=Probability">
+                                Probability
                             </a>
                         </div> 
                     
@@ -177,7 +187,7 @@ window.MathJax = {
         <div>
         <div class="quarto-title-meta-heading">Published</div>
         <div class="quarto-title-meta-contents">
-          <p class="date">October 11, 2023</p>
+          <p class="date">October 12, 2023</p>
         </div>
       </div>
       
@@ -270,7 +280,7 @@ window.MathJax = {
 <main id="title-block-header" class="quarto-title-block default page-columns page-full" style="padding-bottom: 40px;">
 
     <div class="quarto-title column-body" style="margin-bottom: 1em;">
-        <h1 class="title" style="padding-bottom:8px" ;="">Principal Component Analysis PCA</h1>
+        <h1 class="title" style="padding-bottom:8px" ;="">Bayes Rule Equation</h1>
         
         <!-- Description Block -->
                     <div>
@@ -292,9 +302,19 @@ window.MathJax = {
                                 All
                             </a>
                         </div>
+                                            <div id="Education" class="quarto-category">
+                            <a href="../../blog/#category=Education">
+                                Education
+                            </a>
+                        </div>
                                             <div id="TAGS" class="quarto-category">
                             <a href="../../blog/#category=TAGS">
                                 TAGS
+                            </a>
+                        </div>
+                                            <div id="Probability" class="quarto-category">
+                            <a href="../../blog/#category=Probability">
+                                Probability
                             </a>
                         </div>
                                     </div>
@@ -320,12 +340,28 @@ window.MathJax = {
                                 All
                             </a>
                         </div>
+                                            <div id="Education-from-here" class="quarto-category tags-title" style="display: none;">
+                            <a href="../../blog/#category=Education">
+                               <!-- <span class="hasth-tag">
+                                #
+                                </span> -->
+                                Education
+                            </a>
+                        </div>
                                             <div id="TAGS-from-here" class="quarto-category tags-title" style="display: none;">
                             <a href="../../blog/#category=TAGS">
                                <!-- <span class="hasth-tag">
                                 #
                                 </span> -->
                                 TAGS
+                            </a>
+                        </div>
+                                            <div id="Probability-from-here" class="quarto-category tags-title" style="display: none;">
+                            <a href="../../blog/#category=Probability">
+                               <!-- <span class="hasth-tag">
+                                #
+                                </span> -->
+                                Probability
                             </a>
                         </div>
                     
@@ -349,7 +385,7 @@ window.MathJax = {
         <div>
         <div class="quarto-title-meta-heading">Published</div>
         <div class="quarto-title-meta-contents">
-          <p class="date">October 11, 2023</p>
+          <p class="date">October 12, 2023</p>
         </div>
       </div>
       
@@ -361,62 +397,27 @@ window.MathJax = {
     
 </main>
 
-<section id="continuous-latent-space" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="continuous-latent-space"><span class="header-section-number">1</span> Continuous latent space</h2>
-<p>The idea is of latent variables is that the data is described in the low dimensional latent space and somehow it can map it to this hight dimensional space.</p>
-</section>
-<section id="principal-component-analysis-pca" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="principal-component-analysis-pca"><span class="header-section-number">2</span> Principal Component Analysis (PCA)</h2>
-<p>Imagine I have the bottom right plot in multiple dimensions so not only 2D dimensions. I can compute a mean and a covariance matrix to fit this data.</p>
-<p>Now I pick only line and I will fit the data in 1D-dimension i.e using Gaussian with the mean and convariance from the original plot. This mapping depends on the direction on the line for the PCA, imagine now the green line below then the gaussian will look different</p>
-<center>
-<img src="2023-10-11-08-34-05.png" class="w500 img-fluid">
-</center>
-<pre></pre>
+<section id="bayes-theorem" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="bayes-theorem"><span class="header-section-number">1</span> Bayes Theorem</h2>
+<p><span class="math display">\[
+\begin{align}
+p(C|X) = \frac{P(X|C)P(C)}{P(X)} \\
+\end{align}
+\]</span></p>
+<p>Where:</p>
 <ul>
-<li>So we want to find the direction in which it maximizes the variance data. This is important because if you have a low variance then all the points map to this compressed graph and may look like one point when in reality there are plenty.</li>
+<li><span class="math inline">\(P(C|X)\)</span> is the <strong>Posterior</strong> (Given the data what is the prob of being class C_k)</li>
+<li><span class="math inline">\(P(X|C)\)</span> is the <strong>Likelihood</strong> (How the data is distributed given C)</li>
+<li><span class="math inline">\(P(C)\)</span> is the <strong>Prior</strong></li>
+<li><span class="math inline">\(P(X)\)</span> is the <strong>Evidence</strong>/ Marginal likelihood</li>
 </ul>
-</section>
-<section id="recall-orthonomal-projections" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="recall-orthonomal-projections"><span class="header-section-number">3</span> Recall orthonomal projections</h2>
-<ul>
-<li>The <a href="https://youtu.be/9-9uJPMN7rc?si=C-39unaxbvIqEpER&amp;t=81">span</a> of a vector.</li>
-</ul>
-</section>
-<section id="d-projection" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="d-projection"><span class="header-section-number">4</span> 1D Projection</h2>
-<p>Remarks:</p>
-<ul>
-<li>Here the <span class="math inline">\(z_1\)</span> is the projected point into the 1D-dimensional space if we would like more than one dimension then this z_1 would be now a vector <span class="math inline">\(\textbf{z}_1\)</span> with dimensions <span class="math inline">\(M\)</span></li>
-</ul>
-</section>
-<section id="maximizing-the-variance-of-1-component" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="maximizing-the-variance-of-1-component"><span class="header-section-number">5</span> Maximizing the variance of 1 component</h2>
-<p>The principal components are the <span class="math inline">\(u_1\)</span> the lines (the directions)</p>
-<center>
-<img src="2023-10-12-20-20-56.png" class="w575 img-fluid">
-</center>
-<pre></pre>
-</section>
-<section id="reminder-eigen-de-composition" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="reminder-eigen-de-composition"><span class="header-section-number">6</span> Reminder: eigen de-composition</h2>
-<center>
-<img src="2023-10-12-20-20-09.png" class="w550 img-fluid">
-</center>
-<pre></pre>
-<p>Remarks:</p>
-<ul>
-<li>The total variance of our datapoints in the new dimensional space can be calculated by summing up the eigenvalues</li>
-<li>We should think of <span class="math inline">\(U\)</span> as a change of basis from the D-dimensional space to the new dimensional space. This new dimensional space its determined by how many eigevector at the end we choose</li>
-<li>Because the eigenvectors are orthonormal that means when we apply do the change of basis with the A_weird we are decorrelating our data.</li>
-</ul>
-</section>
-<section id="how-to-choose-m" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="how-to-choose-m"><span class="header-section-number">7</span> How to choose M?</h2>
-<center>
-<img src="2023-10-12-20-27-46.png" class="w550 img-fluid">
-</center>
-<pre></pre>
+<p>The evidence <span class="math inline">\(P(X)\)</span> can also be decomposed in:</p>
+<p><span class="math display">\[
+\begin{align}
+P(X) &amp;= \sum_{j}{}P(X,C_j)\\
+     &amp;= \sum_{j}{}P(X|C_j)P(C_j) \\
+\end{align}
+\]</span></p>
 
 
 </section>

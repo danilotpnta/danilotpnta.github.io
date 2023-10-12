@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2023-09-26">
 <meta name="description" content="Derivatives of vectors, matrix and other utils">
 
-<title>Danilo Toapanta - Matrix Calculus</title>
+<title>Danilo Toapanta - Matrix Calculus &amp; Derivatives Ax</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -167,7 +167,7 @@ window.MathJax = {
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full blog-page" style="display: none;">
     <div class="quarto-title-banner page-columns page-full">
         <div class="quarto-title column-body">
-            <h1 class="title">Matrix Calculus</h1>
+            <h1 class="title">Matrix Calculus &amp; Derivatives</h1>
                 
             <!-- Description Block -->
                         <div>
@@ -314,7 +314,7 @@ window.MathJax = {
 <main id="title-block-header" class="quarto-title-block default page-columns page-full" style="padding-bottom: 40px;">
 
     <div class="quarto-title column-body" style="margin-bottom: 1em;">
-        <h1 class="title" style="padding-bottom:8px" ;="">Matrix Calculus</h1>
+        <h1 class="title" style="padding-bottom:8px" ;="">Matrix Calculus &amp; Derivatives</h1>
         
         <!-- Description Block -->
                     <div>
@@ -501,13 +501,42 @@ Inverse of A:
 </section>
 <section id="partial-derivatives" class="level2">
 <h2 class="anchored" data-anchor-id="partial-derivatives">Partial Derivatives</h2>
+<p><strong>Vectors:</strong></p>
 <p><span class="math display">\[
+\begin{align}
+\frac{\partial (\textbf{v}^T \textbf{v})}{\partial\textbf{v}} &amp;= 2\textbf{v}^T\\
+\frac{\partial (\textbf{v} \textbf{v}^T)}{\partial\textbf{v}} &amp;= 2\textbf{v}^T\\
+\frac{\partial (\textbf{x}^T \textbf{w})}{\partial\textbf{x}} &amp;= \textbf{w}^T\\
+\frac{\partial (\textbf{w}^T \textbf{x})}{\partial\textbf{x}} &amp;= \textbf{w}^T\\
+\end{align}
+\]</span></p>
+<p><strong>Matrix:</strong> <span class="math display">\[
+\begin{align}
+\frac{\partial (\textbf{A} \textbf{x})}{\partial\textbf{x}} &amp;= \textbf{A}\\
+\frac{\partial (\textbf{x}^T \textbf{A})}{\partial\textbf{x}} &amp;= \textbf{A}^T\\
+\end{align}
+\]</span></p>
+<p><strong>Wrt Vector:</strong> <span class="math display">\[
+\begin{align}
+\frac{\partial(\textbf{x}^T\textbf{A}\textbf{x})}{\partial\textbf{x}} =&amp; \textbf{x}^T(\textbf{A}+\textbf{A}^T)\\
+\frac{\partial(\textbf{w}^T\textbf{X}^T\textbf{y})}{\partial\textbf{w}} =&amp; \textbf{y}^T\textbf{X}\\
+\frac{\partial(\textbf{y}^T\textbf{X}\textbf{w})}{\partial\textbf{w}} =&amp; \textbf{y}^T\textbf{X}\\
+\end{align}
+\]</span></p>
+<p><strong>Wrt Matrix:</strong> <span class="math display">\[
+\begin{align}
+\frac{\partial(\textbf{x}^T\textbf{A}\textbf{x})}{\partial\textbf{A}} =&amp; \textbf{x}^T\textbf{x}^T\\
+\frac{\partial(\textbf{a}^T\textbf{A}\textbf{b})}{\partial\textbf{A}} =&amp; \textbf{a}\textbf{b}^T\\
+\frac{\partial(\textbf{a}^T\textbf{A}^T\textbf{b})}{\partial\textbf{A}} =&amp; \textbf{b}\textbf{a}^T\\
+\end{align}
+\]</span></p>
+<p><strong>Special:</strong> <span class="math display">\[
 \begin{align}
 \frac{\partial \textbf{a}^T\textbf{X}\textbf{b}}{\partial\textbf{X}} &amp;= \textbf{a}\textbf{b}^T\\
 \frac{\partial \textbf{a}^T\textbf{X}^{-1}\textbf{b}}{\partial\textbf{X}} &amp;= -(\textbf{X}^{-1})^T\textbf{a}\textbf{b}^T(\textbf{X}^{-1})^T\\
 &amp; = - (\textbf{X}^{-1})\textbf{a}\textbf{b}^T(\textbf{X}^{-1})\quad &amp;\text{If $\textbf{X}$ is symmetric} \nonumber \\
 \frac{\partial (\textbf{x}-\textbf{A}\textbf{s})^T\textbf{W}(\textbf{x}-\textbf{A}\textbf{s})}{\partial\textbf{A}} &amp;= -2\textbf{W}(\textbf{x}-\textbf{A}\textbf{s})\textbf{s}^T \quad &amp;\text{If $\textbf{W}$ is symmetric} \\
-\frac{\partial (\textbf{x}-\textbf{A}\textbf{s})^T\textbf{W}(\textbf{x}-\textbf{A}\textbf{s})}{\partial\textbf{s}} &amp;= -2(\textbf{x}-\textbf{A}\textbf{s})\textbf{W}^T\textbf{A} \quad &amp;\text{If $\textbf{W}$ is symmetric} \\
+\frac{\partial (\textbf{x}-\textbf{A}\textbf{s})^T\textbf{W}(\textbf{x}-\textbf{A}\textbf{s})}{\partial\textbf{s}} &amp;= -2(\textbf{x}-\textbf{A}\textbf{s})^T\textbf{W}\textbf{A} \quad &amp;\text{If $\textbf{W}$ is symmetric} \\
 \frac{\partial (\textbf{x}-\textbf{s})^T\textbf{W}(\textbf{x}-\textbf{s})}{\partial\textbf{s}} &amp;= -2(\textbf{x}-\textbf{s})\textbf{W}^T \quad &amp;\text{If $\textbf{W}$ is symmetric}
 \end{align}
 \]</span></p>
