@@ -613,7 +613,7 @@
     "href": "blog/2023-09-05_equation-for-ml1/index.html#probability-theory-equations",
     "title": "Probability Theory in Machine Learning",
     "section": "3 Probability Theory Equations",
-    "text": "3 Probability Theory Equations\n\\[\n\\begin{align}\n    \\mathbb{E}[x] &= \\int_{x}x \\, p(x) \\, dx\\\\\n    var[x] &= \\mathbb{E}[(x-\\mathbb{E}[x])^2] \\nonumber\\\\\n    &=\\mathbb{E}[f(x)^2] - \\mathbb{E}[f(x)]^2\\\\\n    cov[x,y] &= \\mathbb{E}[xy]-\\mathbb{E}[x]\\mathbb{E}[y]\\\\  \n    \\mathcal{N}(x|\\mu , \\sigma^2) &= \\frac{1}{\\sqrt{2 \\pi  \\sigma^2}} \\exp^{\\{-\\frac{1}{2 \\sigma^2}(x-\\mu)^2\\}}\\\\\n    \\mathcal{N}(x|\\mu , \\Sigma ) &= (2 \\pi)^{-k/2} |\\Sigma|^{-1/2} \\exp^{\\{-\\frac{1}{2}(x-\\mu)^T \\Sigma^-1 (x-\\mu)\\}}\\\\\n\\end{align}\n\\]\nThis is our model. This is what we estimate: \\[\n\\begin{align}\ny(\\underline{x})\n\\end{align}\n\\]\nThe observations can be sampled from (signal + noise): \\[\n\\begin{align}\nt = sin(\\underline{x}) + \\varepsilon\n\\end{align}\n\\]\nData Pair: For a given \\(x\\), I can get a target value \\(t\\) (the observation) \\[\n\\begin{align}\n(t, x)  \n\\end{align}\n\\]\nFor instance, we have a sampled data D, and for each \\(x\\) we have seen \\(t\\) and that is our excel file we can work with"
+    "text": "3 Probability Theory Equations\n\\[\n\\begin{align}\n    \\mathbb{E}[x] &= \\int_{x}x \\, p(x) \\, dx\\\\\n    var[x] &= \\mathbb{E}[(x-\\mathbb{E}[x])^2] \\nonumber\\\\\n    &=\\mathbb{E}[f(x)^2] - \\mathbb{E}[f(x)]^2\\\\\n    cov[x,y] &= \\mathbb{E}[xy]-\\mathbb{E}[x]\\mathbb{E}[y]\\\\  \n    cov[z] &= \\mathbb{E}[zz^T]-\\mathbb{E}[z]\\mathbb{E}[z]\\\\  \n    \\mathcal{N}(x|\\mu , \\sigma^2) &= \\frac{1}{\\sqrt{2 \\pi  \\sigma^2}} \\exp^{\\{-\\frac{1}{2 \\sigma^2}(x-\\mu)^2\\}}\\\\\n    \\mathcal{N}(x|\\mu , \\Sigma ) &= (2 \\pi)^{-k/2} |\\Sigma|^{-1/2} \\exp^{\\{-\\frac{1}{2}(x-\\mu)^T \\Sigma^-1 (x-\\mu)\\}}\\\\\n\\end{align}\n\\]\nThis is our model. This is what we estimate: \\[\n\\begin{align}\ny(\\underline{x})\n\\end{align}\n\\]\nThe observations can be sampled from (signal + noise): \\[\n\\begin{align}\nt = sin(\\underline{x}) + \\varepsilon\n\\end{align}\n\\]\nData Pair: For a given \\(x\\), I can get a target value \\(t\\) (the observation) \\[\n\\begin{align}\n(t, x)  \n\\end{align}\n\\]\nFor instance, we have a sampled data D, and for each \\(x\\) we have seen \\(t\\) and that is our excel file we can work with"
   },
   {
     "objectID": "blog/2023-09-05_equation-for-ml1/index.html#bayessian-linear-regression",
@@ -674,23 +674,23 @@
   {
     "objectID": "blog/2023-10-12_what-is-the-covariance-matrix/index.html",
     "href": "blog/2023-10-12_what-is-the-covariance-matrix/index.html",
-    "title": "The Covariance Matrix?",
+    "title": "The Covariance Matrix and relation with PCA",
     "section": "",
     "text": "Description of this Post\n                \n            \n        \n        \n                    \n                \n                \n                    \n\n                                            \n                            \n                                All\n                            \n                        \n                                            \n                            \n                                TAGS\n                            \n                        \n                                    \n                \n\n\n                \n                    \n                    \n                    \n                        \n                        \n                        \n                        \n                    \n\n                    \n                                            \n                            \n                               \n                                All\n                            \n                        \n                                            \n                            \n                               \n                                TAGS\n                            \n                        \n                    \n                    \n                \n\n                    \n    \n\n\n    \n    \n\n        \n        Author\n        \n                 Danilo Toapanta \n              \n      \n        \n        \n        Published\n        \n          October 12, 2023\nIn a 2D dimensional feature space with 10 data points, the covariance matrix provides a measure of the relationship between the two features (dimensions) and how they vary together. The covariance matrix is a 2x2 matrix that quantifies the degree to which the two features change together\nLet’s say you have two features, \\(\\textbf{x}\\) and \\(\\textbf{y}\\), and you have 10 data points with values (x_1, y_1), (x_2, y_2), …, (x_10, y_10). The covariance matrix Σ is calculated as:\n\\[\n\\Sigma = \\begin{bmatrix}\n\\text{cov}(\\textbf{x}, \\textbf{x}) & \\text{cov}(\\textbf{x}, \\textbf{y}) \\\\\n\\text{cov}(\\textbf{y}, \\textbf{x}) & \\text{cov}(\\textbf{y}, \\textbf{y})\n\\end{bmatrix}\n\\]\nWhere:\nThe covariances of two random variables (the two features) are calculated using the formula:\n\\[\n\\text{cov}(\\textbf{x}, \\textbf{y}) = \\frac{1}{N} \\sum_{n=1}^{N} (x_n - {\\bar{x}})({y}_n - \\bar{y})\n\\]\nWhere:\nNote:\nThe calculation for the covariance matrix can be also expressed as:\n\\[\n\\Sigma = \\frac{1}{N} \\sum_{n=1}^{N} (\\textbf{x}_n - \\mathbf{\\bar{x}})(\\textbf{x}_n - \\mathbf{\\bar{x}})^T\n\\]\nWhere:\nBelow some example:"
   },
   {
     "objectID": "blog/2023-10-12_what-is-the-covariance-matrix/index.html#python-example",
     "href": "blog/2023-10-12_what-is-the-covariance-matrix/index.html#python-example",
-    "title": "The Covariance Matrix?",
+    "title": "The Covariance Matrix and relation with PCA",
     "section": "1 Python Example",
     "text": "1 Python Example\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n%matplotlib inline\n\nplt.style.use('ggplot')\n# plt.rcParams['figure.figsize'] = (12, 8)\n\n# Normal distributed x and y vector with mean 0 and standard deviation 1\nx = np.random.normal(0, 1, 500)\ny = np.random.normal(0, 1, 500)\nX = np.vstack((x, y)).T\n\nplt.scatter(X[:, 0], X[:, 1])\nplt.title('Generated Data')\nplt.axis('equal')\nplt.show()\n\n\n\n\n\nIf two feature vectors are independent (or uncorrelated) the matrix matrix would be:\n\\[\n\\Sigma = \\begin{bmatrix}\n\\text{cov}(\\textbf{x}, \\textbf{x}) & 0 \\\\\n0 & \\text{cov}(\\textbf{y}, \\textbf{y})\n\\end{bmatrix}\n\\]\nIf this data was generated with unit cov(x,x) and unit cov(y,y) then we have a Identity covariance matrix\n\n\n\n\n\nAs x1 increases x2 increases too, because we have 0.8. We have a positive correlation on the data."
   },
   {
     "objectID": "blog/2023-10-12_what-is-the-covariance-matrix/index.html#relation-with-pca",
     "href": "blog/2023-10-12_what-is-the-covariance-matrix/index.html#relation-with-pca",
-    "title": "The Covariance Matrix?",
+    "title": "The Covariance Matrix and relation with PCA",
     "section": "2 Relation with PCA",
-    "text": "2 Relation with PCA\nWhen you multiply the \\(\\Sigma\\) covariance matrix times a vector and then again and again you end up with a vector that points to directions where you have the greatest variance in the data. So like where all points are spread out.\n\n\n\n\n\nIf I multiply the vector \\(e2\\) by the cov matrix it will not turn but will get longer and longer but will point in the same direction\nThus we want to find some vector \\(e\\) that when we multiply it with the cov matrix do not change direction. The vectors are called eigenvectors and the lambdas so the scalar version will be called eigenvalues.\nThe later point will be called our principal components which are the eigenvectors with the largest eigenvalues"
+    "text": "2 Relation with PCA\nWhen you multiply the \\(\\Sigma\\) covariance matrix times a vector and then again and again you end up with a vector that points to directions where you have the greatest variance in the data. So like where all points are spread out.\n\n\n\n\n\nIf I multiply the vector \\(e2\\) by the cov matrix it will not turn but will get longer and longer but will point in the same direction\nThus we want to find some vector \\(e\\) that when we multiply it with the cov matrix do not change direction. The vectors are called eigenvectors and the lambdas so the scalar version will be called eigenvalues.\nThe later point will be called our principal components which are the eigenvectors with the largest eigenvalues\n\n\n\n\n\n\n\n\n\nc"
   },
   {
     "objectID": "blog/2023-01-12_2022-into-2023/index.html",
@@ -807,58 +807,58 @@
   {
     "objectID": "blog/2023-10-11_principal-component-analysis/index.html",
     "href": "blog/2023-10-11_principal-component-analysis/index.html",
-    "title": "Principal Component Analysis PCA",
+    "title": "Principal Component Analysis (PCA)",
     "section": "",
     "text": "Description of this Post\n                \n            \n        \n        \n                    \n                \n                \n                    \n\n                                            \n                            \n                                All\n                            \n                        \n                                            \n                            \n                                TAGS\n                            \n                        \n                                    \n                \n\n\n                \n                    \n                    \n                    \n                        \n                        \n                        \n                        \n                    \n\n                    \n                                            \n                            \n                               \n                                All\n                            \n                        \n                                            \n                            \n                               \n                                TAGS\n                            \n                        \n                    \n                    \n                \n\n                    \n    \n\n\n    \n    \n\n        \n        Author\n        \n                 Danilo Toapanta \n              \n      \n        \n        \n        Published\n        \n          October 11, 2023"
   },
   {
     "objectID": "blog/2023-10-11_principal-component-analysis/index.html#continuous-latent-space",
     "href": "blog/2023-10-11_principal-component-analysis/index.html#continuous-latent-space",
-    "title": "Principal Component Analysis PCA",
+    "title": "Principal Component Analysis (PCA)",
     "section": "1 Continuous latent space",
     "text": "1 Continuous latent space\nThe idea is of latent variables is that the data is described in the low dimensional latent space and somehow it can map it to this hight dimensional space."
   },
   {
     "objectID": "blog/2023-10-11_principal-component-analysis/index.html#principal-component-analysis-pca",
     "href": "blog/2023-10-11_principal-component-analysis/index.html#principal-component-analysis-pca",
-    "title": "Principal Component Analysis PCA",
+    "title": "Principal Component Analysis (PCA)",
     "section": "2 Principal Component Analysis (PCA)",
     "text": "2 Principal Component Analysis (PCA)\nImagine I have the bottom right plot in multiple dimensions so not only 2D dimensions. I can compute a mean and a covariance matrix to fit this data.\nNow I pick only line and I will fit the data in 1D-dimension i.e using Gaussian with the mean and convariance from the original plot. This mapping depends on the direction on the line for the PCA, imagine now the green line below then the gaussian will look different\n\n\n\n\n\nSo we want to find the direction in which it maximizes the variance data. This is important because if you have a low variance then all the points map to this compressed graph and may look like one point when in reality there are plenty."
   },
   {
     "objectID": "blog/2023-10-11_principal-component-analysis/index.html#recall-orthonomal-projections",
     "href": "blog/2023-10-11_principal-component-analysis/index.html#recall-orthonomal-projections",
-    "title": "Principal Component Analysis PCA",
+    "title": "Principal Component Analysis (PCA)",
     "section": "3 Recall orthonomal projections",
     "text": "3 Recall orthonomal projections\n\nThe span of a vector."
   },
   {
     "objectID": "blog/2023-10-11_principal-component-analysis/index.html#d-projection",
     "href": "blog/2023-10-11_principal-component-analysis/index.html#d-projection",
-    "title": "Principal Component Analysis PCA",
+    "title": "Principal Component Analysis (PCA)",
     "section": "4 1D Projection",
     "text": "4 1D Projection\nRemarks:\n\nHere the \\(z_1\\) is the projected point into the 1D-dimensional space if we would like more than one dimension then this z_1 would be now a vector \\(\\textbf{z}_1\\) with dimensions \\(M\\)"
   },
   {
     "objectID": "blog/2023-10-11_principal-component-analysis/index.html#maximizing-the-variance-of-1-component",
     "href": "blog/2023-10-11_principal-component-analysis/index.html#maximizing-the-variance-of-1-component",
-    "title": "Principal Component Analysis PCA",
+    "title": "Principal Component Analysis (PCA)",
     "section": "5 Maximizing the variance of 1 component",
-    "text": "5 Maximizing the variance of 1 component\nThe principal components are the \\(u_1\\) the lines (the directions)"
+    "text": "5 Maximizing the variance of 1 component\nThe principal components are the \\(u_1\\) the lines (the directions)\n\n\n\n\n\n5.1 PCA via maximum variance\n\n\n\n\n\n\n5.2 Reminder: eigen de-composition\n\n\n\n\nRemarks:\n\nThe total variance of our datapoints in the new dimensional space can be calculated by summing up the eigenvalues\nWe should think of \\(U\\) as a change of basis from the D-dimensional space to the new dimensional space. This new dimensional space its determined by how many eigevector at the end we choose\nBecause the eigenvectors are orthonormal that means when we apply do the change of basis with the A_weird we are decorrelating our data.\n\n\n\n5.3 How to choose M?\n\n\n\n\n\n\n5.4 Feature Decorrelation\n\n\n\n\n\n\n5.5 Applications: Whitening"
   },
   {
-    "objectID": "blog/2023-10-11_principal-component-analysis/index.html#reminder-eigen-de-composition",
-    "href": "blog/2023-10-11_principal-component-analysis/index.html#reminder-eigen-de-composition",
-    "title": "Principal Component Analysis PCA",
-    "section": "6 Reminder: eigen de-composition",
-    "text": "6 Reminder: eigen de-composition\n\n\n\n\nRemarks:\n\nThe total variance of our datapoints in the new dimensional space can be calculated by summing up the eigenvalues\nWe should think of \\(U\\) as a change of basis from the D-dimensional space to the new dimensional space. This new dimensional space its determined by how many eigevector at the end we choose\nBecause the eigenvectors are orthonormal that means when we apply do the change of basis with the A_weird we are decorrelating our data."
+    "objectID": "blog/2023-10-11_principal-component-analysis/index.html#probabilistic-pca",
+    "href": "blog/2023-10-11_principal-component-analysis/index.html#probabilistic-pca",
+    "title": "Principal Component Analysis (PCA)",
+    "section": "6 Probabilistic PCA",
+    "text": "6 Probabilistic PCA\n\n\n\n\n\n\nRecall difference in Discrete and Continuous latent variable\n\n\n\n\nDiscrete latent models: k-means, Gaussian Mixture models\nContinuous latent models: probabilistic PCA, unsupervised regression\n\nIf you compare k-means as latent clarifier then this can be consider as an unsupervised regression\nIf you compare Gaussian-mixture model then this can be though as continuous Gaussian mixture model\n\n\nProbabilistic view of PCA:\n\nLearn it via maximum likelihood\n(Third) alternative view of PCA\nBoth latent and observed variables are Gaussian\n\n\n6.1 Continuous latent variable model\n\n\n\n\n\nWe assume that there is a latent space z from which we can sample a point z.\nThen I have this conditional p(x|z) given z what is the probability that is lands\n\n\n\n6.2 PPCA modelling assumptions\n\n\n\n\n\nRecall z was the latent variable, the hidden variable the one its making something that we have x. Remember toughs –&gt; words\n\n\nWe assume that x is formed by a linear combinations with the latent variable z, W, \\(\\mu\\) and \\(\\epsilon\\)\n\nHere we are saying that there is a linear relation between z and x.\n\n\nHere, \\(W\\), \\(\\mu\\) and \\(\\epsilon\\) are the parameters that we want to recover\nBecause z is Gaussian and noise is also modelled by Gaussian, then \\(x\\) will also be Gaussian\n\n\n\n6.3 It follows\n\n\n\n\n\n\n\n\nIb the covariance part we take out W because its not a random varaible ### Probabilistic PCA in a picture\n\n\n\n\n\nFrom now on we can find the parameters by doing MLE"
   },
   {
-    "objectID": "blog/2023-10-11_principal-component-analysis/index.html#how-to-choose-m",
-    "href": "blog/2023-10-11_principal-component-analysis/index.html#how-to-choose-m",
-    "title": "Principal Component Analysis PCA",
-    "section": "7 How to choose M?",
-    "text": "7 How to choose M?"
+    "objectID": "blog/2023-10-11_principal-component-analysis/index.html#the-log-likelihood",
+    "href": "blog/2023-10-11_principal-component-analysis/index.html#the-log-likelihood",
+    "title": "Principal Component Analysis (PCA)",
+    "section": "7 The log-likelihood",
+    "text": "7 The log-likelihood"
   },
   {
     "objectID": "blog/2023-06-09_on-the-topic/index.html",

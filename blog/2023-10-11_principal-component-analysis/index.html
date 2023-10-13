@@ -133,7 +133,7 @@ window.MathJax = {
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full blog-page" style="display: none;">
     <div class="quarto-title-banner page-columns page-full">
         <div class="quarto-title column-body">
-            <h1 class="title">Principal Component Analysis PCA</h1>
+            <h1 class="title">Principal Component Analysis (PCA)</h1>
                 
             <!-- Description Block -->
                         <div>
@@ -270,7 +270,7 @@ window.MathJax = {
 <main id="title-block-header" class="quarto-title-block default page-columns page-full" style="padding-bottom: 40px;">
 
     <div class="quarto-title column-body" style="margin-bottom: 1em;">
-        <h1 class="title" style="padding-bottom:8px" ;="">Principal Component Analysis PCA</h1>
+        <h1 class="title" style="padding-bottom:8px" ;="">Principal Component Analysis (PCA)</h1>
         
         <!-- Description Block -->
                     <div>
@@ -397,9 +397,15 @@ window.MathJax = {
 <img src="2023-10-12-20-20-56.png" class="w575 img-fluid">
 </center>
 <pre></pre>
+<section id="pca-via-maximum-variance" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="pca-via-maximum-variance"><span class="header-section-number">5.1</span> PCA via maximum variance</h3>
+<center>
+<img src="2023-10-13-09-49-50.png" class="w550 img-fluid">
+</center>
+<pre></pre>
 </section>
-<section id="reminder-eigen-de-composition" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="reminder-eigen-de-composition"><span class="header-section-number">6</span> Reminder: eigen de-composition</h2>
+<section id="reminder-eigen-de-composition" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="reminder-eigen-de-composition"><span class="header-section-number">5.2</span> Reminder: eigen de-composition</h3>
 <center>
 <img src="2023-10-12-20-20-09.png" class="w550 img-fluid">
 </center>
@@ -411,12 +417,105 @@ window.MathJax = {
 <li>Because the eigenvectors are orthonormal that means when we apply do the change of basis with the A_weird we are decorrelating our data.</li>
 </ul>
 </section>
-<section id="how-to-choose-m" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="how-to-choose-m"><span class="header-section-number">7</span> How to choose M?</h2>
+<section id="how-to-choose-m" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="how-to-choose-m"><span class="header-section-number">5.3</span> How to choose M?</h3>
 <center>
 <img src="2023-10-12-20-27-46.png" class="w550 img-fluid">
 </center>
 <pre></pre>
+</section>
+<section id="feature-decorrelation" class="level3" data-number="5.4">
+<h3 data-number="5.4" class="anchored" data-anchor-id="feature-decorrelation"><span class="header-section-number">5.4</span> Feature Decorrelation</h3>
+<center>
+<img src="2023-10-13-09-51-53.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+</section>
+<section id="applications-whitening" class="level3" data-number="5.5">
+<h3 data-number="5.5" class="anchored" data-anchor-id="applications-whitening"><span class="header-section-number">5.5</span> Applications: Whitening</h3>
+<center>
+<img src="2023-10-13-09-53-03.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+</section>
+</section>
+<section id="probabilistic-pca" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="probabilistic-pca"><span class="header-section-number">6</span> Probabilistic PCA</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Recall difference in Discrete and Continuous latent variable
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Discrete latent models: k-means, Gaussian Mixture models</li>
+<li>Continuous latent models: probabilistic PCA, unsupervised regression</li>
+</ul>
+<p>If you compare k-means as latent clarifier then this can be consider as an unsupervised regression</p>
+<p>If you compare Gaussian-mixture model then this can be though as continuous Gaussian mixture model</p>
+</div>
+</div>
+<p>Probabilistic view of PCA:</p>
+<ul>
+<li>Learn it via maximum likelihood</li>
+<li>(Third) alternative view of PCA</li>
+<li>Both latent and observed variables are Gaussian</li>
+</ul>
+<section id="continuous-latent-variable-model" class="level3" data-number="6.1">
+<h3 data-number="6.1" class="anchored" data-anchor-id="continuous-latent-variable-model"><span class="header-section-number">6.1</span> Continuous latent variable model</h3>
+<center>
+<img src="2023-10-13-12-06-24.png" class="w500 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li>We assume that there is a latent space z from which we can sample a point z.</li>
+<li>Then I have this conditional p(x|z) given z what is the probability that is lands</li>
+</ul>
+</section>
+<section id="ppca-modelling-assumptions" class="level3" data-number="6.2">
+<h3 data-number="6.2" class="anchored" data-anchor-id="ppca-modelling-assumptions"><span class="header-section-number">6.2</span> PPCA modelling assumptions</h3>
+<center>
+<img src="2023-10-13-11-16-02.png" class="w575 img-fluid">
+</center>
+<pre></pre>
+<blockquote class="blockquote">
+<p>Recall z was the latent variable, the hidden variable the one its making something that we have x. Remember toughs –&gt; words</p>
+</blockquote>
+<ul>
+<li>We assume that x is formed by a linear combinations with the latent variable z, W, <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\epsilon\)</span>
+<ul>
+<li>Here we are saying that there is a linear relation between z and x.<br>
+</li>
+</ul></li>
+<li>Here, <span class="math inline">\(W\)</span>, <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\epsilon\)</span> are the parameters that we want to recover</li>
+<li>Because z is Gaussian and noise is also modelled by Gaussian, then <span class="math inline">\(x\)</span> will also be Gaussian</li>
+</ul>
+</section>
+<section id="it-follows" class="level3" data-number="6.3">
+<h3 data-number="6.3" class="anchored" data-anchor-id="it-follows"><span class="header-section-number">6.3</span> It follows</h3>
+<center>
+<img src="2023-10-13-11-17-08.png" class="w550 img-fluid">
+</center>
+<center>
+<img src="2023-10-13-11-17-44.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li>Ib the covariance part we take out W because its not a random varaible ### Probabilistic PCA in a picture</li>
+</ul>
+<center>
+<img src="2023-10-13-11-22-04.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>From now on we can find the parameters by doing MLE</p>
+</section>
+</section>
+<section id="the-log-likelihood" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="the-log-likelihood"><span class="header-section-number">7</span> The log-likelihood</h2>
 
 
 </section>
