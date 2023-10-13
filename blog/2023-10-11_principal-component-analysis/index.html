@@ -562,9 +562,67 @@ Recall difference in Discrete and Continuous latent variable
 <li>Probabilistic PCA can be used to model class-conditional densities and can thus be used in classification problems</li>
 <li>We can run the model generatively to provide samples from the modeled distribution.</li>
 </ul>
-
-
 </section>
+</section>
+<section id="non-linear-pca" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="non-linear-pca"><span class="header-section-number">7</span> Non Linear PCA</h2>
+<p>Find the subspace that maximizes the variance of the projection or minimizes the reconstruction error</p>
+<p>By linear we mean all the data is cluster around one contour line like the green line. The question is can we do non-linear PCA where we have not the reed line which is clearly non-linear?</p>
+</section>
+<section id="pca-using-basis-functions" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="pca-using-basis-functions"><span class="header-section-number">8</span> PCA using basis functions</h2>
+<p>The question is how do we map these non-linear data to a linear line such that we use basis function. We can do this in two ways:</p>
+<center>
+<img src="2023-10-13-17-35-45.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<ol type="1">
+<li>Using Neural Networks</li>
+<li>Using kernel methods: we can do the mapping from original space to the new space without explicit modeling the basis functions</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How to craft Basis functions?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>We can use Neural Networks. For instance <span class="math inline">\(\mathbf{\phi(\textbf{x})} = NN(\textbf{x})\)</span>, where <span class="math inline">\(\textbf{x}\)</span> is the input vector</li>
+<li>We can use Kernel methods where we do not make explicit use of basis functions</li>
+</ol>
+</div>
+</div>
+<p>We will first sketch the structure of an autoencoder</p>
+</section>
+<section id="auto-encoders-auto-associative-neural-nets" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="auto-encoders-auto-associative-neural-nets"><span class="header-section-number">9</span> Auto-encoders (auto-associative neural nets)</h2>
+<center>
+<img src="2023-10-13-17-45-08.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>If <span class="math inline">\(f(x)=w^Tx\)</span> is a linear projection that goes from D to M then this resembles to PCA where we have <span class="math inline">\(z=\mu_M^T(x-\bar x)\)</span>. So if the function <span class="math inline">\(f(x)\)</span> is of form like in the PCA case then we have a linear projection that can transform our points to a lower dimensional space</p>
+</section>
+<section id="autoencoder-objective" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="autoencoder-objective"><span class="header-section-number">10</span> Autoencoder objective</h2>
+<center>
+<img src="2023-10-13-17-58-20.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li>The mapping from input through the encoder, we call it the latent <span class="math inline">\(z_n\)</span>. The later is like a compression.</li>
+<li>Before we will project the data into our principal components but now we let the NN learn what the latent mapping should be</li>
+<li>When we carry out this encoder and decoder without using activation functions we end up in the PCA structure</li>
+<li>If we use however activation function and we use more layers than 2, then we have a non-linear model which has no closed solutions and therefore we can solve it by SGD because our error is non-convex</li>
+</ul>
+</section>
+<section id="autoencoder-as-generator" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="autoencoder-as-generator"><span class="header-section-number">11</span> Autoencoder as generator</h2>
+
+
 </section>
 
 </main> <!-- /main -->
