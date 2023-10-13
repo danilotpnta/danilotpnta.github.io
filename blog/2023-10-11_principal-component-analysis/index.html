@@ -456,7 +456,7 @@ Recall difference in Discrete and Continuous latent variable
 <li>Continuous latent models: probabilistic PCA, unsupervised regression</li>
 </ul>
 <p>If you compare k-means as latent clarifier then this can be consider as an unsupervised regression</p>
-<p>If you compare Gaussian-mixture model then this can be though as continuous Gaussian mixture model</p>
+<p>If you compare Gaussian-mixture model then this can be though as continuous PPCA model</p>
 </div>
 </div>
 <p>Probabilistic view of PCA:</p>
@@ -501,23 +501,70 @@ Recall difference in Discrete and Continuous latent variable
 <img src="2023-10-13-11-17-08.png" class="w550 img-fluid">
 </center>
 <center>
-<img src="2023-10-13-11-17-44.png" class="w550 img-fluid">
+<img src="2023-10-13-12-31-31.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <ul>
-<li>Ib the covariance part we take out W because its not a random varaible ### Probabilistic PCA in a picture</li>
+<li>In the covariance part we take out W because its not a random variable</li>
 </ul>
+</section>
+<section id="probabilistic-pca-in-a-picture" class="level3" data-number="6.4">
+<h3 data-number="6.4" class="anchored" data-anchor-id="probabilistic-pca-in-a-picture"><span class="header-section-number">6.4</span> Probabilistic PCA in a picture</h3>
 <center>
 <img src="2023-10-13-11-22-04.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p>From now on we can find the parameters by doing MLE</p>
 </section>
+<section id="the-log-likelihood" class="level3" data-number="6.5">
+<h3 data-number="6.5" class="anchored" data-anchor-id="the-log-likelihood"><span class="header-section-number">6.5</span> The log-likelihood</h3>
+<center>
+<img src="2023-10-13-13-12-37.png" class="w550 img-fluid">
+</center>
+<pre></pre>
 </section>
-<section id="the-log-likelihood" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="the-log-likelihood"><span class="header-section-number">7</span> The log-likelihood</h2>
+<section id="ppca-has-closed-form-solutions" class="level3" data-number="6.6">
+<h3 data-number="6.6" class="anchored" data-anchor-id="ppca-has-closed-form-solutions"><span class="header-section-number">6.6</span> PPCA has closed-form solutions</h3>
+<center>
+<img src="2023-10-13-13-14-00.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+</section>
+<section id="ppca-summary" class="level3" data-number="6.7">
+<h3 data-number="6.7" class="anchored" data-anchor-id="ppca-summary"><span class="header-section-number">6.7</span> PPCA Summary</h3>
+<center>
+<img src="2023-10-13-13-18-12.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p><strong>Three views:</strong></p>
+<ul>
+<li>Max variance, min reconstruction error, probabilistic</li>
+</ul>
+<p><strong>Applications</strong></p>
+<ul>
+<li>Dimensionality reduction</li>
+<li>2D/3D visualization</li>
+<li>Compression</li>
+<li>Whitening (de-correlating features)</li>
+<li>(not mentioned) De-noising: discard the smallest variance features = the noise components (hopefully!)</li>
+</ul>
+<p><strong>Limitations:</strong></p>
+<ul>
+<li>Only linear transformations</li>
+</ul>
+</section>
+<section id="comparing-pca-ppca" class="level3" data-number="6.8">
+<h3 data-number="6.8" class="anchored" data-anchor-id="comparing-pca-ppca"><span class="header-section-number">6.8</span> Comparing PCA &amp; PPCA</h3>
+<p>The PCA can be expressed as the maximum likelihood solution probabilistic PCA.</p>
+<p>Advantages of the probabilistic PCA over the conventional PCA:</p>
+<ul>
+<li>We can associate a likelihood function to the probabilistic PCA which allows a direct comparison with other probabilistic density models</li>
+<li>Probabilistic PCA can be used to model class-conditional densities and can thus be used in classification problems</li>
+<li>We can run the model generatively to provide samples from the modeled distribution.</li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
