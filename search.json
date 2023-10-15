@@ -851,7 +851,70 @@
     "href": "blog/2023-10-15_kernel-methods-&-svm/index.html#kernel-trickkernel-substitution",
     "title": "Kernel methods & SVM",
     "section": "7 Kernel Trick/Kernel Substitution",
-    "text": "7 Kernel Trick/Kernel Substitution\n\n\n\n\n\n\nHow it works?\n\n\n\nThe kernel trick its like calculating similarities with the input datapoint, the prediction would be heavily influenced based on point pairs that are similar\nThe kernel trick is whenever I see the form \\(\\textbf{x}_n^T \\textbf{x}_n\\) (instead of using basis functions) we will replace it with the kernel\n\\[\n\\begin{align}\n\\textbf{k}(\\textbf{x}_n^T, \\textbf{x}_m) = \\textbf{K}_{nm}\n\\end{align}\n\\]\nWe do not know what kernel will be but we can prove that if the kernel is symetric positive semi definite that there are always corresponding basis function \\(\\mathbb{\\phi}(\\textbf{x}_n)^T\\mathbb{\\phi}(\\textbf{x}_n)\\)\nSo basically we find \\(\\mathbb{\\phi}(\\textbf{x}_n)^T\\mathbb{\\phi}(\\textbf{x}_n) = \\textbf{k}(\\textbf{x}_n^T, \\textbf{x}_m) = \\textbf{K}_{nm}\\)"
+    "text": "7 Kernel Trick/Kernel Substitution\n\n\n\n\n\n\nHow it works?\n\n\n\nThe kernel trick its like calculating similarities with the input datapoint, the prediction would be heavily influenced based on point pairs that are similar\nThe kernel trick is whenever I see the form \\(\\textbf{x}_n^T \\textbf{x}_n\\) (instead of using basis functions) we will replace it with the kernel\n\\[\n\\begin{align}\n\\textbf{k}(\\textbf{x}_n^T, \\textbf{x}_m) = \\textbf{K}_{nm}\n\\end{align}\n\\]\nWe do not know what kernel will be but we can prove that if the kernel is symetric positive semi definite that there are always corresponding basis function \\(\\mathbb{\\phi}(\\textbf{x}_n)^T\\mathbb{\\phi}(\\textbf{x}_n)\\)\nSo basically we find \\(\\mathbb{\\phi}(\\textbf{x}_n)^T\\mathbb{\\phi}(\\textbf{x}_n) = \\textbf{k}(\\textbf{x}_n^T, \\textbf{x}_m) = \\textbf{K}_{nm}\\)\n\n\n\n\n\n\nIf a choice any basis function it induces a kernel simply by computing inner product in the new feature space"
+  },
+  {
+    "objectID": "blog/2023-10-15_kernel-methods-&-svm/index.html#deriving-the-corresponding-feature-vector",
+    "href": "blog/2023-10-15_kernel-methods-&-svm/index.html#deriving-the-corresponding-feature-vector",
+    "title": "Kernel methods & SVM",
+    "section": "8 Deriving the corresponding feature vector",
+    "text": "8 Deriving the corresponding feature vector\n\n\n\n\nFor every positive definite kernel there exist a set of basis from \\(R^d\\) to \\(RM^\\). Meaning there would be a set of basis which means instead of solving for the basis we can just get a valid kernel and not learn the basis\n\n\n\n\n\n\nWhy do I want to go from basis (finite) to valid kernels (can be infinitely?\n\n\n\n\nThis is important because now I do not need to limit myself to find a a dimensional feature descriptors i.e basis in \\(R^d\\) (i.e basis like polynomials basis, or gaussians basis) now I can have a valid kernel that can basically be infinitely in basis functions \\(M = \\infty\\)\n\nSidenote: there is more chance to overfilling\n\n\n\n8.1 Note on infinite dimensional feature space of Gaussian kernels"
+  },
+  {
+    "objectID": "blog/2023-10-15_kernel-methods-&-svm/index.html#kernel-trick-kernel-substitution",
+    "href": "blog/2023-10-15_kernel-methods-&-svm/index.html#kernel-trick-kernel-substitution",
+    "title": "Kernel methods & SVM",
+    "section": "9 Kernel Trick/ Kernel substitution",
+    "text": "9 Kernel Trick/ Kernel substitution"
+  },
+  {
+    "objectID": "blog/2023-10-15_kernel-methods-&-svm/index.html#example-polynomial-kernel",
+    "href": "blog/2023-10-15_kernel-methods-&-svm/index.html#example-polynomial-kernel",
+    "title": "Kernel methods & SVM",
+    "section": "10 Example: polynomial kernel",
+    "text": "10 Example: polynomial kernel\n\n\n\n\nThis shows that if we have this polynomial kernel then that we can decompose it into \\(\\mathbb{\\phi}(\\textbf{x}_n)^T\\mathbb{\\phi}(\\textbf{x}_n)\\)\nWhere: \\(\\mathbb{\\phi}(\\textbf{x}) \\in \\mathbb{R}^{6}\\)"
+  },
+  {
+    "objectID": "blog/2023-10-15_kernel-methods-&-svm/index.html#examples-of-valid-kernels",
+    "href": "blog/2023-10-15_kernel-methods-&-svm/index.html#examples-of-valid-kernels",
+    "title": "Kernel methods & SVM",
+    "section": "11 Examples of valid Kernels",
+    "text": "11 Examples of valid Kernels\n\n\n\n\n\nThe Gaussian kernel produces infinitely \\(M = \\infty\\) many basis functions"
+  },
+  {
+    "objectID": "blog/2023-10-15_kernel-methods-&-svm/index.html#support-vector-machines",
+    "href": "blog/2023-10-15_kernel-methods-&-svm/index.html#support-vector-machines",
+    "title": "Kernel methods & SVM",
+    "section": "12 Support vector machines",
+    "text": "12 Support vector machines\nSVM are kernel methods but with sparse solutions. MEaning some \\(a_n = 0\\) so that we do not compute all datapoints but only relevant. The ones that are relevant are called suport vectors\n\n\n\n\n\nWe are guaranteed to find a solution because it is a Convex optimization problem"
+  },
+  {
+    "objectID": "blog/2023-10-15_kernel-methods-&-svm/index.html#linearly-separable-dataset",
+    "href": "blog/2023-10-15_kernel-methods-&-svm/index.html#linearly-separable-dataset",
+    "title": "Kernel methods & SVM",
+    "section": "13 Linearly Separable dataset",
+    "text": "13 Linearly Separable dataset\n\n\n\n\n\nOne way to tell whether a classifier is better than other is to look at how far us the margin from a closes point to the decision boundary. If the margin is large then I have a stable classifier.\n\n\nGoal: we want to maximize the margin to have a stable classifier. To classify the size of the margin we can use some linear projections to the boundary we see this in the next topic\n\n\n\n\n\nThe graph above is taking into account that we classify the data correctly in two parts so the blue points in one side the red in another."
+  },
+  {
+    "objectID": "blog/2023-10-15_kernel-methods-&-svm/index.html#maximum-margin-classifier",
+    "href": "blog/2023-10-15_kernel-methods-&-svm/index.html#maximum-margin-classifier",
+    "title": "Kernel methods & SVM",
+    "section": "14 Maximum Margin Classifier",
+    "text": "14 Maximum Margin Classifier\nNow that we have a expression for the margin our objective is to maximize this margin\n\n\n\n\n\nIn this case we have \\(r_n\\) so we could tune \\(w\\) to obtain the maximum margin to a point. How do we do this? we follow:\n\n\n\n\n\n\nIdentify the closest point. The \\(\\kappa\\) (kappa) its introduced to say we can amplify our distance we can i.e have the distance in kiloliters or miles etc.\nTo resolve the ambiguity of measuring in kilometers or in miles or so for, we set our \\(||\\kappa \\textbf{w}|| = 1\\). This is essentially setting the unit which you want to compute the distance. You are saying then the closest point should have unit 1 this is a constraint\n\nFrom this step it follows that all the points would be my prediction times label \\(t_n \\, y_n\\) will be greater or equal to \\(1\\)\n\nWe maximize the size of the margin given by 1/|W| with the inequality constraint\n\n\n\n\n\n\n\n\n\n\n\nMaximum Margin Classifier: Goal\n\n\n\n\nMaximize \\(1\\\\textbf{w}\\) means minimize \\(\\frac{1}{2}||\\textbf{w}||^2\\)\nWe have \\(N\\) constraints because we need to go over each datapoint\nIt is a convex quadratic optimization problem with a quadratic loss and linear constraint. We solve this by Lagrange Multipliers"
+  },
+  {
+    "objectID": "blog/2023-10-15_kernel-methods-&-svm/index.html#constrained-optimization-inequality-constraint",
+    "href": "blog/2023-10-15_kernel-methods-&-svm/index.html#constrained-optimization-inequality-constraint",
+    "title": "Kernel methods & SVM",
+    "section": "15 Constrained optimization (inequality constraint)",
+    "text": "15 Constrained optimization (inequality constraint)\n\n\n\n\n\n\n\n\n\n\n\n\n\nNow the solution should lie within the yellow region\n\nThere is two cases: 1. The objective could lie inside the yellow region. Then I am doing maximization without any constriant 2. If the solution lies outside then the solution would lie on the perpendicular to the yellow boundary. See point \\(x_A\\) where there is an arrow pointing to \\(x\\) (the optimum solution)\nBefore\n\nWe solve the lagrange multiplier, derive with respect to parameter ie. \\(w\\) then derive wrt to \\(\\lambda\\) and then replace this solution into \\(w\\).\n\nNow (we need additional requirements):\n\nDefine Lagrangian\nCompute the dual lagrangian\nWith solvers solve the dual problem\n\n\nSidenote: dual optimizer (is convex) gives you optimal solutions, it is a way of convexifiyng a problem\n\nYou need to think that the dual gives you an upper bound, and you are lowering this by setting \\(\\mu\\) as much as possible"
+  },
+  {
+    "objectID": "blog/2023-10-15_kernel-methods-&-svm/index.html#clarification-of-problems",
+    "href": "blog/2023-10-15_kernel-methods-&-svm/index.html#clarification-of-problems",
+    "title": "Kernel methods & SVM",
+    "section": "16 Clarification of problems",
+    "text": "16 Clarification of problems\nConvex optimization problems\n\n\nLinear Regression\n\nLinear regression with L2 regularization (ridge regression) and L1 regularization (lasso regression) are convex optimization problems. Ridge regression minimizes the sum of squared errors plus the L2 norm of the coefficients, while lasso minimizes the sum of squared errors plus the L1 norm of the coefficients\n\n\n\nLogistic Regression with L1 or L2 Regularization\n\nSimilar to linear regression, logistic regression can incorporate L1 or L2 regularization terms, making it a convex optimization problem\n\n\n\nSVM\n\n\n\n\nQuadratic Discriminant Analysis (QDA)\n\nQDA is a supervised learning algorithm with a quadratic decision boundary and can be formulated as a convex optimization problem\n\n\n\nPerceptron\n\n\nNon-Convex optimization problems:\n\n\nK-Means Clustering\n\n\n\n\nPCA\n\n\n\n\nNeural Networks\n\nbecause of the non-linearity introduced by the activation functions"
   },
   {
     "objectID": "blog/2023-07-29_cafe-negro-color-miel/index.html",

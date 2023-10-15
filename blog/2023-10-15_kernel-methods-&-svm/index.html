@@ -562,6 +562,223 @@ How it works?
 <p>So basically we find <span class="math inline">\(\mathbb{\phi}(\textbf{x}_n)^T\mathbb{\phi}(\textbf{x}_n) = \textbf{k}(\textbf{x}_n^T, \textbf{x}_m) = \textbf{K}_{nm}\)</span></p>
 </div>
 </div>
+<center>
+<img src="2023-10-15-13-12-48.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>If a choice any basis function it induces a kernel simply by computing inner product in the new feature space</p>
+</section>
+<section id="deriving-the-corresponding-feature-vector" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="deriving-the-corresponding-feature-vector"><span class="header-section-number">8</span> Deriving the corresponding feature vector</h2>
+<center>
+<img src="2023-10-15-14-24-31.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>For every positive definite kernel there exist a set of basis from <span class="math inline">\(R^d\)</span> to <span class="math inline">\(RM^\)</span>. Meaning there would be a set of basis which means instead of solving for the basis we can just get a valid kernel and not learn the basis</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Why do I want to go from basis (finite) to valid kernels (can be infinitely?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>This is important because now I do not need to limit myself to find a a dimensional feature descriptors i.e basis in <span class="math inline">\(R^d\)</span> (i.e basis like polynomials basis, or gaussians basis) now I can have a valid kernel that can basically be infinitely in basis functions <span class="math inline">\(M = \infty\)</span></li>
+</ul>
+<p>Sidenote: there is more chance to overfilling</p>
+</div>
+</div>
+<section id="note-on-infinite-dimensional-feature-space-of-gaussian-kernels" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="note-on-infinite-dimensional-feature-space-of-gaussian-kernels"><span class="header-section-number">8.1</span> Note on infinite dimensional feature space of Gaussian kernels</h3>
+<center>
+<img src="2023-10-15-14-49-56.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+</section>
+</section>
+<section id="kernel-trick-kernel-substitution" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="kernel-trick-kernel-substitution"><span class="header-section-number">9</span> Kernel Trick/ Kernel substitution</h2>
+<center>
+<img src="2023-10-15-14-49-32.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+</section>
+<section id="example-polynomial-kernel" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="example-polynomial-kernel"><span class="header-section-number">10</span> Example: polynomial kernel</h2>
+<center>
+<img src="2023-10-15-13-50-21.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>This shows that if we have this polynomial kernel then that we can decompose it into <span class="math inline">\(\mathbb{\phi}(\textbf{x}_n)^T\mathbb{\phi}(\textbf{x}_n)\)</span></p>
+<p>Where: <span class="math inline">\(\mathbb{\phi}(\textbf{x}) \in \mathbb{R}^{6}\)</span></p>
+</section>
+<section id="examples-of-valid-kernels" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="examples-of-valid-kernels"><span class="header-section-number">11</span> Examples of valid Kernels</h2>
+<center>
+<img src="2023-10-15-13-54-26.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li>The Gaussian kernel produces infinitely <span class="math inline">\(M = \infty\)</span> many basis functions</li>
+</ul>
+</section>
+<section id="support-vector-machines" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="support-vector-machines"><span class="header-section-number">12</span> Support vector machines</h2>
+<p>SVM are kernel methods but with sparse solutions. MEaning some <span class="math inline">\(a_n = 0\)</span> so that we do not compute all datapoints but only relevant. The ones that are relevant are called <strong>suport vectors</strong></p>
+<center>
+<img src="2023-10-15-18-20-46.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li>We are guaranteed to find a solution because it is a Convex optimization problem</li>
+</ul>
+</section>
+<section id="linearly-separable-dataset" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="linearly-separable-dataset"><span class="header-section-number">13</span> Linearly Separable dataset</h2>
+<center>
+<img src="2023-10-15-18-23-40.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li>One way to tell whether a classifier is better than other is to look at how far us the margin from a closes point to the decision boundary. If the margin is large then I have a stable classifier.</li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Goal:</strong> we want to maximize the margin to have a stable classifier. To classify the size of the margin we can use some linear projections to the boundary we see this in the next topic</p>
+</blockquote>
+<center>
+<img src="2023-10-15-18-24-30.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>The graph above is taking into account that we classify the data correctly in two parts so the blue points in one side the red in another.</p>
+</section>
+<section id="maximum-margin-classifier" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="maximum-margin-classifier"><span class="header-section-number">14</span> Maximum Margin Classifier</h2>
+<p>Now that we have a expression for the margin our objective is to <strong>maximize</strong> this margin</p>
+<center>
+<img src="2023-10-15-19-42-31.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li>In this case we have <span class="math inline">\(r_n\)</span> so we could tune <span class="math inline">\(w\)</span> to obtain the maximum margin to a point. How do we do this? we follow:</li>
+</ul>
+<center>
+<img src="2023-10-15-21-31-23.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<ol type="1">
+<li>Identify the closest point. The <span class="math inline">\(\kappa\)</span> (kappa) its introduced to say we can amplify our distance we can i.e have the distance in kiloliters or miles etc.</li>
+<li>To resolve the ambiguity of measuring in kilometers or in miles or so for, we set our <span class="math inline">\(||\kappa \textbf{w}|| = 1\)</span>. This is essentially setting the unit which you want to compute the distance. You are saying then the closest point should have unit 1 this is a <strong>constraint</strong>
+<ul>
+<li>From this step it follows that all the points would be my prediction times label <span class="math inline">\(t_n \, y_n\)</span> will be greater or equal to <span class="math inline">\(1\)</span></li>
+</ul></li>
+<li>We maximize the size of the margin given by 1/|W| with the inequality constraint</li>
+</ol>
+<center>
+<img src="2023-10-15-21-44-42.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Maximum Margin Classifier: Goal
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Maximize <span class="math inline">\(1\\textbf{w}\)</span> means minimize <span class="math inline">\(\frac{1}{2}||\textbf{w}||^2\)</span></li>
+<li>We have <span class="math inline">\(N\)</span> constraints because we need to go over each datapoint</li>
+<li>It is a convex quadratic optimization problem with a quadratic loss and linear constraint. We solve this by Lagrange Multipliers</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="constrained-optimization-inequality-constraint" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="constrained-optimization-inequality-constraint"><span class="header-section-number">15</span> Constrained optimization (inequality constraint)</h2>
+<center>
+<img src="2023-10-16-00-53-20.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<center>
+<img src="2023-10-16-00-54-51.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<center>
+<img src="2023-10-16-00-54-43.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li>Now the solution should lie within the yellow region</li>
+</ul>
+<p>There is two cases: 1. The objective could lie inside the yellow region. Then I am doing maximization without any constriant 2. If the solution lies outside then the solution would lie on the perpendicular to the yellow boundary. See point <span class="math inline">\(x_A\)</span> where there is an arrow pointing to <span class="math inline">\(x\)</span> (the optimum solution)</p>
+<p><strong>Before</strong></p>
+<ul>
+<li>We solve the lagrange multiplier, derive with respect to parameter ie. <span class="math inline">\(w\)</span> then derive wrt to <span class="math inline">\(\lambda\)</span> and then replace this solution into <span class="math inline">\(w\)</span>.</li>
+</ul>
+<p><strong>Now</strong> (we need additional requirements):</p>
+<ol type="1">
+<li>Define Lagrangian</li>
+<li>Compute the dual lagrangian</li>
+<li>With solvers solve the dual problem</li>
+</ol>
+<ul>
+<li>Sidenote: dual optimizer (is convex) gives you optimal solutions, it is a way of convexifiyng a problem</li>
+</ul>
+<p>You need to think that the dual gives you an upper bound, and you are lowering this by setting <span class="math inline">\(\mu\)</span> as much as possible</p>
+</section>
+<section id="clarification-of-problems" class="level2" data-number="16">
+<h2 data-number="16" class="anchored" data-anchor-id="clarification-of-problems"><span class="header-section-number">16</span> Clarification of problems</h2>
+<p><strong>Convex optimization problems</strong></p>
+<details>
+<summary>
+Linear Regression
+</summary>
+Linear regression with L2 regularization (ridge regression) and L1 regularization (lasso regression) are convex optimization problems. Ridge regression minimizes the sum of squared errors plus the L2 norm of the coefficients, while lasso minimizes the sum of squared errors plus the L1 norm of the coefficients
+</details>
+<details>
+<summary>
+Logistic Regression with L1 or L2 Regularization
+</summary>
+Similar to linear regression, logistic regression can incorporate L1 or L2 regularization terms, making it a convex optimization problem
+</details>
+<details>
+<summary>
+SVM
+</summary>
+</details>
+<details>
+<summary>
+Quadratic Discriminant Analysis (QDA)
+</summary>
+QDA is a supervised learning algorithm with a quadratic decision boundary and can be formulated as a convex optimization problem
+</details>
+<details>
+<summary>
+Perceptron
+</summary>
+</details>
+<p><strong>Non-Convex optimization problems:</strong></p>
+<details>
+<summary>
+K-Means Clustering
+</summary>
+</details>
+<details>
+<summary>
+PCA
+</summary>
+</details>
+<details>
+<summary>
+Neural Networks
+</summary>
+because of the non-linearity introduced by the activation functions
+</details>
 
 
 </section>
