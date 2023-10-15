@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Danilo Toapanta">
-<meta name="dcterms.date" content="2023-10-12">
-<meta name="description" content="Description of this Post">
+<meta name="dcterms.date" content="2023-10-15">
+<meta name="description" content="Lecture Notes UvA on 9-10-2023">
 
-<title>Danilo Toapanta - The Covariance Matrix and relation with PCA</title>
+<title>Danilo Toapanta - Kernel methods &amp; SVM</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,40 +22,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -167,12 +133,12 @@ window.MathJax = {
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full blog-page" style="display: none;">
     <div class="quarto-title-banner page-columns page-full">
         <div class="quarto-title column-body">
-            <h1 class="title">The Covariance Matrix and relation with PCA</h1>
+            <h1 class="title">Kernel methods &amp; SVM</h1>
                 
             <!-- Description Block -->
                         <div>
                 <div class="description">
-                    Description of this Post
+                    Lecture Notes UvA on 9-10-2023
                 </div>
             </div>
                         
@@ -183,6 +149,11 @@ window.MathJax = {
                                             <div class="quarto-category">
                             <a href="../../blog/#category=All">
                                 All
+                            </a>
+                        </div> 
+                                            <div class="quarto-category">
+                            <a href="../../blog/#category=Education">
+                                Education
                             </a>
                         </div> 
                                             <div class="quarto-category">
@@ -211,7 +182,7 @@ window.MathJax = {
         <div>
         <div class="quarto-title-meta-heading">Published</div>
         <div class="quarto-title-meta-contents">
-          <p class="date">October 12, 2023</p>
+          <p class="date">October 15, 2023</p>
         </div>
       </div>
       
@@ -304,12 +275,12 @@ window.MathJax = {
 <main id="title-block-header" class="quarto-title-block default page-columns page-full" style="padding-bottom: 40px;">
 
     <div class="quarto-title column-body" style="margin-bottom: 1em;">
-        <h1 class="title" style="padding-bottom:8px" ;="">The Covariance Matrix and relation with PCA</h1>
+        <h1 class="title" style="padding-bottom:8px" ;="">Kernel methods &amp; SVM</h1>
         
         <!-- Description Block -->
                     <div>
                 <div class="description">
-                    Description of this Post
+                    Lecture Notes UvA on 9-10-2023
                 </div>
             </div>
         
@@ -324,6 +295,11 @@ window.MathJax = {
                                             <div id="All" class="quarto-category">
                             <a href="../../blog/#category=All">
                                 All
+                            </a>
+                        </div>
+                                            <div id="Education" class="quarto-category">
+                            <a href="../../blog/#category=Education">
+                                Education
                             </a>
                         </div>
                                             <div id="TAGS" class="quarto-category">
@@ -352,6 +328,14 @@ window.MathJax = {
                                 #
                                 </span> -->
                                 All
+                            </a>
+                        </div>
+                                            <div id="Education-from-here" class="quarto-category tags-title" style="display: none;">
+                            <a href="../../blog/#category=Education">
+                               <!-- <span class="hasth-tag">
+                                #
+                                </span> -->
+                                Education
                             </a>
                         </div>
                                             <div id="TAGS-from-here" class="quarto-category tags-title" style="display: none;">
@@ -383,7 +367,7 @@ window.MathJax = {
         <div>
         <div class="quarto-title-meta-heading">Published</div>
         <div class="quarto-title-meta-contents">
-          <p class="date">October 12, 2023</p>
+          <p class="date">October 15, 2023</p>
         </div>
       </div>
       
@@ -395,114 +379,189 @@ window.MathJax = {
     
 </main>
 
+<section id="kernel-methods" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="kernel-methods"><span class="header-section-number">1</span> Kernel Methods</h2>
+<p>In Unsupervised Learning we assume a latent target. In supervised we have a target variable in Unsupervised we assume there is some relation between a latent variable <span class="math inline">\(z\)</span> and our datapoints.</p>
+<p><strong>Supervised Learning:</strong></p>
+<ol type="1">
+<li><p>Regression: is continuous, the target <span class="math inline">\(\in \mathbb{R}\)</span></p>
+<ul>
+<li><strong>Probabilistic modelling:</strong>
+<ul>
+<li>In regression we want to have a continuous target variable<br>
+</li>
+<li>Find model parameters via ML, MAP (or use fully Bayesian)</li>
+<li>If we want to avoid overfilling we include a prior
+<center>
+<img src="2023-10-15-00-31-35.png" class="w250 img-fluid">
+</center>
+<pre></pre></li>
+</ul></li>
+</ul></li>
+<li><p>Classification: is discrete, the target <span class="math inline">\(\in \{C1,...C_k\}\)</span> finite set of options</p>
+<ul>
+<li><strong>Probabilistic modelling:</strong>
+<ul>
+<li>We also predict distributions. Here we want to predict a probability per each class ie. generalized bernoulli distribution</li>
+<li>Find model parameters via ML, MAP (or use fully Bayesian)<br>
+</li>
+<li>If we want to avoid overfilling we include a prior
+<center>
+<img src="2023-10-15-00-29-12.png" class="w250 img-fluid">
+</center>
+<pre></pre></li>
+</ul></li>
+</ul></li>
+</ol>
+<p><strong>Unsupervised Learning:</strong></p>
+<ol type="1">
+<li>Clustering: is discrete. Here there is some latent classes <span class="math inline">\(z\)</span>
+<ul>
+<li>Here we can think of unsupervised classification i.e.&nbsp;K-Means Clustering</li>
+</ul></li>
+<li>Dimensionality Reduction: is continuous. PCA assumes a continuous latent variable
+<ul>
+<li>Here we think about an unsupervised regression</li>
+</ul></li>
+</ol>
+<p><strong>Probabilistic methods:</strong></p>
+<ul>
+<li>Define (predictive) distributions</li>
+<li>Find model parameters via ML, MAP (or use fully Bayesian)</li>
+</ul>
+<p><strong>Discriminative methods:</strong></p>
+<ul>
+<li>Here we no think about probabilities we just want to make decisions</li>
+<li>It is more algorithmic in nature</li>
+</ul>
+<p><strong>Similarities between methods:</strong></p>
+<p>Discriminative methods (left) &amp; Probabilistic methods (Right)</p>
+<ul>
+<li>Least Square Regression &lt;-&gt; MLE Gaussian predictive distribution</li>
+<li>Ridge Regression &lt;-&gt; MAP</li>
+<li>K-Means (hard assignment) &lt;-&gt; Gaussian Mixture Models (soft assigment dot point of color green but also red bluish)</li>
+</ul>
 <blockquote class="blockquote">
-<p>Recall: Variance measures the variation of a single random variable (like the height of a person in a population), whereas covariance is a measure of how much two random variables vary together (like the height of a person and the weight of a person in a population)</p>
+<p><strong>New</strong>: we will add parametric and non-parametric models</p>
 </blockquote>
-<p>In a 2D dimensional feature space with 10 data points, the covariance matrix provides a measure of the relationship between the two features (dimensions) and how they vary together. The covariance matrix is a 2x2 matrix that quantifies the degree to which the two features change together</p>
-<p>Let’s say you have two features, <span class="math inline">\(\textbf{x}\)</span> and <span class="math inline">\(\textbf{y}\)</span>, and you have 10 data points with values (x_1, y_1), (x_2, y_2), …, (x_10, y_10). The covariance matrix Σ is calculated as:</p>
-<p><span class="math display">\[
-\Sigma = \begin{bmatrix}
-\text{cov}(\textbf{x}, \textbf{x}) &amp; \text{cov}(\textbf{x}, \textbf{y}) \\
-\text{cov}(\textbf{y}, \textbf{x}) &amp; \text{cov}(\textbf{y}, \textbf{y})
-\end{bmatrix}
-\]</span></p>
-<p>Where:</p>
+<p><strong>Parametric models:</strong></p>
 <ul>
-<li>cov(<span class="math inline">\(\textbf{x}\)</span>, <span class="math inline">\(\textbf{x}\)</span>) is the covariance between feature <span class="math inline">\(\textbf{x}\)</span> and itself (the variance of <span class="math inline">\(\textbf{x}\)</span>).</li>
-<li>cov(<span class="math inline">\(\textbf{y}\)</span>, <span class="math inline">\(\textbf{y}\)</span>) is the covariance between feature <span class="math inline">\(\textbf{y}\)</span> and itself (the variance of <span class="math inline">\(\textbf{y}\)</span>).</li>
-<li>cov(<span class="math inline">\(\textbf{x}\)</span>, <span class="math inline">\(\textbf{y}\)</span>) and cov(<span class="math inline">\(\textbf{y}\)</span>, <span class="math inline">\(\textbf{x}\)</span>) are the covariances between feature <span class="math inline">\(\textbf{x}\)</span> and feature <span class="math inline">\(\textbf{y}\)</span>.</li>
+<li>Linear models <span class="math inline">\(y(x)=Wx+b\)</span></li>
+<li>Generalized Linear models <span class="math inline">\(y(x)=\sigma(Wx+b)\)</span></li>
+<li>NNs i.e our weights W and bias b</li>
+<li>Distribution classes (Gaussian, Bernoulli,..) i.e parametrized by mean, cov, etc</li>
+<li>Basis functions (this is like a hyperparameter)</li>
 </ul>
-<p>The covariances of two random variables (the two features) are calculated using the formula:</p>
-<p><span class="math display">\[
-\text{cov}(\textbf{x}, \textbf{y}) = \frac{1}{N} \sum_{n=1}^{N} (x_n - {\bar{x}})({y}_n - \bar{y})
-\]</span></p>
-<p>Where:</p>
+<p><strong>Non-parametric models:</strong></p>
 <ul>
-<li>$x_n $ is a scalar value i.e.&nbsp;on the x-axis (1st feature: number of flors of the house)</li>
-<li><span class="math inline">\(y_n\)</span> is a scalar value i.e.&nbsp;on the y-axis (2nd feature: size in <span class="math inline">\(m^2\)</span> of the house)</li>
-<li><span class="math inline">\(\bar{x}\)</span> and <span class="math inline">\(\bar{y}\)</span> are scalars means of the 1D-features vectors</li>
+<li>Kernel methods: does not have parameters but still does predictions</li>
+<li>SVM</li>
 </ul>
-<p><strong>Note:</strong></p>
+<blockquote class="blockquote">
+<p><strong>Tool</strong> in Machine learning is optimization</p>
+</blockquote>
+<p><strong>Optimization:</strong></p>
 <ul>
-<li><span class="math inline">\(\Sigma\)</span> the covariance matrix is symetric which means <span class="math inline">\(\text{cov}(\textbf{x}, \textbf{y}) = \text{cov}(\textbf{y}, \textbf{x})\)</span></li>
-<li>The diagonal entries of the covariance matrix are the variances and the other entries are the covariances.</li>
-</ul>
-<p>The calculation for the covariance matrix can be also expressed as:</p>
-<p><span class="math display">\[
-\Sigma = \frac{1}{N} \sum_{n=1}^{N} (\textbf{x}_n - \mathbf{\bar{x}})(\textbf{x}_n - \mathbf{\bar{x}})^T
-\]</span></p>
-<p>Where:</p>
+<li><em>Convex</em> (one solution: we can solve it analytically) vs <em>non-convex</em> (we used numerical aka brute force solutions like SGD)</li>
+<li>Find stationary points (solve derivative =0)</li>
+<li>Analytic solutions vs numerical (SGD)</li>
+<li>Method of Lagrange multipliers (used because sometimes our optimization needs to obey some constraint)
 <ul>
-<li><span class="math inline">\(\textbf{x}_n \in \mathbb{R}^{Dx1}\)</span> where <span class="math inline">\(D\)</span> is the number of features (or number of dimensions i.e.&nbsp;with two features then 2-dimensions, with three features 3-dimensions)</li>
-<li><span class="math inline">\(\mathbf{\bar{x}} \in \mathbb{R}^{Dx1}\)</span></li>
-</ul>
-<p>Below some example:</p>
-<center>
-<img src="2023-10-12-17-19-45.png" class="img-fluid">
-</center>
-<pre></pre>
-<section id="python-example" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="python-example"><span class="header-section-number">1</span> Python Example</h2>
-<div class="cell" data-execution_count="1">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>matplotlib inline</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>plt.style.use(<span class="st">'ggplot'</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.rcParams['figure.figsize'] = (12, 8)</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Normal distributed x and y vector with mean 0 and standard deviation 1</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">500</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.random.normal(<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">500</span>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>X <span class="op">=</span> np.vstack((x, y)).T</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>plt.scatter(X[:, <span class="dv">0</span>], X[:, <span class="dv">1</span>])</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Generated Data'</span>)</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>plt.axis(<span class="st">'equal'</span>)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-<div class="cell-output cell-output-display">
-<p><img src="index_files/figure-html/cell-2-output-1.png" width="569" height="434"></p>
-</div>
-</div>
-<p>If two feature vectors are independent (or uncorrelated) the matrix matrix would be:</p>
-<p><span class="math display">\[
-\Sigma = \begin{bmatrix}
-\text{cov}(\textbf{x}, \textbf{x}) &amp; 0 \\
-0 &amp; \text{cov}(\textbf{y}, \textbf{y})
-\end{bmatrix}
-\]</span></p>
-<p>If this data was generated with unit cov(x,x) and unit cov(y,y) then we have a Identity covariance matrix</p>
-<center>
-<img src="2023-10-12-17-33-35.png" class="w300 img-fluid">
-</center>
-<pre></pre>
-<ul>
-<li>As x1 increases x2 increases too, because we have 0.8. We have a positive correlation on the data.</li>
+<li>Equality constraint optimization</li>
+<li>Inequality constraint optimization</li>
+</ul></li>
 </ul>
 </section>
-<section id="relation-with-pca" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="relation-with-pca"><span class="header-section-number">2</span> Relation with PCA</h2>
-<p>When you multiply the <span class="math inline">\(\Sigma\)</span> covariance matrix times a vector and then again and again you end up with a vector that points to directions where you have the greatest variance in the data. So like where all points are spread out.</p>
+<section id="so-far-parametric-models" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="so-far-parametric-models"><span class="header-section-number">2</span> So Far: Parametric Models</h2>
 <center>
-<img src="2023-10-12-17-41-50.png" class="img-fluid">
+<img src="2023-10-15-10-31-31.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <ul>
-<li>If I multiply the vector <span class="math inline">\(e2\)</span> by the cov matrix it will not turn but will get longer and longer but will point in the same direction</li>
-<li>Thus we want to find some vector <span class="math inline">\(e\)</span> that when we multiply it with the cov matrix do not change direction. The vectors are called eigenvectors and the lambdas so the scalar version will be called eigenvalues.</li>
-<li>The later point will be called our principal components which are the eigenvectors with the largest eigenvalues</li>
+<li>We teak the parameters highlighted in green color</li>
+</ul>
+</section>
+<section id="parametric-vs-non-parametric-models" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="parametric-vs-non-parametric-models"><span class="header-section-number">3</span> Parametric vs Non-Parametric Models</h2>
+<center>
+<img src="2023-10-15-10-38-54.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li>In parametric you train then discard data and use weights W or other parameters, in Non-parametric you do predictions but you always carry the data to kae such predictions.
+<ul>
+<li>Because carrying big data is not efficient then you may use SVM</li>
+</ul></li>
+<li>Here we define infinitely number of functions spaces <span class="math inline">\(M=\infty\)</span><br>
+This means we have a continuos representation of our space. We can sample as finely as we want, so we can discretized and the index would be one function, because <span class="math inline">\(M=\infty\)</span> then we adjust this index to the sampling rate to make it more or less smother</li>
+</ul>
+</section>
+<section id="non-parametric-kernel-methods" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="non-parametric-kernel-methods"><span class="header-section-number">4</span> Non-Parametric Kernel Methods</h2>
+<center>
+<img src="2023-10-15-10-56-47.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>Ridge regression can be defined in kernelize form without using explicit using basis functions.</p>
+<ul>
+<li><strong>Primal</strong> for the parametric case</li>
+<li><strong>Dual</strong> for the non-parametric representation of the model</li>
+</ul>
+<p>For linear models:</p>
+<ul>
+<li>The kernel it just computing the similarity between <span class="math inline">\(x\)</span> and <span class="math inline">\(x'\)</span></li>
 </ul>
 <center>
-<img src="2023-10-12-17-52-01.png" class="img-fluid">
+<img src="2023-10-15-11-26-12.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+</section>
+<section id="kernelized-ridge-regression" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="kernelized-ridge-regression"><span class="header-section-number">5</span> Kernelized Ridge Regression</h2>
+<center>
+<img src="2023-10-15-11-26-58.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <center>
-<img src="2023-10-12-17-57-37.png" class="img-fluid">
+<img src="2023-10-15-11-28-35.png" class="w550 img-fluid">
 </center>
 <pre></pre>
+<center>
+<img src="2023-10-15-11-29-00.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+</section>
+<section id="primal-vs-dualkernel-approach" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="primal-vs-dualkernel-approach"><span class="header-section-number">6</span> Primal vs Dual/Kernel Approach</h2>
+<center>
+<img src="2023-10-15-11-30-21.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+</section>
+<section id="kernel-trickkernel-substitution" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="kernel-trickkernel-substitution"><span class="header-section-number">7</span> Kernel Trick/Kernel Substitution</h2>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How it works?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The kernel trick its like calculating similarities with the input datapoint, the prediction would be heavily influenced based on point pairs that are similar</p>
+<p>The kernel trick is whenever I see the form <span class="math inline">\(\textbf{x}_n^T \textbf{x}_n\)</span> (instead of using basis functions) we will <strong>replace</strong> it with the kernel</p>
+<p><span class="math display">\[
+\begin{align}
+\textbf{k}(\textbf{x}_n^T, \textbf{x}_m) = \textbf{K}_{nm}
+\end{align}
+\]</span></p>
+<p>We do not know what kernel will be but we can <strong>prove</strong> that if the kernel is symetric positive semi definite that there are always corresponding basis function <span class="math inline">\(\mathbb{\phi}(\textbf{x}_n)^T\mathbb{\phi}(\textbf{x}_n)\)</span></p>
+<p>So basically we find <span class="math inline">\(\mathbb{\phi}(\textbf{x}_n)^T\mathbb{\phi}(\textbf{x}_n) = \textbf{k}(\textbf{x}_n^T, \textbf{x}_m) = \textbf{K}_{nm}\)</span></p>
+</div>
+</div>
 
 
 </section>

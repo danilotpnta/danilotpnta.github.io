@@ -77,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-date','listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
       
-      searchColumns: ["listing-project","listing-execute","listing-resources","listing-website","listing-format","listing-language","listing-freeze","listing-title-block-banner","listing-author","listing-css","listing-toc-title","listing-title","listing-description","listing-date","listing-categories","listing-links","listing-jupyter","listing-number-sections","listing-path","listing-outputHref","listing-date-modified","listing-filename","listing-file-modified","listing-reading-time","listing-navbar","listing-toc","listing-code-fold","listing-toc-depth","listing-callout-appearance","listing-coming-soon","listing-image"],
+      searchColumns: ["listing-project","listing-execute","listing-resources","listing-website","listing-format","listing-language","listing-freeze","listing-title-block-banner","listing-author","listing-css","listing-toc-title","listing-title","listing-description","listing-date","listing-categories","listing-links","listing-jupyter","listing-number-sections","listing-path","listing-outputHref","listing-date-modified","listing-filename","listing-file-modified","listing-reading-time","listing-toc","listing-code-fold","listing-navbar","listing-toc-depth","listing-callout-appearance","listing-coming-soon","listing-image"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -295,18 +295,10 @@ Python
         the rest of the array CATEGORIES could be "categories"  -->
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
-        <!-- if there is no TAG written then do not continue this for-loop  -->
-            <!-- +1 to avoid inserting the name TAG -->
-        <!-- If -1 means there is no TAG written so go over the loop because
-        the rest of the array CATEGORIES could be "categories"  -->
-        <!--  If there is no CATEGORY written in post skip
-        adding this to the array_categories -->
             <!-- Education  -->
             1
         <!-- if there is no TAG written then do not continue this for-loop  -->
             <!-- +1 to avoid inserting the name TAG -->
-                <!-- Probability -->
-                1
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
         <!--  If there is no CATEGORY written in post skip
@@ -319,11 +311,19 @@ Python
         adding this to the array_categories -->
             <!-- Education  -->
             2
-            <!-- Machine Learning  -->
+        <!-- if there is no TAG written then do not continue this for-loop  -->
+            <!-- +1 to avoid inserting the name TAG -->
+                <!-- Probability -->
+                1
+        <!-- If -1 means there is no TAG written so go over the loop because
+        the rest of the array CATEGORIES could be "categories"  -->
+        <!--  If there is no CATEGORY written in post skip
+        adding this to the array_categories -->
+            <!-- Education  -->
             3
         <!-- if there is no TAG written then do not continue this for-loop  -->
             <!-- +1 to avoid inserting the name TAG -->
-                <!-- Python -->
+                <!-- Linear models -->
                 2
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
@@ -359,7 +359,7 @@ Python
             9
         <!-- if there is no TAG written then do not continue this for-loop  -->
             <!-- +1 to avoid inserting the name TAG -->
-                <!-- AI -->
+                <!-- Python -->
                 5
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
@@ -367,90 +367,72 @@ Python
         adding this to the array_categories -->
             <!-- Education  -->
             10
+            <!-- Machine Learning  -->
+            11
         <!-- if there is no TAG written then do not continue this for-loop  -->
             <!-- +1 to avoid inserting the name TAG -->
-                <!-- Vector Calculus -->
+                <!-- AI -->
                 6
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
-        <!-- if there is no TAG written then do not continue this for-loop  -->
-            <!-- +1 to avoid inserting the name TAG -->
-        <!-- If -1 means there is no TAG written so go over the loop because
-        the rest of the array CATEGORIES could be "categories"  -->
-        <!--  If there is no CATEGORY written in post skip
-        adding this to the array_categories -->
             <!-- Education  -->
-            11
-            <!-- Machine Learning  -->
             12
         <!-- if there is no TAG written then do not continue this for-loop  -->
             <!-- +1 to avoid inserting the name TAG -->
-                <!-- Classification -->
+                <!-- Vector Calculus -->
                 7
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
-            <!-- Poems  -->
-            13
         <!-- if there is no TAG written then do not continue this for-loop  -->
             <!-- +1 to avoid inserting the name TAG -->
-                <!-- Spanish -->
-                8
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
             <!-- Education  -->
+            13
+            <!-- Machine Learning  -->
             14
-            <!-- Machine Learning  -->
-            15
         <!-- if there is no TAG written then do not continue this for-loop  -->
             <!-- +1 to avoid inserting the name TAG -->
-                <!-- Probability Theory -->
-                9
-        <!-- If -1 means there is no TAG written so go over the loop because
-        the rest of the array CATEGORIES could be "categories"  -->
-        <!--  If there is no CATEGORY written in post skip
-        adding this to the array_categories -->
-            <!-- Machine Learning  -->
-            16
-        <!-- if there is no TAG written then do not continue this for-loop  -->
-            <!-- +1 to avoid inserting the name TAG -->
-                <!-- Python -->
-                10
+                <!-- Classification -->
+                8
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
             <!-- Poems  -->
-            17
+            15
         <!-- if there is no TAG written then do not continue this for-loop  -->
             <!-- +1 to avoid inserting the name TAG -->
                 <!-- Spanish -->
-                11
+                9
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
-            <!-- Extension  -->
+            <!-- Education  -->
+            16
+            <!-- Machine Learning  -->
+            17
+        <!-- if there is no TAG written then do not continue this for-loop  -->
+            <!-- +1 to avoid inserting the name TAG -->
+                <!-- Probability Theory -->
+                10
+        <!-- If -1 means there is no TAG written so go over the loop because
+        the rest of the array CATEGORIES could be "categories"  -->
+        <!--  If there is no CATEGORY written in post skip
+        adding this to the array_categories -->
+            <!-- Machine Learning  -->
             18
         <!-- if there is no TAG written then do not continue this for-loop  -->
             <!-- +1 to avoid inserting the name TAG -->
-                <!-- Quarto -->
-                12
                 <!-- Python -->
-                13
-        <!-- If -1 means there is no TAG written so go over the loop because
-        the rest of the array CATEGORIES could be "categories"  -->
-        <!--  If there is no CATEGORY written in post skip
-        adding this to the array_categories -->
-        <!-- if there is no TAG written then do not continue this for-loop  -->
-            <!-- +1 to avoid inserting the name TAG -->
-                <!-- Python -->
-                14
+                11
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
         <!--  If there is no CATEGORY written in post skip
@@ -460,85 +442,152 @@ Python
         <!-- if there is no TAG written then do not continue this for-loop  -->
             <!-- +1 to avoid inserting the name TAG -->
                 <!-- Spanish -->
+                12
+        <!-- If -1 means there is no TAG written so go over the loop because
+        the rest of the array CATEGORIES could be "categories"  -->
+        <!--  If there is no CATEGORY written in post skip
+        adding this to the array_categories -->
+            <!-- Extension  -->
+            20
+        <!-- if there is no TAG written then do not continue this for-loop  -->
+            <!-- +1 to avoid inserting the name TAG -->
+                <!-- Quarto -->
+                13
+                <!-- Python -->
+                14
+        <!-- If -1 means there is no TAG written so go over the loop because
+        the rest of the array CATEGORIES could be "categories"  -->
+        <!--  If there is no CATEGORY written in post skip
+        adding this to the array_categories -->
+        <!-- if there is no TAG written then do not continue this for-loop  -->
+            <!-- +1 to avoid inserting the name TAG -->
+                <!-- Python -->
                 15
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
+            <!-- Poems  -->
+            21
+        <!-- if there is no TAG written then do not continue this for-loop  -->
+            <!-- +1 to avoid inserting the name TAG -->
+                <!-- Spanish -->
+                16
+        <!-- If -1 means there is no TAG written so go over the loop because
+        the rest of the array CATEGORIES could be "categories"  -->
+        <!--  If there is no CATEGORY written in post skip
+        adding this to the array_categories -->
             <!-- DevOps  -->
-            20
+            22
         <!-- if there is no TAG written then do not continue this for-loop  -->
             <!-- +1 to avoid inserting the name TAG -->
                 <!-- Python -->
-                16
-                <!-- Shiny -->
                 17
+                <!-- Shiny -->
+                18
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
             <!-- Life  -->
-            21
+            23
         <!-- if there is no TAG written then do not continue this for-loop  -->
             <!-- +1 to avoid inserting the name TAG -->
                 <!-- Amsterdam -->
-                18
-                <!-- Running -->
                 19
-        <!-- If -1 means there is no TAG written so go over the loop because
-        the rest of the array CATEGORIES could be "categories"  -->
-        <!--  If there is no CATEGORY written in post skip
-        adding this to the array_categories -->
-            <!-- Workflow  -->
-            22
-        <!-- if there is no TAG written then do not continue this for-loop  -->
-            <!-- +1 to avoid inserting the name TAG -->
-                <!-- Lua -->
+                <!-- Running -->
                 20
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
-            <!-- Data Mining  -->
-            23
+            <!-- Workflow  -->
+            24
         <!-- if there is no TAG written then do not continue this for-loop  -->
             <!-- +1 to avoid inserting the name TAG -->
-                <!-- Python -->
+                <!-- Lua -->
                 21
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
-            <!-- Markdown  -->
-            24
+            <!-- Data Mining  -->
+            25
         <!-- if there is no TAG written then do not continue this for-loop  -->
             <!-- +1 to avoid inserting the name TAG -->
-                <!-- Testing -->
+                <!-- Python -->
                 22
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
-            <!-- Analysis  -->
-            25
+            <!-- Markdown  -->
+            26
         <!-- if there is no TAG written then do not continue this for-loop  -->
             <!-- +1 to avoid inserting the name TAG -->
                 <!-- Testing -->
                 23
-                <!-- Python -->
+        <!-- If -1 means there is no TAG written so go over the loop because
+        the rest of the array CATEGORIES could be "categories"  -->
+        <!--  If there is no CATEGORY written in post skip
+        adding this to the array_categories -->
+            <!-- Analysis  -->
+            27
+        <!-- if there is no TAG written then do not continue this for-loop  -->
+            <!-- +1 to avoid inserting the name TAG -->
+                <!-- Testing -->
                 24
+                <!-- Python -->
+                25
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
             <!-- News  -->
-            26
+            28
         <!-- if there is no TAG written then do not continue this for-loop  -->
 </div>
 <h3 id="2023-table-title" class="unlisted unnumbered no_anchor_link anchored" style="margin-top: 0px; padding-top:20px; padding-bottom: 8px; font-size: 1.6rem;">2023</h3><table id="2023-table" class="quarto-listing-table table">
     
     <tbody class="list">
-                <tr id="even-row-blog" data-index="0" data-categories="All,TAGS" data-listing-date-sort="1697061600000" data-listing-file-modified-sort="1697148629854" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="even-row-blog" data-index="0" data-categories="All,Education,TAGS" data-listing-date-sort="1697320800000" data-listing-file-modified-sort="1697364045186" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                        <td>
+                            <!-- DATE -->
+                                <span class="listing-date">Oct 15</span>
+                            <!-- TITLE -->
+                            <!-- CATEGORY -->
+                            <!-- DATE -->
+                        </td>
+                        <td>
+                            <!-- DATE -->
+                            <!-- TITLE -->
+                                <a href="../blog/2023-10-15_kernel-methods-&amp;-svm/index.html" class="title listing-title">
+                                        Kernel methods &amp; SVM <span class="new_label_post">NEW</span>
+                                </a>
+                            <!-- CATEGORY -->
+                            <!-- DATE -->
+                        </td>
+                        <td>
+                            <!-- DATE -->
+                            <!-- TITLE -->
+                            <!-- CATEGORY -->
+                                    <!-- Displays only the fist category -->
+                                    <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
+                                            <a style="color: inherit; font-size: 0.95em;" href="../blog/#category=All">
+                                                All
+                                            </a>
+                                    </span>                                    
+                            <!-- DATE -->
+                        </td>
+                        <td>
+                            <!-- DATE -->
+                            <!-- TITLE -->
+                            <!-- CATEGORY -->
+                            <!-- DATE -->
+                                <span class="listing-date">Oct 15</span>
+                        </td>
+                </tr>
+                <tr id="odd-row-blog" data-index="1" data-categories="All,TAGS" data-listing-date-sort="1697061600000" data-listing-file-modified-sort="1697320368260" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Oct 12</span>
@@ -550,7 +599,7 @@ Python
                             <!-- DATE -->
                             <!-- TITLE -->
                                 <a href="../blog/2023-10-12_what-is-the-covariance-matrix/index.html" class="title listing-title">
-                                        The Covariance Matrix and relation with PCA <span class="new_label_post">NEW</span>
+                                        The Covariance Matrix and relation with PCA
                                 </a>
                             <!-- CATEGORY -->
                             <!-- DATE -->
@@ -575,7 +624,7 @@ Python
                                 <span class="listing-date">Oct 12</span>
                         </td>
                 </tr>
-                <tr id="odd-row-blog" data-index="1" data-categories="All,Education,TAGS,Probability" data-listing-date-sort="1697061600000" data-listing-file-modified-sort="1697147870906" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="even-row-blog" data-index="2" data-categories="All,Education,TAGS,Probability" data-listing-date-sort="1697061600000" data-listing-file-modified-sort="1697147870906" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Oct 12</span>
@@ -612,7 +661,7 @@ Python
                                 <span class="listing-date">Oct 12</span>
                         </td>
                 </tr>
-                <tr id="even-row-blog" data-index="2" data-categories="All,TAGS" data-listing-date-sort="1696975200000" data-listing-file-modified-sort="1697212731832" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="odd-row-blog" data-index="3" data-categories="All,Education,TAGS,Linear models" data-listing-date-sort="1696975200000" data-listing-file-modified-sort="1697363965737" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Oct 11</span>
@@ -649,7 +698,7 @@ Python
                                 <span class="listing-date">Oct 11</span>
                         </td>
                 </tr>
-                <tr id="odd-row-blog" data-index="3" data-categories="All,Education,Machine Learning,TAGS,Python" data-listing-date-sort="1696629600000" data-listing-file-modified-sort="1696981023386" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="even-row-blog" data-index="4" data-categories="All,Education,Machine Learning,TAGS,Python" data-listing-date-sort="1696629600000" data-listing-file-modified-sort="1696981023386" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Oct 07</span>
@@ -686,7 +735,7 @@ Python
                                 <span class="listing-date">Oct 07</span>
                         </td>
                 </tr>
-                <tr id="even-row-blog" data-index="4" data-categories="All,Education,Machine Learning,TAGS,Python" data-listing-date-sort="1696370400000" data-listing-file-modified-sort="1696697456958" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="odd-row-blog" data-index="5" data-categories="All,Education,Machine Learning,TAGS,Python" data-listing-date-sort="1696370400000" data-listing-file-modified-sort="1696697456958" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="11" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Oct 04</span>
@@ -723,7 +772,7 @@ Python
                                 <span class="listing-date">Oct 04</span>
                         </td>
                 </tr>
-                <tr id="odd-row-blog" data-index="5" data-categories="All,Education,Machine Learning,TAGS,Python" data-listing-date-sort="1696370400000" data-listing-file-modified-sort="1696371763493" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="even-row-blog" data-index="6" data-categories="All,Education,Machine Learning,TAGS,Python" data-listing-date-sort="1696370400000" data-listing-file-modified-sort="1696371763493" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Oct 04</span>
@@ -760,7 +809,7 @@ Python
                                 <span class="listing-date">Oct 04</span>
                         </td>
                 </tr>
-                <tr id="even-row-blog" data-index="6" data-categories="All,Education,Machine Learning,TAGS,AI" data-listing-date-sort="1696284000000" data-listing-file-modified-sort="1696323126013" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="odd-row-blog" data-index="7" data-categories="All,Education,Machine Learning,TAGS,AI" data-listing-date-sort="1696284000000" data-listing-file-modified-sort="1696323126013" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Oct 03</span>
@@ -797,7 +846,7 @@ Python
                                 <span class="listing-date">Oct 03</span>
                         </td>
                 </tr>
-                <tr id="odd-row-blog" data-index="7" data-categories="All,Education,TAGS,Vector Calculus" data-listing-date-sort="1695679200000" data-listing-file-modified-sort="1697147922609" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="even-row-blog" data-index="8" data-categories="All,Education,TAGS,Vector Calculus" data-listing-date-sort="1695679200000" data-listing-file-modified-sort="1697147922609" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Sep 26</span>
@@ -834,7 +883,7 @@ Python
                                 <span class="listing-date">Sep 26</span>
                         </td>
                 </tr>
-                <tr id="even-row-blog" data-index="8" data-categories="All,TAGS" data-listing-date-sort="1695679200000" data-listing-file-modified-sort="1695726170477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="odd-row-blog" data-index="9" data-categories="All,TAGS" data-listing-date-sort="1695679200000" data-listing-file-modified-sort="1695726170477" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Sep 26</span>
@@ -871,7 +920,7 @@ Python
                                 <span class="listing-date">Sep 26</span>
                         </td>
                 </tr>
-                <tr id="odd-row-blog" data-index="9" data-categories="All,Education,Machine Learning,TAGS,Classification" data-listing-date-sort="1695592800000" data-listing-file-modified-sort="1696283965057" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="32" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="even-row-blog" data-index="10" data-categories="All,Education,Machine Learning,TAGS,Classification" data-listing-date-sort="1695592800000" data-listing-file-modified-sort="1696283965057" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="32" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Sep 25</span>
@@ -908,7 +957,7 @@ Python
                                 <span class="listing-date">Sep 25</span>
                         </td>
                 </tr>
-                <tr id="even-row-blog" data-index="10" data-categories="All,Poems,TAGS,Spanish" data-listing-date-sort="1695506400000" data-listing-file-modified-sort="1695647930508" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="odd-row-blog" data-index="11" data-categories="All,Poems,TAGS,Spanish" data-listing-date-sort="1695506400000" data-listing-file-modified-sort="1695647930508" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Sep 24</span>
@@ -945,7 +994,7 @@ Python
                                 <span class="listing-date">Sep 24</span>
                         </td>
                 </tr>
-                <tr id="odd-row-blog" data-index="11" data-categories="All,Education,Machine Learning,TAGS,Probability Theory" data-listing-date-sort="1693864800000" data-listing-file-modified-sort="1697200765310" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="even-row-blog" data-index="12" data-categories="All,Education,Machine Learning,TAGS,Probability Theory" data-listing-date-sort="1693864800000" data-listing-file-modified-sort="1697200765310" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Sep 05</span>
@@ -982,7 +1031,7 @@ Python
                                 <span class="listing-date">Sep 05</span>
                         </td>
                 </tr>
-                <tr id="even-row-blog" data-index="12" data-categories="All,Machine Learning,TAGS,Python" data-listing-date-sort="1693778400000" data-listing-file-modified-sort="1693853473340" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="odd-row-blog" data-index="13" data-categories="All,Machine Learning,TAGS,Python" data-listing-date-sort="1693778400000" data-listing-file-modified-sort="1693853473340" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Sep 04</span>
@@ -1019,7 +1068,7 @@ Python
                                 <span class="listing-date">Sep 04</span>
                         </td>
                 </tr>
-                <tr id="odd-row-blog" data-index="13" data-categories="All,Poems,TAGS,Spanish" data-listing-date-sort="1693692000000" data-listing-file-modified-sort="1693736932294" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="even-row-blog" data-index="14" data-categories="All,Poems,TAGS,Spanish" data-listing-date-sort="1693692000000" data-listing-file-modified-sort="1693736932294" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Sep 03</span>
@@ -1056,7 +1105,7 @@ Python
                                 <span class="listing-date">Sep 03</span>
                         </td>
                 </tr>
-                <tr id="even-row-blog" data-index="14" data-categories="All,Extension,TAGS,Quarto,Python" data-listing-date-sort="1692568800000" data-listing-file-modified-sort="1696598724153" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="odd-row-blog" data-index="15" data-categories="All,Extension,TAGS,Quarto,Python" data-listing-date-sort="1692568800000" data-listing-file-modified-sort="1696598724153" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Aug 21</span>
@@ -1093,7 +1142,7 @@ Python
                                 <span class="listing-date">Aug 21</span>
                         </td>
                 </tr>
-                <tr id="odd-row-blog" data-index="15" data-categories="All,TAGS,Python" data-listing-date-sort="1692309600000" data-listing-file-modified-sort="1692391013291" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="even-row-blog" data-index="16" data-categories="All,TAGS,Python" data-listing-date-sort="1692309600000" data-listing-file-modified-sort="1692391013291" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Aug 18</span>
@@ -1130,7 +1179,7 @@ Python
                                 <span class="listing-date">Aug 18</span>
                         </td>
                 </tr>
-                <tr id="even-row-blog" data-index="16" data-categories="All,Poems,TAGS,Spanish" data-listing-date-sort="1690581600000" data-listing-file-modified-sort="1692347208096" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="odd-row-blog" data-index="17" data-categories="All,Poems,TAGS,Spanish" data-listing-date-sort="1690581600000" data-listing-file-modified-sort="1692347208096" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Jul 29</span>
@@ -1167,7 +1216,7 @@ Python
                                 <span class="listing-date">Jul 29</span>
                         </td>
                 </tr>
-                <tr id="odd-row-blog" data-index="17" data-categories="All,DevOps,TAGS,Python,Shiny" data-listing-date-sort="1690149600000" data-listing-file-modified-sort="1692352729648" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="even-row-blog" data-index="18" data-categories="All,DevOps,TAGS,Python,Shiny" data-listing-date-sort="1690149600000" data-listing-file-modified-sort="1692352729648" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Jul 24</span>
@@ -1204,7 +1253,7 @@ Python
                                 <span class="listing-date">Jul 24</span>
                         </td>
                 </tr>
-                <tr id="even-row-blog" data-index="18" data-categories="All,Life,TAGS,Amsterdam,Running" data-listing-date-sort="1687212000000" data-listing-file-modified-sort="1691957333602" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="odd-row-blog" data-index="19" data-categories="All,Life,TAGS,Amsterdam,Running" data-listing-date-sort="1687212000000" data-listing-file-modified-sort="1691957333602" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Jun 20</span>
@@ -1241,7 +1290,7 @@ Python
                                 <span class="listing-date">Jun 20</span>
                         </td>
                 </tr>
-                <tr id="odd-row-blog" data-index="19" data-categories="All,Workflow,TAGS,Lua" data-listing-date-sort="1686261600000" data-listing-file-modified-sort="1692352527112" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="even-row-blog" data-index="20" data-categories="All,Workflow,TAGS,Lua" data-listing-date-sort="1686261600000" data-listing-file-modified-sort="1692352527112" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Jun 09</span>
@@ -1278,7 +1327,7 @@ Python
                                 <span class="listing-date">Jun 09</span>
                         </td>
                 </tr>
-                <tr id="even-row-blog" data-index="20" data-categories="All,Data Mining,TAGS,Python" data-listing-date-sort="1685916000000" data-listing-file-modified-sort="1692387911675" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="odd-row-blog" data-index="21" data-categories="All,Data Mining,TAGS,Python" data-listing-date-sort="1685916000000" data-listing-file-modified-sort="1692387911675" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Jun 05</span>
@@ -1315,7 +1364,7 @@ Python
                                 <span class="listing-date">Jun 05</span>
                         </td>
                 </tr>
-                <tr id="odd-row-blog" data-index="21" data-categories="All,Markdown,TAGS,Testing" data-listing-date-sort="1685311200000" data-listing-file-modified-sort="1692354225928" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="even-row-blog" data-index="22" data-categories="All,Markdown,TAGS,Testing" data-listing-date-sort="1685311200000" data-listing-file-modified-sort="1692354225928" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="8" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">May 29</span>
@@ -1352,7 +1401,7 @@ Python
                                 <span class="listing-date">May 29</span>
                         </td>
                 </tr>
-                <tr id="even-row-blog" data-index="22" data-categories="All,Analysis,TAGS,Testing,Python" data-listing-date-sort="1674946800000" data-listing-file-modified-sort="1692349528746" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="odd-row-blog" data-index="23" data-categories="All,Analysis,TAGS,Testing,Python" data-listing-date-sort="1674946800000" data-listing-file-modified-sort="1692349528746" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Jan 29</span>
@@ -1389,7 +1438,7 @@ Python
                                 <span class="listing-date">Jan 29</span>
                         </td>
                 </tr>
-                <tr id="odd-row-blog" data-index="23" data-categories="All,News" data-listing-date-sort="1673478000000" data-listing-file-modified-sort="1692352972270" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
+                <tr id="even-row-blog" data-index="24" data-categories="All,News" data-listing-date-sort="1673478000000" data-listing-file-modified-sort="1692352972270" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
                         <td>
                             <!-- DATE -->
                                 <span class="listing-date">Jan 12</span>
@@ -1429,6 +1478,12 @@ Python
     </tbody>
 </table>
 <div style="display: none">
+        <p class="array_categories"> 
+            Education
+        </p>
+        <p class="array_categories"> 
+            Education
+        </p>
         <p class="array_categories"> 
             Education
         </p>
@@ -1509,6 +1564,9 @@ Python
         </p>
         <p class="array_tags"> 
             Probability
+        </p>
+        <p class="array_tags"> 
+            Linear models
         </p>
         <p class="array_tags"> 
             Python

@@ -35,6 +35,7 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/2023-10-15_kernel-methods-&-svm/index.html",
       "/blog/2023-10-12_what-is-the-covariance-matrix/index.html",
       "/blog/2023-10-12_bayes-rule/index.html",
       "/blog/2023-10-11_principal-component-analysis/index.html",
