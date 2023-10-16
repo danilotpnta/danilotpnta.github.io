@@ -2,7 +2,7 @@
 pagetitle: "Danilo Toapanta - Notes"
 listing:
     - id: notes-2023
-      template: listing-blog.ejs
+      template: listing-notes.ejs
       template-params:
         param1: "Notes"
       type: custom
@@ -36,9 +36,7 @@ library(knitr)
 
 <!-- <h1 style="padding: 0em; margin: 0em; padding-bottom: 1rem"> Notes </h1> -->
 
-<!-- <div class="grid-text-showAllCateg">
-<div>Hi there! Nice to see you around. This section contains information that I want to remember and does not fit into my <a href="../blog/" style="color:inherit; text-decoration-color:#a3a6a8a1">Blog</a> section.</div> 
-
+<div class="grid-text-showAllCateg">
 <div class="background-color-show-posts" style="display: flex; justify-content: center; align-items: center; padding: 5px 0px; border-radius: 5px;">
   <a id="clickable-showing-all-posts" href="/notes" style="text-decoration: none; pointer-events: none;">
     <p align="center" id="showing-all-posts" class="color-show-posts" style="font-weight: 400; margin: 0px; padding: 0px; font-style:italic">
@@ -51,9 +49,17 @@ library(knitr)
     </p>
   </a>
 </div>
-</div> -->
-
 <div class="background-color-show-posts" style="display: flex; justify-content: center; padding: 5px 0px; border-radius: 5px;">
+<!-- <div style="display: flex; justify-content: center; padding-top: 10px; padding-bottom 8px;"> -->
+  <a id="clickable-showing-all-posts" href="/blog" style="text-decoration: none;">
+    <p align="center" id="showing-all-posts" class="color-show-posts" style="font-weight: 400; margin: 0px; padding: 0px; ">
+        Blog
+    </p>
+  </a>
+</div>
+</div>
+
+<!-- <div class="background-color-show-posts" style="display: flex; justify-content: center; padding: 5px 0px; border-radius: 5px;">
   <a id="clickable-showing-all-posts" href="/notes" style="text-decoration: none; pointer-events: none;">
     <p align="center" id="showing-all-posts" class="color-show-posts" style="font-weight: 400; margin: 0px; padding: 0px; font-style:italic">
         Showing All Notes 
@@ -64,7 +70,7 @@ library(knitr)
       Show All Notes <i style="padding-left:2px;" class='bi bi-arrow-counterclockwise'></i> 
     </p>
   </a>
-</div>
+</div> -->
 
 
 :::{.grid-blog}
@@ -90,7 +96,6 @@ library(knitr)
 :::{#notes-2023}
 :::
 :::
-
 
 
 :::

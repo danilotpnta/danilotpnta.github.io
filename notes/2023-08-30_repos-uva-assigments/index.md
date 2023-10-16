@@ -1,12 +1,14 @@
 ---
-title: "MSc AI Resources"
+title: "AI Resources"
 description: "Description of this Note"
-date: "2023-08-30"
+date: "2023-08-26"
 categories: [All, UvA, TAGS]
 number-sections: false
 toc: false
 search: true
+display: "no"
 ---
+
 
 ## General Information {.unnumbered}
 > - Summaries: https://github.com/phlippe/UvA_Summaries
@@ -16,12 +18,12 @@ search: true
 
 > - Videos: https://www.youtube.com/@erikbekkers6398/
 
-
 ##### 2022-2023 {.unnumbered}
 - https://github.com/QiaoRenOreo/UvA_MachineLearning1
 
 ##### 2018-2019 {.unnumbered}
 - https://github.com/jamie0725/Machine-Learning-1
+- https://github.com/ML77777/ML1-18
 
 ##### 2017-2018 {.unnumbered}
 - https://github.com/mhashas/ml1-assignments
@@ -34,6 +36,14 @@ search: true
 
 ##### 2015-2016 {.unnumbered}
 - https://github.com/Ignotus/uva-machine-learning
+
+##### Unsorted{.unnumbered}
+- https://github.com/3lLobo?page=2&tab=repositories
+- https://github.com/toliz/uva-ml1
+- https://github.com/tuanddoox/UvA_ML_1/tree/main/Lab
+- https://github.com/despoinatouska/MachineLearning1-UVA/blob/main/LAB2/lab2.ipynb
+- https://github.com/Ignotus/uva-machine-learning
+- https://github.com/apostolikas/UvA-Machine-Learning-1
 
 ## CV 1
 
@@ -51,6 +61,8 @@ search: true
 ##### 2017-2018 {.unnumbered}
 - https://github.com/danakianfar/computer_vision_1
 
+##### Unsorted{.unnumbered}
+- https://github.com/davide-belli/computer-vision-1-labs/tree/master/CV1_FinalProject
 
 
 ## Deep Learning
