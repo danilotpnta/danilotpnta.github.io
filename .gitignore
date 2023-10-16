@@ -8,3 +8,4 @@
 /_freeze/
 website.code-workspace
 .tmp.driveupload/
+.vscode/settings.json
