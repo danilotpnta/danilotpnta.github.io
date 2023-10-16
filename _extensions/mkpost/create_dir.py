@@ -5,6 +5,15 @@ import shutil
 
 def create_post(type_file, post_name):
 
+    # Holds available extensions
+    dic = {'post': 'qmd', 'poems':'qmd', 'notebook':'ipynb', 'note':'md'}
+    
+    if dic.get(type_file) == None:
+        print("Wrong type_file! Available files are: \n'post', 'poems', 'notebook' or 'note'")
+        return
+    else:
+        file_extension = dic[type_file]
+
     # Save a copy only name
     raw_post_name = post_name
 
@@ -26,18 +35,17 @@ def create_post(type_file, post_name):
     # Folder Path: "../out/2023-08-29_how-to-rock"
     path_folder = os.path.join(output_path, folder_name)
 
+    # Empty directory and then create it again
+    shutil.rmtree(output_path)
+    os.mkdir(output_path)
+
     # Make a Directory
     os.mkdir(path_folder)
     # print("Directory '% s' created!" % folder_name)
 
     # --------------- HELPER FUNCTION ------------------
 
-    def create_file(type_file):
-
-        # -------------- CREATE FILE --------------
-        # Holds available extensions
-        dic = {'post': 'qmd', 'poems':'qmd', 'notebook':'ipynb', 'note':'md'}
-        file_extension = dic[type_file]
+    def create_file(type_file, file_extension):
         
         # Source path: "../template/file_type/index.ext"
         source_file = f"templates/{type_file}/index.{file_extension}"
@@ -57,7 +65,7 @@ def create_post(type_file, post_name):
         
         if (type_file == "notebook"):
             title_row = 9
-            lines[title_row] = f'    \"title: \\"{raw_post_name.capitalize()}\\"\\n\",'
+            lines[title_row] = f'    \"title: \\"{raw_post_name}\\"\\n\",'
 
             date_row = 11
             lines[date_row] = f'    \"date: \\"{current_date}\\"\\n\",'
@@ -68,7 +76,7 @@ def create_post(type_file, post_name):
 
         else:
             title_row = 1
-            lines[title_row] = f'title: "{raw_post_name.capitalize()}"\n'
+            lines[title_row] = f'title: "{raw_post_name}"\n'
 
             date_row = 3
             lines[date_row] = f'date: "{current_date}"\n'
@@ -90,21 +98,10 @@ def create_post(type_file, post_name):
             print(f"blog/{folder_name}/")
 
         # Move the file from out/ folder    
-        shutil.move(src, dst)     
+        shutil.move(src, dst)   
 
-
-    # Detect the type of file to be created
-    if (type_file == "post"):
-        create_file("post")
-    elif (type_file == "notebook"):
-        create_file("notebook")
-    elif (type_file == "poems"):
-        create_file("poems")
-    elif (type_file == "note"):
-        create_file("note")
-    else:
-        print(f"Wrong type_file: {type_file}. Available: 'post', 'poems', 'notebook' or 'note'")
-        sys.exit()
+    # Create file with extension
+    create_file(type_file, file_extension)  
 
 
 if __name__ == "__main__":
