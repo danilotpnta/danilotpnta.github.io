@@ -1453,3 +1453,102 @@ a.new-look-link {
 .aa-SubmitIcon{
     opacity: 0.7 !important;
 }
+
+// Resizing of pictures
+.w50 {
+    display: inline-block;
+    width: 50px;
+}
+.w75 {
+    display: inline-block;
+    width: 75px;
+}
+.w100 {
+    display: inline-block;
+    width: 100px;
+}
+.w125 {
+    display: inline-block;
+    width: 125px;
+}
+.w150 {
+    display: inline-block;
+    width: 150px;
+}
+.w175 {
+    display: inline-block;
+    width: 175px;
+}
+.w200 {
+    display: inline-block;
+    width: 200px;
+}
+.w225 {
+    display: inline-block;
+    width: 225px;
+}
+.w250 {
+    display: inline-block;
+    width: 250px;
+}
+.w275 {
+    display: inline-block;
+    width: 275px;
+}
+.w300 {
+    display: inline-block;
+    width: 300px;
+}
+.w325 {
+    display: inline-block;
+    width: 325px;
+}
+.w350 {
+    display: inline-block;
+    width: 350px;
+}
+.w375 {
+    display: inline-block;
+    width: 375px;
+}
+.w400 {
+    display: inline-block;
+    width: 400px;
+}
+.w425 {
+    display: inline-block;
+    width: 425px;
+}
+.w450 {
+    display: inline-block;
+    width: 450px;
+}
+.w475 {
+    display: inline-block;
+    width: 475px;
+}
+.w500 {
+    display: inline-block;
+    width: 500px;
+}
+.w525 {
+    display: inline-block;
+    width: 525px;
+}
+.w550 {
+    display: inline-block;
+    width: 550px;
+}
+.w575 {
+    display: inline-block;
+    width: 575px;
+}
+
+
+
+
+// Gives color to label
+a:not([href]):not([class]), a:not([href]):not([class]):hover {
+    color: #5a6570;
+}
+
