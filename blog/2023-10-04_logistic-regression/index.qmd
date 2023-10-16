@@ -1,0 +1,430 @@
+---
+title: "Logistic Regression"
+description: "Lecture Notes UvA on 25-9-2023"
+date: "2023-10-04"
+categories: [All, Education, Machine Learning, TAGS, Python]
+toc: false
+jupyter: git-pages
+code-fold: true
+number-sections: true
+---
+:::{.callout-tip collapse="false"}
+## Intuition Logistic Regression for Binary Classification
+
+In this example, the data generated in this code does not have linear features for binary classification.
+
+```{python}
+import numpy as np
+from numpy import pi
+import matplotlib.pyplot as plt
+from scipy.stats import norm
+
+N = 400
+theta = np.sqrt(np.random.rand(N))*2*pi # np.linspace(0,2*pi,100)
+
+r_a = 2*theta + pi
+data_a = np.array([np.cos(theta)*r_a, np.sin(theta)*r_a]).T
+x_a = data_a + np.random.randn(N,2)
+
+r_b = -2*theta - pi
+data_b = np.array([np.cos(theta)*r_b, np.sin(theta)*r_b]).T
+x_b = data_b + np.random.randn(N,2)
+
+res_a = np.append(x_a, np.zeros((N,1)), axis=1)
+res_b = np.append(x_b, np.ones((N,1)), axis=1)
+
+res = np.append(res_a, res_b, axis=0)
+np.random.shuffle(res)
+
+plt.scatter(x_a[:,0],x_a[:,1])
+plt.scatter(x_b[:,0],x_b[:,1])
+plt.show()
+```
+
+
+Linear features are those that can be effectively separated by a straight line, but in this case, you would need a more complex decision boundary (e.g., a circular or nonlinear boundary) to separate the two classes accurately.
+
+In binary classification, linearly separable data is a common assumption, which means that the classes can be separated by a straight line or a hyperplane in higher dimensions. In the provided code, the data is not linearly separable because a simple straight line cannot accurately distinguish between the two classes.
+
+## Plotting $p(C_k|x)$ (2nd plot)
+
+```{python}
+# Generate a grid of x and y coordinates
+x_range = np.linspace(-10, 10, 400)
+y_range = np.linspace(-10, 10, 400)
+xx, yy = np.meshgrid(x_range, y_range)
+
+# Calculate p(C_A | x) and p(C_B | x) for each point on the grid
+# Note: This is a simplified approach and doesn't use the actual Naive Bayes model
+p_C_A_given_x = norm.pdf(np.linalg.norm([xx - np.cos(theta) * (2 * theta + np.pi), yy - np.sin(theta) * (2 * theta + np.pi)], axis=0))
+p_C_B_given_x = norm.pdf(np.linalg.norm([xx - np.cos(theta) * (-2 * theta - np.pi), yy - np.sin(theta) * (-2 * theta - np.pi)], axis=0))
+
+# Plot the contour plots
+plt.figure(figsize=(7, 3))
+plt.subplot(121)
+plt.contourf(xx, yy, p_C_A_given_x, cmap='Blues', levels=20)
+plt.title('p(C_A | x)')
+plt.colorbar()
+
+plt.subplot(122)
+plt.contourf(xx, yy, p_C_B_given_x, cmap='Oranges', levels=20)
+plt.title('p(C_B | x)')
+plt.colorbar()
+
+plt.tight_layout()
+plt.show()
+```
+The contour plots show the probability values over the grid of x and y coordinates, with color indicating probability levels. The higher the probability, the darker the color.
+
+Since the data is not generated according to a real statistical model, the visualized distributions are more conceptual than precise.
+
+In a real Naive Bayes model, you would estimate p(C_k | x) using the actual data and the independence assumption. The visualization would depend on the data, features, and model parameters.
+
+
+## Concentric circles Distribution
+
+```{python}
+from sklearn.datasets import make_circles
+
+X, y = make_circles(n_samples=1000, random_state=123, 
+                    noise=0.1, factor=0.2)
+
+plt.figure(figsize=(8,6))
+
+plt.scatter(X[y==0, 0], X[y==0, 1], color='red', alpha=0.5)
+plt.scatter(X[y==1, 0], X[y==1, 1], color='blue', alpha=0.5)
+plt.title('Concentric circles')
+plt.ylabel('y coordinate')
+plt.xlabel('x coordinate')
+plt.show()
+```
+:::
+
+The downside with the Perceptron is that there is no probabilistic interpretation. We want to link the linear model to class conditional probabilities
+
+i.e we would like to say there is 50% that this belongs to class K
+$$
+\begin{align}
+p(C|x)
+\end{align}
+$$
+
+Now, lets talk about **Logistic Regression**
+
+- Perceptron and Logistic Regression is a type of directly parametrize linear model
+- The only difference between these two its how you train the model.
+
+<center>[![](2023-10-03-10-59-38.png)]{.w400}</center>
+
+## Deriving Logistic Regression
+
+> Note: We would be talking about Binary Classification 
+
+Here the want to link linear model to probabilities to get Logistic Regression
+
+- When we set up Bayes Classifiers, We look at the ratio of probabilities.
+
+<center>[![](2023-10-03-11-09-14.png)]{.w300}</center>
+
+Here we are saying that this ratio would not work because i.e if we would predict a negative value for this ratio that would mean that either the denominator or denominator would be negative. But negative probables cannot happen.
+
+The solution, make compute the $\ln$
+
+<center>[![](2023-10-03-11-16-12.png)]{.w300}</center>
+
+Note that at the decision boundary meaning when $p(C_1|x)=p(C_2|x)$ we would have that the ratio is zero.
+
+Now, rearranging the expression above:
+
+<center>[![](2023-10-03-11-21-54.png)]{.w300}</center>
+<center>[![](2023-10-03-11-44-35.png)]{.w300}</center>
+<center>[![](2023-10-03-11-50-37.png)]{.w300}</center>
+<center>![Sigmoid](2023-10-03-11-47-57.png){#fig-plot_sigmoid}</center>
+
+
+## Logistic Regression: Making Predictions
+
+<center>[![](2023-10-03-11-53-34.png)]{.w300}</center>
+
+## Counting Parameters
+
+How much more parameter efficient is logistic regression vs a Gaussian classifier?
+(assume the feature vector has D dimensions) 
+
+**Logistic regression**
+
+- Num of parameters: $D+1$ one weight for each feature value and then you have the bias weight.
+
+**Linear Discriminant Analysis**
+
+> Here we defined the Gaussian likelihoods
+
+- Num of parameters: $(2D)+[D(D - 1)2 + D]$
+
+1. How many parameters do the means of these gaussian likelihood have?  
+$2D$: because D dimensions per each mean and we have 2 likelihoods because we are doing binary classifier 
+
+2. How many parameters the covariance matrix have? Assume we are doing LDA, so the covariance matrix are shared.    
+$D^2$ Naively but in this case, the covariance matrix has this symmetry structure so $D*D - D/2$ is the off diagonal matrix and we add $D$ more for the diagonal
+
+3. The last term, we have means, we have covariances. We need the bias because maybe we can have unbalance data so we also want this to balance the data.  
+In a bayes classifier we fixed our unbalance data with the prior. So we have one parameter for the prior
+
+To understand more: [link](https://online.stat.psu.edu/stat508/book/export/html/643)
+
+That means for the LDA we need around $D^2$ as compared to Logistic Regression $D+1$ to get a classification example.
+
+## Learning via Log-Likelihood
+
+We talked about our Logistic Regression model, now lets see how do we fit into our data.
+
+<center>[![](2023-10-03-13-58-09.png)]{}</center>
+
+## Learning via Log-likelihood
+
+We assume our data are ID.
+
+Now that we have our labels which are binary we could use a Bernouli distribution to model this.
+
+<center>[![](2023-10-03-13-50-32.png)]{.w300}</center>
+
+Where, $\pi$ represents the probability of sucess and $t$ represents our possible outcomes. In this case our outcomes would be to belong to class $0$ if $C_0$ or $1$ if $C_1$
+
+<center>[![](2023-10-03-14-05-43.png)]{.w300}</center>
+
+Where, $\sigma(\textbf{w}^T\textbf{x}_n)^{t_n}$ is equal to $p(C1|x)$. See the graph of the sigmoid @fig-plot_sigmoid 
+
+Now lets take the log of this Likelihood
+
+<center>![](2023-10-03-14-28-19.png){.w350}</center>
+
+To compute the Error we have:
+
+<center>![](2023-10-03-17-04-41.png){.w400}</center>
+
+This is equation is also called *cross-entropy loss*
+
+if the label $t_n=1$ then second term will go away. Because we want to have the error to go to zero, then we need to make the log to go to zero. This happens when $log(1)$ thus the $\sigma(\textbf{w}^T\textbf{x}_n)$ needs to equal one. This will only happen when the value of $\textbf{w}^T\textbf{x}_n$ is large enough so that the $\sigma()$ computes it to one, meaning that $p(C_1|x)=1$ which means we have predicted the correct label. Recall $t_n=1$.
+
+The other way around, the truth label is $t_n=1$ but the output of $\sigma(\textbf{w}^T\textbf{x}_n)~0$ so close to zero which means the $\ln(0.00001)=-11$ would be negative which then recall we have a $-$ minus sign which means we would be making a big error of $11$.
+
+$E(w)$ is convex in $\textbf{w}$ but unlike linear regression there is no analytical solution <a id="error">[1]</a>. Which means if we take the derivative and solve for $w$ we would get stuck. 
+  
+- What is convex decision boundaries?
+<center>![](2023-10-03-17-24-19.png){.w300}</center>
+
+if you take any two points within the boundary, the line segment connecting those points lies entirely within the boundary as well
+
+## Class-Entropy Loss
+
+<center>![](2023-10-03-17-31-13.png){.w300}</center>
+
+### Comparing Logistic Regression and Square Regression
+
+<center>![](2023-10-03-17-35-30.png){.w400}</center>
+
+Logistic Regression is on the green line, Least Square Regression the purple.
+
+- If you have outliers, LEast Square changes its boundary so its sensible to outliers
+- Logistic Regression is not, it kept the original boundary
+
+
+## Gradient Descent: Variants 
+
+> Note, because we saw that the [Error](#error) of the Log-likelihood of Logistic Regression cannot be solved analytically then we turn into gradient descent
+
+<center>![](2023-10-03-18-37-13.png){.w350}</center>
+
+<pre></pre>
+
+Because the above summation is expensive then we got variants.
+
+- **Batch:** Use all N data points
+- **Stochastic:** Use one data point to approximate sum  
+Here we pick a random point $i$ and we multiply by $N$ to replicate the magnitude of learning rate. This is to keep same scale as the full gradient descent formula we see above. In other words this is just to conserve the magnitude of the $\eta$ value
+
+<center>![](2023-10-03-18-46-48.png){.w350}</center>
+
+- **Mini-Batch:** Use B data points where 1 < B < N. Usually B much less than N (B << N)
+
+<center>![](2023-10-03-18-47-54.png){.w350}</center>
+
+### Gradient Descent: Variants Performance
+
+<center>![](2023-10-03-18-51-55.png){.w400}</center>
+
+## Gradient Calculation
+
+<center>![](2023-10-03-19-36-33.png){.w300}</center>
+
+<center>![](2023-10-03-19-36-56.png){.w350}</center>
+
+<center>![](2023-10-03-19-41-28.png){.w450}</center>
+
+<center>![](2023-10-03-19-39-58.png){.w450}</center>
+
+The answer look identical to the one proposed for the perceptron in our prev [post](../2023-10-03_the-perceptron/#perceptron-learning-as-gradient-descent)
+
+<center>![](2023-10-03-21-16-01.png){.w350}</center>
+
+- The difference with the perceptron its that the update for the weights its softer. 
+- The Gradient descent with logistic regresion will keep updating until $t_i-\sigma(\textbf{w}_t^T\textbf{x}_i)$ is close to zero, whereas the perceptron because of this $f(w^T\phi)>0$ condition will be: $t_i-\sigma(\textbf{w}_t^T\textbf{x}_i)$ this is close enough (review the inequality [post](../2023-10-03_the-perceptron/#the-perceptron-model)) to zero then we do not update the weight.   
+
+##  Stochastic Gradient Descent
+
+Here the perceptron choose only misclassified, here in Stochastic Gradient Descent we would pick any point randomly. Even if it's well classified already.
+
+<center>![](2023-10-03-21-31-30.png){.w450}</center>
+
+
+Now the question is: how do I set this parameter $\eta$ the learning rate. The answer to that is a method that help us find that. It's called Newton-Raphson 
+
+## Setting learning rate
+
+It is a difficult task:
+
+- too small —> long time to reach minimum
+- too big —> bounce around and never converge
+
+## Idea: Use 2nd Derivative
+
+The second derivative corresponds to the curvature of the loss function, thus
+
+This captures the notion of curvature
+
+<center>![](2023-10-03-22-31-31.png){.w400}</center>
+
+- **Small second derivative --> large learning rate**  
+So if these two purple arrows are pointing in the same direction it means there their second derivative is small because there is no much change which then means we can increase the learning rate because there is still a curvature meaning we have not reach to global minimum
+
+- **Large second derivative --> small learning rate**  
+In the second case with the green arrows, this time the second derivative is large because there is a substantial change from pointing down to now pointing in almost horizontal direction. Then that means that we are getting closer to a deep and this we want to make the learning rate small
+
+### Computing 2nd Derivative (for scalar)
+<center>![](2023-10-03-22-37-44.png){.w400}</center>
+
+Here the second derivative $\frac{\partial^2}{\partial w_t^2}$ represents the curvature of the loss function so the answer that we will show below is just the graph of how this curvature would look like.
+
+<center>![](2023-10-03-22-56-20.png){.w400}</center>
+
+1. The error curvature would be maximized when the model is uncertain. The intuition is that if you have a lot of points next to the decision boundary then   
+
+2. It is small when the model is certain. 
+
+<center>![](2023-10-03-23-43-59.png){.w400}</center>
+
+Where we have introduce the normalization term
+
+## Steepest DEscent vs Newton-Raphson
+
+<center>![](2023-10-03-23-48-19.png){.w400}</center>
+
+<pre></pre>
+
+Thus, we see tha the Newton-Raphson takes a more direct path because it considers the curvature of the error loss.
+
+:::{.callout-note collapse="false"}
+# Derivative of vector^T with respect to vector
+
+The notation $\partial (x^T) / \partial x$ represents the derivative of a row vector $x^T$ with respect to a column vector $x$. In this context, the derivative is a Jacobian matrix.
+
+If $x$ is an $n$-dimensional column vector and $x^T$ is the corresponding $n$-dimensional row vector, then the derivative $\partial (x^T) / \partial x$ is a $n \times n$ Jacobian matrix.
+
+Each element $(\partial (x^T)_i / \partial x_j)$ of this Jacobian matrix is the partial derivative of the $i$-th element of $x^T$ with respect to the $j$-th element of $x$. Since each element of $x^T$ is just a scalar, this derivative is straightforward to calculate:
+
+$(\partial (x^T)_i / \partial x_j) = \delta_{ij}$
+
+where $\delta_{ij}$ is the Kronecker delta, which is equal to 1 when $i = j$ and 0 otherwise.
+
+Therefore, the Jacobian matrix $\partial (x^T) / \partial x$ is a diagonal matrix with 1s on the diagonal and 0s off the diagonal. It's an identity matrix of size $n \times n$.
+:::
+
+## Newton-Raphson Iterative Optimization
+
+<center>![](2023-10-04-00-06-19.png){.w400}</center>
+
+<center>![](2023-10-04-00-07-50.png){}</center>
+
+### What is the H?
+
+<center>![](2023-10-04-00-15-24.png){.w350}</center>
+<pre></pre>
+
+The blue highlighted section means that we have taken the second derivative over the error of the log-likelihood which has a minus hence why the blue hihglited parts vary in order.
+
+## Newton-Rpahson Iterative Optimization
+
+<center>![](2023-10-04-00-20-39.png){.w400}</center>
+
+<!-- ## Iterative Reweighted Least Squares
+
+One way of thinking Raphson its like Iterative Reweighted Least Squares -->
+
+
+
+
+## FAQ
+
+:::{.callout collapse="false"}
+# What are linear features in binary classification?
+
+In binary classification, linear features refer to features that can be effectively separated by a straight line (or a hyperplane in higher dimensions) when plotting them on a graph. These features are sometimes called linearly separable features because you can draw a line that cleanly separates the two classes, making it easy for a linear classifier like logistic regression or a linear support vector machine (SVM) to classify the data accurately.
+
+Here's an example to illustrate linear features in binary classification:
+
+Suppose you are working on a binary classification problem to predict whether an email is spam (class 1) or not spam (class 0) based on two features: the number of words in the email and the number of times the word "free" appears in the email.
+
+You collect data on various emails, and when you plot this data on a graph with the number of words on the x-axis and the frequency of the word "free" on the y-axis, you notice that spam emails tend to have fewer words and a higher frequency of the word "free," while non-spam emails tend to have more words and a lower frequency of the word "free."
+
+Here's a simplified example:
+
+- Spam Email A: 10 words, "free" appears 8 times
+- Spam Email B: 12 words, "free" appears 10 times
+- Non-Spam Email X: 20 words, "free" appears 2 times
+- Non-Spam Email Y: 18 words, "free" appears 1 time
+
+If you plot these data points on a graph, you might observe that you can draw a straight line that effectively separates the spam emails (class 1) from the non-spam emails (class 0). In this case, the number of words and the frequency of the word "free" are linear features, as they allow for a linear separation of the two classes.
+
+Here's what the separation might look like (though in reality, the data might be more complex):
+
+```{python}
+import matplotlib.pyplot as plt
+
+# Data points
+spam_emails = [(10, 8), (12, 10)]
+non_spam_emails = [(20, 2), (18, 1)]
+
+# Unpack the data into separate lists
+spam_x, spam_y = zip(*spam_emails)
+non_spam_x, non_spam_y = zip(*non_spam_emails)
+
+# Create the scatter plot
+plt.scatter(spam_x, spam_y, label='Spam Emails', marker='*')
+plt.scatter(non_spam_x, non_spam_y, label='Non-Spam Emails', marker='o')
+
+# Add labels and legend
+plt.xlabel('Number of Words')
+plt.ylabel('Frequency of "free"')
+plt.legend()
+
+# Add a straight line for separation (in this case, manually defined)
+plt.plot([15, 15], [0, 12], linestyle='--', color='gray')
+
+# Set plot limits and display
+plt.xlim(0, 25)
+plt.ylim(0, 12)
+plt.title('Linearly Separable Data for Binary Classification')
+plt.grid(True)
+plt.show()
+
+```
+
+In this example, you can see that a straight line can be drawn to separate the two classes, making the features (number of words and frequency of "free") linear features for this binary classification problem.
+:::
+
+
+
+
+
+
+

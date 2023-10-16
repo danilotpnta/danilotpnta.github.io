@@ -196,3 +196,7 @@ h3, .h3, h4, .h4 {
 h1.title {
     font-size: 37px;
 }
+
+.grey_text{
+    color: lightgray;
+}

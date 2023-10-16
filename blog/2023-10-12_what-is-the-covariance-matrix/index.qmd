@@ -1,0 +1,116 @@
+---
+title: "The Covariance Matrix and relation with PCA"
+description: "Description of this Post"
+date: "2023-10-12"
+categories: [All, TAGS]
+toc: false
+jupyter: git-pages
+code-fold: true
+number-sections: true
+---
+> Recall: Variance measures the variation of a single random variable (like the height of a person in a population), whereas covariance is a measure of how much two random variables vary together (like the height of a person and the weight of a person in a population)
+
+In a 2D dimensional feature space with 10 data points, the covariance matrix provides a measure of the relationship between the two features (dimensions) and how they vary together. The covariance matrix is a 2x2 matrix that quantifies the degree to which the two features change together
+
+Let's say you have two features, $\textbf{x}$ and $\textbf{y}$, and you have 10 data points with values (x_1, y_1), (x_2, y_2), ..., (x_10, y_10). The covariance matrix Σ is calculated as:
+
+$$
+\Sigma = \begin{bmatrix}
+\text{cov}(\textbf{x}, \textbf{x}) & \text{cov}(\textbf{x}, \textbf{y}) \\
+\text{cov}(\textbf{y}, \textbf{x}) & \text{cov}(\textbf{y}, \textbf{y})
+\end{bmatrix}
+$$
+
+Where:
+
+- cov($\textbf{x}$, $\textbf{x}$) is the covariance between feature $\textbf{x}$ and itself (the variance of $\textbf{x}$).
+- cov($\textbf{y}$, $\textbf{y}$) is the covariance between feature $\textbf{y}$ and itself (the variance of $\textbf{y}$).
+- cov($\textbf{x}$, $\textbf{y}$) and cov($\textbf{y}$, $\textbf{x}$) are the covariances between feature $\textbf{x}$ and feature $\textbf{y}$.
+
+The covariances of two random variables (the two features) are calculated using the formula:
+
+$$
+\text{cov}(\textbf{x}, \textbf{y}) = \frac{1}{N} \sum_{n=1}^{N} (x_n - {\bar{x}})({y}_n - \bar{y})
+$$
+
+Where:
+
+- $x_n $ is a scalar value i.e. on the x-axis (1st feature: number of flors of the house)
+- $y_n$ is a scalar value i.e. on the y-axis (2nd feature: size in $m^2$ of the house)
+- $\bar{x}$ and $\bar{y}$ are scalars means of the 1D-features vectors
+
+**Note:**
+
+- $\Sigma$ the covariance matrix is symetric which means $\text{cov}(\textbf{x}, \textbf{y}) = \text{cov}(\textbf{y}, \textbf{x})$
+- The diagonal entries of the covariance matrix are the variances and the other entries are the covariances. 
+
+The calculation for the covariance matrix can be also expressed as:
+
+$$
+\Sigma = \frac{1}{N} \sum_{n=1}^{N} (\textbf{x}_n - \mathbf{\bar{x}})(\textbf{x}_n - \mathbf{\bar{x}})^T
+$$
+
+Where:
+
+- $\textbf{x}_n \in \mathbb{R}^{Dx1}$ where $D$ is the number of features (or number of dimensions i.e. with two features then 2-dimensions, with three features 3-dimensions)
+- $\mathbf{\bar{x}} \in \mathbb{R}^{Dx1}$ 
+
+Below some example: 
+
+<center>![](2023-10-12-17-19-45.png){}</center><pre></pre>
+
+## Python Example
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+plt.style.use('ggplot')
+# plt.rcParams['figure.figsize'] = (12, 8)
+
+# Normal distributed x and y vector with mean 0 and standard deviation 1
+x = np.random.normal(0, 1, 500)
+y = np.random.normal(0, 1, 500)
+X = np.vstack((x, y)).T
+
+plt.scatter(X[:, 0], X[:, 1])
+plt.title('Generated Data')
+plt.axis('equal')
+plt.show()
+```
+
+If two feature vectors are independent (or uncorrelated) the matrix matrix would be:
+
+$$
+\Sigma = \begin{bmatrix}
+\text{cov}(\textbf{x}, \textbf{x}) & 0 \\
+0 & \text{cov}(\textbf{y}, \textbf{y})
+\end{bmatrix}
+$$
+
+
+If this data was generated with unit cov(x,x) and unit cov(y,y) then we have a Identity covariance matrix
+
+<center>![](2023-10-12-17-33-35.png){.w300}</center><pre></pre>
+
+- As x1 increases x2 increases too, because we have 0.8. We have a positive correlation on the data.
+
+
+## Relation with PCA
+
+When you multiply the $\Sigma$ covariance matrix times a vector and then again and again you end up with a vector that points to directions where you have the greatest variance in the data. So like where all points are spread out. 
+
+<center>![](2023-10-12-17-41-50.png){}</center><pre></pre>
+
+- If I multiply the vector $e2$ by the cov matrix it will not turn but will get longer and longer but will point in the same direction 
+- Thus we want to find some vector $e$ that when we multiply it with the cov matrix do not change direction. The vectors are called eigenvectors and the lambdas so the scalar version will be called eigenvalues. 
+- The later point will be called our principal components which are the eigenvectors with the largest eigenvalues
+
+<center>![](2023-10-12-17-52-01.png){}</center><pre></pre>
+
+<center>![](2023-10-12-17-57-37.png){}</center><pre></pre>
+
+
+
+

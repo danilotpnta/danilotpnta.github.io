@@ -1,0 +1,113 @@
+---
+title: "Matrix Calculus & Derivatives Ax"
+description: "Derivatives of vectors, matrix and other utils"
+date: "2023-09-26"
+categories: [All, Education, TAGS, Vector Calculus]
+toc: false
+callout-appearance: minimal
+---
+
+## Transpose Properties
+
+If $\Sigma$ is symmetric:
+
+$$
+\begin{align}
+\Sigma = \Sigma^T\\
+\end{align}
+$$
+
+The inverse of a symmetric matrix is also symmetric
+
+$$
+\begin{align}
+(\Sigma^{-1})^T = (\Sigma^T)^{-1} = \Sigma^{-1} \label{cov_trans_inv} \\
+\end{align}
+$$
+
+:::{.callout-note collapse="false"}
+
+# Proof Eq. $\ref{cov_trans_inv}$
+
+```{python}
+#| code-fold: true
+import numpy as np
+
+# Create a symmetric matrix
+A = np.array([[4, 1, 2],
+              [1, 5, 3],
+              [2, 3, 6]])
+
+# Check if A is symmetric
+is_symmetric = np.allclose(A, A.T)
+
+if is_symmetric:
+    # Calculate the inverse of the symmetric matrix
+    A_inv = np.linalg.inv(A)
+
+    print("Original symmetric matrix A:")
+    print(A)
+
+    print("\nInverse of A:")
+    print(A_inv)
+else:
+    print("The matrix A is not symmetric.")
+```
+Here we have shown that the inverse of a symmetric matrix its also a symmetric matrix. It is not the same because doing the inverse you do other calculations but is symmetric around the diagonal
+
+:::
+## Partial Derivatives
+
+**Vectors:**
+
+$$
+\begin{align}
+\frac{\partial (\textbf{v}^T \textbf{v})}{\partial\textbf{v}} &= 2\textbf{v}^T\\
+\frac{\partial (\textbf{v} \textbf{v}^T)}{\partial\textbf{v}} &= 2\textbf{v}^T\\
+\frac{\partial (\textbf{x}^T \textbf{w})}{\partial\textbf{x}} &= \textbf{w}^T\\
+\frac{\partial (\textbf{w}^T \textbf{x})}{\partial\textbf{x}} &= \textbf{w}^T\\
+\end{align}
+$$
+
+**Matrix:**
+$$
+\begin{align}
+\frac{\partial (\textbf{A} \textbf{x})}{\partial\textbf{x}} &= \textbf{A}\\
+\frac{\partial (\textbf{x}^T \textbf{A})}{\partial\textbf{x}} &= \textbf{A}^T\\
+\end{align}
+$$
+
+**Wrt Vector:**
+$$
+\begin{align}
+\frac{\partial(\textbf{x}^T\textbf{A}\textbf{x})}{\partial\textbf{x}} =& \textbf{x}^T(\textbf{A}+\textbf{A}^T)\\
+\frac{\partial(\textbf{w}^T\textbf{X}^T\textbf{y})}{\partial\textbf{w}} =& \textbf{y}^T\textbf{X}\\
+\frac{\partial(\textbf{y}^T\textbf{X}\textbf{w})}{\partial\textbf{w}} =& \textbf{y}^T\textbf{X}\\
+\end{align}
+$$
+
+**Wrt Matrix:**
+$$
+\begin{align}
+\frac{\partial(\textbf{x}^T\textbf{A}\textbf{x})}{\partial\textbf{A}} =& \textbf{x}^T\textbf{x}^T\\
+\frac{\partial(\textbf{a}^T\textbf{A}\textbf{b})}{\partial\textbf{A}} =& \textbf{a}\textbf{b}^T\\
+\frac{\partial(\textbf{a}^T\textbf{A}^T\textbf{b})}{\partial\textbf{A}} =& \textbf{b}\textbf{a}^T\\
+\end{align}
+$$
+
+
+**Special:**
+$$
+\begin{align}
+\frac{\partial \textbf{a}^T\textbf{X}\textbf{b}}{\partial\textbf{X}} &= \textbf{a}\textbf{b}^T\\
+\frac{\partial \textbf{a}^T\textbf{X}^{-1}\textbf{b}}{\partial\textbf{X}} &= -(\textbf{X}^{-1})^T\textbf{a}\textbf{b}^T(\textbf{X}^{-1})^T\\
+& = - (\textbf{X}^{-1})\textbf{a}\textbf{b}^T(\textbf{X}^{-1})\quad &\text{If $\textbf{X}$ is symmetric} \nonumber \\
+\frac{\partial (\textbf{x}-\textbf{A}\textbf{s})^T\textbf{W}(\textbf{x}-\textbf{A}\textbf{s})}{\partial\textbf{A}} &= -2\textbf{W}(\textbf{x}-\textbf{A}\textbf{s})\textbf{s}^T \quad &\text{If $\textbf{W}$ is symmetric} \\
+\frac{\partial (\textbf{x}-\textbf{A}\textbf{s})^T\textbf{W}(\textbf{x}-\textbf{A}\textbf{s})}{\partial\textbf{s}} &= -2(\textbf{x}-\textbf{A}\textbf{s})^T\textbf{W}\textbf{A} \quad &\text{If $\textbf{W}$ is symmetric} \\
+\frac{\partial (\textbf{x}-\textbf{s})^T\textbf{W}(\textbf{x}-\textbf{s})}{\partial\textbf{s}} &= -2(\textbf{x}-\textbf{s})\textbf{W}^T \quad &\text{If $\textbf{W}$ is symmetric} 
+\end{align}
+$$
+
+
+
+

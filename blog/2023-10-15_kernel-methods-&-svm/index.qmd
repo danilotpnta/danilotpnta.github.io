@@ -1,0 +1,338 @@
+---
+title: "Kernel methods & SVM"
+description: "Lecture Notes UvA on 9-10-2023"
+date: "2023-10-15"
+categories: [All, Education, TAGS]
+toc: false
+jupyter: git-pages
+code-fold: true
+number-sections: true
+---
+
+## Kernel Methods
+
+In Unsupervised Learning we assume a latent target. In supervised we have a target variable in Unsupervised we assume there is some relation between a latent variable $z$ and our datapoints.
+
+**Supervised Learning:**
+
+1. Regression: is continuous, the target $\in \mathbb{R}$ 
+
+    - **Probabilistic modelling:**
+        - In regression we want to have a continuous target variable  
+        - Find model parameters via ML, MAP (or use fully Bayesian)
+        - If we want to avoid overfilling we include a prior
+        <center>![](2023-10-15-00-31-35.png){.w250}</center><pre></pre>
+2. Classification: is discrete, the target $\in \{C1,...C_k\}$ finite set of options
+    - **Probabilistic modelling:**
+        - We also predict distributions. Here we want to predict a probability per each class ie. generalized bernoulli distribution
+        - Find model parameters via ML, MAP (or use fully Bayesian)    
+        - If we want to avoid overfilling we include a prior 
+        <center>![](2023-10-15-00-29-12.png){.w250}</center><pre></pre> 
+
+**Unsupervised Learning:**
+
+1. Clustering: is discrete. Here there is some latent classes $z$
+    - Here we can think of unsupervised classification i.e. K-Means Clustering 
+2. Dimensionality Reduction: is continuous. PCA assumes a continuous latent variable
+    - Here we think about an unsupervised regression 
+
+
+**Probabilistic methods:**
+
+- Define (predictive) distributions
+- Find model parameters via ML, MAP (or use fully Bayesian)
+
+**Discriminative methods:**
+
+- Here we no think about probabilities we just want to make decisions
+- It is more algorithmic in nature
+
+**Similarities between methods:** 
+
+Discriminative methods (left) & Probabilistic methods (Right)
+
+- Least Square Regression <-> MLE Gaussian predictive distribution
+- Ridge Regression <-> MAP
+- K-Means (hard assignment) <-> Gaussian Mixture Models (soft assigment dot point of color green but also red bluish)
+
+> **New**: we will add parametric and non-parametric models
+
+**Parametric models:**
+
+- Linear models $y(x)=Wx+b$
+- Generalized Linear models $y(x)=\sigma(Wx+b)$
+- NNs i.e our weights W and bias b
+- Distribution classes (Gaussian, Bernoulli,..) i.e parametrized by mean, cov, etc
+- Basis functions (this is like a hyperparameter)
+
+**Non-parametric models:**
+
+- Kernel methods: does not have parameters but still does predictions
+- SVM
+
+> **Tool** in Machine learning is optimization
+
+**Optimization:**
+
+- *Convex* (one solution: we can solve it analytically) vs *non-convex* (we used numerical aka brute force solutions like SGD) 
+- Find stationary points (solve derivative =0)
+- Analytic solutions vs numerical (SGD)
+- Method of Lagrange multipliers (used because sometimes our optimization needs to obey some constraint)
+    - Equality constraint optimization
+    - Inequality constraint optimization
+
+## So Far: Parametric Models
+
+<center>![](2023-10-15-10-31-31.png){.w550}</center><pre></pre>
+
+- We teak the parameters highlighted in green color
+
+## Parametric vs Non-Parametric Models
+<center>![](2023-10-15-10-38-54.png){.w550}</center><pre></pre>
+- In parametric you train then discard data and use weights W or other parameters, in Non-parametric you do predictions but you always carry the data to kae such predictions.
+    - Because carrying big data is not efficient then you may use SVM
+
+- Here we define infinitely number of functions spaces $M=\infty$      
+This means we have a continuos representation of our space. We can sample as finely as we want, so we can discretized and the index would be one function, because $M=\infty$ then we adjust this index to the sampling rate to make it more or less smother
+
+## Non-Parametric Kernel Methods
+<center>![](2023-10-15-10-56-47.png){.w550}</center><pre></pre>
+Ridge regression can be defined in kernelize form without using explicit using basis functions.
+
+- **Primal** for the parametric case
+- **Dual** for the non-parametric representation of the model
+
+
+For linear models:
+
+- The kernel it just computing the similarity between $x$ and $x'$ 
+
+<center>![](2023-10-15-11-26-12.png){.w550}</center><pre></pre>
+
+## Kernelized Ridge Regression
+
+<center>![](2023-10-15-11-26-58.png){.w550}</center><pre></pre>
+
+<center>![](2023-10-15-11-28-35.png){.w550}</center><pre></pre>
+
+<center>![](2023-10-15-11-29-00.png){.w550}</center><pre></pre>
+
+## Primal vs Dual/Kernel Approach
+
+<center>![](2023-10-15-11-30-21.png){.w550}</center><pre></pre>
+
+## Kernel Trick/Kernel Substitution
+
+:::{.callout-note} 
+# How it works? 
+
+The kernel trick its like calculating similarities with the input datapoint, the prediction would be heavily influenced based on point pairs that are similar
+
+The kernel trick is whenever I see the form $\textbf{x}_n^T \textbf{x}_n$ (instead of using basis functions) we will **replace** it with the kernel 
+
+$$
+\begin{align}
+\textbf{k}(\textbf{x}_n^T, \textbf{x}_m) = \textbf{K}_{nm}
+\end{align}
+$$
+
+We do not know what kernel will be but we can **prove** that if the kernel is symetric positive semi definite that there are always corresponding basis function $\mathbb{\phi}(\textbf{x}_n)^T\mathbb{\phi}(\textbf{x}_n)$ 
+
+So basically we find $\mathbb{\phi}(\textbf{x}_n)^T\mathbb{\phi}(\textbf{x}_n) = \textbf{k}(\textbf{x}_n^T, \textbf{x}_m) = \textbf{K}_{nm}$
+:::
+
+<center>![](2023-10-15-13-12-48.png){.w550}</center><pre></pre>
+
+If a choice any basis function it induces a kernel simply by computing inner product in the new feature space 
+
+## Deriving the corresponding feature vector
+
+<center>![](2023-10-15-14-24-31.png){.w550}</center><pre></pre>
+
+For every positive definite kernel there exist a set of basis from $R^d$ to $RM^$. Meaning there would be a set of basis which means instead of solving for the basis we can just get a valid kernel and not learn the basis
+
+:::{.callout-note}
+# Why do I want to go from basis (finite) to valid kernels (can be infinitely? 
+- This is important because now I do not need to limit myself to find a a dimensional feature descriptors i.e basis in $R^d$ (i.e basis like polynomials basis,  or gaussians basis) now I can have a valid kernel that can basically be infinitely in basis functions $M = \infty$ 
+
+Sidenote: there is more chance to overfilling 
+:::
+
+### Note on infinite dimensional feature space of Gaussian kernels
+
+<center>![](2023-10-15-14-49-56.png){.w550}</center><pre></pre>
+
+## Kernel Trick/ Kernel substitution
+
+<center>![](2023-10-15-14-49-32.png){.w550}</center><pre></pre>
+
+
+## Example: polynomial kernel
+
+<center>![](2023-10-15-13-50-21.png){.w550}</center><pre></pre>
+
+This shows that if we have this polynomial kernel then that we can decompose it into $\mathbb{\phi}(\textbf{x}_n)^T\mathbb{\phi}(\textbf{x}_n)$ 
+
+Where: $\mathbb{\phi}(\textbf{x}) \in \mathbb{R}^{6}$
+
+## Examples of valid Kernels
+
+<center>![](2023-10-15-13-54-26.png){.w550}</center><pre></pre>
+
+- The Gaussian kernel produces infinitely $M = \infty$ many basis functions
+
+
+## Support vector machines
+
+SVM are kernel methods but with sparse solutions. MEaning some $a_n = 0$ so that we do not compute all datapoints but only relevant. The ones that are relevant are called **suport vectors** 
+
+<center>![](2023-10-15-18-20-46.png){.w550}</center><pre></pre>
+
+- We are guaranteed to find a solution because it is a Convex optimization problem
+
+## Linearly Separable dataset
+
+<center>![](2023-10-15-18-23-40.png){.w550}</center><pre></pre>
+
+- One way to tell whether a classifier is better than other is to look at how far us the margin from a closes point to the decision boundary. If the margin is large then I have a stable classifier.
+
+> **Goal:** we want to maximize the margin to have a stable classifier. To classify the size of the margin we can use some linear projections to the boundary we see this in the next topic
+
+<center>![](2023-10-15-18-24-30.png){.w550}</center><pre></pre>
+
+The graph above is taking into account that we classify the data correctly in two parts so the blue points in one side the red in another.
+
+## Maximum Margin Classifier
+
+Now that we have a expression for the margin our objective is to **maximize** this margin
+
+<center>![](2023-10-15-19-42-31.png){.w550}</center><pre></pre>
+
+- In this case we have $r_n$ so we could tune $w$ to obtain the maximum margin to a point. How do we do this? we follow:
+
+<center>![](2023-10-15-21-31-23.png){.w550}</center><pre></pre>
+
+1. Identify the closest point. The $\kappa$ (kappa) its introduced to say we can amplify our distance we can i.e have the distance in kiloliters or miles etc.
+2. To resolve the ambiguity of measuring in kilometers or in miles or so for, we set our $||\kappa \textbf{w}|| = 1$. This is essentially setting the unit which you want to compute the distance. You are saying then the closest point should have unit 1 this is a **constraint**   
+    - From this step it follows that all the points would be  my prediction times label $t_n \, y_n$ will be greater or equal to $1$
+3. We maximize the size of the margin given by 1/|W| with the inequality constraint
+
+<center>![](2023-10-15-21-44-42.png){.w550}</center><pre></pre>
+
+:::{.callout-note}
+# Maximum Margin Classifier: Goal
+- Maximize $1\\textbf{w}$ means minimize $\frac{1}{2}||\textbf{w}||^2$ 
+- We have $N$ constraints because we need to go over each datapoint
+- It is a convex quadratic optimization problem with a quadratic loss and linear constraint. We solve this by Lagrange Multipliers
+::::
+
+## Constrained optimization (inequality constraint)
+
+<center>![](2023-10-16-00-53-20.png){.w550}</center><pre></pre>
+<center>![](2023-10-16-00-54-51.png){.w550}</center><pre></pre>
+<center>![](2023-10-16-00-54-43.png){.w550}</center><pre></pre>
+
+- Now the solution should lie within the yellow region
+
+There is two cases:
+1. The objective could lie inside the yellow region. Then I am doing maximization without any constriant
+2. If the solution lies outside then the solution would lie on the perpendicular to the yellow boundary. See point $x_A$ where there is an arrow pointing to $x$ (the optimum solution)  
+
+**Before**
+
+- We solve the lagrange multiplier, derive with respect to parameter ie. $w$ then derive wrt to $\lambda$ and then replace this solution into $w$.
+
+**Now** (we need additional requirements):
+
+1. Define Primal Lagrangian function: $L = f(x) - constraint$ 
+2. Compute the dual lagrangian 
+3. With solvers solve the dual problem
+
+- Sidenote: dual optimizer (is convex) gives you optimal solutions, it is a way of convexifiyng a problem
+
+You need to think that the dual gives you an upper bound, and you are lowering this by setting $\mu$ as much as possible 
+
+## SVM: Maximum Margin Classifier
+
+- For a maximization problem we $+$ (sum) our constraint
+- For a minimization problem we $-$ (subtract) our constraint  
+Then you approach the limit from below
+
+### Calculating the Lagrange
+
+
+<center>![](2023-10-16-12-37-05.png){.w550}</center><pre></pre>
+
+:::{.callout-note}
+# Steps to compute the lagrange
+- **Goal:** we want to obtain optimal values for $\textbf{w}^*$ and $b^*$
+
+
+1. Write down:
+    - Primal Lagrange function: $L = f(x) - constraints$
+    - [Write the KKT conditions]{.grey_text}
+2. Derive the Dual Lagrangian by setting $\frac{\partial L}{\partial \textbf{w}}=0$, $\frac{\partial L}{\partial b}=0$  
+3. [Let the machine compute what is the argmax $a$ so that we obtain our parameters $\textbf{w}^*$ and $b^*$]{.grey_text}
+:::
+
+1. For the case of SVM we start by step 1. 
+
+<center>![](2023-10-16-13-08-50.png){.w550}</center><pre></pre>
+
+
+We write the primal Lagrange with the constriant. Also, we introduce the dual variables (lagrange multipliers) $\textbf{a}_n$ meaning for every each datapoint we want it to lie in the proper side of the boundary. This condition that $\textbf{a}_n$ imposes comes from the **KKT** conditions
+
+2. We solve for $\frac{\partial L}{\partial \textbf{w}}=0$, $\frac{\partial L}{\partial b}=0$  and rewrite the Primal to the Dual Lagrangian
+ 
+<center>![](2023-10-16-13-09-11.png){.w550}</center><pre></pre>
+
+Once we have those parameters we plug in again in the Lagrange in step 1. Then the function will be dependent on $a_n$ which is then called the **Dual Lagrangian**
+
+<center>![](2023-10-16-13-47-54.png){.w550}</center><pre></pre>
+
+> **Remember** Dual Lagrangian would be convex so we know there would be unique solution
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+## Clarification of problems
+
+**Convex optimization problems**
+
+<details><summary>Linear Regression</summary>
+Linear regression with L2 regularization (ridge regression) and L1 regularization (lasso regression) are convex optimization problems. Ridge regression minimizes the sum of squared errors plus the L2 norm of the coefficients, while lasso minimizes the sum of squared errors plus the L1 norm of the coefficients
+</details>
+
+<details><summary>Logistic Regression with L1 or L2 Regularization</summary>
+Similar to linear regression, logistic regression can incorporate L1 or L2 regularization terms, making it a convex optimization problem
+</details>
+
+<details><summary>SVM</summary>
+We can use the Dual Lagrangian together with the kernel trick so that we find a convex solution. The dual isolates the $a_n$ and also $x_n x_n^T$ so then in the end we use the kernel trick and because we can express it with gaussian which where infinitely then we know we will find a solution
+
+</details>
+
+<details><summary>Quadratic Discriminant Analysis (QDA)</summary>
+QDA is a supervised learning algorithm with a quadratic decision boundary and can be formulated as a convex optimization problem
+</details>
+
+<details><summary>Perceptron</summary>
+</details>
+
+**Non-Convex optimization problems:**
+
+<details><summary>K-Means Clustering</summary>
+</details>
+<details><summary>PCA</summary>
+</details>
+<details><summary>Neural Networks</summary>
+because of the non-linearity introduced by the activation functions
+</details>

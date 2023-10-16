@@ -7,15 +7,149 @@ number-sections: true
 toc: false
 ---
 
-## Probability Theory Equations
+<h1>Regression</h1>
 
+This section focus on two weeks of the course. For Classification continue to this [post](../2023-09-25_classification-and-decision-theory/).
+
+## Rules of Probability Theory 
+Sum Rule used in Marginalization
+$$
+\begin{align}
+p(x) &= \sum_{y \in Y }^{} p(x,y) \\
+     &= \sum_{y \in Y }^{} p(x|y)p(y) \nonumber
+\end{align}
+$$
+
+Product Rule used in the Join Probability
+$$
+\begin{align}
+p(x,y) = p(x|y)p(y)
+\end{align}
+$$
+
+
+## Expectation Rules
+$$
+\begin{align}
+    \mathbb{E}[f(x)+g(x)] &= \mathbb{E}[f(x)] + \mathbb{E}[g(x)]\\
+    \mathbb{E}[cf(x)] &= c\mathbb{E}[f(x)]\\
+    \mathbb{E}[c] &= c\\
+    \mathbb{E}[\mathbb{E}[f(x)]] &= \mathbb{E}[f(x)]^2\\
+\end{align}
+$$
+
+
+## Probability Theory Equations
+**Expectancies**
+$$
 \begin{align}
     \mathbb{E}[x] &= \int_{x}x \, p(x) \, dx\\
     var[x] &= \mathbb{E}[(x-\mathbb{E}[x])^2] \nonumber\\
     &=\mathbb{E}[f(x)^2] - \mathbb{E}[f(x)]^2\\
-    cov[x,y] &= \mathbb{E}[xy]-\mathbb{E}[x]\mathbb{E}[y]\\  
-    \mathcal{N}(x|\mu , \sigma^2) &= \frac{1}{\sqrt{2 \pi  \sigma^2}} \exp^{\{-\frac{1}{2 \sigma^2}(x-\mu)^2\}}\\
 \end{align}
+$$
+
+When cov for two **scalar variables**
+$$
+\begin{align}
+cov[x,y] &= \mathbb{E}[xy]-\mathbb{E}[x]\mathbb{E}[y]   
+\end{align}
+$$
+
+**Covariance Matrix:** When $\textbf{x}$, $\textbf{y}$ are vectors of random variables 
+$$
+\begin{align}
+cov[\textbf{x},\textbf{x}] &= \mathbb{E}[(\textbf{x}-\mathbf{\mu})(\textbf{x}-\mathbf{\mu})^T]\\  
+cov[\textbf{z},\textbf{z}] &= \mathbb{E}[\textbf{z}\textbf{z}^T]-\mathbb{E}[\textbf{z}]\mathbb{E}[\textbf{z}]\\ 
+\end{align}
+$$
+
+
+**Gaussians:** scalar and for a matrix
+$$
+\begin{align}
+\mathcal{N}(x|\mu , \sigma^2) &= \frac{1}{\sqrt{2 \pi  \sigma^2}} \exp^{\{-\frac{1}{2 \sigma^2}(x-\mu)^2\}}\\
+    \mathcal{N}(x|\mu , \Sigma ) &= (2 \pi)^{-k/2} |\Sigma|^{-1/2} \exp^{\{-\frac{1}{2}(x-\mu)^T \Sigma^-1 (x-\mu)\}}\\
+\end{align}
+$$
+
+This is our model. This is what we estimate:
+$$
+\begin{align}
+y(\underline{x})
+\end{align}
+$$
+
+The observations can be sampled from (signal + noise): 
+$$
+\begin{align}
+t = sin(\underline{x}) + \varepsilon
+\end{align}
+$$
+
+Data Pair: For a given $x$, I can get a target value $t$ (the observation) 
+$$
+\begin{align}
+(t, x)  
+\end{align}
+$$
+
+For instance, we have a sampled data D, and for each $x$ we have seen $t$ and that is our excel file we can work with
+
+## Bayessian Linear Regression
+We do not want to average over models but this time we want to find the best parameters over only one Data set (without splitting it) and change only our parameters.
+
+For this we would consider the posterior. So what is the probability that this parameters $w$ represent the actual data.
+
+Goal recover the probability distribution that may have generated this data (the posterior)
+
+### Dimensions
+$$
+\begin{align}
+\underline{t} &\in \mathbb{R}^{Nx1}, \text{ $N$ amount of linear regressions}\\
+\underline{w} &\in \mathbb{R}^{Mx1}, \text{ $M$ amount of parameters}\\
+X &\in \mathbb{R}^{NxD}, \text{ $N$ amount of observ, $D$ amount of models}\\
+% \underline{x_i} &\in \mathbb{R}^{Dx1}, \text{ $i$ the $i_{th}$ experiment} \\
+&= [\underline{x_{1}}, \underline{x_{2}}, ... ,\underline{x_{N}}] \nonumber \\ 
+\underline{x_{1}} &\in \mathbb{R}^{Nx1} = [x_1, x_2,...,x_N]\\
+\underline{\phi}(\underline{x}) &\in \mathbb{R}^{Dx1} \to \mathbb{R}^{Mx1}\\
+\phi_{1}(\underline{x}) &\in \mathbb{R}^{Nx1} \to \mathbb{R}^{1x1}\\
+\Phi &\in \mathbb{R}^{NxM}
+\end{align}
+$$
+
+
+## Sequential Bayesian Learning
+
+Here our goal is to find the parameters of w. So we want to find the values w that discribe best the distribution of our data points meaning we want to find the posterior described as:
+
+$p(w|x_1,t_1, \alpha, \beta)$
+
+- We have a prior, we assume initial values
+- We sample one data point and apply Gaussian distribution to obtain a likelihood
+- With the prior and likelihood we get the posterior (what we want)
+
+## Predictive Distribution
+
+If we are given a new input x', then we want to be able to compute its new distribution meaning we want to compute the new likelihood that looks as follows:
+
+$p(t'|x', X, \underline{t}, \alpha, \beta) = \int p(t'|x', \underline{w}, \beta) p(\underline{w}|X, \underline{t}, \alpha, \beta)dw$
+
+The above equation uses Marginalization over w. That does not mean that it depends on w. It's just a dummy variable it can be another variable thus the predictive distribution does not depend on w.
+
+The second term is the posterior. 
+
+- Here we are given all data points and we get the parameters for w. With that we can get a prior. Those are the assumptions of how the weigths should be. 
+- The predictive probability does not depend on w anymore. It depends on the data, so on the experience gained so far. If a new data point comes in then we would update our predictive distribution
+- For each new point x' we want to fins the new distribution probability for t'
+
+
+
+
+
+
+
+
 
 
 

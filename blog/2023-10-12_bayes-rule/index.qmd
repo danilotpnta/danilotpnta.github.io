@@ -1,0 +1,42 @@
+---
+title: "Bayes Rule Equation"
+description: "Description of this Post"
+date: "2023-10-12"
+categories: [All, Education, TAGS, Probability]
+toc: false
+jupyter: git-pages
+code-fold: true
+number-sections: true
+---
+
+## Bayes Theorem
+$$
+\begin{align}
+p(C|X) = \frac{P(X|C)P(C)}{P(X)} \\
+\end{align}
+$$
+
+Where: 
+
+- $P(C|X)$ is the **Posterior** (Given the data what is the prob of being class C_k)
+- $P(X|C)$ is the **Likelihood** (How the data is distributed given C)
+- $P(C)$ is the **Prior**
+- $P(X)$ is the **Evidence**/ Marginal likelihood
+
+The evidence $P(X)$ can also be decomposed in:
+
+$$
+\begin{align}
+P(X) &= \sum_{j}{}P(X,C_j)\\ 
+     &= \sum_{j}{}P(X|C_j)P(C_j) \\
+\end{align}
+$$
+
+
+
+
+
+
+
+
+
