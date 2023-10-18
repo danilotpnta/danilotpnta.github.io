@@ -574,7 +574,7 @@ How it works?
 <img src="2023-10-15-14-24-31.png" class="w550 img-fluid">
 </center>
 <pre></pre>
-<p>For every positive definite kernel there exist a set of basis from <span class="math inline">\(R^d\)</span> to <span class="math inline">\(RM^\)</span>. Meaning there would be a set of basis which means instead of solving for the basis we can just get a valid kernel and not learn the basis</p>
+<p>For every positive definite kernel there exist a set of basis from <span class="math inline">\(R^d\)</span> to <span class="math inline">\(R^M\)</span>. Meaning there would be a set of basis which means instead of solving for the basis we can just get a valid kernel and not learn the basis</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -691,7 +691,7 @@ Maximum Margin Classifier: Goal
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li>Maximize <span class="math inline">\(1\\textbf{w}\)</span> means minimize <span class="math inline">\(\frac{1}{2}||\textbf{w}||^2\)</span></li>
+<li>Maximize <span class="math inline">\(\frac{1}{\textbf{w}}\)</span> means minimize <span class="math inline">\(\frac{1}{2}||\textbf{w}||^2\)</span></li>
 <li>We have <span class="math inline">\(N\)</span> constraints because we need to go over each datapoint</li>
 <li>It is a convex quadratic optimization problem with a quadratic loss and linear constraint. We solve this by Lagrange Multipliers</li>
 </ul>
@@ -784,18 +784,163 @@ Steps to compute the lagrange
 <img src="2023-10-16-13-09-11.png" class="w550 img-fluid">
 </center>
 <pre></pre>
-<p>Once we have those parameters we plug in again in the Lagrange in step 1. Then the function will be dependent on <span class="math inline">\(a_n\)</span> which is then called the <strong>Dual Lagrangian</strong></p>
+Once we have those parameters we plug in again in the Lagrange in step 1. Then the function will be dependent on <span class="math inline">\(a_n\)</span> which is then called the <strong>Dual Lagrangian</strong>
 <center>
 <img src="2023-10-16-13-47-54.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <blockquote class="blockquote">
-<p><strong>Remember</strong> Dual Lagrangian would be comvex so we know there wwould be aunique solution</p>
+<p><strong>Remember</strong> Dual Lagrangian would be convex so we know there would be unique solution</p>
 </blockquote>
+<p>Now that we have <strong>derived</strong> the dual we can now apply the kernel trick as follows:</p>
+<center>
+<img src="2023-10-17-12-57-17.png" class="w550 img-fluid">
+</center>
+<pre></pre>
 </section>
 </section>
-<section id="clarification-of-problems" class="level2" data-number="17">
-<h2 data-number="17" class="anchored" data-anchor-id="clarification-of-problems"><span class="header-section-number">17</span> Clarification of problems</h2>
+<section id="sparse-solutions-due-to-kkt" class="level2" data-number="17">
+<h2 data-number="17" class="anchored" data-anchor-id="sparse-solutions-due-to-kkt"><span class="header-section-number">17</span> Sparse solutions due to KKT</h2>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Kernel trick uses fewer points rather than <span class="math inline">\(x_n\)</span> these are called: Support vectors
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Due to kernel trick we now would have used all the datapoints in our dataset but this is no longer the case because of our <strong>complimentary slackness</strong> which says that points liying on <span class="math inline">\(y=1\)</span> or <span class="math inline">\(y=-1\)</span> or better said when this <span class="math inline">\(t_ny(\textbf{x}_n)\)</span> is true then their lagrange multipliers: <span class="math inline">\(a_n\)</span> would be zero.</p>
+<p>Which means we would a couple of datapoints instead of the whole batch <span class="math inline">\(x_n\)</span>. These selected points are called the <strong>support vectors</strong></p>
+</div>
+</div>
+<center>
+<img src="2023-10-17-13-08-25.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+</section>
+<section id="svm-solution-for-bias-b" class="level2" data-number="18">
+<h2 data-number="18" class="anchored" data-anchor-id="svm-solution-for-bias-b"><span class="header-section-number">18</span> SVM: Solution for bias b</h2>
+<p>So far we have solve <span class="math inline">\(y(\textbf{x})\)</span> but we still have <span class="math inline">\(\textbf{b}\)</span>. So now we solve for this latter variable:</p>
+<p>Recall we have the constraint that we derive deriving the primal wrt to <span class="math inline">\(b\)</span>:</p>
+<center>
+<img src="2023-10-17-16-32-26.png" class="w100 img-fluid">
+</center>
+<pre></pre>
+<p>That means I can pick whathever <span class="math inline">\(\textbf{b}\)</span> I want as long the KKT constraints are satisfied</p>
+<p>No we use the final constraint that <span class="math inline">\(t_ny_n(x)=1\)</span></p>
+<center>
+<img src="2023-10-17-16-44-56.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li>In practice when we found a solution for b its better to average them</li>
+</ul>
+</section>
+<section id="maximum-margin-classifier-contours" class="level2" data-number="19">
+<h2 data-number="19" class="anchored" data-anchor-id="maximum-margin-classifier-contours"><span class="header-section-number">19</span> Maximum Margin Classifier: Contours</h2>
+<center>
+<img src="2023-10-17-16-57-50.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li><p>If we use a gaussian kernel then our Maximal Margin Classifier we will always be able to classify the points i.e we may end up with an island to classify only one point.</p></li>
+<li><p>The reason why the contours are smooth is because of the sigma parameter from the gaussian. The small the sigma the more wably (unpredictable), the larger the smoother.</p></li>
+<li><p>Note on the sigma value: sigma very small then the similarity decays. That means the the decision boundaries would be very curvy aka irregular decision boundary. If I make sigma very large then the countours become smoother</p></li>
+</ul>
+</section>
+<section id="note-on-outliers" class="level2" data-number="20">
+<h2 data-number="20" class="anchored" data-anchor-id="note-on-outliers"><span class="header-section-number">20</span> Note on outliers</h2>
+<center>
+<img src="2023-10-17-17-04-22.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>Due to the capability of the Maximum Margin Classifier all outliers would be calssified well which sometimes may not be desirable, to avoid this irregular boundaries we introduce <em>slackness variables</em>. This notion leads to SVM with <strong>Soft Margins</strong></p>
+</section>
+<section id="soft-margin-classifiers" class="level2" data-number="21">
+<h2 data-number="21" class="anchored" data-anchor-id="soft-margin-classifiers"><span class="header-section-number">21</span> Soft Margin Classifiers</h2>
+<center>
+<img src="2023-10-17-17-11-23.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li>We do not move the decision boundary, we allow outliers but we add a penalty to them</li>
+<li>Penalty is proportional to the boundary</li>
+</ul>
+<center>
+<img src="2023-10-17-19-20-21.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>So now because we introduce this slack variable we have a new constraint optimization problem.</p>
+</section>
+<section id="maximum-margin-classifiers-soft-margins" class="level2" data-number="22">
+<h2 data-number="22" class="anchored" data-anchor-id="maximum-margin-classifiers-soft-margins"><span class="header-section-number">22</span> Maximum Margin Classifiers: Soft Margins</h2>
+<center>
+<img src="2023-10-17-19-39-44.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li><p>The <span class="math inline">\(C\)</span> variable would be the one that decides which points get penalize. That is, <span class="math inline">\(C\)</span> prevents that every point get a slack and, our goal now is to avoid as many points to be in the wrong side of the decision boundaries.</p></li>
+<li><p>Thus we are now minimizing three parameters: <span class="math inline">\(\textbf{w}\)</span>, <span class="math inline">\(\textbf{b}\)</span> and <span class="math inline">\(\xi_n\)</span>, where the slack variable should always be positive variable. This induces the following constraints</p></li>
+</ul>
+<p><strong>Solving steps 1 -&gt; 2:</strong></p>
+<center>
+<img src="2023-10-17-19-51-50.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li>Primal variables: <span class="math inline">\(\textbf{w}\)</span>, <span class="math inline">\(\textbf{b}\)</span> and <span class="math inline">\(\xi_n\)</span></li>
+<li>Dual variables: <span class="math inline">\(a_n\)</span> and <span class="math inline">\(\mu_n\)</span></li>
+</ul>
+<p><strong>Solving steps 3 -&gt; 4:</strong></p>
+<ul>
+<li>Solving the derivatives for the primal variables <span class="math inline">\(\textbf{w}\)</span>, <span class="math inline">\(\textbf{b}\)</span> and <span class="math inline">\(\xi_n\)</span></li>
+</ul>
+<center>
+<img src="2023-10-17-19-57-56.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p><strong>Solving mid-step: Box constraints:</strong></p>
+<center>
+<img src="2023-10-17-21-32-47.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li>The box constraint comes from the green highlighted equations</li>
+</ul>
+<center>
+<img src="2023-10-17-21-41-35.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+</section>
+<section id="wrapping-up-maximum-classifiers-w-soft-margins" class="level2" data-number="23">
+<h2 data-number="23" class="anchored" data-anchor-id="wrapping-up-maximum-classifiers-w-soft-margins"><span class="header-section-number">23</span> Wrapping up: Maximum Classifiers w/ Soft Margins</h2>
+<ul>
+<li>If there is no constraint <span class="math inline">\(C -&gt; 0\)</span>: then you allow every point in the boundary to have slack because there is essentially no penalty. That means:
+<ul>
+<li>You are more flexible to outliers</li>
+<li>Your margin becomes infinitely wide</li>
+<li>Every datapoint becomes a support vector</li>
+<li>There is no sparcity to the kernel matrix, because all the points would be a support vecto</li>
+</ul></li>
+</ul>
+<pre></pre>
+<ul>
+<li>If my <span class="math inline">\(C -&gt; \infty\)</span> then I do not allow slack so that means I am very strick because I am penalizing very hugely to my slack that means I will not allow points that corss the margin. Which brings you to the case of hard margin
+<ul>
+<li>This means if I have an outlier I will have an smaller decision boundary because that outlier will be considered as a support vector, therefore it will lower the margin size which means I will have an unstable model when a random datapoint appears<br>
+<strong>Before</strong> &amp; <strong>After</strong><br>
+
+<center>
+<img src="2023-10-17-21-51-07.png" class="w250 img-fluid"><img src="2023-10-17-21-50-19.png" class="w275 img-fluid">
+</center>
+<pre></pre></li>
+</ul></li>
+</ul>
+</section>
+<section id="clarification-of-problems" class="level2" data-number="24">
+<h2 data-number="24" class="anchored" data-anchor-id="clarification-of-problems"><span class="header-section-number">24</span> Clarification of problems</h2>
 <p><strong>Convex optimization problems</strong></p>
 <details>
 <summary>
@@ -843,6 +988,188 @@ Neural Networks
 </summary>
 because of the non-linearity introduced by the activation functions
 </details>
+<!-- 
+
+::: {.cell execution_count=1}
+``` {.python .cell-code}
+import numpy as np
+import matplotlib.pyplot as plt
+from adjustText import adjust_text
+
+# Number of data points
+data_points = 40
+
+# Define the slopes and intercepts of the boundary lines
+slope1 = 1  # Slope of the line x1 + x2 = 0
+intercept1 = 0  # y-intercept
+
+slope2 = 1  # Slope of the line x1 + x2 = 10
+intercept2 = -10  # y-intercept
+
+# Initialize a set to store unique coordinates
+unique_coordinates = set()
+
+# Generate random data points within the specified boundaries with unique integer coordinates
+x1_points = []
+x2_points = []
+
+while len(x1_points) < data_points:
+    x1_candidate = np.random.randint(-6, 7)
+    x2_candidate = np.random.randint(-6, 7)
+    if (x1_candidate, x2_candidate) not in unique_coordinates:
+        x1_points.append(x1_candidate)
+        x2_points.append(x2_candidate)
+        unique_coordinates.add((x1_candidate, x2_candidate))
+
+x1 = np.array(x1_points)
+x2 = np.array(x2_points)
+
+# Filter data points to keep only those inside the boundaries
+condition = (x2 <= (-x1 + intercept1)) & (x2 >= (-x1 + intercept2))
+x1_inside_boundaries = x1[condition]
+x2_inside_boundaries = x2[condition]
+
+# Split the data into two groups, half red and half blue
+half_data_points = x1_inside_boundaries.shape[0] // 2
+colors = np.array(['r'] * half_data_points + ['b'] * (x1_inside_boundaries.shape[0] - half_data_points))
+
+# Apply the basis functions
+x1_new = np.cos(x1_inside_boundaries - x2_inside_boundaries)
+x2_new = np.sin(x1_inside_boundaries - x2_inside_boundaries)
+
+# Create a 2D scatter plot for x1 and x2 with distinct colors and labels
+plt.figure(figsize=(10, 4))
+plt.subplot(1, 2, 1)
+plt.scatter(x1_inside_boundaries, x2_inside_boundaries, c=colors, label='Original Data', alpha=0.5)
+plt.grid(True, linestyle='--', alpha=0.1)  # Add a grid with alpha=0.1
+for i, txt in enumerate(range(1, x1_inside_boundaries.shape[0] + 1)):
+    plt.annotate(f'P{txt}', (x1_inside_boundaries[i], x2_inside_boundaries[i]))
+plt.xlim(-6, 6)
+plt.ylim(-6, 6)
+plt.xlabel('x1')
+plt.ylabel('x2')
+plt.title('Original Data (x1 vs x2)')
+plt.legend()
+
+# Create a 2D scatter plot for x1_new and x2_new with non-overlapping labels using adjustText
+plt.subplot(1, 2, 2)
+scatter = plt.scatter(x1_new, x2_new, c=colors, label='Transformed Data')
+texts = [plt.text(x, y, f'P{i+1}') for i, (x, y) in enumerate(zip(x1_new, x2_new))]
+
+# Use adjust_text to automatically adjust label positions with grey arrows
+adjust_text(
+    texts, 
+    arrowprops=dict(arrowstyle='->', color='grey'),  # Set arrow color to grey
+    autoalign='y',
+    only_move={'points': 'y', 'text': 'y'}
+)
+
+plt.xlim(-1.2, 1.2)
+plt.ylim(-1.2, 1.2)
+plt.xlabel('x1_new')
+plt.ylabel('x2_new')
+plt.title('Transformed Data (x1_new vs x2_new)')
+plt.legend()
+
+plt.tight_layout()
+plt.show()
+
+```
+
+::: {.cell-output .cell-output-display}
+![](index_files/figure-html/cell-2-output-1.png){width=949 height=372}
+:::
+:::
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+from adjustText import adjust_text
+
+# Number of data points
+data_points = 40
+
+# Define the slopes and intercepts of the boundary lines
+slope1 = 1  # Slope of the line x1 + x2 = 0
+intercept1 = 0  # y-intercept
+
+slope2 = 1  # Slope of the line x1 + x2 = 10
+intercept2 = -10  # y-intercept
+
+# Initialize a set to store unique coordinates
+unique_coordinates = set()
+
+# Generate random data points within the specified boundaries with unique integer coordinates
+x1_points = []
+x2_points = []
+
+while len(x1_points) < data_points:
+    x1_candidate = np.random.randint(-6, 7)
+    x2_candidate = np.random.randint(-6, 7)
+    if (x1_candidate, x2_candidate) not in unique_coordinates:
+        x1_points.append(x1_candidate)
+        x2_points.append(x2_candidate)
+        unique_coordinates.add((x1_candidate, x2_candidate))
+
+x1 = np.array(x1_points)
+x2 = np.array(x2_points)
+
+# Filter data points to keep only those inside the boundaries
+condition = (x2 <= (-x1 + intercept1)) & (x2 >= (-x1 + intercept2))
+x1_inside_boundaries = x1[condition]
+x2_inside_boundaries = x2[condition]
+
+# Split the data into two groups, half red and half blue
+half_data_points = x1_inside_boundaries.shape[0] // 2
+colors = np.array(['r'] * half_data_points + ['b'] * (x1_inside_boundaries.shape[0] - half_data_points))
+
+# Apply the basis functions
+x1_new = np.cos(x1_inside_boundaries - x2_inside_boundaries)
+x2_new = np.sin(x1_inside_boundaries - x2_inside_boundaries)
+
+# Create a 2D scatter plot for x1 and x2 with distinct colors and labels
+plt.figure(figsize=(10, 4))
+plt.subplot(1, 2, 1)
+plt.scatter(x1_inside_boundaries, x2_inside_boundaries, c=colors, label='Original Data', alpha=0.5)
+plt.grid(True, linestyle='--', alpha=0.1)  # Add a grid with alpha=0.1
+
+# Label points only on the diagonal and alternate between red and blue
+for i, (x, y) in enumerate(zip(x1_inside_boundaries, x2_inside_boundaries)):
+    if x == y:
+        label = f'P{i + 1}' if i % 2 == 0 else ''
+        plt.annotate(label, (x, y))
+
+plt.xlim(-6, 6)
+plt.ylim(-6, 6)
+plt.xlabel('x1')
+plt.ylabel('x2')
+plt.title('Original Data (x1 vs x2)')
+plt.legend()
+
+# Create a 2D scatter plot for x1_new and x2_new with non-overlapping labels using adjustText
+plt.subplot(1, 2, 2)
+scatter = plt.scatter(x1_new, x2_new, c=colors, label='Transformed Data')
+texts = [plt.text(x, y, f'P{i + 1}') for i, (x, y) in enumerate(zip(x1_new, x2_new))]
+
+# Use adjust_text to automatically adjust label positions with grey arrows
+adjust_text(
+    texts, 
+    arrowprops=dict(arrowstyle='->', color='grey'),  # Set arrow color to grey
+    autoalign='y',
+    only_move={'points': 'y', 'text': 'y'}
+)
+
+plt.xlim(-1.2, 1.2
+plt.ylim(-1.2, 1.2)
+plt.xlabel('x1_new')
+plt.ylabel('x2_new')
+plt.title('Transformed Data (x1_new vs x2_new)')
+plt.legend()
+
+plt.tight_layout()
+plt.show()
+
+``` -->
 
 
 </section>
