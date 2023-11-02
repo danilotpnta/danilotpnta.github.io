@@ -1,0 +1,62 @@
+---
+title: "Language modelling"
+description: "Description of this Post"
+date: "2023-11-02"
+categories: [All, NLP, TAGS]
+toc: false
+jupyter: git-pages
+code-fold: true
+number-sections: true
+---
+
+## Example of Categorical Distribution
+
+- Vocabulary:  
+**V**=3, {dog, cat,bird}
+
+- Num Observations:  
+**N**=9
+
+- Categories:  
+**C**=3, {negative, neutral, positive}
+
+- Dataset:  
+**D**={(class1, word1)...}
+ 
+### Formula for parameter estimation
+<center>![](2023-11-02-17-30-14.png){.w450}</center><pre></pre>
+<center>![](2023-11-02-17-28-39.png){.w250}</center><pre></pre>
+ 
+Here the denominator means to count all pairs that have the same class
+
+- Tabular Representation:
+
+$$
+W|C=c \, \textasciitilde \, \text{ Categorical}(\theta_{1:V}^{(c)})
+$$
+<center>![](2023-11-02-17-33-40.png){.w350}</center><pre></pre>
+
+- The dataset:
+<center>![](2023-11-02-17-42-49.png){.w400}</center><pre></pre>
+
+- Maximum Likelihood Estimates:
+<center>![](2023-11-02-17-43-04.png){.w350}</center><pre></pre>
+
+
+## Smoothing
+
+<center>![](2023-11-02-17-51-58.png){.w550}</center><pre></pre>
+
+For instance if I have to compute the prob for $\theta_{bird}^{neg}=\frac{0}{3}$ then because I will have a zero probability then I can use only the count plus some constant (**smoothing**)so that the probability estimate does not become $0$  
+
+For instance:
+<center>![](2023-11-02-18-06-52.png){.w550}</center><pre></pre>
+Here 0.1 is the smoothing constant 
+
+> So if not smoothing then use probs, if use smoothing the we use the counts
+
+
+
+
+
+

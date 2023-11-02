@@ -149,7 +149,7 @@ If a choice any basis function it induces a kernel simply by computing inner pro
 
 <center>![](2023-10-15-14-24-31.png){.w550}</center><pre></pre>
 
-For every positive definite kernel there exist a set of basis from $R^d$ to $RM^$. Meaning there would be a set of basis which means instead of solving for the basis we can just get a valid kernel and not learn the basis
+For every positive definite kernel there exist a set of basis from $R^d$ to $R^M$. Meaning there would be a set of basis which means instead of solving for the basis we can just get a valid kernel and not learn the basis
 
 :::{.callout-note}
 # Why do I want to go from basis (finite) to valid kernels (can be infinitely? 
@@ -221,7 +221,7 @@ Now that we have a expression for the margin our objective is to **maximize** th
 
 :::{.callout-note}
 # Maximum Margin Classifier: Goal
-- Maximize $1\\textbf{w}$ means minimize $\frac{1}{2}||\textbf{w}||^2$ 
+- Maximize $\frac{1}{\textbf{w}}$ means minimize $\frac{1}{2}||\textbf{w}||^2$ 
 - We have $N$ constraints because we need to go over each datapoint
 - It is a convex quadratic optimization problem with a quadratic loss and linear constraint. We solve this by Lagrange Multipliers
 ::::
@@ -287,18 +287,115 @@ We write the primal Lagrange with the constriant. Also, we introduce the dual va
 <center>![](2023-10-16-13-09-11.png){.w550}</center><pre></pre>
 
 Once we have those parameters we plug in again in the Lagrange in step 1. Then the function will be dependent on $a_n$ which is then called the **Dual Lagrangian**
-
 <center>![](2023-10-16-13-47-54.png){.w550}</center><pre></pre>
 
 > **Remember** Dual Lagrangian would be convex so we know there would be unique solution
  
- 
+Now that we have **derived** the dual we can now apply the kernel trick as follows:
+
+<center>![](2023-10-17-12-57-17.png){.w550}</center><pre></pre>
+
+## Sparse solutions due to KKT
+
+:::{.callout-tip}
+# Kernel trick uses fewer points rather than $x_n$ these are called: Support vectors
+
+Due to kernel trick we now would have used all the datapoints in our dataset but this is no longer the case because of our **complimentary slackness** which says that points liying on $y=1$ or $y=-1$ or better said when this $t_ny(\textbf{x}_n)$ is true then their lagrange multipliers: $a_n$ would be zero.
+
+Which means we would a couple of datapoints instead of the whole batch $x_n$. These selected points are called the **support vectors** 
+
+:::
+
+<center>![](2023-10-17-13-08-25.png){.w550}</center><pre></pre>
+
+## SVM: Solution for bias b
+
+So far we have solve $y(\textbf{x})$ but we still have $\textbf{b}$. So now we solve for this latter variable:
+
+Recall we have the constraint that we derive deriving the primal wrt to $b$:
+
+<center>![](2023-10-17-16-32-26.png){.w100}</center><pre></pre>
+
+That means I can pick whathever $\textbf{b}$ I want as long the KKT constraints are satisfied
+
+No we use the final constraint that $t_ny_n(x)=1$
+
+<center>![](2023-10-17-16-44-56.png){.w550}</center><pre></pre>
+
+- In practice when we found a solution for b its better to average them 
+
+## Maximum Margin Classifier: Contours
+
+<center>![](2023-10-17-16-57-50.png){.w550}</center><pre></pre>
+
+- If we use a gaussian kernel then our Maximal Margin Classifier we will always be able to classify the points i.e we may end up with an island to classify only one point. 
+
+- The reason why the contours are smooth is because of the sigma parameter from the gaussian. The small the sigma the more wably (unpredictable), the larger the smoother.
+
+- Note on the sigma value: sigma very small then the similarity decays. That means the the decision boundaries would be very curvy aka irregular decision boundary. If I make sigma very large then the countours become smoother  
+
+## Note on outliers
+
+<center>![](2023-10-17-17-04-22.png){.w550}</center><pre></pre>
+
+Due to the capability of the Maximum Margin Classifier all outliers would be calssified well which sometimes may not be desirable, to avoid this irregular boundaries we introduce *slackness variables*. This notion leads to SVM with **Soft Margins**  
+
+## Soft Margin Classifiers
+<center>![](2023-10-17-17-11-23.png){.w550}</center><pre></pre>
+
+- We do not move the decision boundary, we allow outliers but we add a penalty to them
+- Penalty is proportional to the boundary
+
+<center>![](2023-10-17-19-20-21.png){.w550}</center><pre></pre>
+
+So now because we introduce this slack variable we have a new constraint optimization problem.
 
 
+## Maximum Margin Classifiers: Soft Margins
+
+<center>![](2023-10-17-19-39-44.png){.w550}</center><pre></pre>
+
+- The $C$ variable would be the one that decides which points get penalize. That is, $C$ prevents that every point get a slack and, our goal now is to avoid as many points to be in the wrong side of the decision boundaries. 
+
+- Thus we are now minimizing three parameters: $\textbf{w}$, $\textbf{b}$ and $\xi_n$, where the slack variable should always be positive variable. This induces the following constraints
+
+**Solving steps 1 -> 2:**
+
+<center>![](2023-10-17-19-51-50.png){.w550}</center><pre></pre>
+
+- Primal variables: $\textbf{w}$, $\textbf{b}$ and $\xi_n$
+- Dual   variables: $a_n$ and $\mu_n$
+
+**Solving steps 3 -> 4:** 
+
+- Solving the derivatives for the primal variables $\textbf{w}$, $\textbf{b}$ and $\xi_n$
+
+<center>![](2023-10-17-19-57-56.png){.w550}</center><pre></pre>
+
+**Solving mid-step: Box constraints:**
+
+<center>![](2023-10-17-21-32-47.png){.w550}</center><pre></pre>
+
+- The box constraint comes from the green highlighted equations
+
+<center>![](2023-10-17-21-41-35.png){.w550}</center><pre></pre>
 
 
+## Wrapping up: Maximum Classifiers w/ Soft Margins
+
+- If there is no constraint $C -> 0$: then you allow every point in the boundary to have slack because there is essentially no penalty. That means:
+    - You are more flexible to outliers
+    - Your margin becomes infinitely wide
+    - Every datapoint becomes a support vector 
+    - There is no sparcity to the kernel matrix, because all the points would be a support vector
 
 
+<pre></pre>
+
+- If my $C -> \infty$ then I do not allow slack so that means I am very strick because I am penalizing very hugely to my slack that means I will not allow points that corss the margin. Which brings you to the case of hard margin  
+    - This means if I have an outlier I will have an smaller decision boundary because that outlier will be considered as a support vector, therefore it will lower the margin size which means I will have an unstable model when a random datapoint appears  
+    **Before** & **After**  
+    <center>![](2023-10-17-21-51-07.png){.w250}![](2023-10-17-21-50-19.png){.w275}</center><pre></pre>
 
 
 
@@ -331,8 +428,191 @@ QDA is a supervised learning algorithm with a quadratic decision boundary and ca
 
 <details><summary>K-Means Clustering</summary>
 </details>
+<details><summary>GMM</summary>
+We use the EM algorithm because the maths get heavy so there we run into possibility of getting stuck in local minima
+</details>
 <details><summary>PCA</summary>
 </details>
 <details><summary>Neural Networks</summary>
 because of the non-linearity introduced by the activation functions
 </details>
+
+
+
+<!-- 
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+from adjustText import adjust_text
+
+# Number of data points
+data_points = 40
+
+# Define the slopes and intercepts of the boundary lines
+slope1 = 1  # Slope of the line x1 + x2 = 0
+intercept1 = 0  # y-intercept
+
+slope2 = 1  # Slope of the line x1 + x2 = 10
+intercept2 = -10  # y-intercept
+
+# Initialize a set to store unique coordinates
+unique_coordinates = set()
+
+# Generate random data points within the specified boundaries with unique integer coordinates
+x1_points = []
+x2_points = []
+
+while len(x1_points) < data_points:
+    x1_candidate = np.random.randint(-6, 7)
+    x2_candidate = np.random.randint(-6, 7)
+    if (x1_candidate, x2_candidate) not in unique_coordinates:
+        x1_points.append(x1_candidate)
+        x2_points.append(x2_candidate)
+        unique_coordinates.add((x1_candidate, x2_candidate))
+
+x1 = np.array(x1_points)
+x2 = np.array(x2_points)
+
+# Filter data points to keep only those inside the boundaries
+condition = (x2 <= (-x1 + intercept1)) & (x2 >= (-x1 + intercept2))
+x1_inside_boundaries = x1[condition]
+x2_inside_boundaries = x2[condition]
+
+# Split the data into two groups, half red and half blue
+half_data_points = x1_inside_boundaries.shape[0] // 2
+colors = np.array(['r'] * half_data_points + ['b'] * (x1_inside_boundaries.shape[0] - half_data_points))
+
+# Apply the basis functions
+x1_new = np.cos(x1_inside_boundaries - x2_inside_boundaries)
+x2_new = np.sin(x1_inside_boundaries - x2_inside_boundaries)
+
+# Create a 2D scatter plot for x1 and x2 with distinct colors and labels
+plt.figure(figsize=(10, 4))
+plt.subplot(1, 2, 1)
+plt.scatter(x1_inside_boundaries, x2_inside_boundaries, c=colors, label='Original Data', alpha=0.5)
+plt.grid(True, linestyle='--', alpha=0.1)  # Add a grid with alpha=0.1
+for i, txt in enumerate(range(1, x1_inside_boundaries.shape[0] + 1)):
+    plt.annotate(f'P{txt}', (x1_inside_boundaries[i], x2_inside_boundaries[i]))
+plt.xlim(-6, 6)
+plt.ylim(-6, 6)
+plt.xlabel('x1')
+plt.ylabel('x2')
+plt.title('Original Data (x1 vs x2)')
+plt.legend()
+
+# Create a 2D scatter plot for x1_new and x2_new with non-overlapping labels using adjustText
+plt.subplot(1, 2, 2)
+scatter = plt.scatter(x1_new, x2_new, c=colors, label='Transformed Data')
+texts = [plt.text(x, y, f'P{i+1}') for i, (x, y) in enumerate(zip(x1_new, x2_new))]
+
+# Use adjust_text to automatically adjust label positions with grey arrows
+adjust_text(
+    texts, 
+    arrowprops=dict(arrowstyle='->', color='grey'),  # Set arrow color to grey
+    autoalign='y',
+    only_move={'points': 'y', 'text': 'y'}
+)
+
+plt.xlim(-1.2, 1.2)
+plt.ylim(-1.2, 1.2)
+plt.xlabel('x1_new')
+plt.ylabel('x2_new')
+plt.title('Transformed Data (x1_new vs x2_new)')
+plt.legend()
+
+plt.tight_layout()
+plt.show()
+
+
+```
+
+
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+from adjustText import adjust_text
+
+# Number of data points
+data_points = 40
+
+# Define the slopes and intercepts of the boundary lines
+slope1 = 1  # Slope of the line x1 + x2 = 0
+intercept1 = 0  # y-intercept
+
+slope2 = 1  # Slope of the line x1 + x2 = 10
+intercept2 = -10  # y-intercept
+
+# Initialize a set to store unique coordinates
+unique_coordinates = set()
+
+# Generate random data points within the specified boundaries with unique integer coordinates
+x1_points = []
+x2_points = []
+
+while len(x1_points) < data_points:
+    x1_candidate = np.random.randint(-6, 7)
+    x2_candidate = np.random.randint(-6, 7)
+    if (x1_candidate, x2_candidate) not in unique_coordinates:
+        x1_points.append(x1_candidate)
+        x2_points.append(x2_candidate)
+        unique_coordinates.add((x1_candidate, x2_candidate))
+
+x1 = np.array(x1_points)
+x2 = np.array(x2_points)
+
+# Filter data points to keep only those inside the boundaries
+condition = (x2 <= (-x1 + intercept1)) & (x2 >= (-x1 + intercept2))
+x1_inside_boundaries = x1[condition]
+x2_inside_boundaries = x2[condition]
+
+# Split the data into two groups, half red and half blue
+half_data_points = x1_inside_boundaries.shape[0] // 2
+colors = np.array(['r'] * half_data_points + ['b'] * (x1_inside_boundaries.shape[0] - half_data_points))
+
+# Apply the basis functions
+x1_new = np.cos(x1_inside_boundaries - x2_inside_boundaries)
+x2_new = np.sin(x1_inside_boundaries - x2_inside_boundaries)
+
+# Create a 2D scatter plot for x1 and x2 with distinct colors and labels
+plt.figure(figsize=(10, 4))
+plt.subplot(1, 2, 1)
+plt.scatter(x1_inside_boundaries, x2_inside_boundaries, c=colors, label='Original Data', alpha=0.5)
+plt.grid(True, linestyle='--', alpha=0.1)  # Add a grid with alpha=0.1
+
+# Label points only on the diagonal and alternate between red and blue
+for i, (x, y) in enumerate(zip(x1_inside_boundaries, x2_inside_boundaries)):
+    if x == y:
+        label = f'P{i + 1}' if i % 2 == 0 else ''
+        plt.annotate(label, (x, y))
+
+plt.xlim(-6, 6)
+plt.ylim(-6, 6)
+plt.xlabel('x1')
+plt.ylabel('x2')
+plt.title('Original Data (x1 vs x2)')
+plt.legend()
+
+# Create a 2D scatter plot for x1_new and x2_new with non-overlapping labels using adjustText
+plt.subplot(1, 2, 2)
+scatter = plt.scatter(x1_new, x2_new, c=colors, label='Transformed Data')
+texts = [plt.text(x, y, f'P{i + 1}') for i, (x, y) in enumerate(zip(x1_new, x2_new))]
+
+# Use adjust_text to automatically adjust label positions with grey arrows
+adjust_text(
+    texts, 
+    arrowprops=dict(arrowstyle='->', color='grey'),  # Set arrow color to grey
+    autoalign='y',
+    only_move={'points': 'y', 'text': 'y'}
+)
+
+plt.xlim(-1.2, 1.2
+plt.ylim(-1.2, 1.2)
+plt.xlabel('x1_new')
+plt.ylabel('x2_new')
+plt.title('Transformed Data (x1_new vs x2_new)')
+plt.legend()
+
+plt.tight_layout()
+plt.show()
+
+``` -->

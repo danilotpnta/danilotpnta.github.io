@@ -59,7 +59,7 @@ $$
 **Covariance Matrix:** When $\textbf{x}$, $\textbf{y}$ are vectors of random variables 
 $$
 \begin{align}
-cov[\textbf{x},\textbf{x}] &= \mathbb{E}[(\textbf{x}-\mathbf{\mu})(\textbf{x}-\mathbf{\mu})^T]\\  
+cov[\textbf{x},\textbf{x}] &= \mathbb{E}[(\textbf{x}-\mathbb{E}[x])(\textbf{x}-\mathbb{E}[x])^T]\\  
 cov[\textbf{z},\textbf{z}] &= \mathbb{E}[\textbf{z}\textbf{z}^T]-\mathbb{E}[\textbf{z}]\mathbb{E}[\textbf{z}]\\ 
 \end{align}
 $$
@@ -68,8 +68,8 @@ $$
 **Gaussians:** scalar and for a matrix
 $$
 \begin{align}
-\mathcal{N}(x|\mu , \sigma^2) &= \frac{1}{\sqrt{2 \pi  \sigma^2}} \exp^{\{-\frac{1}{2 \sigma^2}(x-\mu)^2\}}\\
-    \mathcal{N}(x|\mu , \Sigma ) &= (2 \pi)^{-k/2} |\Sigma|^{-1/2} \exp^{\{-\frac{1}{2}(x-\mu)^T \Sigma^-1 (x-\mu)\}}\\
+\mathcal{N}(x|\mu , \sigma^2) &= \frac{1}{\sqrt{2 \pi  \sigma^2}} e^{\left(-\frac{1}{2 \sigma^2}(x-\mu)^2\right)}\\
+    \mathcal{N}(x|\mu , \Sigma ) &= \frac{1}{(2\pi)^{D/2}|\Sigma|^{1/2}}  e^{\left(-\frac{1}{2}(x-\mu)^T \Sigma^-1 (x-\mu)\right)}\\
 \end{align}
 $$
 
