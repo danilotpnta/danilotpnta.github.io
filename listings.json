@@ -1,5 +1,25 @@
 [
   {
+    "listing": "/notes/index.html",
+    "items": [
+      "/notes/2023-10-11_basic-terminal-commands-in-windows/index.html",
+      "/notes/2023-10-09_numpy-arrays/index.html",
+      "/notes/2023-10-06_how-to-embed-ml-application/index.html",
+      "/notes/2023-09-11_how-to-create-conda-environment-using-yml-file/index.html",
+      "/notes/2023-09-04_how-to-create-a-jupyther-kernel/index.html",
+      "/notes/2023-09-03_create-website-using-local/index.html",
+      "/notes/2023-09-03_commands-terminal/index.html",
+      "/notes/2023-08-27_changes-to-vanilla-quarto/index.html",
+      "/notes/2023-08-27_features-tools-&-improvements-website-/index.html",
+      "/notes/2023-08-26_how-to-highlight-lines-of-code-in-github/index.html",
+      "/notes/2023-08-22_commands-for-shells/index.html",
+      "/notes/2023-08-22_commands-for-github/index.html",
+      "/notes/2023-08-22_commands-for-jupyter/index.html",
+      "/notes/2023-08-22_command_for_environments/index.html",
+      "/notes/2023-08-22_commands-for-quarto/index.html"
+    ]
+  },
+  {
     "listing": "/blog/index.html",
     "items": [
       "/blog/2023-11-02_language-modelling/index.html",
@@ -43,26 +63,6 @@
       "/projects/2021-07-02_bsc-thesis/Python-demo.html",
       "/projects/2020-05-12_cpp-project/Python-demo.html",
       "/projects/2020-04-02_segway/index.html"
-    ]
-  },
-  {
-    "listing": "/notes/index.html",
-    "items": [
-      "/notes/2023-10-11_basic-terminal-commands-in-windows/index.html",
-      "/notes/2023-10-09_numpy-arrays/index.html",
-      "/notes/2023-10-06_how-to-embed-ml-application/index.html",
-      "/notes/2023-09-11_how-to-create-conda-environment-using-yml-file/index.html",
-      "/notes/2023-09-04_how-to-create-a-jupyther-kernel/index.html",
-      "/notes/2023-09-03_create-website-using-local/index.html",
-      "/notes/2023-09-03_commands-terminal/index.html",
-      "/notes/2023-08-27_changes-to-vanilla-quarto/index.html",
-      "/notes/2023-08-27_features-tools-&-improvements-website-/index.html",
-      "/notes/2023-08-26_how-to-highlight-lines-of-code-in-github/index.html",
-      "/notes/2023-08-22_commands-for-shells/index.html",
-      "/notes/2023-08-22_commands-for-github/index.html",
-      "/notes/2023-08-22_commands-for-jupyter/index.html",
-      "/notes/2023-08-22_command_for_environments/index.html",
-      "/notes/2023-08-22_commands-for-quarto/index.html"
     ]
   }
 ]
