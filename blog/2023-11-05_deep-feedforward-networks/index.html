@@ -77,6 +77,8 @@ window.MathJax = {
 </script>
 <link rel="shortcut icon" href="../../../../../../../../../../../assets/danilo.ico">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../css/index-posts.css">
 </head>
@@ -383,7 +385,441 @@ window.MathJax = {
 <img src="2023-11-05-03-15-39.png" class="w550 img-fluid">
 </center>
 <pre></pre>
-<p>We first apply the Relu then sigmoid then Relu</p>
+<p>Here to apply first a Relu and the output of that another Relu: <span class="math inline">\(\sigma(B\sigma(A\textbf{x}))\)</span></p>
+</section>
+<section id="deep-feedforward-networks" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="deep-feedforward-networks"><span class="header-section-number">2</span> Deep feedforward networks</h2>
+<center>
+<img src="2023-11-05-10-05-14.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>MLP is just a combination of multiple linear perceptrons, in each layer there would be parameters ie <span class="math inline">\(A\)</span> is <span class="math inline">\(\theta_1\)</span>, <span class="math inline">\(B\)</span> is <span class="math inline">\(\theta_2\)</span></p>
+<center>
+<img src="2023-11-05-10-07-11.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+</section>
+<section id="neural-networks-in-blocks" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="neural-networks-in-blocks"><span class="header-section-number">3</span> Neural networks in blocks</h2>
+<center>
+<img src="2023-11-05-10-20-29.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+</section>
+<section id="non-linear-feature-learning-perspective" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="non-linear-feature-learning-perspective"><span class="header-section-number">4</span> Non-linear feature learning perspective</h2>
+<center>
+<img src="2023-11-05-10-36-15.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>Here we are saying that at the end we have just have a linear function <span class="math inline">\(C\)</span> “the linear model” ie.</p>
+<p><span class="math display">\[
+C(\sigma(B\sigma(A\textbf{x})))
+\]</span></p>
+<p>to a transformed input <span class="math inline">\(\varphi(x\textbf{x})\)</span> = <span class="math inline">\(\sigma(B\sigma(A\textbf{x}))\)</span></p>
+</section>
+<section id="how-to-get-w-gradiend-based-learning" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="how-to-get-w-gradiend-based-learning"><span class="header-section-number">5</span> How to get w? gradiend-based learning</h2>
+<ul>
+<li>Due to nonlinearity our loss function would be nonconvex</li>
+<li>We use then SGD</li>
+<li>No guarantee of convergence, and sensitive to initialization of the parameters</li>
+</ul>
+</section>
+<section id="cost-function" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="cost-function"><span class="header-section-number">6</span> Cost Function</h2>
+<center>
+<img src="2023-11-05-11-44-01.png" class="w550 img-fluid">
+</center>
+<center>
+<img src="2023-11-05-11-46-27.png" class="w550 img-fluid">
+</center>
+<center>
+<img src="2023-11-05-11-46-42.png" class="w550 img-fluid">
+</center>
+<center>
+<img src="2023-11-05-11-51-55.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>Here saturated means that the function becomes very flat so then the gradient of this is very minimal so then we cannot compute optimize because all the derivatives would look like very similar</p>
+</section>
+<section id="activation-functions" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="activation-functions"><span class="header-section-number">7</span> Activation Functions</h2>
+<center>
+<img src="2023-11-05-11-56-34.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li>Defined how the weighted sum of the input is transformed into an output from a node or nodes in a layer of the network.</li>
+<li>If output range limited, then called a “squashing function.”</li>
+<li>The choice of activation function has a large impact on the capability and performance of the neural network.</li>
+<li>Different activation functions may be combined, but rare</li>
+<li>All hidden layers typically use the same activation function</li>
+<li>Need to be differentiable at most points</li>
+</ul>
+</section>
+<section id="linear-units-fully-connected-layer" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="linear-units-fully-connected-layer"><span class="header-section-number">8</span> Linear Units/ “Fully connected layer”</h2>
+<center>
+<img src="2023-11-05-13-37-29.png" class="w550 img-fluid">
+</center>
+<center>
+<img src="2023-11-05-13-37-39.png" class="w550 img-fluid">
+</center>
+</section>
+<section id="advantages-of-relu" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="advantages-of-relu"><span class="header-section-number">9</span> Advantages of ReLU</h2>
+<center>
+<img src="2023-11-05-13-40-29.png" class="w550 img-fluid">
+</center>
+<p>ReLu is better for propagation because if i.e take a sin as activation function when we derive close to zero the gradient would be very small, we keep doing this over multiple layers and essentially multiplying small times smalls at the end the result would be close to <span class="math inline">\(0\)</span>.</p>
+</section>
+<section id="disadvantages-of-relu" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="disadvantages-of-relu"><span class="header-section-number">10</span> Disadvantages of ReLU</h2>
+<center>
+<img src="2023-11-05-13-45-49.png" class="w550 img-fluid">
+</center>
+</section>
+<section id="leaky-relu" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="leaky-relu"><span class="header-section-number">11</span> Leaky ReLU</h2>
+<center>
+<img src="2023-11-05-13-51-40.png" class="w550 img-fluid">
+</center>
+</section>
+<section id="exponential-linear-unit-elu" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="exponential-linear-unit-elu"><span class="header-section-number">12</span> Exponential Linear Unit (ELU)</h2>
+<center>
+<img src="2023-11-05-13-54-11.png" class="w550 img-fluid">
+</center>
+<p>Used in Language models like BERT</p>
+</section>
+<section id="gaussian-error-linear-unit" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="gaussian-error-linear-unit"><span class="header-section-number">13</span> Gaussian Error Linear Unit</h2>
+<center>
+<img src="2023-11-05-13-55-24.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>We are not bounded by the computation power but by memory to be loaded in the computation units of the GPUs on Snellius</p>
+</section>
+<section id="sigmoid-and-tanh" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="sigmoid-and-tanh"><span class="header-section-number">14</span> Sigmoid and Tanh</h2>
+<center>
+<img src="2023-11-05-14-00-24.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<center>
+<img src="2023-11-05-14-01-24.png" class="w275 img-fluid">
+</center>
+<pre></pre>
+</section>
+<section id="softmax" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="softmax"><span class="header-section-number">15</span> Softmax</h2>
+<center>
+<img src="2023-11-05-14-06-20.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>It outputs a probability distribution because it depends on the denominator which means all the variables would be taken into account. For instance this can be the last activation function to output probabilities of predicting a cat, a dog, a bird and so on.</p>
+<p>If we now introduce a term <span class="math inline">\(\tau\)</span> in Softmax (by dividing the <span class="math inline">\(e^{\frac{x_i}{\tau}}\)</span> in the numerator and denominator) then we have the following:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Softamx and <span class="math inline">\(\tau\)</span>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If τ is introduced, it can be used to control the temperature or the “sharpness” of the softmax distribution.</p>
+<p>When τ is set to a value greater than 1, it has the effect of “softening” the probabilities, making the distribution more uniform. In other words, it makes the probability of all categories more similar to each other. This can be useful in scenarios where you want to explore a wider range of possibilities or reduce the impact of extreme values in the input vector.</p>
+<p>Conversely, when τ is set to a value less than 1, it has the effect of “sharpening” the probabilities, making the distribution more peaky, and emphasizing the largest values in the input vector. This can be useful when you want to make more distinct predictions and reduce uncertainty.</p>
+</div>
+</div>
+</section>
+<section id="how-to-choose-and-activation-function" class="level2" data-number="16">
+<h2 data-number="16" class="anchored" data-anchor-id="how-to-choose-and-activation-function"><span class="header-section-number">16</span> How to Choose and Activation Function</h2>
+<center>
+<img src="2023-11-05-14-23-43.png" class="w550 img-fluid">
+</center>
+<p>Here inference is testing or predicting</p>
+<section id="difference-between-multiclass-classification-vs-multilabel-calssification" class="level3" data-number="16.1">
+<h3 data-number="16.1" class="anchored" data-anchor-id="difference-between-multiclass-classification-vs-multilabel-calssification"><span class="header-section-number">16.1</span> Difference between Multiclass classification vs Multilabel calssification</h3>
+<ol type="1">
+<li><p>Multiclass Classification:</p>
+<ul>
+<li>In multiclass classification, the task is to assign an input data point to one and only one class or category from a set of multiple mutually exclusive classes.</li>
+<li>Each data point belongs to exactly one class, and the goal is to determine which class that data point most likely belongs to.</li>
+<li>Examples of multiclass classification problems:
+<ul>
+<li>Handwritten digit recognition: Given an image of a handwritten digit (0-9), determine which digit it represents.</li>
+<li>Species classification: Given a photo of an animal, classify it into one of several species (e.g., dog, cat, bird, etc.).</li>
+</ul></li>
+</ul>
+<p>Example: Suppose you have a multiclass classification problem where you want to classify fruits into three categories: apples, oranges, and bananas. If you input an image of an apple, the model should predict that it belongs to the “apples” class.</p></li>
+<li><p>Multilabel Classification:</p>
+<ul>
+<li>In multilabel classification, each data point can be associated with one or more classes or labels. It’s not limited to assigning a single class per data point.</li>
+<li>This is used when a data point can have multiple attributes or characteristics simultaneously, and you want to predict all relevant labels.</li>
+<li>Examples of multilabel classification problems:
+<ul>
+<li>Document categorization: Tagging a document with multiple topics or subjects that are present in it.</li>
+<li>Image tagging: Assigning tags to an image to describe its content, where an image may contain multiple objects or scenes.</li>
+</ul></li>
+</ul>
+<p>Example: Consider an image tagging problem. You have an image containing a beach scene with a dog and a sunset. In a multilabel classification scenario, the model might predict the following labels: “beach,” “dog,” and “sunset,” because all three labels are relevant to the image.</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How to use Softmax in a Multiclass Classification problem?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>In a multiclass classification problem, the softmax function is commonly used to convert the raw output scores of a model into a probability distribution over multiple classes. This probability distribution allows you to determine the likelihood of each class for a given input data point. Here’s how you use the softmax function in a multiclass classification problem:</p>
+<ol type="1">
+<li>Model Output:
+<ul>
+<li>After training your multiclass classification model, you will typically have a final layer in your neural network or a scoring function that produces raw scores (logits) for each class. These scores are not yet probabilities but represent the model’s confidence in each class.</li>
+<li>Let’s say you have N classes, and the model’s output for a particular input is a vector of raw scores <span class="math inline">\(z\)</span> with N elements, one for each class.</li>
+</ul></li>
+<li>Apply Softmax Function:
+<ul>
+<li>To convert the raw scores into probabilities, apply the softmax function to the <span class="math inline">\(z\)</span> vector. The softmax function transforms the scores into a probability distribution where the sum of the probabilities for all classes equals 1.</li>
+<li>The softmax function for class <span class="math inline">\(i\)</span> is given by: <span class="math inline">\(\text{softmax}(z)_i = \frac{e^{z_i}}{\sum_{j=1}^N e^{z_j}}\)</span></li>
+<li>Calculate the softmax value for each class <span class="math inline">\(i\)</span> in the <span class="math inline">\(z\)</span> vector to obtain a probability distribution.</li>
+</ul></li>
+<li>Predict the Class:
+<ul>
+<li>The class with the highest probability in the softmax distribution is typically chosen as the predicted class for the input data point. In other words, the class with the highest <span class="math inline">\(\text{softmax}(z)_i\)</span> value is the model’s prediction for that input.</li>
+</ul></li>
+</ol>
+<p>Here’s a step-by-step example of using softmax for multiclass classification:</p>
+<p>Suppose you have a multiclass classification problem with three classes: “cat,” “dog,” and “bird.” After processing an input image, your model produces the following raw scores:</p>
+<p><span class="math inline">\(z = [2.1, 0.9, 1.5]\)</span></p>
+<ol type="1">
+<li>Apply the softmax function:
+<ul>
+<li>Calculate the softmax values for each class:<br>
+<span class="math inline">\(\text{softmax}(z)_1 = \frac{e^{2.1}}{e^{2.1} + e^{0.9} + e^{1.5}}\)</span><br>
+<span class="math inline">\(\text{softmax}(z)_2 = \frac{e^{0.9}}{e^{2.1} + e^{0.9} + e^{1.5}}\)</span><br>
+<span class="math inline">\(\text{softmax}(z)_3 = \frac{e^{1.5}}{e^{2.1} + e^{0.9} + e^{1.5}}\)</span></li>
+</ul></li>
+<li>Predict the class:
+<ul>
+<li>The class with the highest softmax probability is the predicted class. In this case, if <span class="math inline">\(\text{softmax}(z)_1\)</span> is the highest probability, the model predicts “cat.”</li>
+</ul></li>
+</ol>
+<p>Using the softmax function in multiclass classification allows you to obtain a probability distribution over classes and select the most likely class as the model’s prediction.</p>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="width-and-depth" class="level2" data-number="17">
+<h2 data-number="17" class="anchored" data-anchor-id="width-and-depth"><span class="header-section-number">17</span> Width and Depth</h2>
+<center>
+<img src="2023-11-05-15-22-52.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>If we have a single big hidden layer (so a lot of parameters) can approximate any functions but in practice this infeasible.</p>
+<ul>
+<li><strong>Width</strong> is how many neurons in a single layer</li>
+<li><strong>Depth</strong> is the number of layers</li>
+</ul>
+<p>This also does not tell you how many hidden units you would need. The theorem just says to approx any function you need infinitely.</p>
+<center>
+<img src="2023-11-05-15-32-01.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>Here we are saying that Deeper models reduce the loss functions (reduce the generalization error) because they generalize better meaning do not overfit. So do not need one single layer with a lot of neurons but instead multiple layers with fewer neurons.</p>
+<section id="convolution-neural-networks-vsfully-connected-neural-networks" class="level3" data-number="17.1">
+<h3 data-number="17.1" class="anchored" data-anchor-id="convolution-neural-networks-vsfully-connected-neural-networks"><span class="header-section-number">17.1</span> Convolution Neural Networks vsFully Connected Neural Networks</h3>
+<center>
+<img src="2023-11-05-15-38-28.png" class="w150 img-fluid">
+</center>
+<pre></pre>
+<p>Convolutional needs lees parameters as their inputs are not fully connected to every neuron see pic above</p>
+<center>
+<img src="2023-11-05-15-40-57.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li>3 Convolutional is worse than 11 Convolutional, because the latter is more deeper</li>
+</ul>
+</section>
+</section>
+<section id="neural-network-architectures-jungle" class="level2" data-number="18">
+<h2 data-number="18" class="anchored" data-anchor-id="neural-network-architectures-jungle"><span class="header-section-number">18</span> Neural Network architectures (jungle)</h2>
+<center>
+<img src="2023-11-05-15-43-44.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+</section>
+<section id="computational-graph" class="level2" data-number="19">
+<h2 data-number="19" class="anchored" data-anchor-id="computational-graph"><span class="header-section-number">19</span> Computational graph</h2>
+<center>
+<img src="2023-11-05-16-06-31.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<section id="example" class="level3" data-number="19.1">
+<h3 data-number="19.1" class="anchored" data-anchor-id="example"><span class="header-section-number">19.1</span> Example</h3>
+<center>
+<img src="2023-11-05-16-17-30.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>Problem with activation function ReLU</p>
+<center>
+<img src="2023-11-05-16-23-37.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+</section>
+</section>
+<section id="chain-rule-of-calculus" class="level2" data-number="20">
+<h2 data-number="20" class="anchored" data-anchor-id="chain-rule-of-calculus"><span class="header-section-number">20</span> Chain Rule of Calculus</h2>
+<center>
+<img src="2023-11-05-16-30-08.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<center>
+<img src="2023-11-05-16-30-24.png" class="w550 img-fluid">
+</center>
+</section>
+<section id="the-jacobian" class="level2" data-number="21">
+<h2 data-number="21" class="anchored" data-anchor-id="the-jacobian"><span class="header-section-number">21</span> The Jacobian</h2>
+<center>
+<img src="2023-11-05-16-32-28.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<center>
+<img src="2023-11-05-16-48-57.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li>The Jacobian measures how a change in the input changes the output</li>
+<li>The <strong>shape</strong> of the Jacobian is ouputs x inputs</li>
+</ul>
+</section>
+<section id="computing-gradients-in-complex-functions-chain-rule" class="level2" data-number="22">
+<h2 data-number="22" class="anchored" data-anchor-id="computing-gradients-in-complex-functions-chain-rule"><span class="header-section-number">22</span> Computing gradients in complex functions: Chain rule</h2>
+<center>
+<img src="2023-11-05-16-55-47.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+</section>
+<section id="chain-rule-and-tensors-intuitively" class="level2" data-number="23">
+<h2 data-number="23" class="anchored" data-anchor-id="chain-rule-and-tensors-intuitively"><span class="header-section-number">23</span> Chain rule and tensors, intuitively</h2>
+<center>
+<img src="2023-11-05-16-58-34.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+</section>
+<section id="example-1" class="level2" data-number="24">
+<h2 data-number="24" class="anchored" data-anchor-id="example-1"><span class="header-section-number">24</span> Example</h2>
+<center>
+<img src="2023-11-05-17-02-23.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<center>
+<img src="2023-11-05-17-02-55.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+</section>
+<section id="backpropagation-chain-rule" class="level2" data-number="25">
+<h2 data-number="25" class="anchored" data-anchor-id="backpropagation-chain-rule"><span class="header-section-number">25</span> Backpropagation Chain Rule</h2>
+<center>
+<img src="2023-11-05-19-36-24.png" class="w550 img-fluid">
+</center>
+<center>
+<img src="2023-11-05-19-50-46.png" class="w550 img-fluid">
+</center>
+<center>
+<img src="2023-11-05-19-50-59.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<section id="backpropagation-in-summary" class="level3" data-number="25.1">
+<h3 data-number="25.1" class="anchored" data-anchor-id="backpropagation-in-summary"><span class="header-section-number">25.1</span> Backpropagation in summary</h3>
+<center>
+<img src="2023-11-05-19-52-27.png" class="w575 img-fluid">
+</center>
+<center>
+<img src="2023-11-05-19-59-07.png" class="w575 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li>Note: in the figure above, we know what is <span class="math inline">\(h_0\)</span>, <span class="math inline">\(h_1\)</span>, <span class="math inline">\(h_2\)</span> and <span class="math inline">\(L\)</span> because we have initialized our <span class="math inline">\(w_1\)</span> and <span class="math inline">\(w_2\)</span> and we also know how the sigmoid function works:</li>
+</ul>
+<center>
+<img src="2023-11-05-20-49-31.png" class="w250 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li><p>That means all these values are known so that when we calculate the derivatives below everything is know and then we can use SGD to update the weights</p></li>
+<li><p>Then the derivatives wrt. <span class="math inline">\(w\)</span> are:</p></li>
+</ul>
+<center>
+<img src="2023-11-05-20-08-51.png" class="w250 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li>These last equations is what we need to do SGD</li>
+</ul>
+<p>Backprogation allows us to generally reduce the amount of space we need in order to compute all the gradients for all the layers, because storing the Jacobian takes a lot of space.</p>
+</section>
+</section>
+<section id="chain-rule-visualized" class="level2" data-number="26">
+<h2 data-number="26" class="anchored" data-anchor-id="chain-rule-visualized"><span class="header-section-number">26</span> Chain rule visualized</h2>
+<center>
+<img src="2023-11-05-20-24-57.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li>But now if the ouput is an scalar, we get in the ouput a vector:</li>
+</ul>
+<center>
+<img src="2023-11-05-20-27-37.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li>Now from the back to front you are only multiplying vector times matrices instead of large matrices with large matrices</li>
+</ul>
+<center>
+<img src="2023-11-05-20-29-47.png" class="w550 img-fluid">
+</center>
+<center>
+<img src="2023-11-05-20-30-02.png" class="w550 img-fluid">
+</center>
+<center>
+<img src="2023-11-05-20-30-18.png" class="w550 img-fluid">
+</center>
+<center>
+<img src="2023-11-05-20-30-26.png" class="w550 img-fluid">
+</center>
+</section>
+<section id="but-we-still-need-the-jacobian" class="level2" data-number="27">
+<h2 data-number="27" class="anchored" data-anchor-id="but-we-still-need-the-jacobian"><span class="header-section-number">27</span> But we still need the Jacobian</h2>
+<center>
+<img src="2023-11-05-20-30-51.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+</section>
+<section id="computational-graphs-forward-graph" class="level2" data-number="28">
+<h2 data-number="28" class="anchored" data-anchor-id="computational-graphs-forward-graph"><span class="header-section-number">28</span> Computational graphs: Forward graph</h2>
+<center>
+<img src="2023-11-05-20-44-54.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+</section>
+<section id="computational-graphs-forward-graph-1" class="level2" data-number="29">
+<h2 data-number="29" class="anchored" data-anchor-id="computational-graphs-forward-graph-1"><span class="header-section-number">29</span> Computational graphs: Forward graph</h2>
+<center>
+<img src="2023-11-05-20-45-27.png" class="w550 img-fluid">
+</center>
+<pre></pre>
 
 
 </section>

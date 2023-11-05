@@ -158,7 +158,203 @@
     "href": "blog/2023-11-05_deep-feedforward-networks/index.html#from-linear-functions-to-nonlinear-from-shallow-to-deep",
     "title": "Deep Feedforward Networks",
     "section": "1 From linear functions to nonlinear = from shallow to deep",
-    "text": "1 From linear functions to nonlinear = from shallow to deep\n\n\n\n\nWe first apply the Relu then sigmoid then Relu"
+    "text": "1 From linear functions to nonlinear = from shallow to deep\n\n\n\n\nHere to apply first a Relu and the output of that another Relu: \\(\\sigma(B\\sigma(A\\textbf{x}))\\)"
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#deep-feedforward-networks",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#deep-feedforward-networks",
+    "title": "Deep Feedforward Networks",
+    "section": "2 Deep feedforward networks",
+    "text": "2 Deep feedforward networks\n\n\n\n\nMLP is just a combination of multiple linear perceptrons, in each layer there would be parameters ie \\(A\\) is \\(\\theta_1\\), \\(B\\) is \\(\\theta_2\\)"
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#neural-networks-in-blocks",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#neural-networks-in-blocks",
+    "title": "Deep Feedforward Networks",
+    "section": "3 Neural networks in blocks",
+    "text": "3 Neural networks in blocks"
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#non-linear-feature-learning-perspective",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#non-linear-feature-learning-perspective",
+    "title": "Deep Feedforward Networks",
+    "section": "4 Non-linear feature learning perspective",
+    "text": "4 Non-linear feature learning perspective\n\n\n\n\nHere we are saying that at the end we have just have a linear function \\(C\\) “the linear model” ie.\n\\[\nC(\\sigma(B\\sigma(A\\textbf{x})))\n\\]\nto a transformed input \\(\\varphi(x\\textbf{x})\\) = \\(\\sigma(B\\sigma(A\\textbf{x}))\\)"
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#how-to-get-w-gradiend-based-learning",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#how-to-get-w-gradiend-based-learning",
+    "title": "Deep Feedforward Networks",
+    "section": "5 How to get w? gradiend-based learning",
+    "text": "5 How to get w? gradiend-based learning\n\nDue to nonlinearity our loss function would be nonconvex\nWe use then SGD\nNo guarantee of convergence, and sensitive to initialization of the parameters"
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#cost-function",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#cost-function",
+    "title": "Deep Feedforward Networks",
+    "section": "6 Cost Function",
+    "text": "6 Cost Function\n\n\n\n\n\n\n\n\n\n\n\n\n\nHere saturated means that the function becomes very flat so then the gradient of this is very minimal so then we cannot compute optimize because all the derivatives would look like very similar"
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#activation-functions",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#activation-functions",
+    "title": "Deep Feedforward Networks",
+    "section": "7 Activation Functions",
+    "text": "7 Activation Functions\n\n\n\n\n\nDefined how the weighted sum of the input is transformed into an output from a node or nodes in a layer of the network.\nIf output range limited, then called a “squashing function.”\nThe choice of activation function has a large impact on the capability and performance of the neural network.\nDifferent activation functions may be combined, but rare\nAll hidden layers typically use the same activation function\nNeed to be differentiable at most points"
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#linear-units-fully-connected-layer",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#linear-units-fully-connected-layer",
+    "title": "Deep Feedforward Networks",
+    "section": "8 Linear Units/ “Fully connected layer”",
+    "text": "8 Linear Units/ “Fully connected layer”"
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#advantages-of-relu",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#advantages-of-relu",
+    "title": "Deep Feedforward Networks",
+    "section": "9 Advantages of ReLU",
+    "text": "9 Advantages of ReLU\n\n\n\nReLu is better for propagation because if i.e take a sin as activation function when we derive close to zero the gradient would be very small, we keep doing this over multiple layers and essentially multiplying small times smalls at the end the result would be close to \\(0\\)."
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#disadvantages-of-relu",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#disadvantages-of-relu",
+    "title": "Deep Feedforward Networks",
+    "section": "10 Disadvantages of ReLU",
+    "text": "10 Disadvantages of ReLU"
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#leaky-relu",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#leaky-relu",
+    "title": "Deep Feedforward Networks",
+    "section": "11 Leaky ReLU",
+    "text": "11 Leaky ReLU"
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#exponential-linear-unit-elu",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#exponential-linear-unit-elu",
+    "title": "Deep Feedforward Networks",
+    "section": "12 Exponential Linear Unit (ELU)",
+    "text": "12 Exponential Linear Unit (ELU)\n\n\n\nUsed in Language models like BERT"
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#gaussian-error-linear-unit",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#gaussian-error-linear-unit",
+    "title": "Deep Feedforward Networks",
+    "section": "13 Gaussian Error Linear Unit",
+    "text": "13 Gaussian Error Linear Unit\n\n\n\n\nWe are not bounded by the computation power but by memory to be loaded in the computation units of the GPUs on Snellius"
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#sigmoid-and-tanh",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#sigmoid-and-tanh",
+    "title": "Deep Feedforward Networks",
+    "section": "14 Sigmoid and Tanh",
+    "text": "14 Sigmoid and Tanh"
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#softmax",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#softmax",
+    "title": "Deep Feedforward Networks",
+    "section": "15 Softmax",
+    "text": "15 Softmax\n\n\n\n\nIt outputs a probability distribution because it depends on the denominator which means all the variables would be taken into account. For instance this can be the last activation function to output probabilities of predicting a cat, a dog, a bird and so on.\nIf we now introduce a term \\(\\tau\\) in Softmax (by dividing the \\(e^{\\frac{x_i}{\\tau}}\\) in the numerator and denominator) then we have the following:\n\n\n\n\n\n\nSoftamx and \\(\\tau\\)\n\n\n\nIf τ is introduced, it can be used to control the temperature or the “sharpness” of the softmax distribution.\nWhen τ is set to a value greater than 1, it has the effect of “softening” the probabilities, making the distribution more uniform. In other words, it makes the probability of all categories more similar to each other. This can be useful in scenarios where you want to explore a wider range of possibilities or reduce the impact of extreme values in the input vector.\nConversely, when τ is set to a value less than 1, it has the effect of “sharpening” the probabilities, making the distribution more peaky, and emphasizing the largest values in the input vector. This can be useful when you want to make more distinct predictions and reduce uncertainty."
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#how-to-choose-and-activation-function",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#how-to-choose-and-activation-function",
+    "title": "Deep Feedforward Networks",
+    "section": "16 How to Choose and Activation Function",
+    "text": "16 How to Choose and Activation Function\n\n\n\nHere inference is testing or predicting\n\n16.1 Difference between Multiclass classification vs Multilabel calssification\n\nMulticlass Classification:\n\nIn multiclass classification, the task is to assign an input data point to one and only one class or category from a set of multiple mutually exclusive classes.\nEach data point belongs to exactly one class, and the goal is to determine which class that data point most likely belongs to.\nExamples of multiclass classification problems:\n\nHandwritten digit recognition: Given an image of a handwritten digit (0-9), determine which digit it represents.\nSpecies classification: Given a photo of an animal, classify it into one of several species (e.g., dog, cat, bird, etc.).\n\n\nExample: Suppose you have a multiclass classification problem where you want to classify fruits into three categories: apples, oranges, and bananas. If you input an image of an apple, the model should predict that it belongs to the “apples” class.\nMultilabel Classification:\n\nIn multilabel classification, each data point can be associated with one or more classes or labels. It’s not limited to assigning a single class per data point.\nThis is used when a data point can have multiple attributes or characteristics simultaneously, and you want to predict all relevant labels.\nExamples of multilabel classification problems:\n\nDocument categorization: Tagging a document with multiple topics or subjects that are present in it.\nImage tagging: Assigning tags to an image to describe its content, where an image may contain multiple objects or scenes.\n\n\nExample: Consider an image tagging problem. You have an image containing a beach scene with a dog and a sunset. In a multilabel classification scenario, the model might predict the following labels: “beach,” “dog,” and “sunset,” because all three labels are relevant to the image.\n\n\n\n\n\n\n\nHow to use Softmax in a Multiclass Classification problem?\n\n\n\n\n\nIn a multiclass classification problem, the softmax function is commonly used to convert the raw output scores of a model into a probability distribution over multiple classes. This probability distribution allows you to determine the likelihood of each class for a given input data point. Here’s how you use the softmax function in a multiclass classification problem:\n\nModel Output:\n\nAfter training your multiclass classification model, you will typically have a final layer in your neural network or a scoring function that produces raw scores (logits) for each class. These scores are not yet probabilities but represent the model’s confidence in each class.\nLet’s say you have N classes, and the model’s output for a particular input is a vector of raw scores \\(z\\) with N elements, one for each class.\n\nApply Softmax Function:\n\nTo convert the raw scores into probabilities, apply the softmax function to the \\(z\\) vector. The softmax function transforms the scores into a probability distribution where the sum of the probabilities for all classes equals 1.\nThe softmax function for class \\(i\\) is given by: \\(\\text{softmax}(z)_i = \\frac{e^{z_i}}{\\sum_{j=1}^N e^{z_j}}\\)\nCalculate the softmax value for each class \\(i\\) in the \\(z\\) vector to obtain a probability distribution.\n\nPredict the Class:\n\nThe class with the highest probability in the softmax distribution is typically chosen as the predicted class for the input data point. In other words, the class with the highest \\(\\text{softmax}(z)_i\\) value is the model’s prediction for that input.\n\n\nHere’s a step-by-step example of using softmax for multiclass classification:\nSuppose you have a multiclass classification problem with three classes: “cat,” “dog,” and “bird.” After processing an input image, your model produces the following raw scores:\n\\(z = [2.1, 0.9, 1.5]\\)\n\nApply the softmax function:\n\nCalculate the softmax values for each class:\n\\(\\text{softmax}(z)_1 = \\frac{e^{2.1}}{e^{2.1} + e^{0.9} + e^{1.5}}\\)\n\\(\\text{softmax}(z)_2 = \\frac{e^{0.9}}{e^{2.1} + e^{0.9} + e^{1.5}}\\)\n\\(\\text{softmax}(z)_3 = \\frac{e^{1.5}}{e^{2.1} + e^{0.9} + e^{1.5}}\\)\n\nPredict the class:\n\nThe class with the highest softmax probability is the predicted class. In this case, if \\(\\text{softmax}(z)_1\\) is the highest probability, the model predicts “cat.”\n\n\nUsing the softmax function in multiclass classification allows you to obtain a probability distribution over classes and select the most likely class as the model’s prediction."
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#width-and-depth",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#width-and-depth",
+    "title": "Deep Feedforward Networks",
+    "section": "17 Width and Depth",
+    "text": "17 Width and Depth\n\n\n\n\nIf we have a single big hidden layer (so a lot of parameters) can approximate any functions but in practice this infeasible.\n\nWidth is how many neurons in a single layer\nDepth is the number of layers\n\nThis also does not tell you how many hidden units you would need. The theorem just says to approx any function you need infinitely.\n\n\n\n\nHere we are saying that Deeper models reduce the loss functions (reduce the generalization error) because they generalize better meaning do not overfit. So do not need one single layer with a lot of neurons but instead multiple layers with fewer neurons.\n\n17.1 Convolution Neural Networks vsFully Connected Neural Networks\n\n\n\n\nConvolutional needs lees parameters as their inputs are not fully connected to every neuron see pic above\n\n\n\n\n\n3 Convolutional is worse than 11 Convolutional, because the latter is more deeper"
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#neural-network-architectures-jungle",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#neural-network-architectures-jungle",
+    "title": "Deep Feedforward Networks",
+    "section": "18 Neural Network architectures (jungle)",
+    "text": "18 Neural Network architectures (jungle)"
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#computational-graph",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#computational-graph",
+    "title": "Deep Feedforward Networks",
+    "section": "19 Computational graph",
+    "text": "19 Computational graph\n\n\n\n\n\n19.1 Example\n\n\n\n\nProblem with activation function ReLU"
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#chain-rule-of-calculus",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#chain-rule-of-calculus",
+    "title": "Deep Feedforward Networks",
+    "section": "20 Chain Rule of Calculus",
+    "text": "20 Chain Rule of Calculus"
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#the-jacobian",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#the-jacobian",
+    "title": "Deep Feedforward Networks",
+    "section": "21 The Jacobian",
+    "text": "21 The Jacobian\n\n\n\n\n\n\n\n\n\nThe Jacobian measures how a change in the input changes the output\nThe shape of the Jacobian is ouputs x inputs"
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#computing-gradients-in-complex-functions-chain-rule",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#computing-gradients-in-complex-functions-chain-rule",
+    "title": "Deep Feedforward Networks",
+    "section": "22 Computing gradients in complex functions: Chain rule",
+    "text": "22 Computing gradients in complex functions: Chain rule"
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#chain-rule-and-tensors-intuitively",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#chain-rule-and-tensors-intuitively",
+    "title": "Deep Feedforward Networks",
+    "section": "23 Chain rule and tensors, intuitively",
+    "text": "23 Chain rule and tensors, intuitively"
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#example-1",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#example-1",
+    "title": "Deep Feedforward Networks",
+    "section": "24 Example",
+    "text": "24 Example"
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#backpropagation-chain-rule",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#backpropagation-chain-rule",
+    "title": "Deep Feedforward Networks",
+    "section": "25 Backpropagation Chain Rule",
+    "text": "25 Backpropagation Chain Rule\n\n\n\n\n\n\n\n\n\n\n\n25.1 Backpropagation in summary\n\n\n\n\n\n\n\n\nNote: in the figure above, we know what is \\(h_0\\), \\(h_1\\), \\(h_2\\) and \\(L\\) because we have initialized our \\(w_1\\) and \\(w_2\\) and we also know how the sigmoid function works:\n\n\n\n\n\n\nThat means all these values are known so that when we calculate the derivatives below everything is know and then we can use SGD to update the weights\nThen the derivatives wrt. \\(w\\) are:\n\n\n\n\n\n\nThese last equations is what we need to do SGD\n\nBackprogation allows us to generally reduce the amount of space we need in order to compute all the gradients for all the layers, because storing the Jacobian takes a lot of space."
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#chain-rule-visualized",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#chain-rule-visualized",
+    "title": "Deep Feedforward Networks",
+    "section": "26 Chain rule visualized",
+    "text": "26 Chain rule visualized\n\n\n\n\n\nBut now if the ouput is an scalar, we get in the ouput a vector:\n\n\n\n\n\n\nNow from the back to front you are only multiplying vector times matrices instead of large matrices with large matrices"
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#but-we-still-need-the-jacobian",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#but-we-still-need-the-jacobian",
+    "title": "Deep Feedforward Networks",
+    "section": "27 But we still need the Jacobian",
+    "text": "27 But we still need the Jacobian"
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#computational-graphs-forward-graph",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#computational-graphs-forward-graph",
+    "title": "Deep Feedforward Networks",
+    "section": "28 Computational graphs: Forward graph",
+    "text": "28 Computational graphs: Forward graph"
+  },
+  {
+    "objectID": "blog/2023-11-05_deep-feedforward-networks/index.html#computational-graphs-forward-graph-1",
+    "href": "blog/2023-11-05_deep-feedforward-networks/index.html#computational-graphs-forward-graph-1",
+    "title": "Deep Feedforward Networks",
+    "section": "29 Computational graphs: Forward graph",
+    "text": "29 Computational graphs: Forward graph"
   },
   {
     "objectID": "blog/2023-09-24_color-rosa/index.html",
