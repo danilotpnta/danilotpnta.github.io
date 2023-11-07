@@ -22,6 +22,7 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/2023-11-07_numpy-reshape-rgb-image-to-1d-array/index.html",
       "/blog/2023-11-05_script-to-extract-pages-of-pdf-as-images-and-crop-them/index.html",
       "/blog/2023-11-05_deep-feedforward-networks/index.html",
       "/blog/2023-11-02_language-modelling/index.html",
