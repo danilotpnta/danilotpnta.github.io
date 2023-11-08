@@ -78,7 +78,7 @@
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/index.html</loc>
-    <lastmod>2023-11-07T10:02:50.473Z</lastmod>
+    <lastmod>2023-11-08T01:20:51.458Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-06-05_how-hash-table-works/index.html</loc>
@@ -110,7 +110,7 @@
   </url>
   <url>
     <loc>https://www.danilotpnta.com/index.html</loc>
-    <lastmod>2023-11-05T21:34:20.085Z</lastmod>
+    <lastmod>2023-11-07T10:04:49.559Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/about/index.html</loc>
@@ -254,6 +254,10 @@
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-11-07_numpy-reshape-rgb-image-to-1d-array/index.html</loc>
-    <lastmod>2023-11-07T10:02:48.402Z</lastmod>
+    <lastmod>2023-11-08T01:20:49.004Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-11-08_deep-learning-optimizations-i/index.html</loc>
+    <lastmod>2023-11-08T01:19:27.105Z</lastmod>
   </url>
 </urlset>
