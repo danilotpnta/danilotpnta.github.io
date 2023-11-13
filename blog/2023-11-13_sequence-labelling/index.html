@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Danilo Toapanta">
+<meta name="dcterms.date" content="2023-11-13">
+<meta name="description" content="Description of this Post">
+
+<title>Danilo Toapanta - Sequence Labelling</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/danilo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/material-icons-0.14.2/mi.css" rel="stylesheet">
+<script>
+window.MathJax = {
+  tex: {
+    tags: 'ams'
+  }
+};
+</script>
+<link rel="shortcut icon" href="../../../../../../../../../../../assets/danilo.ico">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../css/index-posts.css">
+</head>
+
+<body class="floating nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title"><span id="danilo_topanta_brand"> Danilo Toapanta</span> <a id="mysite" class="mysite" href="../../../../../sites/">MySites</a></span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html" rel="" target="">
+ <span class="menu-text"><span id="home-welcome-msg">Home</span></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog/index.html" rel="" target="">
+ <span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects/index.html" rel="" target="">
+ <span class="menu-text">Projects</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about/index.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/danilotpnta?tab=repositories" rel="" target="_blank"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full blog-page" style="display: none;">
+    <div class="quarto-title-banner page-columns page-full">
+        <div class="quarto-title column-body">
+            <h1 class="title">Sequence Labelling</h1>
+                
+            <!-- Description Block -->
+                        <div>
+                <div class="description">
+                    Description of this Post
+                </div>
+            </div>
+                        
+            <!-- Categories Block -->
+                                            <div class="quarto-categories">
+
+                    <!-- Display Categories -->
+                                            <div class="quarto-category">
+                            <a href="../../blog/#category=All">
+                                All
+                            </a>
+                        </div> 
+                                            <div class="quarto-category">
+                            <a href="../../blog/#category=NLP">
+                                NLP
+                            </a>
+                        </div> 
+                                            <div class="quarto-category">
+                            <a href="../../blog/#category=TAGS">
+                                TAGS
+                            </a>
+                        </div> 
+                    
+                    <!-- Display Tags if any -->
+                                    </div>
+                            
+        </div>
+    </div>
+
+
+    
+    <div class="quarto-title-meta">
+
+        <div>
+        <div class="quarto-title-meta-heading">Author</div>
+        <div class="quarto-title-meta-contents">
+                 <p><a href="https://danilotpnta.github.io/">Danilo Toapanta</a> </p>
+              </div>
+      </div>
+        
+        <div>
+        <div class="quarto-title-meta-heading">Published</div>
+        <div class="quarto-title-meta-contents">
+          <p class="date">November 13, 2023</p>
+        </div>
+      </div>
+      
+        
+      </div>
+      
+
+    
+</header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+<script>
+    var currentUrl = window.location.href;
+    var index_init_post = currentUrl.lastIndexOf("/20");
+    var string_init_post= currentUrl.slice(index_init_post, index_init_post+3 );
+
+    // console.log("currentUrl: " + currentUrl);
+    // console.log("index: " + index_init_post);
+    // console.log("string: " + string_init_post);
+
+    // If is equal to /blog/20... then make navbar title READING MODE
+    if (string_init_post === "/20"){
+        let mysite = document.getElementById("mysite");
+        mysite.classList.add("mysite-change");
+
+        let navbar = document.getElementById("danilo_topanta_brand");
+        navbar.classList.add("navbar-brand-change");
+
+        // This will render a new title saying READING DANILOS BLOG
+        // navbar.innerHTML = 'You are Reading Danilo\'s Blog<span style="font-size:35px; vertical-align: middle; opacity: 0.65; padding-bottom: 6px; padding-left: 14px;" class="material-icons-round"> auto_awesome </span>';
+        
+        const smallDevice = window.matchMedia("(min-width: 570px)");
+        smallDevice.addListener(handleDeviceChange);
+
+        function handleDeviceChange(mediaQuery) {
+            if (mediaQuery.matches) {
+                navbar.innerHTML = "";
+                // navbar.innerHTML = "<-- You are Reading Danilo's Blog -->";
+            } else  {
+                navbar.innerHTML = "Danilo Toapanta";
+            }
+        }
+
+        // Run it initially
+        handleDeviceChange(smallDevice);
+
+        let link = document.getElementsByClassName("navbar-brand")[0];
+        link.classList.add("disablePointerEvents");
+
+        let brand_container = document.getElementsByClassName("navbar-brand-container")[0];
+        brand_container.classList.add("navbar-brand-container-new-padding");
+
+    }
+</script>
+
+
+<!-- <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Running my first Marathon</h1>
+                  <div>
+        <div class="description">
+          I will be running at the 42km TCS Amsterdam 2023, 15th October
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">News</div>
+              </div>
+                  </div>
+  </div> -->
+
+  <!-- ---
+  coming-soon: true
+  tags: [Spanish]
+  --- -->
+
+
+
+
+
+
+
+
+<main id="title-block-header" class="quarto-title-block default page-columns page-full" style="padding-bottom: 40px;">
+
+    <div class="quarto-title column-body" style="margin-bottom: 1em;">
+        <h1 class="title" style="padding-bottom:8px" ;="">Sequence Labelling</h1>
+        
+        <!-- Description Block -->
+                    <div>
+                <div class="description">
+                    Description of this Post
+                </div>
+            </div>
+        
+        <!-- Categories Block -->
+                    
+                <!-- Display Categories -->
+                <div class="quarto-categories">
+                    <!-- <div id="tag-icon-blog" class="quarto-category tags-title">
+                        <i class="fa-solid fa-hashtag" ></i> Categories:
+                    </div> -->
+
+                                            <div id="All" class="quarto-category">
+                            <a href="../../blog/#category=All">
+                                All
+                            </a>
+                        </div>
+                                            <div id="NLP" class="quarto-category">
+                            <a href="../../blog/#category=NLP">
+                                NLP
+                            </a>
+                        </div>
+                                            <div id="TAGS" class="quarto-category">
+                            <a href="../../blog/#category=TAGS">
+                                TAGS
+                            </a>
+                        </div>
+                                    </div>
+                
+
+
+                <div class="quarto-categories tag-categories">
+                    
+                    <!-- Tags Icon  -->
+                    <!-- <div id="tag-icon-blog" class="quarto-category tags-title"> -->
+                        <!-- <i class="fa-solid fa-tag" ></i> Tags: -->
+                        <!-- <i class="fa-solid fa-hashtag" ></i> Tags: -->
+                        <!-- <span class="material-icons-outlined" >local_offer</span> Tags: -->
+                        <!-- / -->
+                    <!-- </div> -->
+
+                    <!-- Display Tags -->
+                                            <div id="All-from-here" class="quarto-category tags-title" style="display: none;">
+                            <a href="../../blog/#category=All">
+                               <!-- <span class="hasth-tag">
+                                #
+                                </span> -->
+                                All
+                            </a>
+                        </div>
+                                            <div id="NLP-from-here" class="quarto-category tags-title" style="display: none;">
+                            <a href="../../blog/#category=NLP">
+                               <!-- <span class="hasth-tag">
+                                #
+                                </span> -->
+                                NLP
+                            </a>
+                        </div>
+                                            <div id="TAGS-from-here" class="quarto-category tags-title" style="display: none;">
+                            <a href="../../blog/#category=TAGS">
+                               <!-- <span class="hasth-tag">
+                                #
+                                </span> -->
+                                TAGS
+                            </a>
+                        </div>
+                    
+                    
+                </div>
+
+                    
+    </div>
+
+
+    
+    <div class="quarto-title-meta">
+
+        <div>
+        <div class="quarto-title-meta-heading">Author</div>
+        <div class="quarto-title-meta-contents">
+                 <p><a href="https://danilotpnta.github.io/">Danilo Toapanta</a> </p>
+              </div>
+      </div>
+        
+        <div>
+        <div class="quarto-title-meta-heading">Published</div>
+        <div class="quarto-title-meta-contents">
+          <p class="date">November 13, 2023</p>
+        </div>
+      </div>
+      
+        
+      </div>
+      
+
+    <!-- Current link: Font-awesome, Google icons, Bootstrap icons -->
+    
+</main>
+
+<section id="representing-and-estimating-categorical-distributions-the-logistic-case" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="representing-and-estimating-categorical-distributions-the-logistic-case"><span class="header-section-number">1</span> Representing and estimating Categorical distributions: the logistic case</h2>
+<center>
+<img src="2023-11-13-22-47-11.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>W is condition on the Random variable H, which can be a history</p>
+<ul>
+<li><p><strong>f</strong> = is a function of the history <span class="math inline">\(h\)</span> and has some parameters <span class="math inline">\(\theta\)</span><br>
+<strong>f</strong> is not a real value but a collection of probability values</p></li>
+<li><p>W = word<br>
+It can take on <span class="math inline">\(V\)</span> categories, so W can take on <span class="math inline">\(V\)</span> possible assignments</p></li>
+<li><p>V = vocabulary size</p></li>
+<li><p>H = history h the history can take as many values as possible i.e (BOS, a), (BOS, an), (BOS, some)</p></li>
+</ul>
+<p>If you take a single row then all these values would add up to 1</p>
+<p>A Tabular representation is table look up operation. The yellow row represents then one <span class="math inline">\(\textbf{f}=\theta_{row=h}^{col=1...V}\)</span></p>
+<p>Then we need to think the function</p>
+<p><span class="math display">\[
+\textbf{f}(h; \theta)
+\]</span></p>
+<p>as a mechanism to predict vectors from the conditional information</p>
+</section>
+<section id="logistic-representation-of-categorical-cpds" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="logistic-representation-of-categorical-cpds"><span class="header-section-number">2</span> Logistic Representation of Categorical CPDs</h2>
+<p>CPDs= Conditional Probability Distribution</p>
+<p>What we are predicting with this Categorical distribution is the probabilities per each W under the condition of an <span class="math inline">\(h\)</span> so on a row. Essentially we are predicting every single entry in the tabular representation. I am interest then to map these to</p>
+<center>
+<img src="2023-11-13-22-51-44.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>after each conditional information has been mapped to a point, I will map those points to a different space. I want a vecgor with <span class="math inline">\(V\)</span> probabilities in it, one per each possible outcomes of the random variable <span class="math inline">\(W\)</span>.</p>
+<center>
+<img src="2023-11-13-23-03-45.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>Here we have <span class="math inline">\(\phi\)</span>(small,birs) <span class="math inline">\(\in \mathbb{R}^{2}\)</span> so in 2D that means I need my <span class="math inline">\(W_1\)</span> also to be in 2D so when I multiply with <span class="math inline">\(\phi\)</span>(small,birs), I get an scalar value. <span class="math inline">\(b_1\)</span> is just an scalar.</p>
+<p>These last row <span class="math inline">\(\textbf{S}\)</span> is called vector of ‘Logits’ these can be large or negative to turn this into a vector inside the probability simplex we can use Softmax. Note we go from the dimensional space to logits throught a lienar model. And then from logits to probabilities with a Softmax function</p>
+<p>The <span class="math inline">\(n\)</span>-dimensional probability simplex, denoted as <span class="math inline">\(\Delta^n\)</span>, is defined as:</p>
+<p><span class="math display">\[
+\Delta^n = \left\{ (p_1, p_2, \ldots, p_n) \mid p_i \geq 0, \sum_{i=1}^n p_i = 1 \right\}
+\]</span></p>
+<p>Here, <span class="math inline">\(p_i\)</span> represents the probability of event <span class="math inline">\(i\)</span>, and the conditions <span class="math inline">\(p_i \geq 0\)</span> and <span class="math inline">\(\sum_{i=1}^n p_i = 1\)</span> ensure that the vector lies within the simplex.</p>
+<center>
+<img src="2023-11-13-23-18-35.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>The model can turn the h into a vector of <span class="math inline">\(V\)</span> probabilities. so the <span class="math inline">\(\textbf{f}_1(h,\theta), \textbf{f}_2(h,\theta)...\)</span></p>
+<section id="why-is-this-a-great-idea" class="level3" data-number="2.1">
+<h3 data-number="2.1" class="anchored" data-anchor-id="why-is-this-a-great-idea"><span class="header-section-number">2.1</span> Why is this a great idea?</h3>
+<center>
+<img src="2023-11-13-23-26-34.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<ol type="1">
+<li><p>The model size is a function of how many <span class="math inline">\(w\)</span>s we have. So the model is very compact, because it does not depend on how many instances of h, because we have this basis function <span class="math inline">\(\phi\)</span> that maps it to the proper dimensions so that we can multiply it with <span class="math inline">\(W^T\)</span></p></li>
+<li><p>Histories are conditional information are no longer treated as unrelated to one another, now in fact are related to each other trhough their features. Because of these relatedness linear models work, because they find patterns that we can code in a tabular reprsentation</p></li>
+</ol>
+</section>
+</section>
+<section id="estimation-example" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="estimation-example"><span class="header-section-number">3</span> Estimation example</h2>
+<p>How do we estimate the W_s and the b_s</p>
+<ul>
+<li>We get data as pair, where we have <span class="math inline">\(h_n\)</span> as a conditional variable &amp; <span class="math inline">\(w_n\)</span> an assigment of the outcome variable</li>
+<li>Our model would be log-linear it will map from the history through a feature function it will map histories to a vector of probability values of the correct dimensionality</li>
+<li><span class="math inline">\(s\)</span> = W<span class="math inline">\(\theta\)</span> + b is called the parametric function. Through this <span class="math inline">\(s\)</span> our model predicts from any history h a complete categorical mass function with <span class="math inline">\(V\)</span> values</li>
+</ul>
+<p>To learn the parameters we initialize it, and then we compute the log likelihood of the parameters <span class="math inline">\(\theta\)</span> give our data <span class="math inline">\(D\)</span>. This can be solve due to the idd assumption.</p>
+<center>
+<img src="2023-11-13-23-40-01.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>When we solve for the grad wrt. <span class="math inline">\(\theta\)</span> we do not get a closed-form solution like we get in the tabular representation. Thus we use an iterative procedure aka SGD.</p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_1.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 1</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_2.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 2</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_3.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 3</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_4.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 4</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_5.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 5</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_6.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 6</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_7.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 7</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_8.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 8</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_9.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 9</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_10.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 10</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_11.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 11</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_12.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 12</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_13.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 13</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_14.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 14</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_15.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 15</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_16.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 16</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_17.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 17</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_18.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 18</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_19.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 19</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_20.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 20</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_21.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 21</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_22.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 22</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_23.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 23</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_24.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 24</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_25.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 25</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_26.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 26</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_27.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 27</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_28.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 28</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_29.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 29</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_30.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 30</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_31.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 31</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_32.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 32</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_33.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 33</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_34.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 34</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_35.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 35</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_36.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 36</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_37.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 37</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_38.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 38</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_39.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 39</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_40.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 40</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_41.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 41</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_42.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 42</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_43.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 43</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_44.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 44</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_45.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 45</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_46.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 46</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_47.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 47</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_48.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 48</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_49.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 49</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_50.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 50</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_51.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 51</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_52.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 52</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_53.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 53</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_54.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 54</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_55.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 55</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_56.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 56</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_57.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 57</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_58.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 58</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_59.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 59</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_60.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 60</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_61.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 61</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_62.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 62</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_63.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 63</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_64.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 64</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_65.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 65</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_66.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 66</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_67.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 67</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_68.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 68</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_69.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 69</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_70.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 70</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_71.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 71</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_72.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 72</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_73.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 73</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_74.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 74</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_75.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 75</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_76.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 76</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_77.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 77</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_78.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 78</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_79.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 79</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_80.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 80</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_81.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 81</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_82.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 82</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_83.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 83</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_84.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 84</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_85.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 85</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_86.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 86</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_87.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 87</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_88.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 88</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_89.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 89</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_90.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 90</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_91.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 91</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../about/index.html"><span class="footerDaniloToapanta">Mantained by Danilo Toapanta</span></a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../coming-soon.html">Newsletter</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../docs/sitemap.xml">RSS</a>
+  </li>  
+</ul>
+    </div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+<script>
+
+    let navbar = document.getElementsByClassName("navbar-nav")[0]    
+
+    let li2 = document.createElement("li");
+    li2.className = "nav-item compact";
+
+    let a2 = document.createElement("a");
+    a2.className = "nav-link quarto-color-scheme-toggle";
+    a2.style.cursor = "pointer"
+    li2.appendChild(a2)
+
+    let i2 = document.createElement("i");
+    i2.className = "bi bi-moon"
+    a2.append(i2)
+
+    navbar.appendChild(li2);
+
+    i2.onclick = function() {
+        window.quartoToggleColorScheme(); return false;
+    }
+    // <a href="http://localhost:4200/about/" class="quarto-color-scheme-toggle quarto-navigation-tool px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+
+    let li = document.createElement("li");
+    li.className = "nav-item compact";
+
+    let a = document.createElement("a");
+    a.className = "nav-link";
+    a.style.cursor = "pointer"
+    li.appendChild(a)
+
+    let i = document.createElement("i");
+    i.className = "bi bi-search"
+    a.append(i)
+
+    // let span = document.createElement("span");
+    // span.className = "menu-text"
+    // a.append(span)
+
+    navbar.appendChild(li);
+
+    a.onclick = function() {
+        window.quartoOpenSearch()
+    }
+
+
+</script>
+
+
+
+
+
+</body></html>
