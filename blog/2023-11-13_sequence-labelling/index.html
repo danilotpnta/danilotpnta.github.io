@@ -1166,7 +1166,13 @@ P(X = x) = \sum_{y} P(X = x, Y = y)
 <li>Imagine you have a sequence c1 trhough c_i which are the tags for sequence w1 throuhg w_i, where w1=the and so on.</li>
 </ul>
 <p>Alpha would be the marginal probability of all sequences that end with the assigment <span class="math inline">\(c_{i=j}\)</span>. That is making a choice for the ith position and that choice being in the jth tag position. i.e.&nbsp;look at <span class="math inline">\(\alpha(i=3, j=B)\)</span> (recall i=word_position, j+tag_class). Then we are taking about c1, c2 and c3=B, C1 having generated ‘the’</p>
-<p>We marginalize C1 and C2, which means we trying all the posibilities: - A A B - A B B - B A B - B B B</p>
+<p>We marginalize C1 and C2, which means we trying all the posibilities:</p>
+<ul>
+<li>A A B</li>
+<li>A B B</li>
+<li>B A B</li>
+<li>B B B</li>
+</ul>
 <p>We try all these posibilitis, we asses the joint probabilities, so the whole row of multiplications per each combination so for instance in the first one we would have:</p>
 <ul>
 <li>A A B</li>
@@ -1176,7 +1182,61 @@ P(X = x) = \sum_{y} P(X = x, Y = y)
 </center>
 <pre></pre>
 <p>A multiplication of all the parameters with classes A A B. Then for the second combination A B B and so on</p>
-<p>Once we have calcualted all these combination we add them all toguether adn taht quantity which is the marginal probability is what we store in the function <span class="math inline">\(\alpha_{}^\)</span></p>
+<p>Once we have calcualted all these combination we add them all toguether and thdt quantity which is the marginal probability is what we store in the function <span class="math inline">\(\alpha (i,j)\)</span></p>
+<p>Now with this <span class="math inline">\(\alpha (3,B)\)</span> we can expressed in in therm os <span class="math inline">\(\alpha (2,A)\)</span> and <span class="math inline">\(\alpha (2,B)\)</span> and so on.</p>
+<center>
+<img src="2023-11-15-21-54-02.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Recaping Forward Algorithm
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The forward recursing boilds down to <span class="math inline">\(\alpha (i,j)\)</span> which is the marginal probability of the assigment where we have generated all the wrods all they way until the ith, the ith word is tagget with the jth tag in the tagset and the sequence up unil that variable has been marginalized</p>
+</div>
+</div>
+<p>When i is more than one then we have a recursive call to alpha but evaluated in the previous position. So escentially to evaluate alpha(i,j) we check for all candidate tags that could be set in the previous psoition with the fixed word and we asses alpha as if that tag was indeed the tag assign to the previous position and then we transition ot the jth tag and we omit the ith word.</p>
+<p>alpha(4, ESO) is the probability that we are looking for because it evaluates the joint probabilities of all sequences and adds them toguether</p>
+<center>
+<img src="2023-11-15-22-10-42.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>Complete Forward algorithm:</p>
+<center>
+<img src="2023-11-15-22-15-45.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+</section>
+</section>
+<section id="viterbi-algorithm" class="level3" data-number="15.2">
+<h3 data-number="15.2" class="anchored" data-anchor-id="viterbi-algorithm"><span class="header-section-number">15.2</span> Viterbi Algorithm</h3>
+<p>Now we want to maximize our choice, we want the probability of the best sequence ending in (c_i=j, w_i=w_i)</p>
+<p>The probability of the sequence that ends in c_i=c_j and emits the ith words from the jth tag is either the probability of the transition emission probability pair when i=j, or when is the second term of the alpha function.</p>
+<center>
+<img src="2023-11-15-22-23-33.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>So now the best sequence that ends up in the sequence (C_2=A, W_2=nice). Suppose for a moment that going to A is the best choice/the one that maximizes, then to get to alpha(2,A) = alpha(1,A) * <span class="math inline">\(\lambda_A^{A} \theta_{nice}^{A}\)</span> is the biggest among the other path posibility so the path below (aplha(1,B)*…)</p>
+<p>Now for alpha(2,B) the best value is by going from alpha(1,A)*<span class="math inline">\(\lambda_A^{B} \theta_{nice}^{A}\)</span></p>
+<center>
+<img src="2023-11-15-22-37-09.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>So if you implement a table of alpha(i,j) values and another table of Backpointers, then you have everything that you need to compute the probability (the sums of probs from the first table) and to compute the tag sequence (from the Backpointers table) and thus outputs the best tag sequence to the user.</p>
+</section>
+<section id="notes-on-these-algorithms" class="level3" data-number="15.3">
+<h3 data-number="15.3" class="anchored" data-anchor-id="notes-on-these-algorithms"><span class="header-section-number">15.3</span> Notes on these algorithms</h3>
+<p>To solve all htse computation we want to do it in a logarithm scale because logs convert products into sums leading to more numerically stable computations. For that we need to do some extra mods to the alpha function. With these three forumlas in red I can rewrite alpha into somthing called value recursion</p>
+<center>
+<img src="2023-11-15-22-46-19.png" class="w550 img-fluid">
+</center>
+<pre></pre>
 <!-- <center>![Slide 47](imgs/page_47.jpeg){.w575}</center><pre></pre> -->
 <!-- <center>![Slide 48](imgs/page_48.jpeg){.w575}</center><pre></pre> -->
 <!-- <center>![Slide 49](imgs/page_49.jpeg){.w575}</center><pre></pre> -->
@@ -1224,7 +1284,6 @@ P(X = x) = \sum_{y} P(X = x, Y = y)
 <!-- <center>![Slide 91](imgs/page_91.jpeg){.w575}</center><pre></pre> -->
 
 
-</section>
 </section>
 </section>
 
