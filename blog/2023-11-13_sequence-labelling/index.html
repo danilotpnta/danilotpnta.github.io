@@ -437,6 +437,12 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 <li><p>The model size is a function of how many <span class="math inline">\(w\)</span>s we have. So the model is very compact, because it does not depend on how many instances of h, because we have this basis function <span class="math inline">\(\phi\)</span> that maps it to the proper dimensions so that we can multiply it with <span class="math inline">\(W^T\)</span></p></li>
 <li><p>Histories are conditional information are no longer treated as unrelated to one another, now in fact are related to each other trhough their features. Because of these relatedness linear models work, because they find patterns that we can code in a tabular reprsentation</p></li>
 </ol>
+<ul>
+<li>Suppose you condition on a sentence to draw a prob of a label/class.</li>
+<li>Imagine you have 5 labels/classes, the thing that you condition can be represented by a feature function that gives you D-dimensional features so we are talking about <span class="math inline">\(\phi(h) \in \mathbb{R}^D\)</span>. For each of those dimensions you would weight them towards a class, for instance if you have <span class="math inline">\(K\)</span>-classes, so <span class="math inline">\(KD\)</span>. <strong>Note</strong> <span class="math inline">\(K=V\)</span></li>
+<li>Each feature gets a relevance an importance score towards a class and each class get a bias <span class="math inline">\(b\)</span>. You can think of <span class="math inline">\(b\)</span> of how usefull this class is, or how generally present it is in the data regardless of context.</li>
+<li>So per feature, per class you have a real number <span class="math inline">\(KD\)</span> + <span class="math inline">\(K\)</span> (from the bias) for each of the possible classes in my hypothetical example</li>
+</ul>
 </section>
 </section>
 <section id="estimation-example" class="level2" data-number="3">
@@ -453,15 +459,20 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </center>
 <pre></pre>
 <p>When we solve for the grad wrt. <span class="math inline">\(\theta\)</span> we do not get a closed-form solution like we get in the tabular representation. Thus we use an iterative procedure aka SGD.</p>
+<p>Matmul is the same as doing dot product but for matrices take a look at this <a href="https://mkang32.github.io/python/2020/08/30/numpy-matmul.html#np.dot:~:text=dot%20product%20only.-,(4)%20matrix%20multiplication%3A%20np.matmul,-The%20next%20option">link</a></p>
+Example:
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="imgs/page_1.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 1</figcaption>
+<p><img src="2023-11-14-11-35-53.png" class="w550 img-fluid figure-img"></p>
+<figcaption class="figure-caption">code at <a href="https://www.youtube.com/watch?v=DsflDpm5h-c&amp;ab_channel=WilkerAziz">Colab</a></figcaption>
 </figure>
 </div>
 </center>
-<pre></pre>
+<!-- <center>![Slide 1](imgs/page_1.jpeg){.w575}</center><pre></pre> -->
+</section>
+<section id="start-of-lecture" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="start-of-lecture"><span class="header-section-number">4</span> Start of Lecture</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -471,24 +482,8 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_3.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 3</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_4.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 4</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
+<!-- <center>![Slide 3](imgs/page_3.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 4](imgs/page_4.jpeg){.w575}</center><pre></pre> -->
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -507,6 +502,9 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
+</section>
+<section id="why-do-we-want-to-classify-words-in-classescategories" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="why-do-we-want-to-classify-words-in-classescategories"><span class="header-section-number">5</span> Why do we want to classify words in classes/categories</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -516,15 +514,8 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_8.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 8</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
+<p>Reduce the number of dimensions like in bigrams only consider the nouns and adjectives and that is to measure the sentiment of a review. So here we refer to feature as the <span class="math inline">\(\phi(h)\)</span> so if we reduce this feature vector say <span class="math inline">\(D\)</span> to a less than <span class="math inline">\(D\)</span> i.e in bigrams <span class="math inline">\(D=2\)</span> then we save memory and reduce the dimensions</p>
+<!-- <center>![Slide 8](imgs/page_8.jpeg){.w575}</center><pre></pre> -->
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -534,6 +525,11 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
+<p>In out tabular CPDs we are force to treat each words as if they are unrelated to each other, but that is not trueth because as we sa before we can have relatedness i.e adjectives preceed nouns.</p>
+<p>So to capture relatedness the categorization of words can capture that.</p>
+<ul>
+<li>For example how to classify them:</li>
+</ul>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -552,6 +548,10 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
+<p>Once we have categorized we can even not use the words because we know already its categories and we know that we this categorization a sentences would be like noun + adjective, so then we dont need the actual word but rather just its category.</p>
+<ul>
+<li>Called the above a mapping. Note this could not be good enough in some instances. A reason why to do this is so that we reduce the dimensionality space.</li>
+</ul>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -561,6 +561,7 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
+<p>Here an example of how people classify unambiguously</p>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -579,6 +580,9 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
+</section>
+<section id="how-to-annotate-words-with-part-of-speech-pos-using-peen-style" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="how-to-annotate-words-with-part-of-speech-pos-using-peen-style"><span class="header-section-number">6</span> How to annotate words with Part Of Speech (POS) using Peen Style</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -588,15 +592,7 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_16.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 16</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
+<!-- <center>![Slide 16](imgs/page_16.jpeg){.w575}</center><pre></pre> -->
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -604,6 +600,11 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 <figcaption class="figure-caption">Slide 17</figcaption>
 </figure>
 </div>
+</center>
+<pre></pre>
+This is a join distribution
+<center>
+<img src="2023-11-14-13-15-14.png" class="w350 img-fluid">
 </center>
 <pre></pre>
 <center>
@@ -615,6 +616,11 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
+<p>Recall we model text as a join distribution over all available tokens</p>
+<p>Now we model POS_tagged text: joint distribution over text and their POS tags</p>
+<ul>
+<li>Our goal is to assigned probabilities to the sequence paits <span class="math inline">\((w_{1:l}, c_{1:l})\)</span></li>
+</ul>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -624,6 +630,9 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
+<ul>
+<li><strong>Recall </strong></li>
+</ul>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -633,6 +642,16 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
+<ul>
+<li><p><em>W</em> Words is a random variable for us, are tokens in Caligraphic_W (a vocabulary of symbols) that I know. The size of the vocabulary is V</p></li>
+<li><p>w is an specific word</p></li>
+<li><p><em>C</em> is for Category and is a random variable, that are in Caligraphic_C (the tagset). The size of the tagset is K</p></li>
+<li><p>c is an specific tag</p></li>
+<li><p><em>X</em> is a random sequence (our token sequence from lst week), from words from one until the lenght L in order</p></li>
+<li><p><span class="math inline">\(w_{1:l}\)</span> is a sequence of l words from the Caligraphic_W w/ vocabulary size V</p></li>
+<li><p><em>Y</em> is a random sequence</p></li>
+<li><p><span class="math inline">\(c_{1:l}\)</span> is a sequence of l tags from the Caligraphic_C w/ tagset size K</p></li>
+</ul>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -642,6 +661,7 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
+<p>Now we want a distribution over the cross product of all Text and all Tags sequence: <span class="math inline">\(w_{1:l}, c_{1:l}\)</span>. This is an enormous space</p>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -651,6 +671,32 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
+<p>You can do two things with this:</p>
+<ol type="1">
+<li><p>For instance, I give you the ‘little cat’ and you want to know what is the prob sequence under the model. You can compute the possible probability sequence given that you give me a certain token sequence and then I could look for what maximizes this probability</p></li>
+<li><p>Another we can do a language model, a language model was a mechanism to assign probabilities to strings without any tags, BUT if you get a distribution over two variables, token sequences and class sequences and you marginalized out one of the variables. ie you marginalized my choice for the first class, for the second class, all the way to the last class. If I sum the probabilities of all possible tag sequences that pair with these word sequence then I get a marginal probability. So in the above equation, the left part:</p></li>
+</ol>
+<center>
+<img src="2023-11-14-15-02-30.png" class="w250 img-fluid">
+</center>
+<pre></pre>
+<p>So that is the probability of a sentence so <span class="math inline">\(P_X(w_{1:l})\)</span> this is a language model.</p>
+<p>So once you design a model that can assign join probabilities to labeled sequences of words then you can use it to either:</p>
+<ol type="1">
+<li>tag news sequences of words with their respective categories or</li>
+<li>assign prob to a sequence of words, regardless of which classes they have been annotated</li>
+</ol>
+<p>Remember NB classifier you can do:</p>
+<ol type="1">
+<li>you can annotate what is the most probable class of a document</li>
+<li>assign prob to a document regardless of their class (is the denominator of the NB model). Note the den of Bayes rule is the marginal</li>
+</ol>
+<p>This second step is common to all generative model. Every time you have</p>
+<center>
+<img src="2023-11-14-15-13-09.png" class="w350 img-fluid">
+</center>
+<pre></pre>
+<p>C1..C3 is the class tha sits at position 1..3</p>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -660,6 +706,7 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
+<p>Last time we created a distribution and we created a new one, by chopping out sequences and working with probabilities for words given a short history, now we will do something similar but this time we are gonna built a distribution with pairs of sequences</p>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -669,15 +716,49 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
+<p>Steps: a way of describing the generation of a tag sequence pair. And wathever we call step that is the unit we are gonna sign probabilities to.</p>
+<!-- <center>![Slide 25](imgs/page_25.jpeg){.w575}</center><pre></pre> -->
 <center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_25.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 25</figcaption>
-</figure>
-</div>
+<img src="2023-11-14-15-20-48.png" class="w550 img-fluid">
 </center>
 <pre></pre>
+<pre></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Markov Model Assumption
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>Here is this image we have assume <strong>Markov</strong> assumption</p></li>
+<li><p>At the tag level it looks like a bigram model and not somethingelse, we have made the assumption that when we have generated certain variable I can forget a lot of the precedding context all the classes that ocurred before except for the last one and even all the words that were generated before so this conditional independence is a markov assumption.</p></li>
+</ul>
+<p>Why is hidden? originally it was decided so that you do not get to see which class is for each on every position, these are latent variable. Latent variables are the variables you pretend there is there but you dont observe its value. We do this because it makes modelling easier or more usefull for a certain purpose. Here we are observing both, the token sequence and the tag sequence but if you would not see the tag sequence yet pretend that it exists a modeling desing choice and it will be hidden for you.</p>
+</div>
+</div>
+<ul>
+<li><p>At the class level this looks like a bigram because when we genreate a symbol. For instance when you generates a symbol for isntance when you generate ‘is’ (when VERB is generated) we can use the fact that you have just generated a NOUN this is like a bigram. To generate one word you can condition on the previous one but this time we are not generating words but are generating tag sequences</p></li>
+<li><p>This model starts with the tag sequence not from the text , isnt that weird? Not really the NB started from class not from the text you generate the class and given the class you generate the words in the text with a conditional independence</p></li>
+<li><p>So at the tag level we are doing bigrams language modelling, the orange stuff exits even without the blue stuff, so the orange stuff is never conditioning on the words. <em>But</em> the words comes from somewhere, from their ‘categories’. I.e if I would generate a verb and I know is a verb, isnt it easier to assign lower probabilities to nouns, I already know is a verb so maybe that in its own is gonna lead to conditional distributions that are much more compact because the set of verbs are more compact than the set of all words</p></li>
+</ul>
+<p>It is not because of the factorization starts with classes and then generates words, that can be the other way around, we can observe a word sequence and ask: what is the most probable tag sequence.</p>
+<p><strong>What is a factorization?</strong> It is a decomposition of products see next slide. So I decomposed the enttire sequence pair (the orange sequence and the blue sequence) into the probabilities of the number of circles with an arrow pointing to them.</p>
+<ul>
+<li>The trick again you add the BoS and EoS, why do I do that? because I know that for every class I am generating there is something before to condition before (except in the first class that is why BoS fixes that) and the second reason is that I give to every single symbol a chance to be part of the conditional context that is what EoS is helpful for. In the img above it translates to also given teh punctuation a chance to assign the probability of a sequence ending</li>
+</ul>
+<!-- - For a particular word you are condition on its part of speach and nothing else, the problem with that is that only with PoS is not enough to condition the word. It is not enough because one word could be a noun but also could be a verb. So there is ambiguity. The conditional independence is really strong that no matter how good an HMM we have, we always get confusion     -->
+<p>Lets imagine the following, lets take the words away just leave the categories? Now if we were an HHM so a model, then the question is give me a VERB. Then the answer is tha there is no way I would get the same verb twice. Some poeple reply: jump other: run so there is a ot of variation.</p>
+<p>Because our model is not that advanced our model can: - describe statistical patterns of pair of classes that ocurr in a relative order, - it can explain the distribution of our words given the categories</p>
+<p>In more concrete notes: the model can lear for instance that 80% of the time VERBS appear after right after NOUNS but it cannot sample the noun and the verb, the actual words together. You can get book is or book are, there is no agreement there which verb it will be.</p>
+<p>Is there a trap where it goes NOUN VERB NOUN VERB … but this is very unlikely if we do MLE it is very unlikely to fall in this trap because you would not see this traps in the data. It is unlikely if you do MLE, but if you start fideling with smoothing things get really weird.</p>
+<p>Every time that a history h is given, this corresping 1:1 to a factorization, which we can get it whit the chain rule as follows:</p>
+</section>
+<section id="hidden-markov-model" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="hidden-markov-model"><span class="header-section-number">7</span> Hidden Markov Model</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -687,6 +768,11 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
+<p>In the slide above we forgot in the same qual to write above ‘idd’ assumption.</p>
+<p>The <span class="math inline">\(w_i\)</span> here is the word that is emitted for that particular class. We call that an emission probability</p>
+</section>
+<section id="generative-history" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="generative-history"><span class="header-section-number">8</span> Generative History</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -696,6 +782,23 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
+<p>We can sample from an HMM by following the history.</p>
+<ol type="1">
+<li><p>start two sequence the token sequence (the words) and the label sequence (c_0 = BOS)</p></li>
+<li><p>Condition on the previous class so that is c_0 so condition on BOS, and extend Y with BOS. Whatever class you get extend your sequence to Y and move on. Here we use the <strong>transition</strong> distribution. Here the P(c_i|c_i-1) would be the transition distribution</p></li>
+</ol>
+<p>^ Here we draw a c_i and that we use for the next step</p>
+<ol start="3" type="1">
+<li>Condition on current class c_i and draw a word w_i with probability P_w|c(w_i_i). So when we say random we meant np.random.choice([vector], weights=P_w|c(w_i_i)). Whatever word you get extend your sequence to X and move on<br>
+For instance you can get a Determiner, so do P_w|c(w_i)) and draw a word from it. Here we use the <strong>emission</strong> distribution.</li>
+</ol>
+<p>If your sequence is too long then stop. And this would be the factorization of the HMM</p>
+<center>
+<img src="2023-11-14-15-20-48.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>Here in the picture you start with BoS, then you fo to DET and then to the and then to NOUN and book and so on..</p>
+<p>Which tasks is this model use for? in 2023 none.</p>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -705,6 +808,15 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
+<p>In the trasition distribution we would go from the prev class called ‘<span class="math inline">\(r\)</span>’. Once you know it you can retrieve <span class="math inline">\(K\)</span> probabilities one for each of the tags that you may trasition to. For instance <span class="math inline">\(K=10\)</span> so NOUN, VERBS, ADJ, … so given one of them which we call it i.e ‘<span class="math inline">\(r=DETERMINER\)</span>’ then I can retrieve <span class="math inline">\(K\)</span> numbers which I called them <span class="math inline">\(\lambda_1, \lambda_2 ... \lambda_K\)</span> And these are the probability values for the conditional probability of drawing a NOUN given a DETERMINER, a VERB given a DETERMINER, a ADJECTIVE given a DETERMINER, ….</p>
+<p>Now for the Emission distribution or W|C, we need to specify:</p>
+<ul>
+<li>What are you emitting from, which class ie. a VERB, that is the little ‘<span class="math inline">\(c\)</span>’. Once you know what are you emitting from, then you can retrieve a collection of <span class="math inline">\(V\)</span> numbers which are <span class="math inline">\(\theta_1,\theta_2,.. \theta_V\)</span>. These are the probability from which you draw a certain word in the vocabulary of known words given that you are emitting from little ‘<span class="math inline">\(c\)</span>’ category.</li>
+</ul>
+<p>Once you have all these tabels all the tabular representation, now you can assign a probability to any sequence pair by taking the product of the relevant number. So go to the entry (row) of the table that conditions on the previous tag and find the probability (per each column) of the current tag. Or go to the table of emissions find the row that corresponds to the current class and multiply the probability of generating the current word given that class so multiply it with the (emission distribution). You will find values from each of the tables and you will multiply them together</p>
+</section>
+<section id="example" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="example"><span class="header-section-number">9</span> Example</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -715,23 +827,33 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </center>
 <pre></pre>
 <center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_30.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 30</figcaption>
-</figure>
-</div>
+<img src="2023-11-14-22-25-47.png" class="w350 img-fluid">
 </center>
 <pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_31.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 31</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
+<p>What is the difference between this and what was done last time?</p>
+<p>At an abstract level we have two sets of outcomes, we have a token sequence and a class sequence and there is also some difference in the parametrisation like what condition independences we make but the two are familiar and the tables are also familiar</p>
+<p>Which then leads to the following question:</p>
+</section>
+<section id="r-rightarrow-c" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="r-rightarrow-c"><span class="header-section-number">10</span> <span class="math inline">\(r \rightarrow c\)</span></h2>
+<!-- <center>![Slide 30](imgs/page_30.jpeg){.w575}</center><pre></pre> -->
+<p>Now I give you data and I want to estimate the values of our parameters and I choose MLE, I give you data, meaning I give you word sequences (aka sentences i.e ‘A nice dog’) for which you know the type sequences (so their PoS: DETERMINANT, ADJECTIVE&lt; NOUN).</p>
+<ul>
+<li>The question is then what is the probability of transition from a tag r –&gt; to a tag c i.e r=DETERMINANT, and c=NOUN. What is the probability?</li>
+</ul>
+<p>We do not need Bayes RUle, we would need it if my query is not a parameter, for i.e if I ask what is the prob of the prev tag given that I know the current, then that is reversive the model so that is what you use Bayes Rule for.</p>
+<p>Our case is different we are asking a query that is a parameter of the model, the probability of given a class generating the next.</p>
+<section id="the-question" class="level3" data-number="10.1">
+<h3 data-number="10.1" class="anchored" data-anchor-id="the-question"><span class="header-section-number">10.1</span> The question:</h3>
+<blockquote class="blockquote">
+<ul>
+<li>What is the probability of transition from a tag r –&gt; to a tag c i.e r=DETERMINANT, and c=NOUN. What is the probability?</li>
+</ul>
+</blockquote>
+<!-- <center>![Slide 31](imgs/page_31.jpeg){.w575}</center><pre></pre> -->
+</section>
+<section id="the-answer" class="level3" data-number="10.2">
+<h3 data-number="10.2" class="anchored" data-anchor-id="the-answer"><span class="header-section-number">10.2</span> The answer:</h3>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -741,15 +863,26 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_33.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 33</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
+<p>So how many times I have seen a DETERMINANT that was follow by a NOUN divided by the how many times you have count DETERMINANT follwed by anything</p>
+<p>This is the <strong>solution for MLE</strong>: count(condition_on=DETERMINANT, the_outcome=NOUN)/sum_k count(DETERMINANT,k). The later means the DETERMINANT pair with any other tag from the tag set</p>
+<p>Where k is any possible outcome in the set of things that you know</p>
+<!-- <center>![Slide 33](imgs/page_33.jpeg){.w575}</center><pre></pre> -->
+</section>
+</section>
+<section id="c-rightarrow-w" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="c-rightarrow-w"><span class="header-section-number">11</span> <span class="math inline">\(c \rightarrow w\)</span></h2>
+<section id="the-question-1" class="level3" data-number="11.1">
+<h3 data-number="11.1" class="anchored" data-anchor-id="the-question-1"><span class="header-section-number">11.1</span> The question:</h3>
+<blockquote class="blockquote">
+<ul>
+<li>What is the probability of generating w given c?</li>
+</ul>
+</blockquote>
+<p>The model choice is an HMM the dataset is the ‘A nice dog’, the algorithm of choice is MLE.</p>
+</section>
+<section id="the-answer-1" class="level3" data-number="11.2">
+<h3 data-number="11.2" class="anchored"><span class="header-section-number">11.2</span> The answer:</h3>
+<p>The expression to compute the mission probability. So what is the probaility of emission of w given that have just generated class c.</p>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -759,6 +892,7 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
+<p>Note: here in the denominator is the same, sum over all V with c, being fixed</p>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -768,33 +902,94 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_36.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 36</figcaption>
-</figure>
+<p>This approach still suffers from Data Sparcity, so the data contains plenty of zeros. For instance unseen word-tag pairs or unseen tag-tag pairs that are not too frequent and that we have not seen but this could happen. This can also happen as you tag set grows really large and maybe the tag set for a language like Arabic, Turkish, etc, i.e for these languages the tag set is really large so then maybe the transition probabilities aren’t easy to estimate. On the other hand, emission probabilities can be really sparce in the sense that i.e a language like Czeck or Portuguess where you have many word forms that are slight variation of the same thing and all have the same category so you would need a lot of data before you have seen every noun pop up or every verb.</p>
+<p>This is less sparce compared to NGram LM where you have more data sparcity i.e because you need to memorize long phrases so is easy to find phrases that you have never seen thus creating sparcity.</p>
+<ul>
+<li>In this sense, HMM are more compact than Ngram LM, but what is the limitation with this?</li>
+</ul>
+<p><strong>Limitation</strong></p>
+<ol type="1">
+<li>When we generate a word all we know is a class, is hard to believe that if I sample from this model I would get nice sentences. I will get words that, if I extract from what they are and think only about the categories, then the trnasition from class to class would make sense, but when we look at the semantics (so the words then make no sense) i.e An furious bottle. The tags (A determinant then an adjective and then a noun) are okay but the semantics do not make sense</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_37.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 37</figcaption>
-</figure>
+<div class="callout-title-container flex-fill">
+PoS: DET, Prenomial ADJ Examples
 </div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_38.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 38</figcaption>
-</figure>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-</center>
-<pre></pre>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<section id="examples-of-determinats-can-be" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="examples-of-determinats-can-be"><span class="header-section-number">12</span> Examples of determinats can be:</h2>
+<ol type="1">
+<li><strong>Determiners (DET):</strong>
+<ul>
+<li><em>a:</em> I saw <strong>a</strong> cat in the garden.</li>
+<li><em>an:</em> She has <strong>an</strong> apple in her hand.</li>
+<li><em>the:</em> <strong>The</strong> sun is shining brightly.</li>
+<li><em>this:</em> I would like <strong>this</strong> book, please.</li>
+<li><em>some:</em> Can I have <strong>some</strong> water?</li>
+</ul></li>
+</ol>
+</section>
+<section id="examples-of-prenomial-adjectives" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="examples-of-prenomial-adjectives"><span class="header-section-number">13</span> Examples of Prenomial adjectives:</h2>
+<p>Prenomial adjectives are adjectives that come before the noun they modify. Here are some examples of prenomial adjectives:</p>
+<ol type="1">
+<li><strong>The red apple</strong>
+<ul>
+<li>“red” is a prenomial adjective modifying the noun “apple.”</li>
+</ul></li>
+<li><strong>A beautiful sunset</strong>
+<ul>
+<li>“beautiful” is a prenomial adjective describing the noun “sunset.”</li>
+</ul></li>
+<li><strong>Three large elephants</strong>
+<ul>
+<li>“large” is a prenomial adjective indicating the size of the noun “elephants.”</li>
+</ul></li>
+<li><strong>An old book</strong>
+<ul>
+<li>“old” is a prenomial adjective modifying the noun “book.”</li>
+</ul></li>
+<li><strong>The happy child</strong>
+<ul>
+<li>“happy” is a prenomial adjective describing the noun “child.”</li>
+</ul></li>
+<li><strong>Several interesting movies</strong>
+<ul>
+<li>“interesting” is a prenomial adjective modifying the noun “movies.”</li>
+</ul></li>
+</ol>
+<p>These examples illustrate how adjectives are positioned before the nouns they modify in a sentence.</p>
+</section>
+</div>
+</div>
+</div>
+<!-- <center>![Slide 36](imgs/page_36.jpeg){.w575}</center><pre></pre> -->
+<ol type="1">
+<li><strong>Syntactics</strong></li>
+</ol>
+<ul>
+<li>When something is syntactically correct, it means that it adheres to the grammatical rules of a given language</li>
+</ul>
+<ol start="3" type="1">
+<li><p><strong>Syntax</strong> are the rules that dictate the order of words in a sentence and how they are structured to convey meaning.</p></li>
+<li><p><strong>Semantic</strong> content of a sentence refers to the meaning or information conveyed by the arrangement of words and the relationships between them.</p></li>
+<li><p><strong>Grammar</strong></p></li>
+</ol>
+<ul>
+<li>Grammar rules refer to the set of structural and syntactic principles that govern how words are combined to form meaningful sentences and phrases in a language. These rules define the relationships between different elements of a language, such as nouns, verbs, adjectives, adverbs, and other parts of speech</li>
+</ul>
+<p>This model main caveat is therefore if I abstract the words to which Category they belong, then they almost look like correct words i.e NOUN, VERB, ADVERB. But when we look at the semantic content it makes no sense</p>
+<p>Another example you have a singular NOUN with a plural VERB</p>
+<p>HMM then are not able to make sentences but its able to cluster the words according to some vague distribution</p>
+<!-- <center>![Slide 37](imgs/page_37.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 38](imgs/page_38.jpeg){.w575}</center><pre></pre> -->
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -804,6 +999,11 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
+<p>There is two things you can do with an HMM:</p>
+<ol type="1">
+<li><p>Obtain a tag sequence when you dont know it. So you know the word sequence and you ask: Give me the most probable tag sequence</p></li>
+<li><p>You can use it as a Language Model</p></li>
+</ol>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -813,24 +1013,23 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
+<p>Under this model, it spits out a tag sequence that is most probable. How do we evaluate this task sequence? you compare it to the tag sequence that is annotated in the dataset for you because PoS tag is almost unambiguous. For instance we will all agree of a tag sequence of english. So you compute the performance of the model as if you would in a classifier but instead of classifying once you have many classifications steps. You have one per step of the sequence so you compute accuracy. So then the performance is evaluate as accuracy across tag set.</p>
+<!-- <center>![Slide 41](imgs/page_41.jpeg){.w575}</center><pre></pre> -->
+</section>
+</section>
+<section id="example-with-3-positions" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="example-with-3-positions"><span class="header-section-number">14</span> Example with 3 positions</h2>
 <center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_41.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 41</figcaption>
-</figure>
-</div>
+<img src="2023-11-15-16-48-53.png" class="w550 img-fluid">
 </center>
 <pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_42.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 42</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
+<blockquote class="blockquote">
+<p>My task: what is the task for the first word, for the second word and for third word - We have a 3-word sentence and I need to know the most probable tag sequence for that sentence - Assume that the tag set contains two tags</p>
+</blockquote>
+<ul>
+<li><p>You are asked what is the most probable tag sequence, the only way to know is to assign prob to each and every one of the options that has been numerated so every row. More concrete you need to assing a prob to the first row to the second and so on. Assigning prob to this is relatively easy, once the table of parameters exist I just go through my sequence (per each row) and collect the relevant probabilities (so multiply all the parameters in one row)</p></li>
+<li><p>Suppose we already did that So the table is filled with numerical values, meaning I will have one join prbability value for each one of the options. So now we could sort the list and pick the best</p></li>
+</ul>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -840,6 +1039,10 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
+<ul>
+<li>So the size of this computation would be K_1position, K_2position, K_3position, K_Lposition so K^L</li>
+</ul>
+<p>Because this is exponential is expensive to compute</p>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -849,6 +1052,12 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
+<p>Dynamic programing is when you program such that it solves smaller problems whose algorithm for solving repeats itsleve and it is not generally available meaning to every programm can be dinamyc, you need to design your model with careful choices such that a dynamic program can be used. HMM can fit into a Dynamic programm. The key to the dynamic program is to look closely to my screenshots (the img above) and realized that most probabilities are the same anyway. So each row is the join probability of assing to one of the tag sequences and all the numbers are same basically everywhere so there is a lot of structure that repeats itself, the idea is to split into subproblems solve the subproblems and combine their solutions</p>
+<p>In the following video we see how to do that:</p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rVCd7NrGcSI?si=i51GhQs68xIA8neI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+</center>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -858,6 +1067,16 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
+<p>The key is: pretend there is a table alpha(i, j) which tells you if I were tagging the ith position with the jth tag i.e so the 10th position I will make it a NOUN, then I can solve this problem by combining the solutions to the previous one: the 9th position and I can do that if I know the 8th position and so on, so this becomes recursion. You can solve this if you have solve the ones before and by structuring this in a recursive call</p>
+<p>In the <span class="math inline">\({\)</span> the one above is the transition emission pair for that position. You do not need recusion to implement this you can also do for-loop</p>
+<p>Recall: the 2. thing can be done with an HMM is to marginalized out the tag sequences.</p>
+<section id="the-concept-of-marginalization-out" class="level3" data-number="14.1">
+<h3 data-number="14.1" class="anchored" data-anchor-id="the-concept-of-marginalization-out"><span class="header-section-number">14.1</span> The concept of marginalization out</h3>
+<p>Imagine there is two variables, a person and a route to the university. Each path to the univerisy will cost an amount of time. If you ask the question how does does it take you on average to get to work and you have no knowledge of the path that was taken then you reason all paths could have done then you sum all the cost of all the paths and averga them out</p>
+</section>
+<section id="what-is-marginalization" class="level3" data-number="14.2">
+<h3 data-number="14.2" class="anchored" data-anchor-id="what-is-marginalization"><span class="header-section-number">14.2</span> What is marginalization</h3>
+<p>So if you have two or more variables, marginalization menas fix some of them and for whathever is left enumerate all hte possible outcomes and sum their probabilities.</p>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -867,413 +1086,146 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </div>
 </center>
 <pre></pre>
+<p>We have the join probability distribution <span class="math inline">\(P_{XY(w_{1:l},c_{1:l})}\)</span></p>
+<ul>
+<li>There is two sequences: words and classes.</li>
+<li>If we ask: regardless of class what is the probability of a sentece i.e ‘the nice dog’, they are not asking the nice dog which is a DETERMINATE, ADJECTIVE NOUN, no. They are not asking that. They are asking the prob of the sentence so then we use marginalization like the formula below:</li>
+</ul>
+<p><span class="math display">\[
+P(X = x) = \sum_{y} P(X = x, Y = y)
+\]</span></p>
 <center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_47.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 47</figcaption>
-</figure>
-</div>
+<img src="2023-11-15-16-48-53.png" class="w550 img-fluid">
 </center>
 <pre></pre>
+<p>This is an exmaple, so based on the formula from SLide 46, we have L=3 words K=3 tags</p>
+<ol type="1">
+<li><p>We do not know the categories, so need to try them all. We proved before that there is an exponentially K^L growing number of how to assign tags so then we enumerate all this possible outcomes meeaning we enumerate per each row each of the possible combinations</p></li>
+<li><p>For each of these rows, I know how to assing a join probability, I used the relevant <span class="math inline">\(\lambda\)</span> and the relevants <span class="math inline">\(\theta\)</span> and then I multiply them toguther all these (per row) and this gives me a number</p></li>
+</ol>
+<p>Recall: - Before I was looking for the one tag sequence for which the joint probability was maximum</p>
+<p>Now: - I am marginalizing out, now we are summing all the alternative probabilities. So all the alternative ways I summed them up (so in each columns beecause here we have different assignment of tags) and the result of summing along the columns (which then we have like a vector of sequence L, so the sentence lenght) and now we sum this vector( so each element in this vector will correspond to one word with all the classes summed over) is the probability of the sequence aka the sentence regardless of tag sequences because we wa</p>
 <center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_48.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 48</figcaption>
-</figure>
-</div>
+<img src="2023-11-15-17-43-44.png" class="w550 img-fluid">
 </center>
 <pre></pre>
+<p>The algorithms that takes care of this is called the Forward Algorithm where we are interested in find the prob of the sentence regardless of their POS tags</p>
 <center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_49.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 49</figcaption>
-</figure>
-</div>
+<img src="2023-11-15-18-09-07.png" class="w550 img-fluid">
 </center>
 <pre></pre>
+</section>
+<section id="in-short" class="level3" data-number="14.3">
+<h3 data-number="14.3" class="anchored" data-anchor-id="in-short"><span class="header-section-number">14.3</span> In short:</h3>
+<ul>
+<li>You are asked what is the most probable tag sequence: Viterbi</li>
+<li>Probability of the sentence regardless of their POS tags: Forward</li>
+</ul>
+<p>Side note: the thing that unites these two algorithm is called Value Recursion explained in the video</p>
+</section>
+</section>
+<section id="coming-back-to-the-yt-video-value-recursion-for-hmms" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="coming-back-to-the-yt-video-value-recursion-for-hmms"><span class="header-section-number">15</span> Coming back to the YT video: Value recursion for HMMs</h2>
+<ul>
+<li>Formula for HMM:</li>
+</ul>
 <center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_50.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 50</figcaption>
-</figure>
-</div>
+<img src="2023-11-15-20-29-57.png" class="w350 img-fluid">
 </center>
 <pre></pre>
+<pre></pre>
+<ul>
+<li>Here <span class="math inline">\(P_{XY}()\)</span> is the join probability of words and tags</li>
+</ul>
 <center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_51.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 51</figcaption>
-</figure>
-</div>
+<img src="2023-11-15-20-35-16.png" class="w150 img-fluid">
 </center>
 <pre></pre>
+<!-- - Tags are in row 
+- Words are in column -->
+<p>In reality though you do not know the tag sequence and you only have a word sequence which you assume it was generated with an HMM generative history. With this you are interested in predicting:</p>
+<ol type="1">
+<li>What the most probale sequence could have been that is the task of post tagging</li>
+</ol>
+<ul>
+<li>Here we look at the tag sequence that maximizes the posterior probability for a given input w</li>
+</ul>
+<ol start="2" type="1">
+<li>You may be interested for a language model and what you want to do is evaluate the marginal probability of the word sequence, that is the total probability regardless of what tag sequence may have generated this text. There you would asses the join probaility for each and every configuration from the tag sequence and sum all those probabilities toguether.</li>
+</ol>
+<!-- <center>![](2023-11-15-20-45-26.png){.w550}</center><pre></pre> -->
 <center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_52.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 52</figcaption>
-</figure>
-</div>
+<img src="2023-11-15-20-46-43.png" class="w550 img-fluid">
 </center>
 <pre></pre>
+<section id="the-value-recursion" class="level3" data-number="15.1">
+<h3 data-number="15.1" class="anchored" data-anchor-id="the-value-recursion"><span class="header-section-number">15.1</span> The Value recursion</h3>
+<section id="forward-algorithm" class="level4" data-number="15.1.1">
+<h4 data-number="15.1.1" class="anchored" data-anchor-id="forward-algorithm"><span class="header-section-number">15.1.1</span> Forward Algorithm</h4>
+<ul>
+<li>Imagine you have a sequence c1 trhough c_i which are the tags for sequence w1 throuhg w_i, where w1=the and so on.</li>
+</ul>
+<p>Alpha would be the marginal probability of all sequences that end with the assigment <span class="math inline">\(c_{i=j}\)</span>. That is making a choice for the ith position and that choice being in the jth tag position. i.e.&nbsp;look at <span class="math inline">\(\alpha(i=3, j=B)\)</span> (recall i=word_position, j+tag_class). Then we are taking about c1, c2 and c3=B, C1 having generated ‘the’</p>
+<p>We marginalize C1 and C2, which means we trying all the posibilities: - A A B - A B B - B A B - B B B</p>
+<p>We try all these posibilitis, we asses the joint probabilities, so the whole row of multiplications per each combination so for instance in the first one we would have:</p>
+<ul>
+<li>A A B</li>
+</ul>
 <center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_53.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 53</figcaption>
-</figure>
-</div>
+<img src="2023-11-15-21-04-33.png" class="w250 img-fluid">
 </center>
 <pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_54.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 54</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_55.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 55</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_56.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 56</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_57.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 57</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_58.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 58</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_59.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 59</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_60.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 60</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_61.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 61</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_62.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 62</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_63.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 63</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_64.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 64</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_65.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 65</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_66.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 66</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_67.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 67</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_68.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 68</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_69.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 69</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_70.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 70</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_71.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 71</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_72.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 72</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_73.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 73</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_74.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 74</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_75.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 75</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_76.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 76</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_77.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 77</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_78.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 78</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_79.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 79</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_80.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 80</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_81.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 81</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_82.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 82</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_83.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 83</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_84.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 84</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_85.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 85</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_86.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 86</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_87.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 87</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_88.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 88</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_89.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 89</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_90.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 90</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_91.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 91</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
+<p>A multiplication of all the parameters with classes A A B. Then for the second combination A B B and so on</p>
+<p>Once we have calcualted all these combination we add them all toguether adn taht quantity which is the marginal probability is what we store in the function <span class="math inline">\(\alpha_{}^\)</span></p>
+<!-- <center>![Slide 47](imgs/page_47.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 48](imgs/page_48.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 49](imgs/page_49.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 50](imgs/page_50.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 51](imgs/page_51.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 52](imgs/page_52.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 53](imgs/page_53.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 54](imgs/page_54.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 55](imgs/page_55.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 56](imgs/page_56.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 57](imgs/page_57.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 58](imgs/page_58.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 59](imgs/page_59.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 60](imgs/page_60.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 61](imgs/page_61.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 62](imgs/page_62.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 63](imgs/page_63.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 64](imgs/page_64.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 65](imgs/page_65.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 66](imgs/page_66.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 67](imgs/page_67.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 68](imgs/page_68.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 69](imgs/page_69.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 70](imgs/page_70.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 71](imgs/page_71.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 72](imgs/page_72.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 73](imgs/page_73.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 74](imgs/page_74.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 75](imgs/page_75.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 76](imgs/page_76.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 77](imgs/page_77.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 78](imgs/page_78.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 79](imgs/page_79.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 80](imgs/page_80.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 81](imgs/page_81.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 82](imgs/page_82.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 83](imgs/page_83.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 84](imgs/page_84.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 85](imgs/page_85.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 86](imgs/page_86.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 87](imgs/page_87.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 88](imgs/page_88.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 89](imgs/page_89.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 90](imgs/page_90.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 91](imgs/page_91.jpeg){.w575}</center><pre></pre> -->
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
