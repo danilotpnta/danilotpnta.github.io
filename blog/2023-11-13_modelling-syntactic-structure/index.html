@@ -377,15 +377,7 @@ window.MathJax = {
     
 </main>
 
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_1.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 1</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
+<!-- <center>![Slide 1](imgs/page_1.jpeg){.w575}</center><pre></pre> -->
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -404,6 +396,19 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<ul>
+<li>BoW</li>
+</ul>
+<p>Bag of Words does not consider order, it is basically counting what occur in a sentence in arbitrary order</p>
+<ul>
+<li>Markov Models</li>
+</ul>
+<p>They are bags of phrases, they have better units but are very sparse</p>
+<ul>
+<li>HMMs:</li>
+</ul>
+<p>Now we work in the tag space. Here we push the memory layer again to another space, in the tag space. So no memory in the word space itself. We capture shallo syntactic patterns such as NOUN is preceeded by an ADJECTIVE in english</p>
+<p>HMMs does not really have power for semantics because words are drawn conditionally independently</p>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -413,51 +418,13 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_5.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 5</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_6.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 6</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_7.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 7</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_8.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 8</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_9.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 9</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
+<p>Now instead of just categories we talk about phrase categories.</p>
+<p>You can now group words into phrases and these phrases can be labeled for their syntactic role</p>
+<!-- <center>![Slide 5](imgs/page_5.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 6](imgs/page_6.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 7](imgs/page_7.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 8](imgs/page_8.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 9](imgs/page_9.jpeg){.w575}</center><pre></pre> -->
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -467,6 +434,7 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Now instead of isolated tags now we considered as phrases</p>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -476,6 +444,7 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>A phrase usually has what is called a syntactic head, and usually is the first occurrences that name the phrase for i.e NP, NOUN is the head. All remaining after or before its optional but in needs to contain the head</p>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -485,15 +454,8 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_13.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 13</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
+<p>Constituency is groups of words that act as a unit once you identify them. An evidence for this is that they appear in similar syntactic environments i.e NP ‘Nounn Phrases’ tend to appear before a verb</p>
+<!-- <center>![Slide 13](imgs/page_13.jpeg){.w575}</center><pre></pre> -->
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -521,285 +483,47 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_17.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 17</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_18.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 18</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_19.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 19</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_20.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 20</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_21.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 21</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_22.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 22</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_23.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 23</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_24.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 24</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_25.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 25</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_26.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 26</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_27.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 27</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_28.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 28</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_29.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 29</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_30.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 30</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_31.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 31</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_32.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 32</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_33.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 33</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_34.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 34</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_35.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 35</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_36.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 36</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_37.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 37</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_38.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 38</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_39.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 39</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_40.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 40</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_41.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 41</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_42.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 42</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_43.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 43</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_44.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 44</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_45.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 45</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_46.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 46</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_47.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 47</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
+<ol type="1">
+<li>Symbols</li>
+</ol>
+<ul>
+<li>We start from a vocabulary of symbols or (the constants): <strong>words</strong></li>
+<li>You have non-terminals or (variables): <strong>word and phrasal categories</strong></li>
+</ul>
+<ol start="2" type="1">
+<li>Rules: tells you how to rewrite a non-terminal category into a string that is made up of terminal and non-terminal symbols</li>
+</ol>
+<!-- <center>![Slide 17](imgs/page_17.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 18](imgs/page_18.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 19](imgs/page_19.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 20](imgs/page_20.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 21](imgs/page_21.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 22](imgs/page_22.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 23](imgs/page_23.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 24](imgs/page_24.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 25](imgs/page_25.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 26](imgs/page_26.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 27](imgs/page_27.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 28](imgs/page_28.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 29](imgs/page_29.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 30](imgs/page_30.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 31](imgs/page_31.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 32](imgs/page_32.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 33](imgs/page_33.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 34](imgs/page_34.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 35](imgs/page_35.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 36](imgs/page_36.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 37](imgs/page_37.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 38](imgs/page_38.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 39](imgs/page_39.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 40](imgs/page_40.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 41](imgs/page_41.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 42](imgs/page_42.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 43](imgs/page_43.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 44](imgs/page_44.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 45](imgs/page_45.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 46](imgs/page_46.jpeg){.w575}</center><pre></pre> -->
+<!-- <center>![Slide 47](imgs/page_47.jpeg){.w575}</center><pre></pre> -->
 
 
 

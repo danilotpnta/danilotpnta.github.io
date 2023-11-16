@@ -1243,29 +1243,256 @@ Recaping Forward Algorithm
 <!-- <center>![Slide 50](imgs/page_50.jpeg){.w575}</center><pre></pre> -->
 <!-- <center>![Slide 51](imgs/page_51.jpeg){.w575}</center><pre></pre> -->
 <!-- <center>![Slide 52](imgs/page_52.jpeg){.w575}</center><pre></pre> -->
-<!-- <center>![Slide 53](imgs/page_53.jpeg){.w575}</center><pre></pre> -->
-<!-- <center>![Slide 54](imgs/page_54.jpeg){.w575}</center><pre></pre> -->
-<!-- <center>![Slide 55](imgs/page_55.jpeg){.w575}</center><pre></pre> -->
-<!-- <center>![Slide 56](imgs/page_56.jpeg){.w575}</center><pre></pre> -->
-<!-- <center>![Slide 57](imgs/page_57.jpeg){.w575}</center><pre></pre> -->
-<!-- <center>![Slide 58](imgs/page_58.jpeg){.w575}</center><pre></pre> -->
-<!-- <center>![Slide 59](imgs/page_59.jpeg){.w575}</center><pre></pre> -->
-<!-- <center>![Slide 60](imgs/page_60.jpeg){.w575}</center><pre></pre> -->
-<!-- <center>![Slide 61](imgs/page_61.jpeg){.w575}</center><pre></pre> -->
-<!-- <center>![Slide 62](imgs/page_62.jpeg){.w575}</center><pre></pre> -->
-<!-- <center>![Slide 63](imgs/page_63.jpeg){.w575}</center><pre></pre> -->
-<!-- <center>![Slide 64](imgs/page_64.jpeg){.w575}</center><pre></pre> -->
-<!-- <center>![Slide 65](imgs/page_65.jpeg){.w575}</center><pre></pre> -->
-<!-- <center>![Slide 66](imgs/page_66.jpeg){.w575}</center><pre></pre> -->
-<!-- <center>![Slide 67](imgs/page_67.jpeg){.w575}</center><pre></pre> -->
-<!-- <center>![Slide 68](imgs/page_68.jpeg){.w575}</center><pre></pre> -->
-<!-- <center>![Slide 69](imgs/page_69.jpeg){.w575}</center><pre></pre> -->
-<!-- <center>![Slide 70](imgs/page_70.jpeg){.w575}</center><pre></pre> -->
-<!-- <center>![Slide 71](imgs/page_71.jpeg){.w575}</center><pre></pre> -->
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_53.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 53</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_54.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 54</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>An HMM tagger would be a joint distribution over both tag sequences and token sequences but if you are not interested in assigninig probabilities to words or generating words then you may model with a different technique</p>
+<p>So now the goal is not a generative model that you could use for taggins or for Language Modelling, now the goal is just to have a tagger.</p>
+<p>Other types of taggers may fit in another tools. For instance see next slide:</p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_55.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 55</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>There is still applications of this things, they tipically power systems for information extraction for question answering. So it is a form of labelling task with a bit of a smactic twist, I am not interest in the syntatic category of a word in its context but rather I am interest in recognizing mentions to something that is an entity in the real word thats why we call it Name-Entity. For instance ‘America Airlines’ we tagged with some Name entity.</p>
+<ul>
+<li>Why this would be usefull you may ask? suppose you are dealing with question-answering then perhaps by doing name-entity recognition you find the spans of text for which you likely have a wikipedia page or an entry in some knowledge base.</li>
+</ul>
+<p>The idea is to identify the blue spans, maybe it does not look like labelling, like it looks quite different from Speach tagging but now lets look at the nxt slide:</p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_56.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 56</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>It is a transformation of the dataset, so the dataset has been prepoceed slighly and now it is a labelling task</p>
+<ul>
+<li>I: inside of span</li>
+<li>B: beginnig</li>
+<li>O: Outside</li>
+<li>S: Single token span i.e S-LOC single location</li>
+</ul>
+<p>Even though is a sequence labelling task we have one label per token in the token sequence, we are construvting little brackets, because now we are setting the inside of a tag or the end of a tag or the beginnig and so on.</p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_57.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 57</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_58.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 58</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>For example they all have the same semantical meaning but different realizations, so the sentences have in common the same meaning but expressed in a different way</p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_59.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 59</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<!-- There is various roles that you can place to a sentnce with respect to a verb for instnace -->
+<p>Prototypical Semantic Roles</p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_60.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 60</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>Annother sequence labelling task: see next slide</p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_61.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 61</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>Here you assing semantic roles to spans in sentences so now you think of a sentence that is specific to a VERB, so given the semantics of BROKE for i.e then Jhon is to be labeld as the AGENT and the window acts as a span of THEME</p>
+<p>So the sentences from 3 to 5 are different with little change. Where would this information be? it must be in the lexicon it something about Jhon and something about being a rock that makes one thing the agent and another the instrument, so it is not in the syntax of the sentence it is not in the grammar it is really in the selection of preferences of VERBS and the attributes of NOUNS</p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_62.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 62</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>In these slides are two verbs in their first senses</p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_63.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 63</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>Here if I have 7 verbs then I have sevent semantic role sequences I have: arg0… arg1, till arg6 .In POS tagging their is one sequence for one input sequence. Here is a bit different, here for every verb you have one sequence, because foe every verb you look at the sentence and you can interpret who is the agent, who is doing what to who, but if you focus in a different VERB in a the same sentence then different spans of texts will play different roles. So for every single verb you encounter in the sentence there would be a corresponding tag sequence i.e seeing at the columns on the table #1, #2 … #7. These are the tag sequences for each one of the verbs</p>
+<p>Imagine you are designinig a semantic role labeller and you are given a sequence of inputs and there are two settings one settings is somebody tells me please tag the sequence for the verb ‘implement’ and then your model would ideally ouput something like the last column</p>
+<p>Or I give you the sentence and I say tag the sentence for semantic roles for the verb ‘lighten up’ and then you would predict soemthin similar like in column number 3</p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_64.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 64</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>The scope is now to map a sequence of words to a sequence of tags but doing that with respect to a given position because for each tth meanining the verb of interest i.e ‘use’ then wrt to that position this is the output tag sequence</p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_65.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 65</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>If we can express a task as annotating tokens in sequence and for every token I have tag, then normally this tags comes from a finite set. That means that an HMM is available. You could develop an HMM for psot tagging, you could develop an HMM for Nameed-Entity recognition. For isntance for pos tagging you change the tag space and maybe you motivate one or the other variant of IOBES and you could do HMMs, you could use it. A not soo god example is SLR because you cannot phrase as every token gets one tag, it is more like every token gets a tag for a certain verb. So if I change the verb then I have another tag sequence so you have a variable number of outputs sequences, one ouput sequence per verb in the token sequence. This lead us to the conlsuion of SLR are note good candidates for HMMs.</p>
+<p>Verbs –&gt; SRL</p>
+<p>However, even in the case that HMMs is a good choice like in post tagging and named-entity recognition it can be argued that it maynot be a choice in general because I know where I am applying it. I am applying it for the purpose of labelling sequences with some linguistic signals and if I am not interest in Language Modelling I do not care about assigning probs to the text. Thus we dont care about probs then there may be better techniques.</p>
+</section>
+</section>
+<section id="limitation-of-the-hmm" class="level2" data-number="16">
+<h2 data-number="16" class="anchored" data-anchor-id="limitation-of-the-hmm"><span class="header-section-number">16</span> Limitation of the HMM</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_66.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 66</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<ol type="1">
+<li>Cannot model long term dependencies, it is very local. Token are not even depent on one another they are conditionally independent given the tags where they were generated from</li>
+<li>The context is only of the previous tags it does not use linguistics context it use some sintatic context but very limited one just the previous tags</li>
+<li>As a tagger you are given good english and you are mapping to tag sequences and what happens is that if the tag for a certain position depends on a word that is very far away from it then the HMM cannot see. For instance some name entities may have long names for instance United States Airles, or people with long names. Conclusion HMMS cannot reduce the entrophy of what the label of a certain category may be you need to look far and the HMMs cannot do that</li>
+</ol>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_67.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 67</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>Because the HMMs need to generate text they use very farily limited use of linguistic context in <span class="math inline">\(w_{1:L}\)</span>. Using more of thse context in a generative model it will break certain algorithms that you need for training and using these models like the vitori or forward algorithm</p>
+<p>So to allow a category to interact with more words you would break those algorithms you would make then not scalable.</p>
+<p>It will also make our CPDs more sparce if we try to memorize more phrases everything gets sparce</p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_68.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 68</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>Unseen wors and phrases will come out and the HMM would be lost</p>
+<p>It may also be cases that we would like to extract the fine features of a word fors instance ending in ‘-ed’ or stating with ‘un’ and so on but this cannot be by the HMM because it cannot analyse more fine-grained features.</p>
+</section>
+<section id="how-to-move-from-the-hmms" class="level2" data-number="17">
+<h2 data-number="17" class="anchored" data-anchor-id="how-to-move-from-the-hmms"><span class="header-section-number">17</span> How to move from the HMMs?</h2>
+<section id="first-idea-use-feature-rich-models" class="level3" data-number="17.1">
+<h3 data-number="17.1" class="anchored" data-anchor-id="first-idea-use-feature-rich-models"><span class="header-section-number">17.1</span> First idea: use feature-rich models</h3>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_69.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 69</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>Let’s imagine I want to tag the 4th word. I could collect features from the surronding context of that position so I could get features from a windows to the left or a window from the right and features from the word cute itself. In the features I have this vector where I only have one <span class="math inline">\(1\)</span>, I could have design more features as: ‘is there capital letters’, ‘does it end in ed?’ and so on more features.</p>
+<p>This table is bigger in the linguistic context so its more rich than the HMM These are handmade feature vectors</p>
+</section>
+<section id="second-ideadesing-one-classifier-and-use-it-many-times" class="level3" data-number="17.2">
+<h3 data-number="17.2" class="anchored" data-anchor-id="second-ideadesing-one-classifier-and-use-it-many-times"><span class="header-section-number">17.2</span> Second idea:desing one classifier and use it many times</h3>
+<blockquote class="blockquote">
+<p>Here we map the features of the context to the prob values of the clases using a log linear model</p>
+</blockquote>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_70.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 70</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>From the feature vector ‘cute’ predict a vector of probability values as large as the number of classes that adds up to one. Lets explain: if you have a feature representation of a context and your goal is to spit out a prob vector, then you could use a linear model.</p>
+<p>So from however many features you have, you do a linear operation to obtain exaclty the number of classe you are working withs. For sintance here 11 clases and I am working with 3V features, then I do one linear transformation from 3V features to 11. This vector with 11 cordinates in it, these are not probabilities are real values to force them to become prob we use Softmax. K=11 calsses, D is the dimensionality of the feature vector, if we are using the feature vector from the previous slide that is 3V. So then the number of weights would be 3V * K. Because for every feature you wanna get the importance of the feature towards a class. And also you get the biases which you could think of as the margin frequency of the class regardless of any features. One linear transform maps from D dimensions to K dimensions this thigns are called ‘scores’, ‘logits’. Logits can be though of log probabilites that are not normalized and then the softmax functions maps to K probs.</p>
+<p>What we achieve by this is that no matter with position you are you can use the same model, it does not get bigger or smaller to tag the first word, the second, the … its just one classifier that can be sued over and over.</p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_71.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 71</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>If I have a sentence from <span class="math inline">\(w_{1:l}\)</span> and I am looking at an specific position of it with those two things I can get the prob values for the classes that I may classify. That is the <span class="math inline">\(f\)</span> the prob vector, one prob per each class. Yuo decide how to decide <span class="math inline">\(f\)</span></p>
 <!-- <center>![Slide 72](imgs/page_72.jpeg){.w575}</center><pre></pre> -->
 <!-- <center>![Slide 73](imgs/page_73.jpeg){.w575}</center><pre></pre> -->
 <!-- <center>![Slide 74](imgs/page_74.jpeg){.w575}</center><pre></pre> -->
-<!-- <center>![Slide 75](imgs/page_75.jpeg){.w575}</center><pre></pre> -->
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_75.jpeg" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 75</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>We have created a tagger by not considering the sequence but only about classification. The idea is that for every position in the sequence that you would want to tag you pretend this is a classification task you dont care that you are actually tagging and entire sequence. You classify one position at the time independently of what you do for other positions. The key for this to work is to featurize the context in which you perfom the clasifications so if I want to classify ‘united’ I have a feature vector that describes best I can ‘united’ in the sentence meaning I am ‘united’ there is adimension for that. There is a feature for ‘my neighboor is an upper case letter’.</p>
+<ul>
+<li><p>If you do independent classification, so independetly of what you do in other steps do you see a problem in the picture above where I have annotated where is the beginning, inside and end of the span (meaning there is an structure)? If I perform independent decision it is easy to programm but my lead to a problem. The problem is:</p></li>
+<li><p>You get nonsense tag sequences: [O I O ] here you cannot be inside if you have not even enter one<br>
+The problem with tagging independetly then is that tagging is ins’t made of independent stps and specficially the structure that you want to output it contains constraints so the ouput sequence is constraint not any scramble of tags would do. A better one would be [O S I O] as in ot</p></li>
+</ul>
 <!-- <center>![Slide 76](imgs/page_76.jpeg){.w575}</center><pre></pre> -->
 <!-- <center>![Slide 77](imgs/page_77.jpeg){.w575}</center><pre></pre> -->
 <!-- <center>![Slide 78](imgs/page_78.jpeg){.w575}</center><pre></pre> -->
