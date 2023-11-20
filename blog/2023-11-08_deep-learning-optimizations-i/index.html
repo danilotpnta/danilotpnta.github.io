@@ -23,6 +23,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -77,6 +111,8 @@ window.MathJax = {
 </script>
 <link rel="shortcut icon" href="../../../../../../../../../../../assets/danilo.ico">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../css/index-posts.css">
 </head>
@@ -147,6 +183,11 @@ window.MathJax = {
                                             <div class="quarto-category">
                             <a href="../../blog/#category=All">
                                 All
+                            </a>
+                        </div> 
+                                            <div class="quarto-category">
+                            <a href="../../blog/#category=Deep Learning">
+                                Deep Learning
                             </a>
                         </div> 
                                             <div class="quarto-category">
@@ -290,6 +331,11 @@ window.MathJax = {
                                 All
                             </a>
                         </div>
+                                            <div id="Deep Learning" class="quarto-category">
+                            <a href="../../blog/#category=Deep Learning">
+                                Deep Learning
+                            </a>
+                        </div>
                                             <div id="TAGS" class="quarto-category">
                             <a href="../../blog/#category=TAGS">
                                 TAGS
@@ -316,6 +362,14 @@ window.MathJax = {
                                 #
                                 </span> -->
                                 All
+                            </a>
+                        </div>
+                                            <div id="Deep Learning-from-here" class="quarto-category tags-title" style="display: none;">
+                            <a href="../../blog/#category=Deep Learning">
+                               <!-- <span class="hasth-tag">
+                                #
+                                </span> -->
+                                Deep Learning
                             </a>
                         </div>
                                             <div id="TAGS-from-here" class="quarto-category tags-title" style="display: none;">
@@ -362,603 +416,1477 @@ window.MathJax = {
 <section id="optimizing-neural-networks" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="optimizing-neural-networks"><span class="header-section-number">1</span> Optimizing neural networks</h2>
 <center>
-<img src="imgs/page_2.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_2.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 2</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
 <section id="lecture-overview" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="lecture-overview"><span class="header-section-number">2</span> Lecture overview</h2>
 <center>
-<img src="imgs/page_3.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_3.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 3</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
 <section id="optimization-us.-learning" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="optimization-us.-learning"><span class="header-section-number">3</span> Optimization US. Learning</h2>
 <center>
-<img src="imgs/page_4.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_4.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 4</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
 <section id="risk-minimization" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="risk-minimization"><span class="header-section-number">4</span> Risk minimization</h2>
 <center>
-<img src="imgs/page_5.png" class="w575 img-fluid">
-</center>
-<pre></pre>
-</section>
-<section id="minimizing-the-empirical-risk-minimise-loss" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="minimizing-the-empirical-risk-minimise-loss"><span class="header-section-number">5</span> Minimizing the empirical risk, –&gt; minimise “loss”</h2>
-<center>
-<img src="imgs/page_6.png" class="w575 img-fluid">
-</center>
-<pre></pre>
-</section>
-<section id="gradient-descent" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="gradient-descent"><span class="header-section-number">6</span> Gradient descent</h2>
-<center>
-<img src="imgs/page_7.png" class="w575 img-fluid">
-</center>
-<pre></pre>
-</section>
-<section id="batch-gradient-descent-for-neuralynets" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="batch-gradient-descent-for-neuralynets"><span class="header-section-number">7</span> Batch gradient descent for neuralynets’</h2>
-<center>
-<img src="imgs/page_8.png" class="w575 img-fluid">
-</center>
-<pre></pre>
-</section>
-<section id="httpslosslandscape.comexplorer" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="httpslosslandscape.comexplorer"><span class="header-section-number">8</span> https://losslandscape.com/explorer</h2>
-<center>
-<img src="imgs/page_9.png" class="w575 img-fluid">
-</center>
-<pre></pre>
-</section>
-<section id="gradient-descent-vs.-stochastic-gradient-descent" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="gradient-descent-vs.-stochastic-gradient-descent"><span class="header-section-number">9</span> Gradient descent vs.&nbsp;Stochastic Gradient Descent</h2>
-<center>
-<img src="imgs/page_10.png" class="w575 img-fluid">
-</center>
-<pre></pre>
-</section>
-<section id="sgd-properties" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="sgd-properties"><span class="header-section-number">10</span> SGD properties</h2>
-<center>
-<img src="imgs/page_11.png" class="w575 img-fluid">
-</center>
-<pre></pre>
-</section>
-<section id="quiz" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="quiz"><span class="header-section-number">11</span> Quiz</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_5.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 5</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>Omega is a regularization factor</p>
+<p>Y_hat is the prediction, each module i.e h1 comes with a set of parameters</p>
+The expectation is taken over the true data distribution which is not available. Then how do we put this into practice ## Minimizing the empirical risk, –&gt; minimise “loss”
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_6.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 6</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<ol type="1">
+<li>We give up to find the real minimum of the data because we have not access to all the data in the world</li>
+<li>We take a look at what we have: training data aka empirical data distribution.</li>
+</ol>
+<p>The loss is for a single sample and the <strong>empirical risk</strong> is the loss over the whole data set. We are not optimizing the real risk but we are optimizing the empirical risk which is an estimate for the real risk. If you take that for a a sample, then a sample, or a batch, we call it loss.</p>
+<p>We take an step in the direction of minimizing the loss that is in the negative gradient of the loss</p>
+<div class="cell" data-execution_count="1">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a simple quadratic loss function</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> loss_function(x):</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the derivative of the loss function (gradient)</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> gradient(x):</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">2</span> <span class="op">*</span> x</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate x values</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>x_values <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute corresponding y values for the loss function</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>y_values <span class="op">=</span> loss_function(x_values)</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">3</span>))</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the loss function</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.plot(x_values, y_values, label<span class="op">=</span><span class="st">'Loss Function'</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Choose a point on the curve</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>x_point <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>y_point <span class="op">=</span> loss_function(x_point)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the point on the curve</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>plt.scatter(x_point, y_point, color<span class="op">=</span><span class="st">'red'</span>, label<span class="op">=</span><span class="st">'Current Point'</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute the gradient at the chosen point</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>grad_at_point <span class="op">=</span> gradient(x_point)</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the gradient vector as an arrow</span></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>arrow_start <span class="op">=</span> (x_point, y_point)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>arrow_end <span class="op">=</span> (x_point <span class="op">-</span> grad_at_point, y_point <span class="op">-</span> grad_at_point<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>plt.arrow(<span class="op">*</span>arrow_start, <span class="op">*</span>(np.array(arrow_end) <span class="op">-</span> np.array(arrow_start)),</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>          color<span class="op">=</span><span class="st">'green'</span>, width<span class="op">=</span><span class="fl">0.1</span>, head_width<span class="op">=</span><span class="fl">0.5</span>, head_length<span class="op">=</span><span class="fl">0.5</span>, length_includes_head<span class="op">=</span><span class="va">True</span>, label<span class="op">=</span><span class="st">'Gradient'</span>)</span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Add labels and legend</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Model Parameter'</span>)</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Loss'</span>)</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Gradient Direction in Steepest Ascent'</span>)</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>plt.grid(alpha<span class="op">=</span><span class="fl">0.1</span>)</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><img src="index_files/figure-html/cell-2-output-1.png" width="375" height="302"></p>
+</div>
+</div>
+<p>In the context of optimization and gradient descent:</p>
+<ol type="1">
+<li><p><strong>Steepest Ascent:</strong> The gradient of the loss function at a particular point indicates the direction in which the function increases the most rapidly. If you were to take a step in the direction of the gradient, you would be moving uphill along the loss function. This is why it’s often referred to as the direction of “steepest ascent” because the function value increases most quickly in that direction.</p></li>
+<li><p><strong>Steepest Descent:</strong> Conversely, to minimize the loss function, we move in the opposite direction of the gradient. This is called the direction of “steepest descent” because it leads us downhill along the loss function, toward lower values.</p></li>
+</ol>
+<p>“Loss increases the fastest,” means that if you move in the direction of the gradient, you are moving in the direction where the loss function grows most rapidly, or where the function value increases the fastest so <em>moving uphill</em>. However, during optimization, we take steps in the <strong>opposite direction</strong> to decrease the loss and reach a minimum.</p>
+</section>
+<section id="gradient-descent" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="gradient-descent"><span class="header-section-number">5</span> Gradient descent</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_7.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 7</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>SGD: for mini-batch, in textbooks they say is for only one sample, but in practice you do SGD in a mini-batch, here the samples you picked they are random thus stochastic gradient descent</p>
+</section>
+<section id="batch-gradient-descent-for-neural-nets-loss-surfaces" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="batch-gradient-descent-for-neural-nets-loss-surfaces"><span class="header-section-number">6</span> Batch gradient descent for neural nets’ loss surfaces</h2>
 <center>
-<img src="imgs/page_12.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_8.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 8</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="sgd-properties-1" class="level2" data-number="12">
-<h2 data-number="12" class="anchored" data-anchor-id="sgd-properties-1"><span class="header-section-number">12</span> SGD properties</h2>
+<section id="httpslosslandscape.comexplorer" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="httpslosslandscape.comexplorer"><span class="header-section-number">7</span> https://losslandscape.com/explorer</h2>
 <center>
-<img src="imgs/page_13.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_9.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 9</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="batch-size" class="level2" data-number="13">
-<h2 data-number="13" class="anchored" data-anchor-id="batch-size"><span class="header-section-number">13</span> Batch size</h2>
+<section id="gradient-descent-vs.-stochastic-gradient-descent" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="gradient-descent-vs.-stochastic-gradient-descent"><span class="header-section-number">8</span> Gradient descent vs.&nbsp;Stochastic Gradient Descent</h2>
 <center>
-<img src="imgs/page_14.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_10.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 10</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>Why dont we use the whole dataset to compute gradient descent?</p>
+<p>Using the entire dataset to compute the gradient at each step of the optimization process can be computationally expensive, especially when dealing with large datasets. Also, in many cases, using the entire dataset in every iteration introduces redundancy because the information contained in the dataset might already be captured in the gradient computed from a smaller subset.</p>
+<p>For NNs, using SGD are NOT guaranteed to find the global minimum</p>
 </section>
-<section id="why-does-mini-batch-sgd-work" class="level2" data-number="14">
-<h2 data-number="14" class="anchored" data-anchor-id="why-does-mini-batch-sgd-work"><span class="header-section-number">14</span> Why does mini-batch SGD work?</h2>
+<section id="sgd-properties" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="sgd-properties"><span class="header-section-number">9</span> SGD properties</h2>
 <center>
-<img src="imgs/page_15.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_11.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 11</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>SGD estimates the gradient. And if you do any estimation, you can calculate the estandard error, as the std deviation <span class="math inline">\(\sigma\)</span> divided by the sqrt of the batch size</p>
+<p>For ie, if you want to get an estimate of the gradient which is twice as good we need 4 times more data</p>
 </section>
-<section id="stochastic-gradient-based-optimization" class="level2" data-number="15">
-<h2 data-number="15" class="anchored" data-anchor-id="stochastic-gradient-based-optimization"><span class="header-section-number">15</span> Stochastic gradient-based optimization</h2>
+<section id="quiz" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="quiz"><span class="header-section-number">10</span> Quiz</h2>
 <center>
-<img src="imgs/page_16.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_12.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 12</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<ol type="1">
+<li>The fact that videos are correlated i.e in 30fps it does have any to do with the batch size, it actually require higuer batch size because you have a lot less happening so that means all of your data samples are highly correlated. If you data samples are highly correlated that means you are actually very bias i.e.&nbsp;if you are training with a sampled dataset from those biased data then your gradient would be much more worse than if you sample randomly from all classes</li>
+<li>This is True, it depends on the GPU. For instance for videos, a single sample may contain 30 frames so that means for a batch size not the individual number of pixels but the number of datasamples, and if you datasample its two seconds long and each second contains 30frames so 30 images, then you are basically reducing the batch size by 60 already. Another thing that lead to be GPU not able to handled is because to process videos the architecture takes more to compute, so there is a lot more computation happening.</li>
+<li>Video in DL are currently handled by using small resolution i.e 100x100. Images are usually 224x224 or if you do object detection then images can go up to 1000x1000 pixels. So that means videos are lower resolutions</li>
+</ol>
+<p>You can compute the variance in terms of low level statistics, like RGB but that does not mean anything about the variance within the NN, and if you need to do a whole forward pass before doing a backward pass then it becomes slow.</p>
 </section>
-<section id="stochastic-gradient-based-optimization-1" class="level2" data-number="16">
-<h2 data-number="16" class="anchored" data-anchor-id="stochastic-gradient-based-optimization-1"><span class="header-section-number">16</span> Stochastic gradient-based optimization</h2>
+<section id="sgd-properties-1" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="sgd-properties-1"><span class="header-section-number">11</span> SGD properties</h2>
 <center>
-<img src="imgs/page_17.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_13.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 13</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>you can keep suffleing after every epoch, as one epoch is defined as you go through the training set once completely</p>
+<p>Randomness leads to randomness in the class and the data. That means this help us not just optimizing for one or two classes and then in the next batch optimize for one or two classes and then leads you to jump around but instead lead to decreased a good estimate for the wholedataset</p>
 </section>
-<section id="stochastic-gradient-based-optimization-2" class="level2" data-number="17">
-<h2 data-number="17" class="anchored" data-anchor-id="stochastic-gradient-based-optimization-2"><span class="header-section-number">17</span> Stochastic gradient-based optimization</h2>
+<section id="batch-size" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="batch-size"><span class="header-section-number">12</span> Batch size</h2>
 <center>
-<img src="imgs/page_18.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_14.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 14</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>It is more efficient than in multiple linear passes because it is more efficient to do it in one fully connected linear layer.</p>
+<p>So one big data multiplication is faster than doing two small matrix multiplications</p>
+<p>Small batches usually add more noise to the learning process, therefore can get stuck less in local minimas and sometimes can lead to better performance but this is not supper common.</p>
+<p>With the increase of batch size the effective gradient would be less strong because is a better estimation across all samples so to make the model still train as quickly is we need to increase th learning rate</p>
 </section>
-<section id="stochastic-gradient-based-optimization-3" class="level2" data-number="18">
-<h2 data-number="18" class="anchored" data-anchor-id="stochastic-gradient-based-optimization-3"><span class="header-section-number">18</span> Stochastic gradient-based optimization</h2>
+<section id="why-does-mini-batch-sgd-work" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="why-does-mini-batch-sgd-work"><span class="header-section-number">13</span> Why does mini-batch SGD work?</h2>
 <center>
-<img src="imgs/page_19.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_15.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 15</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>REducing the sample size does not imply reduced gradient wuality that is because the training samples could be noisy, or have biases or outliers (recall in every dataset you have lots of mislabel classes) so these noisy data allows you not to get stuck in local minimas while the real gradient may do this.</p>
+<p>For i.e if the real gradient points in one direction and you are stuck in a local minima thne it wont help you because the the gradient descent for the whole set only have points in one direction at a certain location and if it happens to be a place where you get stuck htne you are stuck. This is contrary to stochastic where you keep taking random samples, yeah you can be stuck for the next 20 steps where you pick random samples but then you pick something that migh hav some outlier and now suddenly the gradient is pretty large and you end up scapping this local minima.</p>
 </section>
-<section id="stochastic-gradient-based-optimization-4" class="level2" data-number="19">
-<h2 data-number="19" class="anchored" data-anchor-id="stochastic-gradient-based-optimization-4"><span class="header-section-number">19</span> Stochastic gradient-based optimization</h2>
+<section id="stochastic-gradient-based-optimization" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="stochastic-gradient-based-optimization"><span class="header-section-number">14</span> Stochastic gradient-based optimization</h2>
 <center>
-<img src="imgs/page_20.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_16.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 16</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="gradient-descent-vs.-stochastic-gradient-descent-1" class="level2" data-number="20">
-<h2 data-number="20" class="anchored" data-anchor-id="gradient-descent-vs.-stochastic-gradient-descent-1"><span class="header-section-number">20</span> Gradient descent vs.&nbsp;stochastic gradient descent</h2>
+<section id="stochastic-gradient-based-optimization-1" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="stochastic-gradient-based-optimization-1"><span class="header-section-number">15</span> Stochastic gradient-based optimization</h2>
 <center>
-<img src="imgs/page_21.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_17.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 17</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="gradient-descent-vs.-stochastic-gradient-descent-2" class="level2" data-number="21">
-<h2 data-number="21" class="anchored" data-anchor-id="gradient-descent-vs.-stochastic-gradient-descent-2"><span class="header-section-number">21</span> Gradient descent vs.&nbsp;stochastic gradient descent</h2>
+<section id="stochastic-gradient-based-optimization-2" class="level2" data-number="16">
+<h2 data-number="16" class="anchored" data-anchor-id="stochastic-gradient-based-optimization-2"><span class="header-section-number">16</span> Stochastic gradient-based optimization</h2>
 <center>
-<img src="imgs/page_22.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_18.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 18</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="in-a-nutshell" class="level2" data-number="22">
-<h2 data-number="22" class="anchored" data-anchor-id="in-a-nutshell"><span class="header-section-number">22</span> In a nutshell</h2>
+<section id="stochastic-gradient-based-optimization-3" class="level2" data-number="17">
+<h2 data-number="17" class="anchored" data-anchor-id="stochastic-gradient-based-optimization-3"><span class="header-section-number">17</span> Stochastic gradient-based optimization</h2>
 <center>
-<img src="imgs/page_23.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_19.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 19</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="lets-see-this-in-practice" class="level2" data-number="23">
-<h2 data-number="23" class="anchored" data-anchor-id="lets-see-this-in-practice"><span class="header-section-number">23</span> Let’s see this in practice</h2>
+<section id="stochastic-gradient-based-optimization-4" class="level2" data-number="18">
+<h2 data-number="18" class="anchored" data-anchor-id="stochastic-gradient-based-optimization-4"><span class="header-section-number">18</span> Stochastic gradient-based optimization</h2>
 <center>
-<img src="imgs/page_24.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_20.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 20</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="httpsplayground.tensorflow.or" class="level2" data-number="24">
-<h2 data-number="24" class="anchored" data-anchor-id="httpsplayground.tensorflow.or"><span class="header-section-number">24</span> https://playground.tensorflow.or</h2>
+<section id="gradient-descent-vs.-stochastic-gradient-descent-1" class="level2" data-number="19">
+<h2 data-number="19" class="anchored" data-anchor-id="gradient-descent-vs.-stochastic-gradient-descent-1"><span class="header-section-number">19</span> Gradient descent vs.&nbsp;stochastic gradient descent</h2>
 <center>
-<img src="imgs/page_25.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_21.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 21</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="challenges-in-optimization" class="level2" data-number="25">
-<h2 data-number="25" class="anchored" data-anchor-id="challenges-in-optimization"><span class="header-section-number">25</span> Challenges in optimization</h2>
+<section id="gradient-descent-vs.-stochastic-gradient-descent-2" class="level2" data-number="20">
+<h2 data-number="20" class="anchored" data-anchor-id="gradient-descent-vs.-stochastic-gradient-descent-2"><span class="header-section-number">20</span> Gradient descent vs.&nbsp;stochastic gradient descent</h2>
 <center>
-<img src="imgs/page_26.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_22.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 22</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="why-are-nn-losses-not-convex" class="level2" data-number="26">
-<h2 data-number="26" class="anchored" data-anchor-id="why-are-nn-losses-not-convex"><span class="header-section-number">26</span> Why are NN losses not convex?</h2>
+<section id="in-a-nutshell" class="level2" data-number="21">
+<h2 data-number="21" class="anchored" data-anchor-id="in-a-nutshell"><span class="header-section-number">21</span> In a nutshell</h2>
 <center>
-<img src="imgs/page_27.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_23.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 23</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="challenges-in-optimization-1" class="level2" data-number="27">
-<h2 data-number="27" class="anchored" data-anchor-id="challenges-in-optimization-1"><span class="header-section-number">27</span> Challenges in optimization</h2>
+<section id="lets-see-this-in-practice" class="level2" data-number="22">
+<h2 data-number="22" class="anchored" data-anchor-id="lets-see-this-in-practice"><span class="header-section-number">22</span> Let’s see this in practice</h2>
 <center>
-<img src="imgs/page_28.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_24.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 24</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="ill-conditioning" class="level2" data-number="28">
-<h2 data-number="28" class="anchored" data-anchor-id="ill-conditioning"><span class="header-section-number">28</span> 1. Ill-conditioning</h2>
+<section id="httpsplayground.tensorflow.or" class="level2" data-number="23">
+<h2 data-number="23" class="anchored" data-anchor-id="httpsplayground.tensorflow.or"><span class="header-section-number">23</span> https://playground.tensorflow.or</h2>
 <center>
-<img src="imgs/page_29.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_25.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 25</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="ill-conditioning-1" class="level2" data-number="29">
-<h2 data-number="29" class="anchored" data-anchor-id="ill-conditioning-1"><span class="header-section-number">29</span> 1. Ill-conditioning</h2>
+<section id="challenges-in-optimization" class="level2" data-number="24">
+<h2 data-number="24" class="anchored" data-anchor-id="challenges-in-optimization"><span class="header-section-number">24</span> Challenges in optimization</h2>
 <center>
-<img src="imgs/page_30.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_26.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 26</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>NN training is non-covex optimization, these functions have lots of local optima, but we do not care about the global minimum because we care how it will perform in real life data. We care something that is optimum and that generalizes well.</p>
 </section>
-<section id="ill-conditioning-2" class="level2" data-number="30">
-<h2 data-number="30" class="anchored" data-anchor-id="ill-conditioning-2"><span class="header-section-number">30</span> 1. Ill-conditioning</h2>
+<section id="why-are-nn-losses-not-convex" class="level2" data-number="25">
+<h2 data-number="25" class="anchored" data-anchor-id="why-are-nn-losses-not-convex"><span class="header-section-number">25</span> Why are NN losses not convex?</h2>
 <center>
-<img src="imgs/page_31.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_27.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 27</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="linear-algebra-recap" class="level2" data-number="31">
-<h2 data-number="31" class="anchored" data-anchor-id="linear-algebra-recap"><span class="header-section-number">31</span> Linear Algebra Recap:</h2>
+<section id="challenges-in-optimization-1" class="level2" data-number="26">
+<h2 data-number="26" class="anchored" data-anchor-id="challenges-in-optimization-1"><span class="header-section-number">26</span> Challenges in optimization</h2>
 <center>
-<img src="imgs/page_32.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_28.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 28</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="ill-conditioning-3" class="level2" data-number="32">
-<h2 data-number="32" class="anchored" data-anchor-id="ill-conditioning-3"><span class="header-section-number">32</span> 1. Ill-conditioning</h2>
+<section id="ill-conditioning" class="level2" data-number="27">
+<h2 data-number="27" class="anchored" data-anchor-id="ill-conditioning"><span class="header-section-number">27</span> 1. Ill-conditioning</h2>
 <center>
-<img src="imgs/page_33.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_29.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 29</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>The Hessian at a particular point in the function measures how well you can fit a quadratic function to this point.</p>
+<p>The Jacobian measure how well you can fit a plane trough that point.</p>
 </section>
-<section id="ill-conditioning-4" class="level2" data-number="33">
-<h2 data-number="33" class="anchored" data-anchor-id="ill-conditioning-4"><span class="header-section-number">33</span> 1. Ill-conditioning</h2>
+<section id="ill-conditioning-1" class="level2" data-number="28">
+<h2 data-number="28" class="anchored" data-anchor-id="ill-conditioning-1"><span class="header-section-number">28</span> 1. Ill-conditioning</h2>
 <center>
-<img src="imgs/page_34.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_30.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 30</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>So curvature is determine by the second derivative so its determined by the Hessian</p>
+<p><strong>Bottom Left plot</strong>:</p>
+<ul>
+<li>If you have a negative curvature that means the cost function decreases faster than the gradient predicts.</li>
+</ul>
+<p><strong>Bottom Right plot</strong>:</p>
+<ul>
+<li>If you have a positive curvature that means the cost function decreases slower than expected and eventually starts to increase</li>
+</ul>
 </section>
-<section id="local-minima" class="level2" data-number="34">
-<h2 data-number="34" class="anchored" data-anchor-id="local-minima"><span class="header-section-number">34</span> 2. Local minima</h2>
+<section id="ill-conditioning-2" class="level2" data-number="29">
+<h2 data-number="29" class="anchored" data-anchor-id="ill-conditioning-2"><span class="header-section-number">29</span> 1. Ill-conditioning</h2>
 <center>
-<img src="imgs/page_35.png" class="w575 img-fluid">
-</center>
-<pre></pre>
-</section>
-<section id="local-minima-1" class="level2" data-number="35">
-<h2 data-number="35" class="anchored" data-anchor-id="local-minima-1"><span class="header-section-number">35</span> 2. Local minima</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_31.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 31</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>Critical points are where, the gradient is zero and you can define with the Hessian what kind of critical points they are, you have a local minimum, a local maximum and saddle point</p>
+<p>Most points in high dimensions are saddle points, this is beccause it becomes expontially (<span class="math inline">\(2^n\)</span> combinations of th signs) to have at least one positive and at least one negative. So this is more likely.</p>
+</section>
+<section id="linear-algebra-recap" class="level2" data-number="30">
+<h2 data-number="30" class="anchored" data-anchor-id="linear-algebra-recap"><span class="header-section-number">30</span> Linear Algebra Recap:</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_32.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 32</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+</section>
+<section id="ill-conditioning-3" class="level2" data-number="31">
+<h2 data-number="31" class="anchored" data-anchor-id="ill-conditioning-3"><span class="header-section-number">31</span> 1. Ill-conditioning</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_33.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 33</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Condition number
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>The condition number of a matrix is a measure of how sensitive the matrix is to changes in its input. A high condition number indicates that the matrix is ill-conditioned, which can lead to numerical instability. In the context of optimization problems like gradient descent, ill-conditioned matrices can slow down convergence and make the optimization process more sensitive to small changes in the input.</p>
+<div class="cell" data-execution_count="2">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define a quadratic loss function</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> loss_function(x):</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the derivative of the loss function (gradient)</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> gradient(x):</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">2</span> <span class="op">*</span> x</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the second derivative of the loss function (Hessian)</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> hessian(x):</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">2</span> <span class="op">*</span> np.ones_like(x)</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate x values</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>x_values <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">100</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Set up subplots</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">7</span>, <span class="dv">3</span>))</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the loss function and its gradient for different condition numbers</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, condition_number <span class="kw">in</span> <span class="bu">enumerate</span>([<span class="dv">1</span>, <span class="dv">10</span>]):</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    hessian_values <span class="op">=</span> condition_number <span class="op">*</span> hessian(x_values)</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Compute the gradient at the chosen point</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    x_point <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    grad_at_point <span class="op">=</span> gradient(x_point)</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Compute the change in x</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    delta_x <span class="op">=</span> np.linspace(<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">100</span>)</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Compute the change in y based on the quadratic loss function</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    delta_y <span class="op">=</span> <span class="fl">0.5</span> <span class="op">*</span> hessian_values[x_point] <span class="op">*</span> delta_x<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Plot the loss function</span></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    axes[i].plot(x_values, loss_function(x_values), label<span class="op">=</span><span class="st">'Loss Function'</span>)</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Plot the gradient vector as an arrow</span></span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    axes[i].arrow(x_point, loss_function(x_point), <span class="op">-</span>grad_at_point, <span class="dv">0</span>,</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>                  color<span class="op">=</span><span class="st">'green'</span>, width<span class="op">=</span><span class="fl">0.1</span>, head_width<span class="op">=</span><span class="fl">0.5</span>, head_length<span class="op">=</span><span class="fl">0.5</span>, length_includes_head<span class="op">=</span><span class="va">True</span>, label<span class="op">=</span><span class="st">'Gradient'</span>)</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Plot the change in x and corresponding change in y</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>    axes[i].plot(x_point <span class="op">+</span> delta_x, loss_function(x_point) <span class="op">+</span> delta_y, <span class="st">'--'</span>, label<span class="op">=</span><span class="st">'Approximation'</span>)</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>    axes[i].set_xlabel(<span class="st">'Model Parameter'</span>)</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    axes[i].set_ylabel(<span class="st">'Loss'</span>)</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    axes[i].set_title(<span class="ss">f'Condition Number = </span><span class="sc">{</span>condition_number<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    axes[i].legend()</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<p><img src="index_files/figure-html/cell-3-output-1.png" width="661" height="276"></p>
+</div>
+</div>
+<p>An ill-conditioned problem, system, or matrix refers to a situation where small changes or perturbations in the input data or parameters can lead to large changes in the output or solution. In the context of linear algebra and optimization, the condition number is a measure of how sensitive a mathematical problem is to changes in its input.</p>
+<p>Mathematically, the condition number of a matrix <span class="math inline">\(A\)</span> is defined as the product of the matrix norm and the norm of its inverse. It is denoted as <span class="math inline">\(\text{cond}(A) = \|A\| \cdot \|A^{-1}\|\)</span>.</p>
+<ul>
+<li>If <span class="math inline">\(\text{cond}(A)\)</span> is close to 1, the matrix is well-conditioned.</li>
+<li>If <span class="math inline">\(\text{cond}(A)\)</span> is much greater than 1, the matrix is ill-conditioned.</li>
+</ul>
+<p>An ill-conditioned matrix is problematic for several reasons:</p>
+<ol type="1">
+<li><p><strong>Sensitivity to Input Perturbations:</strong> Small changes in the input data or parameters can result in large changes in the solution, making the problem numerically unstable.</p></li>
+<li><p><strong>Numerical Instability:</strong> In numerical computations, ill-conditioning can lead to loss of precision, rounding errors, and difficulties in obtaining accurate solutions.</p></li>
+<li><p><strong>Slow Convergence:</strong> In optimization problems, ill-conditioning can slow down the convergence of iterative optimization algorithms like gradient descent.</p></li>
+<li><p><strong>Numerical Issues:</strong> When solving linear systems or performing matrix inversion, ill-conditioned matrices can lead to numerical instability and inaccurate results.</p></li>
+</ol>
+<p>In the context of optimization problems, the Hessian matrix (second derivative of the loss function) plays a crucial role. If the Hessian matrix is ill-conditioned, it can make optimization algorithms more sensitive to the choice of step size and direction, potentially leading to slow convergence or convergence to suboptimal solutions.</p>
+<p>Addressing ill-conditioning often involves using regularization techniques, preconditioning, or carefully selecting optimization algorithms that can handle such numerical challenges.</p>
+</div>
+</div>
+</div>
+<p>You can think of how much the matrix distort the space.</p>
+<p>Why is now a large condition number bad? - In the case of a small condition number, going to the local minimum is quite straight forward, but in the case of a very bad conditioned number you know where to go because the gradient tells you this but you do not know the right step size. You can keep oscillating, which slows the convergence of the algorithm.</p>
+<p>With a large condition number, Gradient Descent performs poorly because it is difficult to make a good step size.</p>
+<p>So it is like optimizing one direction at the time if you are luckily but the ill-conditioning to the point that you will overshoot</p>
+</section>
+<section id="ill-conditioning-4" class="level2" data-number="32">
+<h2 data-number="32" class="anchored" data-anchor-id="ill-conditioning-4"><span class="header-section-number">32</span> 1. Ill-conditioning</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_34.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 34</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>if in the tailor expansion we see that the curvature term is higher than the linear component of the Tailor function then, taking a small step size (updating w) it will increase the loss instead of decreasing it. So we end up with a higher loss.</p>
+</section>
+<section id="local-minima" class="level2" data-number="33">
+<h2 data-number="33" class="anchored" data-anchor-id="local-minima"><span class="header-section-number">33</span> 2. Local minima</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_35.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 35</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>Model identifiability deals with the ability to uniquely determine the values of model parameters based on the available data. In other words, a model is identifiable if the true values of its parameters can be uniquely recovered or estimated from observed data.</p>
+<p>If you have a network that is equivalent between different sets of parameters you can switch them around.</p>
+</section>
+<section id="local-minima-1" class="level2" data-number="34">
+<h2 data-number="34" class="anchored" data-anchor-id="local-minima-1"><span class="header-section-number">34</span> 2. Local minima</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_36.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 36</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>These are the one we would have <strong>trouble</strong> (bottom left)</p>
+<p>you reach some place and you are stuck in this place but there is a much better solution in the loss surface. That is why noisy SGD works better</p>
+</section>
+<section id="local-minima-tricky-thing-about-blindness" class="level2" data-number="35">
+<h2 data-number="35" class="anchored" data-anchor-id="local-minima-tricky-thing-about-blindness"><span class="header-section-number">35</span> 2. Local minima: tricky thing about “blindness”</h2>
 <center>
-<img src="imgs/page_36.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_37.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 37</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
-</section>
-<section id="local-minima-tricky-thing-about-blindness" class="level2" data-number="36">
-<h2 data-number="36" class="anchored" data-anchor-id="local-minima-tricky-thing-about-blindness"><span class="header-section-number">36</span> 2. Local minima: tricky thing about “blindness”</h2>
+</section>
+<section id="ravines" class="level2" data-number="36">
+<h2 data-number="36" class="anchored" data-anchor-id="ravines"><span class="header-section-number">36</span> 3. Ravines</h2>
 <center>
-<img src="imgs/page_37.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_38.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 38</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="ravines" class="level2" data-number="37">
-<h2 data-number="37" class="anchored" data-anchor-id="ravines"><span class="header-section-number">37</span> 3. Ravines</h2>
+<section id="plateausflat-areas" class="level2" data-number="37">
+<h2 data-number="37" class="anchored" data-anchor-id="plateausflat-areas"><span class="header-section-number">37</span> 3. Plateaus/Flat areas</h2>
 <center>
-<img src="imgs/page_38.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_39.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 39</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>In these surfaces you have zero gradients, no updates, no learning. If you have converged and that minimum tends to be flat those tend to be the ones that generalized better to new data</p>
 </section>
-<section id="plateausflat-areas" class="level2" data-number="38">
-<h2 data-number="38" class="anchored" data-anchor-id="plateausflat-areas"><span class="header-section-number">38</span> 3. Plateaus/Flat areas</h2>
+<section id="quizz" class="level2" data-number="38">
+<h2 data-number="38" class="anchored" data-anchor-id="quizz"><span class="header-section-number">38</span> Quizz</h2>
 <center>
-<img src="imgs/page_39.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_40.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 40</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>Why does flat minima generalize better on test data?</p>
+<ol type="1">
+<li>We cannot say that generally they have lower loss values</li>
+<li>It is a true statement but it is not the reason. So it does not matter whether you add more precision. For i.e you can add float64 instead and still does not change things</li>
+<li>True</li>
+<li>We do not use test for training</li>
+</ol>
 </section>
-<section id="oni7" class="level2" data-number="39">
-<h2 data-number="39" class="anchored" data-anchor-id="oni7"><span class="header-section-number">39</span> Oni7</h2>
+<section id="why-are-flat-minima-preferred" class="level2" data-number="39">
+<h2 data-number="39" class="anchored" data-anchor-id="why-are-flat-minima-preferred"><span class="header-section-number">39</span> Why are “flat” minima preferred?</h2>
 <center>
-<img src="imgs/page_40.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_41.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 41</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>Why are they less likely to be the result of overfilling to train distribution?</p>
+<p>small batches tend to converge to flat minimizers that have small eigenvalues of the Hessian</p>
 </section>
-<section id="why-are-flat-minima-preferred" class="level2" data-number="40">
-<h2 data-number="40" class="anchored" data-anchor-id="why-are-flat-minima-preferred"><span class="header-section-number">40</span> Why are “flat” minima preferred?</h2>
+<section id="flat-areas-steep-minima" class="level2" data-number="40">
+<h2 data-number="40" class="anchored" data-anchor-id="flat-areas-steep-minima"><span class="header-section-number">40</span> 4. Flat areas, steep minima</h2>
 <center>
-<img src="imgs/page_41.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_42.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 42</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>If you have lots of flat areas with very steep minima, for example when you have logits that are scaled by a very very small number that means these numbers tend to be extremelly higuer, so they are almost on-hot like and at that point you are not getting much of the gradients from the other classes anymore.</p>
+<p>Therefore by changing the temperature you can change how wide these locals deeps are.</p>
 </section>
-<section id="flat-areas-steep-minima" class="level2" data-number="41">
-<h2 data-number="41" class="anchored" data-anchor-id="flat-areas-steep-minima"><span class="header-section-number">41</span> 4. Flat areas, steep minima</h2>
+<section id="cliffs-and-exploding-gradients" class="level2" data-number="41">
+<h2 data-number="41" class="anchored" data-anchor-id="cliffs-and-exploding-gradients"><span class="header-section-number">41</span> 4. Cliffs and Exploding Gradients</h2>
 <center>
-<img src="imgs/page_42.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_43.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 43</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>We clip it meaning we set the gradient of this eta to a treshold, you still are going in the same direction but now witch a scaled version. Escentially you reduce the size of the gradient</p>
 </section>
-<section id="cliffs-and-exploding-gradients" class="level2" data-number="42">
-<h2 data-number="42" class="anchored" data-anchor-id="cliffs-and-exploding-gradients"><span class="header-section-number">42</span> 4. Cliffs and Exploding Gradients</h2>
+<section id="long-term-dependencies" class="level2" data-number="42">
+<h2 data-number="42" class="anchored" data-anchor-id="long-term-dependencies"><span class="header-section-number">42</span> 5. Long term dependencies</h2>
 <center>
-<img src="imgs/page_43.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_44.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 44</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
-</section>
-<section id="long-term-dependencies" class="level2" data-number="43">
-<h2 data-number="43" class="anchored" data-anchor-id="long-term-dependencies"><span class="header-section-number">43</span> 5. Long term dependencies</h2>
+<p>This is related to Recurrent NNs where you apply a matrix W^t over and over again, so you apply it to the input multiple times. Then you can decompose the matrix, in this case t stands for the power of t and you can see that if you apply this eigen value decomposition is simple the eigenvalues are taken to the power of t. So if you have eigenvalues larger than one then they will get insanely high, but if they are small then these eigenvalues will plummed to zero, almost vanishing.</p>
+<p>As a product we would have a training-trajectory dependency which would be hard to recover from a bad start, IF you keep applying the same weights</p>
+<p>Example, in time series you use Recurrent NNs and for example your prediction at time 30 depends on predition at time zero. These are the long term dependencies are.</p>
 <center>
-<img src="imgs/page_44.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_45.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 45</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="title" class="level2" data-number="44">
-<h2 data-number="44" class="anchored" data-anchor-id="title"><span class="header-section-number">44</span> Title</h2>
+<section id="revisit-of-gradient-descent" class="level2" data-number="43">
+<h2 data-number="43" class="anchored" data-anchor-id="revisit-of-gradient-descent"><span class="header-section-number">43</span> Revisit of gradient descent</h2>
 <center>
-<img src="imgs/page_45.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_46.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 46</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="revisit-of-gradient-descent" class="level2" data-number="45">
-<h2 data-number="45" class="anchored" data-anchor-id="revisit-of-gradient-descent"><span class="header-section-number">45</span> Revisit of gradient descent</h2>
+<section id="setting-the-learning-rate" class="level2" data-number="44">
+<h2 data-number="44" class="anchored" data-anchor-id="setting-the-learning-rate"><span class="header-section-number">44</span> Setting the learning rate</h2>
 <center>
-<img src="imgs/page_46.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_47.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 47</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>generally we go from a high to low <code>lr</code> either by:</p>
+<ul>
+<li>step decay: ie divide <code>lr</code> by 10 every x number of epochs</li>
+<li>gradually going low the learning rate</li>
+</ul>
+<p>The heuristics for this is that you first will find some general area in which the loss is pretty good but then this large learning step size keeps jumping around the local minimum, and now if you decrease the learning rate now it can optimize whithin this valley, and whithin this value can go further down</p>
 </section>
-<section id="setting-the-learning-rate-yn" class="level2" data-number="46">
-<h2 data-number="46" class="anchored" data-anchor-id="setting-the-learning-rate-yn"><span class="header-section-number">46</span> Setting the learning rate yN</h2>
+<section id="advanced-optimizers" class="level2" data-number="45">
+<h2 data-number="45" class="anchored" data-anchor-id="advanced-optimizers"><span class="header-section-number">45</span> Advanced optimizers</h2>
 <center>
-<img src="imgs/page_47.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_48.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 48</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="advanced-optimizers" class="level2" data-number="47">
-<h2 data-number="47" class="anchored" data-anchor-id="advanced-optimizers"><span class="header-section-number">47</span> Advanced optimizers</h2>
+<section id="momentum." class="level2" data-number="46">
+<h2 data-number="46" class="anchored" data-anchor-id="momentum."><span class="header-section-number">46</span> Momentum.</h2>
 <center>
-<img src="imgs/page_48.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_49.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 49</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="momentum." class="level2" data-number="48">
-<h2 data-number="48" class="anchored" data-anchor-id="momentum."><span class="header-section-number">48</span> Momentum.</h2>
+<section id="momentum-designed-to-accelerate-learning-especially-when-loss-is-high-curvature" class="level2" data-number="47">
+<h2 data-number="47" class="anchored" data-anchor-id="momentum-designed-to-accelerate-learning-especially-when-loss-is-high-curvature"><span class="header-section-number">47</span> Momentum: designed to accelerate learning, especially when loss is high curvature</h2>
 <center>
-<img src="imgs/page_49.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_50.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 50</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>To mimic the momentum we need to recall the exponentially weighted moving averages are: - You have your noisy data and you want to approximate some smooth average of this</p>
 </section>
-<section id="momentum-designed-to-accelerate-learning-especially-when-loss-is-high-curvature" class="level2" data-number="49">
-<h2 data-number="49" class="anchored" data-anchor-id="momentum-designed-to-accelerate-learning-especially-when-loss-is-high-curvature"><span class="header-section-number">49</span> Momentum: designed to accelerate learning, especially when loss is high curvature</h2>
+<section id="momentum" class="level2" data-number="48">
+<h2 data-number="48" class="anchored" data-anchor-id="momentum"><span class="header-section-number">48</span> Momentum</h2>
 <center>
-<img src="imgs/page_50.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_51.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 51</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>It is easy to compute it recursively: Take your previous point * Beta + (1-Beta)*current_observation.</p>
+<p>You can compute this from left to right so that you dont keep track of the points.</p>
+<p>Here the momentum is of your previous gradient</p>
+<p>Here we notice that if you have 1. Large beta then it is more smoother so it tends to have more momentum so it is basically tends to be the values that you have seen 2. Smaller beta so less smooth, which means that it reacts more to the current observation</p>
+<p>Because we set V_0 = 0 then it will always be baised towards V_0, but you can correct for thi using the formulas above</p>
 </section>
-<section id="momentum" class="level2" data-number="50">
-<h2 data-number="50" class="anchored" data-anchor-id="momentum"><span class="header-section-number">50</span> Momentum</h2>
+<section id="momentum-1" class="level2" data-number="49">
+<h2 data-number="49" class="anchored" data-anchor-id="momentum-1"><span class="header-section-number">49</span> Momentum</h2>
 <center>
-<img src="imgs/page_51.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_52.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 52</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>What moving average tends to, it basically removes the effect of stuff that is way in the past. For example if you have beta=0.9 if you do 0.9^10 then you already end up at 0.35. So even if you have a high Beta like 0.98 after 50 steps it basically decays so it onluy has the effect of dividing 1/e</p>
 </section>
-<section id="momentum-1" class="level2" data-number="51">
-<h2 data-number="51" class="anchored" data-anchor-id="momentum-1"><span class="header-section-number">51</span> Momentum</h2>
+<section id="sgd-with-momentum" class="level2" data-number="50">
+<h2 data-number="50" class="anchored" data-anchor-id="sgd-with-momentum"><span class="header-section-number">50</span> SGD with momentum</h2>
 <center>
-<img src="imgs/page_52.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_53.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 53</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>You do not want be switching directions all the time, this is what happens in the half pipe, you want to mantain the momentum from previous updates, so now you will see that</p>
+<p>Now we have in addition the gamma*v_t, this is imply the gradient from the last steps. You can see how much gradients from the last step is taken</p>
+<p>For isntance if gamma is 0.9 and then we say v_0 = 0. Then the first v1, so the first step is just the normal update.</p>
+<p>For v2, now we take the gradient at update 2 plus the term 0.9*gradient_1 which is from the previous step.</p>
+<p>For v3 we take more into account the current gradient3 but also the previous gradients. It is only changing the direction of where we are going so now we do not only consider the current gradient at tha point but also the previous gradients causing momentum</p>
 </section>
-<section id="sgd-with-momentum" class="level2" data-number="52">
-<h2 data-number="52" class="anchored" data-anchor-id="sgd-with-momentum"><span class="header-section-number">52</span> SGD with momentum</h2>
+<section id="sgd-with-momentum-1" class="level2" data-number="51">
+<h2 data-number="51" class="anchored" data-anchor-id="sgd-with-momentum-1"><span class="header-section-number">51</span> SGD with Momentum</h2>
 <center>
-<img src="imgs/page_53.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_54.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 54</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>Here rho = gamma, give us the friction of how much we can change direction. It is friction because where if we have it as 0 then we are only calculating one sample so no velocity, if we let it to be o.9 then we have more velocity.</p>
+<p>This cancels out oscillating gradients. And it gives more weight to the recent updates, this leads to much faster convergence</p>
 </section>
-<section id="sgd-with-momentum-1" class="level2" data-number="53">
-<h2 data-number="53" class="anchored" data-anchor-id="sgd-with-momentum-1"><span class="header-section-number">53</span> SGD with Momentum</h2>
+<section id="sgd-with-momentum-2" class="level2" data-number="52">
+<h2 data-number="52" class="anchored" data-anchor-id="sgd-with-momentum-2"><span class="header-section-number">52</span> SGD with momentum</h2>
 <center>
-<img src="imgs/page_54.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_55.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 55</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="sgd-with-momentum-2" class="level2" data-number="54">
-<h2 data-number="54" class="anchored" data-anchor-id="sgd-with-momentum-2"><span class="header-section-number">54</span> SGD with momentum</h2>
+<section id="sgd-with-momentum-3" class="level2" data-number="53">
+<h2 data-number="53" class="anchored" data-anchor-id="sgd-with-momentum-3"><span class="header-section-number">53</span> SGD with momentum</h2>
 <center>
-<img src="imgs/page_55.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_56.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 56</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>For the parameter update:</p>
+<ul>
+<li>The momentum term increases for dimensions where the gradients points in the same direction. One way that we have extracted away from this formulas is that this formulas is that the gradient is multidimensional for every parameter. So it means if your gradient for one particular weight keeps going left and right, left and right it averages out to not taking a step in this direction, but if it keep going left left and left, then it will stay that way and take more steps in this direction.</li>
+</ul>
+<p>So in this case, it will keep going left and right but it will always in the one direction will keep up going down and this will gradually build up and go downwards.</p>
+<p>All optimizers use momentum, clipping is less common, momentum nothing is done without it. Clipping is when for some instance your gradients explode for some reason.</p>
 </section>
-<section id="sgd-with-momentum-3" class="level2" data-number="55">
-<h2 data-number="55" class="anchored" data-anchor-id="sgd-with-momentum-3"><span class="header-section-number">55</span> SGD with momentum</h2>
+<section id="nesterov-momentum" class="level2" data-number="54">
+<h2 data-number="54" class="anchored" data-anchor-id="nesterov-momentum"><span class="header-section-number">54</span> Nesterov momentum</h2>
 <center>
-<img src="imgs/page_56.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_57.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 57</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>This is an extension to momemntum, so in the case for nesterov momentum, we use the future gradient instead of the current gradient</p>
+<p>Another approach is first take the step that momentum tell us and at this point calculate the gradient, and then add this together So now the gradient is not computed at the current location but at the current location + the step we go according to the momentum</p>
+<p>This should gives a better approximation of to the gradient, because we are going in that direction anyways so how about we first apply the momentum and then calculate the gradient</p>
+<p>This results in better responsiveness and better guarantees</p>
 </section>
-<section id="nesterov-momentum" class="level2" data-number="56">
-<h2 data-number="56" class="anchored" data-anchor-id="nesterov-momentum"><span class="header-section-number">56</span> Nesterov momentum</h2>
+<section id="nesterov-momentum-1" class="level2" data-number="55">
+<h2 data-number="55" class="anchored" data-anchor-id="nesterov-momentum-1"><span class="header-section-number">55</span> Nesterov momentum</h2>
 <center>
-<img src="imgs/page_57.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_58.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 58</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>Blue would be what normal gradient descent does with standard momentum. You can think of Nesterov as a correction that you do to. the typically momentum, So you take momentum and you take the gradient that you have at that location.</p>
+<p>In practice not use too often</p>
 </section>
-<section id="nesterov-momentum-1" class="level2" data-number="57">
-<h2 data-number="57" class="anchored" data-anchor-id="nesterov-momentum-1"><span class="header-section-number">57</span> Nesterov momentum</h2>
+<section id="sgd-with-adaptive-step-sizes" class="level2" data-number="56">
+<h2 data-number="56" class="anchored" data-anchor-id="sgd-with-adaptive-step-sizes"><span class="header-section-number">56</span> SGD with adaptive step sizes</h2>
 <center>
-<img src="imgs/page_58.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_59.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 59</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>What is in practice very common is SGD with adaptive step sizes</p>
+<ul>
+<li>Learning rates directly affect the step size</li>
+</ul>
+<p>In NNs for clasifying dogs, the lower layers classify rgbs pixels the upper classify whether is a dog, so instead of having equal learning rates for all modules why not having learning rates per parameter. We can use this by using the following: Adagrad … see next slides</p>
 </section>
-<section id="sgd-with-adaptive-step-sizes" class="level2" data-number="58">
-<h2 data-number="58" class="anchored" data-anchor-id="sgd-with-adaptive-step-sizes"><span class="header-section-number">58</span> SGD with adaptive step sizes</h2>
+<section id="adagrad" class="level2" data-number="57">
+<h2 data-number="57" class="anchored" data-anchor-id="adagrad"><span class="header-section-number">57</span> Adagrad</h2>
 <center>
-<img src="imgs/page_59.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_60.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 60</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>Here we adapt the learning rate per component, so for every paramter it adapts the learning rate to incorporate the knowledge of the past observations</p>
+<p>Here the dot in a circle represent the element wise product, r is the gradient for this parameter summed up over time, so if summed overtime it keeps getting bigger. So that means the gradient according with time just keeps getting lower.</p>
+<p>So the parameters that have large gradients quickly decrease in effective learning rate because r would be very big so the term in from of the gradient would be very small, because we have eta/r. and we saw that r was big, so eta/r would be small</p>
+<ul>
+<li>Rapid decrease in learning rate for parameters with large partial derivatives</li>
+</ul>
+<p>So the parameters that have large gradients will not be updated anymore because we will have the learning rate eta/r to be close to zero like 0.00001..</p>
+<ul>
+<li>Smaller decrease in learning rate for parameters with small partial derivatives</li>
+</ul>
 </section>
-<section id="adagrad" class="level2" data-number="59">
-<h2 data-number="59" class="anchored" data-anchor-id="adagrad"><span class="header-section-number">59</span> Adagrad</h2>
+<section id="adagrad-1" class="level2" data-number="58">
+<h2 data-number="58" class="anchored" data-anchor-id="adagrad-1"><span class="header-section-number">58</span> Adagrad</h2>
 <center>
-<img src="imgs/page_60.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_61.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 61</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>so here with Adadelta:</p>
+<ul>
+<li>There is another extension to this which seeks to reduce its aggressive, monotonically decreasing learning rate. This could be somewhat problematic because if you do not finish by <span class="math inline">\(x\)</span> number of steps then all of your learning rates will be zero so Adadelta simply makes a sliding winwdow instead to use past gradients. It does so by restricting the window of acummulated past gradients to some fixed size instead of acummulating all past squared gradients.</li>
+<li>We do not need to set a default learning rate. as it has been eliminated from the updated rule</li>
+</ul>
 </section>
-<section id="adagrad-1" class="level2" data-number="60">
-<h2 data-number="60" class="anchored" data-anchor-id="adagrad-1"><span class="header-section-number">60</span> Adagrad</h2>
+<section id="rmsprop" class="level2" data-number="59">
+<h2 data-number="59" class="anchored" data-anchor-id="rmsprop"><span class="header-section-number">59</span> RMSprop</h2>
 <center>
-<img src="imgs/page_61.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_62.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 62</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<ul>
+<li>It is just a modification of Adagrad, and it simply uses the exponentially weighted average to accumulate gradients</li>
+</ul>
+<p>So before r was jus the sum of square gradients, now we take the exponentially weighed average. we can also use standard momentum and Nesterov momentum and so on.</p>
 </section>
-<section id="rmsprop" class="level2" data-number="61">
-<h2 data-number="61" class="anchored" data-anchor-id="rmsprop"><span class="header-section-number">61</span> RMSprop</h2>
+<section id="rmsprop-1" class="level2" data-number="60">
+<h2 data-number="60" class="anchored" data-anchor-id="rmsprop-1"><span class="header-section-number">60</span> RMSprop</h2>
 <center>
-<img src="imgs/page_62.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_63.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 63</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<ul>
+<li>Large gradients here the updates are are detained, tammed, interrumped,</li>
+<li>Small gradients here the updates are are exacerbated, more aggresive</li>
+</ul>
 </section>
-<section id="rmsprop-1" class="level2" data-number="62">
-<h2 data-number="62" class="anchored" data-anchor-id="rmsprop-1"><span class="header-section-number">62</span> RMSprop</h2>
+<section id="adam" class="level2" data-number="61">
+<h2 data-number="61" class="anchored" data-anchor-id="adam"><span class="header-section-number">61</span> Adam</h2>
 <center>
-<img src="imgs/page_63.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_64.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 64</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<ul>
+<li>coombines RMSProp and momentum</li>
+<li>uses adaptive learning rate for each parameter (higher memory)</li>
+<li>It keeps an exponentially decaying average of past gradient like momentum</li>
+<li>It introduces bias correction terms i.e if we have smoothing average, it tends to have some dependency for the first v_0, but at the beginning you dont have a really first value so we need to set it to zero which is a bias, but we can have a formula that compensates for this.</li>
+<li>it is more popular specially for transformers architecture</li>
+<li>so popular that is not even cited</li>
+</ul>
 </section>
-<section id="adam" class="level2" data-number="63">
-<h2 data-number="63" class="anchored" data-anchor-id="adam"><span class="header-section-number">63</span> Adam</h2>
+<section id="adam-1" class="level2" data-number="62">
+<h2 data-number="62" class="anchored" data-anchor-id="adam-1"><span class="header-section-number">62</span> Adam</h2>
 <center>
-<img src="imgs/page_64.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_65.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 65</figcaption>
+</figure>
+</div>
 </center>
-<pre></pre>
-</section>
-<section id="adam-1" class="level2" data-number="64">
-<h2 data-number="64" class="anchored" data-anchor-id="adam-1"><span class="header-section-number">64</span> Adam</h2>
+Momentum —&gt; Adagrad —&gt; RMSprop
 <center>
-<img src="imgs/page_65.png" class="w575 img-fluid">
+<img src="2023-11-20-16-29-45.png" class="w100 img-fluid"> <img src="2023-11-20-16-25-20.png" class="w150 img-fluid"> <img src="2023-11-20-16-25-01.png" class="w250 img-fluid">
 </center>
 <pre></pre>
+<p>We have the exponentiall average of gradients so the <span class="math inline">\(\sqrt{v_t}\)</span>, the square is use to rescale again one learning rate at the beginning and then automatic learning rates per parameter and then the moving average of gradient is use for the update itself.</p>
+<p>What is new is the combination fo the two.</p>
 </section>
-<section id="notice-something" class="level2" data-number="65">
-<h2 data-number="65" class="anchored" data-anchor-id="notice-something"><span class="header-section-number">65</span> Notice something?</h2>
+<section id="notice-something" class="level2" data-number="63">
+<h2 data-number="63" class="anchored" data-anchor-id="notice-something"><span class="header-section-number">63</span> Notice something?</h2>
 <center>
-<img src="imgs/page_66.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_66.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 66</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="visual-overview" class="level2" data-number="66">
-<h2 data-number="66" class="anchored" data-anchor-id="visual-overview"><span class="header-section-number">66</span> Visual overview</h2>
+<section id="visual-overview" class="level2" data-number="64">
+<h2 data-number="64" class="anchored" data-anchor-id="visual-overview"><span class="header-section-number">64</span> Visual overview</h2>
 <center>
-<img src="imgs/page_67.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_67.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 67</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>Adam is a heavy ball with a lot of friction and all the other, like the yellow one tends to overshoot a lot and adam introduces this friction term to the optimizer</p>
 </section>
-<section id="which-optimizer-to-use" class="level2" data-number="67">
-<h2 data-number="67" class="anchored" data-anchor-id="which-optimizer-to-use"><span class="header-section-number">67</span> Which optimizer to use?</h2>
+<section id="which-optimizer-to-use" class="level2" data-number="65">
+<h2 data-number="65" class="anchored" data-anchor-id="which-optimizer-to-use"><span class="header-section-number">65</span> Which optimizer to use?</h2>
 <center>
-<img src="imgs/page_68.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_68.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 68</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<ul>
+<li>Typically SGD + momentum often works best</li>
+<li>Adam is often the easy choice but it tends to not perform best.</li>
+<li>Adam + weigth decay is standard for optimizing transformers</li>
+<li>Even in optimizers like Adam we do learning rate decay</li>
+</ul>
 </section>
-<section id="approximate-second-order-methods" class="level2" data-number="68">
-<h2 data-number="68" class="anchored" data-anchor-id="approximate-second-order-methods"><span class="header-section-number">68</span> Approximate Second-Order Methods</h2>
+<section id="approximate-second-order-methods" class="level2" data-number="66">
+<h2 data-number="66" class="anchored" data-anchor-id="approximate-second-order-methods"><span class="header-section-number">66</span> Approximate Second-Order Methods</h2>
 <center>
-<img src="imgs/page_69.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_69.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 69</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>This is another whole level of optimizers, these are of second order:</p>
+<p>This does not look only at the gradeitn but try to see how is the gradient changing at this location. It is trying to get some approximations to the Hessian just to haver a feeling of where to go.</p>
+<p>We will only talk about Newtons Method</p>
 </section>
-<section id="newtons-method" class="level2" data-number="69">
-<h2 data-number="69" class="anchored" data-anchor-id="newtons-method"><span class="header-section-number">69</span> Newton’s method</h2>
+<section id="newtons-method" class="level2" data-number="67">
+<h2 data-number="67" class="anchored" data-anchor-id="newtons-method"><span class="header-section-number">67</span> Newton’s method</h2>
 <center>
-<img src="imgs/page_70.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_70.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 70</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>We approximate the gradient at some point with Taylor expansion - Now if we want to solve for the critical point, which means the gradient is zero, then we get the second eq as an update formula. - If the function is like quadratic becuase we are learning a quadratic approximation to the function Newton method will only need one step directly to get to the solution - If is convex but not quadratic, we keep on iterating and it will get us to the minimum</p>
 </section>
-<section id="newtons-method-1" class="level2" data-number="70">
-<h2 data-number="70" class="anchored" data-anchor-id="newtons-method-1"><span class="header-section-number">70</span> Newton’s method</h2>
+<section id="newtons-method-1" class="level2" data-number="68">
+<h2 data-number="68" class="anchored" data-anchor-id="newtons-method-1"><span class="header-section-number">68</span> Newton’s method</h2>
 <center>
-<img src="imgs/page_71.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_71.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 71</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<ul>
+<li><p>Only works if Hessian is positive definite, if near saddle point, the Hessian are not all positive. So it does not work.<br>
+The solution for this is to add an identity matrix times this expression and then solve for the update</p></li>
+<li><p>Still computationally expensive</p></li>
+</ul>
 </section>
-<section id="quasi-newton-methods" class="level2" data-number="71">
-<h2 data-number="71" class="anchored" data-anchor-id="quasi-newton-methods"><span class="header-section-number">71</span> Quasi-Newton methods</h2>
+<section id="quasi-newton-methods" class="level2" data-number="69">
+<h2 data-number="69" class="anchored" data-anchor-id="quasi-newton-methods"><span class="header-section-number">69</span> Quasi-Newton methods</h2>
 <center>
-<img src="imgs/page_72.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_72.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 72</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
+<p>Because it is very computational expensive people have came with Quasi-Newton methods which trie to reduce the expensive computations of the inversion of the Hessian in the previous method</p>
+<ul>
+<li>They approx these matrices by lower rank matrices, then less storage and complexity</li>
+</ul>
+<p>But not really used</p>
 </section>
-<section id="interactive-session" class="level2" data-number="72">
-<h2 data-number="72" class="anchored" data-anchor-id="interactive-session"><span class="header-section-number">72</span> Interactive session</h2>
+<section id="interactive-session" class="level2" data-number="70">
+<h2 data-number="70" class="anchored" data-anchor-id="interactive-session"><span class="header-section-number">70</span> Interactive session</h2>
 <center>
-<img src="imgs/page_73.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_73.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 73</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="reading-materials" class="level2" data-number="73">
-<h2 data-number="73" class="anchored" data-anchor-id="reading-materials"><span class="header-section-number">73</span> Reading materials</h2>
+<section id="reading-materials" class="level2" data-number="71">
+<h2 data-number="71" class="anchored" data-anchor-id="reading-materials"><span class="header-section-number">71</span> Reading materials</h2>
 <center>
-<img src="imgs/page_74.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_74.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 74</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="how-research-ets-done-art-il-marie-curie." class="level2" data-number="74">
-<h2 data-number="74" class="anchored" data-anchor-id="how-research-ets-done-art-il-marie-curie."><span class="header-section-number">74</span> How research ets done art Il Marie Curie.</h2>
+<section id="how-research-gets-done-at-il-marie-curie." class="level2" data-number="72">
+<h2 data-number="72" class="anchored" data-anchor-id="how-research-gets-done-at-il-marie-curie."><span class="header-section-number">72</span> How research gets done at Il Marie Curie.</h2>
 “Nothing in life is to be
 <center>
-<img src="imgs/page_75.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_75.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 75</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="oni7-1" class="level2" data-number="75">
-<h2 data-number="75" class="anchored" data-anchor-id="oni7-1"><span class="header-section-number">75</span> Oni7</h2>
+<section id="quiz-1" class="level2" data-number="73">
+<h2 data-number="73" class="anchored" data-anchor-id="quiz-1"><span class="header-section-number">73</span> Quiz</h2>
 <center>
-<img src="imgs/page_76.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_76.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 76</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<ol start="4" type="1">
+<li>Setting all the weights to “42”</li>
+</ol>
+<p>Answers:</p>
+<ol type="1">
+<li>is wrong as setting the weights to zero is hard to learn, but if all same then all evolve in the similar way</li>
+<li>Yes, it does train but very slowly because at least the bias will add some variance</li>
+<li>This works as long as all the neurons are set to some number between 0 and 100, but this does not matter to much so this will be able to train</li>
+<li>Same explanation to 1. The same number then all evolve in the same way and will not train properly</li>
+</ol>
+</section>
+<section id="re-constant-init-see-tutorial" class="level2" data-number="74">
+<h2 data-number="74" class="anchored" data-anchor-id="re-constant-init-see-tutorial"><span class="header-section-number">74</span> Re: constant init: see Tutorial</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_77.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 77</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="re-constant-init-see-tutorial" class="level2" data-number="76">
-<h2 data-number="76" class="anchored" data-anchor-id="re-constant-init-see-tutorial"><span class="header-section-number">76</span> Re: constant init: see Tutorial</h2>
+<section id="title" class="level2" data-number="75">
+<h2 data-number="75" class="anchored" data-anchor-id="title"><span class="header-section-number">75</span> Title</h2>
 <center>
-<img src="imgs/page_77.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_78.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 78</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="title-1" class="level2" data-number="77">
-<h2 data-number="77" class="anchored" data-anchor-id="title-1"><span class="header-section-number">77</span> Title</h2>
+<section id="weight-initialization" class="level2" data-number="76">
+<h2 data-number="76" class="anchored" data-anchor-id="weight-initialization"><span class="header-section-number">76</span> Weight initialization</h2>
 <center>
-<img src="imgs/page_78.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_79.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 79</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Why init weights to zero is bad?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>The use of random values for weight initialization in neural networks is a common practice and serves several important purposes in the training process. Here are some reasons why random initialization is preferred:</p>
+<ol type="1">
+<li><p><strong>Breaking Symmetry:</strong> If all the weights in a neural network are initialized to the same value, each neuron in a given layer would receive the same input and learn the same features during training. This symmetry problem makes it difficult for neurons to learn diverse and meaningful features. Random initialization breaks this symmetry by providing each neuron with a unique starting point.</p></li>
+<li><p><strong>Avoiding Zero Gradients:</strong> If all weights are initialized to zero, the gradients with respect to each weight will be the same during backpropagation. This means that all weights will be updated by the same amount in each iteration, leading to symmetrical weight updates and slow convergence. Random initialization ensures that each weight starts with a different value, preventing this issue.</p></li>
+<li><p><strong>Encouraging Exploration:</strong> Random initialization introduces diversity in the initial state of the neural network, promoting exploration in the weight space. This is particularly important when using optimization algorithms like gradient descent, as it helps the algorithm escape local minima and find better solutions.</p></li>
+<li><p><strong>Dealing with Dead Neurons:</strong> If weights are initialized to zero, neurons in a network with certain activation functions (e.g., ReLU) may become “dead” and stay inactive (always outputting zero) for all inputs. Random initialization helps mitigate this issue, ensuring that neurons have a chance to receive different inputs and learn meaningful features.</p></li>
+<li><p><strong>Improving Generalization:</strong> Random initialization contributes to the generalization ability of the neural network. Different initializations allow the network to learn diverse representations of the input data, which can lead to better performance on unseen data.</p></li>
+</ol>
+<p><strong>What about biases set to zero?</strong></p>
+<p>While it’s common to initialize weights with random values, the initialization of biases is often done differently. Setting biases to zero is a common and reasonable practice, and it generally does not lead to the same issues as initializing weights to zero</p>
+</div>
+</div>
+</div>
+</section>
+<section id="random-yes.-but-how" class="level2" data-number="77">
+<h2 data-number="77" class="anchored" data-anchor-id="random-yes.-but-how"><span class="header-section-number">77</span> Random: yes. But how?</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_80.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 80</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>By controlling the spread of initial weights (variance), we aim to avoid extreme values that could hinder the training process.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Why do we even want to preserve the variance of the activations?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Conserving the variance of activations during the training of neural networks is an important consideration for several reasons:</p>
+<ol type="1">
+<li><strong>Preventing Vanishing Gradients:</strong>
+<ul>
+<li>If the variance of activations becomes too small as the information passes through the layers during forward propagation, it may lead to vanishing gradients during backpropagation.</li>
+<li>Vanishing gradients make it challenging for the optimization algorithm to update the weights effectively, hindering the learning process.</li>
+</ul></li>
+<li><strong>Preventing Exploding Gradients:</strong>
+<ul>
+<li>Conversely, if the variance of activations becomes too large, it may lead to exploding gradients during backpropagation.</li>
+<li>Exploding gradients can cause the weights to be updated by very large values, leading to numerical instability and making it difficult for the model to converge to a solution.</li>
+</ul></li>
+<li><strong>Facilitating Learning Across Layers:</strong>
+<ul>
+<li>Conserving the variance helps in maintaining a suitable range of activations throughout the layers of the network.</li>
+<li>A consistent variance allows each layer to make meaningful contributions to the learning process, preventing issues where some layers become overly dominant or inactive.</li>
+</ul></li>
+<li><strong>Smoothing the Optimization Landscape:</strong>
+<ul>
+<li>A stable and consistent variance in activations contributes to a smoother optimization landscape.</li>
+<li>A smoother landscape makes it easier for optimization algorithms to navigate and converge, leading to more stable and efficient training.</li>
+</ul></li>
+<li><strong>Encouraging Exploration and Learning:</strong>
+<ul>
+<li>A controlled variance ensures that the network can effectively explore the solution space during training.</li>
+<li>The ability to explore different configurations and update weights based on meaningful gradients helps the model to learn representative features from the data.</li>
+</ul></li>
+<li><strong>Better Generalization:</strong>
+<ul>
+<li>Maintaining a reasonable variance helps in producing more robust models that generalize well to unseen data.</li>
+<li>Overly small or large activations may result in a model that is sensitive to minor variations in the training data, leading to poor generalization.</li>
+</ul></li>
+<li><strong>Mitigating Sensitivity to Weight Initialization:</strong>
+<ul>
+<li>A consistent variance makes the training process less sensitive to the specific choice of weight initialization.</li>
+<li>When the variance is carefully controlled, the network is more likely to exhibit stable behavior during training, irrespective of the initial weights.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Why do we even mean by variance of the weights?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>When we refer to “variance” in the context of neural networks and weight initialization, we are typically talking about the spread or dispersion of values. Specifically, it refers to the spread of the weights’ initial values. The term “variance” in this context does not directly relate to statistical variance, but rather it’s used in a more general sense to describe the range of values.</p>
+<p>Here’s a breakdown of the concept:</p>
+<ol type="1">
+<li><strong>Weight Variance:</strong>
+<ul>
+<li>Each weight in a neural network has an associated value.</li>
+<li>The “variance” in weight initialization refers to how spread out or varied these initial weight values are across the neurons in a layer.</li>
+</ul></li>
+<li><strong>Consistent Spread Across Layers:</strong>
+<ul>
+<li>When initializing weights, especially in deep neural networks, it’s desirable to have a consistent spread of initial values across layers.</li>
+<li>The goal is to avoid situations where the weights in some layers are much larger or smaller than in others.</li>
+</ul></li>
+<li><strong>Avoiding Extreme Values:</strong>
+<ul>
+<li>Extreme weight values can lead to numerical instability during training, causing issues like exploding or vanishing gradients.</li>
+<li>By controlling the spread of initial weights (variance), we aim to avoid extreme values that could hinder the training process.</li>
+</ul></li>
+<li><strong>Maintaining Activation Variance:</strong>
+<ul>
+<li>The idea is to set the initial weights in a way that the variance of activations (outputs of neurons after applying weights and activation functions) remains reasonably constant across layers.</li>
+<li>This helps prevent issues like vanishing or exploding gradients, as mentioned earlier.</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="bad-initialization-can-cause-problems" class="level2" data-number="78">
+<h2 data-number="78" class="anchored" data-anchor-id="bad-initialization-can-cause-problems"><span class="header-section-number">78</span> Bad initialization can cause problems</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_81.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 81</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>Low variance = high peak</p>
+<p>High variance = smooth out bell</p>
+<p>In the upper row, if we initialize every length with weigths that have same constant variance then in further layers we dimished the variance, so it tends to smooth out –&gt; diminsh variance</p>
+<p>In the opposite if every layer has an increase variance, then we end up with a very spiky peak because we can can explode the variance in activations</p>
+</section>
+<section id="initializing-weights-by-preserving-variance" class="level2" data-number="79">
+<h2 data-number="79" class="anchored" data-anchor-id="initializing-weights-by-preserving-variance"><span class="header-section-number">79</span> Initializing weights by preserving variance</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_82.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 82</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="weight-initialization" class="level2" data-number="78">
-<h2 data-number="78" class="anchored" data-anchor-id="weight-initialization"><span class="header-section-number">78</span> Weight initialization</h2>
+<section id="initializing-weights-by-preserving-variance-1" class="level2" data-number="80">
+<h2 data-number="80" class="anchored" data-anchor-id="initializing-weights-by-preserving-variance-1"><span class="header-section-number">80</span> Initializing weights by preserving variance</h2>
 <center>
-<img src="imgs/page_79.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_83.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 83</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>Here then we are saying that our weight to preserve the variance we will be draw from a Gaussian with mean = 0 and variance = 1/d, where d is the number of input variables to the layer.</p>
+</section>
+<section id="initialization-for-relus" class="level2" data-number="81">
+<h2 data-number="81" class="anchored" data-anchor-id="initialization-for-relus"><span class="header-section-number">81</span> Initialization for ReLUs</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_84.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 84</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+<p>For Relu or variants we use Kaiming</p>
+<p>The Kaiming initialization sets the initial weights with a variance of 2/n, where n is the number of input units. This choice helps prevent issues like vanishing or exploding gradients, particularly in deep neural networks.</p>
+</section>
+<section id="xavier-initialization" class="level2" data-number="82">
+<h2 data-number="82" class="anchored" data-anchor-id="xavier-initialization"><span class="header-section-number">82</span> Xavier initialization</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_85.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 85</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="random-yes.-but-how" class="level2" data-number="79">
-<h2 data-number="79" class="anchored" data-anchor-id="random-yes.-but-how"><span class="header-section-number">79</span> Random: yes. But how?</h2>
+<section id="interesting-results-with-randomly-initialized-networks" class="level2" data-number="83">
+<h2 data-number="83" class="anchored" data-anchor-id="interesting-results-with-randomly-initialized-networks"><span class="header-section-number">83</span> Interesting results with randomly initialized networks</h2>
 <center>
-<img src="imgs/page_80.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_86.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 86</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 </section>
-<section id="bad-initialization-can-cause-problems" class="level2" data-number="80">
-<h2 data-number="80" class="anchored" data-anchor-id="bad-initialization-can-cause-problems"><span class="header-section-number">80</span> Bad initialization can cause problems</h2>
+<section id="reading-materials-1" class="level2" data-number="84">
+<h2 data-number="84" class="anchored" data-anchor-id="reading-materials-1"><span class="header-section-number">84</span> Reading materials</h2>
 <center>
-<img src="imgs/page_81.png" class="w575 img-fluid">
-</center>
-<pre></pre>
-</section>
-<section id="initializing-weights-by-preserving-variance" class="level2" data-number="81">
-<h2 data-number="81" class="anchored" data-anchor-id="initializing-weights-by-preserving-variance"><span class="header-section-number">81</span> Initializing weights by preserving variance</h2>
-<center>
-<img src="imgs/page_82.png" class="w575 img-fluid">
-</center>
-<pre></pre>
-</section>
-<section id="initializing-weights-by-preserving-variance-1" class="level2" data-number="82">
-<h2 data-number="82" class="anchored" data-anchor-id="initializing-weights-by-preserving-variance-1"><span class="header-section-number">82</span> Initializing weights by preserving variance</h2>
-<center>
-<img src="imgs/page_83.png" class="w575 img-fluid">
-</center>
-<pre></pre>
-</section>
-<section id="initialization-for-relus" class="level2" data-number="83">
-<h2 data-number="83" class="anchored" data-anchor-id="initialization-for-relus"><span class="header-section-number">83</span> Initialization for ReLUs</h2>
-<center>
-<img src="imgs/page_84.png" class="w575 img-fluid">
-</center>
-<pre></pre>
-</section>
-<section id="xavier-initialization" class="level2" data-number="84">
-<h2 data-number="84" class="anchored" data-anchor-id="xavier-initialization"><span class="header-section-number">84</span> Xavier initialization</h2>
-<center>
-<img src="imgs/page_85.png" class="w575 img-fluid">
-</center>
-<pre></pre>
-</section>
-<section id="interesting-results-with-randomly-initialized-networks" class="level2" data-number="85">
-<h2 data-number="85" class="anchored" data-anchor-id="interesting-results-with-randomly-initialized-networks"><span class="header-section-number">85</span> Interesting results with randomly initialized networks</h2>
-<center>
-<img src="imgs/page_86.png" class="w575 img-fluid">
-</center>
-<pre></pre>
-</section>
-<section id="reading-materials-1" class="level2" data-number="86">
-<h2 data-number="86" class="anchored" data-anchor-id="reading-materials-1"><span class="header-section-number">86</span> Reading materials</h2>
-<center>
-<img src="imgs/page_87.png" class="w575 img-fluid">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_87.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 87</figcaption>
+</figure>
+</div>
 </center>
 <pre></pre>
 

@@ -200,3 +200,9 @@ h1.title {
 .grey_text{
     color: lightgray;
 }
+
+/* Make plots centered */
+.cell-output.cell-output-display {
+    display: flex;
+    justify-content: center;
+}

@@ -35,6 +35,9 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/2023-11-20_convolutional-neural-networks/index.html",
+      "/blog/2023-11-20_modern-convnets/index.html",
+      "/blog/2023-11-20_deep-learning-optimizations-ii/index.html",
       "/blog/2023-11-13_modelling-syntactic-structure/index.html",
       "/blog/2023-11-13_sequence-labelling/index.html",
       "/blog/2023-11-08_deep-learning-optimizations-i/index.html",

@@ -46,11 +46,11 @@
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-11-05_deep-feedforward-networks/index.html</loc>
-    <lastmod>2023-11-15T21:50:06.120Z</lastmod>
+    <lastmod>2023-11-20T21:19:01.079Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-11-08_deep-learning-optimizations-i/index.html</loc>
-    <lastmod>2023-11-15T21:50:03.027Z</lastmod>
+    <lastmod>2023-11-20T22:02:23.417Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-05-29_markdown-structure/index.html</loc>
@@ -114,7 +114,7 @@
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-10-15_kernel-methods-&-svm/index.html</loc>
-    <lastmod>2023-11-15T21:49:22.420Z</lastmod>
+    <lastmod>2023-11-20T21:18:59.064Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/index.html</loc>
@@ -202,7 +202,7 @@
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/index.html</loc>
-    <lastmod>2023-11-16T17:16:02.404Z</lastmod>
+    <lastmod>2023-11-20T22:03:14.677Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-11-07_numpy-reshape-rgb-image-to-1d-array/index.html</loc>
@@ -267,5 +267,17 @@
   <url>
     <loc>https://www.danilotpnta.com/now/index.html</loc>
     <lastmod>2023-11-15T21:50:27.422Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-11-20_deep-learning-optimizations-ii/index.html</loc>
+    <lastmod>2023-11-20T22:01:23.935Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-11-20_convolutional-neural-networks/index.html</loc>
+    <lastmod>2023-11-20T22:00:58.230Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-11-20_modern-convnets/index.html</loc>
+    <lastmod>2023-11-20T22:03:12.287Z</lastmod>
   </url>
 </urlset>
