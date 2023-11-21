@@ -2789,603 +2789,603 @@
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#title",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#title",
     "title": "Deep Learning Optimizations II",
-    "section": "1 Title",
-    "text": "1 Title\n\n\n\n\nSlide 1"
+    "section": "81 Title",
+    "text": "81 Title\n\n\n\n\nSlide 87"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#last-time",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#last-time",
     "title": "Deep Learning Optimizations II",
-    "section": "2 Last time:",
-    "text": "2 Last time:\n\n\n\n\nSlide 2"
+    "section": "1 Last time:",
+    "text": "1 Last time:\n\n\n\n\nSlide 2"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#lecture-overview",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#lecture-overview",
     "title": "Deep Learning Optimizations II",
-    "section": "3 Lecture overview",
-    "text": "3 Lecture overview\n\n\n\n\nSlide 3"
+    "section": "1 Lecture overview",
+    "text": "1 Lecture overview\n\n\n\n\nSlide 4"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#lecture-overview-1",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#lecture-overview-1",
     "title": "Deep Learning Optimizations II",
-    "section": "4 Lecture overview",
-    "text": "4 Lecture overview\n\n\n\n\nSlide 4"
+    "section": "2 Lecture overview",
+    "text": "2 Lecture overview\n\n\n\n\nSlide 4"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#title-1",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#title-1",
     "title": "Deep Learning Optimizations II",
-    "section": "5 Title",
-    "text": "5 Title\n\n\n\n\nSlide 5"
+    "section": "82 Title",
+    "text": "82 Title\n\n\n\n\nSlide 87"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#title-2",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#title-2",
     "title": "Deep Learning Optimizations II",
-    "section": "6 Title",
-    "text": "6 Title\n\n\n\n\nSlide 6"
+    "section": "84 Title",
+    "text": "84 Title\n\n\n\n\nSlide 87"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#ression-gravitation",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#ression-gravitation",
     "title": "Deep Learning Optimizations II",
-    "section": "7 ression: Gravitation",
-    "text": "7 ression: Gravitation\n\n\n\n\nSlide 7"
+    "section": "4 ression: Gravitation",
+    "text": "4 ression: Gravitation\n\n\n\n\nSlide 7"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#bias-variance-tradeoff",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#bias-variance-tradeoff",
     "title": "Deep Learning Optimizations II",
-    "section": "8 Bias-variance tradeoff",
-    "text": "8 Bias-variance tradeoff\n\n\n\n\nSlide 8"
+    "section": "5 Bias-variance tradeoff",
+    "text": "5 Bias-variance tradeoff\n\n\n\n\nSlide 8\n\n\n\n\nThe single best prediction of the parameters\nA good estimator is a function whose output is close to the true underlying thetha that generated the data"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#bias-variance-tradeoff-1",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#bias-variance-tradeoff-1",
     "title": "Deep Learning Optimizations II",
-    "section": "9 Bias-variance tradeoff",
-    "text": "9 Bias-variance tradeoff\n\n\n\n\nSlide 9"
+    "section": "6 Bias-variance tradeoff",
+    "text": "6 Bias-variance tradeoff\n\n\n\n\nSlide 9\n\n\n\n\nBias\nEstimator’s expected value= so the ouput of our thetha estimate and the true value of that parameter\nBias comes from not being able to model the real model in a correct way\nVariance\nSo if you use a different training set or a different split how different are the learnt NNs parameters. If differ a lot then high variance"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#bias-variance-tradeoff-2",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#bias-variance-tradeoff-2",
     "title": "Deep Learning Optimizations II",
-    "section": "10 Bias-variance tradeoff",
-    "text": "10 Bias-variance tradeoff\n\n\n\n\nSlide 10"
+    "section": "7 Bias-variance tradeoff",
+    "text": "7 Bias-variance tradeoff\n\n\n\n\nSlide 10\n\n\n\n\nHigh variance & low bias, your model on average get it right but it has a high variance because it wants to model all noise, so overfilling, it spread all over the place\nHigh bias and low variance, in average it does not even get it correct so underfitting"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#overfitting",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#overfitting",
     "title": "Deep Learning Optimizations II",
-    "section": "11 Overfitting",
-    "text": "11 Overfitting\n\n\n\n\nSlide 11"
+    "section": "8 Overfitting",
+    "text": "8 Overfitting\n\n\n\n\nSlide 11"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#overfitting-1",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#overfitting-1",
     "title": "Deep Learning Optimizations II",
-    "section": "12 Overfitting",
-    "text": "12 Overfitting\n\n\n\n\nSlide 12"
+    "section": "9 Overfitting",
+    "text": "9 Overfitting\n\n\n\n\nSlide 12\n\n\n\n\nIt will learn to recognize that the img contains hourses not by the hourses but the watermark. This is seen in the heat-map where the point of attention is in the watermark. This is overfitting"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#overfitting-2",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#overfitting-2",
     "title": "Deep Learning Optimizations II",
-    "section": "13 Overfitting",
-    "text": "13 Overfitting\n\n\n\n\nSlide 13"
+    "section": "10 Overfitting",
+    "text": "10 Overfitting\n\n\n\n\nSlide 13\n\n\n\n\nTo avoid overfitting we use regularization"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#overfitting-how-powerful-are-neural-networks",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#overfitting-how-powerful-are-neural-networks",
     "title": "Deep Learning Optimizations II",
-    "section": "14 Overfitting: how “powerful” are neural networks?",
-    "text": "14 Overfitting: how “powerful” are neural networks?\n\n\n\n\nSlide 14"
+    "section": "11 Overfitting: how “powerful” are neural networks?",
+    "text": "11 Overfitting: how “powerful” are neural networks?\n\n\n\n\nSlide 14"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#this-isnt-the-full-story..",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#this-isnt-the-full-story..",
     "title": "Deep Learning Optimizations II",
-    "section": "15 This isn’t the full story..",
-    "text": "15 This isn’t the full story..\n\n\n\n\nSlide 15"
+    "section": "12 This isn’t the full story..",
+    "text": "12 This isn’t the full story..\n\n\n\n\nSlide 15"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#update-2019-double-descent",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#update-2019-double-descent",
     "title": "Deep Learning Optimizations II",
-    "section": "16 Update 2019: Double Descent",
-    "text": "16 Update 2019: Double Descent\n\n\n\n\nSlide 16"
+    "section": "13 Update 2019: Double Descent",
+    "text": "13 Update 2019: Double Descent\n\n\n\n\nSlide 16\n\n\n\n\nDash line is where the data samples equals the number of parameters\nSo in the top right image even if we have increase the number of hidden layers and our training error is zero then our test set is still decreasing that is weird.\nSo here we then presume that bigger model will have lower error.\nBefore we use to have a curve upwrads from the tipical bias/variance curve in the prev slide, but the weird thing is that where the dash line meets then this error starts to decrease again.\nTwo answers: smoothness and regularization"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#double-descent-smoothness-from-bigger-models",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#double-descent-smoothness-from-bigger-models",
     "title": "Deep Learning Optimizations II",
-    "section": "17 Double-descent: Smoothness from bigger models",
-    "text": "17 Double-descent: Smoothness from bigger models\n\n\n\n\nSlide 17"
+    "section": "14 Double-descent: Smoothness from bigger models",
+    "text": "14 Double-descent: Smoothness from bigger models\n\n\n\n\nSlide 17\n\n\n\n\nIn the x axis you have the number of times SGD was proceed, so the amount of units of texts akak ‘words’ were processed\nWe can see that with larger models I require fewer samples to reach a lower test loss\nAlso when they reach stability they can provide with a test loss which is the best shot they can give and this depends on their size, larger models give more accurate results\nAlso it shows that the quicker models learns quickler than the smaller model. So while the smaller model for a given number of tokens the large model learns more quickler.\nThis is Language models still not applicable for vision.\nWe also can say that (in language models) in terms of flops is more efficient to learn large models for fewer steps than to learn small models for larger amount of steps"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#double-descent-in-practice",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#double-descent-in-practice",
     "title": "Deep Learning Optimizations II",
-    "section": "18 Double-descent in practice?",
-    "text": "18 Double-descent in practice?\n\n\n\n\nSlide 18"
+    "section": "15 Double-descent in practice?",
+    "text": "15 Double-descent in practice?\n\n\n\n\nSlide 18\n\n\n\n\nIn practice if you increase the number of neurons you may be closer to overfitting. For that we need regularization"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#regularization",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#regularization",
     "title": "Deep Learning Optimizations II",
-    "section": "19 Regularization",
-    "text": "19 Regularization\n\n\n\n\nSlide 19"
+    "section": "16 Regularization",
+    "text": "16 Regularization\n\n\n\n\nSlide 19\n\n\n\n\nHere we reduce the complexity of a NN and avoid ovverfitting"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#regularization-1",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#regularization-1",
     "title": "Deep Learning Optimizations II",
-    "section": "20 1) €2-regularization",
-    "text": "20 1) €2-regularization\n\n\n\n\nSlide 20"
+    "section": "20 2) £,-regularization",
+    "text": "20 2) £,-regularization\n\n\n\n\nSlide 23"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#regularization-2",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#regularization-2",
     "title": "Deep Learning Optimizations II",
-    "section": "21 1) €,-regularization",
-    "text": "21 1) €,-regularization\n\n\n\n\nSlide 21"
+    "section": "20 2) £,-regularization",
+    "text": "20 2) £,-regularization\n\n\n\n\nSlide 23"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#regularization-3",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#regularization-3",
     "title": "Deep Learning Optimizations II",
-    "section": "22 2) £,-regularization",
-    "text": "22 2) £,-regularization\n\n\n\n\nSlide 22"
+    "section": "20 2) £,-regularization",
+    "text": "20 2) £,-regularization\n\n\n\n\nSlide 23"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#regularization-4",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#regularization-4",
     "title": "Deep Learning Optimizations II",
-    "section": "23 2) £,-regularization",
-    "text": "23 2) £,-regularization\n\n\n\n\nSlide 23"
+    "section": "20 2) £,-regularization",
+    "text": "20 2) £,-regularization\n\n\n\n\nSlide 23"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#why-do-l1-and-l2-regularizations-work",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#why-do-l1-and-l2-regularizations-work",
     "title": "Deep Learning Optimizations II",
-    "section": "24 Why do L1 and L2 Regularizations work?",
-    "text": "24 Why do L1 and L2 Regularizations work?\n\n\n\n\nSlide 24"
+    "section": "21 Why do L1 and L2 Regularizations work?",
+    "text": "21 Why do L1 and L2 Regularizations work?\n\n\n\n\nSlide 24\n\n\n\n\nL2 regularization has basically a circular constraint area because you have w1^2 + w2^2 needs to be constant so all these combinations would be a circle\nSo the contours of the loss function in red will intercept the constrains regions at an axis. What that means is that if you are trying to find in this case the optimal loss, then it touches the constraint region where one of the values is set to zero while with L2 regularization there is no particular point where you could make one of the weights zero\nThis is because it needs to have the sum of the squares to be a small value but there is no particular motivation to have a similar weigth dimension to be equal to zero, so there is no reason to have sparse weights in L2"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#effect-linear-regression-example",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#effect-linear-regression-example",
     "title": "Deep Learning Optimizations II",
-    "section": "25 Effect: linear regression example",
-    "text": "25 Effect: linear regression example\n\n\n\n\nSlide 25"
+    "section": "22 Effect: linear regression example",
+    "text": "22 Effect: linear regression example\n\n\n\n\nSlide 25\n\n\n\n\nHere the alpha goes from strong to weak\nIn L1 it puches some weights to zero and then stay zero aftwer a while and it is not like all of them get smaller at the same time but some of them stay quite high for a loong time, and now increasing alpha here you are making individual weights close to zero.\nL2 Regularization (Weight Decay): Encourages smaller weights but does not force them to be exactly zero. It smoothens the weights but doesn’t induce sparsity.\nL1 Regularization: Promotes sparsity by adding a penalty term based on the absolute values of the weights. This can lead to some weights being exactly zero."
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#early-stopping",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#early-stopping",
     "title": "Deep Learning Optimizations II",
-    "section": "26 3) Early stopping",
-    "text": "26 3) Early stopping\n\n\n\n\nSlide 26"
+    "section": "23 3) Early stopping",
+    "text": "23 3) Early stopping\n\n\n\n\nSlide 26"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#early-stopping-1",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#early-stopping-1",
     "title": "Deep Learning Optimizations II",
-    "section": "27 3) Early stopping",
-    "text": "27 3) Early stopping\n\n\n\n\nSlide 27"
+    "section": "24 3) Early stopping",
+    "text": "24 3) Early stopping\n\n\n\n\nSlide 27\n\n\n\n\n*Typo: with better test set error\nThe model at this stage have low variance because they are not overfitting"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#early-stopping-2",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#early-stopping-2",
     "title": "Deep Learning Optimizations II",
-    "section": "28 3) Early stopping",
-    "text": "28 3) Early stopping\n\n\n\n\nSlide 28"
+    "section": "25 3) Early stopping",
+    "text": "25 3) Early stopping\n\n\n\n\nSlide 28"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#why-does-early-stopping-work-as-regularization",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#why-does-early-stopping-work-as-regularization",
     "title": "Deep Learning Optimizations II",
-    "section": "29 Why does early-stopping work as regularization?",
-    "text": "29 Why does early-stopping work as regularization?\n\n\n\n\nSlide 29"
+    "section": "26 Why does early-stopping work as regularization?",
+    "text": "26 Why does early-stopping work as regularization?\n\n\n\n\nSlide 29"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#why-does-early-stopping-work-as-regularization-1",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#why-does-early-stopping-work-as-regularization-1",
     "title": "Deep Learning Optimizations II",
-    "section": "30 Why does early-stopping work as regularization?",
-    "text": "30 Why does early-stopping work as regularization?\n\n\n\n\nSlide 30"
+    "section": "27 Why does early-stopping work as regularization?",
+    "text": "27 Why does early-stopping work as regularization?\n\n\n\n\nSlide 30\n\n\n\n\nHere weight decay they mean by L2-regularization\n\n\n\n\n\n\nWeight decay (L2-loss) vs Early Stopping\n\n\n\n\n\nWeight decay, also known as L2 regularization, is a technique to prevent overfitting by adding a penalty term to the loss function that is proportional to the squared magnitudes of the weights. This regularization term discourages the model from learning very large weights and encourages a smoother and more generalized solution.\nEarly Stopping:\nEarly stopping is a regularization technique used during the training of a machine learning model, typically in the context of iterative optimization algorithms like gradient descent. The idea behind early stopping is to monitor the model’s performance on a validation set during training and stop the training process when the performance on the validation set starts to degrade, even if the performance on the training set continues to improve.\n\nMechanism: Monitor a performance metric (e.g., validation loss) on a separate validation set during training.\nDecision Criteria: Stop training when the performance on the validation set starts to worsen or fails to improve for a certain number of consecutive epochs.\nPurpose: Prevent overfitting by terminating training before the model starts to memorize noise in the training data.\n\nWeight Decay (L2 Regularization):\nWeight decay, also known as L2 regularization, is a technique to prevent overfitting by adding a penalty term to the loss function that is proportional to the squared magnitudes of the weights. This regularization term discourages the model from learning very large weights and encourages a smoother and more generalized solution.\n\nMechanism: Add a term to the loss function that penalizes large weights by adding the sum of squared weights multiplied by a regularization strength.\nDecision Criteria: No specific stopping criterion; regularization is applied throughout the training process.\nPurpose: Encourage the model to have smaller and more evenly distributed weights, preventing overfitting.\n\nKey Differences:\n\nFocus:\n\nEarly stopping focuses on monitoring the model’s performance during training and stopping when the validation performance indicates potential overfitting.\nWeight decay focuses on adjusting the optimization objective by penalizing large weights, aiming to prevent overfitting from the beginning of training.\n\nDecision Criteria:\n\nEarly stopping makes decisions based on the validation performance, and the training stops when the validation performance degrades.\nWeight decay does not have a specific stopping criterion; it is a continuous regularization technique applied throughout training.\n\nImplementation:\n\nEarly stopping involves monitoring and interrupting the training loop.\nWeight decay involves adding a regularization term to the loss function during each iteration of the optimization algorithm.\n\n\nIn practice, these techniques can be used together to enhance the regularization effect and improve the generalization performance of a machine learning model."
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout-the-problem-it-addresses",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout-the-problem-it-addresses",
     "title": "Deep Learning Optimizations II",
-    "section": "31 4) Dropout: the problem it addresses",
-    "text": "31 4) Dropout: the problem it addresses\n\n\n\n\nSlide 31"
+    "section": "28 4) Dropout: the problem it addresses",
+    "text": "28 4) Dropout: the problem it addresses\n\n\n\n\nSlide 31"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout-why-does-it-work",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout-why-does-it-work",
     "title": "Deep Learning Optimizations II",
-    "section": "32 4) Dropout: why does it work?",
-    "text": "32 4) Dropout: why does it work?\n\n\n\n\nSlide 32"
+    "section": "29 4) Dropout: why does it work?",
+    "text": "29 4) Dropout: why does it work?\n\n\n\n\nSlide 32"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout-why-does-it-work-1",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout-why-does-it-work-1",
     "title": "Deep Learning Optimizations II",
-    "section": "33 4) Dropout: why does it work?",
-    "text": "33 4) Dropout: why does it work?\n\n\n\n\nSlide 33"
+    "section": "30 4) Dropout: why does it work?",
+    "text": "30 4) Dropout: why does it work?\n\n\n\n\nSlide 33"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout-how-is-it-implemented",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout-how-is-it-implemented",
     "title": "Deep Learning Optimizations II",
-    "section": "34 4) Dropout: how is it implemented?",
-    "text": "34 4) Dropout: how is it implemented?\n\n\n\n\nSlide 34"
+    "section": "31 4) Dropout: how is it implemented?",
+    "text": "31 4) Dropout: how is it implemented?\n\n\n\n\nSlide 34\n\n\n\n\nYou switch the activations to 0, and now say with Bernulli you have 50% neurons working\nDuring testing you are not learning so you use all the neurons\n\nNow with Dropout you cannot have neurons that are inactive, because you drop all other neurons so now they need to work\nDecreases overfitting"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout",
     "title": "Deep Learning Optimizations II",
-    "section": "35 Dropout",
-    "text": "35 Dropout\n\n\n\n\nSlide 35"
+    "section": "32 Dropout",
+    "text": "32 Dropout\n\n\n\n\nSlide 35"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout-1",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout-1",
     "title": "Deep Learning Optimizations II",
-    "section": "36 Dropout",
-    "text": "36 Dropout\n\n\n\n\nSlide 36"
+    "section": "33 Dropout",
+    "text": "33 Dropout\n\n\n\n\nSlide 36"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout-2",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout-2",
     "title": "Deep Learning Optimizations II",
-    "section": "37 Dropout",
-    "text": "37 Dropout\n\n\n\n\nSlide 37"
+    "section": "34 Dropout",
+    "text": "34 Dropout\n\n\n\n\nSlide 37"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout-3",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout-3",
     "title": "Deep Learning Optimizations II",
-    "section": "38 Dropout",
-    "text": "38 Dropout\n\n\n\n\nSlide 38"
+    "section": "35 Dropout",
+    "text": "35 Dropout\n\n\n\n\nSlide 38"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout-4",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout-4",
     "title": "Deep Learning Optimizations II",
-    "section": "39 Dropout",
-    "text": "39 Dropout\n\n\n\n\nSlide 39"
+    "section": "36 Dropout",
+    "text": "36 Dropout\n\n\n\n\nSlide 39"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout-5",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout-5",
     "title": "Deep Learning Optimizations II",
-    "section": "40 Dropout",
-    "text": "40 Dropout\n\n\n\n\nSlide 40"
+    "section": "37 Dropout",
+    "text": "37 Dropout\n\n\n\n\nSlide 40"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout-us.-bagging",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout-us.-bagging",
     "title": "Deep Learning Optimizations II",
-    "section": "41 Dropout US. Bagging",
-    "text": "41 Dropout US. Bagging\n\n\n\n\nSlide 41"
+    "section": "38 Dropout US. Bagging",
+    "text": "38 Dropout US. Bagging\n\n\n\n\nSlide 41\n\n\n\n\nBagging, also known as bootstrap aggregation, is the ensemble learning method that is commonly used to reduce variance within a noisy dataset. It is train in parallel\n\n\n\n\nBagging:\n\nHas its corresponding training set that is different from the whole training set\nUses all neurons\n\nDropout:\n\nIt does not employ all neurons\nThey are not trained they only get one SGD because you have many infinitely subnetworks, so if you apply dropout it is very unlikely that you trian the same subentwork many times"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout-beyond-bagging",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout-beyond-bagging",
     "title": "Deep Learning Optimizations II",
-    "section": "42 Dropout beyond Bagging",
-    "text": "42 Dropout beyond Bagging\n\n\n\n\nSlide 42"
+    "section": "39 Dropout beyond Bagging",
+    "text": "39 Dropout beyond Bagging\n\n\n\n\nSlide 42"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#data-augmentation",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#data-augmentation",
     "title": "Deep Learning Optimizations II",
-    "section": "43 5) Data augmentation",
-    "text": "43 5) Data augmentation\n\n\n\n\nSlide 43"
+    "section": "40 5) Data augmentation",
+    "text": "40 5) Data augmentation\n\n\n\n\nSlide 43"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#data-augmentation-1",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#data-augmentation-1",
     "title": "Deep Learning Optimizations II",
-    "section": "44 Data augmentation",
-    "text": "44 Data augmentation\n\n\n\n\nSlide 44"
+    "section": "41 Data augmentation",
+    "text": "41 Data augmentation\n\n\n\n\nSlide 44"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#one-note-about-backtranslation-though",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#one-note-about-backtranslation-though",
     "title": "Deep Learning Optimizations II",
-    "section": "45 One note about backtranslation though:",
-    "text": "45 One note about backtranslation though:\n\n\n\n\nSlide 45"
+    "section": "42 One note about backtranslation though:",
+    "text": "42 One note about backtranslation though:\n\n\n\n\nSlide 45"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#common-computer-vision-augmentations-visualised",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#common-computer-vision-augmentations-visualised",
     "title": "Deep Learning Optimizations II",
-    "section": "46 Common computer vision augmentations visualised",
-    "text": "46 Common computer vision augmentations visualised\n\n\n\n\nSlide 46"
+    "section": "43 Common computer vision augmentations visualised",
+    "text": "43 Common computer vision augmentations visualised\n\n\n\n\nSlide 46"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#data-augmentation-2",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#data-augmentation-2",
     "title": "Deep Learning Optimizations II",
-    "section": "47 Data augmentation",
-    "text": "47 Data augmentation\n\n\n\n\nSlide 47"
+    "section": "44 Data augmentation",
+    "text": "44 Data augmentation\n\n\n\n\nSlide 47"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#data-augmentation-3",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#data-augmentation-3",
     "title": "Deep Learning Optimizations II",
-    "section": "48 Data augmentation",
-    "text": "48 Data augmentation\n\n\n\n\nSlide 48"
+    "section": "45 Data augmentation",
+    "text": "45 Data augmentation\n\n\n\n\nSlide 48"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#other-regularizations",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#other-regularizations",
     "title": "Deep Learning Optimizations II",
-    "section": "49 Other regularizations",
-    "text": "49 Other regularizations\n\n\n\n\nSlide 49"
+    "section": "46 Other regularizations",
+    "text": "46 Other regularizations\n\n\n\n\nSlide 49"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#various-ways-to-regularise",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#various-ways-to-regularise",
     "title": "Deep Learning Optimizations II",
-    "section": "50 Various ways to regularise",
-    "text": "50 Various ways to regularise\n\n\n\n\nSlide 50"
+    "section": "47 Various ways to regularise",
+    "text": "47 Various ways to regularise\n\n\n\n\nSlide 50"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#title-3",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#title-3",
     "title": "Deep Learning Optimizations II",
-    "section": "51 Title",
-    "text": "51 Title\n\n\n\n\nSlide 51"
+    "section": "84 Title",
+    "text": "84 Title\n\n\n\n\nSlide 87"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#data-preprocessing",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#data-preprocessing",
     "title": "Deep Learning Optimizations II",
-    "section": "52 Data preprocessing",
-    "text": "52 Data preprocessing\n\n\n\n\nSlide 52"
+    "section": "49 Data preprocessing",
+    "text": "49 Data preprocessing\n\n\n\n\nSlide 52\n\n\n\n\nHere basically if we have in same scale then our weights will not be elongated like in the elipse, now they would be able to take the same step size in the correct direction"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#normalizing-input-data",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#normalizing-input-data",
     "title": "Deep Learning Optimizations II",
-    "section": "53 Normalizing Input Data",
-    "text": "53 Normalizing Input Data\n\n\n\n\nSlide 53"
+    "section": "50 Normalizing Input Data",
+    "text": "50 Normalizing Input Data\n\n\n\n\nSlide 53\n\n\n\n\nThis we apply in the input stage:\nNormalization is a linear operator so you can put this back into the NN after you have trained if you want to"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#normalizing-intermediate-layers",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#normalizing-intermediate-layers",
     "title": "Deep Learning Optimizations II",
-    "section": "54 Normalizing intermediate layers",
-    "text": "54 Normalizing intermediate layers\n\n\n\n\nSlide 54"
+    "section": "51 Normalizing intermediate layers",
+    "text": "51 Normalizing intermediate layers\n\n\n\n\nSlide 54\n\n\n\n\nHere we talked about the normalization within the NN"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#batch-normalization",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#batch-normalization",
     "title": "Deep Learning Optimizations II",
-    "section": "55 Batch normalization",
-    "text": "55 Batch normalization\n\n\n\n\nSlide 55"
+    "section": "52 Batch normalization",
+    "text": "52 Batch normalization\n\n\n\n\nSlide 55"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#batch-normalization-1",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#batch-normalization-1",
     "title": "Deep Learning Optimizations II",
-    "section": "56 Batch normalization",
-    "text": "56 Batch normalization\n\n\n\n\nSlide 56"
+    "section": "53 Batch normalization",
+    "text": "53 Batch normalization\n\n\n\n\nSlide 56\n\n\n\n\n\n\n\n\n\n\nHow does batch normalization works?\n\n\n\n\n\nBatch Normalization (BatchNorm) is a technique used in neural networks to improve the training stability and speed by normalizing the inputs of each layer. It was introduced by Sergey Ioffe and Christian Szegedy in their paper “Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift.”\nHere’s a high-level overview of how Batch Normalization works:\n\n53.1 Steps of Batch Normalization:\n\nNormalization:\n\nFor each mini-batch during training, normalize the input by subtracting the mean and dividing by the standard deviation. The normalization is applied independently to each feature (dimension) in the input.\n\n\\(\\hat{x}^{(k)} = \\frac{x^{(k)} - \\mu}{\\sqrt{\\sigma^2 + \\epsilon}}\\)\nWhere:\n\n\\(\\hat{x}^{(k)}\\) is the normalized output for the k-th feature.\n\\(x^{(k)}\\) is the input for the k-th feature.\n\\(\\mu\\) is the mean of the mini-batch.\n\\(\\sigma^2\\) is the variance of the mini-batch.\n\\(\\epsilon\\) is a small constant added for numerical stability.\n\nScale and Shift:\n\nIntroduce learnable parameters (scale and shift) for each feature to allow the model to adapt during training.\n\n\\(y^{(k)} = \\gamma \\hat{x}^{(k)} + \\beta\\)\nWhere:\n\n\\(y^{(k)}\\) is the final output for the k-th feature.\n\\(\\gamma\\) is a learnable scale parameter.\n\\(\\beta\\) is a learnable shift parameter.\n\nTraining and Inference:\n\nDuring training, the mean and variance are computed for each mini-batch and used for normalization.\nDuring inference, running averages of mean and variance from the training phase are typically used for normalization to ensure consistency.\n\n\n\n\n53.2 Benefits of Batch Normalization:\n\nImproved Training Stability:\n\nHelps mitigate the internal covariate shift problem, leading to more stable and faster convergence during training.\n\nReduced Sensitivity to Initialization:\n\nReduces the sensitivity of the model to the choice of initial weights.\n\nAllows Higher Learning Rates:\n\nEnables the use of higher learning rates, which can accelerate training.\n\nActs as Regularization:\n\nIntroduces a slight regularization effect, reducing the need for other regularization techniques.\n\nApplicability to Various Architectures:\n\nCan be applied to various types of neural network architectures, including fully connected layers, convolutional layers, and recurrent layers.\n\n\nBatch Normalization has become a standard component in many deep learning architectures due to its effectiveness in improving training stability and convergence speed."
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#batch-normalization-the-algorithm",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#batch-normalization-the-algorithm",
     "title": "Deep Learning Optimizations II",
-    "section": "57 Batch normalization — The algorithm",
-    "text": "57 Batch normalization — The algorithm\n\n\n\n\nSlide 57"
+    "section": "54 Batch normalization — The algorithm",
+    "text": "54 Batch normalization — The algorithm\n\n\n\n\nSlide 57"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#how-does-batch-normalization-help-optimization",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#how-does-batch-normalization-help-optimization",
     "title": "Deep Learning Optimizations II",
-    "section": "58 How does batch normalization help optimization?",
-    "text": "58 How does batch normalization help optimization?\n\n\n\n\nSlide 58"
+    "section": "55 How does batch normalization help optimization?",
+    "text": "55 How does batch normalization help optimization?\n\n\n\n\nSlide 58\n\n\n\n\nBecause some layers will push ouputs in one direction, then other layers will not use this. With batch norm we centered data so that all layers train around these centered inputs"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#how-does-batch-normalization-help-optimization-1",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#how-does-batch-normalization-help-optimization-1",
     "title": "Deep Learning Optimizations II",
-    "section": "59 How does batch normalization help optimization?",
-    "text": "59 How does batch normalization help optimization?\n\n\n\n\nSlide 59"
+    "section": "56 How does batch normalization help optimization?",
+    "text": "56 How does batch normalization help optimization?\n\n\n\n\nSlide 59"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#benefits-of-batch-normalization",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#benefits-of-batch-normalization",
     "title": "Deep Learning Optimizations II",
-    "section": "60 Benefits of Batch normalization",
-    "text": "60 Benefits of Batch normalization\n\n\n\n\nSlide 60"
+    "section": "57 Benefits of Batch normalization",
+    "text": "57 Benefits of Batch normalization\n\n\n\n\nSlide 60"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#ohui7",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#ohui7",
     "title": "Deep Learning Optimizations II",
-    "section": "61 ; Ohui7: ;",
-    "text": "61 ; Ohui7: ;\n\n\n\n\nSlide 61"
+    "section": "58 ; Ohui7: ;",
+    "text": "58 ; Ohui7: ;\n\n\n\n\nSlide 61"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#batch-normalization-at-test-time",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#batch-normalization-at-test-time",
     "title": "Deep Learning Optimizations II",
-    "section": "62 Batch normalization at test time",
-    "text": "62 Batch normalization at test time\n\n\n\n\nSlide 62"
+    "section": "59 Batch normalization at test time",
+    "text": "59 Batch normalization at test time\n\n\n\n\nSlide 62\n\n\n\n\nThe important thing is that when you go to test time, you dont have batches (you dont want anything that is depended on how you construct the batch) because that means if you take another batch is not the same which then is not reproducible.\nSo what we usually do is keep a moving average of the mean and variance during training, and then at test time you plug them\nBasically you extract the mean and the variance form the training and use it in test data"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#disadvantages-of-batch-normalization",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#disadvantages-of-batch-normalization",
     "title": "Deep Learning Optimizations II",
-    "section": "63 Disadvantages of batch normalization",
-    "text": "63 Disadvantages of batch normalization\n\n\n\n\nSlide 63"
+    "section": "60 Disadvantages of batch normalization",
+    "text": "60 Disadvantages of batch normalization\n\n\n\n\nSlide 63\n\n\n\n\n\nIt requires you to have large batch sizes because otherwhise the estimate of mean and variance is too noisy\nProblematic if you have discrepancy of the training and tst data\nNow the loss you get from training sample A, depends on what other training sample are present in the batch via this normalization of the mean and variance\nOne disadvantage is that is usually the reason for bugs, because if you keep estimating the mean and variances for the test data but now it is not reproducible because it will depend on the batch itself"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#disadvantages-of-batch-normalization-with-distributed-training",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#disadvantages-of-batch-normalization-with-distributed-training",
     "title": "Deep Learning Optimizations II",
-    "section": "64 Disadvantages of batch normalization with distributed training",
-    "text": "64 Disadvantages of batch normalization with distributed training\n\n\n\n\nSlide 64"
+    "section": "61 Disadvantages of batch normalization with distributed training",
+    "text": "61 Disadvantages of batch normalization with distributed training\n\n\n\n\nSlide 64\n\n\n\n\n\nDifferent values across GPU\nIf you batch size is small in a single GPU, but maybe you have 10 GPUs running and for 10 GPUs your batch size is bigger, it will be a stupid idea to estimate 10 very noisy estimate of the mean and variance but instead you should compute across the GPU"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#layer-normalization",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#layer-normalization",
     "title": "Deep Learning Optimizations II",
-    "section": "65 Layer normalization",
-    "text": "65 Layer normalization\n\n\n\n\nSlide 65"
+    "section": "62 Layer normalization",
+    "text": "62 Layer normalization\n\n\n\n\nSlide 65\n\n\n\n\nHere mean and variance are not computed across batch but across all channels and spatial dimensions.\nSo now the statistics are independent of the batch size because now they depend on the feature dimensions see example below:\n\n\n\n\n\n\nExample Layer normalization\n\n\n\n\n\nLayer Normalization is a normalization technique similar to Batch Normalization but operates on a per-sample basis rather than per-minibatch. It normalizes the inputs of a layer across the features (dimensions) for each individual sample. Here’s an example of how Layer Normalization is typically applied:\n\nimport torch\nimport torch.nn as nn\n\n# Assuming input has shape (batch_size, num_features)\ninput_data = torch.randn(32, 64)\n\n# Layer Normalization\nlayer_norm = nn.LayerNorm(normalized_shape=64)\noutput = layer_norm(input_data)\n\n# Display input and output shapes\nprint(\"Input shape:\", input_data.shape)\nprint(\"Output shape:\", output.shape)\n\nInput shape: torch.Size([32, 64])\nOutput shape: torch.Size([32, 64])\n\n\nIn this example:\n\ninput_data is a random tensor with shape (32, 64), representing a batch of 32 samples, each with 64 features.\nnn.LayerNorm is the Layer Normalization layer provided by PyTorch. The normalized_shape parameter specifies the number of features in the input tensor.\nThe output tensor is the result of applying Layer Normalization to the input data.\n\nLayer Normalization normalizes the values along the feature dimension independently for each sample. This means that each feature in a sample is normalized based on its mean and standard deviation across the entire sample, rather than across a batch as in Batch Normalization.\nLayer Normalization is useful when the batch size is small or when working with sequences of varying lengths, as it normalizes each sample independently. It has been widely used in natural language processing tasks and recurrent neural networks.\n\n\n\nBasically, we have that our mean and std will be computed across dimensions, so on the columns, not on each input. So then each sample (so each row) we make it with this mean and std to be distributed between 0 and 1.\nThis is great for RNN, or other stuff that requires small batch sizes.\nHere the same operations happens at training and test time.\nSo now instead of normalizing across data samples now we basically i.e. if the input is an image that each color should be roughly be ocurring the same amount of spread across all the image, because now we normalize it across channel dimensions"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#layer-normalization-ln",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#layer-normalization-ln",
     "title": "Deep Learning Optimizations II",
-    "section": "66 Layer normalization (LN)",
-    "text": "66 Layer normalization (LN)\n\n\n\n\nSlide 66"
+    "section": "63 Layer normalization (LN)",
+    "text": "63 Layer normalization (LN)\n\n\n\n\nSlide 66"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#instance-normalization-in",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#instance-normalization-in",
     "title": "Deep Learning Optimizations II",
-    "section": "67 Instance normalization (IN)",
-    "text": "67 Instance normalization (IN)\n\n\n\n\nSlide 67"
+    "section": "64 Instance normalization (IN)",
+    "text": "64 Instance normalization (IN)\n\n\n\n\nSlide 67\n\n\n\n\nInstance normalization now you do layer normalization but per channel and per training example.\nSo now the network should be agnostic to the constract of the original iamge and of the constrast whithin the channels\nNot used that often\nHere we compute the mean and var per sample but not per channel.\n\n\n\n\n\n\nHow Instance Normalization works\n\n\n\n\n\nInstance Normalization is a normalization technique similar to Batch Normalization and Layer Normalization but operates on a per-instance basis. It normalizes the activations of each individual sample independently. Here’s an explanation of how Instance Normalization works:\n\n64.1 Instance Normalization Steps:\n\nInput Tensor:\n\nAssume you have an input tensor \\(X\\) with shape \\((N, C, H, W)\\), where:\n\n\\(N\\) is the batch size.\n\\(C\\) is the number of channels.\n\\(H\\) is the height of the feature map.\n\\(W\\) is the width of the feature map.\n\n\nCalculate Mean and Variance:\n\nFor each instance (sample) in the batch, calculate the mean \\(\\mu\\) and variance \\(\\sigma^2\\) along each channel independently. This is done for each channel and each instance separately.\n\n\\[\\mu_c = \\frac{1}{H \\cdot W} \\sum_{i=1}^{H} \\sum_{j=1}^{W} X_{n,c,i,j}\\]\n\\[\\sigma^2_c = \\frac{1}{H \\cdot W} \\sum_{i=1}^{H} \\sum_{j=1}^{W} (X_{n,c,i,j} - \\mu_c)^2\\]\nNormalize:\n\nNormalize each channel of each instance independently using the calculated mean and standard deviation:\n\n\\[\\hat{X}_{n,c,i,j} = \\frac{X_{n,c,i,j} - \\mu_c}{\\sqrt{\\sigma^2_c + \\epsilon}}\\]\nWhere:\n\n\\(\\hat{X}_{n,c,i,j}\\) is the normalized value.\n\\(X_{n,c,i,j}\\) is the original input value.\n\\(\\mu_c\\) is the mean of the channel \\(c\\) for the instance \\(n\\).\n\\(\\sigma^2_c\\) is the variance of the channel \\(c\\) for the instance \\(n\\).\n\\(\\epsilon\\) is a small constant added for numerical stability.\n\nScale and Shift:\n\nIntroduce learnable scale (\\(\\gamma\\)) and shift (\\(\\beta\\)) parameters for each channel:\n\n\\[Y_{n,c,i,j} = \\gamma_c \\hat{X}_{n,c,i,j} + \\beta_c\\]\nWhere:\n\n\\(Y_{n,c,i,j}\\) is the final normalized output.\n\\(\\gamma_c\\) is a learnable scale parameter for channel \\(c\\).\n\\(\\beta_c\\) is a learnable shift parameter for channel \\(c\\).\n\n\n\n\n64.2 Benefits of Instance Normalization:\n\nNormalization Across Samples:\n\nInstance Normalization normalizes each instance independently, making it suitable for scenarios where batch sizes may vary or are small.\n\nReduces Covariate Shift:\n\nSimilar to Batch Normalization, Instance Normalization helps reduce internal covariate shift, leading to more stable training.\n\nApplicability to Style Transfer:\n\nInstance Normalization has found applications in style transfer tasks in computer vision.\n\n\nInstance Normalization is often used in computer vision tasks, especially in scenarios where the batch size may be small or when normalization across instances is desired."
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#group-normalization-gn",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#group-normalization-gn",
     "title": "Deep Learning Optimizations II",
-    "section": "68 Group normalization (GN)",
-    "text": "68 Group normalization (GN)\n\n\n\n\nSlide 68"
+    "section": "65 Group normalization (GN)",
+    "text": "65 Group normalization (GN)\n\n\n\n\nSlide 68\n\n\n\n\nWe are gonna group different certain channels toguether. So we are not normalizing per channel but per groups, for instance 5 channels.\n\nIf you have only one group then you recover layer nomalization because layer normal normalizes across all channels and not per channel\nIf you have more number of channel group toguether i.e 3 channels group together then you do Instance normalization. meaning you compute the mean per sample across each channel\n\n\nIn Grouped Convs, you are basically separating the hidden layers or the hidden channels in hidden groups which makes computations more easier\nThis is better than batch normalization for small batches &lt;32"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#a-comparison-of-different-normalizations",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#a-comparison-of-different-normalizations",
     "title": "Deep Learning Optimizations II",
-    "section": "69 A comparison of different normalizations",
-    "text": "69 A comparison of different normalizations\n\n\n\n\nSlide 69"
+    "section": "66 A comparison of different normalizations",
+    "text": "66 A comparison of different normalizations\n\n\n\n\nSlide 69"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#weight-normalization",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#weight-normalization",
     "title": "Deep Learning Optimizations II",
-    "section": "70 Weight normalization",
-    "text": "70 Weight normalization\n\n\n\n\nSlide 70"
+    "section": "67 Weight normalization",
+    "text": "67 Weight normalization\n\n\n\n\nSlide 70\n\n\n\n\nYou can thing the weights like a vector, you can have its magnitude and its direction. Now with this g can learn this parameter which tells you how long you want to go in that direction\n\n\n\n\nSlide 72\n\n\n\n\n\n\n\n\nSlide 73"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#references",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#references",
     "title": "Deep Learning Optimizations II",
-    "section": "71 References",
-    "text": "71 References\n\n\n\n\nSlide 71"
+    "section": "68 References",
+    "text": "68 References\n\n\n\n\nSlide 71"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#title-4",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#title-4",
     "title": "Deep Learning Optimizations II",
-    "section": "72 Title",
-    "text": "72 Title\n\n\n\n\nSlide 72"
+    "section": "84 Title",
+    "text": "84 Title\n\n\n\n\nSlide 87"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#title-5",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#title-5",
     "title": "Deep Learning Optimizations II",
-    "section": "73 Title",
-    "text": "73 Title\n\n\n\n\nSlide 73"
+    "section": "84 Title",
+    "text": "84 Title\n\n\n\n\nSlide 87"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#learning-rate",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#learning-rate",
     "title": "Deep Learning Optimizations II",
-    "section": "74 Learning rate",
-    "text": "74 Learning rate\n\n\n\n\nSlide 74"
+    "section": "68 Learning rate",
+    "text": "68 Learning rate\n\n\n\n\nSlide 74"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#convergence",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#convergence",
     "title": "Deep Learning Optimizations II",
-    "section": "75 Convergence",
-    "text": "75 Convergence\n\n\n\n\nSlide 75"
+    "section": "69 Convergence",
+    "text": "69 Convergence\n\n\n\n\nSlide 75\n\n\n\n\nTo achieve convergence you need tehse two equations:\n\nall learning over time should be infinitely to allow for exploration\nThe quadratic term should be less than infite to converge"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#learning-rate-schedules",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#learning-rate-schedules",
     "title": "Deep Learning Optimizations II",
-    "section": "76 Learning rate schedules",
-    "text": "76 Learning rate schedules\n\n\n\n\nSlide 76"
+    "section": "70 Learning rate schedules",
+    "text": "70 Learning rate schedules\n\n\n\n\nSlide 76\n\n\n\n\nYou also make a warmpup learning rate so you start by going up in a linear fashion"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#in-practice",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#in-practice",
     "title": "Deep Learning Optimizations II",
-    "section": "77 In practice",
-    "text": "77 In practice\n\n\n\n\nSlide 77"
+    "section": "71 In practice",
+    "text": "71 In practice\n\n\n\n\nSlide 77"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#quiz",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#quiz",
     "title": "Deep Learning Optimizations II",
-    "section": "78 Quiz",
-    "text": "78 Quiz\n\n\n\n\nSlide 78"
+    "section": "3 Quiz",
+    "text": "3 Quiz\n\n\n\n\nSlide 6\n\n\n\n\nWhy left would be preferred?\n\nsimpler model\ngeneralize better to unseen data\n\nWhy the right is better?\n\nWe are actually fitting all the data points\nThe right hand side is the ground truth\nYou dont care about extrapolating"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout-rate",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#dropout-rate",
     "title": "Deep Learning Optimizations II",
-    "section": "79 Dropout rate",
-    "text": "79 Dropout rate\n\n\n\n\nSlide 79"
+    "section": "73 Dropout rate",
+    "text": "73 Dropout rate\n\n\n\n\nSlide 79"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#batch-size",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#batch-size",
     "title": "Deep Learning Optimizations II",
-    "section": "80 Batch size",
-    "text": "80 Batch size\n\n\n\n\nSlide 80"
+    "section": "74 Batch size",
+    "text": "74 Batch size\n\n\n\n\nSlide 80"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#designing-cnns-to-become-even-better.-dont-try-this-at-home",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#designing-cnns-to-become-even-better.-dont-try-this-at-home",
     "title": "Deep Learning Optimizations II",
-    "section": "81 Designing CNNs to become even better. (Don’t try this at home)",
-    "text": "81 Designing CNNs to become even better. (Don’t try this at home)\n\n\n\n\nSlide 81"
+    "section": "75 Designing CNNs to become even better. (Don’t try this at home)",
+    "text": "75 Designing CNNs to become even better. (Don’t try this at home)\n\n\n\n\nSlide 81\n\n\n\n\nArchitecture, which model do you use?"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#number-of-layers-and-neurons",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#number-of-layers-and-neurons",
     "title": "Deep Learning Optimizations II",
-    "section": "82 Number of layers and neurons",
-    "text": "82 Number of layers and neurons\n\n\n\n\nSlide 82"
+    "section": "76 Number of layers and neurons",
+    "text": "76 Number of layers and neurons\n\n\n\n\nSlide 82\n\n\n\n\nProgress is not only in the architecture side, for example if you want to develop better algorithms, you want to have just a neural network which can identify between cats and dogs, there is multiple ways:\n\nCome up with a new architecture\nCome up with better gradients and better weights of the NNs"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#babysitting-deep-nets",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#babysitting-deep-nets",
     "title": "Deep Learning Optimizations II",
-    "section": "83 Babysitting Deep Nets",
-    "text": "83 Babysitting Deep Nets\n\n\n\n\nSlide 83"
+    "section": "77 Babysitting Deep Nets",
+    "text": "77 Babysitting Deep Nets\n\n\n\n\nSlide 83\n\n\n\n\nfor classifying 8 classes, the loss should be -log(1/8) and you check whether is true, if it gets worst performance that randomly guessing so something is wrong"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#logging-tools",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#logging-tools",
     "title": "Deep Learning Optimizations II",
-    "section": "84 Logging tools",
-    "text": "84 Logging tools\n\n\n\n\nSlide 84"
+    "section": "78 Logging tools",
+    "text": "78 Logging tools\n\n\n\n\nSlide 84"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#babysitting-deep-nets-1",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#babysitting-deep-nets-1",
     "title": "Deep Learning Optimizations II",
-    "section": "85 Babysitting Deep Nets",
-    "text": "85 Babysitting Deep Nets\n\n\n\n\nSlide 85"
+    "section": "79 Babysitting Deep Nets",
+    "text": "79 Babysitting Deep Nets\n\n\n\n\nSlide 85\n\n\n\n\nLink1"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#reading-material",
     "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#reading-material",
     "title": "Deep Learning Optimizations II",
-    "section": "86 Reading material",
-    "text": "86 Reading material\n\n\n\n\nSlide 86"
+    "section": "80 Reading material",
+    "text": "80 Reading material\n\n\n\n\nSlide 86"
   },
   {
     "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#title-6",
@@ -4350,8 +4350,8 @@
     "objectID": "blog/2023-11-20_modern-convnets/index.html#what-do-the-different-layers-in-a-deep-neural-network-learn",
     "href": "blog/2023-11-20_modern-convnets/index.html#what-do-the-different-layers-in-a-deep-neural-network-learn",
     "title": "Modern ConvNets",
-    "section": "6 What do the different layers in a deep neural network learn",
-    "text": "6 What do the different layers in a deep neural network learn\n\n\n\n\nSlide 6"
+    "section": "7 What do the different layers in a deep neural network learn",
+    "text": "7 What do the different layers in a deep neural network learn\n\n\n\n\nSlide 7"
   },
   {
     "objectID": "blog/2023-11-20_modern-convnets/index.html#what-do-the-different-layers-in-a-deep-neural-network-learn-1",
@@ -5045,5 +5045,96 @@
     "title": "Modern ConvNets",
     "section": "105 References",
     "text": "105 References\n\n\n\n\nSlide 105"
+  },
+  {
+    "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#start-with",
+    "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#start-with",
+    "title": "Deep Learning Optimizations II",
+    "section": "2 Start with",
+    "text": "2 Start with\n\n\n\n\nSlide 5"
+  },
+  {
+    "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#quiz-1",
+    "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#quiz-1",
+    "title": "Deep Learning Optimizations II",
+    "section": "58 Quiz",
+    "text": "58 Quiz\n\n\n\n\nSlide 61\n\n\n\n\nThere is no answer here"
+  },
+  {
+    "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#digression-gravitation",
+    "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#digression-gravitation",
+    "title": "Deep Learning Optimizations II",
+    "section": "4 Digression: Gravitation",
+    "text": "4 Digression: Gravitation\n\n\n\n\nSlide 7"
+  },
+  {
+    "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#why-the-right-is-better",
+    "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#why-the-right-is-better",
+    "title": "Deep Learning Optimizations II",
+    "section": "4 Why the right is better?",
+    "text": "4 Why the right is better?"
+  },
+  {
+    "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#l-regularization",
+    "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#l-regularization",
+    "title": "Deep Learning Optimizations II",
+    "section": "17 1) €l-regularization",
+    "text": "17 1) €l-regularization\n\n\n\n\nSlide 20"
+  },
+  {
+    "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#l2-regularization",
+    "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#l2-regularization",
+    "title": "Deep Learning Optimizations II",
+    "section": "17 1) L2-regularization",
+    "text": "17 1) L2-regularization\n\n\n\n\nSlide 20\n\n\n\n\nReferred to weight decay or Ritch regression in the linear case\nOmega is proportional to how large the weights are\nMinimizing this is also the same as if you assume a Gaussian prior on your weight, here you assume the weights are Gaussian distributed"
+  },
+  {
+    "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#l2-regularization-1",
+    "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#l2-regularization-1",
+    "title": "Deep Learning Optimizations II",
+    "section": "18 1) L2-regularization",
+    "text": "18 1) L2-regularization\n\n18.1 L2 & L1 Formula\n\n\n\n\n\n\n\n\n\n\nL2 example Python\n\n\n\n\n\nThe L2 loss, also known as the Euclidean loss or Mean Squared Error (MSE), is a common loss function used in regression problems. It measures the average squared difference between the predicted values and the actual values.\nThe formula for L2 loss is given by:\n\\(L2\\_loss = \\frac{1}{N} \\sum_{i=1}^{N} (y_i - \\hat{y}_i)^2\\)\nWhere:\n\n\\(N\\) is the number of data points.\n\\(y_i\\) is the true (ground truth) value for the i-th data point.\n\\(\\hat{y}_i\\) is the predicted value for the i-th data point.\n\nHere’s a simple example in Python using NumPy:\n\n\nCode\nimport numpy as np\n\n# Generate some example data\ntrue_values = np.array([2, 4, 5, 4, 5])\npredicted_values = np.array([1.5, 3.5, 4.8, 4.2, 5.2])\n\n# Calculate L2 loss\nl2_loss = np.mean((true_values - predicted_values)**2)\n\nprint(\"L2 Loss:\", l2_loss)\n\n\nL2 Loss: 0.12400000000000003\n\n\nThe L2 loss is calculated by taking the mean of the squared differences between the true and predicted values. The smaller the L2 loss, the better the model’s predictions align with the true values.\n\n\n\n\n\n\n\nSlide 21\n\n\n\n\nLamda tells you how important the regularization is, if:\n\nLambda high then puts all the weights towards zero\nLambda is zero, then it learns the typical loss and do not care about regularization\n\nLambda during trainnig is fixed, if you want to find the best one you need to run lots of experiments"
+  },
+  {
+    "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#l1-regularization",
+    "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#l1-regularization",
+    "title": "Deep Learning Optimizations II",
+    "section": "19 2) L1-regularization",
+    "text": "19 2) L1-regularization\n\n\n\n\nSlide 22\n\n\n\n\nIsotropics means is equal in all directions\nNow if you take the gradient of this, now if you take derivative of w, because you want to optimize then it end ups a 1/2. So you end up with a constant factor in the loss that keeps getting substracted. So what happens is that we end up substracting a constant to our weights.\nSo it substract a bit from the positive weights and adds a bit to the negative weights and pushed them towards zero"
+  },
+  {
+    "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#l1-regularization-1",
+    "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#l1-regularization-1",
+    "title": "Deep Learning Optimizations II",
+    "section": "20 2) L1-regularization",
+    "text": "20 2) L1-regularization\n\n\n\n\nSlide 23\n\n\n\n\nL1 leads to sparce weights, so that means more weights will be closer to zero\nIf alpha here increases then that means weights become zero"
+  },
+  {
+    "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#normalization",
+    "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#normalization",
+    "title": "Deep Learning Optimizations II",
+    "section": "48 Normalization",
+    "text": "48 Normalization\n\n\n\n\nSlide 51\n\n\n\n\nPutting data into a common shape without distorting tis shape"
+  },
+  {
+    "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#benefits-of-batch-normalization-1",
+    "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#benefits-of-batch-normalization-1",
+    "title": "Deep Learning Optimizations II",
+    "section": "57 Benefits of Batch normalization",
+    "text": "57 Benefits of Batch normalization\n\n\n\n\nSlide 60\n\n\n\n\n\nTrain faster because all layers train similarly quickly\nAllows you to have high learning rates because you wont have vanishing or exploding gradients because everything is 0-1 distributed\nMakes weights easier to initialize, because you know everything will be between 0-1\nMake activations function sensible because all the activation functions have something special about zero\nHave added noise that comes from estimating the batch statistics, any noise that may help is regularization. Here the noise reduces overfitting and that acts as a regularization so that your model does not overfit.\nPut it simple: Noise Disrupts Patterns"
+  },
+  {
+    "objectID": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#quiz-2",
+    "href": "blog/2023-11-20_deep-learning-optimizations-ii/index.html#quiz-2",
+    "title": "Deep Learning Optimizations II",
+    "section": "72 Quiz",
+    "text": "72 Quiz\n\n\n\n\nSlide 78\n\n\n\n\nWe do all of the above,\n\nIt is good that if the loss explode you check the individual values of the gradients,\nor was the batch size was so small that something could have affect it\nor was the learning rate too high that even a small batch it was not too but but the large learning rate was too big tha then it end up in a completely broken spot in the NNs"
+  },
+  {
+    "objectID": "blog/2023-11-20_modern-convnets/index.html#what-do-the-different-layers-in-a-deep-neural-netwok-learn",
+    "href": "blog/2023-11-20_modern-convnets/index.html#what-do-the-different-layers-in-a-deep-neural-netwok-learn",
+    "title": "Modern ConvNets",
+    "section": "6 What do the different layers in a deep neural netwok learn",
+    "text": "6 What do the different layers in a deep neural netwok learn\n\n\n\n\nSlide 6"
   }
 ]
