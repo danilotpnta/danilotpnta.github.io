@@ -3412,897 +3412,897 @@
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#title",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#title",
     "title": "Convolutional Neural Networks",
-    "section": "1 Title",
-    "text": "1 Title\n\n\n\n\nSlide 1"
+    "section": "107 Title",
+    "text": "107 Title\n\n\n\n\nSlide 129"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#optimizing-neural-networks",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#optimizing-neural-networks",
     "title": "Convolutional Neural Networks",
-    "section": "2 Optimizing neural networks",
-    "text": "2 Optimizing neural networks\n\n\n\n\nSlide 2"
+    "section": "1 Optimizing neural networks",
+    "text": "1 Optimizing neural networks\n\n\n\n\nSlide 2"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#multi-layer-perceptrons-recap",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#multi-layer-perceptrons-recap",
     "title": "Convolutional Neural Networks",
-    "section": "3 Multi-layer perceptrons (Recap)",
-    "text": "3 Multi-layer perceptrons (Recap)\n\n\n\n\nSlide 3"
+    "section": "2 Multi-layer perceptrons (Recap)",
+    "text": "2 Multi-layer perceptrons (Recap)\n\n\n\n\nSlide 3"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#multi-layer-perceptrons-recap-1",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#multi-layer-perceptrons-recap-1",
     "title": "Convolutional Neural Networks",
-    "section": "4 Multi-layer perceptrons (Recap)",
-    "text": "4 Multi-layer perceptrons (Recap)\n\n\n\n\nSlide 4"
+    "section": "3 Multi-layer perceptrons (Recap)",
+    "text": "3 Multi-layer perceptrons (Recap)\n\n\n\n\nSlide 4\n\n\n\n\nPrior knowledge, is something that we know about the data, we want to bring this into the design of the NNs"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#consider-an-image",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#consider-an-image",
     "title": "Convolutional Neural Networks",
-    "section": "5 Consider an image",
-    "text": "5 Consider an image\n\n\n\n\nSlide 5"
+    "section": "4 Consider an image",
+    "text": "4 Consider an image\n\n\n\n\nSlide 5"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#hubel-and-wiesel-nobel-prize-for-physiology-or-medicine-in-1981",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#hubel-and-wiesel-nobel-prize-for-physiology-or-medicine-in-1981",
     "title": "Convolutional Neural Networks",
-    "section": "6 Hubel and Wiesel: Nobel Prize for Physiology or Medicine in 1981",
-    "text": "6 Hubel and Wiesel: Nobel Prize for Physiology or Medicine in 1981\n\n\n\n\nSlide 6"
+    "section": "5 Hubel and Wiesel: Nobel Prize for Physiology or Medicine in 1981",
+    "text": "5 Hubel and Wiesel: Nobel Prize for Physiology or Medicine in 1981\n\n\n\n\nSlide 6\n\n\n\n\nHere when we see edges, there is some electricity"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#filters-yes.-how-about-learnable-filters",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#filters-yes.-how-about-learnable-filters",
     "title": "Convolutional Neural Networks",
-    "section": "7 Filters, yes. How about learnable filters",
-    "text": "7 Filters, yes. How about learnable filters\n\n\n\n\nSlide 7"
+    "section": "6 Filters, yes. How about learnable filters",
+    "text": "6 Filters, yes. How about learnable filters\n\n\n\n\nSlide 7\n\n\n\n\nCanny and GAbor filters they all try to find edges, then it can be used for recognition purposes."
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#filters-yes.-how-about-learnable-filters-1",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#filters-yes.-how-about-learnable-filters-1",
     "title": "Convolutional Neural Networks",
-    "section": "8 Filters, yes. How about learnable filters",
-    "text": "8 Filters, yes. How about learnable filters\n\n\n\n\nSlide 8"
+    "section": "7 Filters, yes. How about learnable filters",
+    "text": "7 Filters, yes. How about learnable filters\n\n\n\n\nSlide 8"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#the-convolution-operation",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#the-convolution-operation",
     "title": "Convolutional Neural Networks",
-    "section": "9 The convolution operation",
-    "text": "9 The convolution operation\n\n\n\n\nSlide 9"
+    "section": "8 The convolution operation",
+    "text": "8 The convolution operation\n\n\n\n\nSlide 9"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#the-convolution-operation-1",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#the-convolution-operation-1",
     "title": "Convolutional Neural Networks",
-    "section": "10 The convolution operation",
-    "text": "10 The convolution operation\n\n\n\n\nSlide 10"
+    "section": "9 The convolution operation",
+    "text": "9 The convolution operation\n\n\n\n\nSlide 10\n\n\n\n\n\n\n\n\n\n\n\n\nHere f*g is the convolution in red line. In the 1D case\nHere g is the kernel"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-for-2d-images",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-for-2d-images",
     "title": "Convolutional Neural Networks",
-    "section": "11 Convolution for 2D images",
-    "text": "11 Convolution for 2D images\n\n\n\n\nSlide 11"
+    "section": "10 Convolution for 2D images",
+    "text": "10 Convolution for 2D images\n\n\n\n\nSlide 11\n\n\n\n\nNow our kernel is 2D"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-for-2d-images-1",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-for-2d-images-1",
     "title": "Convolutional Neural Networks",
-    "section": "12 Convolution for 2D images",
-    "text": "12 Convolution for 2D images\n\n\n\n\nSlide 12"
+    "section": "11 Convolution for 2D images",
+    "text": "11 Convolution for 2D images\n\n\n\n\nSlide 12"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#examples",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#examples",
     "title": "Convolutional Neural Networks",
-    "section": "13 Examples",
-    "text": "13 Examples\n\n\n\n\nSlide 13"
+    "section": "12 Examples",
+    "text": "12 Examples\n\n\n\n\nSlide 13"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#examples-1",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#examples-1",
     "title": "Convolutional Neural Networks",
-    "section": "14 Examples",
-    "text": "14 Examples\n\n\n\n\nSlide 14"
+    "section": "13 Examples",
+    "text": "13 Examples\n\n\n\n\nSlide 14\n\n\n\n\nSobel fires for vertical edges"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#quiz",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#quiz",
     "title": "Convolutional Neural Networks",
-    "section": "15 Quiz",
-    "text": "15 Quiz\n\n\n\n\nSlide 15"
+    "section": "14 Quiz",
+    "text": "14 Quiz\n\n\n\n\nSlide 15\n\n\n\n\n\nIt will emphasize edges\n\nIf you take a CNN and you have weights uniform then you would not have this edge detectors and the NN would not train well\nThis is like adding prior knowledge because we know edges are supper important to detect whether is a cat or a dog"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#the-motivation-of-convolutions",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#the-motivation-of-convolutions",
     "title": "Convolutional Neural Networks",
-    "section": "16 The motivation of convolutions",
-    "text": "16 The motivation of convolutions\n\n\n\n\nSlide 16"
+    "section": "15 The motivation of convolutions",
+    "text": "15 The motivation of convolutions\n\n\n\n\nSlide 16\n\n\n\n\nLocal connectivity, for ie if you want to detect edges, you dont need to look at the whole image and because you share the parameters, the weights are tied and you are more efficient."
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#the-motivation-of-convolutions-1",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#the-motivation-of-convolutions-1",
     "title": "Convolutional Neural Networks",
-    "section": "17 The motivation of convolutions",
-    "text": "17 The motivation of convolutions\n\n\n\n\nSlide 17"
+    "section": "16 The motivation of convolutions",
+    "text": "16 The motivation of convolutions\n\n\n\n\nSlide 17\n\n\n\n\nThis saves quite a bit of neurons connected, so less parameters, this is the same as analysing an img of 16x16, but now instead we use filters so that we can detect edges and only with these edges we have now building blocks which are less than computing the whole image.\nHere the kernel would be of width 3"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#the-motivation-of-convolutions-2",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#the-motivation-of-convolutions-2",
     "title": "Convolutional Neural Networks",
-    "section": "18 The motivation of convolutions",
-    "text": "18 The motivation of convolutions\n\n\n\n\nSlide 18"
+    "section": "17 The motivation of convolutions",
+    "text": "17 The motivation of convolutions\n\n\n\n\nSlide 18\n\n\n\n\nSo here in the left the NN has a receptive field of size 3, because this is how much a neuron can look up, so it is the kernel size. But per layer the receptive field gradually grows which allow you to have a hierarchical structure\n\nFor instance the neurons at layer 50 now they can see at the whole image and can put image into context. This is how you go from local to global"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#the-motivation-of-convolutions-3",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#the-motivation-of-convolutions-3",
     "title": "Convolutional Neural Networks",
-    "section": "19 The motivation of convolutions",
-    "text": "19 The motivation of convolutions\n\n\n\n\nSlide 19"
+    "section": "18 The motivation of convolutions",
+    "text": "18 The motivation of convolutions\n\n\n\n\nSlide 19"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#the-motivation-of-convolutions-4",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#the-motivation-of-convolutions-4",
     "title": "Convolutional Neural Networks",
-    "section": "20 The motivation of convolutions",
-    "text": "20 The motivation of convolutions\n\n\n\n\nSlide 20"
+    "section": "19 The motivation of convolutions",
+    "text": "19 The motivation of convolutions\n\n\n\n\nSlide 20\n\n\n\n\nIf the input shift then the outputs does the same, this is not the case for a fully connected NN"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#a-simple-convolution-saves-space",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#a-simple-convolution-saves-space",
     "title": "Convolutional Neural Networks",
-    "section": "21 A simple convolution: saves space!",
-    "text": "21 A simple convolution: saves space!\n\n\n\n\nSlide 21"
+    "section": "20 A simple convolution: saves space!",
+    "text": "20 A simple convolution: saves space!\n\n\n\n\nSlide 21\n\n\n\n\nThe bigger the filter the more zeros we will have"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#the-pooling-operations-not",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#the-pooling-operations-not",
     "title": "Convolutional Neural Networks",
-    "section": "22 The pooling operations (not **)",
-    "text": "22 The pooling operations (not **)\n\n\n\n\nSlide 22"
+    "section": "21 The pooling operations (not **)",
+    "text": "21 The pooling operations (not **)\n\n\n\n\nSlide 22"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#lenet-5",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#lenet-5",
     "title": "Convolutional Neural Networks",
     "section": "23 LeNet-5",
-    "text": "23 LeNet-5\n\n\n\n\nSlide 23"
+    "text": "23 LeNet-5\n\n\n\n\nSlide 23\n\n\n\n\nHere you do not have global pooling so an img of 29x29 would not have worked\nThe hidden dimensionalities are called channels, and the pooling is applied to all channels. So pooling operations do not change dimensionality but change the spatial extent.\nSo each layer would have channels those are all the squares in a layer, pooling it is apploed to every channel and per channel it reduces its square matrix to a lower width and lower height\n\n23.1 More\nLeNet-5, a convolutional neural network architecture proposed by Yann LeCun and his collaborators in 1998, does not use global average pooling in its original design. LeNet-5 primarily relies on subsampling layers (pooling layers) and fully connected layers.\nThe typical structure of LeNet-5 consists of alternating convolutional layers with subsampling (pooling) layers, followed by fully connected layers. The pooling layers in LeNet-5 perform down-sampling through operations like max pooling. Global average pooling was not a commonly used technique at the time LeNet-5 was introduced.\nGlobal average pooling became more prominent in later CNN architectures, such as Google’s Inception models and the popular ResNet architectures\n\n\n23.2 Global Pooling\nGlobal pooling (or global average pooling) is a technique used in convolutional neural networks (CNNs) to reduce the spatial dimensions of a feature map to a single value or a vector. It involves taking the average (or maximum) value across all spatial locations of each feature map, resulting in a global representation.\nHere’s an example of global average pooling with Python using NumPy:\nimport numpy as np\n\n# Assume you have a 3x3 feature map with 2 channels\nfeature_map = np.array([\n    [[1, 2, 3], [4, 5, 6], [7, 8, 9]],\n    [[10, 11, 12], [13, 14, 15], [16, 17, 18]]\n])\n\n# Apply global average pooling\nglobal_avg_pooled = np.mean(feature_map, axis=(0, 1))\n\n# Print the original feature map and the result after global average pooling\nprint(\"Original Feature Map:\")\nprint(feature_map)\nprint(\"\\nGlobal Average Pooled Result:\")\nprint(global_avg_pooled)\nIn this example, feature_map is a 3x3 feature map with 2 channels. The np.mean function is used to compute the average along the spatial dimensions (axis 0 and 1). The resulting global_avg_pooled is a vector representing the global average-pooled values for each channel.\nThe output should look like this:\nOriginal Feature Map:\n[[[ 1  2  3]\n  [ 4  5  6]\n  [ 7  8  9]]\n\n [[10 11 12]\n  [13 14 15]\n  [16 17 18]]]\n\nGlobal Average Pooled Result:\n[8.5 9.5 10.5]\nIn this case, the global average pooling operation has computed the average value for each channel across all spatial locations, resulting in a global representation for each channel. This global representation is often used as a compact and informative input to subsequent layers or for making predictions in the network."
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#alexnet-similar-principles-but-some-extra-engineering.",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#alexnet-similar-principles-but-some-extra-engineering.",
     "title": "Convolutional Neural Networks",
     "section": "24 AlexNet: similar principles, but some extra engineering.",
-    "text": "24 AlexNet: similar principles, but some extra engineering.\n\n\n\n\nSlide 24"
+    "text": "24 AlexNet: similar principles, but some extra engineering.\n\n\n\n\nSlide 24\n\n\n\n\n\n\n\n\n\nSlide 25\n\n\n\n\nWeight sharing in convolutional neural networks (CNNs) refers to the practice of using the same set of learnable parameters (weights and biases) for multiple units or neurons in a layer. In other words, the weights are shared across different spatial locations in the input.\nThe key idea behind weight sharing is to enforce translation invariance in the features learned by the convolutional layers. In an image, certain features (e.g., edges, textures) are meaningful regardless of their specific location. By using shared weights, the network can learn to detect these features at different spatial positions, leading to a more robust and generalizable representation.\nHere’s a brief explanation of weight sharing in CNNs:\n\nConvolutional Operation:\n\nIn a convolutional layer, a set of filters (also known as kernels) is applied to the input image or feature map.\nEach filter is characterized by a set of learnable weights and biases.\n\nSpatial Weight Sharing:\n\nInstead of having unique weights for each spatial location in the input, weight sharing involves using the same set of weights across different spatial locations.\nFor example, if a filter detects a certain feature (e.g., an edge) at one location, the same filter with the same weights can be used to detect the same feature at a different location.\n\nBenefits:\n\nReduces the number of learnable parameters in the network, making it more computationally efficient.\nEncourages the learning of spatially invariant features, enhancing the network’s ability to recognize patterns across different locations.\n\nTranslation Invariance:\n\nWeight sharing helps the network achieve translation invariance, meaning that it can recognize features regardless of their position in the input.\n\n\n\n24.1 CNN and Weight Sharing\nCNN is primarily used for image classification and segmentation, and it works by finding similar patterns throughout the input. These patterns can be found by sliding a filter with shared weights across the input. The shared weights concept allows the network to learn the same pattern, regardless of its position in the input"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#title-1",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#title-1",
     "title": "Convolutional Neural Networks",
-    "section": "25 Title",
-    "text": "25 Title\n\n\n\n\nSlide 25"
+    "section": "108 Title",
+    "text": "108 Title\n\n\n\n\nSlide 129"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#what-shape-should-the",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#what-shape-should-the",
     "title": "Convolutional Neural Networks",
-    "section": "26 What shape should the",
-    "text": "26 What shape should the\n\n\n\n\nSlide 26"
+    "section": "25 What shape should the",
+    "text": "25 What shape should the\n\n\n\n\nSlide 28"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#what-shape-should-the-1",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#what-shape-should-the-1",
     "title": "Convolutional Neural Networks",
-    "section": "27 What shape should the",
-    "text": "27 What shape should the\n\n\n\n\nSlide 27"
+    "section": "25 What shape should the",
+    "text": "25 What shape should the\n\n\n\n\nSlide 27"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#what-shape-should-the-2",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#what-shape-should-the-2",
     "title": "Convolutional Neural Networks",
-    "section": "28 What shape should the",
-    "text": "28 What shape should the\n\n\n\n\nSlide 28"
+    "section": "26 What shape should the",
+    "text": "26 What shape should the\n\n\n\n\nSlide 28"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activations",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activations",
     "title": "Convolutional Neural Networks",
-    "section": "29 31) Activations",
-    "text": "29 31) Activations\n\n\n\n\nSlide 29"
+    "section": "37 31) Activations",
+    "text": "37 31) Activations\n\n\n\n\nSlide 49"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-1",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-1",
     "title": "Convolutional Neural Networks",
-    "section": "30 31) Activations",
-    "text": "30 31) Activations\n\n\n\n\nSlide 30"
+    "section": "39 31) Activations",
+    "text": "39 31) Activations\n\n\n\n\nSlide 41"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-2",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-2",
     "title": "Convolutional Neural Networks",
-    "section": "31 31) Activations",
-    "text": "31 31) Activations\n\n\n\n\nSlide 31"
+    "section": "47 31) Activations",
+    "text": "47 31) Activations\n\n\n\n\nSlide 49"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-3",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-3",
     "title": "Convolutional Neural Networks",
-    "section": "32 31) Activations",
-    "text": "32 31) Activations\n\n\n\n\nSlide 32"
+    "section": "41 31) Activations",
+    "text": "41 31) Activations\n\n\n\n\nSlide 43"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-4",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-4",
     "title": "Convolutional Neural Networks",
-    "section": "33 31) Activations",
-    "text": "33 31) Activations\n\n\n\n\nSlide 33"
+    "section": "42 31) Activations",
+    "text": "42 31) Activations\n\n\n\n\nSlide 44"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-5",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-5",
     "title": "Convolutional Neural Networks",
-    "section": "34 31) Activations",
-    "text": "34 31) Activations\n\n\n\n\nSlide 34"
+    "section": "43 31) Activations",
+    "text": "43 31) Activations\n\n\n\n\nSlide 45"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-6",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-6",
     "title": "Convolutional Neural Networks",
-    "section": "35 31) Activations",
-    "text": "35 31) Activations\n\n\n\n\nSlide 35"
+    "section": "47 31) Activations",
+    "text": "47 31) Activations\n\n\n\n\nSlide 49"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-7",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-7",
     "title": "Convolutional Neural Networks",
-    "section": "36 31) Activations",
-    "text": "36 31) Activations\n\n\n\n\nSlide 36"
+    "section": "45 31) Activations",
+    "text": "45 31) Activations\n\n\n\n\nSlide 47"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-8",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-8",
     "title": "Convolutional Neural Networks",
-    "section": "37 31) Activations",
-    "text": "37 31) Activations\n\n\n\n\nSlide 37"
+    "section": "46 31) Activations",
+    "text": "46 31) Activations\n\n\n\n\nSlide 48"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-9",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-9",
     "title": "Convolutional Neural Networks",
-    "section": "38 231) Activations",
-    "text": "38 231) Activations\n\n\n\n\nSlide 38"
+    "section": "47 31) Activations",
+    "text": "47 31) Activations\n\n\n\n\nSlide 49"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-10",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-10",
     "title": "Convolutional Neural Networks",
-    "section": "39 31) Activations",
-    "text": "39 31) Activations\n\n\n\n\nSlide 39"
+    "section": "48 31) Activations",
+    "text": "48 31) Activations\n\n\n\n\nSlide 50"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-11",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-11",
     "title": "Convolutional Neural Networks",
-    "section": "40 31) Activations",
-    "text": "40 31) Activations\n\n\n\n\nSlide 40"
+    "section": "48 31) Activations",
+    "text": "48 31) Activations\n\n\n\n\nSlide 50"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-12",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-12",
     "title": "Convolutional Neural Networks",
-    "section": "41 31) Activations",
-    "text": "41 31) Activations\n\n\n\n\nSlide 41"
+    "section": "49 31) Activations",
+    "text": "49 31) Activations\n\n\n\n\nSlide 51"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-13",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-13",
     "title": "Convolutional Neural Networks",
-    "section": "42 31) Activations",
-    "text": "42 31) Activations\n\n\n\n\nSlide 42"
+    "section": "50 31) Activations",
+    "text": "50 31) Activations\n\n\n\n\nSlide 52"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-14",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-14",
     "title": "Convolutional Neural Networks",
-    "section": "43 31) Activations",
-    "text": "43 31) Activations\n\n\n\n\nSlide 43"
+    "section": "49 31) Activations",
+    "text": "49 31) Activations\n\n\n\n\nSlide 51"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-15",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-15",
     "title": "Convolutional Neural Networks",
-    "section": "44 31) Activations",
-    "text": "44 31) Activations\n\n\n\n\nSlide 44"
+    "section": "50 31) Activations",
+    "text": "50 31) Activations\n\n\n\n\nSlide 52"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-16",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-16",
     "title": "Convolutional Neural Networks",
-    "section": "45 31) Activations",
-    "text": "45 31) Activations\n\n\n\n\nSlide 45"
+    "section": "46 31) Activations",
+    "text": "46 31) Activations\n\n\n\n\nSlide 48"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-17",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-17",
     "title": "Convolutional Neural Networks",
-    "section": "46 31) Activations",
-    "text": "46 31) Activations\n\n\n\n\nSlide 46"
+    "section": "47 31) Activations",
+    "text": "47 31) Activations\n\n\n\n\nSlide 49"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-18",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-18",
     "title": "Convolutional Neural Networks",
-    "section": "47 31) Activations",
-    "text": "47 31) Activations\n\n\n\n\nSlide 47"
+    "section": "48 31) Activations",
+    "text": "48 31) Activations\n\n\n\n\nSlide 50"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-19",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-19",
     "title": "Convolutional Neural Networks",
-    "section": "48 31) Activations",
-    "text": "48 31) Activations\n\n\n\n\nSlide 48"
+    "section": "49 31) Activations",
+    "text": "49 31) Activations\n\n\n\n\nSlide 51"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-20",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-20",
     "title": "Convolutional Neural Networks",
-    "section": "49 31) Activations",
-    "text": "49 31) Activations\n\n\n\n\nSlide 49"
+    "section": "50 31) Activations",
+    "text": "50 31) Activations\n\n\n\n\nSlide 52"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-21",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-21",
     "title": "Convolutional Neural Networks",
-    "section": "50 31) Activations",
-    "text": "50 31) Activations\n\n\n\n\nSlide 50"
+    "section": "49 31) Activations",
+    "text": "49 31) Activations\n\n\n\n\nSlide 51"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-22",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-22",
     "title": "Convolutional Neural Networks",
-    "section": "51 31) Activations",
-    "text": "51 31) Activations\n\n\n\n\nSlide 51"
+    "section": "50 31) Activations",
+    "text": "50 31) Activations\n\n\n\n\nSlide 52"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-23",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activations-23",
     "title": "Convolutional Neural Networks",
-    "section": "52 31) Activations",
-    "text": "52 31) Activations\n\n\n\n\nSlide 52"
+    "section": "50 31) Activations",
+    "text": "50 31) Activations\n\n\n\n\nSlide 52"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations",
     "title": "Convolutional Neural Networks",
-    "section": "53 3D Activations",
-    "text": "53 3D Activations\n\n\n\n\nSlide 53"
+    "section": "26 3D Activations",
+    "text": "26 3D Activations\n\n\n\n\nSlide 30\n\n\n\n\nInstead of calling it RGB channels, we just call it channels"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-1",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-1",
     "title": "Convolutional Neural Networks",
-    "section": "54 3D Activations",
-    "text": "54 3D Activations\n\n\n\n\nSlide 54"
+    "section": "27 3D Activations",
+    "text": "27 3D Activations\n\n\n\n\nSlide 32\n\n\n\n\nNow the activations contain width and height and also depth.\nThe depth is govern by the hidden dimensionality of the NN"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-2",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-2",
     "title": "Convolutional Neural Networks",
-    "section": "55 3D Activations",
-    "text": "55 3D Activations\n\n\n\n\nSlide 55"
+    "section": "28 3D Activations",
+    "text": "28 3D Activations\n\n\n\n\nSlide 34"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-3",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-3",
     "title": "Convolutional Neural Networks",
-    "section": "56 3D Activations",
-    "text": "56 3D Activations\n\n\n\n\nSlide 56"
+    "section": "29 3D Activations",
+    "text": "29 3D Activations\n\n\n\n\nSlide 35\n\n\n\n\nHere this is a convolution kernel, with kernel size 5x5\nNow our neuron has a kernel size of 5x5 weights and also x3 because it has 3 channels\nSo each Neuron as a 3D filter"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#putting-it-together",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#putting-it-together",
     "title": "Convolutional Neural Networks",
-    "section": "57 Putting it together",
-    "text": "57 Putting it together\n\n\n\n\nSlide 57"
+    "section": "41 Putting it together",
+    "text": "41 Putting it together\n\n\n\n\nSlide 57"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#putting-it-together-1",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#putting-it-together-1",
     "title": "Convolutional Neural Networks",
-    "section": "58 Putting it together",
-    "text": "58 Putting it together\n\n\n\n\nSlide 58"
+    "section": "42 Putting it together",
+    "text": "42 Putting it together\n\n\n\n\nSlide 58"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#putting-it-together-2",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#putting-it-together-2",
     "title": "Convolutional Neural Networks",
-    "section": "59 Putting it together",
-    "text": "59 Putting it together\n\n\n\n\nSlide 59"
+    "section": "43 Putting it together",
+    "text": "43 Putting it together\n\n\n\n\nSlide 59"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#putting-it-together-3",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#putting-it-together-3",
     "title": "Convolutional Neural Networks",
-    "section": "60 Putting it together",
-    "text": "60 Putting it together\n\n\n\n\nSlide 60"
+    "section": "44 Putting it together",
+    "text": "44 Putting it together\n\n\n\n\nSlide 60"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#putting-it-together-4",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#putting-it-together-4",
     "title": "Convolutional Neural Networks",
-    "section": "61 Putting it together",
-    "text": "61 Putting it together\n\n\n\n\nSlide 61"
+    "section": "45 Putting it together",
+    "text": "45 Putting it together\n\n\n\n\nSlide 61"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#putting-it-together-5",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#putting-it-together-5",
     "title": "Convolutional Neural Networks",
-    "section": "62 Putting it together",
-    "text": "62 Putting it together\n\n\n\n\nSlide 62"
+    "section": "46 Putting it together",
+    "text": "46 Putting it together\n\n\n\n\nSlide 62"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#putting-it-together-6",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#putting-it-together-6",
     "title": "Convolutional Neural Networks",
-    "section": "63 Putting it together",
-    "text": "63 Putting it together\n\n\n\n\nSlide 63"
+    "section": "47 Putting it together",
+    "text": "47 Putting it together\n\n\n\n\nSlide 63"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#putting-it-together-7",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#putting-it-together-7",
     "title": "Convolutional Neural Networks",
-    "section": "64 Putting it together",
-    "text": "64 Putting it together\n\n\n\n\nSlide 64"
+    "section": "48 Putting it together",
+    "text": "48 Putting it together\n\n\n\n\nSlide 64\n\n\n\n\nHere all these coloured layers in the cube are filters which are neurons. All these neurons act only in one hidden layer8"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-stride",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-stride",
     "title": "Convolutional Neural Networks",
-    "section": "65 Convolution: Stride",
-    "text": "65 Convolution: Stride\n\n\n\n\nSlide 65"
+    "section": "49 Convolution: Stride",
+    "text": "49 Convolution: Stride\n\n\n\n\nSlide 65"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-stride-1",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-stride-1",
     "title": "Convolutional Neural Networks",
-    "section": "66 Convolution: Stride",
-    "text": "66 Convolution: Stride\n\n\n\n\nSlide 66"
+    "section": "50 Convolution: Stride",
+    "text": "50 Convolution: Stride\n\n\n\n\nSlide 66"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-stride-2",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-stride-2",
     "title": "Convolutional Neural Networks",
-    "section": "67 Convolution: Stride",
-    "text": "67 Convolution: Stride\n\n\n\n\nSlide 67"
+    "section": "51 Convolution: Stride",
+    "text": "51 Convolution: Stride\n\n\n\n\nSlide 67"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-stride-3",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-stride-3",
     "title": "Convolutional Neural Networks",
-    "section": "68 Convolution: Stride",
-    "text": "68 Convolution: Stride\n\n\n\n\nSlide 68"
+    "section": "52 Convolution: Stride",
+    "text": "52 Convolution: Stride\n\n\n\n\nSlide 68"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-stride-4",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-stride-4",
     "title": "Convolutional Neural Networks",
-    "section": "69 Convolution: Stride",
-    "text": "69 Convolution: Stride\n\n\n\n\nSlide 69"
+    "section": "53 Convolution: Stride",
+    "text": "53 Convolution: Stride\n\n\n\n\nSlide 69"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-stride-5",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-stride-5",
     "title": "Convolutional Neural Networks",
-    "section": "70 Convolution: Stride",
-    "text": "70 Convolution: Stride\n\n\n\n\nSlide 70"
+    "section": "54 Convolution: Stride",
+    "text": "54 Convolution: Stride\n\n\n\n\nSlide 70"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-stride-6",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-stride-6",
     "title": "Convolutional Neural Networks",
-    "section": "71 (Convolution: Stride",
-    "text": "71 (Convolution: Stride\n\n\n\n\nSlide 71"
+    "section": "55 Convolution: Stride",
+    "text": "55 Convolution: Stride\n\n\n\n\nSlide 71\n\n\n\n\nIn each time sum across channels because if you want to detect something you want to use all the colors, all the incoming channels\nSo each convolution sums all channels like in RGB, because you dont want a filter that only looks at blue, one that only looks at red .."
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-stride-7",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-stride-7",
     "title": "Convolutional Neural Networks",
-    "section": "72 (Convolution: Stride",
-    "text": "72 (Convolution: Stride\n\n\n\n\nSlide 72"
+    "section": "56 Convolution: Stride",
+    "text": "56 Convolution: Stride\n\n\n\n\nSlide 72\n\n\n\n\nHere in the next slide we see that stride is the number of squares that are moved, so the kernel filter will i.e stride=3 will slide every two squares"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-stride-8",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-stride-8",
     "title": "Convolutional Neural Networks",
-    "section": "73 (Convolution: Stride",
-    "text": "73 (Convolution: Stride\n\n\n\n\nSlide 73"
+    "section": "57 Convolution: Stride",
+    "text": "57 Convolution: Stride\n\n\n\n\nSlide 73"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-stride-9",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-stride-9",
     "title": "Convolutional Neural Networks",
-    "section": "74 (Convolution: Stride",
-    "text": "74 (Convolution: Stride\n\n\n\n\nSlide 74"
+    "section": "58 Convolution: Stride",
+    "text": "58 Convolution: Stride\n\n\n\n\nSlide 74"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-stride-10",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-stride-10",
     "title": "Convolutional Neural Networks",
-    "section": "75 (Convolution: Stride",
-    "text": "75 (Convolution: Stride\n\n\n\n\nSlide 75"
+    "section": "59 Convolution: Stride",
+    "text": "59 Convolution: Stride\n\n\n\n\nSlide 75"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-padding",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-padding",
     "title": "Convolutional Neural Networks",
-    "section": "76 Convolution: Padding",
-    "text": "76 Convolution: Padding\n\n\n\n\nSlide 76"
+    "section": "60 Convolution: Padding",
+    "text": "60 Convolution: Padding\n\n\n\n\nSlide 76"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-padding-1",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-padding-1",
     "title": "Convolutional Neural Networks",
-    "section": "77 Convolution: Padding",
-    "text": "77 Convolution: Padding\n\n\n\n\nSlide 77"
+    "section": "61 Convolution: Padding",
+    "text": "61 Convolution: Padding\n\n\n\n\nSlide 77"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-padding-2",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-padding-2",
     "title": "Convolutional Neural Networks",
-    "section": "78 Convolution: Padding",
-    "text": "78 Convolution: Padding\n\n\n\n\nSlide 78"
+    "section": "62 Convolution: Padding",
+    "text": "62 Convolution: Padding\n\n\n\n\nSlide 78"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-padding-3",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-padding-3",
     "title": "Convolutional Neural Networks",
-    "section": "79 Convolution: Padding",
-    "text": "79 Convolution: Padding\n\n\n\n\nSlide 79"
+    "section": "63 Convolution: Padding",
+    "text": "63 Convolution: Padding\n\n\n\n\nSlide 79"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution",
     "title": "Convolutional Neural Networks",
-    "section": "80 Convolution:",
-    "text": "80 Convolution:\n\n\n\n\nSlide 80"
+    "section": "64 Convolution:",
+    "text": "64 Convolution:\n\n\n\n\nSlide 81\n\n\n\n\nW_out is what you get in the ouput layer of the slide (so for one filter)"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-1",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-1",
     "title": "Convolutional Neural Networks",
-    "section": "81 Convolution:",
-    "text": "81 Convolution:\n\n\n\n\nSlide 81"
+    "section": "65 Convolution:",
+    "text": "65 Convolution:\n\n\n\n\nSlide 81"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#x1-convolution",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#x1-convolution",
     "title": "Convolutional Neural Networks",
-    "section": "82 1x1 Convolution",
-    "text": "82 1x1 Convolution\n\n\n\n\nSlide 82"
+    "section": "65 1x1 Convolution",
+    "text": "65 1x1 Convolution\n\n\n\n\nSlide 82\n\n\n\n\nIt looks at all the values in the depth, so in RGB, or more importantly in deep NNs the different hidden layers and they just mixed those information together"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#x1-convolution-a-computationally-cheap-method",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#x1-convolution-a-computationally-cheap-method",
     "title": "Convolutional Neural Networks",
-    "section": "83 1x1 Convolution: a computationally cheap method",
-    "text": "83 1x1 Convolution: a computationally cheap method\n\n\n\n\nSlide 83"
+    "section": "66 1x1 Convolution: a computationally cheap method",
+    "text": "66 1x1 Convolution: a computationally cheap method\n\n\n\n\nSlide 83\n\n\n\n\nHere in the 5x5x32 the convolution will be done over the 192 channels, 32 times (because we have 32 filters as depth), so sliding the filter a lot\nIn the bottom case we reduce the number of channels so now we reduce computations"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#take-3min-discuss-with-your-neighbor",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#take-3min-discuss-with-your-neighbor",
     "title": "Convolutional Neural Networks",
-    "section": "84 Take 3min: discuss with your neighbor:",
-    "text": "84 Take 3min: discuss with your neighbor:\n— ~wafko+rdt ae AA a a4 ~ + =\n\n\n\n\nSlide 84"
+    "section": "67 Take 3min: discuss with your neighbor:",
+    "text": "67 Take 3min: discuss with your neighbor:\n— ~wafko+rdt ae AA a a4 ~ + =\n\n\n\n\nSlide 84"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#dilated-convolutions",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#dilated-convolutions",
     "title": "Convolutional Neural Networks",
-    "section": "85 Dilated Convolutions",
-    "text": "85 Dilated Convolutions\n\n\n\n\nSlide 85"
+    "section": "68 Dilated Convolutions",
+    "text": "68 Dilated Convolutions\n\n\n\n\nSlide 85\n\n\n\n\nThis is very usefull if you need to deal with a huge image, but dont want huge hidden activations\nIf you do this then you can quickly downscale the image, without ignoring too many things\nAlso think that dilation its less expensive because doing 5x5 its more expensive than doing 3x3, so you can learn 3x3 but with holes in between and that is more efficient to consider large spatial footprint"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#pooling",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#pooling",
     "title": "Convolutional Neural Networks",
-    "section": "86 Pooling",
-    "text": "86 Pooling\n\n\n\n\nSlide 86"
+    "section": "69 Pooling",
+    "text": "69 Pooling\n\n\n\n\nSlide 86"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#pooling-1",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#pooling-1",
     "title": "Convolutional Neural Networks",
-    "section": "87 Pooling",
-    "text": "87 Pooling\n\n\n\n\nSlide 87"
+    "section": "70 Pooling",
+    "text": "70 Pooling\n\n\n\n\nSlide 87"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#max-poolina",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#max-poolina",
     "title": "Convolutional Neural Networks",
-    "section": "88 Max Poolina",
-    "text": "88 Max Poolina\n\n\n\n\nSlide 88"
+    "section": "71 Max Poolina",
+    "text": "71 Max Poolina\n\n\n\n\nSlide 88"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#getting-rid-of-pooling",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#getting-rid-of-pooling",
     "title": "Convolutional Neural Networks",
-    "section": "89 Getting rid of pooling",
-    "text": "89 Getting rid of pooling\n\n\n\n\nSlide 89"
+    "section": "72 Getting rid of pooling",
+    "text": "72 Getting rid of pooling\n\n\n\n\nSlide 89\n\n\n\n\nInstead of using pooling you can use a larger stride (so how many squares we slide) that we talk about\nIn Transformers pooling it is also not used anymore\nIn CNN is used"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#example-convnet",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#example-convnet",
     "title": "Convolutional Neural Networks",
-    "section": "90 Example ConvNet",
-    "text": "90 Example ConvNet\n\n\n\n\nSlide 90"
+    "section": "73 Example ConvNet",
+    "text": "73 Example ConvNet\n\n\n\n\nSlide 93\n\n\n\n\nEvery filter is one row here"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#example-convnet-1",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#example-convnet-1",
     "title": "Convolutional Neural Networks",
-    "section": "91 Example ConvNet",
-    "text": "91 Example ConvNet\n\n\n\n\nSlide 91"
+    "section": "74 Example ConvNet",
+    "text": "74 Example ConvNet\n\n\n\n\nSlide 93"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#example-convnet-2",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#example-convnet-2",
     "title": "Convolutional Neural Networks",
-    "section": "92 Example ConvNet",
-    "text": "92 Example ConvNet\n\n\n\n\nSlide 92"
+    "section": "75 Example ConvNet",
+    "text": "75 Example ConvNet\n\n\n\n\nSlide 92"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#example-convnet-3",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#example-convnet-3",
     "title": "Convolutional Neural Networks",
-    "section": "93 Example ConvNet",
-    "text": "93 Example ConvNet\n\n\n\n\nSlide 93"
+    "section": "76 Example ConvNet",
+    "text": "76 Example ConvNet\n\n\n\n\nSlide 93"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#quiz-1",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#quiz-1",
     "title": "Convolutional Neural Networks",
-    "section": "94 Quiz",
-    "text": "94 Quiz\n\n\n\n\nSlide 94"
+    "section": "67 Quiz:",
+    "text": "67 Quiz:\n\n\n\n\nSlide 84\n\n\n\n\n\n\n\n\nIn the case of a fully connected layer, it connects everything in the layer. And even the 1x1 convolution it takes the full input dimensionality meaning it takes a look at all 192 channels still. In the 1x1 it reduces the number of connections comparing to fully connected and also it mixes local information\n\n\n\n\n\n\n\nMore differences:\n\n\n\n\n\nA 1x1 convolutional layer and a fully-connected layer (dense layer) are similar in that they both perform a linear transformation on the input data, but there are key differences between the two.\n\n67.1 1x1 Convolutional Layer:\n\nSpatial Information:\n\nA 1x1 convolutional layer operates on spatial information in the input tensor.\nIt applies convolutional filters with a size of 1x1, which means it processes information at individual spatial locations.\nUseful for capturing relationships between channels but does not capture spatial patterns.\n\nParameter Sharing:\n\nUtilizes parameter sharing, similar to larger convolutional layers.\nEach element in the output is the result of a weighted sum of its input elements, considering all channels.\n\nOutput Dimensions:\n\nThe output dimensions depend on the number of 1x1 filters used.\n\n\n\n\n67.2 Fully-Connected Layer:\n\nFlattening:\n\nA fully-connected layer operates on the flattened version of the input.\nIt considers all elements in the input tensor as individual input features.\n\nParameter Sharing:\n\nEach neuron in a fully-connected layer has its set of weights for every input feature.\nNo parameter sharing between different neurons.\n\nOutput Dimensions:\n\nThe output dimensions are determined by the number of neurons in the layer.\n\n\n\n\n67.3 Differences:\n\nSpatial vs. Global Information:\n\n1x1 convolutional layers capture spatial information within each channel.\nFully-connected layers operate on global information, considering all elements as individual features.\n\nParameter Sharing:\n\n1x1 convolutions use parameter sharing, making them more efficient for processing spatially correlated features.\nFully-connected layers lack parameter sharing, resulting in a larger number of parameters.\n\nComputational Efficiency:\n\n1x1 convolutions are computationally more efficient than fully-connected layers, especially in scenarios with spatially structured data.\n\nUsage in Convolutional Networks:\n\n1x1 convolutions are commonly used in convolutional neural networks (CNNs) to adjust the number of channels and perform feature transformations.\nFully-connected layers are typically used in the final layers of a neural network for classification.\n\n\n\n\n\n\n\n\n\n\nYou dont loss necessarily information, we do not want to do it at the beginning because mixing, red, blue and green per pixel does not do much. It makes sense to do it later if you have edges on top of edges and then you mix this information, it makes more sense.\n\nIt is also not good to apply 1x1 when you do not want translation invariance\nevery 1x1 is strictly local, every neuron as a receptive field so there is actually spatial information there"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#rosalind-franklin",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#rosalind-franklin",
     "title": "Convolutional Neural Networks",
-    "section": "95 Rosalind Franklin:",
-    "text": "95 Rosalind Franklin:\n“science and\nHow research gets done part 4 everyday life can\n\n\n\n\nSlide 95"
+    "section": "75 Rosalind Franklin:",
+    "text": "75 Rosalind Franklin:\nHow research gets done part 4 everyday life can\n\n\n\n\nSlide 95"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#title-2",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#title-2",
     "title": "Convolutional Neural Networks",
-    "section": "96 Title",
-    "text": "96 Title\n\n\n\n\nSlide 96"
+    "section": "109 Title",
+    "text": "109 Title\n\n\n\n\nSlide 129"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#alexnet",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#alexnet",
     "title": "Convolutional Neural Networks",
-    "section": "97 AlexNet",
-    "text": "97 AlexNet\n\n\n\n\nSlide 97"
+    "section": "76 AlexNet",
+    "text": "76 AlexNet\n\n\n\n\nSlide 97"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#alexnet-1",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#alexnet-1",
     "title": "Convolutional Neural Networks",
-    "section": "98 AlexNet",
-    "text": "98 AlexNet\n\n\n\n\nSlide 98"
+    "section": "77 AlexNet",
+    "text": "77 AlexNet\n\n\n\n\nSlide 98"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activation-function",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activation-function",
     "title": "Convolutional Neural Networks",
-    "section": "99 Activation function",
-    "text": "99 Activation function\n\n\n\n\nSlide 99"
+    "section": "78 Activation function",
+    "text": "78 Activation function\n\n\n\n\nSlide 99\n\n\n\n\nFaster to train because of simple Relu, and also the gradients are not vanishing because you have the gradient of 1 starting from the positive direction\nWhy does gradient do not vanish with Relu?\nThe vanishing gradient problem refers to the issue where the gradients of the loss function with respect to the weights become extremely small during backpropagation, making it challenging for the model to learn and update its parameters effectively. This problem is particularly associated with activation functions that squash their input into a small range, such as the sigmoid or hyperbolic tangent (tanh) functions.\nReLU (Rectified Linear Unit), on the other hand, has a non-saturating activation behavior, which means that it does not squash its input into a small range.\nReLU does not saturate in the positive region of its input. For positive input values, the gradient remains constant (1), leading to consistent and non-vanishing gradients during backpropagation."
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#activation-function-1",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#activation-function-1",
     "title": "Convolutional Neural Networks",
-    "section": "100 Activation function",
-    "text": "100 Activation function\n\n\n\n\nSlide 100"
+    "section": "79 Activation function",
+    "text": "79 Activation function\n\n\n\n\nSlide 100"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#training-with-multiple-gpus",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#training-with-multiple-gpus",
     "title": "Convolutional Neural Networks",
-    "section": "101 Training with multiple GPUs",
-    "text": "101 Training with multiple GPUs\n\n\n\n\nSlide 101"
+    "section": "80 Training with multiple GPUs",
+    "text": "80 Training with multiple GPUs\n\n\n\n\nSlide 101"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#training-with-multiple-gpus-1",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#training-with-multiple-gpus-1",
     "title": "Convolutional Neural Networks",
-    "section": "102 Training with multiple GPUs",
-    "text": "102 Training with multiple GPUs\n\n\n\n\nSlide 102"
+    "section": "81 Training with multiple GPUs",
+    "text": "81 Training with multiple GPUs\n\n\n\n\nSlide 102"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#on-that-note-communicating-between-gpus-pytorch",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#on-that-note-communicating-between-gpus-pytorch",
     "title": "Convolutional Neural Networks",
-    "section": "103 On that note: Communicating between GPUs: PyTorch",
-    "text": "103 On that note: Communicating between GPUs: PyTorch\n\n\n\n\nSlide 103"
+    "section": "82 On that note: Communicating between GPUs: PyTorch",
+    "text": "82 On that note: Communicating between GPUs: PyTorch\n\n\n\n\nSlide 103"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#local-response-normalization",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#local-response-normalization",
     "title": "Convolutional Neural Networks",
-    "section": "104 Local Response Normalization",
-    "text": "104 Local Response Normalization\n\n\n\n\nSlide 104"
+    "section": "83 Local Response Normalization",
+    "text": "83 Local Response Normalization\n\n\n\n\nSlide 104"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#overlapping-pooling",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#overlapping-pooling",
     "title": "Convolutional Neural Networks",
-    "section": "105 Overlapping Pooling",
-    "text": "105 Overlapping Pooling\n\n\n\n\nSlide 105"
+    "section": "84 Overlapping Pooling",
+    "text": "84 Overlapping Pooling\n\n\n\n\nSlide 105"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#overlapping-pooling-1",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#overlapping-pooling-1",
     "title": "Convolutional Neural Networks",
-    "section": "106 Overlapping Pooling",
-    "text": "106 Overlapping Pooling\n\n\n\n\nSlide 106"
+    "section": "85 Overlapping Pooling",
+    "text": "85 Overlapping Pooling\n\n\n\n\nSlide 106"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#overall-architecture",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#overall-architecture",
     "title": "Convolutional Neural Networks",
-    "section": "107 Overall architecture",
-    "text": "107 Overall architecture\n\n\n\n\nSlide 107"
+    "section": "86 Overall architecture",
+    "text": "86 Overall architecture\n\n\n\n\nSlide 107\n\n\n\n\nThe max pooling make a vector per every image"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#the-overfitting-problem",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#the-overfitting-problem",
     "title": "Convolutional Neural Networks",
-    "section": "108 The Overfitting Problem",
-    "text": "108 The Overfitting Problem\n\n\n\n\nSlide 108"
+    "section": "87 The Overfitting Problem",
+    "text": "87 The Overfitting Problem\n\n\n\n\nSlide 108\n\n\n\n\nIf a have a cnn that has many parameter more than my data input will i overfit?\nIf your CNN has a large number of parameters (i.e., it’s a complex model) and you have a small dataset, there is an increased risk of overfitting. A complex model may have the capacity to memorize the training data, capturing noise and outliers instead of learning generalizable patterns.\nAlthoug all these increase training time but high performance"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#the-learned-filters",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#the-learned-filters",
     "title": "Convolutional Neural Networks",
-    "section": "109 The learned filters",
-    "text": "109 The learned filters\n\n\n\n\nSlide 109"
+    "section": "88 The learned filters",
+    "text": "88 The learned filters\n\n\n\n\nSlide 109"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#removing-layer-7",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#removing-layer-7",
     "title": "Convolutional Neural Networks",
-    "section": "110 Removing layer 7",
-    "text": "110 Removing layer 7\n\n\n\n\nSlide 110"
+    "section": "89 Removing layer 7",
+    "text": "89 Removing layer 7\n\n\n\n\nSlide 110"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#removing-layer-6-7",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#removing-layer-6-7",
     "title": "Convolutional Neural Networks",
-    "section": "111 Removing layer 6, 7",
-    "text": "111 Removing layer 6, 7\n\n\n\n\nSlide 111"
+    "section": "90 Removing layer 6, 7",
+    "text": "90 Removing layer 6, 7\n\n\n\n\nSlide 111"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#removing-layer-3-4",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#removing-layer-3-4",
     "title": "Convolutional Neural Networks",
-    "section": "112 Removing layer 3, 4",
-    "text": "112 Removing layer 3, 4\n\n\n\n\nSlide 112"
+    "section": "91 Removing layer 3, 4",
+    "text": "91 Removing layer 3, 4\n\n\n\n\nSlide 112\n\n\n\n\nWe dont save that much parameters because convolutional layers are more efficient (they are not fully connected, not too many parameters)"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#removing-layer-3-4-6-7",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#removing-layer-3-4-6-7",
     "title": "Convolutional Neural Networks",
-    "section": "113 Removing layer 3, 4, 6, 7",
-    "text": "113 Removing layer 3, 4, 6, 7\n\n\n\n\nSlide 113"
+    "section": "92 Removing layer 3, 4, 6, 7",
+    "text": "92 Removing layer 3, 4, 6, 7\n\n\n\n\nSlide 113"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#translation-invariance",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#translation-invariance",
     "title": "Convolutional Neural Networks",
-    "section": "114 Translation invariance",
-    "text": "114 Translation invariance\n\n\n\n\nSlide 114"
+    "section": "93 Translation invariance",
+    "text": "93 Translation invariance\n\n\n\n\nSlide 114\n\n\n\n\nDespite saying that CNN tend to be equivariant which means if you shift the input the output should also shift you can see that if you do that with these images, where you are just shifting the images the outputs do vary quite a lot\nSo CNN do not learn something that is explicit symmetrical or explicitly equivariant. Equivariance may be a good prior that we put in, but that does not mean that that really happens"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#scale-invariance",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#scale-invariance",
     "title": "Convolutional Neural Networks",
-    "section": "115 Scale invariance",
-    "text": "115 Scale invariance\n\n\n\n\nSlide 115"
+    "section": "94 Scale invariance",
+    "text": "94 Scale invariance\n\n\n\n\nSlide 115\n\n\n\n\nSame with scale, we have said that we apply the pooling operations so therefore we can be a bit invariant to scaling, but still NNs tend not to be super scale invariant"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#rotation-invariance",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#rotation-invariance",
     "title": "Convolutional Neural Networks",
-    "section": "116 Rotation invariance",
-    "text": "116 Rotation invariance\n\n\n\n\nSlide 116"
+    "section": "95 Rotation invariance",
+    "text": "95 Rotation invariance\n\n\n\n\nSlide 116"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#further-reading",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#further-reading",
     "title": "Convolutional Neural Networks",
-    "section": "117 Further reading",
-    "text": "117 Further reading\n\n\n\n\nSlide 117"
+    "section": "96 Further reading",
+    "text": "96 Further reading\n\n\n\n\nSlide 117\n\n\n\n\n\n\n\n\nSlide 118"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#title-3",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#title-3",
     "title": "Convolutional Neural Networks",
-    "section": "118 Title",
-    "text": "118 Title\n\n\n\n\nSlide 118"
+    "section": "128 Title",
+    "text": "128 Title\n\n\n\n\nSlide 129"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#transfer-learning-carry-benefits-from-large-dataset-to-the-small-one",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#transfer-learning-carry-benefits-from-large-dataset-to-the-small-one",
     "title": "Convolutional Neural Networks",
-    "section": "119 Transfer learning: carry benefits from large dataset to the small one!",
-    "text": "119 Transfer learning: carry benefits from large dataset to the small one!\n\n\n\n\nSlide 119"
+    "section": "97 Transfer learning: carry benefits from large dataset to the small one!",
+    "text": "97 Transfer learning: carry benefits from large dataset to the small one!\n\n\n\n\nSlide 119"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#update-transfer-learning",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#update-transfer-learning",
     "title": "Convolutional Neural Networks",
-    "section": "120 UPDATE: Transfer learning",
-    "text": "120 UPDATE: Transfer learning\n\n\n\n\nSlide 120"
+    "section": "98 UPDATE: Transfer learning",
+    "text": "98 UPDATE: Transfer learning\n\n\n\n\nSlide 120"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#why-use-transfer-learning",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#why-use-transfer-learning",
     "title": "Convolutional Neural Networks",
-    "section": "121 Why use Transfer Learning?",
-    "text": "121 Why use Transfer Learning?\n\n\n\n\nSlide 121"
+    "section": "99 Why use Transfer Learning?",
+    "text": "99 Why use Transfer Learning?\n\n\n\n\nSlide 121\n\n\n\n\nThe answer is yes even if you have saved the weights from a extremely good model and you have a small dataset"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#convnets-are-good-in-transfer-learning",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#convnets-are-good-in-transfer-learning",
     "title": "Convolutional Neural Networks",
-    "section": "122 Convnets are good in transfer learning",
-    "text": "122 Convnets are good in transfer learning\n\n\n\n\nSlide 122"
+    "section": "100 Convnets are good in transfer learning",
+    "text": "100 Convnets are good in transfer learning\n\n\n\n\nSlide 122\n\n\n\n\nFine Tune the whole NN\nOr use the CNN as feature extractor"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#solution-i-fine-tune-hr-using-hg-as-initialization",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#solution-i-fine-tune-hr-using-hg-as-initialization",
     "title": "Convolutional Neural Networks",
-    "section": "123 Solution I: Fine-tune hr using hg as initialization",
-    "text": "123 Solution I: Fine-tune hr using hg as initialization\n\n\n\n\nSlide 123"
+    "section": "101 Solution I: Fine-tune hr using hg as initialization",
+    "text": "101 Solution I: Fine-tune hr using hg as initialization\n\n\n\n\nSlide 123"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#initializing-hp-with-hs",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#initializing-hp-with-hs",
     "title": "Convolutional Neural Networks",
-    "section": "124 Initializing hp with hs",
-    "text": "124 Initializing hp with hs\n\n\n\n\nSlide 124"
+    "section": "102 Initializing hp with hs",
+    "text": "102 Initializing hp with hs\n\n\n\n\nSlide 124\n\n\n\n\nImagnet, it outputs 1000 categories. If you want to classification for 30 categories then you need to throw that one away and restart training a new classifier to your needs\nAlexNet, you can start removing some layers depending on how much data you have"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#initializing-hp-with-hs-1",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#initializing-hp-with-hs-1",
     "title": "Convolutional Neural Networks",
-    "section": "125 Initializing hp with hs",
-    "text": "125 Initializing hp with hs\n\n\n\n\nSlide 125"
+    "section": "103 Initializing hp with hs",
+    "text": "103 Initializing hp with hs\n\n\n\n\nSlide 125\n\n\n\n\nif you pertained your NN in ImgNet and now you want to do Satalite classification then it may be usefull to find tune even those layers the bottom ones"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#gr",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#gr",
     "title": "Convolutional Neural Networks",
-    "section": "126 gr",
-    "text": "126 gr\nof\nHow to fine-tune? a8? go ue\n\n\n\n\nSlide 126"
+    "section": "104 gr",
+    "text": "104 gr\nof\nHow to fine-tune? a8? go ue\n\n\n\n\nSlide 126"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#solution-ii-use-h-as-a-feature-extractor-for-hr",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#solution-ii-use-h-as-a-feature-extractor-for-hr",
     "title": "Convolutional Neural Networks",
-    "section": "127 Solution II: Use h, as a feature extractor for hr",
-    "text": "127 Solution II: Use h, as a feature extractor for hr\n\n\n\n\nSlide 127"
+    "section": "105 Solution II: Use h, as a feature extractor for hr",
+    "text": "105 Solution II: Use h, as a feature extractor for hr\n\n\n\n\nSlide 127"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#transfer-learning-benchmarks-techniques",
     "href": "blog/2023-11-20_convolutional-neural-networks/index.html#transfer-learning-benchmarks-techniques",
     "title": "Convolutional Neural Networks",
-    "section": "128 Transfer learning benchmarks & techniques",
-    "text": "128 Transfer learning benchmarks & techniques\n\n\n\n\nSlide 128"
+    "section": "106 Transfer learning benchmarks & techniques",
+    "text": "106 Transfer learning benchmarks & techniques\n\n\n\n\nSlide 128"
   },
   {
     "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#title-4",
@@ -5136,5 +5136,257 @@
     "title": "Modern ConvNets",
     "section": "6 What do the different layers in a deep neural netwok learn",
     "text": "6 What do the different layers in a deep neural netwok learn\n\n\n\n\nSlide 6"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#the-pooling-operations",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#the-pooling-operations",
+    "title": "Convolutional Neural Networks",
+    "section": "22 The pooling operations",
+    "text": "22 The pooling operations\n\n\n\n\nSlide 22\n\n\n\n\nPooling functions are another way to incorporate prior knowledge. It aggregates the activations. This can be local or global\nYou can max pool, or average pool the activations in some rectangular neighborhood. It reduces the space size and improves the efficiency and it also increases robustness\nIt also incorporates invariance to translations, because it will not matter whether the 6 would be in that corner or so on so on\nAt the last step you could od average global pooling, and just have one vector out, and in this vector will be trained to represent the whole image. Here you could apply a fully connected layer if you care classification\nMin, max all are differentiable. If you instead would have and argmax then it will not be differentiable\nSo pooling operations like the global ones, also allow you to be independent in which input image you feed into your NN"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-4",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-4",
+    "title": "Convolutional Neural Networks",
+    "section": "30 3D Activations",
+    "text": "30 3D Activations\n\n\n\n\nSlide 38\n\n\n\n\n\n\n30.1 Example: Not-moving Filter\n\n\n\n\nHere we have:\n\nInput Layer: 3x32x32\nKernel 5-size: 3x5x5\n\nIf we do not slide the filter then we are gonna end up with:\n\nPre-output: 3x1x1 (three scalar values per each channel)\n\nNow we do a summation over the three channels and we have thus:\n\nOutput: 1x1x1\n\n\n\n30.2 Example: Sliding Filter\n \nImagine now that we slide this 3D filter along all the input layer, then we end up:\n\nPre-ouput: 3x(28)x(28), where we compute (width - kernel_size + 1) = (32-5+1)\n\nNow we sum over all three channel element wise and end up with:\n\nOutput: 1x28x28"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-5",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-5",
+    "title": "Convolutional Neural Networks",
+    "section": "31 3D Activations",
+    "text": "31 3D Activations\n\n\n\n\nSlide 42"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-6",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-6",
+    "title": "Convolutional Neural Networks",
+    "section": "32 3D Activations",
+    "text": "32 3D Activations\n\n\n\n\nSlide 44"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-7",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-7",
+    "title": "Convolutional Neural Networks",
+    "section": "33 3D Activations",
+    "text": "33 3D Activations\n\n\n\n\nSlide 45\n\n\n\n\nIf you now slide the filter with as many neurons we will get:\n\nOuput: depth x (\\(l\\)) x (\\(l\\))\n\nWhere \\(l\\) = width - kernel_size + 1"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-8",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-8",
+    "title": "Convolutional Neural Networks",
+    "section": "34 3D Activations",
+    "text": "34 3D Activations\n\n\n\n\nSlide 47"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-9",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-9",
+    "title": "Convolutional Neural Networks",
+    "section": "35 3D Activations",
+    "text": "35 3D Activations\n\n\n\n\nSlide 50"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-10",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-10",
+    "title": "Convolutional Neural Networks",
+    "section": "36 3D Activations",
+    "text": "36 3D Activations\n\n\n\n\nSlide 52"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-11",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-11",
+    "title": "Convolutional Neural Networks",
+    "section": "37 3D Activations",
+    "text": "37 3D Activations\n\n\n\n\nSlide 53"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-12",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-12",
+    "title": "Convolutional Neural Networks",
+    "section": "38 3D Activations",
+    "text": "38 3D Activations\n\n\n\n\nSlide 54"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-13",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-13",
+    "title": "Convolutional Neural Networks",
+    "section": "39 3D Activations",
+    "text": "39 3D Activations\n\n\n\n\nSlide 55"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-14",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-14",
+    "title": "Convolutional Neural Networks",
+    "section": "40 3D Activations",
+    "text": "40 3D Activations\n\n\n\n\nSlide 56"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-15",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-15",
+    "title": "Convolutional Neural Networks",
+    "section": "41 3D Activations",
+    "text": "41 3D Activations\n\n\n\n\nSlide 56"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-16",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-16",
+    "title": "Convolutional Neural Networks",
+    "section": "43 3D Activations",
+    "text": "43 3D Activations\n\n\n\n\nSlide 56"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-17",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-17",
+    "title": "Convolutional Neural Networks",
+    "section": "44 3D Activations",
+    "text": "44 3D Activations\n\n\n\n\nSlide 56"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-18",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-18",
+    "title": "Convolutional Neural Networks",
+    "section": "44 3D Activations",
+    "text": "44 3D Activations\n\n\n\n\nSlide 56"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-19",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-19",
+    "title": "Convolutional Neural Networks",
+    "section": "45 3D Activations",
+    "text": "45 3D Activations\n\n\n\n\nSlide 56"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-20",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-20",
+    "title": "Convolutional Neural Networks",
+    "section": "46 3D Activations",
+    "text": "46 3D Activations\n\n\n\n\nSlide 56"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-21",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-21",
+    "title": "Convolutional Neural Networks",
+    "section": "47 3D Activations",
+    "text": "47 3D Activations\n\n\n\n\nSlide 55"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-22",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-22",
+    "title": "Convolutional Neural Networks",
+    "section": "48 3D Activations",
+    "text": "48 3D Activations\n\n\n\n\nSlide 56"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-23",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-23",
+    "title": "Convolutional Neural Networks",
+    "section": "49 3D Activations",
+    "text": "49 3D Activations\n\n\n\n\nSlide 56"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-24",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-24",
+    "title": "Convolutional Neural Networks",
+    "section": "50 3D Activations",
+    "text": "50 3D Activations\n\n\n\n\nSlide 56"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-25",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-25",
+    "title": "Convolutional Neural Networks",
+    "section": "51 3D Activations",
+    "text": "51 3D Activations\n\n\n\n\nSlide 56"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-26",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#d-activations-26",
+    "title": "Convolutional Neural Networks",
+    "section": "52 3D Activations",
+    "text": "52 3D Activations\n\n\n\n\nSlide 56"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-vs-pooling-in-2d",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#convolution-vs-pooling-in-2d",
+    "title": "Convolutional Neural Networks",
+    "section": "21 Convolution vs Pooling in 2D",
+    "text": "21 Convolution vs Pooling in 2D"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#quiz-2",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#quiz-2",
+    "title": "Convolutional Neural Networks",
+    "section": "74 Quiz",
+    "text": "74 Quiz\n\n\n\n\nSlide 94\n\n\n\n\nIf you choose the kernel size to be the same as the input image then it is fully connected.\nMathematically 1\nImplementation wise 2"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#max-pooling",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#max-pooling",
+    "title": "Convolutional Neural Networks",
+    "section": "71 Max Pooling",
+    "text": "71 Max Pooling\n\n\n\n\nSlide 88"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#how-research-gets-done-part-4",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#how-research-gets-done-part-4",
+    "title": "Convolutional Neural Networks",
+    "section": "75 How research gets done part 4",
+    "text": "75 How research gets done part 4\n\n\n\n\nSlide 95\n\n\n\n\n\n\n\n\nSlide 96"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#how-to-fine-tune-a8-go-ue",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#how-to-fine-tune-a8-go-ue",
+    "title": "Convolutional Neural Networks",
+    "section": "104 How to fine-tune? a8? go ue",
+    "text": "104 How to fine-tune? a8? go ue\n\n\n\n\nSlide 126"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#how-to-fine-tune",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#how-to-fine-tune",
+    "title": "Convolutional Neural Networks",
+    "section": "104 How to fine-tune?",
+    "text": "104 How to fine-tune?\n\n\n\n\nSlide 126"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#solution-ii-use-h-as-a-feature-extractor-for-ht",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#solution-ii-use-h-as-a-feature-extractor-for-ht",
+    "title": "Convolutional Neural Networks",
+    "section": "105 Solution II: Use h, as a feature extractor for hT",
+    "text": "105 Solution II: Use h, as a feature extractor for hT\n\n\n\n\nSlide 127"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#solution-i-fine-tune-ht-using-hg-as-initialization",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#solution-i-fine-tune-ht-using-hg-as-initialization",
+    "title": "Convolutional Neural Networks",
+    "section": "101 Solution I: Fine-tune hT using hg as initialization",
+    "text": "101 Solution I: Fine-tune hT using hg as initialization\n\n\n\n\nSlide 123"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#solution-i-fine-tune-ht-using-hs-as-initialization",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#solution-i-fine-tune-ht-using-hs-as-initialization",
+    "title": "Convolutional Neural Networks",
+    "section": "101 Solution I: Fine-tune hT using hS as initialization",
+    "text": "101 Solution I: Fine-tune hT using hS as initialization\n\n\n\n\nSlide 123"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#initializing-ht-with-hs",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#initializing-ht-with-hs",
+    "title": "Convolutional Neural Networks",
+    "section": "102 Initializing hT with hS",
+    "text": "102 Initializing hT with hS\n\n\n\n\nSlide 124\n\n\n\n\nImagnet, it outputs 1000 categories. If you want to classification for 30 categories then you need to throw that one away and restart training a new classifier to your needs\nAlexNet, you can start removing some layers depending on how much data you have"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#initializing-ht-with-hs-1",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#initializing-ht-with-hs-1",
+    "title": "Convolutional Neural Networks",
+    "section": "103 Initializing hT with hS",
+    "text": "103 Initializing hT with hS\n\n\n\n\nSlide 125\n\n\n\n\nif you pertained your NN in ImgNet and now you want to do Satalite classification then it may be usefull to find tune even those layers the bottom ones"
+  },
+  {
+    "objectID": "blog/2023-11-20_convolutional-neural-networks/index.html#solution-ii-use-hs-as-a-feature-extractor-for-ht",
+    "href": "blog/2023-11-20_convolutional-neural-networks/index.html#solution-ii-use-hs-as-a-feature-extractor-for-ht",
+    "title": "Convolutional Neural Networks",
+    "section": "105 Solution II: Use hS, as a feature extractor for hT",
+    "text": "105 Solution II: Use hS, as a feature extractor for hT\n\n\n\n\nSlide 127"
   }
 ]

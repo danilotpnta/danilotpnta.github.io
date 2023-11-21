@@ -23,6 +23,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -77,6 +111,8 @@ window.MathJax = {
 </script>
 <link rel="shortcut icon" href="../../../../../../../../../../../assets/danilo.ico">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../css/index-posts.css">
 </head>
@@ -377,20 +413,10 @@ window.MathJax = {
     
 </main>
 
-<section id="title" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="title"><span class="header-section-number">1</span> Title</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_1.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 1</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-</section>
-<section id="optimizing-neural-networks" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="optimizing-neural-networks"><span class="header-section-number">2</span> Optimizing neural networks</h2>
+<!-- ## Title
+<center>![Slide 1](imgs/page_1.png){.w575}</center><pre></pre> -->
+<section id="optimizing-neural-networks" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="optimizing-neural-networks"><span class="header-section-number">1</span> Optimizing neural networks</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -401,8 +427,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="multi-layer-perceptrons-recap" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="multi-layer-perceptrons-recap"><span class="header-section-number">3</span> Multi-layer perceptrons (Recap)</h2>
+<section id="multi-layer-perceptrons-recap" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="multi-layer-perceptrons-recap"><span class="header-section-number">2</span> Multi-layer perceptrons (Recap)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -413,8 +439,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="multi-layer-perceptrons-recap-1" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="multi-layer-perceptrons-recap-1"><span class="header-section-number">4</span> Multi-layer perceptrons (Recap)</h2>
+<section id="multi-layer-perceptrons-recap-1" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="multi-layer-perceptrons-recap-1"><span class="header-section-number">3</span> Multi-layer perceptrons (Recap)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -424,9 +450,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Prior knowledge, is something that we know about the data, we want to bring this into the design of the NNs</p>
 </section>
-<section id="consider-an-image" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="consider-an-image"><span class="header-section-number">5</span> Consider an image</h2>
+<section id="consider-an-image" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="consider-an-image"><span class="header-section-number">4</span> Consider an image</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -437,8 +464,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="hubel-and-wiesel-nobel-prize-for-physiology-or-medicine-in-1981" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="hubel-and-wiesel-nobel-prize-for-physiology-or-medicine-in-1981"><span class="header-section-number">6</span> Hubel and Wiesel: Nobel Prize for Physiology or Medicine in 1981</h2>
+<section id="hubel-and-wiesel-nobel-prize-for-physiology-or-medicine-in-1981" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="hubel-and-wiesel-nobel-prize-for-physiology-or-medicine-in-1981"><span class="header-section-number">5</span> Hubel and Wiesel: Nobel Prize for Physiology or Medicine in 1981</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -448,9 +475,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Here when we see edges, there is some electricity</p>
 </section>
-<section id="filters-yes.-how-about-learnable-filters" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="filters-yes.-how-about-learnable-filters"><span class="header-section-number">7</span> Filters, yes. How about learnable filters</h2>
+<section id="filters-yes.-how-about-learnable-filters" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="filters-yes.-how-about-learnable-filters"><span class="header-section-number">6</span> Filters, yes. How about learnable filters</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -460,9 +488,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Canny and GAbor filters they all try to find edges, then it can be used for recognition purposes.</p>
 </section>
-<section id="filters-yes.-how-about-learnable-filters-1" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="filters-yes.-how-about-learnable-filters-1"><span class="header-section-number">8</span> Filters, yes. How about learnable filters</h2>
+<section id="filters-yes.-how-about-learnable-filters-1" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="filters-yes.-how-about-learnable-filters-1"><span class="header-section-number">7</span> Filters, yes. How about learnable filters</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -473,8 +502,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="the-convolution-operation" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="the-convolution-operation"><span class="header-section-number">9</span> The convolution operation</h2>
+<section id="the-convolution-operation" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="the-convolution-operation"><span class="header-section-number">8</span> The convolution operation</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -485,8 +514,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="the-convolution-operation-1" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="the-convolution-operation-1"><span class="header-section-number">10</span> The convolution operation</h2>
+<section id="the-convolution-operation-1" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="the-convolution-operation-1"><span class="header-section-number">9</span> The convolution operation</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -496,9 +525,19 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<center>
+<img src="2023-11-21-16-22-45.png" class="w350 img-fluid">
+</center>
+<pre></pre>
+<center>
+<img src="2023-11-21-16-23-47.png" class="w350 img-fluid">
+</center>
+<pre></pre>
+<p>Here f*g is the convolution in red line. In the 1D case</p>
+<p>Here g is the kernel</p>
 </section>
-<section id="convolution-for-2d-images" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="convolution-for-2d-images"><span class="header-section-number">11</span> Convolution for 2D images</h2>
+<section id="convolution-for-2d-images" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="convolution-for-2d-images"><span class="header-section-number">10</span> Convolution for 2D images</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -508,9 +547,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Now our kernel is 2D</p>
 </section>
-<section id="convolution-for-2d-images-1" class="level2" data-number="12">
-<h2 data-number="12" class="anchored" data-anchor-id="convolution-for-2d-images-1"><span class="header-section-number">12</span> Convolution for 2D images</h2>
+<section id="convolution-for-2d-images-1" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="convolution-for-2d-images-1"><span class="header-section-number">11</span> Convolution for 2D images</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -521,8 +561,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="examples" class="level2" data-number="13">
-<h2 data-number="13" class="anchored" data-anchor-id="examples"><span class="header-section-number">13</span> Examples</h2>
+<section id="examples" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="examples"><span class="header-section-number">12</span> Examples</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -533,8 +573,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="examples-1" class="level2" data-number="14">
-<h2 data-number="14" class="anchored" data-anchor-id="examples-1"><span class="header-section-number">14</span> Examples</h2>
+<section id="examples-1" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="examples-1"><span class="header-section-number">13</span> Examples</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -544,9 +584,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Sobel fires for vertical edges</p>
 </section>
-<section id="quiz" class="level2" data-number="15">
-<h2 data-number="15" class="anchored" data-anchor-id="quiz"><span class="header-section-number">15</span> Quiz</h2>
+<section id="quiz" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="quiz"><span class="header-section-number">14</span> Quiz</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -556,9 +597,14 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<ol start="2" type="1">
+<li>It will emphasize edges</li>
+</ol>
+<p>If you take a CNN and you have weights uniform then you would not have this edge detectors and the NN would not train well</p>
+<p>This is like adding prior knowledge because we know edges are supper important to detect whether is a cat or a dog</p>
 </section>
-<section id="the-motivation-of-convolutions" class="level2" data-number="16">
-<h2 data-number="16" class="anchored" data-anchor-id="the-motivation-of-convolutions"><span class="header-section-number">16</span> The motivation of convolutions</h2>
+<section id="the-motivation-of-convolutions" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="the-motivation-of-convolutions"><span class="header-section-number">15</span> The motivation of convolutions</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -568,9 +614,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Local connectivity, for ie if you want to detect edges, you dont need to look at the whole image and because you share the parameters, the weights are tied and you are more efficient.</p>
 </section>
-<section id="the-motivation-of-convolutions-1" class="level2" data-number="17">
-<h2 data-number="17" class="anchored" data-anchor-id="the-motivation-of-convolutions-1"><span class="header-section-number">17</span> The motivation of convolutions</h2>
+<section id="the-motivation-of-convolutions-1" class="level2" data-number="16">
+<h2 data-number="16" class="anchored" data-anchor-id="the-motivation-of-convolutions-1"><span class="header-section-number">16</span> The motivation of convolutions</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -580,9 +627,11 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>This saves quite a bit of neurons connected, so less parameters, this is the same as analysing an img of 16x16, but now instead we use filters so that we can detect edges and only with these edges we have now building blocks which are less than computing the whole image.</p>
+<p>Here the kernel would be of width 3</p>
 </section>
-<section id="the-motivation-of-convolutions-2" class="level2" data-number="18">
-<h2 data-number="18" class="anchored" data-anchor-id="the-motivation-of-convolutions-2"><span class="header-section-number">18</span> The motivation of convolutions</h2>
+<section id="the-motivation-of-convolutions-2" class="level2" data-number="17">
+<h2 data-number="17" class="anchored" data-anchor-id="the-motivation-of-convolutions-2"><span class="header-section-number">17</span> The motivation of convolutions</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -592,9 +641,13 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>So here in the left the NN has a receptive field of size 3, because this is how much a neuron can look up, so it is the kernel size. But per layer the receptive field gradually grows which allow you to have a hierarchical structure</p>
+<ul>
+<li>For instance the neurons at layer 50 now they can see at the whole image and can put image into context. This is how you go from local to global</li>
+</ul>
 </section>
-<section id="the-motivation-of-convolutions-3" class="level2" data-number="19">
-<h2 data-number="19" class="anchored" data-anchor-id="the-motivation-of-convolutions-3"><span class="header-section-number">19</span> The motivation of convolutions</h2>
+<section id="the-motivation-of-convolutions-3" class="level2" data-number="18">
+<h2 data-number="18" class="anchored" data-anchor-id="the-motivation-of-convolutions-3"><span class="header-section-number">18</span> The motivation of convolutions</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -605,8 +658,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="the-motivation-of-convolutions-4" class="level2" data-number="20">
-<h2 data-number="20" class="anchored" data-anchor-id="the-motivation-of-convolutions-4"><span class="header-section-number">20</span> The motivation of convolutions</h2>
+<section id="the-motivation-of-convolutions-4" class="level2" data-number="19">
+<h2 data-number="19" class="anchored" data-anchor-id="the-motivation-of-convolutions-4"><span class="header-section-number">19</span> The motivation of convolutions</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -616,9 +669,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>If the input shift then the outputs does the same, this is not the case for a fully connected NN</p>
 </section>
-<section id="a-simple-convolution-saves-space" class="level2" data-number="21">
-<h2 data-number="21" class="anchored" data-anchor-id="a-simple-convolution-saves-space"><span class="header-section-number">21</span> A simple convolution: saves space!</h2>
+<section id="a-simple-convolution-saves-space" class="level2" data-number="20">
+<h2 data-number="20" class="anchored" data-anchor-id="a-simple-convolution-saves-space"><span class="header-section-number">20</span> A simple convolution: saves space!</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -628,9 +682,17 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>The bigger the filter the more zeros we will have</p>
 </section>
-<section id="the-pooling-operations-not" class="level2" data-number="22">
-<h2 data-number="22" class="anchored" data-anchor-id="the-pooling-operations-not"><span class="header-section-number">22</span> The pooling operations (not **)</h2>
+<section id="convolution-vs-pooling-in-2d" class="level2" data-number="21">
+<h2 data-number="21" class="anchored" data-anchor-id="convolution-vs-pooling-in-2d"><span class="header-section-number">21</span> Convolution vs Pooling in 2D</h2>
+<center>
+<img src="2023-11-21-20-02-21.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+</section>
+<section id="the-pooling-operations" class="level2" data-number="22">
+<h2 data-number="22" class="anchored" data-anchor-id="the-pooling-operations"><span class="header-section-number">22</span> The pooling operations</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -640,6 +702,12 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Pooling functions are another way to incorporate prior knowledge. It aggregates the activations. This can be local or global</p>
+<p>You can max pool, or average pool the activations in some rectangular neighborhood. It reduces the space size and improves the efficiency and it also increases robustness</p>
+<p>It also incorporates invariance to translations, because it will not matter whether the 6 would be in that corner or so on so on</p>
+<p>At the last step you could od average global pooling, and just have one vector out, and in this vector will be trained to represent the whole image. Here you could apply a fully connected layer if you care classification</p>
+<p>Min, max all are differentiable. If you instead would have and argmax then it will not be differentiable</p>
+<p>So pooling operations like the global ones, also allow you to be independent in which input image you feed into your NN</p>
 </section>
 <section id="lenet-5" class="level2" data-number="23">
 <h2 data-number="23" class="anchored" data-anchor-id="lenet-5"><span class="header-section-number">23</span> LeNet-5</h2>
@@ -652,6 +720,50 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Here you do not have global pooling so an img of 29x29 would not have worked</p>
+<p>The hidden dimensionalities are called channels, and the pooling is applied to all channels. So pooling operations do not change dimensionality but change the spatial extent.</p>
+<p>So each layer would have channels those are all the squares in a layer, pooling it is apploed to every channel and per channel it reduces its square matrix to a lower width and lower height</p>
+<section id="more" class="level3" data-number="23.1">
+<h3 data-number="23.1" class="anchored" data-anchor-id="more"><span class="header-section-number">23.1</span> More</h3>
+<p>LeNet-5, a convolutional neural network architecture proposed by Yann LeCun and his collaborators in 1998, does not use global average pooling in its original design. LeNet-5 primarily relies on subsampling layers (pooling layers) and fully connected layers.</p>
+<p>The typical structure of LeNet-5 consists of alternating convolutional layers with subsampling (pooling) layers, followed by fully connected layers. The pooling layers in LeNet-5 perform down-sampling through operations like max pooling. Global average pooling was not a commonly used technique at the time LeNet-5 was introduced.</p>
+<p>Global average pooling became more prominent in later CNN architectures, such as Google’s Inception models and the popular ResNet architectures</p>
+</section>
+<section id="global-pooling" class="level3" data-number="23.2">
+<h3 data-number="23.2" class="anchored" data-anchor-id="global-pooling"><span class="header-section-number">23.2</span> Global Pooling</h3>
+<p>Global pooling (or global average pooling) is a technique used in convolutional neural networks (CNNs) to reduce the spatial dimensions of a feature map to a single value or a vector. It involves taking the average (or maximum) value across all spatial locations of each feature map, resulting in a global representation.</p>
+<p>Here’s an example of global average pooling with Python using NumPy:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Assume you have a 3x3 feature map with 2 channels</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>feature_map <span class="op">=</span> np.array([</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    [[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>], [<span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]],</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    [[<span class="dv">10</span>, <span class="dv">11</span>, <span class="dv">12</span>], [<span class="dv">13</span>, <span class="dv">14</span>, <span class="dv">15</span>], [<span class="dv">16</span>, <span class="dv">17</span>, <span class="dv">18</span>]]</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>])</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply global average pooling</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>global_avg_pooled <span class="op">=</span> np.mean(feature_map, axis<span class="op">=</span>(<span class="dv">0</span>, <span class="dv">1</span>))</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the original feature map and the result after global average pooling</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Original Feature Map:"</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(feature_map)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"</span><span class="ch">\n</span><span class="st">Global Average Pooled Result:"</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(global_avg_pooled)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In this example, <code>feature_map</code> is a 3x3 feature map with 2 channels. The <code>np.mean</code> function is used to compute the average along the spatial dimensions (axis 0 and 1). The resulting <code>global_avg_pooled</code> is a vector representing the global average-pooled values for each channel.</p>
+<p>The output should look like this:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Original Feature Map:</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>[[[ <span class="dv">1</span>  <span class="dv">2</span>  <span class="dv">3</span>]</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  [ <span class="dv">4</span>  <span class="dv">5</span>  <span class="dv">6</span>]</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  [ <span class="dv">7</span>  <span class="dv">8</span>  <span class="dv">9</span>]]</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a> [[<span class="dv">10</span> <span class="dv">11</span> <span class="dv">12</span>]</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">13</span> <span class="dv">14</span> <span class="dv">15</span>]</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">16</span> <span class="dv">17</span> <span class="dv">18</span>]]]</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>Global Average Pooled Result:</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>[<span class="fl">8.5</span> <span class="fl">9.5</span> <span class="fl">10.5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In this case, the global average pooling operation has computed the average value for each channel across all spatial locations, resulting in a global representation for each channel. This global representation is often used as a compact and informative input to subsequent layers or for making predictions in the network.</p>
+</section>
 </section>
 <section id="alexnet-similar-principles-but-some-extra-engineering." class="level2" data-number="24">
 <h2 data-number="24" class="anchored" data-anchor-id="alexnet-similar-principles-but-some-extra-engineering."><span class="header-section-number">24</span> AlexNet: similar principles, but some extra engineering.</h2>
@@ -664,9 +776,7 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
-</section>
-<section id="title-1" class="level2" data-number="25">
-<h2 data-number="25" class="anchored" data-anchor-id="title-1"><span class="header-section-number">25</span> Title</h2>
+<!-- ## Title -->
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -676,33 +786,44 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Weight sharing in convolutional neural networks (CNNs) refers to the practice of using the same set of learnable parameters (weights and biases) for multiple units or neurons in a layer. In other words, the weights are shared across different spatial locations in the input.</p>
+<p>The key idea behind weight sharing is to enforce translation invariance in the features learned by the convolutional layers. In an image, certain features (e.g., edges, textures) are meaningful regardless of their specific location. By using shared weights, the network can learn to detect these features at different spatial positions, leading to a more robust and generalizable representation.</p>
+<p>Here’s a brief explanation of weight sharing in CNNs:</p>
+<ol type="1">
+<li><strong>Convolutional Operation:</strong>
+<ul>
+<li>In a convolutional layer, a set of filters (also known as kernels) is applied to the input image or feature map.</li>
+<li>Each filter is characterized by a set of learnable weights and biases.</li>
+</ul></li>
+<li><strong>Spatial Weight Sharing:</strong>
+<ul>
+<li>Instead of having unique weights for each spatial location in the input, weight sharing involves using the same set of weights across different spatial locations.</li>
+<li>For example, if a filter detects a certain feature (e.g., an edge) at one location, the same filter with the same weights can be used to detect the same feature at a different location.</li>
+</ul></li>
+<li><strong>Benefits:</strong>
+<ul>
+<li>Reduces the number of learnable parameters in the network, making it more computationally efficient.</li>
+<li>Encourages the learning of spatially invariant features, enhancing the network’s ability to recognize patterns across different locations.</li>
+</ul></li>
+<li><strong>Translation Invariance:</strong>
+<ul>
+<li>Weight sharing helps the network achieve translation invariance, meaning that it can recognize features regardless of their position in the input.</li>
+</ul></li>
+</ol>
+<section id="cnn-and-weight-sharing" class="level3" data-number="24.1">
+<h3 data-number="24.1" class="anchored" data-anchor-id="cnn-and-weight-sharing"><span class="header-section-number">24.1</span> CNN and Weight Sharing</h3>
+<p>CNN is primarily used for image classification and segmentation, and it works by finding similar patterns throughout the input. These patterns can be found by sliding a filter with shared weights across the input. The shared weights concept allows the network to learn the same pattern, regardless of its position in the input</p>
+<!-- ## What shape should the
+<center>![Slide 26](imgs/page_26.png){.w575}</center><pre></pre>
+
+
+
+## What shape should the
+<center>![Slide 27](imgs/page_27.png){.w575}</center><pre></pre> -->
 </section>
-<section id="what-shape-should-the" class="level2" data-number="26">
-<h2 data-number="26" class="anchored" data-anchor-id="what-shape-should-the"><span class="header-section-number">26</span> What shape should the</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_26.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 26</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
 </section>
-<section id="what-shape-should-the-1" class="level2" data-number="27">
-<h2 data-number="27" class="anchored" data-anchor-id="what-shape-should-the-1"><span class="header-section-number">27</span> What shape should the</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_27.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 27</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-</section>
-<section id="what-shape-should-the-2" class="level2" data-number="28">
-<h2 data-number="28" class="anchored" data-anchor-id="what-shape-should-the-2"><span class="header-section-number">28</span> What shape should the</h2>
+<section id="what-shape-should-the" class="level2" data-number="25">
+<h2 data-number="25" class="anchored" data-anchor-id="what-shape-should-the"><span class="header-section-number">25</span> What shape should the</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -712,21 +833,11 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<!-- ## 3D Activations
+<center>![Slide 29](imgs/page_29.png){.w575}</center><pre></pre> -->
 </section>
-<section id="activations" class="level2" data-number="29">
-<h2 data-number="29" class="anchored" data-anchor-id="activations"><span class="header-section-number">29</span> 31) Activations</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_29.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 29</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-</section>
-<section id="activations-1" class="level2" data-number="30">
-<h2 data-number="30" class="anchored" data-anchor-id="activations-1"><span class="header-section-number">30</span> 31) Activations</h2>
+<section id="d-activations" class="level2" data-number="26">
+<h2 data-number="26" class="anchored" data-anchor-id="d-activations"><span class="header-section-number">26</span> 3D Activations</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -736,21 +847,12 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Instead of calling it RGB channels, we just call it channels</p>
+<!-- ## 3D Activations
+<center>![Slide 31](imgs/page_31.png){.w575}</center><pre></pre> -->
 </section>
-<section id="activations-2" class="level2" data-number="31">
-<h2 data-number="31" class="anchored" data-anchor-id="activations-2"><span class="header-section-number">31</span> 31) Activations</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_31.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 31</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-</section>
-<section id="activations-3" class="level2" data-number="32">
-<h2 data-number="32" class="anchored" data-anchor-id="activations-3"><span class="header-section-number">32</span> 31) Activations</h2>
+<section id="d-activations-1" class="level2" data-number="27">
+<h2 data-number="27" class="anchored" data-anchor-id="d-activations-1"><span class="header-section-number">27</span> 3D Activations</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -760,21 +862,13 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Now the activations contain width and height and also depth.</p>
+<p>The depth is govern by the hidden dimensionality of the NN</p>
+<!-- ## 3D Activations
+<center>![Slide 33](imgs/page_33.png){.w575}</center><pre></pre> -->
 </section>
-<section id="activations-4" class="level2" data-number="33">
-<h2 data-number="33" class="anchored" data-anchor-id="activations-4"><span class="header-section-number">33</span> 31) Activations</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_33.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 33</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-</section>
-<section id="activations-5" class="level2" data-number="34">
-<h2 data-number="34" class="anchored" data-anchor-id="activations-5"><span class="header-section-number">34</span> 31) Activations</h2>
+<section id="d-activations-2" class="level2" data-number="28">
+<h2 data-number="28" class="anchored" data-anchor-id="d-activations-2"><span class="header-section-number">28</span> 3D Activations</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -785,8 +879,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="activations-6" class="level2" data-number="35">
-<h2 data-number="35" class="anchored" data-anchor-id="activations-6"><span class="header-section-number">35</span> 31) Activations</h2>
+<section id="d-activations-3" class="level2" data-number="29">
+<h2 data-number="29" class="anchored" data-anchor-id="d-activations-3"><span class="header-section-number">29</span> 3D Activations</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -796,33 +890,16 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Here this is a convolution kernel, with kernel size 5x5</p>
+<p>Now our neuron has a kernel size of 5x5 weights and also x3 because it has 3 channels</p>
+<p>So each Neuron as a 3D filter</p>
+<!-- ## 3D Activations
+<center>![Slide 36](imgs/page_36.png){.w575}</center><pre></pre> -->
+<!-- ## 3D Activations
+<center>![Slide 37](imgs/page_37.png){.w575}</center><pre></pre> -->
 </section>
-<section id="activations-7" class="level2" data-number="36">
-<h2 data-number="36" class="anchored" data-anchor-id="activations-7"><span class="header-section-number">36</span> 31) Activations</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_36.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 36</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-</section>
-<section id="activations-8" class="level2" data-number="37">
-<h2 data-number="37" class="anchored" data-anchor-id="activations-8"><span class="header-section-number">37</span> 31) Activations</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_37.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 37</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-</section>
-<section id="activations-9" class="level2" data-number="38">
-<h2 data-number="38" class="anchored" data-anchor-id="activations-9"><span class="header-section-number">38</span> 231) Activations</h2>
+<section id="d-activations-4" class="level2" data-number="30">
+<h2 data-number="30" class="anchored" data-anchor-id="d-activations-4"><span class="header-section-number">30</span> 3D Activations</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -832,45 +909,49 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
-</section>
-<section id="activations-10" class="level2" data-number="39">
-<h2 data-number="39" class="anchored" data-anchor-id="activations-10"><span class="header-section-number">39</span> 31) Activations</h2>
+<!-- <center>![](2023-11-21-19-51-29.png){.w300}</center><pre></pre>
+<center>![](2023-11-21-19-51-51.png){.w575}</center><pre></pre> -->
+<section id="example-not-moving-filter" class="level3" data-number="30.1">
+<h3 data-number="30.1" class="anchored" data-anchor-id="example-not-moving-filter"><span class="header-section-number">30.1</span> Example: Not-moving Filter</h3>
 <center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_39.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 39</figcaption>
-</figure>
-</div>
+<img src="2023-11-21-20-38-41.png" class="w300 img-fluid">
 </center>
 <pre></pre>
+<p>Here we have:</p>
+<ul>
+<li>Input Layer: 3x32x32</li>
+<li>Kernel 5-size: 3x5x5</li>
+</ul>
+<p>If we do not slide the filter then we are gonna end up with:</p>
+<ul>
+<li>Pre-output: 3x1x1 (three scalar values per each channel)</li>
+</ul>
+<p>Now we do a summation over the three channels and we have thus:</p>
+<ul>
+<li>Output: 1x1x1</li>
+</ul>
 </section>
-<section id="activations-11" class="level2" data-number="40">
-<h2 data-number="40" class="anchored" data-anchor-id="activations-11"><span class="header-section-number">40</span> 31) Activations</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_40.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 40</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
+<section id="example-sliding-filter" class="level3" data-number="30.2">
+<h3 data-number="30.2" class="anchored" data-anchor-id="example-sliding-filter"><span class="header-section-number">30.2</span> Example: Sliding Filter</h3>
+<p><img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*Emy_ai48XaOeGDgykLypPg.gif" class="img-fluid"> <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*5otecXBNlms3lslqlYworA.gif" class="img-fluid" alt="Source: link"></p>
+<p>Imagine now that we slide this 3D filter along all the input layer, then we end up:</p>
+<ul>
+<li>Pre-ouput: 3x(28)x(28), where we compute (width - kernel_size + 1) = (32-5+1)</li>
+</ul>
+<p>Now we sum over all three channel element wise and end up with:</p>
+<ul>
+<li>Output: 1x28x28</li>
+</ul>
+<!-- ## 3D Activations
+<center>![Slide 39](imgs/page_39.png){.w575}</center><pre></pre> -->
+<!-- ## 3D Activations
+<center>![Slide 40](imgs/page_40.png){.w575}</center><pre></pre> -->
+<!-- ## 3D Activations
+<center>![Slide 41](imgs/page_41.png){.w575}</center><pre></pre> -->
 </section>
-<section id="activations-12" class="level2" data-number="41">
-<h2 data-number="41" class="anchored" data-anchor-id="activations-12"><span class="header-section-number">41</span> 31) Activations</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_41.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 41</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
 </section>
-<section id="activations-13" class="level2" data-number="42">
-<h2 data-number="42" class="anchored" data-anchor-id="activations-13"><span class="header-section-number">42</span> 31) Activations</h2>
+<section id="d-activations-5" class="level2" data-number="31">
+<h2 data-number="31" class="anchored" data-anchor-id="d-activations-5"><span class="header-section-number">31</span> 3D Activations</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -880,21 +961,11 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<!-- ## 3D Activations
+<center>![Slide 43](imgs/page_43.png){.w575}</center><pre></pre> -->
 </section>
-<section id="activations-14" class="level2" data-number="43">
-<h2 data-number="43" class="anchored" data-anchor-id="activations-14"><span class="header-section-number">43</span> 31) Activations</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_43.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 43</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-</section>
-<section id="activations-15" class="level2" data-number="44">
-<h2 data-number="44" class="anchored" data-anchor-id="activations-15"><span class="header-section-number">44</span> 31) Activations</h2>
+<section id="d-activations-6" class="level2" data-number="32">
+<h2 data-number="32" class="anchored" data-anchor-id="d-activations-6"><span class="header-section-number">32</span> 3D Activations</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -905,8 +976,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="activations-16" class="level2" data-number="45">
-<h2 data-number="45" class="anchored" data-anchor-id="activations-16"><span class="header-section-number">45</span> 31) Activations</h2>
+<section id="d-activations-7" class="level2" data-number="33">
+<h2 data-number="33" class="anchored" data-anchor-id="d-activations-7"><span class="header-section-number">33</span> 3D Activations</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -916,21 +987,16 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>If you now slide the filter with as many neurons we will get:</p>
+<ul>
+<li>Ouput: depth x (<span class="math inline">\(l\)</span>) x (<span class="math inline">\(l\)</span>)</li>
+</ul>
+<p>Where <span class="math inline">\(l\)</span> = width - kernel_size + 1</p>
+<!-- ## 3D Activations
+<center>![Slide 46](imgs/page_46.png){.w575}</center><pre></pre> -->
 </section>
-<section id="activations-17" class="level2" data-number="46">
-<h2 data-number="46" class="anchored" data-anchor-id="activations-17"><span class="header-section-number">46</span> 31) Activations</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_46.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 46</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-</section>
-<section id="activations-18" class="level2" data-number="47">
-<h2 data-number="47" class="anchored" data-anchor-id="activations-18"><span class="header-section-number">47</span> 31) Activations</h2>
+<section id="d-activations-8" class="level2" data-number="34">
+<h2 data-number="34" class="anchored" data-anchor-id="d-activations-8"><span class="header-section-number">34</span> 3D Activations</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -940,33 +1006,13 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<!-- ## 3D Activations
+<center>![Slide 48](imgs/page_48.png){.w575}</center><pre></pre> -->
+<!-- ## 31) Activations
+<center>![Slide 49](imgs/page_49.png){.w575}</center><pre></pre> -->
 </section>
-<section id="activations-19" class="level2" data-number="48">
-<h2 data-number="48" class="anchored" data-anchor-id="activations-19"><span class="header-section-number">48</span> 31) Activations</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_48.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 48</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-</section>
-<section id="activations-20" class="level2" data-number="49">
-<h2 data-number="49" class="anchored" data-anchor-id="activations-20"><span class="header-section-number">49</span> 31) Activations</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_49.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 49</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-</section>
-<section id="activations-21" class="level2" data-number="50">
-<h2 data-number="50" class="anchored" data-anchor-id="activations-21"><span class="header-section-number">50</span> 31) Activations</h2>
+<section id="d-activations-9" class="level2" data-number="35">
+<h2 data-number="35" class="anchored" data-anchor-id="d-activations-9"><span class="header-section-number">35</span> 3D Activations</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -976,21 +1022,11 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<!-- ## 3D Activations
+<center>![Slide 51](imgs/page_51.png){.w575}</center><pre></pre> -->
 </section>
-<section id="activations-22" class="level2" data-number="51">
-<h2 data-number="51" class="anchored" data-anchor-id="activations-22"><span class="header-section-number">51</span> 31) Activations</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_51.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 51</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-</section>
-<section id="activations-23" class="level2" data-number="52">
-<h2 data-number="52" class="anchored" data-anchor-id="activations-23"><span class="header-section-number">52</span> 31) Activations</h2>
+<section id="d-activations-10" class="level2" data-number="36">
+<h2 data-number="36" class="anchored" data-anchor-id="d-activations-10"><span class="header-section-number">36</span> 3D Activations</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1001,8 +1037,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="d-activations" class="level2" data-number="53">
-<h2 data-number="53" class="anchored" data-anchor-id="d-activations"><span class="header-section-number">53</span> 3D Activations</h2>
+<section id="d-activations-11" class="level2" data-number="37">
+<h2 data-number="37" class="anchored" data-anchor-id="d-activations-11"><span class="header-section-number">37</span> 3D Activations</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1013,8 +1049,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="d-activations-1" class="level2" data-number="54">
-<h2 data-number="54" class="anchored" data-anchor-id="d-activations-1"><span class="header-section-number">54</span> 3D Activations</h2>
+<section id="d-activations-12" class="level2" data-number="38">
+<h2 data-number="38" class="anchored" data-anchor-id="d-activations-12"><span class="header-section-number">38</span> 3D Activations</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1025,8 +1061,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="d-activations-2" class="level2" data-number="55">
-<h2 data-number="55" class="anchored" data-anchor-id="d-activations-2"><span class="header-section-number">55</span> 3D Activations</h2>
+<section id="d-activations-13" class="level2" data-number="39">
+<h2 data-number="39" class="anchored" data-anchor-id="d-activations-13"><span class="header-section-number">39</span> 3D Activations</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1037,8 +1073,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="d-activations-3" class="level2" data-number="56">
-<h2 data-number="56" class="anchored" data-anchor-id="d-activations-3"><span class="header-section-number">56</span> 3D Activations</h2>
+<section id="d-activations-14" class="level2" data-number="40">
+<h2 data-number="40" class="anchored" data-anchor-id="d-activations-14"><span class="header-section-number">40</span> 3D Activations</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1049,8 +1085,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="putting-it-together" class="level2" data-number="57">
-<h2 data-number="57" class="anchored" data-anchor-id="putting-it-together"><span class="header-section-number">57</span> Putting it together</h2>
+<section id="putting-it-together" class="level2" data-number="41">
+<h2 data-number="41" class="anchored" data-anchor-id="putting-it-together"><span class="header-section-number">41</span> Putting it together</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1061,8 +1097,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="putting-it-together-1" class="level2" data-number="58">
-<h2 data-number="58" class="anchored" data-anchor-id="putting-it-together-1"><span class="header-section-number">58</span> Putting it together</h2>
+<section id="putting-it-together-1" class="level2" data-number="42">
+<h2 data-number="42" class="anchored" data-anchor-id="putting-it-together-1"><span class="header-section-number">42</span> Putting it together</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1073,8 +1109,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="putting-it-together-2" class="level2" data-number="59">
-<h2 data-number="59" class="anchored" data-anchor-id="putting-it-together-2"><span class="header-section-number">59</span> Putting it together</h2>
+<section id="putting-it-together-2" class="level2" data-number="43">
+<h2 data-number="43" class="anchored" data-anchor-id="putting-it-together-2"><span class="header-section-number">43</span> Putting it together</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1085,8 +1121,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="putting-it-together-3" class="level2" data-number="60">
-<h2 data-number="60" class="anchored" data-anchor-id="putting-it-together-3"><span class="header-section-number">60</span> Putting it together</h2>
+<section id="putting-it-together-3" class="level2" data-number="44">
+<h2 data-number="44" class="anchored" data-anchor-id="putting-it-together-3"><span class="header-section-number">44</span> Putting it together</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1097,8 +1133,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="putting-it-together-4" class="level2" data-number="61">
-<h2 data-number="61" class="anchored" data-anchor-id="putting-it-together-4"><span class="header-section-number">61</span> Putting it together</h2>
+<section id="putting-it-together-4" class="level2" data-number="45">
+<h2 data-number="45" class="anchored" data-anchor-id="putting-it-together-4"><span class="header-section-number">45</span> Putting it together</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1109,8 +1145,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="putting-it-together-5" class="level2" data-number="62">
-<h2 data-number="62" class="anchored" data-anchor-id="putting-it-together-5"><span class="header-section-number">62</span> Putting it together</h2>
+<section id="putting-it-together-5" class="level2" data-number="46">
+<h2 data-number="46" class="anchored" data-anchor-id="putting-it-together-5"><span class="header-section-number">46</span> Putting it together</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1121,8 +1157,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="putting-it-together-6" class="level2" data-number="63">
-<h2 data-number="63" class="anchored" data-anchor-id="putting-it-together-6"><span class="header-section-number">63</span> Putting it together</h2>
+<section id="putting-it-together-6" class="level2" data-number="47">
+<h2 data-number="47" class="anchored" data-anchor-id="putting-it-together-6"><span class="header-section-number">47</span> Putting it together</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1133,8 +1169,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="putting-it-together-7" class="level2" data-number="64">
-<h2 data-number="64" class="anchored" data-anchor-id="putting-it-together-7"><span class="header-section-number">64</span> Putting it together</h2>
+<section id="putting-it-together-7" class="level2" data-number="48">
+<h2 data-number="48" class="anchored" data-anchor-id="putting-it-together-7"><span class="header-section-number">48</span> Putting it together</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1144,9 +1180,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Here all these coloured layers in the cube are filters which are neurons. All these neurons act only in one hidden layer8</p>
 </section>
-<section id="convolution-stride" class="level2" data-number="65">
-<h2 data-number="65" class="anchored" data-anchor-id="convolution-stride"><span class="header-section-number">65</span> Convolution: Stride</h2>
+<section id="convolution-stride" class="level2" data-number="49">
+<h2 data-number="49" class="anchored" data-anchor-id="convolution-stride"><span class="header-section-number">49</span> Convolution: Stride</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1157,8 +1194,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="convolution-stride-1" class="level2" data-number="66">
-<h2 data-number="66" class="anchored" data-anchor-id="convolution-stride-1"><span class="header-section-number">66</span> Convolution: Stride</h2>
+<section id="convolution-stride-1" class="level2" data-number="50">
+<h2 data-number="50" class="anchored" data-anchor-id="convolution-stride-1"><span class="header-section-number">50</span> Convolution: Stride</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1169,8 +1206,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="convolution-stride-2" class="level2" data-number="67">
-<h2 data-number="67" class="anchored" data-anchor-id="convolution-stride-2"><span class="header-section-number">67</span> Convolution: Stride</h2>
+<section id="convolution-stride-2" class="level2" data-number="51">
+<h2 data-number="51" class="anchored" data-anchor-id="convolution-stride-2"><span class="header-section-number">51</span> Convolution: Stride</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1181,8 +1218,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="convolution-stride-3" class="level2" data-number="68">
-<h2 data-number="68" class="anchored" data-anchor-id="convolution-stride-3"><span class="header-section-number">68</span> Convolution: Stride</h2>
+<section id="convolution-stride-3" class="level2" data-number="52">
+<h2 data-number="52" class="anchored" data-anchor-id="convolution-stride-3"><span class="header-section-number">52</span> Convolution: Stride</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1193,8 +1230,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="convolution-stride-4" class="level2" data-number="69">
-<h2 data-number="69" class="anchored" data-anchor-id="convolution-stride-4"><span class="header-section-number">69</span> Convolution: Stride</h2>
+<section id="convolution-stride-4" class="level2" data-number="53">
+<h2 data-number="53" class="anchored" data-anchor-id="convolution-stride-4"><span class="header-section-number">53</span> Convolution: Stride</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1205,8 +1242,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="convolution-stride-5" class="level2" data-number="70">
-<h2 data-number="70" class="anchored" data-anchor-id="convolution-stride-5"><span class="header-section-number">70</span> Convolution: Stride</h2>
+<section id="convolution-stride-5" class="level2" data-number="54">
+<h2 data-number="54" class="anchored" data-anchor-id="convolution-stride-5"><span class="header-section-number">54</span> Convolution: Stride</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1217,8 +1254,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="convolution-stride-6" class="level2" data-number="71">
-<h2 data-number="71" class="anchored" data-anchor-id="convolution-stride-6"><span class="header-section-number">71</span> (Convolution: Stride</h2>
+<section id="convolution-stride-6" class="level2" data-number="55">
+<h2 data-number="55" class="anchored" data-anchor-id="convolution-stride-6"><span class="header-section-number">55</span> Convolution: Stride</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1228,9 +1265,11 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>In each time sum across channels because if you want to detect something you want to use all the colors, all the incoming channels</p>
+<p>So each convolution sums all channels like in RGB, because you dont want a filter that only looks at blue, one that only looks at red ..</p>
 </section>
-<section id="convolution-stride-7" class="level2" data-number="72">
-<h2 data-number="72" class="anchored" data-anchor-id="convolution-stride-7"><span class="header-section-number">72</span> (Convolution: Stride</h2>
+<section id="convolution-stride-7" class="level2" data-number="56">
+<h2 data-number="56" class="anchored" data-anchor-id="convolution-stride-7"><span class="header-section-number">56</span> Convolution: Stride</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1240,9 +1279,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Here in the next slide we see that <strong>stride</strong> is the number of squares that are moved, so the kernel filter will i.e stride=3 will slide every two squares</p>
 </section>
-<section id="convolution-stride-8" class="level2" data-number="73">
-<h2 data-number="73" class="anchored" data-anchor-id="convolution-stride-8"><span class="header-section-number">73</span> (Convolution: Stride</h2>
+<section id="convolution-stride-8" class="level2" data-number="57">
+<h2 data-number="57" class="anchored" data-anchor-id="convolution-stride-8"><span class="header-section-number">57</span> Convolution: Stride</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1253,8 +1293,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="convolution-stride-9" class="level2" data-number="74">
-<h2 data-number="74" class="anchored" data-anchor-id="convolution-stride-9"><span class="header-section-number">74</span> (Convolution: Stride</h2>
+<section id="convolution-stride-9" class="level2" data-number="58">
+<h2 data-number="58" class="anchored" data-anchor-id="convolution-stride-9"><span class="header-section-number">58</span> Convolution: Stride</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1265,8 +1305,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="convolution-stride-10" class="level2" data-number="75">
-<h2 data-number="75" class="anchored" data-anchor-id="convolution-stride-10"><span class="header-section-number">75</span> (Convolution: Stride</h2>
+<section id="convolution-stride-10" class="level2" data-number="59">
+<h2 data-number="59" class="anchored" data-anchor-id="convolution-stride-10"><span class="header-section-number">59</span> Convolution: Stride</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1277,8 +1317,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="convolution-padding" class="level2" data-number="76">
-<h2 data-number="76" class="anchored" data-anchor-id="convolution-padding"><span class="header-section-number">76</span> Convolution: Padding</h2>
+<section id="convolution-padding" class="level2" data-number="60">
+<h2 data-number="60" class="anchored" data-anchor-id="convolution-padding"><span class="header-section-number">60</span> Convolution: Padding</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1289,8 +1329,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="convolution-padding-1" class="level2" data-number="77">
-<h2 data-number="77" class="anchored" data-anchor-id="convolution-padding-1"><span class="header-section-number">77</span> Convolution: Padding</h2>
+<section id="convolution-padding-1" class="level2" data-number="61">
+<h2 data-number="61" class="anchored" data-anchor-id="convolution-padding-1"><span class="header-section-number">61</span> Convolution: Padding</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1301,8 +1341,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="convolution-padding-2" class="level2" data-number="78">
-<h2 data-number="78" class="anchored" data-anchor-id="convolution-padding-2"><span class="header-section-number">78</span> Convolution: Padding</h2>
+<section id="convolution-padding-2" class="level2" data-number="62">
+<h2 data-number="62" class="anchored" data-anchor-id="convolution-padding-2"><span class="header-section-number">62</span> Convolution: Padding</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1313,8 +1353,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="convolution-padding-3" class="level2" data-number="79">
-<h2 data-number="79" class="anchored" data-anchor-id="convolution-padding-3"><span class="header-section-number">79</span> Convolution: Padding</h2>
+<section id="convolution-padding-3" class="level2" data-number="63">
+<h2 data-number="63" class="anchored" data-anchor-id="convolution-padding-3"><span class="header-section-number">63</span> Convolution: Padding</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1324,21 +1364,11 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<!-- ## Convolution:
+<center>![Slide 80](imgs/page_80.png){.w575}</center><pre></pre> -->
 </section>
-<section id="convolution" class="level2" data-number="80">
-<h2 data-number="80" class="anchored" data-anchor-id="convolution"><span class="header-section-number">80</span> Convolution:</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_80.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 80</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-</section>
-<section id="convolution-1" class="level2" data-number="81">
-<h2 data-number="81" class="anchored" data-anchor-id="convolution-1"><span class="header-section-number">81</span> Convolution:</h2>
+<section id="convolution" class="level2" data-number="64">
+<h2 data-number="64" class="anchored" data-anchor-id="convolution"><span class="header-section-number">64</span> Convolution:</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1348,9 +1378,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>W_out is what you get in the ouput layer of the slide (so for one filter)</p>
 </section>
-<section id="x1-convolution" class="level2" data-number="82">
-<h2 data-number="82" class="anchored" data-anchor-id="x1-convolution"><span class="header-section-number">82</span> 1x1 Convolution</h2>
+<section id="x1-convolution" class="level2" data-number="65">
+<h2 data-number="65" class="anchored" data-anchor-id="x1-convolution"><span class="header-section-number">65</span> 1x1 Convolution</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1360,9 +1391,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>It looks at all the values in the depth, so in RGB, or more importantly in deep NNs the different hidden layers and they just mixed those information together</p>
 </section>
-<section id="x1-convolution-a-computationally-cheap-method" class="level2" data-number="83">
-<h2 data-number="83" class="anchored" data-anchor-id="x1-convolution-a-computationally-cheap-method"><span class="header-section-number">83</span> 1x1 Convolution: a computationally cheap method</h2>
+<section id="x1-convolution-a-computationally-cheap-method" class="level2" data-number="66">
+<h2 data-number="66" class="anchored" data-anchor-id="x1-convolution-a-computationally-cheap-method"><span class="header-section-number">66</span> 1x1 Convolution: a computationally cheap method</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1372,10 +1404,11 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Here in the 5x5x32 the convolution will be done over the 192 channels, 32 times (because we have 32 filters as depth), so sliding the filter a lot</p>
+<p>In the bottom case we reduce the number of channels so now we reduce computations</p>
 </section>
-<section id="take-3min-discuss-with-your-neighbor" class="level2" data-number="84">
-<h2 data-number="84" class="anchored" data-anchor-id="take-3min-discuss-with-your-neighbor"><span class="header-section-number">84</span> Take 3min: discuss with your neighbor:</h2>
-— ~wafko+rdt ae AA a a4 ~ + =
+<section id="quiz-1" class="level2" data-number="67">
+<h2 data-number="67" class="anchored" data-anchor-id="quiz-1"><span class="header-section-number">67</span> Quiz:</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1385,9 +1418,103 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<ol type="1">
+<li></li>
+</ol>
+<ul>
+<li>In the case of a fully connected layer, it connects everything in the layer. And even the 1x1 convolution it takes the full input dimensionality meaning it takes a look at all 192 channels still. In the 1x1 it reduces the number of connections comparing to fully connected and also it mixes local information</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+More differences:
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>A 1x1 convolutional layer and a fully-connected layer (dense layer) are similar in that they both perform a linear transformation on the input data, but there are key differences between the two.</p>
+<section id="x1-convolutional-layer" class="level3" data-number="67.1">
+<h3 data-number="67.1" class="anchored" data-anchor-id="x1-convolutional-layer"><span class="header-section-number">67.1</span> 1x1 Convolutional Layer:</h3>
+<ol type="1">
+<li><strong>Spatial Information:</strong>
+<ul>
+<li>A 1x1 convolutional layer operates on spatial information in the input tensor.</li>
+<li>It applies convolutional filters with a size of 1x1, which means it processes information at individual spatial locations.</li>
+<li>Useful for capturing relationships between channels but does not capture spatial patterns.</li>
+</ul></li>
+<li><strong>Parameter Sharing:</strong>
+<ul>
+<li>Utilizes parameter sharing, similar to larger convolutional layers.</li>
+<li>Each element in the output is the result of a weighted sum of its input elements, considering all channels.</li>
+</ul></li>
+<li><strong>Output Dimensions:</strong>
+<ul>
+<li>The output dimensions depend on the number of 1x1 filters used.</li>
+</ul></li>
+</ol>
 </section>
-<section id="dilated-convolutions" class="level2" data-number="85">
-<h2 data-number="85" class="anchored" data-anchor-id="dilated-convolutions"><span class="header-section-number">85</span> Dilated Convolutions</h2>
+<section id="fully-connected-layer" class="level3" data-number="67.2">
+<h3 data-number="67.2" class="anchored" data-anchor-id="fully-connected-layer"><span class="header-section-number">67.2</span> Fully-Connected Layer:</h3>
+<ol type="1">
+<li><strong>Flattening:</strong>
+<ul>
+<li>A fully-connected layer operates on the flattened version of the input.</li>
+<li>It considers all elements in the input tensor as individual input features.</li>
+</ul></li>
+<li><strong>Parameter Sharing:</strong>
+<ul>
+<li>Each neuron in a fully-connected layer has its set of weights for every input feature.</li>
+<li>No parameter sharing between different neurons.</li>
+</ul></li>
+<li><strong>Output Dimensions:</strong>
+<ul>
+<li>The output dimensions are determined by the number of neurons in the layer.</li>
+</ul></li>
+</ol>
+</section>
+<section id="differences" class="level3" data-number="67.3">
+<h3 data-number="67.3" class="anchored" data-anchor-id="differences"><span class="header-section-number">67.3</span> Differences:</h3>
+<ol type="1">
+<li><strong>Spatial vs.&nbsp;Global Information:</strong>
+<ul>
+<li>1x1 convolutional layers capture spatial information within each channel.</li>
+<li>Fully-connected layers operate on global information, considering all elements as individual features.</li>
+</ul></li>
+<li><strong>Parameter Sharing:</strong>
+<ul>
+<li>1x1 convolutions use parameter sharing, making them more efficient for processing spatially correlated features.</li>
+<li>Fully-connected layers lack parameter sharing, resulting in a larger number of parameters.</li>
+</ul></li>
+<li><strong>Computational Efficiency:</strong>
+<ul>
+<li>1x1 convolutions are computationally more efficient than fully-connected layers, especially in scenarios with spatially structured data.</li>
+</ul></li>
+<li><strong>Usage in Convolutional Networks:</strong>
+<ul>
+<li>1x1 convolutions are commonly used in convolutional neural networks (CNNs) to adjust the number of channels and perform feature transformations.</li>
+<li>Fully-connected layers are typically used in the final layers of a neural network for classification.</li>
+</ul></li>
+</ol>
+</section>
+</div>
+</div>
+</div>
+<ol start="2" type="1">
+<li></li>
+</ol>
+<ul>
+<li>You dont loss necessarily information, we do not want to do it at the beginning because mixing, red, blue and green per pixel does not do much. It makes sense to do it later if you have edges on top of edges and then you mix this information, it makes more sense.<br>
+</li>
+<li>It is also not good to apply 1x1 when you do <strong>not</strong> want translation invariance</li>
+<li>every 1x1 is strictly local, every neuron as a receptive field so there is actually spatial information there</li>
+</ul>
+</section>
+<section id="dilated-convolutions" class="level2" data-number="68">
+<h2 data-number="68" class="anchored" data-anchor-id="dilated-convolutions"><span class="header-section-number">68</span> Dilated Convolutions</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1397,9 +1524,12 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>This is very usefull if you need to deal with a huge image, but dont want huge hidden activations</p>
+<p>If you do this then you can quickly downscale the image, without ignoring too many things</p>
+<p>Also think that dilation its less expensive because doing 5x5 its more expensive than doing 3x3, so you can learn 3x3 but with holes in between and that is more efficient to consider large spatial footprint</p>
 </section>
-<section id="pooling" class="level2" data-number="86">
-<h2 data-number="86" class="anchored" data-anchor-id="pooling"><span class="header-section-number">86</span> Pooling</h2>
+<section id="pooling" class="level2" data-number="69">
+<h2 data-number="69" class="anchored" data-anchor-id="pooling"><span class="header-section-number">69</span> Pooling</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1410,8 +1540,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="pooling-1" class="level2" data-number="87">
-<h2 data-number="87" class="anchored" data-anchor-id="pooling-1"><span class="header-section-number">87</span> Pooling</h2>
+<section id="pooling-1" class="level2" data-number="70">
+<h2 data-number="70" class="anchored" data-anchor-id="pooling-1"><span class="header-section-number">70</span> Pooling</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1422,8 +1552,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="max-poolina" class="level2" data-number="88">
-<h2 data-number="88" class="anchored" data-anchor-id="max-poolina"><span class="header-section-number">88</span> Max Poolina</h2>
+<section id="max-pooling" class="level2" data-number="71">
+<h2 data-number="71" class="anchored" data-anchor-id="max-pooling"><span class="header-section-number">71</span> Max Pooling</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1434,8 +1564,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="getting-rid-of-pooling" class="level2" data-number="89">
-<h2 data-number="89" class="anchored" data-anchor-id="getting-rid-of-pooling"><span class="header-section-number">89</span> Getting rid of pooling</h2>
+<section id="getting-rid-of-pooling" class="level2" data-number="72">
+<h2 data-number="72" class="anchored" data-anchor-id="getting-rid-of-pooling"><span class="header-section-number">72</span> Getting rid of pooling</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1445,45 +1575,21 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Instead of using pooling you can use a larger stride (so how many squares we slide) that we talk about</p>
+<p>In Transformers pooling it is also not used anymore</p>
+<p>In CNN is used</p>
+<!-- ## Example ConvNet
+<center>![Slide 90](imgs/page_90.png){.w575}</center><pre></pre>
+
+
+
+## Example ConvNet
+<center>![Slide 91](imgs/page_91.png){.w575}</center><pre></pre> -->
+<!-- ## Example ConvNet
+<center>![Slide 92](imgs/page_92.png){.w575}</center><pre></pre> -->
 </section>
-<section id="example-convnet" class="level2" data-number="90">
-<h2 data-number="90" class="anchored" data-anchor-id="example-convnet"><span class="header-section-number">90</span> Example ConvNet</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_90.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 90</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-</section>
-<section id="example-convnet-1" class="level2" data-number="91">
-<h2 data-number="91" class="anchored" data-anchor-id="example-convnet-1"><span class="header-section-number">91</span> Example ConvNet</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_91.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 91</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-</section>
-<section id="example-convnet-2" class="level2" data-number="92">
-<h2 data-number="92" class="anchored" data-anchor-id="example-convnet-2"><span class="header-section-number">92</span> Example ConvNet</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_92.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 92</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-</section>
-<section id="example-convnet-3" class="level2" data-number="93">
-<h2 data-number="93" class="anchored" data-anchor-id="example-convnet-3"><span class="header-section-number">93</span> Example ConvNet</h2>
+<section id="example-convnet" class="level2" data-number="73">
+<h2 data-number="73" class="anchored" data-anchor-id="example-convnet"><span class="header-section-number">73</span> Example ConvNet</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1493,9 +1599,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Every filter is one row here</p>
 </section>
-<section id="quiz-1" class="level2" data-number="94">
-<h2 data-number="94" class="anchored" data-anchor-id="quiz-1"><span class="header-section-number">94</span> Quiz</h2>
+<section id="quiz-2" class="level2" data-number="74">
+<h2 data-number="74" class="anchored" data-anchor-id="quiz-2"><span class="header-section-number">74</span> Quiz</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1505,11 +1612,12 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>If you choose the kernel size to be the same as the input image then it is fully connected.</p>
+<p>Mathematically 1</p>
+<p>Implementation wise 2</p>
 </section>
-<section id="rosalind-franklin" class="level2" data-number="95">
-<h2 data-number="95" class="anchored" data-anchor-id="rosalind-franklin"><span class="header-section-number">95</span> Rosalind Franklin:</h2>
-<p>“science and</p>
-How research gets done part 4 everyday life can
+<section id="how-research-gets-done-part-4" class="level2" data-number="75">
+<h2 data-number="75" class="anchored" data-anchor-id="how-research-gets-done-part-4"><span class="header-section-number">75</span> How research gets done part 4</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1519,9 +1627,6 @@ How research gets done part 4 everyday life can
 </div>
 </center>
 <pre></pre>
-</section>
-<section id="title-2" class="level2" data-number="96">
-<h2 data-number="96" class="anchored" data-anchor-id="title-2"><span class="header-section-number">96</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1532,8 +1637,8 @@ How research gets done part 4 everyday life can
 </center>
 <pre></pre>
 </section>
-<section id="alexnet" class="level2" data-number="97">
-<h2 data-number="97" class="anchored" data-anchor-id="alexnet"><span class="header-section-number">97</span> AlexNet</h2>
+<section id="alexnet" class="level2" data-number="76">
+<h2 data-number="76" class="anchored" data-anchor-id="alexnet"><span class="header-section-number">76</span> AlexNet</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1544,8 +1649,8 @@ How research gets done part 4 everyday life can
 </center>
 <pre></pre>
 </section>
-<section id="alexnet-1" class="level2" data-number="98">
-<h2 data-number="98" class="anchored" data-anchor-id="alexnet-1"><span class="header-section-number">98</span> AlexNet</h2>
+<section id="alexnet-1" class="level2" data-number="77">
+<h2 data-number="77" class="anchored" data-anchor-id="alexnet-1"><span class="header-section-number">77</span> AlexNet</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1556,8 +1661,8 @@ How research gets done part 4 everyday life can
 </center>
 <pre></pre>
 </section>
-<section id="activation-function" class="level2" data-number="99">
-<h2 data-number="99" class="anchored" data-anchor-id="activation-function"><span class="header-section-number">99</span> Activation function</h2>
+<section id="activation-function" class="level2" data-number="78">
+<h2 data-number="78" class="anchored" data-anchor-id="activation-function"><span class="header-section-number">78</span> Activation function</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1567,9 +1672,14 @@ How research gets done part 4 everyday life can
 </div>
 </center>
 <pre></pre>
+<p>Faster to train because of simple Relu, and also the gradients are not vanishing because you have the gradient of 1 starting from the positive direction</p>
+<p>Why does gradient do not vanish with Relu?</p>
+<p>The vanishing gradient problem refers to the issue where the gradients of the loss function with respect to the weights become extremely small during backpropagation, making it challenging for the model to learn and update its parameters effectively. This problem is particularly associated with activation functions that squash their input into a small range, such as the sigmoid or hyperbolic tangent (tanh) functions.</p>
+<p>ReLU (Rectified Linear Unit), on the other hand, has a non-saturating activation behavior, which means that it does not squash its input into a small range.</p>
+<p>ReLU does not saturate in the positive region of its input. For positive input values, the gradient remains constant (1), leading to consistent and non-vanishing gradients during backpropagation.</p>
 </section>
-<section id="activation-function-1" class="level2" data-number="100">
-<h2 data-number="100" class="anchored" data-anchor-id="activation-function-1"><span class="header-section-number">100</span> Activation function</h2>
+<section id="activation-function-1" class="level2" data-number="79">
+<h2 data-number="79" class="anchored" data-anchor-id="activation-function-1"><span class="header-section-number">79</span> Activation function</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1580,8 +1690,8 @@ How research gets done part 4 everyday life can
 </center>
 <pre></pre>
 </section>
-<section id="training-with-multiple-gpus" class="level2" data-number="101">
-<h2 data-number="101" class="anchored" data-anchor-id="training-with-multiple-gpus"><span class="header-section-number">101</span> Training with multiple GPUs</h2>
+<section id="training-with-multiple-gpus" class="level2" data-number="80">
+<h2 data-number="80" class="anchored" data-anchor-id="training-with-multiple-gpus"><span class="header-section-number">80</span> Training with multiple GPUs</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1592,8 +1702,8 @@ How research gets done part 4 everyday life can
 </center>
 <pre></pre>
 </section>
-<section id="training-with-multiple-gpus-1" class="level2" data-number="102">
-<h2 data-number="102" class="anchored" data-anchor-id="training-with-multiple-gpus-1"><span class="header-section-number">102</span> Training with multiple GPUs</h2>
+<section id="training-with-multiple-gpus-1" class="level2" data-number="81">
+<h2 data-number="81" class="anchored" data-anchor-id="training-with-multiple-gpus-1"><span class="header-section-number">81</span> Training with multiple GPUs</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1604,8 +1714,8 @@ How research gets done part 4 everyday life can
 </center>
 <pre></pre>
 </section>
-<section id="on-that-note-communicating-between-gpus-pytorch" class="level2" data-number="103">
-<h2 data-number="103" class="anchored" data-anchor-id="on-that-note-communicating-between-gpus-pytorch"><span class="header-section-number">103</span> On that note: Communicating between GPUs: PyTorch</h2>
+<section id="on-that-note-communicating-between-gpus-pytorch" class="level2" data-number="82">
+<h2 data-number="82" class="anchored" data-anchor-id="on-that-note-communicating-between-gpus-pytorch"><span class="header-section-number">82</span> On that note: Communicating between GPUs: PyTorch</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1616,8 +1726,8 @@ How research gets done part 4 everyday life can
 </center>
 <pre></pre>
 </section>
-<section id="local-response-normalization" class="level2" data-number="104">
-<h2 data-number="104" class="anchored" data-anchor-id="local-response-normalization"><span class="header-section-number">104</span> Local Response Normalization</h2>
+<section id="local-response-normalization" class="level2" data-number="83">
+<h2 data-number="83" class="anchored" data-anchor-id="local-response-normalization"><span class="header-section-number">83</span> Local Response Normalization</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1628,8 +1738,8 @@ How research gets done part 4 everyday life can
 </center>
 <pre></pre>
 </section>
-<section id="overlapping-pooling" class="level2" data-number="105">
-<h2 data-number="105" class="anchored" data-anchor-id="overlapping-pooling"><span class="header-section-number">105</span> Overlapping Pooling</h2>
+<section id="overlapping-pooling" class="level2" data-number="84">
+<h2 data-number="84" class="anchored" data-anchor-id="overlapping-pooling"><span class="header-section-number">84</span> Overlapping Pooling</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1640,8 +1750,8 @@ How research gets done part 4 everyday life can
 </center>
 <pre></pre>
 </section>
-<section id="overlapping-pooling-1" class="level2" data-number="106">
-<h2 data-number="106" class="anchored" data-anchor-id="overlapping-pooling-1"><span class="header-section-number">106</span> Overlapping Pooling</h2>
+<section id="overlapping-pooling-1" class="level2" data-number="85">
+<h2 data-number="85" class="anchored" data-anchor-id="overlapping-pooling-1"><span class="header-section-number">85</span> Overlapping Pooling</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1652,8 +1762,8 @@ How research gets done part 4 everyday life can
 </center>
 <pre></pre>
 </section>
-<section id="overall-architecture" class="level2" data-number="107">
-<h2 data-number="107" class="anchored" data-anchor-id="overall-architecture"><span class="header-section-number">107</span> Overall architecture</h2>
+<section id="overall-architecture" class="level2" data-number="86">
+<h2 data-number="86" class="anchored" data-anchor-id="overall-architecture"><span class="header-section-number">86</span> Overall architecture</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1663,9 +1773,10 @@ How research gets done part 4 everyday life can
 </div>
 </center>
 <pre></pre>
+<p>The max pooling make a vector per every image</p>
 </section>
-<section id="the-overfitting-problem" class="level2" data-number="108">
-<h2 data-number="108" class="anchored" data-anchor-id="the-overfitting-problem"><span class="header-section-number">108</span> The Overfitting Problem</h2>
+<section id="the-overfitting-problem" class="level2" data-number="87">
+<h2 data-number="87" class="anchored" data-anchor-id="the-overfitting-problem"><span class="header-section-number">87</span> The Overfitting Problem</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1675,9 +1786,12 @@ How research gets done part 4 everyday life can
 </div>
 </center>
 <pre></pre>
+<p><strong>If a have a cnn that has many parameter more than my data input will i overfit?</strong></p>
+<p>If your CNN has a large number of parameters (i.e., it’s a complex model) and you have a small dataset, there is an increased risk of overfitting. A complex model may have the capacity to memorize the training data, capturing noise and outliers instead of learning generalizable patterns.</p>
+<p>Althoug all these increase training time but high performance</p>
 </section>
-<section id="the-learned-filters" class="level2" data-number="109">
-<h2 data-number="109" class="anchored" data-anchor-id="the-learned-filters"><span class="header-section-number">109</span> The learned filters</h2>
+<section id="the-learned-filters" class="level2" data-number="88">
+<h2 data-number="88" class="anchored" data-anchor-id="the-learned-filters"><span class="header-section-number">88</span> The learned filters</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1688,8 +1802,8 @@ How research gets done part 4 everyday life can
 </center>
 <pre></pre>
 </section>
-<section id="removing-layer-7" class="level2" data-number="110">
-<h2 data-number="110" class="anchored" data-anchor-id="removing-layer-7"><span class="header-section-number">110</span> Removing layer 7</h2>
+<section id="removing-layer-7" class="level2" data-number="89">
+<h2 data-number="89" class="anchored" data-anchor-id="removing-layer-7"><span class="header-section-number">89</span> Removing layer 7</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1700,8 +1814,8 @@ How research gets done part 4 everyday life can
 </center>
 <pre></pre>
 </section>
-<section id="removing-layer-6-7" class="level2" data-number="111">
-<h2 data-number="111" class="anchored" data-anchor-id="removing-layer-6-7"><span class="header-section-number">111</span> Removing layer 6, 7</h2>
+<section id="removing-layer-6-7" class="level2" data-number="90">
+<h2 data-number="90" class="anchored" data-anchor-id="removing-layer-6-7"><span class="header-section-number">90</span> Removing layer 6, 7</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1712,8 +1826,8 @@ How research gets done part 4 everyday life can
 </center>
 <pre></pre>
 </section>
-<section id="removing-layer-3-4" class="level2" data-number="112">
-<h2 data-number="112" class="anchored" data-anchor-id="removing-layer-3-4"><span class="header-section-number">112</span> Removing layer 3, 4</h2>
+<section id="removing-layer-3-4" class="level2" data-number="91">
+<h2 data-number="91" class="anchored" data-anchor-id="removing-layer-3-4"><span class="header-section-number">91</span> Removing layer 3, 4</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1723,9 +1837,10 @@ How research gets done part 4 everyday life can
 </div>
 </center>
 <pre></pre>
+<p>We dont save that much parameters because convolutional layers are more efficient (they are not fully connected, not too many parameters)</p>
 </section>
-<section id="removing-layer-3-4-6-7" class="level2" data-number="113">
-<h2 data-number="113" class="anchored" data-anchor-id="removing-layer-3-4-6-7"><span class="header-section-number">113</span> Removing layer 3, 4, 6, 7</h2>
+<section id="removing-layer-3-4-6-7" class="level2" data-number="92">
+<h2 data-number="92" class="anchored" data-anchor-id="removing-layer-3-4-6-7"><span class="header-section-number">92</span> Removing layer 3, 4, 6, 7</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1736,8 +1851,8 @@ How research gets done part 4 everyday life can
 </center>
 <pre></pre>
 </section>
-<section id="translation-invariance" class="level2" data-number="114">
-<h2 data-number="114" class="anchored" data-anchor-id="translation-invariance"><span class="header-section-number">114</span> Translation invariance</h2>
+<section id="translation-invariance" class="level2" data-number="93">
+<h2 data-number="93" class="anchored" data-anchor-id="translation-invariance"><span class="header-section-number">93</span> Translation invariance</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1747,9 +1862,11 @@ How research gets done part 4 everyday life can
 </div>
 </center>
 <pre></pre>
+<p>Despite saying that CNN tend to be equivariant which means if you shift the input the output should also shift you can see that if you do that with these images, where you are just shifting the images the outputs do vary quite a lot</p>
+<p>So CNN do not learn something that is explicit symmetrical or explicitly equivariant. Equivariance may be a good prior that we put in, but that does not mean that that really happens</p>
 </section>
-<section id="scale-invariance" class="level2" data-number="115">
-<h2 data-number="115" class="anchored" data-anchor-id="scale-invariance"><span class="header-section-number">115</span> Scale invariance</h2>
+<section id="scale-invariance" class="level2" data-number="94">
+<h2 data-number="94" class="anchored" data-anchor-id="scale-invariance"><span class="header-section-number">94</span> Scale invariance</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1759,9 +1876,10 @@ How research gets done part 4 everyday life can
 </div>
 </center>
 <pre></pre>
+<p>Same with scale, we have said that we apply the pooling operations so therefore we can be a bit invariant to scaling, but still NNs tend not to be super scale invariant</p>
 </section>
-<section id="rotation-invariance" class="level2" data-number="116">
-<h2 data-number="116" class="anchored" data-anchor-id="rotation-invariance"><span class="header-section-number">116</span> Rotation invariance</h2>
+<section id="rotation-invariance" class="level2" data-number="95">
+<h2 data-number="95" class="anchored" data-anchor-id="rotation-invariance"><span class="header-section-number">95</span> Rotation invariance</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1772,8 +1890,8 @@ How research gets done part 4 everyday life can
 </center>
 <pre></pre>
 </section>
-<section id="further-reading" class="level2" data-number="117">
-<h2 data-number="117" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">117</span> Further reading</h2>
+<section id="further-reading" class="level2" data-number="96">
+<h2 data-number="96" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">96</span> Further reading</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1783,9 +1901,6 @@ How research gets done part 4 everyday life can
 </div>
 </center>
 <pre></pre>
-</section>
-<section id="title-3" class="level2" data-number="118">
-<h2 data-number="118" class="anchored" data-anchor-id="title-3"><span class="header-section-number">118</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1796,8 +1911,8 @@ How research gets done part 4 everyday life can
 </center>
 <pre></pre>
 </section>
-<section id="transfer-learning-carry-benefits-from-large-dataset-to-the-small-one" class="level2" data-number="119">
-<h2 data-number="119" class="anchored" data-anchor-id="transfer-learning-carry-benefits-from-large-dataset-to-the-small-one"><span class="header-section-number">119</span> Transfer learning: carry benefits from large dataset to the small one!</h2>
+<section id="transfer-learning-carry-benefits-from-large-dataset-to-the-small-one" class="level2" data-number="97">
+<h2 data-number="97" class="anchored" data-anchor-id="transfer-learning-carry-benefits-from-large-dataset-to-the-small-one"><span class="header-section-number">97</span> Transfer learning: carry benefits from large dataset to the small one!</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1808,8 +1923,8 @@ How research gets done part 4 everyday life can
 </center>
 <pre></pre>
 </section>
-<section id="update-transfer-learning" class="level2" data-number="120">
-<h2 data-number="120" class="anchored" data-anchor-id="update-transfer-learning"><span class="header-section-number">120</span> UPDATE: Transfer learning</h2>
+<section id="update-transfer-learning" class="level2" data-number="98">
+<h2 data-number="98" class="anchored" data-anchor-id="update-transfer-learning"><span class="header-section-number">98</span> UPDATE: Transfer learning</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1820,8 +1935,8 @@ How research gets done part 4 everyday life can
 </center>
 <pre></pre>
 </section>
-<section id="why-use-transfer-learning" class="level2" data-number="121">
-<h2 data-number="121" class="anchored" data-anchor-id="why-use-transfer-learning"><span class="header-section-number">121</span> Why use Transfer Learning?</h2>
+<section id="why-use-transfer-learning" class="level2" data-number="99">
+<h2 data-number="99" class="anchored" data-anchor-id="why-use-transfer-learning"><span class="header-section-number">99</span> Why use Transfer Learning?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1831,9 +1946,10 @@ How research gets done part 4 everyday life can
 </div>
 </center>
 <pre></pre>
+<p>The answer is yes even if you have saved the weights from a extremely good model and you have a small dataset</p>
 </section>
-<section id="convnets-are-good-in-transfer-learning" class="level2" data-number="122">
-<h2 data-number="122" class="anchored" data-anchor-id="convnets-are-good-in-transfer-learning"><span class="header-section-number">122</span> Convnets are good in transfer learning</h2>
+<section id="convnets-are-good-in-transfer-learning" class="level2" data-number="100">
+<h2 data-number="100" class="anchored" data-anchor-id="convnets-are-good-in-transfer-learning"><span class="header-section-number">100</span> Convnets are good in transfer learning</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1843,9 +1959,11 @@ How research gets done part 4 everyday life can
 </div>
 </center>
 <pre></pre>
+<p>Fine Tune the whole NN</p>
+<p>Or use the CNN as feature extractor</p>
 </section>
-<section id="solution-i-fine-tune-hr-using-hg-as-initialization" class="level2" data-number="123">
-<h2 data-number="123" class="anchored" data-anchor-id="solution-i-fine-tune-hr-using-hg-as-initialization"><span class="header-section-number">123</span> Solution I: Fine-tune hr using hg as initialization</h2>
+<section id="solution-i-fine-tune-ht-using-hs-as-initialization" class="level2" data-number="101">
+<h2 data-number="101" class="anchored" data-anchor-id="solution-i-fine-tune-ht-using-hs-as-initialization"><span class="header-section-number">101</span> Solution I: Fine-tune hT using hS as initialization</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1856,8 +1974,8 @@ How research gets done part 4 everyday life can
 </center>
 <pre></pre>
 </section>
-<section id="initializing-hp-with-hs" class="level2" data-number="124">
-<h2 data-number="124" class="anchored" data-anchor-id="initializing-hp-with-hs"><span class="header-section-number">124</span> Initializing hp with hs</h2>
+<section id="initializing-ht-with-hs" class="level2" data-number="102">
+<h2 data-number="102" class="anchored" data-anchor-id="initializing-ht-with-hs"><span class="header-section-number">102</span> Initializing hT with hS</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1867,9 +1985,11 @@ How research gets done part 4 everyday life can
 </div>
 </center>
 <pre></pre>
+<p>Imagnet, it outputs 1000 categories. If you want to classification for 30 categories then you need to throw that one away and restart training a new classifier to your needs</p>
+<p>AlexNet, you can start removing some layers depending on how much data you have</p>
 </section>
-<section id="initializing-hp-with-hs-1" class="level2" data-number="125">
-<h2 data-number="125" class="anchored" data-anchor-id="initializing-hp-with-hs-1"><span class="header-section-number">125</span> Initializing hp with hs</h2>
+<section id="initializing-ht-with-hs-1" class="level2" data-number="103">
+<h2 data-number="103" class="anchored" data-anchor-id="initializing-ht-with-hs-1"><span class="header-section-number">103</span> Initializing hT with hS</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1879,11 +1999,10 @@ How research gets done part 4 everyday life can
 </div>
 </center>
 <pre></pre>
+<p>if you pertained your NN in ImgNet and now you want to do Satalite classification then it may be usefull to find tune even those layers the bottom ones</p>
 </section>
-<section id="gr" class="level2" data-number="126">
-<h2 data-number="126" class="anchored" data-anchor-id="gr"><span class="header-section-number">126</span> gr</h2>
-<p>of</p>
-How to fine-tune? a8? go ue
+<section id="how-to-fine-tune" class="level2" data-number="104">
+<h2 data-number="104" class="anchored" data-anchor-id="how-to-fine-tune"><span class="header-section-number">104</span> How to fine-tune?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1894,8 +2013,8 @@ How to fine-tune? a8? go ue
 </center>
 <pre></pre>
 </section>
-<section id="solution-ii-use-h-as-a-feature-extractor-for-hr" class="level2" data-number="127">
-<h2 data-number="127" class="anchored" data-anchor-id="solution-ii-use-h-as-a-feature-extractor-for-hr"><span class="header-section-number">127</span> Solution II: Use h, as a feature extractor for hr</h2>
+<section id="solution-ii-use-hs-as-a-feature-extractor-for-ht" class="level2" data-number="105">
+<h2 data-number="105" class="anchored" data-anchor-id="solution-ii-use-hs-as-a-feature-extractor-for-ht"><span class="header-section-number">105</span> Solution II: Use hS, as a feature extractor for hT</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1906,8 +2025,8 @@ How to fine-tune? a8? go ue
 </center>
 <pre></pre>
 </section>
-<section id="transfer-learning-benchmarks-techniques" class="level2" data-number="128">
-<h2 data-number="128" class="anchored" data-anchor-id="transfer-learning-benchmarks-techniques"><span class="header-section-number">128</span> Transfer learning benchmarks &amp; techniques</h2>
+<section id="transfer-learning-benchmarks-techniques" class="level2" data-number="106">
+<h2 data-number="106" class="anchored" data-anchor-id="transfer-learning-benchmarks-techniques"><span class="header-section-number">106</span> Transfer learning benchmarks &amp; techniques</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1918,8 +2037,8 @@ How to fine-tune? a8? go ue
 </center>
 <pre></pre>
 </section>
-<section id="title-4" class="level2" data-number="129">
-<h2 data-number="129" class="anchored" data-anchor-id="title-4"><span class="header-section-number">129</span> Title</h2>
+<section id="title" class="level2" data-number="107">
+<h2 data-number="107" class="anchored" data-anchor-id="title"><span class="header-section-number">107</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
