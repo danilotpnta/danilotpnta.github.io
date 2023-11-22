@@ -35,6 +35,8 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html",
+      "/blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html",
       "/blog/2023-11-20_convolutional-neural-networks/index.html",
       "/blog/2023-11-20_modern-convnets/index.html",
       "/blog/2023-11-20_deep-learning-optimizations-ii/index.html",
