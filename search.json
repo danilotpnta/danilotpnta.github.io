@@ -5407,533 +5407,533 @@
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#outline.",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#outline.",
     "title": "Lexical semantics and word embeddings",
-    "section": "2 Outline.",
-    "text": "2 Outline.\n\n\n\n\nSlide 2"
+    "section": "1 Outline.",
+    "text": "1 Outline.\n\n\n\n\nSlide 2"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#semantics",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#semantics",
     "title": "Lexical semantics and word embeddings",
-    "section": "3 Semantics",
-    "text": "3 Semantics\n\n\n\n\nSlide 3"
+    "section": "2 Semantics",
+    "text": "2 Semantics\n\n\n\n\nSlide 3\n\n\n\n\nSemantics is concerned with modelling meaning\n\nCompositional semantics: meaning of phrases\nLexical semantics: meaning of individuals words"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#what-is-lexical-meaning",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#what-is-lexical-meaning",
     "title": "Lexical semantics and word embeddings",
-    "section": "4 What is lexical meaning?",
-    "text": "4 What is lexical meaning?\n\n\n\n\nSlide 4"
+    "section": "3 What is lexical meaning?",
+    "text": "3 What is lexical meaning?\n\n\n\n\nSlide 4"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#how-to-approach-lexical-meaning",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#how-to-approach-lexical-meaning",
     "title": "Lexical semantics and word embeddings",
-    "section": "5 How to approach lexical meaning?",
-    "text": "5 How to approach lexical meaning?\n\n\n\n\nSlide 5"
+    "section": "4 How to approach lexical meaning?",
+    "text": "4 How to approach lexical meaning?\n\n\n\n\nSlide 5\n\n\n\n\nIn formal semantics: The meaning of words are represented as sets\ni.e Bachelors -&gt; if is a man and also unmmaried"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#how-to-approach-lexical-meaning-1",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#how-to-approach-lexical-meaning-1",
     "title": "Lexical semantics and word embeddings",
-    "section": "6 How to approach lexical meaning?",
-    "text": "6 How to approach lexical meaning?\n\n\n\n\nSlide 6"
+    "section": "5 How to approach lexical meaning?",
+    "text": "5 How to approach lexical meaning?\n\n\n\n\nSlide 6"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#prototype-theory",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#prototype-theory",
     "title": "Lexical semantics and word embeddings",
-    "section": "7 Prototype theory",
-    "text": "7 Prototype theory\n\n\n\n\nSlide 7"
+    "section": "6 Prototype theory",
+    "text": "6 Prototype theory\n\n\n\n\nSlide 7\n\n\n\n\nPrototype theory: concepts are represents as a graded category, it is like a human categorization\n\nnot all members needs to share a property\n\ni.e furniture -&gt; chair is more central (prototypical) than stool or a couch"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#semantic-relations",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#semantic-relations",
     "title": "Lexical semantics and word embeddings",
-    "section": "8 Semantic relations",
-    "text": "8 Semantic relations\n\n\n\n\nSlide 8"
+    "section": "7 Semantic relations",
+    "text": "7 Semantic relations\n\n\n\n\nSlide 8\n\n\n\n\nTaxonomy refers to the science of classification, specifically the classification of living organisms into various categories based on shared characteristics"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#other-semantic-relations",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#other-semantic-relations",
     "title": "Lexical semantics and word embeddings",
-    "section": "9 Other semantic relations",
-    "text": "9 Other semantic relations\n\n\n\n\nSlide 9"
+    "section": "8 Other semantic relations",
+    "text": "8 Other semantic relations\n\n\n\n\nSlide 9"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#polysemy-and-word-senses",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#polysemy-and-word-senses",
     "title": "Lexical semantics and word embeddings",
-    "section": "10 Polysemy and word senses",
-    "text": "10 Polysemy and word senses\n\n\n\n\nSlide 10"
+    "section": "9 Polysemy and word senses",
+    "text": "9 Polysemy and word senses\n\n\n\n\nSlide 10\n\n\n\n\nPolysemy is the ability of a word to have multiple meanings\nA word can mean different things in a different context"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#polysemy",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#polysemy",
     "title": "Lexical semantics and word embeddings",
-    "section": "11 Polysemy",
-    "text": "11 Polysemy\n\n\n\n\nSlide 11"
+    "section": "10 Polysemy",
+    "text": "10 Polysemy\n\n\n\n\nSlide 11"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#outline.-1",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#outline.-1",
     "title": "Lexical semantics and word embeddings",
-    "section": "12 Outline.",
-    "text": "12 Outline.\n\n\n\n\nSlide 12"
+    "section": "11 Outline.",
+    "text": "11 Outline.\n\n\n\n\nSlide 12\n\n\n\n\nThis a modeling framework"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#distributional-hypothesis",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#distributional-hypothesis",
     "title": "Lexical semantics and word embeddings",
-    "section": "13 Distributional hypothesis",
-    "text": "13 Distributional hypothesis\n\n\n\n\nSlide 13"
+    "section": "12 Distributional hypothesis",
+    "text": "12 Distributional hypothesis\n\n\n\n\nSlide 13\n\n\n\n\nWe can analysis the word depending of how it is used in a large corpus\nA corpus (plural: corpora) refers to a large and structured set of texts,"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#distributional-hypothesis-1",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#distributional-hypothesis-1",
     "title": "Lexical semantics and word embeddings",
-    "section": "14 Distributional hypothesis",
-    "text": "14 Distributional hypothesis\n\n\n\n\nSlide 14"
+    "section": "13 Distributional hypothesis",
+    "text": "13 Distributional hypothesis\n\n\n\n\nSlide 14"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#distributional-hypothesis-2",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#distributional-hypothesis-2",
     "title": "Lexical semantics and word embeddings",
-    "section": "15 Distributional hypothesis",
-    "text": "15 Distributional hypothesis\n\n\n\n\nSlide 15"
+    "section": "14 Distributional hypothesis",
+    "text": "14 Distributional hypothesis\n\n\n\n\nSlide 15"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#distributional-hypothesis-3",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#distributional-hypothesis-3",
     "title": "Lexical semantics and word embeddings",
-    "section": "16 Distributional hypothesis",
-    "text": "16 Distributional hypothesis\n\n\n\n\nSlide 16"
+    "section": "15 Distributional hypothesis",
+    "text": "15 Distributional hypothesis\n\n\n\n\nSlide 16"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#distributional-hypothesis-4",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#distributional-hypothesis-4",
     "title": "Lexical semantics and word embeddings",
-    "section": "17 Distributional hypothesis",
-    "text": "17 Distributional hypothesis\n\n\n\n\nSlide 17"
+    "section": "16 Distributional hypothesis",
+    "text": "16 Distributional hypothesis\n\n\n\n\nSlide 17"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#scrumpy",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#scrumpy",
     "title": "Lexical semantics and word embeddings",
-    "section": "18 Scrumpy",
-    "text": "18 Scrumpy\n\n\n\n\nSlide 18"
+    "section": "17 Scrumpy",
+    "text": "17 Scrumpy\n\n\n\n\nSlide 18"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#distributional-hypothesis-5",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#distributional-hypothesis-5",
     "title": "Lexical semantics and word embeddings",
-    "section": "19 Distributional hypothesis",
-    "text": "19 Distributional hypothesis\n\n\n\n\nSlide 19"
+    "section": "18 Distributional hypothesis",
+    "text": "18 Distributional hypothesis\n\n\n\n\nSlide 19\n\n\n\n\nThe context about a word provides the information about its meaning\nMeaning similarity, could be then be the vector that is also similar to another where each element of the vector is a context, so the more similar context the closer the meaning"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#the-general-intuition",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#the-general-intuition",
     "title": "Lexical semantics and word embeddings",
-    "section": "20 The general intuition",
-    "text": "20 The general intuition\n\n\n\n\nSlide 20"
+    "section": "19 The general intuition",
+    "text": "19 The general intuition\n\n\n\n\nSlide 20\n\n\n\n\neach word is a point: a row\nDimensions: are all possible contexts in our dataset\nthe values are the frequencies that ocurred in that context"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#vectors",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#vectors",
     "title": "Lexical semantics and word embeddings",
-    "section": "21 Vectors",
-    "text": "21 Vectors\n\n\n\n\nSlide 21"
+    "section": "20 Vectors",
+    "text": "20 Vectors\n\n\n\n\nSlide 21"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#the-notion-of-context",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#the-notion-of-context",
     "title": "Lexical semantics and word embeddings",
-    "section": "22 The notion of context",
-    "text": "22 The notion of context\n\n\n\n\nSlide 22"
+    "section": "21 The notion of context",
+    "text": "21 The notion of context\n\n\n\n\nSlide 22"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#context",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#context",
     "title": "Lexical semantics and word embeddings",
-    "section": "23 Context",
-    "text": "23 Context\n\n\n\n\nSlide 23"
+    "section": "22 Context",
+    "text": "22 Context\n\n\n\n\nSlide 23\n\n\n\n\nHere we delte words that are frequent\nHere the window stays the same"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#context-1",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#context-1",
     "title": "Lexical semantics and word embeddings",
-    "section": "24 Context",
-    "text": "24 Context\n\n\n\n\nSlide 24"
+    "section": "23 Context",
+    "text": "23 Context\n\n\n\n\nSlide 24\n\n\n\n\nNow we just take the stem of each word and then we do a count on this stem words; here acknowledged -&gt; acknowledge\nThis is handy if your corpus is not very large, because then your vectors would be very sparce meaning we would have zero entries because of the different variants of a word, so instead you want to aggregate context that mean the same so then we fix sparse vectors"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#context-2",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#context-2",
     "title": "Lexical semantics and word embeddings",
-    "section": "25 Context",
-    "text": "25 Context\n\n\n\n\nSlide 25"
+    "section": "24 Context",
+    "text": "24 Context\n\n\n\n\nSlide 25\n\n\n\n\nInstead of word window, we can use syntatic relations. That is we can extract syntactic context even for those words that are further way but have some relation with the wording that we are looking."
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#context-weighting",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#context-weighting",
     "title": "Lexical semantics and word embeddings",
-    "section": "26 Context weighting",
-    "text": "26 Context weighting\n\n\n\n\nSlide 26"
+    "section": "25 Context weighting",
+    "text": "25 Context weighting\n\n\n\n\nSlide 26\n\n\n\n\nThe first decision: how to model\nThe second: how to weight the context, so which metric we wil use"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#characteristic-model",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#characteristic-model",
     "title": "Lexical semantics and word embeddings",
-    "section": "27 Characteristic model",
-    "text": "27 Characteristic model\n\n\n\n\nSlide 27"
+    "section": "26 Characteristic model",
+    "text": "26 Characteristic model\n\n\n\n\nSlide 27\n\n\n\n\nHere we are saying that there are some words that are more characteristic of a context. For i.e ‘floffy’ can be refered to dogs or cats, or toys but not so much of ‘computer’, ‘screwdriver’\nIt measures the joint probability of the word and the context (numerator) and the probability of them occurring together if they were independent (denominator)\nP(c|w): how likely it is the context given that we are seeing this word.\nSo we want to compute the probability of the word occurance in the corpus to their probability of occurrence independently"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#what-semantic-space",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#what-semantic-space",
     "title": "Lexical semantics and word embeddings",
-    "section": "28 What semantic space?",
-    "text": "28 What semantic space?\n\n\n\n\nSlide 28"
+    "section": "27 What semantic space?",
+    "text": "27 What semantic space?\n\n\n\n\nSlide 28\n\n\n\n\nThe first decision: how to model\nThe second: how to weight the context, so which metric we wil use\nThird design decision: what kind of semantic space to use? aka how many context to include\n\nWe can use entire vocabulary\nA CON is that it will be very sparse if we use the whole vocab"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#word-frequency-zipfian-distribution",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#word-frequency-zipfian-distribution",
     "title": "Lexical semantics and word embeddings",
-    "section": "29 Word frequency: Zipfian distribution",
-    "text": "29 Word frequency: Zipfian distribution\n\n\n\n\nSlide 29"
+    "section": "28 Word frequency: Zipfian distribution",
+    "text": "28 Word frequency: Zipfian distribution\n\n\n\n\nSlide 29"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#what-semantic-space-1",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#what-semantic-space-1",
     "title": "Lexical semantics and word embeddings",
-    "section": "30 What semantic space?",
-    "text": "30 What semantic space?\n\n\n\n\nSlide 30"
+    "section": "29 What semantic space?",
+    "text": "29 What semantic space?\n\n\n\n\nSlide 30\n\n\n\n\nDimensionality reduction is to benefit from approach 1 and 2"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#an-example-noun",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#an-example-noun",
     "title": "Lexical semantics and word embeddings",
-    "section": "31 An example noun",
-    "text": "31 An example noun\n\n\n\n\nSlide 31"
+    "section": "30 An example noun",
+    "text": "30 An example noun\n\n\n\n\nSlide 31\n\n\n\n\nthe values here are PMI values"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#an-example-adjective",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#an-example-adjective",
     "title": "Lexical semantics and word embeddings",
-    "section": "32 An example adjective",
-    "text": "32 An example adjective\n\n\n\n\nSlide 32"
+    "section": "31 An example adjective",
+    "text": "31 An example adjective\n\n\n\n\nSlide 32\n\n\n\n\nDecathlon is strange to see in the first place\nPMI property: no matter which data you apply to is that you would get unreseanable PMI values for rare events.\nSo Decathlon is rare, and if it appears with academic once, then it will have a high PMI, because has a low prior probability"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#polysemy-1",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#polysemy-1",
     "title": "Lexical semantics and word embeddings",
-    "section": "33 Polysemy",
-    "text": "33 Polysemy\n\n\n\n\nSlide 33"
+    "section": "32 Polysemy",
+    "text": "32 Polysemy\n\n\n\n\nSlide 33\n\n\n\n\nPolysemy is the ability of a word to have multiple meanings\nAll these senses are encoded and collapse toguether within a single distribution. Basically you have different context that correspond to different meanings and"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#calculating-similarity-in-a-distributional-space",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#calculating-similarity-in-a-distributional-space",
     "title": "Lexical semantics and word embeddings",
-    "section": "34 Calculating similarity in a distributional space",
-    "text": "34 Calculating similarity in a distributional space\n\n\n\n\nSlide 34"
+    "section": "33 Calculating similarity in a distributional space",
+    "text": "33 Calculating similarity in a distributional space\n\n\n\n\nSlide 34"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#measuring-similarity",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#measuring-similarity",
     "title": "Lexical semantics and word embeddings",
-    "section": "35 Measuring similarity",
-    "text": "35 Measuring similarity\n\n\n\n\nSlide 35"
+    "section": "34 Measuring similarity",
+    "text": "34 Measuring similarity\n\n\n\n\nSlide 35\n\n\n\n\nThe dot product of the two vectors that is normalized by the vector lenght\nThe Euclidean distance considers the length of the vectors:\n\n\n\n\nThe euclidean distance would be quite large, so that is why we need to normalize"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#the-scale-of-similarity-some-examples",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#the-scale-of-similarity-some-examples",
     "title": "Lexical semantics and word embeddings",
-    "section": "36 The scale of similarity: some examples",
-    "text": "36 The scale of similarity: some examples\n\n\n\n\nSlide 36"
+    "section": "35 The scale of similarity: some examples",
+    "text": "35 The scale of similarity: some examples\n\n\n\n\nSlide 36"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#words-most-similar-to-cat",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#words-most-similar-to-cat",
     "title": "Lexical semantics and word embeddings",
-    "section": "37 Words most similar to cat",
-    "text": "37 Words most similar to cat\n\n\n\n\nSlide 37"
+    "section": "36 Words most similar to cat",
+    "text": "36 Words most similar to cat\n\n\n\n\nSlide 37"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#but-what-is-similarity",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#but-what-is-similarity",
     "title": "Lexical semantics and word embeddings",
-    "section": "38 But what is similarity?",
-    "text": "38 But what is similarity?\n\n\n\n\nSlide 38"
+    "section": "37 But what is similarity?",
+    "text": "37 But what is similarity?\n\n\n\n\nSlide 38"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#distributional-methods-are-a-usage-representation",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#distributional-methods-are-a-usage-representation",
     "title": "Lexical semantics and word embeddings",
-    "section": "39 Distributional methods are a usage representation",
-    "text": "39 Distributional methods are a usage representation\n\n\n\n\nSlide 39"
+    "section": "38 Distributional methods are a usage representation",
+    "text": "38 Distributional methods are a usage representation\n\n\n\n\nSlide 39"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#distribution-for-policeman",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#distribution-for-policeman",
     "title": "Lexical semantics and word embeddings",
-    "section": "40 Distribution for policeman",
-    "text": "40 Distribution for policeman\n\n\n\n\nSlide 40"
+    "section": "39 Distribution for policeman",
+    "text": "39 Distribution for policeman\n\n\n\n\nSlide 40"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#distribution-for-cop",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#distribution-for-cop",
     "title": "Lexical semantics and word embeddings",
-    "section": "41 Distribution for cop",
-    "text": "41 Distribution for cop\n\n\n\n\nSlide 41"
+    "section": "40 Distribution for cop",
+    "text": "40 Distribution for cop\n\n\n\n\nSlide 41\n\n\n\n\nCop and policeman, even though the words seems to be the same, there is cultural associations with cop that is highly negative.\nThis means that words have relative meanings to the culture and thus if compared this terms between cultures their meanings could be totally different which then evaluating a similarity metric will yield that they are not similar.\nTha being, we take two words from the same corpus but because of cultural use of words they may have different distributions (cognotations). Unquestionable, this is a property of the data.\n1set carriage bike vehicle train truck lorry coach taxi – official officer inspector journalist detective constable policeman reporter – sister daughter parent relative lover cousin friend wife mother husband brother father\n2set car engine petrol road driver wheel trip steering seat fo, highway sign speed - concert singer stage light music show audience performance ticket - experiment research scientist paper result publication laboratory finding"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#clustering-nouns",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#clustering-nouns",
     "title": "Lexical semantics and word embeddings",
-    "section": "42 Clustering nouns",
-    "text": "42 Clustering nouns\n\n\n\n\nSlide 42"
+    "section": "41 Clustering nouns",
+    "text": "41 Clustering nouns\n\n\n\n\nSlide 42"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#clustering-nouns-1",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#clustering-nouns-1",
     "title": "Lexical semantics and word embeddings",
-    "section": "43 Clustering nouns",
-    "text": "43 Clustering nouns\n\n\n\n\nSlide 43"
+    "section": "42 Clustering nouns",
+    "text": "42 Clustering nouns\n\n\n\n\nSlide 43"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#outline.-2",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#outline.-2",
     "title": "Lexical semantics and word embeddings",
-    "section": "44 Outline.",
-    "text": "44 Outline.\n\n\n\n\nSlide 44"
+    "section": "43 Outline.",
+    "text": "43 Outline.\n\n\n\n\nSlide 44"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#distributional-semantic-models",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#distributional-semantic-models",
     "title": "Lexical semantics and word embeddings",
-    "section": "45 Distributional semantic models",
-    "text": "45 Distributional semantic models\n\n\n\n\nSlide 45"
+    "section": "44 Distributional semantic models",
+    "text": "44 Distributional semantic models\n\n\n\n\nSlide 45\n\n\n\n\nDense vectors or word embeddings\nCount-based models we can see clearly\nHere we train the model to predict what makes a good context for a word.\nDense in the sense that the dimensionals are used and there are fewer dimensions, the model learns some interactions between them. However the dimensions are latent so if the model has a strange behaviour is very hard to know why."
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#sparse-vs.-dense-vectors",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#sparse-vs.-dense-vectors",
     "title": "Lexical semantics and word embeddings",
-    "section": "46 Sparse vs. dense vectors",
-    "text": "46 Sparse vs. dense vectors\n\n\n\n\nSlide 46"
+    "section": "45 Sparse vs. dense vectors",
+    "text": "45 Sparse vs. dense vectors\n\n\n\n\nSlide 46\n\n\n\n\nIn traditional distribution models we can have tends of thousands of contexts in a large corpus\nthey generalize better, by having those latent dimensions that are trained in the prediction task, the model learns to map similar context toguether to the same dimensions.\nIf in a traditional distribution model you would have distints concepts for car and automobile, there is no way for the model to know that they provide the same information, whereas in a dense vector we can agregate over similar context, you can map them to the same dimension and you can reduce the redundancy in the data but also end up with a model that is more generalizable"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#prediction-based-distributional-models",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#prediction-based-distributional-models",
     "title": "Lexical semantics and word embeddings",
-    "section": "47 Prediction-based distributional models",
-    "text": "47 Prediction-based distributional models\n\n\n\n\nSlide 47"
+    "section": "46 Prediction-based distributional models",
+    "text": "46 Prediction-based distributional models\n\n\n\n\nSlide 47\n\n\n\n\nThe most popular model of word embedding of prediction base is the Skip-gram model\nProbabilistic language models, such as n-gram models where our goal is given a sequence of words we want to predict the next word that comes next\nHere, the task is the same exceot that we use a NN to perform this prediction.\nThe idea is that we can learn word representations in the process"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram",
     "title": "Lexical semantics and word embeddings",
-    "section": "48 Skip-gram",
-    "text": "48 Skip-gram\n\n\n\n\nSlide 48"
+    "section": "47 Skip-gram",
+    "text": "47 Skip-gram\n\n\n\n\nSlide 48\n\n\n\n\nin Skip-gram we do not care about the sequence, but rather we want to take individual words as input, and we want to output the words that it can occur in the data i.e. if we take a 5-word window, basically we want to train the model to predict the valid context for thee word and then we lear the world representation in the process (in the projection layer)"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-1",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-1",
     "title": "Lexical semantics and word embeddings",
-    "section": "49 Skip-gram",
-    "text": "49 Skip-gram\n\n\n\n\nSlide 49"
+    "section": "48 Skip-gram",
+    "text": "48 Skip-gram\n\n\n\n\nSlide 49\n\n\n\n\nWords that occur toguether in the data should have some similarity in meaning. This is different from i.e we compare context towards the current and the relation in their similar meaning but rather a word should be similar in meaning to its neighbors.\nEssentially we want to compare the vectors of the word and their neighbors\nGiven word at time t\nGoal: predict all its neighboring words within a window. For instance we use a 5-word windows then these are the words to predict"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-parameter-matrices",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-parameter-matrices",
     "title": "Lexical semantics and word embeddings",
-    "section": "50 Skip-gram: Parameter matrices",
-    "text": "50 Skip-gram: Parameter matrices\n\n\n\n\nSlide 50"
+    "section": "49 Skip-gram: Parameter matrices",
+    "text": "49 Skip-gram: Parameter matrices\n\n\n\n\nSlide 50\n\n\n\n\nFor each word skip gram learns 2 parameter vectors:\nFor each word it learns two vectors:\n\nThe word vector, that is the word embedding v, in word matrix W\nThis is the vector that represents the meaning of that word\nA context vector that is the vector that represents its behavior as context for other words\n\nIn a sense each word can have two rows: it can act as a word from which we are learning the word meaning AND it can also act as context for other words\nW: is the matrix of word embeddings\nC: the matrix of context embeddings\nand so then we choose the dimensionality of our embeddings to have, for instance between 50 and 500 dimensions\nHere for a whole Vocabulary we have a vector for every word, so the dimensionality here is the size of our vocabulary, so the columns are the word embeddings for all of our words\nAgain:\nW:\nSo in the columns we have the vector oer word so we go from 1..Vw\nThe rows represent the dimensionality of the vector\nC:\nThe columns are the dimensions\nThe rows we have the size of our vocabulary so we have a word, so the number of rows are the number of word in the vocabulary\nIn practice, these are the same, so we say we use individual words as context, so all words will learn embeddings, and each word can acts as a context. However there is no requirement to be the same, in fact the context vocabulary can be different and we can use any definition of context as we discuss in distributional models"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-setup",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-setup",
     "title": "Lexical semantics and word embeddings",
-    "section": "51 Skip-gram: Setup",
-    "text": "51 Skip-gram: Setup\n\n\n\n\nSlide 51"
+    "section": "50 Skip-gram: Setup",
+    "text": "50 Skip-gram: Setup\n\n\n\n\nSlide 51\n\n\n\n\nwe go word by word extracting its context.\nThis may look like Bigram prob but is not, and is not because position does not matter. So basically we consider each context in isolation like a set, so the context that the word might have and we operate over context pairs, the order does not matter in the sequence. So word and each context in isolation. And which context are possible we define based on the word window for any other criteria like we explain before like:\n\nContext window unfilter\nContext window filtered\nContext window lexeme filtered\nConnected by a grammatical relation\n\nSo the position of the context does not matter once we have extracted the context but of course it does matter in the process of extracting it, so it has to be whithin the word window\nIntuition of skip-gram: to compute that probability we need to compute the similarity between w_j and w_k"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-computing-similarity",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-computing-similarity",
     "title": "Lexical semantics and word embeddings",
-    "section": "52 Skip-gram: Computing similarity",
-    "text": "52 Skip-gram: Computing similarity\n\n\n\n\nSlide 52"
+    "section": "51 Skip-gram: Computing similarity",
+    "text": "51 Skip-gram: Computing similarity\n\n\n\n\nSlide 52"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-similarity-as-dot-product",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-similarity-as-dot-product",
     "title": "Lexical semantics and word embeddings",
-    "section": "53 Skip-gram: Similarity as dot product",
-    "text": "53 Skip-gram: Similarity as dot product\n\n\n\n\nSlide 53"
+    "section": "52 Skip-gram: Similarity as dot product",
+    "text": "52 Skip-gram: Similarity as dot product\n\n\n\n\nSlide 53\n\n\n\n\nWhy do we use dot product to compute the similarity. Again we use cosine, here we used it because it does not matter about the mangnitude but if they are pointing in the same direction then they are considered similar.\nSo vectors that are similar in this case w_j (current word) and w_k (word to predict) will be similar if they have a high dot product"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-compute-probabilities",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-compute-probabilities",
     "title": "Lexical semantics and word embeddings",
-    "section": "54 Skip-gram: Compute probabilities",
-    "text": "54 Skip-gram: Compute probabilities\n\n\n\n\nSlide 54"
+    "section": "53 Skip-gram: Compute probabilities",
+    "text": "53 Skip-gram: Compute probabilities\n\n\n\n\nSlide 54\n\n\n\n\ncase w_j (current word) and w_k (word to predict) v_j (current word) and c_k (word to predict)\nSo here P(w_k|w_j) we want to predict how likely is that this context is predicted.\nWe end up with having a vector of dot products, so we are comparing the word with all of the context vectors, that gives a vector of products over the whole vocabulary and then we normalize it using softmax\nAt the end we use softmax to make probabilities summ up to one"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-learning",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-learning",
     "title": "Lexical semantics and word embeddings",
-    "section": "55 Skip-gram: Learning",
-    "text": "55 Skip-gram: Learning\n\n\n\n\nSlide 55"
+    "section": "54 Skip-gram: Learning",
+    "text": "54 Skip-gram: Learning\n\n\n\n\nSlide 55\n\n\n\n\nwe iterative update the embeddings to make the embeddings of our words more similar to the real seen context words and less similar to the embeddings of everything else (other context words)"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-objective",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-objective",
     "title": "Lexical semantics and word embeddings",
-    "section": "56 Skip-gram: Objective",
-    "text": "56 Skip-gram: Objective\n\n\n\n\nSlide 56"
+    "section": "55 Skip-gram: Objective",
+    "text": "55 Skip-gram: Objective\n\n\n\n\nSlide 56\n\n\n\n\nSo we want to maximize the overall corpus probability, that is the probability of the real seen context.\nHere we assume that the context is independent of each other, so the whole sequence does not matter. We assume that the probabilities are independent of each other and so basically the objective becomes to maximize the product of the probabilities of the real seen context pairs\nWhere:\n\nc_k is the vector representation of the context word w_k\nv_j is the vector representation of the word w_j"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#visualising-skip-gram-as-a-network",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#visualising-skip-gram-as-a-network",
     "title": "Lexical semantics and word embeddings",
-    "section": "57 Visualising skip-gram as a network",
-    "text": "57 Visualising skip-gram as a network\n\n\n\n\nSlide 57"
+    "section": "56 Visualising skip-gram as a network",
+    "text": "56 Visualising skip-gram as a network\n\n\n\n\nSlide 57\n\n\n\n\nour input here is the vector representation of the word\nThe last layer tell us all the possible contexts.\nSo we are predicting a context word at a time. For ie. here w_t is a vector and we predict all the probabilities of context words"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#one-hot-vectors",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#one-hot-vectors",
     "title": "Lexical semantics and word embeddings",
-    "section": "58 One hot vectors",
-    "text": "58 One hot vectors\n\n\n\n\nSlide 58"
+    "section": "57 One hot vectors",
+    "text": "57 One hot vectors\n\n\n\n\nSlide 58"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#visualising-skip-gram-as-a-network-1",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#visualising-skip-gram-as-a-network-1",
     "title": "Lexical semantics and word embeddings",
-    "section": "59 Visualising skip-gram as a network",
-    "text": "59 Visualising skip-gram as a network\n\n\n\n\nSlide 59"
+    "section": "58 Visualising skip-gram as a network",
+    "text": "58 Visualising skip-gram as a network\n\n\n\n\nSlide 59\n\n\n\n\nThe problem arises at computing softmax. If our corpus is large then the denominator will go over this large text thus being computationally expensive. So basically we have to iterate over all the vocabulary to perform the update"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-with-negative-sampling",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-with-negative-sampling",
     "title": "Lexical semantics and word embeddings",
-    "section": "60 Skip-gram with negative sampling",
-    "text": "60 Skip-gram with negative sampling\n\n\n\n\nSlide 60"
+    "section": "59 Skip-gram with negative sampling",
+    "text": "59 Skip-gram with negative sampling\n\n\n\n\nSlide 60\n\n\n\n\nInstead of iterating over the whole vocabulary, for each word and positive context pair we will now sum over noise or negative samples i.e words that are not context to that word. In the above formula this translates in suming ‘i’ number of negative or noisy samples in the denominator therefore reducing the amount of computations."
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-with-negative-sampling-1",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-with-negative-sampling-1",
     "title": "Lexical semantics and word embeddings",
-    "section": "61 Skip-gram with negative sampling",
-    "text": "61 Skip-gram with negative sampling\n\n\n\n\nSlide 61"
+    "section": "60 Skip-gram with negative sampling",
+    "text": "60 Skip-gram with negative sampling\n\n\n\n\nSlide 61\n\n\n\n\nFor each word of the window: so for word pair (‘tablespppon’, ‘apricot’), we are gonna randomly sample some negative examples, so sampling other possible contexts. You can decide how many you want to have per possitve context i.e 2 or 10. Say we are going to choose randomly two noise examples i.e ‘cement’ and ‘iddle’, those are words that have nothing to do with ‘apricot’ so those are the negative examples.\nHow to choose negative examples? it is just random and it is done over the whole vocabulary but you could be more especific and i.e pick from their unigram probability with more frequent words\nSo here if we take 2 negative examples per positive we will have 8 different pairs because our windows is 4"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-with-negative-sampling-training-examples",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-with-negative-sampling-training-examples",
     "title": "Lexical semantics and word embeddings",
-    "section": "62 Skip-gram with negative sampling: Training examples",
-    "text": "62 Skip-gram with negative sampling: Training examples\n\n\n\n\nSlide 62"
+    "section": "61 Skip-gram with negative sampling: Training examples",
+    "text": "61 Skip-gram with negative sampling: Training examples\n\n\n\n\nSlide 62\n\n\n\n\nSo basically we will convert our dataset into word pairs"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-with-negative-sampling-2",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-with-negative-sampling-2",
     "title": "Lexical semantics and word embeddings",
-    "section": "63 Skip-gram with negative sampling",
-    "text": "63 Skip-gram with negative sampling\n\n\n\n\nSlide 63"
+    "section": "62 Skip-gram with negative sampling",
+    "text": "62 Skip-gram with negative sampling\n\n\n\n\nSlide 63\n\n\n\n\nSo now for a given pair we are going to predict if it is a negative or positive example, basically we converted into a binary clarification problem\nSo basically we will have a probability that a pair (w_j: context, w_k: example) is a positive example and then the probability that is a negative example."
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-with-negative-sampling-3",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-with-negative-sampling-3",
     "title": "Lexical semantics and word embeddings",
-    "section": "64 Skip-gram with negative sampling",
-    "text": "64 Skip-gram with negative sampling\n\n\n\n\nSlide 64"
+    "section": "63 Skip-gram with negative sampling",
+    "text": "63 Skip-gram with negative sampling\n\n\n\n\nSlide 65"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-with-negative-sampling-4",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-with-negative-sampling-4",
     "title": "Lexical semantics and word embeddings",
-    "section": "65 Skip-gram with negative sampling",
-    "text": "65 Skip-gram with negative sampling\n\n\n\n\nSlide 65"
+    "section": "64 Skip-gram with negative sampling",
+    "text": "64 Skip-gram with negative sampling\n\n\n\n\nSlide 65"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-with-negative-sampling-objective",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-with-negative-sampling-objective",
     "title": "Lexical semantics and word embeddings",
-    "section": "66 Skip-gram with negative sampling: Objective",
-    "text": "66 Skip-gram with negative sampling: Objective\n\n\n\n\nSlide 66"
+    "section": "64 Skip-gram with negative sampling: Objective",
+    "text": "64 Skip-gram with negative sampling: Objective\n\n\n\n\nSlide 68\n\n\n\n\nSo now the intuition is that we want to make the word vector like the context vector and unlike the context vector of the negative examples.\nSo here we want to maximize the probability of positive examples being positive and maximize the probability of negative examples being negative\n\n64.1 Savings from negative Skip-gram. Softmax –&gt; Sigmoid\n\n\n\n\nEdit:\nTo sum up we see from the last equation that instead of iterating over the whole vocabulary, now we will maximize over the positive and negative sets which their size is a design choice that as explained during the lectures is more computational efficient (less dot products to compute) as iterating over the whole vocabulary as it was the case with Softamx."
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-with-negative-sampling-objective-1",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-with-negative-sampling-objective-1",
     "title": "Lexical semantics and word embeddings",
-    "section": "67 Skip-gram with negative sampling: Objective",
-    "text": "67 Skip-gram with negative sampling: Objective\n\n\n\n\nSlide 67"
+    "section": "65 Skip-gram with negative sampling: Objective",
+    "text": "65 Skip-gram with negative sampling: Objective\n\n\n\n\nSlide 67"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-with-negative-sampling-objective-2",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#skip-gram-with-negative-sampling-objective-2",
     "title": "Lexical semantics and word embeddings",
-    "section": "68 Skip-gram with negative sampling: Objective",
-    "text": "68 Skip-gram with negative sampling: Objective\n\n\n\n\nSlide 68"
+    "section": "66 Skip-gram with negative sampling: Objective",
+    "text": "66 Skip-gram with negative sampling: Objective\n\n\n\n\nSlide 68"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#properties-of-embeddings",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#properties-of-embeddings",
     "title": "Lexical semantics and word embeddings",
-    "section": "69 Properties of embeddings",
-    "text": "69 Properties of embeddings\n\n\n\n\nSlide 69"
+    "section": "65 Properties of embeddings",
+    "text": "65 Properties of embeddings\n\n\n\n\nSlide 69\n\n\n\n\nThe number below France is the ranking of most similar words. The interesting thing is that if you do not use lexematitation, it also captures more find grained aspects of meaning. For instance in ‘Reddish’ we do not get other colors but we also get a red-like similar words is not about ish words because we also get silvery. This show us that the model cna capture fine grained aspects, which is what we want."
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#properties-of-embeddings-1",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#properties-of-embeddings-1",
     "title": "Lexical semantics and word embeddings",
-    "section": "70 Properties of embeddings",
-    "text": "70 Properties of embeddings\n\n\n\n\nSlide 70"
+    "section": "66 Properties of embeddings",
+    "text": "66 Properties of embeddings\n\n\n\n\nSlide 71\n\n\n\n\nWe compare two pairs of words in terms of their relation\n\nhere in apples in the plural relation\nhere in man and woman there is a gender relation\n\nSo the model needs to complete the analogy given a is b and then given c is to what?"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#properties-of-embeddings-2",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#properties-of-embeddings-2",
     "title": "Lexical semantics and word embeddings",
-    "section": "71 Properties of embeddings",
-    "text": "71 Properties of embeddings\n\n\n\n\nSlide 71"
+    "section": "67 Properties of embeddings",
+    "text": "67 Properties of embeddings\n\n\n\n\nSlide 72"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#properties-of-embeddings-3",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#properties-of-embeddings-3",
     "title": "Lexical semantics and word embeddings",
-    "section": "72 Properties of embeddings",
-    "text": "72 Properties of embeddings\n\n\n\n\nSlide 72"
+    "section": "68 Properties of embeddings",
+    "text": "68 Properties of embeddings\n\n\n\n\nSlide 73"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#properties-of-embeddings-4",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#properties-of-embeddings-4",
     "title": "Lexical semantics and word embeddings",
-    "section": "73 Properties of embeddings",
-    "text": "73 Properties of embeddings\n\n\n\n\nSlide 73"
+    "section": "69 Properties of embeddings",
+    "text": "69 Properties of embeddings\n\n\n\n\nSlide 73"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#word-embeddings-in-practice",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#word-embeddings-in-practice",
     "title": "Lexical semantics and word embeddings",
-    "section": "74 Word embeddings in practice",
-    "text": "74 Word embeddings in practice\n\n\n\n\nSlide 74"
+    "section": "69 Word embeddings in practice",
+    "text": "69 Word embeddings in practice\n\n\n\n\nSlide 74\n\n\n\n\nIn your NN the first layer are going to be the word embeddings which are some representations of the word"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#count-based-models-vs.-skip-gram-word-embeddings",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#count-based-models-vs.-skip-gram-word-embeddings",
     "title": "Lexical semantics and word embeddings",
-    "section": "75 Count-based models vs. skip-gram word embeddings",
-    "text": "75 Count-based models vs. skip-gram word embeddings\n\n\n\n\nSlide 75"
+    "section": "70 Count-based models vs. skip-gram word embeddings",
+    "text": "70 Count-based models vs. skip-gram word embeddings\n\n\n\n\nSlide 75"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#count-based-models-vs.-skip-gram-word-embeddings-1",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#count-based-models-vs.-skip-gram-word-embeddings-1",
     "title": "Lexical semantics and word embeddings",
-    "section": "76 Count-based models vs. skip-gram word embeddings",
-    "text": "76 Count-based models vs. skip-gram word embeddings\n\n\n\n\nSlide 76"
+    "section": "71 Count-based models vs. skip-gram word embeddings",
+    "text": "71 Count-based models vs. skip-gram word embeddings\n\n\n\n\nSlide 76"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#acknowledgement",
     "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#acknowledgement",
     "title": "Lexical semantics and word embeddings",
-    "section": "77 Acknowledgement",
-    "text": "77 Acknowledgement\n\n\n\n\nSlide 77"
+    "section": "72 Acknowledgement",
+    "text": "72 Acknowledgement\n\n\n\n\nSlide 77"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html",
@@ -6781,5 +6781,12 @@
     "title": "Compositional semantics and sentence representations",
     "section": "120 SGD vs GD",
     "text": "120 SGD vs GD\n\n\n\n\nSlide 120"
+  },
+  {
+    "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#carriage-bike-vehicle-train-truck-lorry-coach-taxi",
+    "href": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#carriage-bike-vehicle-train-truck-lorry-coach-taxi",
+    "title": "Lexical semantics and word embeddings",
+    "section": "41 carriage bike vehicle train truck lorry coach taxi",
+    "text": "41 carriage bike vehicle train truck lorry coach taxi\nofficial officer inspector journalist detective constable policeman reporter – sister daughter parent relative lover cousin friend wife mother husband brother father\n2set car engine petrol road driver wheel trip steering seat fo, highway sign speed concert singer stage light music show audience performance ticket experiment research scientist paper result publication laboratory finding"
   }
 ]
