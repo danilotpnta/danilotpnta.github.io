@@ -395,7 +395,7 @@ window.MathJax = {
     
 </main>
 
-<p>Discussed in the context of Depp Learning well in this <a href="https://www.danilotpnta.com/blog/2023-11-05_deep-feedforward-networks/index.html#softmax">section</a></p>
+<p>Discussed in the context of Depp Learning in this <a href="https://www.danilotpnta.com/blog/2023-11-05_deep-feedforward-networks/index.html#softmax">section</a></p>
 <p>Let’s consider a hypothetical set of logits before applying the softmax function. For simplicity, let’s take a vector with three logits: <span class="math inline">\((2, 5, 8)\)</span>. The softmax function is defined as:</p>
 <p><span class="math display">\[
 P_i = \frac{e^{z_i / \tau}}{\sum_{j=1}^{N} e^{z_j / \tau}}
@@ -427,7 +427,12 @@ P_i = \frac{e^{z_i / \tau}}{\sum_{j=1}^{N} e^{z_j / \tau}}
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(softmax_probs.numpy())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>The output will be a set of probabilities where the distribution is “sharpened” due to the low temperature:</p>
 <pre><code>[0.00242826, 0.04741446, 0.95015728]</code></pre>
-<p>Notice that the probability for the class with the highest logit (class 3, with logit 8) is much higher compared to the others.</p></li>
+<p>Notice that the probability for the class with the highest logit (class 3, with logit 8) is much higher compared to the others.</p>
+<pre><code> # pairwise similarities between ima_feat and text_feat -&gt; softamx -&gt; scaling
+ # scaling: self.logit_scale = self.clip_model.logit_scale.exp().detach() aka e^(logit_scale)
+ # ^ makes softmax have a temperture term in its formula
+ #   - high tau -&gt; smothing probs
+ #   - low  tau -&gt; peaked probs</code></pre></li>
 </ol>
 <p>In these examples, adjusting the temperature influences the degree of exploration (smoothness) versus exploitation (sharpness) in the distribution of probabilities. Higher temperatures encourage a more uniform distribution, while lower temperatures emphasize the most confident predictions. This temperature parameter is often used in training as a form of regularization to control the model’s uncertainty.</p>
 
