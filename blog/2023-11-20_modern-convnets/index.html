@@ -23,6 +23,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -77,6 +111,8 @@ window.MathJax = {
 </script>
 <link rel="shortcut icon" href="../../../../../../../../../../../assets/danilo.ico">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../css/index-posts.css">
 </head>
@@ -377,20 +413,10 @@ window.MathJax = {
     
 </main>
 
-<section id="title" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="title"><span class="header-section-number">1</span> Title</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_1.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 1</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-</section>
-<section id="lecture-overview" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="lecture-overview"><span class="header-section-number">2</span> Lecture overview</h2>
+<!-- ## Title
+<center>![Slide 1](imgs/page_1.png){.w575}</center><pre></pre> -->
+<section id="lecture-overview" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="lecture-overview"><span class="header-section-number">1</span> Lecture overview</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -401,8 +427,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="understanding-deep-embeddings" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="understanding-deep-embeddings"><span class="header-section-number">3</span> Understanding deep embeddings</h2>
+<section id="understanding-deep-embeddings" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="understanding-deep-embeddings"><span class="header-section-number">2</span> Understanding deep embeddings</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -413,8 +439,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="the-deep-layers-will-gradually-learn-more-abstract-features." class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="the-deep-layers-will-gradually-learn-more-abstract-features."><span class="header-section-number">4</span> The deep layers will gradually learn more abstract features.</h2>
+<section id="the-deep-layers-will-gradually-learn-more-abstract-features." class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="the-deep-layers-will-gradually-learn-more-abstract-features."><span class="header-section-number">3</span> The deep layers will gradually learn more abstract features.</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -424,9 +450,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>The things that are not important are guided by SGD</p>
 </section>
-<section id="this-deep-lower-dimensional-space-learns-meaningful-structures" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="this-deep-lower-dimensional-space-learns-meaningful-structures"><span class="header-section-number">5</span> This deep, lower dimensional space learns meaningful structures</h2>
+<section id="this-deep-lower-dimensional-space-learns-meaningful-structures" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="this-deep-lower-dimensional-space-learns-meaningful-structures"><span class="header-section-number">4</span> This deep, lower dimensional space learns meaningful structures</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -436,9 +463,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Call lower dimension manifold. RGB does not have meaningfull transformations</p>
 </section>
-<section id="what-do-the-different-layers-in-a-deep-neural-netwok-learn" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="what-do-the-different-layers-in-a-deep-neural-netwok-learn"><span class="header-section-number">6</span> What do the different layers in a deep neural netwok learn</h2>
+<section id="what-do-the-different-layers-in-a-deep-neural-netwok-learn" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="what-do-the-different-layers-in-a-deep-neural-netwok-learn"><span class="header-section-number">5</span> What do the different layers in a deep neural netwok learn</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -449,8 +477,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="what-do-the-different-layers-in-a-deep-neural-network-learn" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="what-do-the-different-layers-in-a-deep-neural-network-learn"><span class="header-section-number">7</span> What do the different layers in a deep neural network learn</h2>
+<section id="what-do-the-different-layers-in-a-deep-neural-network-learn" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="what-do-the-different-layers-in-a-deep-neural-network-learn"><span class="header-section-number">6</span> What do the different layers in a deep neural network learn</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -461,8 +489,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="how-do-these-layers-correspond-to-semantics-numerical-evaluation" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="how-do-these-layers-correspond-to-semantics-numerical-evaluation"><span class="header-section-number">8</span> How do these layers correspond to “semantics”: numerical evaluation</h2>
+<section id="how-do-these-layers-correspond-to-semantics-numerical-evaluation" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="how-do-these-layers-correspond-to-semantics-numerical-evaluation"><span class="header-section-number">7</span> How do these layers correspond to “semantics”: numerical evaluation</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -472,6 +500,141 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>We Pooled them because the features are too big, we get smaller size inputs</p>
+<section id="d-pooling-e.g.-max-pooling-in-cnns" class="level3" data-number="7.1">
+<h3 data-number="7.1" class="anchored"><span class="header-section-number">7.1</span> 1. 2D Pooling (e.g., Max Pooling) in CNNs:</h3>
+<p>Consider an input feature map with dimensions <code>[batch_size, channels, height, width]</code>:</p>
+<pre class="plaintext"><code>[32, 64, 32, 32]</code></pre>
+<ul>
+<li><strong>Max Pooling (2x2):</strong>
+<ul>
+<li>Apply a 2x2 max pooling operation, reducing height and width by half.</li>
+<li>Resulting feature map: <code>[32, 64, 16, 16]</code>.</li>
+</ul></li>
+</ul>
+<pre class="plaintext"><code>Input:           [32, 64, 32, 32]
+Max Pooling:     [32, 64, 16, 16]</code></pre>
+<center>
+<img src="2023-11-27-22-22-01.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+Convolution uses this formula remember:
+<center>
+<img src="2023-11-27-22-38-17.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li>This is AlexNet, <a href="https://stackoverflow.com/questions/42733971/understanding-the-dimensions-of-a-fully-connected-layer-that-follows-a-max-pooli">Source</a>
+<center>
+<img src="2023-11-27-22-39-07.png" class="w550 img-fluid">
+</center>
+<pre></pre></li>
+</ul>
+<blockquote class="blockquote">
+<p><strong>Remember:</strong> the num of kernels for Convolution determines the new depth-dimension.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>What if the deepth was 3 channels, then we apply convolution to the 3 channels and then we summed them over. That is using only one kernel, now if we have 6 kernels we would sum the 3 channels, 6 times, but at the end we end up with a new deepth of 6. Check <a href="https://www.danilotpnta.com/blog/2023-11-20_convolutional-neural-networks/index.html#putting-it-together-7">this</a></p>
+</blockquote>
+<p><strong>Flattening Operation:</strong> multiply all its dimensions to form a 1D vector</p>
+<ul>
+<li>Output: <code>[batch_size, num_filters * reduced_height * reduced_width]</code></li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How to train a linear layer on top of a pretrained model?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Training a linear layer on top of a pretrained model is a common practice in transfer learning. Here’s an example using a pretrained convolutional neural network (CNN) as a feature extractor, and then adding a linear layer on top for a specific task, such as image classification.</p>
+<p>Let’s assume we have a pretrained ResNet18 model, and we want to use it for a new classification task. The final classification layer of ResNet18 is typically a linear layer. We will replace this final layer with our custom linear layer.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch.nn <span class="im">as</span> nn</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torchvision.models <span class="im">as</span> models</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Load pretrained ResNet18</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>pretrained_resnet18 <span class="op">=</span> models.resnet18(pretrained<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Freeze all layers except the final classification layer</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> param <span class="kw">in</span> pretrained_resnet18.parameters():</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    param.requires_grad <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Modify the final classification layer</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>in_features <span class="op">=</span> pretrained_resnet18.fc.in_features</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>num_classes <span class="op">=</span> <span class="dv">10</span>  <span class="co"># Assuming 10 classes for the new task</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>custom_linear_layer <span class="op">=</span> nn.Linear(in_features, num_classes)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>pretrained_resnet18.fc <span class="op">=</span> custom_linear_layer</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Now, you can train the modified model for your specific task</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Let's assume you have input data of shape (batch_size, 3, 224, 224) for RGB images</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co"># and corresponding labels of shape (batch_size)</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Example training loop</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>criterion <span class="op">=</span> nn.CrossEntropyLoss()</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>optimizer <span class="op">=</span> torch.optim.SGD(pretrained_resnet18.parameters(), lr<span class="op">=</span><span class="fl">0.001</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Training iterations</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> epoch <span class="kw">in</span> <span class="bu">range</span>(num_epochs):</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> inputs, labels <span class="kw">in</span> dataloader:  <span class="co"># Assume you have a DataLoader for your dataset</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>        optimizer.zero_grad()</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>        outputs <span class="op">=</span> pretrained_resnet18(inputs)</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>        loss <span class="op">=</span> criterion(outputs, labels)</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>        loss.backward()</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>        optimizer.step()</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a><span class="co"># After training, you can use the modified model for predictions</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>In this example: - We load a pretrained ResNet18 model from torchvision. - We freeze all layers of the pretrained model to retain their weights during training. - We replace the final classification layer with our custom linear layer (<code>custom_linear_layer</code>). - We then train the modified model for the new task using a suitable loss function and optimizer.</p>
+<p>The dimensions involved depend on your specific input data, but in this case, assuming RGB images of size 224x224, the input shape would be (batch_size, 3, 224, 224), and the linear layer would map to the number of classes in your new task.</p>
+<section id="how-does-this-linear-layer-looks-like" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="how-does-this-linear-layer-looks-like"><span class="header-section-number">8</span> How does this linear layer looks like?</h2>
+<p>In the context of a linear layer in neural networks, such as <code>nn.Linear(in_features, num_classes)</code>, here’s what the terms mean:</p>
+<ul>
+<li><p><code>in_features</code>: This is the number of input features (or neurons) coming into the linear layer. In the example I provided earlier with the modified ResNet18 model, <code>in_features</code> is the number of features produced by the previous layer, which is the final layer of the feature extractor part of ResNet18. This value depends on the architecture of the pretrained model; you can check it using <code>pretrained_resnet18.fc.in_features</code>.</p></li>
+<li><p><code>num_classes</code>: This is the number of output features (or neurons) produced by the linear layer. In the context of a classification task, <code>num_classes</code> typically represents the number of classes you have in your specific classification problem. Each output neuron corresponds to a class, and the model will learn to assign higher values to the correct class during training.</p></li>
+</ul>
+<p>Now, for the number of weights and neurons:</p>
+<ul>
+<li><p>Weights: The linear layer has a weight matrix of size <code>(out_features, in_features)</code>, and a bias vector of size <code>(out_features)</code>. In this case, the weight matrix has dimensions <code>(num_classes, in_features)</code>.</p>
+<p>Total number of trainable weights = <code>(num_classes * in_features) + num_classes</code>.</p></li>
+<li><p>Neurons: The linear layer has <code>num_classes</code> output neurons. Each neuron receives input from all <code>in_features</code> neurons in the previous layer.</p></li>
+</ul>
+<p>So, if you have a linear layer defined as <code>nn.Linear(512, 10)</code>, for example:</p>
+<ul>
+<li><code>in_features</code> is 512.</li>
+<li><code>num_classes</code> is 10.</li>
+</ul>
+<p>The total number of trainable weights would be <code>(10 * 512) + 10 = 5130</code>, and there would be 10 neurons in the output layer. Each neuron in the output layer is associated with a specific class, and the weights determine how strongly each input feature contributes to the prediction for that class.</p>
+<section id="imaging-it-using-pytorch" class="level3" data-number="8.1">
+<h3 data-number="8.1" class="anchored" data-anchor-id="imaging-it-using-pytorch"><span class="header-section-number">8.1</span> Imaging it using Pytorch:</h3>
+<p>More at <a href="https://www.sharetechnote.com/html/Python_PyTorch_nn_Sequential_01.html">source</a>:</p>
+<center>
+<img src="2023-11-27-23-03-29.png" class="w450 img-fluid">
+</center>
+<pre></pre>
+<center>
+<img src="2023-11-27-23-03-48.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<center>
+<img src="2023-11-27-23-04-08.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<center>
+<img src="2023-11-27-23-04-27.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+</section>
+</section>
+</div>
+</div>
+</div>
+</section>
 </section>
 <section id="lets-wake-up-summarize-the-last-few-minutes-to-your-neighbor." class="level2" data-number="9">
 <h2 data-number="9" class="anchored" data-anchor-id="lets-wake-up-summarize-the-last-few-minutes-to-your-neighbor."><span class="header-section-number">9</span> . Let’s wake up: Summarize the last few minutes to your neighbor. |</h2>
@@ -487,7 +650,6 @@ window.MathJax = {
 </section>
 <section id="x1-convolution-a-computationally-cheap-method" class="level2" data-number="10">
 <h2 data-number="10" class="anchored" data-anchor-id="x1-convolution-a-computationally-cheap-method"><span class="header-section-number">10</span> 1x1 Convolution: a computationally cheap method</h2>
-Last time a
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -497,10 +659,7 @@ Last time a
 </div>
 </center>
 <pre></pre>
-</section>
-<section id="x1-convolution-a-computationally-cheap-method-1" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="x1-convolution-a-computationally-cheap-method-1"><span class="header-section-number">11</span> 1x1 Convolution: a computationally cheap method</h2>
-O d a e o Eg 28x28x192 -&gt; 24x24x32 | 5X5 e —10008V, eee —l | |
+<!-- ## 1x1 Convolution: a computationally cheap method -->
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -511,23 +670,21 @@ O d a e o Eg 28x28x192 -&gt; 24x24x32 | 5X5 e —10008V, eee —l | |
 </center>
 <pre></pre>
 </section>
-<section id="convnet-configuration" class="level2" data-number="12">
-<h2 data-number="12" class="anchored" data-anchor-id="convnet-configuration"><span class="header-section-number">12</span> ConvNet Configuration</h2>
-<p>AIRN] B [| C | D 7 —£ |</p>
-<p>11 weight | 11 weight | 13 weight | 16 weight 16 weight | 19 weight</p>
-Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
+<section id="convnet-configuration" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="convnet-configuration"><span class="header-section-number">11</span> ConvNet Configuration</h2>
+<!-- <center>![Slide 12](imgs/page_12.png){.w575}</center><pre></pre> -->
 <center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_12.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 12</figcaption>
-</figure>
-</div>
+<img src="2023-11-27-23-17-04.png" class="w575 img-fluid">
 </center>
 <pre></pre>
 </section>
-<section id="vggi16" class="level2" data-number="13">
-<h2 data-number="13" class="anchored" data-anchor-id="vggi16"><span class="header-section-number">13</span> VGGI16</h2>
+<section id="vgg-16" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="vgg-16"><span class="header-section-number">12</span> VGG 16</h2>
+<!-- <center>![](2023-11-27-23-13-56.png){.w575}</center><pre></pre> -->
+<center>
+<img src="2023-11-27-23-19-41.png" class="w575 img-fluid">
+</center>
+<pre></pre>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -538,8 +695,12 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="characteristics" class="level2" data-number="14">
-<h2 data-number="14" class="anchored" data-anchor-id="characteristics"><span class="header-section-number">14</span> Characteristics</h2>
+<section id="characteristics" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="characteristics"><span class="header-section-number">13</span> Characteristics</h2>
+<center>
+<img src="2023-11-27-23-24-23.png" class="w150 img-fluid">
+</center>
+<pre></pre>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -550,8 +711,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="why-3x3-filters" class="level2" data-number="15">
-<h2 data-number="15" class="anchored" data-anchor-id="why-3x3-filters"><span class="header-section-number">15</span> Why 3x3 filters?</h2>
+<section id="why-3x3-filters" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="why-3x3-filters"><span class="header-section-number">14</span> Why 3x3 filters?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -562,8 +723,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="why-3x3-filters-1" class="level2" data-number="16">
-<h2 data-number="16" class="anchored" data-anchor-id="why-3x3-filters-1"><span class="header-section-number">16</span> Why 3x3 filters?</h2>
+<section id="why-3x3-filters-1" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="why-3x3-filters-1"><span class="header-section-number">15</span> Why 3x3 filters?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -574,8 +735,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="why-3x3-filters-2" class="level2" data-number="17">
-<h2 data-number="17" class="anchored" data-anchor-id="why-3x3-filters-2"><span class="header-section-number">17</span> Why 3x3 filters?</h2>
+<section id="why-3x3-filters-2" class="level2" data-number="16">
+<h2 data-number="16" class="anchored" data-anchor-id="why-3x3-filters-2"><span class="header-section-number">16</span> Why 3x3 filters?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -586,8 +747,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="why-3x3-filters-3" class="level2" data-number="18">
-<h2 data-number="18" class="anchored" data-anchor-id="why-3x3-filters-3"><span class="header-section-number">18</span> Why 3x3 filters?</h2>
+<section id="why-3x3-filters-3" class="level2" data-number="17">
+<h2 data-number="17" class="anchored" data-anchor-id="why-3x3-filters-3"><span class="header-section-number">17</span> Why 3x3 filters?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -597,9 +758,10 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<p>Having 3 filters of 3x3 –&gt; 7 is better because it can learn more non-linearities, more non-trivial functions, having large kernels is expensive, having small kernels but multiple of them is more cheaper</p>
 </section>
-<section id="even-smaller-filters" class="level2" data-number="19">
-<h2 data-number="19" class="anchored" data-anchor-id="even-smaller-filters"><span class="header-section-number">19</span> Even smaller filters?</h2>
+<section id="even-smaller-filters" class="level2" data-number="18">
+<h2 data-number="18" class="anchored" data-anchor-id="even-smaller-filters"><span class="header-section-number">18</span> Even smaller filters?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -609,9 +771,11 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<p>When we remove dimensions is because we are getting rid of unimportant features, i.e.&nbsp;background, we also call th 1x1 kernel a bottleneck</p>
 </section>
-<section id="overall-shapes-and-sizes-when-inputting-a-224x224-image" class="level2" data-number="20">
-<h2 data-number="20" class="anchored" data-anchor-id="overall-shapes-and-sizes-when-inputting-a-224x224-image"><span class="header-section-number">20</span> Overall shapes and sizes when inputting a 224x224 image:</h2>
+<section id="overall-shapes-and-sizes-when-inputting-a-224x224-image" class="level2" data-number="19">
+<h2 data-number="19" class="anchored" data-anchor-id="overall-shapes-and-sizes-when-inputting-a-224x224-image"><span class="header-section-number">19</span> Overall shapes and sizes when inputting a 224x224 image:</h2>
+<p>Vgg architecture</p>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -622,8 +786,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="training" class="level2" data-number="21">
-<h2 data-number="21" class="anchored" data-anchor-id="training"><span class="header-section-number">21</span> Training</h2>
+<section id="training" class="level2" data-number="20">
+<h2 data-number="20" class="anchored" data-anchor-id="training"><span class="header-section-number">20</span> Training</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -633,9 +797,10 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<p>They use dropout on the FC layers because they tend to overfit quite easily</p>
 </section>
-<section id="feature-maps" class="level2" data-number="22">
-<h2 data-number="22" class="anchored" data-anchor-id="feature-maps"><span class="header-section-number">22</span> Feature maps</h2>
+<section id="feature-maps" class="level2" data-number="21">
+<h2 data-number="21" class="anchored" data-anchor-id="feature-maps"><span class="header-section-number">21</span> Feature maps</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -645,9 +810,14 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<p>Some neuros (each item in the row, in total 8) for some the neuron does not fire it because we i.e have the background.</p>
+<ul>
+<li>In the first block we recognize edges</li>
+<li>Later stages. our dimensionality decreases, that’s why we get block structures</li>
+</ul>
 </section>
-<section id="filters" class="level2" data-number="23">
-<h2 data-number="23" class="anchored" data-anchor-id="filters"><span class="header-section-number">23</span> Filters</h2>
+<section id="filters" class="level2" data-number="22">
+<h2 data-number="22" class="anchored" data-anchor-id="filters"><span class="header-section-number">22</span> Filters</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -657,9 +827,15 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<blockquote class="blockquote">
+<p><strong>Remember:</strong> Train only the parameters of the linear classifier while keeping the parameters of the pre-trained model frozen. This is sometimes called “freezing” the pre-trained layers</p>
+</blockquote>
+<p>Because the above its not understandable, so for that we can keep the network frozen and now have an incoming image that is parametrized. Now your input image is torch.nnParameter(3,224,224). And we run gradient descent on this input image.</p>
+<p>With that we want to maximize the activation function for a particular filter, so the loss function is the activation negative value of this filter, and you do backpropagation in the incoming image.</p>
+<p>So then you get for example for some filter, some edges in one direction. And for higuer level featuers you can see some slighly more complex patterns</p>
 </section>
-<section id="class-outputs" class="level2" data-number="24">
-<h2 data-number="24" class="anchored" data-anchor-id="class-outputs"><span class="header-section-number">24</span> Class Outputs</h2>
+<section id="class-outputs" class="level2" data-number="23">
+<h2 data-number="23" class="anchored" data-anchor-id="class-outputs"><span class="header-section-number">23</span> Class Outputs</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -669,9 +845,10 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<p>Here you see that the neuron will fire up for instance if the incoming image is a rabit, then the first filter will fire up</p>
 </section>
-<section id="title-1" class="level2" data-number="25">
-<h2 data-number="25" class="anchored" data-anchor-id="title-1"><span class="header-section-number">25</span> Title</h2>
+<section id="another-architecture" class="level2" data-number="24">
+<h2 data-number="24" class="anchored" data-anchor-id="another-architecture"><span class="header-section-number">24</span> Another Architecture</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -682,8 +859,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="basic-idea" class="level2" data-number="26">
-<h2 data-number="26" class="anchored" data-anchor-id="basic-idea"><span class="header-section-number">26</span> Basic idea</h2>
+<section id="basic-idea" class="level2" data-number="25">
+<h2 data-number="25" class="anchored" data-anchor-id="basic-idea"><span class="header-section-number">25</span> Basic idea</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -694,8 +871,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="basic-idea-1" class="level2" data-number="27">
-<h2 data-number="27" class="anchored" data-anchor-id="basic-idea-1"><span class="header-section-number">27</span> Basic idea</h2>
+<section id="basic-idea-1" class="level2" data-number="26">
+<h2 data-number="26" class="anchored" data-anchor-id="basic-idea-1"><span class="header-section-number">26</span> Basic idea</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -706,8 +883,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="inception-module" class="level2" data-number="28">
-<h2 data-number="28" class="anchored" data-anchor-id="inception-module"><span class="header-section-number">28</span> Inception module</h2>
+<section id="inception-module" class="level2" data-number="27">
+<h2 data-number="27" class="anchored" data-anchor-id="inception-module"><span class="header-section-number">27</span> Inception module</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -718,8 +895,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="inception-module-1" class="level2" data-number="29">
-<h2 data-number="29" class="anchored" data-anchor-id="inception-module-1"><span class="header-section-number">29</span> Inception module</h2>
+<section id="inception-module-1" class="level2" data-number="28">
+<h2 data-number="28" class="anchored" data-anchor-id="inception-module-1"><span class="header-section-number">28</span> Inception module</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -729,9 +906,16 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<p>They are expensive because we have this:</p>
+<center>
+<img src="2023-11-28-09-38-07.png" class="w350 img-fluid">
+</center>
+<pre></pre>
+<p>So more parameters to train hence expensive.</p>
+<p>Hence we apply 1x1 intermediate convolutions to reduce the dimensionality and have less parameters to train</p>
 </section>
-<section id="architecture" class="level2" data-number="30">
-<h2 data-number="30" class="anchored" data-anchor-id="architecture"><span class="header-section-number">30</span> Architecture</h2>
+<section id="architecture" class="level2" data-number="29">
+<h2 data-number="29" class="anchored" data-anchor-id="architecture"><span class="header-section-number">29</span> Architecture</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -742,8 +926,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="architecture-the-inception-module" class="level2" data-number="31">
-<h2 data-number="31" class="anchored" data-anchor-id="architecture-the-inception-module"><span class="header-section-number">31</span> Architecture: the “Inception” module</h2>
+<section id="architecture-the-inception-module" class="level2" data-number="30">
+<h2 data-number="30" class="anchored" data-anchor-id="architecture-the-inception-module"><span class="header-section-number">30</span> Architecture: the “Inception” module</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -753,9 +937,10 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<p>The green block is concatenation because spatially they have the same size, so you can stack them together</p>
 </section>
-<section id="architecture-the-auxiliary-classifier-idea" class="level2" data-number="32">
-<h2 data-number="32" class="anchored" data-anchor-id="architecture-the-auxiliary-classifier-idea"><span class="header-section-number">32</span> Architecture: the auxiliary classifier idea</h2>
+<section id="architecture-the-auxiliary-classifier-idea" class="level2" data-number="31">
+<h2 data-number="31" class="anchored" data-anchor-id="architecture-the-auxiliary-classifier-idea"><span class="header-section-number">31</span> Architecture: the auxiliary classifier idea</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -765,9 +950,10 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<p>Here in this auxilliary classifier, they predict the classes. This gives you gradients even if you havent reach the end of the network</p>
 </section>
-<section id="why-aux-classifiers-vanishing-gradients" class="level2" data-number="33">
-<h2 data-number="33" class="anchored" data-anchor-id="why-aux-classifiers-vanishing-gradients"><span class="header-section-number">33</span> Why aux classifiers? Vanishing gradients</h2>
+<section id="why-aux-classifiers-vanishing-gradients" class="level2" data-number="32">
+<h2 data-number="32" class="anchored" data-anchor-id="why-aux-classifiers-vanishing-gradients"><span class="header-section-number">32</span> Why aux classifiers? Vanishing gradients</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -777,9 +963,10 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<p>We do this becaus otherwhise we end up with the vanishing problem so at one stage you can just use you aux classifier. If you get extremely small gradients then it is very slow to train</p>
 </section>
-<section id="architecture-1" class="level2" data-number="34">
-<h2 data-number="34" class="anchored" data-anchor-id="architecture-1"><span class="header-section-number">34</span> Architecture</h2>
+<section id="architecture-1" class="level2" data-number="33">
+<h2 data-number="33" class="anchored" data-anchor-id="architecture-1"><span class="header-section-number">33</span> Architecture</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -789,9 +976,10 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<p>After training you dont need them anymore you can trhow them away (for aux classifier)</p>
 </section>
-<section id="inceptions-v2-v3-v4-." class="level2" data-number="35">
-<h2 data-number="35" class="anchored" data-anchor-id="inceptions-v2-v3-v4-."><span class="header-section-number">35</span> Inceptions v2, v3, V4, ….</h2>
+<section id="inceptions-v2-v3-v4-." class="level2" data-number="34">
+<h2 data-number="34" class="anchored" data-anchor-id="inceptions-v2-v3-v4-."><span class="header-section-number">34</span> Inceptions v2, v3, V4, ….</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -801,9 +989,10 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<p>The first picture refers to this two 3x3 then making 5x5, this inclusion of filters make the computations less expensive while introduction non-linearitties to be learn</p>
 </section>
-<section id="title-2" class="level2" data-number="36">
-<h2 data-number="36" class="anchored" data-anchor-id="title-2"><span class="header-section-number">36</span> Title</h2>
+<section id="resnets" class="level2" data-number="35">
+<h2 data-number="35" class="anchored" data-anchor-id="resnets"><span class="header-section-number">35</span> ResNets</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -814,8 +1003,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="alexnet-2012" class="level2" data-number="37">
-<h2 data-number="37" class="anchored" data-anchor-id="alexnet-2012"><span class="header-section-number">37</span> AlexNet (2012)</h2>
+<section id="alexnet-2012" class="level2" data-number="36">
+<h2 data-number="36" class="anchored" data-anchor-id="alexnet-2012"><span class="header-section-number">36</span> AlexNet (2012)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -826,8 +1015,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="evolution" class="level2" data-number="38">
-<h2 data-number="38" class="anchored" data-anchor-id="evolution"><span class="header-section-number">38</span> Evolution</h2>
+<section id="evolution" class="level2" data-number="37">
+<h2 data-number="37" class="anchored" data-anchor-id="evolution"><span class="header-section-number">37</span> Evolution</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -838,8 +1027,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="title-3" class="level2" data-number="39">
-<h2 data-number="39" class="anchored" data-anchor-id="title-3"><span class="header-section-number">39</span> Title</h2>
+<section id="title" class="level2" data-number="38">
+<h2 data-number="38" class="anchored" data-anchor-id="title"><span class="header-section-number">38</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -850,8 +1039,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="evolution-1" class="level2" data-number="40">
-<h2 data-number="40" class="anchored" data-anchor-id="evolution-1"><span class="header-section-number">40</span> Evolution</h2>
+<section id="evolution-1" class="level2" data-number="39">
+<h2 data-number="39" class="anchored" data-anchor-id="evolution-1"><span class="header-section-number">39</span> Evolution</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -862,8 +1051,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="evolution-2" class="level2" data-number="41">
-<h2 data-number="41" class="anchored" data-anchor-id="evolution-2"><span class="header-section-number">41</span> Evolution</h2>
+<section id="evolution-2" class="level2" data-number="40">
+<h2 data-number="40" class="anchored" data-anchor-id="evolution-2"><span class="header-section-number">40</span> Evolution</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -874,8 +1063,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="why-care-about-architectures-heres-why" class="level2" data-number="42">
-<h2 data-number="42" class="anchored" data-anchor-id="why-care-about-architectures-heres-why"><span class="header-section-number">42</span> Why care about architectures… here’s why:</h2>
+<section id="why-care-about-architectures-heres-why" class="level2" data-number="41">
+<h2 data-number="41" class="anchored" data-anchor-id="why-care-about-architectures-heres-why"><span class="header-section-number">41</span> Why care about architectures… here’s why:</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -885,9 +1074,10 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<p>They become more accurate because the parameters did not increase that much despite having more layers. This is because we interchange the 5x5 filter in convolution by i.e two 3x3 kernels</p>
 </section>
-<section id="some-facts-about-resnets" class="level2" data-number="43">
-<h2 data-number="43" class="anchored" data-anchor-id="some-facts-about-resnets"><span class="header-section-number">43</span> Some facts about ResNets</h2>
+<section id="some-facts-about-resnets" class="level2" data-number="42">
+<h2 data-number="42" class="anchored" data-anchor-id="some-facts-about-resnets"><span class="header-section-number">42</span> Some facts about ResNets</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -898,8 +1088,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="hypothesis" class="level2" data-number="44">
-<h2 data-number="44" class="anchored" data-anchor-id="hypothesis"><span class="header-section-number">44</span> Hypothesis</h2>
+<section id="hypothesis" class="level2" data-number="43">
+<h2 data-number="43" class="anchored" data-anchor-id="hypothesis"><span class="header-section-number">43</span> Hypothesis</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -909,9 +1099,10 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<p>If your problem only required, the depth of a CNNA, then B in terms of performance would be the same</p>
 </section>
-<section id="hypothesis-1" class="level2" data-number="45">
-<h2 data-number="45" class="anchored" data-anchor-id="hypothesis-1"><span class="header-section-number">45</span> Hypothesis</h2>
+<section id="hypothesis-1" class="level2" data-number="44">
+<h2 data-number="44" class="anchored" data-anchor-id="hypothesis-1"><span class="header-section-number">44</span> Hypothesis</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -922,8 +1113,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="hypothesis-2" class="level2" data-number="46">
-<h2 data-number="46" class="anchored" data-anchor-id="hypothesis-2"><span class="header-section-number">46</span> Hypothesis</h2>
+<section id="hypothesis-2" class="level2" data-number="45">
+<h2 data-number="45" class="anchored" data-anchor-id="hypothesis-2"><span class="header-section-number">45</span> Hypothesis</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -934,8 +1125,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="however-when-trained-the-deeper-network-has-higher-training-error" class="level2" data-number="47">
-<h2 data-number="47" class="anchored" data-anchor-id="however-when-trained-the-deeper-network-has-higher-training-error"><span class="header-section-number">47</span> However, when trained the deeper network has higher training error</h2>
+<section id="however-when-trained-the-deeper-network-has-higher-training-error" class="level2" data-number="46">
+<h2 data-number="46" class="anchored" data-anchor-id="however-when-trained-the-deeper-network-has-higher-training-error"><span class="header-section-number">46</span> However, when trained the deeper network has higher training error</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -945,9 +1136,10 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<p>Here th problem is that we say that the deeper CNN would yield the same ouput as the smaller architecture but in this case when looking at the error the larger one has more error. So what happen in next slide. It may be with regards to optimization because in theory it should be able to lear in because of more flexibility by the NN</p>
 </section>
-<section id="testing-the-hypothesis" class="level2" data-number="48">
-<h2 data-number="48" class="anchored" data-anchor-id="testing-the-hypothesis"><span class="header-section-number">48</span> Testing the hypothesis</h2>
+<section id="testing-the-hypothesis" class="level2" data-number="47">
+<h2 data-number="47" class="anchored" data-anchor-id="testing-the-hypothesis"><span class="header-section-number">47</span> Testing the hypothesis</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -957,9 +1149,10 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<p>Here the optimization is the problem, it is more harder to optimize this landscape</p>
 </section>
-<section id="observation" class="level2" data-number="49">
-<h2 data-number="49" class="anchored" data-anchor-id="observation"><span class="header-section-number">49</span> Observation</h2>
+<section id="observation" class="level2" data-number="48">
+<h2 data-number="48" class="anchored" data-anchor-id="observation"><span class="header-section-number">48</span> Observation</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -969,9 +1162,10 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<p>Because you have many layers the training layers get lost, and model does not learn anymore</p>
 </section>
-<section id="the-residual-idea-intuitively" class="level2" data-number="50">
-<h2 data-number="50" class="anchored" data-anchor-id="the-residual-idea-intuitively"><span class="header-section-number">50</span> The “residual idea”, intuitively</h2>
+<section id="the-residual-idea-intuitively" class="level2" data-number="49">
+<h2 data-number="49" class="anchored" data-anchor-id="the-residual-idea-intuitively"><span class="header-section-number">49</span> The “residual idea”, intuitively</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -981,9 +1175,11 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<p>Here the intuition is that technically it would be possible, so why not we make it easy for the NN to learn this easy relationship, here is the residual idea.</p>
+<p>So instead of learning how you map things instead lets learn how you change it. So a difference that we need to learn not the mapping. So then here we are making the NN to explicitly model the difference in mappings</p>
 </section>
-<section id="the-residual-block" class="level2" data-number="51">
-<h2 data-number="51" class="anchored" data-anchor-id="the-residual-block"><span class="header-section-number">51</span> The residual block</h2>
+<section id="the-residual-block" class="level2" data-number="50">
+<h2 data-number="50" class="anchored" data-anchor-id="the-residual-block"><span class="header-section-number">50</span> The residual block</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -993,9 +1189,16 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<p>With these new connection it make the vanishing problem not to occurr because the input can pass to the next layers</p>
+<p>So here if the dimensions do not matche we need to make them amtch because we are just saying x=f(x) so f() here should make things equal, because we said that they were the identity functions</p>
+<p>Advantages and Disadvantages of Residual networks here:</p>
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Q1JCrG1bJ-A?si=HScT-f9XV9t35tgP&amp;controls=0&amp;start=971" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+</center>
 </section>
-<section id="no-degradation-anymore" class="level2" data-number="52">
-<h2 data-number="52" class="anchored" data-anchor-id="no-degradation-anymore"><span class="header-section-number">52</span> No degradation anymore</h2>
+<section id="no-degradation-anymore" class="level2" data-number="51">
+<h2 data-number="51" class="anchored" data-anchor-id="no-degradation-anymore"><span class="header-section-number">51</span> No degradation anymore</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1006,8 +1209,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="resnet-breaks-records" class="level2" data-number="53">
-<h2 data-number="53" class="anchored" data-anchor-id="resnet-breaks-records"><span class="header-section-number">53</span> ResNet breaks records</h2>
+<section id="resnet-breaks-records" class="level2" data-number="52">
+<h2 data-number="52" class="anchored" data-anchor-id="resnet-breaks-records"><span class="header-section-number">52</span> ResNet breaks records</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1018,8 +1221,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="resnet-variants-resnext-resnext" class="level2" data-number="54">
-<h2 data-number="54" class="anchored" data-anchor-id="resnet-variants-resnext-resnext"><span class="header-section-number">54</span> _ResNet variants &amp; ResNeXt | ResNext</h2>
+<section id="resnet-variants-resnext" class="level2" data-number="53">
+<h2 data-number="53" class="anchored" data-anchor-id="resnet-variants-resnext"><span class="header-section-number">53</span> ResNet variants &amp; ResNeXt</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1030,8 +1233,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="some-observations" class="level2" data-number="55">
-<h2 data-number="55" class="anchored" data-anchor-id="some-observations"><span class="header-section-number">55</span> Some observations</h2>
+<section id="some-observations" class="level2" data-number="54">
+<h2 data-number="54" class="anchored" data-anchor-id="some-observations"><span class="header-section-number">54</span> Some observations</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1041,9 +1244,54 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<p>Residual connections or identity shortcuts</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Why do we use batchnormas and how does this relate so vanishing gradient problems?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>Batch Normalization (BatchNorm) is a technique used in neural networks to normalize the inputs of a layer, typically by subtracting the mean and dividing by the standard deviation of the batch. BatchNorm has several benefits and is commonly used for the following reasons:</p>
+<ol type="1">
+<li><strong>Stabilizing and Accelerating Training:</strong>
+<ul>
+<li>BatchNorm can help stabilize and accelerate the training of deep neural networks. It mitigates issues related to internal covariate shift, which is the change in the distribution of network activations due to parameter updates during training. By normalizing the inputs, it helps maintain a more consistent distribution of activations throughout the training process.</li>
+</ul></li>
+<li><strong>Regularization:</strong>
+<ul>
+<li>BatchNorm acts as a form of regularization by introducing noise during training. It adds a small amount of noise to the hidden unit activations, which has a similar effect to dropout, helping prevent overfitting.</li>
+</ul></li>
+<li><strong>Reducing Sensitivity to Initialization:</strong>
+<ul>
+<li>BatchNorm reduces the sensitivity of neural networks to weight initialization. It allows the use of higher learning rates and makes the training less dependent on the choice of initial weights.</li>
+</ul></li>
+<li><strong>Addressing Gradient Problems:</strong>
+<ul>
+<li>During training, neural networks often encounter problems related to vanishing or exploding gradients. BatchNorm helps mitigate these issues by normalizing the inputs, which can prevent gradients from becoming too small or too large.</li>
+</ul></li>
+<li><strong>Enabling Higher Learning Rates:</strong>
+<ul>
+<li>BatchNorm enables the use of higher learning rates during training. This can lead to faster convergence and shorter training times.</li>
+</ul></li>
+<li><strong>Improved Generalization:</strong>
+<ul>
+<li>BatchNorm can improve the generalization performance of a model by providing a form of noise during training.</li>
+</ul></li>
+</ol>
+<p>Batch Normalization is a widely used technique that improves the stability, speed, and generalization of neural network training. It addresses various challenges associated with training deep networks, including gradient-related problems, and has become a standard component in many modern neural network architectures.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="quiz-on-the-right-you-see-the" class="level2" data-number="56">
-<h2 data-number="56" class="anchored" data-anchor-id="quiz-on-the-right-you-see-the"><span class="header-section-number">56</span> . Quiz: On the right you see the ;</h2>
+<section id="quiz" class="level2" data-number="55">
+<h2 data-number="55" class="anchored" data-anchor-id="quiz"><span class="header-section-number">55</span> Quiz</h2>
+On the right you see the..
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1053,9 +1301,32 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<ol type="1">
+<li>False, batch + ReLu makes half of the value zero</li>
+<li>False, it is okay to write it like that</li>
+<li>Say conv2 has a dimensionality of 256, but the input has dimension of 128, then downsample function will donwsample to 128 to match the input dimensions. So that means the residual operations have always need to have the same channel</li>
+</ol>
+<p>Example in residuals you can do concat or add</p>
+<ol type="1">
+<li>concat: you end up with</li>
+</ol>
+<ul>
+<li>Tensor A: Shape (ch, 3, 4)</li>
+<li>Tensor B: Shape (ch, 2, 4)</li>
+<li>Out: Shape (ch, 2, 4)</li>
+</ul>
+<ol start="2" type="1">
+<li>Add, both tensors needs to have same shape</li>
+</ol>
+<ul>
+<li>Tensor A: Shape (ch, 6, 4)</li>
+<li>Tensor B: Shape (ch, 6, 4)</li>
+<li>Out: Shape (ch, 6, 4)</li>
+</ul>
+<p>So here they ar saying that to do residual connections the channels needs to be of same dimensions thus why we need the <code>donwsample</code> function. Zero padding is only used for spatial dimensions</p>
 </section>
-<section id="highwaynet-slightly-earlier-than-resnets-in-2015" class="level2" data-number="57">
-<h2 data-number="57" class="anchored" data-anchor-id="highwaynet-slightly-earlier-than-resnets-in-2015"><span class="header-section-number">57</span> HighwayNet (slightly earlier than ResNets in 2015)</h2>
+<section id="highwaynet-slightly-earlier-than-resnets-in-2015" class="level2" data-number="56">
+<h2 data-number="56" class="anchored" data-anchor-id="highwaynet-slightly-earlier-than-resnets-in-2015"><span class="header-section-number">56</span> HighwayNet (slightly earlier than ResNets in 2015)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1066,8 +1337,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="densenet" class="level2" data-number="58">
-<h2 data-number="58" class="anchored" data-anchor-id="densenet"><span class="header-section-number">58</span> DenseNet</h2>
+<section id="densenet" class="level2" data-number="57">
+<h2 data-number="57" class="anchored" data-anchor-id="densenet"><span class="header-section-number">57</span> DenseNet</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1078,8 +1349,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="densenet-1" class="level2" data-number="59">
-<h2 data-number="59" class="anchored" data-anchor-id="densenet-1"><span class="header-section-number">59</span> DenseNet</h2>
+<section id="densenet-1" class="level2" data-number="58">
+<h2 data-number="58" class="anchored" data-anchor-id="densenet-1"><span class="header-section-number">58</span> DenseNet</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1089,9 +1360,10 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<p>Because of the skip connections it also has benefits for optimization</p>
 </section>
-<section id="densenet-2" class="level2" data-number="60">
-<h2 data-number="60" class="anchored" data-anchor-id="densenet-2"><span class="header-section-number">60</span> DenseNet</h2>
+<section id="densenet-2" class="level2" data-number="59">
+<h2 data-number="59" class="anchored" data-anchor-id="densenet-2"><span class="header-section-number">59</span> DenseNet</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1101,9 +1373,13 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<center>
+<img src="2023-11-28-11-39-50.png" class="w250 img-fluid">
+</center>
+<pre></pre>
 </section>
-<section id="densenets" class="level2" data-number="61">
-<h2 data-number="61" class="anchored" data-anchor-id="densenets"><span class="header-section-number">61</span> DenseNets</h2>
+<section id="densenets" class="level2" data-number="60">
+<h2 data-number="60" class="anchored" data-anchor-id="densenets"><span class="header-section-number">60</span> DenseNets</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1114,8 +1390,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="trend-has-not-stopped-with-densenet" class="level2" data-number="62">
-<h2 data-number="62" class="anchored" data-anchor-id="trend-has-not-stopped-with-densenet"><span class="header-section-number">62</span> Trend has not stopped with DenseNet</h2>
+<section id="trend-has-not-stopped-with-densenet" class="level2" data-number="61">
+<h2 data-number="61" class="anchored" data-anchor-id="trend-has-not-stopped-with-densenet"><span class="header-section-number">61</span> Trend has not stopped with DenseNet</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1126,8 +1402,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="mobilenets-depthwise-convolutions-for-high-latency" class="level2" data-number="63">
-<h2 data-number="63" class="anchored" data-anchor-id="mobilenets-depthwise-convolutions-for-high-latency"><span class="header-section-number">63</span> MobileNets: Depthwise convolutions for high latency</h2>
+<section id="mobilenets-depthwise-convolutions-for-high-latency" class="level2" data-number="62">
+<h2 data-number="62" class="anchored" data-anchor-id="mobilenets-depthwise-convolutions-for-high-latency"><span class="header-section-number">62</span> MobileNets: Depthwise convolutions for high latency</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1137,9 +1413,41 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<p>Deepthwise it only looks at one ch, so the filer is kxkx1</p>
+<p>Pointwise then mixes channels</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How does conv 1x1 can change channels?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>A 1x1 convolutional layer is often used for channel-wise transformations because it operates independently on each pixel across the spatial dimensions but can modify the depth (number of channels) of the input tensor. Here’s an example with tensors to illustrate this concept:</p>
+<p>Let’s consider an input tensor with dimensions <code>[batch_size, height, width, channels]</code>, where: - <code>batch_size</code> is the number of samples in the batch, - <code>height</code> and <code>width</code> are the spatial dimensions of the feature map, and - <code>channels</code> is the number of channels (or features) at each spatial location.</p>
+<p>Now, let’s apply a 1x1 convolutional layer with, say, 3 output channels. The operation is channel-wise, meaning it independently transforms each channel without considering information from other channels. However, it changes the number of channels.</p>
+<pre class="plaintext"><code>Input Tensor: [batch_size, height, width, channels_in]
+
+1x1 Convolutional Layer (3 output channels):
+
+Output Tensor: [batch_size, height, width, 3]</code></pre>
+<p>In this example, the 1x1 convolutional layer has transformed the input tensor by performing a linear operation on each channel independently. The resulting tensor now has 3 output channels. This operation is useful for adjusting the channel dimensions while keeping the spatial dimensions intact.</p>
+<p>It’s computationally efficient because it involves fewer parameters compared to larger convolutional kernels, and it introduces non-linearity through activation functions applied to each channel independently.</p>
+<p>Here’s how the channel-wise transformation works without changing the spatial context. Suppose we have the following input tensor:</p>
+<pre class="plaintext"><code>Input Tensor: [batch_size, height, width, 5]</code></pre>
+<p>After applying a 1x1 convolutional layer with 3 output channels, the output tensor would be:</p>
+<pre class="plaintext"><code>Output Tensor: [batch_size, height, width, 3]</code></pre>
+<p>Each channel in the output tensor is a linear combination of the corresponding channels in the input tensor, and non-linearity is introduced through activation functions applied independently to each channel.</p>
+</div>
+</div>
+</div>
 </section>
-<section id="bagnet-solving-imagenet-with-tiny-9x9-sized-puzzle-pieces" class="level2" data-number="64">
-<h2 data-number="64" class="anchored" data-anchor-id="bagnet-solving-imagenet-with-tiny-9x9-sized-puzzle-pieces"><span class="header-section-number">64</span> BagNet: Solving ImageNet with tiny 9x9 sized puzzle pieces?</h2>
+<section id="last-architecture-bagnet-solving-imagenet-with-tiny-9x9-sized-puzzle-pieces" class="level2" data-number="63">
+<h2 data-number="63" class="anchored" data-anchor-id="last-architecture-bagnet-solving-imagenet-with-tiny-9x9-sized-puzzle-pieces"><span class="header-section-number">63</span> Last Architecture BagNet: Solving ImageNet with tiny 9x9 sized puzzle pieces?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1149,9 +1457,10 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </div>
 </center>
 <pre></pre>
+<p>having only 1x1 conv means that the receptive field does not grow</p>
 </section>
-<section id="imagenet-mostly-textures" class="level2" data-number="65">
-<h2 data-number="65" class="anchored" data-anchor-id="imagenet-mostly-textures"><span class="header-section-number">65</span> ImageNet: mostly textures?</h2>
+<section id="imagenet-mostly-textures" class="level2" data-number="64">
+<h2 data-number="64" class="anchored" data-anchor-id="imagenet-mostly-textures"><span class="header-section-number">64</span> ImageNet: mostly textures?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1162,8 +1471,8 @@ Tacenern lace Tan&lt;ce nee Tacenee Tacs Ta&lt;ceneern
 </center>
 <pre></pre>
 </section>
-<section id="how-research-gets-done-part-5" class="level2" data-number="66">
-<h2 data-number="66" class="anchored" data-anchor-id="how-research-gets-done-part-5"><span class="header-section-number">66</span> How research gets done part 5</h2>
+<section id="how-research-gets-done-part-5" class="level2" data-number="65">
+<h2 data-number="65" class="anchored" data-anchor-id="how-research-gets-done-part-5"><span class="header-section-number">65</span> How research gets done part 5</h2>
 Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration and 99 perspiration.’ | say this to younger
 <center>
 <div class="quarto-figure quarto-figure-center">
@@ -1175,8 +1484,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="a.-_" class="level2" data-number="67">
-<h2 data-number="67" class="anchored" data-anchor-id="a.-_"><span class="header-section-number">67</span> a. = _</h2>
+<section id="object-detection" class="level2" data-number="66">
+<h2 data-number="66" class="anchored" data-anchor-id="object-detection"><span class="header-section-number">66</span> Object detection</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1187,8 +1496,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="region-based-convolutional-neural-network-r-cnn" class="level2" data-number="68">
-<h2 data-number="68" class="anchored" data-anchor-id="region-based-convolutional-neural-network-r-cnn"><span class="header-section-number">68</span> Region-based Convolutional Neural Network (R-CNN)</h2>
+<section id="region-based-convolutional-neural-network-r-cnn" class="level2" data-number="67">
+<h2 data-number="67" class="anchored" data-anchor-id="region-based-convolutional-neural-network-r-cnn"><span class="header-section-number">67</span> Region-based Convolutional Neural Network (R-CNN)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1199,8 +1508,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="r-cnn" class="level2" data-number="69">
-<h2 data-number="69" class="anchored" data-anchor-id="r-cnn"><span class="header-section-number">69</span> R-CNN</h2>
+<section id="r-cnn" class="level2" data-number="68">
+<h2 data-number="68" class="anchored" data-anchor-id="r-cnn"><span class="header-section-number">68</span> R-CNN</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1210,9 +1519,10 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </div>
 </center>
 <pre></pre>
+<p>To all the 2k regions boxes we apply CNN, and 2k times the model needs to say which for each of these 2k boses what appears on the image, eg, a car, a plane etc.</p>
 </section>
-<section id="improving-the-bounding-boxes" class="level2" data-number="70">
-<h2 data-number="70" class="anchored" data-anchor-id="improving-the-bounding-boxes"><span class="header-section-number">70</span> Improving the Bounding Boxes</h2>
+<section id="improving-the-bounding-boxes" class="level2" data-number="69">
+<h2 data-number="69" class="anchored" data-anchor-id="improving-the-bounding-boxes"><span class="header-section-number">69</span> Improving the Bounding Boxes</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1223,8 +1533,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="to-summarize" class="level2" data-number="71">
-<h2 data-number="71" class="anchored" data-anchor-id="to-summarize"><span class="header-section-number">71</span> To summarize</h2>
+<section id="to-summarize" class="level2" data-number="70">
+<h2 data-number="70" class="anchored" data-anchor-id="to-summarize"><span class="header-section-number">70</span> To summarize</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1235,8 +1545,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="r-cnn-is-really-quite-slow-for-a-few-simple-reasons" class="level2" data-number="72">
-<h2 data-number="72" class="anchored" data-anchor-id="r-cnn-is-really-quite-slow-for-a-few-simple-reasons"><span class="header-section-number">72</span> R-CNN is really quite slow for a few simple reasons:</h2>
+<section id="r-cnn-is-really-quite-slow-for-a-few-simple-reasons" class="level2" data-number="71">
+<h2 data-number="71" class="anchored" data-anchor-id="r-cnn-is-really-quite-slow-for-a-few-simple-reasons"><span class="header-section-number">71</span> R-CNN is really quite slow for a few simple reasons:</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1247,8 +1557,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="some-results" class="level2" data-number="73">
-<h2 data-number="73" class="anchored" data-anchor-id="some-results"><span class="header-section-number">73</span> Some results</h2>
+<section id="some-results" class="level2" data-number="72">
+<h2 data-number="72" class="anchored" data-anchor-id="some-results"><span class="header-section-number">72</span> Some results</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1259,8 +1569,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="fast-r-cnn" class="level2" data-number="74">
-<h2 data-number="74" class="anchored" data-anchor-id="fast-r-cnn"><span class="header-section-number">74</span> Fast R-CNN</h2>
+<section id="fast-r-cnn" class="level2" data-number="73">
+<h2 data-number="73" class="anchored" data-anchor-id="fast-r-cnn"><span class="header-section-number">73</span> Fast R-CNN</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1271,8 +1581,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="fast-r-cnn-insight-1-region-of-interest-pooling-roipool" class="level2" data-number="75">
-<h2 data-number="75" class="anchored" data-anchor-id="fast-r-cnn-insight-1-region-of-interest-pooling-roipool"><span class="header-section-number">75</span> Fast R-CNN Insight 1: Region of Interest Pooling (ROIPool)</h2>
+<section id="fast-r-cnn-insight-1-region-of-interest-pooling-roipool" class="level2" data-number="74">
+<h2 data-number="74" class="anchored" data-anchor-id="fast-r-cnn-insight-1-region-of-interest-pooling-roipool"><span class="header-section-number">74</span> Fast R-CNN Insight 1: Region of Interest Pooling (ROIPool)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1283,8 +1593,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="region-of-interest-pooling-roipool" class="level2" data-number="76">
-<h2 data-number="76" class="anchored" data-anchor-id="region-of-interest-pooling-roipool"><span class="header-section-number">76</span> Region of Interest Pooling (ROIPool)</h2>
+<section id="region-of-interest-pooling-roipool" class="level2" data-number="75">
+<h2 data-number="75" class="anchored" data-anchor-id="region-of-interest-pooling-roipool"><span class="header-section-number">75</span> Region of Interest Pooling (ROIPool)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1295,8 +1605,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="region-of-interest-pooling-roipool-1" class="level2" data-number="77">
-<h2 data-number="77" class="anchored" data-anchor-id="region-of-interest-pooling-roipool-1"><span class="header-section-number">77</span> Region of Interest Pooling (ROIPool)</h2>
+<section id="region-of-interest-pooling-roipool-1" class="level2" data-number="76">
+<h2 data-number="76" class="anchored" data-anchor-id="region-of-interest-pooling-roipool-1"><span class="header-section-number">76</span> Region of Interest Pooling (ROIPool)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1307,8 +1617,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="region-of-interest-pooling-roipool-2" class="level2" data-number="78">
-<h2 data-number="78" class="anchored" data-anchor-id="region-of-interest-pooling-roipool-2"><span class="header-section-number">78</span> Region of Interest Pooling (ROIPool)</h2>
+<section id="region-of-interest-pooling-roipool-2" class="level2" data-number="77">
+<h2 data-number="77" class="anchored" data-anchor-id="region-of-interest-pooling-roipool-2"><span class="header-section-number">77</span> Region of Interest Pooling (ROIPool)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1319,8 +1629,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="region-of-interest-pooling-roipool-3" class="level2" data-number="79">
-<h2 data-number="79" class="anchored" data-anchor-id="region-of-interest-pooling-roipool-3"><span class="header-section-number">79</span> Region of Interest Pooling (ROIPool)</h2>
+<section id="region-of-interest-pooling-roipool-3" class="level2" data-number="78">
+<h2 data-number="78" class="anchored" data-anchor-id="region-of-interest-pooling-roipool-3"><span class="header-section-number">78</span> Region of Interest Pooling (ROIPool)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1331,8 +1641,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="fast-r-cnn-insight-2-combine-all-models-into-one-network" class="level2" data-number="80">
-<h2 data-number="80" class="anchored" data-anchor-id="fast-r-cnn-insight-2-combine-all-models-into-one-network"><span class="header-section-number">80</span> Fast R-CNN Insight 2: Combine All Models into One Network</h2>
+<section id="fast-r-cnn-insight-2-combine-all-models-into-one-network" class="level2" data-number="79">
+<h2 data-number="79" class="anchored" data-anchor-id="fast-r-cnn-insight-2-combine-all-models-into-one-network"><span class="header-section-number">79</span> Fast R-CNN Insight 2: Combine All Models into One Network</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1343,8 +1653,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="fast-r-cnn-joint-training-framework" class="level2" data-number="81">
-<h2 data-number="81" class="anchored" data-anchor-id="fast-r-cnn-joint-training-framework"><span class="header-section-number">81</span> Fast R-CNN: Joint training framework</h2>
+<section id="fast-r-cnn-joint-training-framework" class="level2" data-number="80">
+<h2 data-number="80" class="anchored" data-anchor-id="fast-r-cnn-joint-training-framework"><span class="header-section-number">80</span> Fast R-CNN: Joint training framework</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1355,8 +1665,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="fast-r-cnn-steps" class="level2" data-number="82">
-<h2 data-number="82" class="anchored" data-anchor-id="fast-r-cnn-steps"><span class="header-section-number">82</span> Fast R-CNN: Steps</h2>
+<section id="fast-r-cnn-steps" class="level2" data-number="81">
+<h2 data-number="81" class="anchored" data-anchor-id="fast-r-cnn-steps"><span class="header-section-number">81</span> Fast R-CNN: Steps</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1367,8 +1677,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="fast-r-cnn-steps-1" class="level2" data-number="83">
-<h2 data-number="83" class="anchored" data-anchor-id="fast-r-cnn-steps-1"><span class="header-section-number">83</span> Fast R-CNN: Steps</h2>
+<section id="fast-r-cnn-steps-1" class="level2" data-number="82">
+<h2 data-number="82" class="anchored" data-anchor-id="fast-r-cnn-steps-1"><span class="header-section-number">82</span> Fast R-CNN: Steps</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1379,8 +1689,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="fast-r-cnn-steps-2" class="level2" data-number="84">
-<h2 data-number="84" class="anchored" data-anchor-id="fast-r-cnn-steps-2"><span class="header-section-number">84</span> Fast R-CNN: Steps</h2>
+<section id="fast-r-cnn-steps-2" class="level2" data-number="83">
+<h2 data-number="83" class="anchored" data-anchor-id="fast-r-cnn-steps-2"><span class="header-section-number">83</span> Fast R-CNN: Steps</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1391,8 +1701,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="fast-r-cnn-steps-3" class="level2" data-number="85">
-<h2 data-number="85" class="anchored" data-anchor-id="fast-r-cnn-steps-3"><span class="header-section-number">85</span> Fast R-CNN: Steps</h2>
+<section id="fast-r-cnn-steps-3" class="level2" data-number="84">
+<h2 data-number="84" class="anchored" data-anchor-id="fast-r-cnn-steps-3"><span class="header-section-number">84</span> Fast R-CNN: Steps</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1403,8 +1713,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="fast-r-cnn-steps-4" class="level2" data-number="86">
-<h2 data-number="86" class="anchored" data-anchor-id="fast-r-cnn-steps-4"><span class="header-section-number">86</span> Fast R-CNN: Steps</h2>
+<section id="fast-r-cnn-steps-4" class="level2" data-number="85">
+<h2 data-number="85" class="anchored" data-anchor-id="fast-r-cnn-steps-4"><span class="header-section-number">85</span> Fast R-CNN: Steps</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1415,8 +1725,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="smart-training" class="level2" data-number="87">
-<h2 data-number="87" class="anchored" data-anchor-id="smart-training"><span class="header-section-number">87</span> Smart training</h2>
+<section id="smart-training" class="level2" data-number="86">
+<h2 data-number="86" class="anchored" data-anchor-id="smart-training"><span class="header-section-number">86</span> Smart training</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1427,8 +1737,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="some-results-1" class="level2" data-number="88">
-<h2 data-number="88" class="anchored" data-anchor-id="some-results-1"><span class="header-section-number">88</span> Some results</h2>
+<section id="some-results-1" class="level2" data-number="87">
+<h2 data-number="87" class="anchored" data-anchor-id="some-results-1"><span class="header-section-number">87</span> Some results</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1439,8 +1749,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="fast-rcnn" class="level2" data-number="89">
-<h2 data-number="89" class="anchored" data-anchor-id="fast-rcnn"><span class="header-section-number">89</span> Fast-RCNN</h2>
+<section id="fast-rcnn" class="level2" data-number="88">
+<h2 data-number="88" class="anchored" data-anchor-id="fast-rcnn"><span class="header-section-number">88</span> Fast-RCNN</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1451,8 +1761,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="faster-r-cnn---speeding-up-region-proposal" class="level2" data-number="90">
-<h2 data-number="90" class="anchored" data-anchor-id="faster-r-cnn---speeding-up-region-proposal"><span class="header-section-number">90</span> Faster R-CNN - Speeding Up Region Proposal</h2>
+<section id="faster-r-cnn---speeding-up-region-proposal" class="level2" data-number="89">
+<h2 data-number="89" class="anchored" data-anchor-id="faster-r-cnn---speeding-up-region-proposal"><span class="header-section-number">89</span> Faster R-CNN - Speeding Up Region Proposal</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1463,8 +1773,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="faster-r-cnn" class="level2" data-number="91">
-<h2 data-number="91" class="anchored" data-anchor-id="faster-r-cnn"><span class="header-section-number">91</span> Faster R-CNN</h2>
+<section id="faster-r-cnn" class="level2" data-number="90">
+<h2 data-number="90" class="anchored" data-anchor-id="faster-r-cnn"><span class="header-section-number">90</span> Faster R-CNN</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1475,8 +1785,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="faster-r-cnn-1" class="level2" data-number="92">
-<h2 data-number="92" class="anchored" data-anchor-id="faster-r-cnn-1"><span class="header-section-number">92</span> Faster R-CNN</h2>
+<section id="faster-r-cnn-1" class="level2" data-number="91">
+<h2 data-number="91" class="anchored" data-anchor-id="faster-r-cnn-1"><span class="header-section-number">91</span> Faster R-CNN</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1487,8 +1797,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="faster-r-cnn-girshick2016" class="level2" data-number="93">
-<h2 data-number="93" class="anchored" data-anchor-id="faster-r-cnn-girshick2016"><span class="header-section-number">93</span> Faster R-CNN [Girshick2016]</h2>
+<section id="faster-r-cnn-girshick2016" class="level2" data-number="92">
+<h2 data-number="92" class="anchored" data-anchor-id="faster-r-cnn-girshick2016"><span class="header-section-number">92</span> Faster R-CNN [Girshick2016]</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1499,8 +1809,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="mask-r-cnn" class="level2" data-number="94">
-<h2 data-number="94" class="anchored" data-anchor-id="mask-r-cnn"><span class="header-section-number">94</span> Mask R-CNN</h2>
+<section id="mask-r-cnn" class="level2" data-number="93">
+<h2 data-number="93" class="anchored" data-anchor-id="mask-r-cnn"><span class="header-section-number">93</span> Mask R-CNN</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1511,8 +1821,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="mask-r-cnn-1" class="level2" data-number="95">
-<h2 data-number="95" class="anchored" data-anchor-id="mask-r-cnn-1"><span class="header-section-number">95</span> Mask R-CNN</h2>
+<section id="mask-r-cnn-1" class="level2" data-number="94">
+<h2 data-number="94" class="anchored" data-anchor-id="mask-r-cnn-1"><span class="header-section-number">94</span> Mask R-CNN</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1523,8 +1833,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="mask-r-cnn-2" class="level2" data-number="96">
-<h2 data-number="96" class="anchored" data-anchor-id="mask-r-cnn-2"><span class="header-section-number">96</span> Mask R-CNN</h2>
+<section id="mask-r-cnn-2" class="level2" data-number="95">
+<h2 data-number="95" class="anchored" data-anchor-id="mask-r-cnn-2"><span class="header-section-number">95</span> Mask R-CNN</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1535,8 +1845,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="roialign---realigning-roipool-to-be-more-accurate" class="level2" data-number="97">
-<h2 data-number="97" class="anchored" data-anchor-id="roialign---realigning-roipool-to-be-more-accurate"><span class="header-section-number">97</span> RoIAlign - Realigning RoIPool to be More Accurate</h2>
+<section id="roialign---realigning-roipool-to-be-more-accurate" class="level2" data-number="96">
+<h2 data-number="96" class="anchored" data-anchor-id="roialign---realigning-roipool-to-be-more-accurate"><span class="header-section-number">96</span> RoIAlign - Realigning RoIPool to be More Accurate</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1547,8 +1857,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="roialign---realigning-roipool-to-be-more-accurate-1" class="level2" data-number="98">
-<h2 data-number="98" class="anchored" data-anchor-id="roialign---realigning-roipool-to-be-more-accurate-1"><span class="header-section-number">98</span> RoIAlign - Realigning RoIPool to be More Accurate</h2>
+<section id="roialign---realigning-roipool-to-be-more-accurate-1" class="level2" data-number="97">
+<h2 data-number="97" class="anchored" data-anchor-id="roialign---realigning-roipool-to-be-more-accurate-1"><span class="header-section-number">97</span> RoIAlign - Realigning RoIPool to be More Accurate</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1559,12 +1869,17 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="section" class="level2" data-number="99">
-<h2 data-number="99" class="anchored" data-anchor-id="section"><span class="header-section-number">99</span> 99</h2>
-<p>person OO lumbrella.97</p>
-<p>roa 97 person.66 ia person 7” umbreta.26umbroia. 99 TF skateboard: ’ ) aoe</p>
-<p>utnbrella1.00.</p>
-<p>—-_ , ee Te gt</p>
+<section id="section" class="level2" data-number="98">
+<h2 data-number="98" class="anchored" data-anchor-id="section"><span class="header-section-number">98</span> 99</h2>
+<!-- person OO lumbrella.97
+
+roa 97
+person.66 ia person 7" umbreta.26umbroia. 99
+TF skateboard: ’ ) aoe
+
+utnbrella1.00.
+
+| —-_ , ee Te gt -->
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1575,8 +1890,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="becoming-fully-convolutional" class="level2" data-number="100">
-<h2 data-number="100" class="anchored" data-anchor-id="becoming-fully-convolutional"><span class="header-section-number">100</span> Becoming fully convolutional</h2>
+<section id="becoming-fully-convolutional" class="level2" data-number="99">
+<h2 data-number="99" class="anchored" data-anchor-id="becoming-fully-convolutional"><span class="header-section-number">99</span> Becoming fully convolutional</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1586,9 +1901,106 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </div>
 </center>
 <pre></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Turning a fully connected layer into a 1x1 convolutional layer
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>This involves reshaping the weight matrix of the fully connected layer to match the dimensions of a convolutional kernel. Let’s consider an example with tensor dimensions.</p>
+<p>Suppose you have a fully connected layer with input size <code>C_in</code> and output size <code>C_out</code>. The weight matrix of this fully connected layer is of shape <code>(C_out, C_in)</code>.</p>
+<p>Now, to turn it into a 1x1 convolutional layer, you can reshape the weight matrix into the shape <code>(C_out, C_in, 1, 1)</code>. The resulting operation is equivalent to a 1x1 convolution with <code>C_in</code> input channels and <code>C_out</code> output channels.</p>
+<p>Here’s an example:</p>
+<pre class="plaintext"><code>Fully Connected Layer:
+Input: [batch_size, C_in]
+Weights: [C_out, C_in]
+
+Reshaped Weights for 1x1 Convolution:
+Weights: [C_out, C_in, 1, 1]
+
+Input Tensor for 1x1 Convolution:
+Input: [batch_size, C_in, 1, 1]
+
+Output Tensor for 1x1 Convolution:
+Output: [batch_size, C_out, 1, 1]</code></pre>
+<p>In this example, the reshaped weights effectively create a 1x1 convolutional kernel that operates on each channel independently and produces an output tensor with the specified number of channels.</p>
+<p>This transformation allows you to apply convolutional operations even in scenarios where the spatial dimensions are reduced to 1x1. It’s particularly useful in the context of neural network architectures, where convolutional layers are preferred for their ability to capture spatial hierarchies.</p>
+<p><strong>What is the input dimensionality of a 1x1 conv?</strong> The input dimensionality of a 1x1 convolutional layer is typically three-dimensional. The dimensions correspond to:</p>
+<ol type="1">
+<li><strong>Batch Size (B):</strong> The number of samples in a mini-batch.</li>
+<li><strong>Number of Input Channels (C_in):</strong> The depth or number of channels in the input feature map.</li>
+<li><strong>Spatial Dimension (H x W):</strong> Although a 1x1 convolution operates on a spatial dimension, it often involves 1x1 spatial dimensions (height and width). This is different from traditional convolutions that operate on larger spatial dimensions.</li>
+</ol>
+<p>So, the input tensor shape for a 1x1 convolutional layer is often represented as <code>[B, C_in, 1, 1]</code>, where <code>B</code> is the batch size, <code>C_in</code> is the number of input channels, and the spatial dimensions are 1x1.</p>
+<p>1:48 check in the video</p>
+<p>They are not the same the 1x1 conv and the FC layer but they share the same weights and same meaning of the weight</p>
+<p><strong>How would a max pooling reduces spatial dimension to 1?</strong></p>
+<p>Max pooling reduces spatial dimensions by selecting the maximum value within each pooling window. The pooling window slides over the input data, and for each window, only the maximum value is retained in the pooled output. This process effectively downsamples the input.</p>
+<p>Let’s consider an example with a 1D input tensor of size 6 and a max pooling operation with a window size of 2. Here’s the input tensor:</p>
+<p><span class="math inline">\(\text{Input Tensor: } [1, 3, 5, 2, 8, 6]\)</span></p>
+<p>Applying max pooling with a window size of 2 reduces the spatial dimension by selecting the maximum value in each window:</p>
+<p><span class="math inline">\(\text{Max Pooled Output: } [3, 5, 8]\)</span></p>
+<p>In this example, the original input had 6 elements, and after max pooling, the output has 3 elements, effectively reducing the spatial dimension. The reduction factor depends on the size of the pooling window and the stride (the step size at which the window moves).</p>
+<p>You take the weights of a FC layer and you input them into a 1x1 convolution layer or you just apply the FC layer at every location</p>
+<section id="what-is-the-input-dimensionality-of-a-one-by-1x1-convolution" class="level2" data-number="100">
+<h2 data-number="100" class="anchored" data-anchor-id="what-is-the-input-dimensionality-of-a-one-by-1x1-convolution"><span class="header-section-number">100</span> What is the input dimensionality of a one by 1x1 convolution?</h2>
+<p>The input dimensionality of a 1x1 convolutional layer is typically three-dimensional. The dimensions correspond to:</p>
+<ol type="1">
+<li><strong>Batch Size (B):</strong> The number of samples in a mini-batch.</li>
+<li><strong>Number of Input Channels (C_in):</strong> The depth or number of channels in the input feature map.</li>
+<li><strong>Spatial Dimension (H x W):</strong> Although a 1x1 convolution operates on a spatial dimension, it often involves 1x1 spatial dimensions (height and width). This is different from traditional convolutions that operate on larger spatial dimensions.</li>
+</ol>
+<p>So, the input tensor shape for a 1x1 convolutional layer is often represented as <code>[B, C_in, 1, 1]</code>, where <code>B</code> is the batch size, <code>C_in</code> is the number of input channels, and the spatial dimensions are 1x1.</p>
 </section>
-<section id="upsampling-the-output" class="level2" data-number="101">
-<h2 data-number="101" class="anchored" data-anchor-id="upsampling-the-output"><span class="header-section-number">101</span> Upsampling the output</h2>
+<section id="what-is-the-input-dimensionality-of-a-fc-layer" class="level2" data-number="101">
+<h2 data-number="101" class="anchored" data-anchor-id="what-is-the-input-dimensionality-of-a-fc-layer"><span class="header-section-number">101</span> What is the input dimensionality of a FC layer?</h2>
+<p>For a fully connected layer (dense layer) with <span class="math inline">\(N\)</span> input neurons and <span class="math inline">\(M\)</span> output neurons, the number of weights is given by:</p>
+<p><span class="math inline">\(W = N \times M\)</span></p>
+<p>So, for a fully connected layer, the number of weights depends on the number of input and output neurons.</p>
+<p>Comparing this with the 1x1 convolutional layer discussed earlier:</p>
+<ul>
+<li>For a 1x1 convolution with <span class="math inline">\(C_{\text{in}}\)</span> input channels and <span class="math inline">\(C_{\text{out}}\)</span> output channels, the number of weights is <span class="math inline">\(C_{\text{in}} \times C_{\text{out}}\)</span>.</li>
+</ul>
+<p>In general, the number of weights for a fully connected layer is not necessarily the same as that for a 1x1 convolutional layer, as it depends on the specific architecture and dimensions of the layers involved. The key difference lies in how the connections are structured in each type of layer.</p>
+</section>
+<section id="x1-conv-fc-similarity" class="level2" data-number="102">
+<h2 data-number="102" class="anchored" data-anchor-id="x1-conv-fc-similarity"><span class="header-section-number">102</span> 1x1 conv &amp; FC similarity</h2>
+<blockquote class="blockquote">
+<p>You take the weights of a FC layer and you input them into a 1x1 convolution layer or you just apply the FC layer at every location</p>
+</blockquote>
+<p>The statement refers to a conceptual similarity between a fully connected (FC) layer and a 1x1 convolutional layer in terms of their weight organization.</p>
+<ol type="1">
+<li><p><strong>FC Layer:</strong> In a traditional fully connected layer, all neurons are connected to every element in the input. If the input has dimensions <span class="math inline">\(N \times M\)</span>, where <span class="math inline">\(N\)</span> is the batch size and <span class="math inline">\(M\)</span> is the number of input features, the FC layer has <span class="math inline">\(M\)</span> weights per neuron.</p></li>
+<li><p><strong>1x1 Convolutional Layer:</strong> A 1x1 convolutional layer, despite being convolutional, can be thought of as a fully connected layer applied at every spatial location independently. It has a kernel size of <span class="math inline">\(1 \times 1\)</span>, meaning it considers only the individual elements at each location. The weights in this case are shared across all spatial locations but applied independently to each location.</p></li>
+</ol>
+<p>So, conceptually, you can take the weights of a FC layer and use them in a 1x1 convolutional layer. This is based on the idea that a 1x1 convolution can capture the essence of a fully connected layer when applied independently across spatial dimensions.</p>
+<p>Here’s a simplified example to illustrate:</p>
+<ul>
+<li><strong>FC Layer:</strong> <span class="math inline">\(M\)</span> weights per neuron, where <span class="math inline">\(M\)</span> is the number of input features.</li>
+<li><strong>1x1 Conv Layer:</strong> <span class="math inline">\(M\)</span> shared weights applied independently at each spatial location.</li>
+</ul>
+<p>This conceptual equivalence is often used in practice, especially in neural network architectures that leverage convolutional layers for spatial hierarchies and fully connected layers for global relationships.</p>
+<p>More into 1x1 conv similarity with FC</p>
+<ol type="1">
+<li><p><strong>Convolutional Nature:</strong> A 1x1 convolutional layer is a convolutional layer, which means it applies a set of filters (kernels) to the input data. In traditional convolution, these filters scan through local regions of the input, capturing spatial patterns.</p></li>
+<li><p><strong>Kernel Size:</strong> The term “1x1” refers to the size of the filters. A 1x1 convolutional layer uses filters that are 1x1 in size. This means the filter considers only one element at a time during convolution.</p></li>
+<li><p><strong>Fully Connected Analogy:</strong> Despite being a convolutional layer, a 1x1 convolutional layer can be conceptually thought of as a fully connected layer. In a fully connected layer, each neuron is connected to every element in the input. Similarly, a 1x1 convolutional layer can be viewed as having a filter that is as wide and tall as the input, effectively connecting each element in the input to the corresponding neuron in the output.</p></li>
+<li><p><strong>Spatial Independence:</strong> The key distinction is that, unlike a traditional fully connected layer, the weights in a 1x1 convolutional layer are shared across all spatial locations. This means the same set of weights is used at every position in the input. However, these shared weights are applied independently to each location, capturing local patterns.</p></li>
+</ol>
+<p>Therefore, a 1x1 convolutional layer behaves like a fully connected layer applied independently at each spatial location, using shared weights for efficiency. This provides a way to introduce non-linearity and channel-wise transformations without the need for a fully connected layer, especially in the context of convolutional neural networks (CNNs).</p>
+</section>
+</div>
+</div>
+</div>
+</section>
+<section id="upsampling-the-output" class="level2" data-number="103">
+<h2 data-number="103" class="anchored" data-anchor-id="upsampling-the-output"><span class="header-section-number">103</span> Upsampling the output</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1599,8 +2011,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="deconvolution" class="level2" data-number="102">
-<h2 data-number="102" class="anchored" data-anchor-id="deconvolution"><span class="header-section-number">102</span> “Deconvolution”</h2>
+<section id="deconvolution" class="level2" data-number="104">
+<h2 data-number="104" class="anchored" data-anchor-id="deconvolution"><span class="header-section-number">104</span> “Deconvolution”</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1611,8 +2023,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="end-to-end-pixels-to-pixels-network" class="level2" data-number="103">
-<h2 data-number="103" class="anchored" data-anchor-id="end-to-end-pixels-to-pixels-network"><span class="header-section-number">103</span> End-to-end, pixels-to-pixels network</h2>
+<section id="end-to-end-pixels-to-pixels-network" class="level2" data-number="105">
+<h2 data-number="105" class="anchored" data-anchor-id="end-to-end-pixels-to-pixels-network"><span class="header-section-number">105</span> End-to-end, pixels-to-pixels network</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1623,8 +2035,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="end-to-end-pixels-to-pixels-network-1" class="level2" data-number="104">
-<h2 data-number="104" class="anchored" data-anchor-id="end-to-end-pixels-to-pixels-network-1"><span class="header-section-number">104</span> End-to-end, pixels-to-pixels network</h2>
+<section id="end-to-end-pixels-to-pixels-network-1" class="level2" data-number="106">
+<h2 data-number="106" class="anchored" data-anchor-id="end-to-end-pixels-to-pixels-network-1"><span class="header-section-number">106</span> End-to-end, pixels-to-pixels network</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1635,8 +2047,8 @@ Isamu Akasaki: “As Thomas Edison said, ‘Genius is one percent inspiration an
 </center>
 <pre></pre>
 </section>
-<section id="references" class="level2" data-number="105">
-<h2 data-number="105" class="anchored" data-anchor-id="references"><span class="header-section-number">105</span> References</h2>
+<section id="references" class="level2" data-number="107">
+<h2 data-number="107" class="anchored" data-anchor-id="references"><span class="header-section-number">107</span> References</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">

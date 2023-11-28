@@ -35,6 +35,8 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/2023-11-27_equivariances-&-graphical-neural-networks/index.html",
+      "/blog/2023-11-27_attention-&-transformers/index.html",
       "/blog/2023-11-25_why-using-logit-scaling-in-softmax/index.html",
       "/blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html",
       "/blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html",

@@ -202,7 +202,7 @@
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/index.html</loc>
-    <lastmod>2023-11-25T17:23:55.712Z</lastmod>
+    <lastmod>2023-11-28T12:22:38.414Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-11-07_numpy-reshape-rgb-image-to-1d-array/index.html</loc>
@@ -278,7 +278,7 @@
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-11-20_modern-convnets/index.html</loc>
-    <lastmod>2023-11-21T11:48:22.351Z</lastmod>
+    <lastmod>2023-11-28T12:22:33.786Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html</loc>
@@ -298,6 +298,14 @@
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-11-25_why-using-logit-scaling-in-softmax/index.html</loc>
-    <lastmod>2023-11-25T17:23:53.215Z</lastmod>
+    <lastmod>2023-11-25T17:24:12.756Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-11-27_attention-&-transformers/index.html</loc>
+    <lastmod>2023-11-27T19:59:40.707Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-11-27_equivariances-&-graphical-neural-networks/index.html</loc>
+    <lastmod>2023-11-27T20:03:20.888Z</lastmod>
   </url>
 </urlset>
