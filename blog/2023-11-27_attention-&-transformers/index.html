@@ -77,6 +77,8 @@ window.MathJax = {
 </script>
 <link rel="shortcut icon" href="../../../../../../../../../../../assets/danilo.ico">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../css/index-posts.css">
 </head>
@@ -377,9 +379,13 @@ window.MathJax = {
     
 </main>
 
-<!-- ## Your feedback
-<center>![Slide 1](imgs/page_1.png){.w575}</center><pre></pre>
- -->
+<section id="background-knowledge" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="background-knowledge"><span class="header-section-number">1</span> Background knowledge</h2>
+<center>
+<iframe width="575" height="315" src="https://www.youtube.com/embed/e9-0BxyKG10?si=QRjwGtaNgZYd__Gm&amp;start=971" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
+</iframe>
+</center>
+<pre></pre>
 <!-- ## Title
 <center>![Slide 2](imgs/page_2.png){.w575}</center><pre></pre> -->
 <!-- ## Title -->
@@ -392,8 +398,9 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
-<section id="seq2seq-models" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="seq2seq-models"><span class="header-section-number">1</span> Seq2seq models</h2>
+</section>
+<section id="seq2seq-models" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="seq2seq-models"><span class="header-section-number">2</span> Seq2seq models</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -404,8 +411,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="neural-machine-translation-with-a-seq2seq-model" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="neural-machine-translation-with-a-seq2seq-model"><span class="header-section-number">2</span> Neural machine translation with a seq2seq model</h2>
+<section id="neural-machine-translation-with-a-seq2seq-model" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="neural-machine-translation-with-a-seq2seq-model"><span class="header-section-number">3</span> Neural machine translation with a seq2seq model</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -416,8 +423,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="defining-seq2seq-for-nmt-encoder" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="defining-seq2seq-for-nmt-encoder"><span class="header-section-number">3</span> Defining seq2seq for NMT”: Encoder</h2>
+<section id="defining-seq2seq-for-nmt-encoder" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="defining-seq2seq-for-nmt-encoder"><span class="header-section-number">4</span> Defining seq2seq for NMT”: Encoder</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -427,9 +434,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>h_{t-1} is the hidden state, is this what makes a NN like <span class="math inline">\(f()\)</span> be recurrent</p>
 </section>
-<section id="defining-seq2seg-for-nmt-decoder" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="defining-seq2seg-for-nmt-decoder"><span class="header-section-number">4</span> Defining seq2seg for NMT: Decoder</h2>
+<section id="defining-seq2seg-for-nmt-decoder" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="defining-seq2seg-for-nmt-decoder"><span class="header-section-number">5</span> Defining seq2seg for NMT: Decoder</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -440,8 +448,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="issue-of-seq2seq-models" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="issue-of-seq2seq-models"><span class="header-section-number">5</span> Issue of seq2seq models</h2>
+<section id="issue-of-seq2seq-models" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="issue-of-seq2seq-models"><span class="header-section-number">6</span> Issue of seq2seq models</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -451,9 +459,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>The problem is that they were trying to compress all info into a context vector <span class="math inline">\(c\)</span></p>
 </section>
-<section id="attention" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="attention"><span class="header-section-number">6</span> Attention</h2>
+<section id="attention" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="attention"><span class="header-section-number">7</span> Attention</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -464,8 +473,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="here-found-what-you-were-found-what-you-were" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="here-found-what-you-were-found-what-you-were"><span class="header-section-number">7</span> Here, | found what you were | | found what you were</h2>
+<section id="here-found-what-you-were" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="here-found-what-you-were"><span class="header-section-number">8</span> Here, | found what you were</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -476,8 +485,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="attention-1" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="attention-1"><span class="header-section-number">8</span> Attention</h2>
+<section id="attention-1" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="attention-1"><span class="header-section-number">9</span> Attention</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -488,8 +497,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="formal-definition-of-attention" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="formal-definition-of-attention"><span class="header-section-number">9</span> Formal definition of Attention</h2>
+<section id="formal-definition-of-attention" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="formal-definition-of-attention"><span class="header-section-number">10</span> Formal definition of Attention</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -500,8 +509,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="formal-definition-of-attention-1" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="formal-definition-of-attention-1"><span class="header-section-number">10</span> Formal definition of Attention</h2>
+<section id="formal-definition-of-attention-1" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="formal-definition-of-attention-1"><span class="header-section-number">11</span> Formal definition of Attention</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -511,9 +520,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>If the value e or the alignment model is high then it tells you how similar the inputs around position j and the outputs at position i match.</p>
 </section>
-<section id="formal-definition-of-attention-2" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="formal-definition-of-attention-2"><span class="header-section-number">11</span> Formal definition of Attention</h2>
+<section id="formal-definition-of-attention-2" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="formal-definition-of-attention-2"><span class="header-section-number">12</span> Formal definition of Attention</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -524,8 +534,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="why-attention" class="level2" data-number="12">
-<h2 data-number="12" class="anchored" data-anchor-id="why-attention"><span class="header-section-number">12</span> Why attention?</h2>
+<section id="why-attention" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="why-attention"><span class="header-section-number">13</span> Why attention?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -536,8 +546,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="self-attention" class="level2" data-number="13">
-<h2 data-number="13" class="anchored" data-anchor-id="self-attention"><span class="header-section-number">13</span> Self-attention</h2>
+<section id="self-attention" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="self-attention"><span class="header-section-number">14</span> Self-attention</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -548,8 +558,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="paying-attention-in-vision" class="level2" data-number="14">
-<h2 data-number="14" class="anchored" data-anchor-id="paying-attention-in-vision"><span class="header-section-number">14</span> Paying attention in vision</h2>
+<section id="paying-attention-in-vision" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="paying-attention-in-vision"><span class="header-section-number">15</span> Paying attention in vision</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -560,8 +570,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="attention-is-all-you-need" class="level2" data-number="15">
-<h2 data-number="15" class="anchored" data-anchor-id="attention-is-all-you-need"><span class="header-section-number">15</span> Attention is all you need</h2>
+<section id="attention-is-all-you-need" class="level2" data-number="16">
+<h2 data-number="16" class="anchored" data-anchor-id="attention-is-all-you-need"><span class="header-section-number">16</span> Attention is all you need</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -572,8 +582,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="queries-keys-and-values" class="level2" data-number="16">
-<h2 data-number="16" class="anchored" data-anchor-id="queries-keys-and-values"><span class="header-section-number">16</span> Queries, keys and values</h2>
+<section id="queries-keys-and-values" class="level2" data-number="17">
+<h2 data-number="17" class="anchored" data-anchor-id="queries-keys-and-values"><span class="header-section-number">17</span> Queries, keys and values</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -584,8 +594,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="scaled-dot-product-attention" class="level2" data-number="17">
-<h2 data-number="17" class="anchored" data-anchor-id="scaled-dot-product-attention"><span class="header-section-number">17</span> Scaled Dot-Product Attention</h2>
+<section id="scaled-dot-product-attention" class="level2" data-number="18">
+<h2 data-number="18" class="anchored" data-anchor-id="scaled-dot-product-attention"><span class="header-section-number">18</span> Scaled Dot-Product Attention</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -596,8 +606,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="multi-head-attention" class="level2" data-number="18">
-<h2 data-number="18" class="anchored" data-anchor-id="multi-head-attention"><span class="header-section-number">18</span> Multi-head attention</h2>
+<section id="multi-head-attention" class="level2" data-number="19">
+<h2 data-number="19" class="anchored" data-anchor-id="multi-head-attention"><span class="header-section-number">19</span> Multi-head attention</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -608,8 +618,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="multi-head-self-attention" class="level2" data-number="19">
-<h2 data-number="19" class="anchored" data-anchor-id="multi-head-self-attention"><span class="header-section-number">19</span> Multi-head self-attention</h2>
+<section id="multi-head-self-attention" class="level2" data-number="20">
+<h2 data-number="20" class="anchored" data-anchor-id="multi-head-self-attention"><span class="header-section-number">20</span> Multi-head self-attention</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -620,8 +630,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="multi-head-self-attention-1" class="level2" data-number="20">
-<h2 data-number="20" class="anchored" data-anchor-id="multi-head-self-attention-1"><span class="header-section-number">20</span> Multi-head self-attention</h2>
+<section id="multi-head-self-attention-1" class="level2" data-number="21">
+<h2 data-number="21" class="anchored" data-anchor-id="multi-head-self-attention-1"><span class="header-section-number">21</span> Multi-head self-attention</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -632,8 +642,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="transformer-encoder" class="level2" data-number="21">
-<h2 data-number="21" class="anchored" data-anchor-id="transformer-encoder"><span class="header-section-number">21</span> Transformer encoder</h2>
+<section id="transformer-encoder" class="level2" data-number="22">
+<h2 data-number="22" class="anchored" data-anchor-id="transformer-encoder"><span class="header-section-number">22</span> Transformer encoder</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -644,8 +654,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="transformer-decoder" class="level2" data-number="22">
-<h2 data-number="22" class="anchored" data-anchor-id="transformer-decoder"><span class="header-section-number">22</span> Transformer decoder</h2>
+<section id="transformer-decoder" class="level2" data-number="23">
+<h2 data-number="23" class="anchored" data-anchor-id="transformer-decoder"><span class="header-section-number">23</span> Transformer decoder</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -655,9 +665,42 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Why do we use a mask in the decoder of self attention?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<section id="autoregressive-property" class="level3" data-number="23.1">
+<h3 data-number="23.1" class="anchored" data-anchor-id="autoregressive-property"><span class="header-section-number">23.1</span> Autoregressive Property:</h3>
+<p>Autoregressive models generate outputs one step at a time in a sequential manner. In the context of natural language processing, this means predicting the next word in a sequence given the preceding words. Autoregressive models are trained to predict the next token in the sequence based on the tokens that have already been generated.</p>
 </section>
-<section id="the-full-transformer" class="level2" data-number="23">
-<h2 data-number="23" class="anchored" data-anchor-id="the-full-transformer"><span class="header-section-number">23</span> The full Transformer</h2>
+<section id="decoder-in-a-transformer" class="level3" data-number="23.2">
+<h3 data-number="23.2" class="anchored" data-anchor-id="decoder-in-a-transformer"><span class="header-section-number">23.2</span> Decoder in a Transformer:</h3>
+<p>The decoder in a transformer is responsible for generating the output sequence. It consists of multiple layers, each containing a self-attention mechanism and feedforward neural networks. The self-attention mechanism allows the model to weigh different parts of the input sequence differently when generating each token.</p>
+</section>
+<section id="cheating-and-the-mask" class="level3" data-number="23.3">
+<h3 data-number="23.3" class="anchored" data-anchor-id="cheating-and-the-mask"><span class="header-section-number">23.3</span> Cheating and the Mask:</h3>
+<p>“Cheating” refers to the undesirable situation where the model uses information from future positions in the sequence during training. During training, the model is fed the true output sequence up to the current position to calculate loss and update its parameters. If the model were allowed to attend to future positions, it might artificially inflate its performance by relying on information that it wouldn’t have during actual generation.</p>
+<p>The mask applied in the decoder’s self-attention mechanism prevents the model from accessing future information. The mask sets the attention scores for future positions to very small values, essentially blocking the model from attending to tokens that haven’t been generated yet. This ensures that the model learns to generate each token based only on the information available up to that point, aligning with the autoregressive nature of the decoding process.</p>
+</section>
+<section id="example" class="level3" data-number="23.4">
+<h3 data-number="23.4" class="anchored" data-anchor-id="example"><span class="header-section-number">23.4</span> Example:</h3>
+<p>Consider the task of language translation. When translating a sentence from English to French, the decoder generates the translation one word at a time. If it were allowed to attend to words in the future, it might incorrectly use information from the French translation that hasn’t been generated yet. This could lead to overfitting during training and poor generalization to unseen data.</p>
+<p>In summary, preventing “cheating” by using a mask ensures that the decoder learns to generate outputs based on the information available up to the current step, improving the model’s ability to generalize to unseen data and maintain the autoregressive property essential for sequence generation tasks.</p>
+</section>
+</div>
+</div>
+</div>
+</section>
+<section id="the-full-transformer" class="level2" data-number="24">
+<h2 data-number="24" class="anchored" data-anchor-id="the-full-transformer"><span class="header-section-number">24</span> The full Transformer</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -668,8 +711,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="title" class="level2" data-number="24">
-<h2 data-number="24" class="anchored" data-anchor-id="title"><span class="header-section-number">24</span> Title</h2>
+<section id="title" class="level2" data-number="25">
+<h2 data-number="25" class="anchored" data-anchor-id="title"><span class="header-section-number">25</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -680,8 +723,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="coding-a-transformer-pytorch-init" class="level2" data-number="25">
-<h2 data-number="25" class="anchored" data-anchor-id="coding-a-transformer-pytorch-init"><span class="header-section-number">25</span> Coding a Transformer (PyTorch): init</h2>
+<section id="coding-a-transformer-pytorch-init" class="level2" data-number="26">
+<h2 data-number="26" class="anchored" data-anchor-id="coding-a-transformer-pytorch-init"><span class="header-section-number">26</span> Coding a Transformer (PyTorch): init</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -692,8 +735,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="coding-a-transformer-pytorch-forward-pass" class="level2" data-number="26">
-<h2 data-number="26" class="anchored" data-anchor-id="coding-a-transformer-pytorch-forward-pass"><span class="header-section-number">26</span> Coding a Transformer (PyTorch): forward pass</h2>
+<section id="coding-a-transformer-pytorch-forward-pass" class="level2" data-number="27">
+<h2 data-number="27" class="anchored" data-anchor-id="coding-a-transformer-pytorch-forward-pass"><span class="header-section-number">27</span> Coding a Transformer (PyTorch): forward pass</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -703,9 +746,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>tgt: in roder to predict the next word, you can look at the preceding word. So the target is the same as source except that is shofted one to the left. We do it so that it shofts and we are able to predict the last word</p>
 </section>
-<section id="transformer-positional-encodings" class="level2" data-number="27">
-<h2 data-number="27" class="anchored" data-anchor-id="transformer-positional-encodings"><span class="header-section-number">27</span> Transformer: Positional encodings</h2>
+<section id="transformer-positional-encodings" class="level2" data-number="28">
+<h2 data-number="28" class="anchored" data-anchor-id="transformer-positional-encodings"><span class="header-section-number">28</span> Transformer: Positional encodings</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -715,9 +759,11 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Attention is a permutation-invariant operation, but this is not ideal because we might have that sometimes the order is important like with ‘not’</p>
+<p>positional enconding to locate where are you at the beginning or at the end</p>
 </section>
-<section id="transformer-positional-encodings-1" class="level2" data-number="28">
-<h2 data-number="28" class="anchored" data-anchor-id="transformer-positional-encodings-1"><span class="header-section-number">28</span> Transformer: Positional encodings</h2>
+<section id="transformer-positional-encodings-1" class="level2" data-number="29">
+<h2 data-number="29" class="anchored" data-anchor-id="transformer-positional-encodings-1"><span class="header-section-number">29</span> Transformer: Positional encodings</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -727,9 +773,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>if they are apart from each other their positional encoding should be different</p>
 </section>
-<section id="coding-the-positional-encodings-pytorch" class="level2" data-number="29">
-<h2 data-number="29" class="anchored" data-anchor-id="coding-the-positional-encodings-pytorch"><span class="header-section-number">29</span> Coding the Positional Encodings (PyTorch)</h2>
+<section id="coding-the-positional-encodings-pytorch" class="level2" data-number="30">
+<h2 data-number="30" class="anchored" data-anchor-id="coding-the-positional-encodings-pytorch"><span class="header-section-number">30</span> Coding the Positional Encodings (PyTorch)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -740,8 +787,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="pros-cons" class="level2" data-number="30">
-<h2 data-number="30" class="anchored" data-anchor-id="pros-cons"><span class="header-section-number">30</span> Pros &amp; Cons</h2>
+<section id="pros-cons" class="level2" data-number="31">
+<h2 data-number="31" class="anchored" data-anchor-id="pros-cons"><span class="header-section-number">31</span> Pros &amp; Cons</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -751,9 +798,37 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
-</section>
-<section id="title-1" class="level2" data-number="31">
-<h2 data-number="31" class="anchored" data-anchor-id="title-1"><span class="header-section-number">31</span> Title</h2>
+<p>It scales quadratically with the num inputs, the matrix is N * N let see an example:</p>
+<p>The quadratic scaling of transformers with respect to the number of inputs primarily arises from the self-attention mechanism used in transformers. In self-attention, each element in the input sequence attends to all other elements, and the attention scores are computed pairwise. This leads to a quadratic dependency on the number of inputs.</p>
+<p>Let’s consider a simple example with a sequence of length <span class="math inline">\(N\)</span>. For simplicity, let’s assume each input element has a dimension of 1 for illustration purposes.</p>
+<p>What about other dimensions, wel that can be possible because remember we have our embeddings as the input to the NN, not the words itself</p>
+<center>
+<img src="2023-11-28-17-32-03.png" class="w350 img-fluid">
+</center>
+<pre></pre>
+<p>Like in this picture our dimensions are clearly larger than 1 for the embeddings</p>
+<ol type="1">
+<li><p><strong>Original Sequence (1D):</strong> <span class="math display">\[
+x_1, x_2, x_3, \ldots, x_N
+\]</span></p></li>
+<li><p><strong>Self-Attention Weights:</strong> For each element <span class="math inline">\(x_i\)</span>, self-attention computes a weight for all other elements <span class="math inline">\(x_j\)</span> based on their relationships. This results in a square matrix of attention weights:</p>
+<p><span class="math display">\[
+\begin{bmatrix}
+w_{1,1} &amp; w_{1,2} &amp; \ldots &amp; w_{1,N} \\
+w_{2,1} &amp; w_{2,2} &amp; \ldots &amp; w_{2,N} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+w_{N,1} &amp; w_{N,2} &amp; \ldots &amp; w_{N,N} \\
+\end{bmatrix}
+  \]</span></p>
+<p>Each entry <span class="math inline">\(w_{i,j}\)</span> represents the attention weight between <span class="math inline">\(x_i\)</span> and <span class="math inline">\(x_j\)</span>.</p></li>
+<li><p><strong>Output for Each Element:</strong> The output for each element <span class="math inline">\(x_i\)</span> is computed as a weighted sum of all elements based on the attention weights:</p>
+<p><span class="math display">\[
+\text{output}_{i} = w_{i,1} \cdot x_1 + w_{i,2} \cdot x_2 + \ldots + w_{i,N} \cdot x_N
+  \]</span></p>
+<p>This involves <span class="math inline">\(N\)</span> multiplications for each element.</p></li>
+<li><p><strong>Total Complexity:</strong> For <span class="math inline">\(N\)</span> elements, we need to compute <span class="math inline">\(N\)</span> attention weights for each element, resulting in a total of <span class="math inline">\(N^2\)</span> attention weights. Therefore, the overall complexity is quadratic, <span class="math inline">\(O(N^2)\)</span>, due to the pairwise comparisons.</p></li>
+</ol>
+<p>This quadratic scaling becomes computationally expensive as the sequence length increases, leading to challenges in handling long sequences efficiently. To address this, techniques like sparse attention patterns and approximations have been proposed in research to reduce the computational cost while maintaining the benefits of self-attention.</p>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -775,9 +850,6 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
-</section>
-<section id="title-2" class="level2" data-number="33">
-<h2 data-number="33" class="anchored" data-anchor-id="title-2"><span class="header-section-number">33</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -787,9 +859,6 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
-</section>
-<section id="title-3" class="level2" data-number="34">
-<h2 data-number="34" class="anchored" data-anchor-id="title-3"><span class="header-section-number">34</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -800,8 +869,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="bert" class="level2" data-number="35">
-<h2 data-number="35" class="anchored" data-anchor-id="bert"><span class="header-section-number">35</span> BERT</h2>
+<section id="bert" class="level2" data-number="33">
+<h2 data-number="33" class="anchored" data-anchor-id="bert"><span class="header-section-number">33</span> BERT</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -812,8 +881,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="bert-input-representation" class="level2" data-number="36">
-<h2 data-number="36" class="anchored" data-anchor-id="bert-input-representation"><span class="header-section-number">36</span> BERT input representation</h2>
+<section id="bert-input-representation" class="level2" data-number="34">
+<h2 data-number="34" class="anchored" data-anchor-id="bert-input-representation"><span class="header-section-number">34</span> BERT input representation</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -824,8 +893,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="bert-pre-training" class="level2" data-number="37">
-<h2 data-number="37" class="anchored" data-anchor-id="bert-pre-training"><span class="header-section-number">37</span> BERT pre-training</h2>
+<section id="bert-pre-training" class="level2" data-number="35">
+<h2 data-number="35" class="anchored" data-anchor-id="bert-pre-training"><span class="header-section-number">35</span> BERT pre-training</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -836,8 +905,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="bert-fine-tuning" class="level2" data-number="38">
-<h2 data-number="38" class="anchored" data-anchor-id="bert-fine-tuning"><span class="header-section-number">38</span> BERT fine-tuning</h2>
+<section id="bert-fine-tuning" class="level2" data-number="36">
+<h2 data-number="36" class="anchored" data-anchor-id="bert-fine-tuning"><span class="header-section-number">36</span> BERT fine-tuning</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -848,8 +917,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="bert-for-feature-extraction" class="level2" data-number="39">
-<h2 data-number="39" class="anchored" data-anchor-id="bert-for-feature-extraction"><span class="header-section-number">39</span> BERT for feature extraction</h2>
+<section id="bert-for-feature-extraction" class="level2" data-number="37">
+<h2 data-number="37" class="anchored" data-anchor-id="bert-for-feature-extraction"><span class="header-section-number">37</span> BERT for feature extraction</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -859,9 +928,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>With BERT we gained contextualized word embeddings</p>
 </section>
-<section id="bertology" class="level2" data-number="40">
-<h2 data-number="40" class="anchored" data-anchor-id="bertology"><span class="header-section-number">40</span> BERTology</h2>
+<section id="bertology" class="level2" data-number="38">
+<h2 data-number="38" class="anchored" data-anchor-id="bertology"><span class="header-section-number">38</span> BERTology</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -872,8 +942,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="gpt-1-2-3-4" class="level2" data-number="41">
-<h2 data-number="41" class="anchored" data-anchor-id="gpt-1-2-3-4"><span class="header-section-number">41</span> GPT-{1, 2, 3, 4}</h2>
+<section id="gpt-1-2-3-4" class="level2" data-number="39">
+<h2 data-number="39" class="anchored" data-anchor-id="gpt-1-2-3-4"><span class="header-section-number">39</span> GPT-{1, 2, 3, 4}</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -883,9 +953,11 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>With bert you did not have a generative model, with GPT you can because it only relies on the past to predict the next ones. Bert mask the word in the middle, but sees at the right and left to see the context.</p>
+<p>You dont need to have labels, because pred the next word is just looking in the corpus what is the actual word that should fit.</p>
 </section>
-<section id="gpt-1-2-3" class="level2" data-number="42">
-<h2 data-number="42" class="anchored" data-anchor-id="gpt-1-2-3"><span class="header-section-number">42</span> GPT-{1, 2, 3}</h2>
+<section id="gpt-1-2-3" class="level2" data-number="40">
+<h2 data-number="40" class="anchored" data-anchor-id="gpt-1-2-3"><span class="header-section-number">40</span> GPT-{1, 2, 3}</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -896,9 +968,9 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="e" class="level2" data-number="43">
-<h2 data-number="43" class="anchored" data-anchor-id="e"><span class="header-section-number">43</span> e</h2>
-GPT: In- context learning The three settings we explore for in-context learning Traditional fine-tuning (not used for GPT-3)
+<section id="gpt-in--context-learning" class="level2" data-number="41">
+<h2 data-number="41" class="anchored" data-anchor-id="gpt-in--context-learning"><span class="header-section-number">41</span> GPT: In- context learning</h2>
+The three settings we explore for in-context learning Traditional fine-tuning (not used for GPT-3)
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -908,9 +980,11 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </div>
 </center>
 <pre></pre>
+<p>The ability to not train gradients is a cool ability that these hug models have</p>
 </section>
-<section id="for-models-like-stablediffusion-dalle-emu-video-etc.-t5" class="level2" data-number="44">
-<h2 data-number="44" class="anchored" data-anchor-id="for-models-like-stablediffusion-dalle-emu-video-etc.-t5"><span class="header-section-number">44</span> ; For models like StableDiffusion, Dalle, EMU video etc. T5</h2>
+<section id="discuss" class="level2" data-number="42">
+<h2 data-number="42" class="anchored" data-anchor-id="discuss"><span class="header-section-number">42</span> Discuss</h2>
+For models like StableDiffusion, Dalle, EMU video etc. T5
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -920,9 +994,17 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </div>
 </center>
 <pre></pre>
+<p>Why may encoders models be favorable compared to decoder models?</p>
+<ul>
+<li><p>Decoders are also trained with masks but if you want to predict the next word, this representation looks at everything that comes before, so in a way if that is what you care about there is no mack really (because you are looking at everything that was looked before)</p></li>
+<li><p>Nobody knows the answer for this question</p></li>
+<li><p>Hypothesis is that encoders compress the information, while for Large language models, they are basically the job of encoding and decoding at the same time, because th closer you get to the ouput the more you need to go back to i.e correct grammar and very low level features, and somewhere in the middle of these decoder models there is the summary semantics that you could use for the vission models but you don’t know exactly where those features are. So for encoders you know exaclty where th summary is because that is still the bottleneck still but for decoders we dont know where to take the features</p></li>
+<li><p>A CNN is an encoder</p></li>
+<li><p>Unet also has this decoder then the decoder part like</p></li>
+</ul>
 </section>
-<section id="gpt-vs-bert" class="level2" data-number="45">
-<h2 data-number="45" class="anchored" data-anchor-id="gpt-vs-bert"><span class="header-section-number">45</span> GPT vs BERT</h2>
+<section id="gpt-vs-bert" class="level2" data-number="43">
+<h2 data-number="43" class="anchored" data-anchor-id="gpt-vs-bert"><span class="header-section-number">43</span> GPT vs BERT</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -933,8 +1015,8 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </center>
 <pre></pre>
 </section>
-<section id="multimodal-transformer-architecture-clip" class="level2" data-number="46">
-<h2 data-number="46" class="anchored" data-anchor-id="multimodal-transformer-architecture-clip"><span class="header-section-number">46</span> Multimodal Transformer architecture: CLIP</h2>
+<section id="multimodal-transformer-architecture-clip" class="level2" data-number="44">
+<h2 data-number="44" class="anchored" data-anchor-id="multimodal-transformer-architecture-clip"><span class="header-section-number">44</span> Multimodal Transformer architecture: CLIP</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -945,8 +1027,8 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </center>
 <pre></pre>
 </section>
-<section id="multimodal-transformer-architecture-clip-1" class="level2" data-number="47">
-<h2 data-number="47" class="anchored" data-anchor-id="multimodal-transformer-architecture-clip-1"><span class="header-section-number">47</span> Multimodal Transformer architecture: CLIP</h2>
+<section id="multimodal-transformer-architecture-clip-1" class="level2" data-number="45">
+<h2 data-number="45" class="anchored" data-anchor-id="multimodal-transformer-architecture-clip-1"><span class="header-section-number">45</span> Multimodal Transformer architecture: CLIP</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -956,9 +1038,12 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </div>
 </center>
 <pre></pre>
+<p>Here we want things to be close but different. That is hard, and with these hard examples we learn new features and learn more</p>
+<p>Now differentiating a dog vs a sheep that would be easier and eventually you will not learn anything.</p>
+<p>1:32</p>
 </section>
-<section id="multimodal-transformer-architecture-clip-2" class="level2" data-number="48">
-<h2 data-number="48" class="anchored" data-anchor-id="multimodal-transformer-architecture-clip-2"><span class="header-section-number">48</span> Multimodal Transformer architecture: CLIP</h2>
+<section id="multimodal-transformer-architecture-clip-2" class="level2" data-number="46">
+<h2 data-number="46" class="anchored" data-anchor-id="multimodal-transformer-architecture-clip-2"><span class="header-section-number">46</span> Multimodal Transformer architecture: CLIP</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -968,9 +1053,10 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </div>
 </center>
 <pre></pre>
+<p>Because they use a text encoder, like BERT, they can do Zero-shot for classification images</p>
 </section>
-<section id="clip-zero-shot-examples" class="level2" data-number="49">
-<h2 data-number="49" class="anchored" data-anchor-id="clip-zero-shot-examples"><span class="header-section-number">49</span> CLIP: Zero-Shot Examples</h2>
+<section id="clip-zero-shot-examples" class="level2" data-number="47">
+<h2 data-number="47" class="anchored" data-anchor-id="clip-zero-shot-examples"><span class="header-section-number">47</span> CLIP: Zero-Shot Examples</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -981,8 +1067,8 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </center>
 <pre></pre>
 </section>
-<section id="clip-robustness" class="level2" data-number="50">
-<h2 data-number="50" class="anchored" data-anchor-id="clip-robustness"><span class="header-section-number">50</span> CLIP: Robustness</h2>
+<section id="clip-robustness" class="level2" data-number="48">
+<h2 data-number="48" class="anchored" data-anchor-id="clip-robustness"><span class="header-section-number">48</span> CLIP: Robustness</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -993,8 +1079,8 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </center>
 <pre></pre>
 </section>
-<section id="clip-usage-in-other-models" class="level2" data-number="51">
-<h2 data-number="51" class="anchored" data-anchor-id="clip-usage-in-other-models"><span class="header-section-number">51</span> CLIP: Usage in other models</h2>
+<section id="clip-usage-in-other-models" class="level2" data-number="49">
+<h2 data-number="49" class="anchored" data-anchor-id="clip-usage-in-other-models"><span class="header-section-number">49</span> CLIP: Usage in other models</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1005,8 +1091,8 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </center>
 <pre></pre>
 </section>
-<section id="clip-shortcomings" class="level2" data-number="52">
-<h2 data-number="52" class="anchored" data-anchor-id="clip-shortcomings"><span class="header-section-number">52</span> CLIP: Shortcomings</h2>
+<section id="clip-shortcomings" class="level2" data-number="50">
+<h2 data-number="50" class="anchored" data-anchor-id="clip-shortcomings"><span class="header-section-number">50</span> CLIP: Shortcomings</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1016,9 +1102,10 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </div>
 </center>
 <pre></pre>
+<p>CLIP does not have a decoder</p>
 </section>
-<section id="visual-language-model-flamingo" class="level2" data-number="53">
-<h2 data-number="53" class="anchored" data-anchor-id="visual-language-model-flamingo"><span class="header-section-number">53</span> Visual Language Model: Flamingo</h2>
+<section id="visual-language-model-flamingo" class="level2" data-number="51">
+<h2 data-number="51" class="anchored" data-anchor-id="visual-language-model-flamingo"><span class="header-section-number">51</span> Visual Language Model: Flamingo</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1029,8 +1116,8 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </center>
 <pre></pre>
 </section>
-<section id="visual-language-model-flamingo-1" class="level2" data-number="54">
-<h2 data-number="54" class="anchored" data-anchor-id="visual-language-model-flamingo-1"><span class="header-section-number">54</span> Visual Language Model: Flamingo</h2>
+<section id="visual-language-model-flamingo-1" class="level2" data-number="52">
+<h2 data-number="52" class="anchored" data-anchor-id="visual-language-model-flamingo-1"><span class="header-section-number">52</span> Visual Language Model: Flamingo</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1041,8 +1128,8 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </center>
 <pre></pre>
 </section>
-<section id="visual-language-model-flamingo-2" class="level2" data-number="55">
-<h2 data-number="55" class="anchored" data-anchor-id="visual-language-model-flamingo-2"><span class="header-section-number">55</span> Visual Language Model: Flamingo</h2>
+<section id="visual-language-model-flamingo-2" class="level2" data-number="53">
+<h2 data-number="53" class="anchored" data-anchor-id="visual-language-model-flamingo-2"><span class="header-section-number">53</span> Visual Language Model: Flamingo</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1053,8 +1140,8 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </center>
 <pre></pre>
 </section>
-<section id="vision-transformer" class="level2" data-number="56">
-<h2 data-number="56" class="anchored" data-anchor-id="vision-transformer"><span class="header-section-number">56</span> Vision Transformer</h2>
+<section id="vision-transformer" class="level2" data-number="54">
+<h2 data-number="54" class="anchored" data-anchor-id="vision-transformer"><span class="header-section-number">54</span> Vision Transformer</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1065,8 +1152,8 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </center>
 <pre></pre>
 </section>
-<section id="understanding-a-figure-1" class="level2" data-number="57">
-<h2 data-number="57" class="anchored" data-anchor-id="understanding-a-figure-1"><span class="header-section-number">57</span> Understanding a “Figure 1”</h2>
+<section id="understanding-a-figure-1" class="level2" data-number="55">
+<h2 data-number="55" class="anchored" data-anchor-id="understanding-a-figure-1"><span class="header-section-number">55</span> Understanding a “Figure 1”</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1077,8 +1164,8 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </center>
 <pre></pre>
 </section>
-<section id="quiz-from-what-you-now-know-about-attention-what" class="level2" data-number="58">
-<h2 data-number="58" class="anchored" data-anchor-id="quiz-from-what-you-now-know-about-attention-what"><span class="header-section-number">58</span> ; Quiz: From what you now know about attention, what</h2>
+<section id="quiz-from-what-you-now-know-about-attention-what" class="level2" data-number="56">
+<h2 data-number="56" class="anchored" data-anchor-id="quiz-from-what-you-now-know-about-attention-what"><span class="header-section-number">56</span> ; Quiz: From what you now know about attention, what</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1089,8 +1176,8 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </center>
 <pre></pre>
 </section>
-<section id="vision-transformer-1" class="level2" data-number="59">
-<h2 data-number="59" class="anchored" data-anchor-id="vision-transformer-1"><span class="header-section-number">59</span> Vision Transformer</h2>
+<section id="vision-transformer-1" class="level2" data-number="57">
+<h2 data-number="57" class="anchored" data-anchor-id="vision-transformer-1"><span class="header-section-number">57</span> Vision Transformer</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1101,8 +1188,8 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </center>
 <pre></pre>
 </section>
-<section id="vision-transformer-2" class="level2" data-number="60">
-<h2 data-number="60" class="anchored" data-anchor-id="vision-transformer-2"><span class="header-section-number">60</span> Vision Transformer</h2>
+<section id="vision-transformer-2" class="level2" data-number="58">
+<h2 data-number="58" class="anchored" data-anchor-id="vision-transformer-2"><span class="header-section-number">58</span> Vision Transformer</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1113,8 +1200,8 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </center>
 <pre></pre>
 </section>
-<section id="attention-as-a-superset-of-convolutions" class="level2" data-number="61">
-<h2 data-number="61" class="anchored" data-anchor-id="attention-as-a-superset-of-convolutions"><span class="header-section-number">61</span> Attention as a superset of convolutions</h2>
+<section id="attention-as-a-superset-of-convolutions" class="level2" data-number="59">
+<h2 data-number="59" class="anchored" data-anchor-id="attention-as-a-superset-of-convolutions"><span class="header-section-number">59</span> Attention as a superset of convolutions</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1125,8 +1212,8 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </center>
 <pre></pre>
 </section>
-<section id="training-a-vit-is-more-difficult" class="level2" data-number="62">
-<h2 data-number="62" class="anchored" data-anchor-id="training-a-vit-is-more-difficult"><span class="header-section-number">62</span> Training a ViT is more difficult</h2>
+<section id="training-a-vit-is-more-difficult" class="level2" data-number="60">
+<h2 data-number="60" class="anchored" data-anchor-id="training-a-vit-is-more-difficult"><span class="header-section-number">60</span> Training a ViT is more difficult</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1137,8 +1224,8 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </center>
 <pre></pre>
 </section>
-<section id="vil-features" class="level2" data-number="63">
-<h2 data-number="63" class="anchored" data-anchor-id="vil-features"><span class="header-section-number">63</span> Vil features</h2>
+<section id="vil-features" class="level2" data-number="61">
+<h2 data-number="61" class="anchored" data-anchor-id="vil-features"><span class="header-section-number">61</span> Vil features</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1149,8 +1236,8 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </center>
 <pre></pre>
 </section>
-<section id="also-here-imagenet-can-more-or-less-be-solved-with-textures" class="level2" data-number="64">
-<h2 data-number="64" class="anchored" data-anchor-id="also-here-imagenet-can-more-or-less-be-solved-with-textures"><span class="header-section-number">64</span> Also here: ImageNet can (more or less) be solved with textures</h2>
+<section id="also-here-imagenet-can-more-or-less-be-solved-with-textures" class="level2" data-number="62">
+<h2 data-number="62" class="anchored" data-anchor-id="also-here-imagenet-can-more-or-less-be-solved-with-textures"><span class="header-section-number">62</span> Also here: ImageNet can (more or less) be solved with textures</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1161,8 +1248,8 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </center>
 <pre></pre>
 </section>
-<section id="swin-transformer-add-hierarchy-back-in" class="level2" data-number="65">
-<h2 data-number="65" class="anchored" data-anchor-id="swin-transformer-add-hierarchy-back-in"><span class="header-section-number">65</span> Swin Transformer: add hierarchy back in?</h2>
+<section id="swin-transformer-add-hierarchy-back-in" class="level2" data-number="63">
+<h2 data-number="63" class="anchored" data-anchor-id="swin-transformer-add-hierarchy-back-in"><span class="header-section-number">63</span> Swin Transformer: add hierarchy back in?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1173,8 +1260,8 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </center>
 <pre></pre>
 </section>
-<section id="hybrid-architectures-get-best-performances-atm" class="level2" data-number="66">
-<h2 data-number="66" class="anchored" data-anchor-id="hybrid-architectures-get-best-performances-atm"><span class="header-section-number">66</span> Hybrid Architectures get best performances (atm)</h2>
+<section id="hybrid-architectures-get-best-performances-atm" class="level2" data-number="64">
+<h2 data-number="64" class="anchored" data-anchor-id="hybrid-architectures-get-best-performances-atm"><span class="header-section-number">64</span> Hybrid Architectures get best performances (atm)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1185,8 +1272,8 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </center>
 <pre></pre>
 </section>
-<section id="the-perceiver" class="level2" data-number="67">
-<h2 data-number="67" class="anchored" data-anchor-id="the-perceiver"><span class="header-section-number">67</span> The Perceiver</h2>
+<section id="the-perceiver" class="level2" data-number="65">
+<h2 data-number="65" class="anchored" data-anchor-id="the-perceiver"><span class="header-section-number">65</span> The Perceiver</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1197,8 +1284,8 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </center>
 <pre></pre>
 </section>
-<section id="the-perceiver-main-idea" class="level2" data-number="68">
-<h2 data-number="68" class="anchored" data-anchor-id="the-perceiver-main-idea"><span class="header-section-number">68</span> The Perceiver: main idea</h2>
+<section id="the-perceiver-main-idea" class="level2" data-number="66">
+<h2 data-number="66" class="anchored" data-anchor-id="the-perceiver-main-idea"><span class="header-section-number">66</span> The Perceiver: main idea</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1209,8 +1296,8 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </center>
 <pre></pre>
 </section>
-<section id="the-perceiver-taming-quadratic-complexity" class="level2" data-number="69">
-<h2 data-number="69" class="anchored" data-anchor-id="the-perceiver-taming-quadratic-complexity"><span class="header-section-number">69</span> The Perceiver: Taming quadratic complexity</h2>
+<section id="the-perceiver-taming-quadratic-complexity" class="level2" data-number="67">
+<h2 data-number="67" class="anchored" data-anchor-id="the-perceiver-taming-quadratic-complexity"><span class="header-section-number">67</span> The Perceiver: Taming quadratic complexity</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1221,8 +1308,8 @@ GPT: In- context learning The three settings we explore for in-context learning 
 </center>
 <pre></pre>
 </section>
-<section id="title-4" class="level2" data-number="70">
-<h2 data-number="70" class="anchored" data-anchor-id="title-4"><span class="header-section-number">70</span> Title</h2>
+<section id="title-1" class="level2" data-number="68">
+<h2 data-number="68" class="anchored" data-anchor-id="title-1"><span class="header-section-number">68</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">

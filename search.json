@@ -6835,246 +6835,246 @@
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#title",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#title",
     "title": "Attention & Transformers",
-    "section": "24 Title",
-    "text": "24 Title\n\n\n\n\nSlide 27"
+    "section": "25 Title",
+    "text": "25 Title\n\n\n\n\nSlide 27"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#title-1",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#title-1",
     "title": "Attention & Transformers",
-    "section": "31 Title",
-    "text": "31 Title\n\n\n\n\nSlide 34"
+    "section": "68 Title",
+    "text": "68 Title\n\n\n\n\nSlide 73"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#seq2seq-models",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#seq2seq-models",
     "title": "Attention & Transformers",
-    "section": "1 Seq2seq models",
-    "text": "1 Seq2seq models\n\n\n\n\nSlide 4"
+    "section": "2 Seq2seq models",
+    "text": "2 Seq2seq models\n\n\n\n\nSlide 4"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#neural-machine-translation-with-a-seq2seq-model",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#neural-machine-translation-with-a-seq2seq-model",
     "title": "Attention & Transformers",
-    "section": "2 Neural machine translation with a seq2seq model",
-    "text": "2 Neural machine translation with a seq2seq model\n\n\n\n\nSlide 5"
+    "section": "3 Neural machine translation with a seq2seq model",
+    "text": "3 Neural machine translation with a seq2seq model\n\n\n\n\nSlide 5"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#defining-seq2seq-for-nmt-encoder",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#defining-seq2seq-for-nmt-encoder",
     "title": "Attention & Transformers",
-    "section": "3 Defining seq2seq for NMT”: Encoder",
-    "text": "3 Defining seq2seq for NMT”: Encoder\n\n\n\n\nSlide 6"
+    "section": "4 Defining seq2seq for NMT”: Encoder",
+    "text": "4 Defining seq2seq for NMT”: Encoder\n\n\n\n\nSlide 6\n\n\n\n\nh_{t-1} is the hidden state, is this what makes a NN like \\(f()\\) be recurrent"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#defining-seq2seg-for-nmt-decoder",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#defining-seq2seg-for-nmt-decoder",
     "title": "Attention & Transformers",
-    "section": "4 Defining seq2seg for NMT: Decoder",
-    "text": "4 Defining seq2seg for NMT: Decoder\n\n\n\n\nSlide 7"
+    "section": "5 Defining seq2seg for NMT: Decoder",
+    "text": "5 Defining seq2seg for NMT: Decoder\n\n\n\n\nSlide 7"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#issue-of-seq2seq-models",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#issue-of-seq2seq-models",
     "title": "Attention & Transformers",
-    "section": "5 Issue of seq2seq models",
-    "text": "5 Issue of seq2seq models\n\n\n\n\nSlide 8"
+    "section": "6 Issue of seq2seq models",
+    "text": "6 Issue of seq2seq models\n\n\n\n\nSlide 8\n\n\n\n\nThe problem is that they were trying to compress all info into a context vector \\(c\\)"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#attention",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#attention",
     "title": "Attention & Transformers",
-    "section": "6 Attention",
-    "text": "6 Attention\n\n\n\n\nSlide 9"
+    "section": "7 Attention",
+    "text": "7 Attention\n\n\n\n\nSlide 9"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#here-found-what-you-were-found-what-you-were",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#here-found-what-you-were-found-what-you-were",
     "title": "Attention & Transformers",
-    "section": "7 Here, | found what you were | | found what you were",
-    "text": "7 Here, | found what you were | | found what you were\n\n\n\n\nSlide 10"
+    "section": "8 Here, | found what you were | found what you were",
+    "text": "8 Here, | found what you were | found what you were\n\n\n\n\nSlide 10"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#attention-1",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#attention-1",
     "title": "Attention & Transformers",
-    "section": "8 Attention",
-    "text": "8 Attention\n\n\n\n\nSlide 11"
+    "section": "9 Attention",
+    "text": "9 Attention\n\n\n\n\nSlide 11"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#formal-definition-of-attention",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#formal-definition-of-attention",
     "title": "Attention & Transformers",
-    "section": "9 Formal definition of Attention",
-    "text": "9 Formal definition of Attention\n\n\n\n\nSlide 12"
+    "section": "10 Formal definition of Attention",
+    "text": "10 Formal definition of Attention\n\n\n\n\nSlide 12"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#formal-definition-of-attention-1",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#formal-definition-of-attention-1",
     "title": "Attention & Transformers",
-    "section": "10 Formal definition of Attention",
-    "text": "10 Formal definition of Attention\n\n\n\n\nSlide 13"
+    "section": "11 Formal definition of Attention",
+    "text": "11 Formal definition of Attention\n\n\n\n\nSlide 13\n\n\n\n\nIf the value e or the alignment model is high then it tells you how similar the inputs around position j and the outputs at position i match."
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#formal-definition-of-attention-2",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#formal-definition-of-attention-2",
     "title": "Attention & Transformers",
-    "section": "11 Formal definition of Attention",
-    "text": "11 Formal definition of Attention\n\n\n\n\nSlide 14"
+    "section": "12 Formal definition of Attention",
+    "text": "12 Formal definition of Attention\n\n\n\n\nSlide 14"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#why-attention",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#why-attention",
     "title": "Attention & Transformers",
-    "section": "12 Why attention?",
-    "text": "12 Why attention?\n\n\n\n\nSlide 15"
+    "section": "13 Why attention?",
+    "text": "13 Why attention?\n\n\n\n\nSlide 15"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#self-attention",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#self-attention",
     "title": "Attention & Transformers",
-    "section": "13 Self-attention",
-    "text": "13 Self-attention\n\n\n\n\nSlide 16"
+    "section": "14 Self-attention",
+    "text": "14 Self-attention\n\n\n\n\nSlide 16"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#paying-attention-in-vision",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#paying-attention-in-vision",
     "title": "Attention & Transformers",
-    "section": "14 Paying attention in vision",
-    "text": "14 Paying attention in vision\n\n\n\n\nSlide 17"
+    "section": "15 Paying attention in vision",
+    "text": "15 Paying attention in vision\n\n\n\n\nSlide 17"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#attention-is-all-you-need",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#attention-is-all-you-need",
     "title": "Attention & Transformers",
-    "section": "15 Attention is all you need",
-    "text": "15 Attention is all you need\n\n\n\n\nSlide 18"
+    "section": "16 Attention is all you need",
+    "text": "16 Attention is all you need\n\n\n\n\nSlide 18"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#queries-keys-and-values",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#queries-keys-and-values",
     "title": "Attention & Transformers",
-    "section": "16 Queries, keys and values",
-    "text": "16 Queries, keys and values\n\n\n\n\nSlide 19"
+    "section": "17 Queries, keys and values",
+    "text": "17 Queries, keys and values\n\n\n\n\nSlide 19"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#scaled-dot-product-attention",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#scaled-dot-product-attention",
     "title": "Attention & Transformers",
-    "section": "17 Scaled Dot-Product Attention",
-    "text": "17 Scaled Dot-Product Attention\n\n\n\n\nSlide 20"
+    "section": "18 Scaled Dot-Product Attention",
+    "text": "18 Scaled Dot-Product Attention\n\n\n\n\nSlide 20"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#multi-head-attention",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#multi-head-attention",
     "title": "Attention & Transformers",
-    "section": "18 Multi-head attention",
-    "text": "18 Multi-head attention\n\n\n\n\nSlide 21"
+    "section": "19 Multi-head attention",
+    "text": "19 Multi-head attention\n\n\n\n\nSlide 21"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#multi-head-self-attention",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#multi-head-self-attention",
     "title": "Attention & Transformers",
-    "section": "19 Multi-head self-attention",
-    "text": "19 Multi-head self-attention\n\n\n\n\nSlide 22"
+    "section": "20 Multi-head self-attention",
+    "text": "20 Multi-head self-attention\n\n\n\n\nSlide 22"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#multi-head-self-attention-1",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#multi-head-self-attention-1",
     "title": "Attention & Transformers",
-    "section": "20 Multi-head self-attention",
-    "text": "20 Multi-head self-attention\n\n\n\n\nSlide 23"
+    "section": "21 Multi-head self-attention",
+    "text": "21 Multi-head self-attention\n\n\n\n\nSlide 23"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#transformer-encoder",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#transformer-encoder",
     "title": "Attention & Transformers",
-    "section": "21 Transformer encoder",
-    "text": "21 Transformer encoder\n\n\n\n\nSlide 24"
+    "section": "22 Transformer encoder",
+    "text": "22 Transformer encoder\n\n\n\n\nSlide 24"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#transformer-decoder",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#transformer-decoder",
     "title": "Attention & Transformers",
-    "section": "22 Transformer decoder",
-    "text": "22 Transformer decoder\n\n\n\n\nSlide 25"
+    "section": "23 Transformer decoder",
+    "text": "23 Transformer decoder\n\n\n\n\nSlide 25\n\n\n\n\n\n\n\n\n\n\nWhy do we use a mask in the decoder of self attention?\n\n\n\n\n\n\n23.1 Autoregressive Property:\nAutoregressive models generate outputs one step at a time in a sequential manner. In the context of natural language processing, this means predicting the next word in a sequence given the preceding words. Autoregressive models are trained to predict the next token in the sequence based on the tokens that have already been generated.\n\n\n23.2 Decoder in a Transformer:\nThe decoder in a transformer is responsible for generating the output sequence. It consists of multiple layers, each containing a self-attention mechanism and feedforward neural networks. The self-attention mechanism allows the model to weigh different parts of the input sequence differently when generating each token.\n\n\n23.3 Cheating and the Mask:\n“Cheating” refers to the undesirable situation where the model uses information from future positions in the sequence during training. During training, the model is fed the true output sequence up to the current position to calculate loss and update its parameters. If the model were allowed to attend to future positions, it might artificially inflate its performance by relying on information that it wouldn’t have during actual generation.\nThe mask applied in the decoder’s self-attention mechanism prevents the model from accessing future information. The mask sets the attention scores for future positions to very small values, essentially blocking the model from attending to tokens that haven’t been generated yet. This ensures that the model learns to generate each token based only on the information available up to that point, aligning with the autoregressive nature of the decoding process.\n\n\n23.4 Example:\nConsider the task of language translation. When translating a sentence from English to French, the decoder generates the translation one word at a time. If it were allowed to attend to words in the future, it might incorrectly use information from the French translation that hasn’t been generated yet. This could lead to overfitting during training and poor generalization to unseen data.\nIn summary, preventing “cheating” by using a mask ensures that the decoder learns to generate outputs based on the information available up to the current step, improving the model’s ability to generalize to unseen data and maintain the autoregressive property essential for sequence generation tasks."
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#the-full-transformer",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#the-full-transformer",
     "title": "Attention & Transformers",
-    "section": "23 The full Transformer",
-    "text": "23 The full Transformer\n\n\n\n\nSlide 26"
+    "section": "24 The full Transformer",
+    "text": "24 The full Transformer\n\n\n\n\nSlide 26"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#title-2",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#title-2",
     "title": "Attention & Transformers",
-    "section": "33 Title",
-    "text": "33 Title\n\n\n\n\nSlide 36"
+    "section": "69 Title",
+    "text": "69 Title\n\n\n\n\nSlide 73"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#coding-a-transformer-pytorch-init",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#coding-a-transformer-pytorch-init",
     "title": "Attention & Transformers",
-    "section": "25 Coding a Transformer (PyTorch): init",
-    "text": "25 Coding a Transformer (PyTorch): init\n\n\n\n\nSlide 28"
+    "section": "26 Coding a Transformer (PyTorch): init",
+    "text": "26 Coding a Transformer (PyTorch): init\n\n\n\n\nSlide 28"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#coding-a-transformer-pytorch-forward-pass",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#coding-a-transformer-pytorch-forward-pass",
     "title": "Attention & Transformers",
-    "section": "26 Coding a Transformer (PyTorch): forward pass",
-    "text": "26 Coding a Transformer (PyTorch): forward pass\n\n\n\n\nSlide 29"
+    "section": "27 Coding a Transformer (PyTorch): forward pass",
+    "text": "27 Coding a Transformer (PyTorch): forward pass\n\n\n\n\nSlide 29\n\n\n\n\ntgt: in roder to predict the next word, you can look at the preceding word. So the target is the same as source except that is shofted one to the left. We do it so that it shofts and we are able to predict the last word"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#transformer-positional-encodings",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#transformer-positional-encodings",
     "title": "Attention & Transformers",
-    "section": "27 Transformer: Positional encodings",
-    "text": "27 Transformer: Positional encodings\n\n\n\n\nSlide 30"
+    "section": "28 Transformer: Positional encodings",
+    "text": "28 Transformer: Positional encodings\n\n\n\n\nSlide 30\n\n\n\n\nAttention is a permutation-invariant operation, but this is not ideal because we might have that sometimes the order is important like with ‘not’\npositional enconding to locate where are you at the beginning or at the end"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#transformer-positional-encodings-1",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#transformer-positional-encodings-1",
     "title": "Attention & Transformers",
-    "section": "28 Transformer: Positional encodings",
-    "text": "28 Transformer: Positional encodings\n\n\n\n\nSlide 31"
+    "section": "29 Transformer: Positional encodings",
+    "text": "29 Transformer: Positional encodings\n\n\n\n\nSlide 31\n\n\n\n\nif they are apart from each other their positional encoding should be different"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#coding-the-positional-encodings-pytorch",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#coding-the-positional-encodings-pytorch",
     "title": "Attention & Transformers",
-    "section": "29 Coding the Positional Encodings (PyTorch)",
-    "text": "29 Coding the Positional Encodings (PyTorch)\n\n\n\n\nSlide 32"
+    "section": "30 Coding the Positional Encodings (PyTorch)",
+    "text": "30 Coding the Positional Encodings (PyTorch)\n\n\n\n\nSlide 32"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#pros-cons",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#pros-cons",
     "title": "Attention & Transformers",
-    "section": "30 Pros & Cons",
-    "text": "30 Pros & Cons\n\n\n\n\nSlide 33"
+    "section": "31 Pros & Cons",
+    "text": "31 Pros & Cons\n\n\n\n\nSlide 33\n\n\n\n\nIt scales quadratically with the num inputs, the matrix is N * N let see an example:\nThe quadratic scaling of transformers with respect to the number of inputs primarily arises from the self-attention mechanism used in transformers. In self-attention, each element in the input sequence attends to all other elements, and the attention scores are computed pairwise. This leads to a quadratic dependency on the number of inputs.\nLet’s consider a simple example with a sequence of length \\(N\\). For simplicity, let’s assume each input element has a dimension of 1 for illustration purposes.\nWhat about other dimensions, wel that can be possible because remember we have our embeddings as the input to the NN, not the words itself\n\n\n\n\nLike in this picture our dimensions are clearly larger than 1 for the embeddings\n\nOriginal Sequence (1D): \\[\nx_1, x_2, x_3, \\ldots, x_N\n\\]\nSelf-Attention Weights: For each element \\(x_i\\), self-attention computes a weight for all other elements \\(x_j\\) based on their relationships. This results in a square matrix of attention weights:\n\\[\n\\begin{bmatrix}\nw_{1,1} & w_{1,2} & \\ldots & w_{1,N} \\\\\nw_{2,1} & w_{2,2} & \\ldots & w_{2,N} \\\\\n\\vdots & \\vdots & \\ddots & \\vdots \\\\\nw_{N,1} & w_{N,2} & \\ldots & w_{N,N} \\\\\n\\end{bmatrix}\n  \\]\nEach entry \\(w_{i,j}\\) represents the attention weight between \\(x_i\\) and \\(x_j\\).\nOutput for Each Element: The output for each element \\(x_i\\) is computed as a weighted sum of all elements based on the attention weights:\n\\[\n\\text{output}_{i} = w_{i,1} \\cdot x_1 + w_{i,2} \\cdot x_2 + \\ldots + w_{i,N} \\cdot x_N\n  \\]\nThis involves \\(N\\) multiplications for each element.\nTotal Complexity: For \\(N\\) elements, we need to compute \\(N\\) attention weights for each element, resulting in a total of \\(N^2\\) attention weights. Therefore, the overall complexity is quadratic, \\(O(N^2)\\), due to the pairwise comparisons.\n\nThis quadratic scaling becomes computationally expensive as the sequence length increases, leading to challenges in handling long sequences efficiently. To address this, techniques like sparse attention patterns and approximations have been proposed in research to reduce the computational cost while maintaining the benefits of self-attention.\n\n\n\n\nSlide 34"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#title-3",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#title-3",
     "title": "Attention & Transformers",
-    "section": "34 Title",
-    "text": "34 Title\n\n\n\n\nSlide 37"
+    "section": "70 Title",
+    "text": "70 Title\n\n\n\n\nSlide 73"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#recommended-papers",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#recommended-papers",
     "title": "Attention & Transformers",
     "section": "32 Recommended papers",
-    "text": "32 Recommended papers\n\n\n\n\nSlide 35"
+    "text": "32 Recommended papers\n\n\n\n\nSlide 35\n\n\n\n\n\n\n\n\nSlide 36\n\n\n\n\n\n\n\n\nSlide 37"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#title-4",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#title-4",
     "title": "Attention & Transformers",
-    "section": "70 Title",
-    "text": "70 Title\n\n\n\n\nSlide 73"
+    "section": "71 Title",
+    "text": "71 Title\n\n\n\n\nSlide 73"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#title-5",
@@ -7087,246 +7087,246 @@
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#bert",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#bert",
     "title": "Attention & Transformers",
-    "section": "35 BERT",
-    "text": "35 BERT\n\n\n\n\nSlide 38"
+    "section": "33 BERT",
+    "text": "33 BERT\n\n\n\n\nSlide 38"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#bert-input-representation",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#bert-input-representation",
     "title": "Attention & Transformers",
-    "section": "36 BERT input representation",
-    "text": "36 BERT input representation\n\n\n\n\nSlide 39"
+    "section": "34 BERT input representation",
+    "text": "34 BERT input representation\n\n\n\n\nSlide 39"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#bert-pre-training",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#bert-pre-training",
     "title": "Attention & Transformers",
-    "section": "37 BERT pre-training",
-    "text": "37 BERT pre-training\n\n\n\n\nSlide 40"
+    "section": "35 BERT pre-training",
+    "text": "35 BERT pre-training\n\n\n\n\nSlide 40"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#bert-fine-tuning",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#bert-fine-tuning",
     "title": "Attention & Transformers",
-    "section": "38 BERT fine-tuning",
-    "text": "38 BERT fine-tuning\n\n\n\n\nSlide 41"
+    "section": "36 BERT fine-tuning",
+    "text": "36 BERT fine-tuning\n\n\n\n\nSlide 41"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#bert-for-feature-extraction",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#bert-for-feature-extraction",
     "title": "Attention & Transformers",
-    "section": "39 BERT for feature extraction",
-    "text": "39 BERT for feature extraction\n\n\n\n\nSlide 42"
+    "section": "37 BERT for feature extraction",
+    "text": "37 BERT for feature extraction\n\n\n\n\nSlide 42\n\n\n\n\nWith BERT we gained contextualized word embeddings"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#bertology",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#bertology",
     "title": "Attention & Transformers",
-    "section": "40 BERTology",
-    "text": "40 BERTology\n\n\n\n\nSlide 43"
+    "section": "38 BERTology",
+    "text": "38 BERTology\n\n\n\n\nSlide 43"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#gpt-1-2-3-4",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#gpt-1-2-3-4",
     "title": "Attention & Transformers",
-    "section": "41 GPT-{1, 2, 3, 4}",
-    "text": "41 GPT-{1, 2, 3, 4}\n\n\n\n\nSlide 44"
+    "section": "39 GPT-{1, 2, 3, 4}",
+    "text": "39 GPT-{1, 2, 3, 4}\n\n\n\n\nSlide 44\n\n\n\n\nWith bert you did not have a generative model, with GPT you can because it only relies on the past to predict the next ones. Bert mask the word in the middle, but sees at the right and left to see the context.\nYou dont need to have labels, because pred the next word is just looking in the corpus what is the actual word that should fit."
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#gpt-1-2-3",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#gpt-1-2-3",
     "title": "Attention & Transformers",
-    "section": "42 GPT-{1, 2, 3}",
-    "text": "42 GPT-{1, 2, 3}\n\n\n\n\nSlide 45"
+    "section": "40 GPT-{1, 2, 3}",
+    "text": "40 GPT-{1, 2, 3}\n\n\n\n\nSlide 45"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#e",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#e",
     "title": "Attention & Transformers",
-    "section": "43 e",
-    "text": "43 e\nGPT: In- context learning The three settings we explore for in-context learning Traditional fine-tuning (not used for GPT-3)\n\n\n\n\nSlide 46"
+    "section": "41 e",
+    "text": "41 e\nGPT: In- context learning The three settings we explore for in-context learning Traditional fine-tuning (not used for GPT-3)\n\n\n\n\nSlide 46"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#for-models-like-stablediffusion-dalle-emu-video-etc.-t5",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#for-models-like-stablediffusion-dalle-emu-video-etc.-t5",
     "title": "Attention & Transformers",
-    "section": "44 ; For models like StableDiffusion, Dalle, EMU video etc. T5",
-    "text": "44 ; For models like StableDiffusion, Dalle, EMU video etc. T5\n\n\n\n\nSlide 47"
+    "section": "42 For models like StableDiffusion, Dalle, EMU video etc. T5",
+    "text": "42 For models like StableDiffusion, Dalle, EMU video etc. T5\n\n\n\n\nSlide 47"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#gpt-vs-bert",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#gpt-vs-bert",
     "title": "Attention & Transformers",
-    "section": "45 GPT vs BERT",
-    "text": "45 GPT vs BERT\n\n\n\n\nSlide 48"
+    "section": "43 GPT vs BERT",
+    "text": "43 GPT vs BERT\n\n\n\n\nSlide 48"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#multimodal-transformer-architecture-clip",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#multimodal-transformer-architecture-clip",
     "title": "Attention & Transformers",
-    "section": "46 Multimodal Transformer architecture: CLIP",
-    "text": "46 Multimodal Transformer architecture: CLIP\n\n\n\n\nSlide 49"
+    "section": "44 Multimodal Transformer architecture: CLIP",
+    "text": "44 Multimodal Transformer architecture: CLIP\n\n\n\n\nSlide 49"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#multimodal-transformer-architecture-clip-1",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#multimodal-transformer-architecture-clip-1",
     "title": "Attention & Transformers",
-    "section": "47 Multimodal Transformer architecture: CLIP",
-    "text": "47 Multimodal Transformer architecture: CLIP\n\n\n\n\nSlide 50"
+    "section": "45 Multimodal Transformer architecture: CLIP",
+    "text": "45 Multimodal Transformer architecture: CLIP\n\n\n\n\nSlide 50\n\n\n\n\nHere we want things to be close but different. That is hard, and with these hard examples we learn new features and learn more\nNow differentiating a dog vs a sheep that would be easier and eventually you will not learn anything.\n1:32"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#multimodal-transformer-architecture-clip-2",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#multimodal-transformer-architecture-clip-2",
     "title": "Attention & Transformers",
-    "section": "48 Multimodal Transformer architecture: CLIP",
-    "text": "48 Multimodal Transformer architecture: CLIP\n\n\n\n\nSlide 51"
+    "section": "46 Multimodal Transformer architecture: CLIP",
+    "text": "46 Multimodal Transformer architecture: CLIP\n\n\n\n\nSlide 51\n\n\n\n\nBecause they use a text encoder, like BERT, they can do Zero-shot for classification images"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#clip-zero-shot-examples",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#clip-zero-shot-examples",
     "title": "Attention & Transformers",
-    "section": "49 CLIP: Zero-Shot Examples",
-    "text": "49 CLIP: Zero-Shot Examples\n\n\n\n\nSlide 52"
+    "section": "47 CLIP: Zero-Shot Examples",
+    "text": "47 CLIP: Zero-Shot Examples\n\n\n\n\nSlide 52"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#clip-robustness",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#clip-robustness",
     "title": "Attention & Transformers",
-    "section": "50 CLIP: Robustness",
-    "text": "50 CLIP: Robustness\n\n\n\n\nSlide 53"
+    "section": "48 CLIP: Robustness",
+    "text": "48 CLIP: Robustness\n\n\n\n\nSlide 53"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#clip-usage-in-other-models",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#clip-usage-in-other-models",
     "title": "Attention & Transformers",
-    "section": "51 CLIP: Usage in other models",
-    "text": "51 CLIP: Usage in other models\n\n\n\n\nSlide 54"
+    "section": "49 CLIP: Usage in other models",
+    "text": "49 CLIP: Usage in other models\n\n\n\n\nSlide 54"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#clip-shortcomings",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#clip-shortcomings",
     "title": "Attention & Transformers",
-    "section": "52 CLIP: Shortcomings",
-    "text": "52 CLIP: Shortcomings\n\n\n\n\nSlide 55"
+    "section": "50 CLIP: Shortcomings",
+    "text": "50 CLIP: Shortcomings\n\n\n\n\nSlide 55\n\n\n\n\nCLIP does not have a decoder"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#visual-language-model-flamingo",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#visual-language-model-flamingo",
     "title": "Attention & Transformers",
-    "section": "53 Visual Language Model: Flamingo",
-    "text": "53 Visual Language Model: Flamingo\n\n\n\n\nSlide 56"
+    "section": "51 Visual Language Model: Flamingo",
+    "text": "51 Visual Language Model: Flamingo\n\n\n\n\nSlide 56"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#visual-language-model-flamingo-1",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#visual-language-model-flamingo-1",
     "title": "Attention & Transformers",
-    "section": "54 Visual Language Model: Flamingo",
-    "text": "54 Visual Language Model: Flamingo\n\n\n\n\nSlide 57"
+    "section": "52 Visual Language Model: Flamingo",
+    "text": "52 Visual Language Model: Flamingo\n\n\n\n\nSlide 57"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#visual-language-model-flamingo-2",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#visual-language-model-flamingo-2",
     "title": "Attention & Transformers",
-    "section": "55 Visual Language Model: Flamingo",
-    "text": "55 Visual Language Model: Flamingo\n\n\n\n\nSlide 58"
+    "section": "53 Visual Language Model: Flamingo",
+    "text": "53 Visual Language Model: Flamingo\n\n\n\n\nSlide 58"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#vision-transformer",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#vision-transformer",
     "title": "Attention & Transformers",
-    "section": "56 Vision Transformer",
-    "text": "56 Vision Transformer\n\n\n\n\nSlide 59"
+    "section": "54 Vision Transformer",
+    "text": "54 Vision Transformer\n\n\n\n\nSlide 59"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#understanding-a-figure-1",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#understanding-a-figure-1",
     "title": "Attention & Transformers",
-    "section": "57 Understanding a “Figure 1”",
-    "text": "57 Understanding a “Figure 1”\n\n\n\n\nSlide 60"
+    "section": "55 Understanding a “Figure 1”",
+    "text": "55 Understanding a “Figure 1”\n\n\n\n\nSlide 60"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#quiz-from-what-you-now-know-about-attention-what",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#quiz-from-what-you-now-know-about-attention-what",
     "title": "Attention & Transformers",
-    "section": "58 ; Quiz: From what you now know about attention, what",
-    "text": "58 ; Quiz: From what you now know about attention, what\n\n\n\n\nSlide 61"
+    "section": "56 ; Quiz: From what you now know about attention, what",
+    "text": "56 ; Quiz: From what you now know about attention, what\n\n\n\n\nSlide 61"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#vision-transformer-1",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#vision-transformer-1",
     "title": "Attention & Transformers",
-    "section": "59 Vision Transformer",
-    "text": "59 Vision Transformer\n\n\n\n\nSlide 62"
+    "section": "57 Vision Transformer",
+    "text": "57 Vision Transformer\n\n\n\n\nSlide 62"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#vision-transformer-2",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#vision-transformer-2",
     "title": "Attention & Transformers",
-    "section": "60 Vision Transformer",
-    "text": "60 Vision Transformer\n\n\n\n\nSlide 63"
+    "section": "58 Vision Transformer",
+    "text": "58 Vision Transformer\n\n\n\n\nSlide 63"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#attention-as-a-superset-of-convolutions",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#attention-as-a-superset-of-convolutions",
     "title": "Attention & Transformers",
-    "section": "61 Attention as a superset of convolutions",
-    "text": "61 Attention as a superset of convolutions\n\n\n\n\nSlide 64"
+    "section": "59 Attention as a superset of convolutions",
+    "text": "59 Attention as a superset of convolutions\n\n\n\n\nSlide 64"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#training-a-vit-is-more-difficult",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#training-a-vit-is-more-difficult",
     "title": "Attention & Transformers",
-    "section": "62 Training a ViT is more difficult",
-    "text": "62 Training a ViT is more difficult\n\n\n\n\nSlide 65"
+    "section": "60 Training a ViT is more difficult",
+    "text": "60 Training a ViT is more difficult\n\n\n\n\nSlide 65"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#vil-features",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#vil-features",
     "title": "Attention & Transformers",
-    "section": "63 Vil features",
-    "text": "63 Vil features\n\n\n\n\nSlide 66"
+    "section": "61 Vil features",
+    "text": "61 Vil features\n\n\n\n\nSlide 66"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#also-here-imagenet-can-more-or-less-be-solved-with-textures",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#also-here-imagenet-can-more-or-less-be-solved-with-textures",
     "title": "Attention & Transformers",
-    "section": "64 Also here: ImageNet can (more or less) be solved with textures",
-    "text": "64 Also here: ImageNet can (more or less) be solved with textures\n\n\n\n\nSlide 67"
+    "section": "62 Also here: ImageNet can (more or less) be solved with textures",
+    "text": "62 Also here: ImageNet can (more or less) be solved with textures\n\n\n\n\nSlide 67"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#swin-transformer-add-hierarchy-back-in",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#swin-transformer-add-hierarchy-back-in",
     "title": "Attention & Transformers",
-    "section": "65 Swin Transformer: add hierarchy back in?",
-    "text": "65 Swin Transformer: add hierarchy back in?\n\n\n\n\nSlide 68"
+    "section": "63 Swin Transformer: add hierarchy back in?",
+    "text": "63 Swin Transformer: add hierarchy back in?\n\n\n\n\nSlide 68"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#hybrid-architectures-get-best-performances-atm",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#hybrid-architectures-get-best-performances-atm",
     "title": "Attention & Transformers",
-    "section": "66 Hybrid Architectures get best performances (atm)",
-    "text": "66 Hybrid Architectures get best performances (atm)\n\n\n\n\nSlide 69"
+    "section": "64 Hybrid Architectures get best performances (atm)",
+    "text": "64 Hybrid Architectures get best performances (atm)\n\n\n\n\nSlide 69"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#the-perceiver",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#the-perceiver",
     "title": "Attention & Transformers",
-    "section": "67 The Perceiver",
-    "text": "67 The Perceiver\n\n\n\n\nSlide 70"
+    "section": "65 The Perceiver",
+    "text": "65 The Perceiver\n\n\n\n\nSlide 70"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#the-perceiver-main-idea",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#the-perceiver-main-idea",
     "title": "Attention & Transformers",
-    "section": "68 The Perceiver: main idea",
-    "text": "68 The Perceiver: main idea\n\n\n\n\nSlide 71"
+    "section": "66 The Perceiver: main idea",
+    "text": "66 The Perceiver: main idea\n\n\n\n\nSlide 71"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#the-perceiver-taming-quadratic-complexity",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#the-perceiver-taming-quadratic-complexity",
     "title": "Attention & Transformers",
-    "section": "69 The Perceiver: Taming quadratic complexity",
-    "text": "69 The Perceiver: Taming quadratic complexity\n\n\n\n\nSlide 72"
+    "section": "67 The Perceiver: Taming quadratic complexity",
+    "text": "67 The Perceiver: Taming quadratic complexity\n\n\n\n\nSlide 72"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#title-6",
@@ -7466,7 +7466,7 @@
     "href": "blog/2023-11-27_equivariances-&-graphical-neural-networks/index.html#attributes",
     "title": "Equivariances & Graphical Neural Networks",
     "section": "19 Attributes",
-    "text": "19 Attributes\n\n\n\n\nSlide 19"
+    "text": "19 Attributes\n\n\n\n\nSlide 19\n\n\n\n\nThe attention score is measured by these softmax\nThe dot product here it ends up being 2x3 again"
   },
   {
     "objectID": "blog/2023-11-27_equivariances-&-graphical-neural-networks/index.html#adjacency-matrix",
@@ -8006,5 +8006,40 @@
     "title": "Modern ConvNets",
     "section": "101 What is the input dimensionality of a FC layer?",
     "text": "101 What is the input dimensionality of a FC layer?\nFor a fully connected layer (dense layer) with \\(N\\) input neurons and \\(M\\) output neurons, the number of weights is given by:\n\\(W = N \\times M\\)\nSo, for a fully connected layer, the number of weights depends on the number of input and output neurons.\nComparing this with the 1x1 convolutional layer discussed earlier:\n\nFor a 1x1 convolution with \\(C_{\\text{in}}\\) input channels and \\(C_{\\text{out}}\\) output channels, the number of weights is \\(C_{\\text{in}} \\times C_{\\text{out}}\\).\n\nIn general, the number of weights for a fully connected layer is not necessarily the same as that for a 1x1 convolutional layer, as it depends on the specific architecture and dimensions of the layers involved. The key difference lies in how the connections are structured in each type of layer."
+  },
+  {
+    "objectID": "blog/2023-11-27_attention-&-transformers/index.html#background",
+    "href": "blog/2023-11-27_attention-&-transformers/index.html#background",
+    "title": "Attention & Transformers",
+    "section": "1 Background",
+    "text": "1 Background\n\n\n\n\n\n\n\n\n\n\n\nSlide 3"
+  },
+  {
+    "objectID": "blog/2023-11-27_attention-&-transformers/index.html#background-knowledge",
+    "href": "blog/2023-11-27_attention-&-transformers/index.html#background-knowledge",
+    "title": "Attention & Transformers",
+    "section": "1 Background knowledge",
+    "text": "1 Background knowledge\n\n\n\n\n\n\n\n\n\n\n\nSlide 3"
+  },
+  {
+    "objectID": "blog/2023-11-27_attention-&-transformers/index.html#here-found-what-you-were",
+    "href": "blog/2023-11-27_attention-&-transformers/index.html#here-found-what-you-were",
+    "title": "Attention & Transformers",
+    "section": "8 Here, | found what you were",
+    "text": "8 Here, | found what you were\n\n\n\n\nSlide 10"
+  },
+  {
+    "objectID": "blog/2023-11-27_attention-&-transformers/index.html#gpt-in--context-learning",
+    "href": "blog/2023-11-27_attention-&-transformers/index.html#gpt-in--context-learning",
+    "title": "Attention & Transformers",
+    "section": "41 GPT: In- context learning",
+    "text": "41 GPT: In- context learning\nThe three settings we explore for in-context learning Traditional fine-tuning (not used for GPT-3)\n\n\n\n\nSlide 46\n\n\n\n\nThe ability to not train gradients is a cool ability that these hug models have"
+  },
+  {
+    "objectID": "blog/2023-11-27_attention-&-transformers/index.html#discuss",
+    "href": "blog/2023-11-27_attention-&-transformers/index.html#discuss",
+    "title": "Attention & Transformers",
+    "section": "42 Discuss",
+    "text": "42 Discuss\nFor models like StableDiffusion, Dalle, EMU video etc. T5\n\n\n\n\nSlide 47\n\n\n\n\nWhy may encoders models be favorable compared to decoder models?\n\nDecoders are also trained with masks but if you want to predict the next word, this representation looks at everything that comes before, so in a way if that is what you care about there is no mack really (because you are looking at everything that was looked before)\nNobody knows the answer for this question\nHypothesis is that encoders compress the information, while for Large language models, they are basically the job of encoding and decoding at the same time, because th closer you get to the ouput the more you need to go back to i.e correct grammar and very low level features, and somewhere in the middle of these decoder models there is the summary semantics that you could use for the vission models but you don’t know exactly where those features are. So for encoders you know exaclty where th summary is because that is still the bottleneck still but for decoders we dont know where to take the features\nA CNN is an encoder\nUnet also has this decoder then the decoder part like"
   }
 ]
