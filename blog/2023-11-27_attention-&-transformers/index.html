@@ -1210,6 +1210,44 @@ For models like StableDiffusion, Dalle, EMU video etc. T5
 </div>
 </center>
 <pre></pre>
+<p>Both attention mechanisms and convolutions are essential components in neural network architectures, and they each have their advantages and disadvantages. Here’s a comparison of the two:</p>
+<section id="attention-mechanisms" class="level3" data-number="56.1">
+<h3 data-number="56.1" class="anchored" data-anchor-id="attention-mechanisms"><span class="header-section-number">56.1</span> Attention Mechanisms:</h3>
+<section id="advantages" class="level4" data-number="56.1.1">
+<h4 data-number="56.1.1" class="anchored" data-anchor-id="advantages"><span class="header-section-number">56.1.1</span> Advantages:</h4>
+<ol type="1">
+<li><p><strong>Global Context Handling:</strong> Attention mechanisms allow the model to focus on different parts of the input sequence when making predictions, enabling the model to consider global context and dependencies.</p></li>
+<li><p><strong>Variable Receptive Field:</strong> Attention doesn’t enforce a fixed receptive field, meaning the model can attend to different parts of the input sequence with varying degrees of focus. This flexibility can be beneficial for tasks where capturing long-range dependencies is crucial.</p></li>
+<li><p><strong>Sequence-to-Sequence Tasks:</strong> Attention mechanisms have been particularly successful in sequence-to-sequence tasks, such as machine translation, where the input and output sequences can have varying lengths and alignments.</p></li>
+</ol>
+</section>
+<section id="disadvantages" class="level4" data-number="56.1.2">
+<h4 data-number="56.1.2" class="anchored" data-anchor-id="disadvantages"><span class="header-section-number">56.1.2</span> Disadvantages:</h4>
+<ol type="1">
+<li><p><strong>Computational Complexity:</strong> Attention mechanisms can be computationally expensive, especially with large sequences, as they require pairwise comparisons between all elements in the sequence.</p></li>
+<li><p><strong>Memory Requirements:</strong> The model needs to store attention weights for each element in the sequence, leading to increased memory requirements.</p></li>
+</ol>
+</section>
+</section>
+<section id="convolutional-operations" class="level3" data-number="56.2">
+<h3 data-number="56.2" class="anchored" data-anchor-id="convolutional-operations"><span class="header-section-number">56.2</span> Convolutional Operations:</h3>
+<section id="advantages-1" class="level4" data-number="56.2.1">
+<h4 data-number="56.2.1" class="anchored" data-anchor-id="advantages-1"><span class="header-section-number">56.2.1</span> Advantages:</h4>
+<ol type="1">
+<li><p><strong>Parameter Sharing:</strong> Convolutional layers use shared weights, which reduces the number of parameters in the model. This can make convolutional networks more computationally efficient and easier to train, especially on tasks with limited data.</p></li>
+<li><p><strong>Local Receptive Field:</strong> Convolutional layers have a fixed-size receptive field, allowing them to capture local patterns and spatial hierarchies efficiently.</p></li>
+<li><p><strong>Translation Invariance:</strong> Convolutional layers can provide some degree of translation invariance, meaning they can recognize patterns regardless of their exact position in the input.</p></li>
+</ol>
+</section>
+<section id="disadvantages-1" class="level4" data-number="56.2.2">
+<h4 data-number="56.2.2" class="anchored" data-anchor-id="disadvantages-1"><span class="header-section-number">56.2.2</span> Disadvantages:</h4>
+<ol type="1">
+<li><p><strong>Limited Global Context:</strong> Convolutional layers have a fixed receptive field, which may limit their ability to capture long-range dependencies in the data.</p></li>
+<li><p><strong>Not Well-Suited for Sequence Tasks:</strong> While convolutional layers are effective for image-related tasks, they may not be as naturally suited for sequence-to-sequence tasks where the input and output lengths can vary.</p></li>
+</ol>
+<p>In practice, a combination of both attention mechanisms and convolutional layers is often used in hybrid models to leverage the strengths of each. For example, the Transformer architecture combines self-attention mechanisms with feedforward layers, providing an effective approach for a variety of natural language processing tasks.</p>
+</section>
+</section>
 </section>
 <section id="vision-transformer-1" class="level2" data-number="57">
 <h2 data-number="57" class="anchored" data-anchor-id="vision-transformer-1"><span class="header-section-number">57</span> Vision Transformer</h2>
@@ -1234,6 +1272,7 @@ For models like StableDiffusion, Dalle, EMU video etc. T5
 </div>
 </center>
 <pre></pre>
+<p>In ViT we actually learn the positional embeddings, compared to Bert,</p>
 </section>
 <section id="attention-as-a-superset-of-convolutions" class="level2" data-number="59">
 <h2 data-number="59" class="anchored" data-anchor-id="attention-as-a-superset-of-convolutions"><span class="header-section-number">59</span> Attention as a superset of convolutions</h2>
