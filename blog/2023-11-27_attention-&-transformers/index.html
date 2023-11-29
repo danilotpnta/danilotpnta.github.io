@@ -981,6 +981,9 @@ The three settings we explore for in-context learning Traditional fine-tuning (n
 </center>
 <pre></pre>
 <p>The ability to not train gradients is a cool ability that these hug models have</p>
+<p><strong>What is in-context learning?</strong></p>
+<p>In natural language processing or conversation, understanding a word or phrase in context means considering the words or sentences that precede and follow it to grasp its intended meaning. This is important because the same word can have different meanings in different situations.</p>
+<p>In the context of machine learning, especially with language models like GPT-3, providing information “in context” often involves supplying relevant details or context so that the model can generate responses or perform tasks that take into account the broader context of the input. This is particularly important for tasks that require understanding and generating coherent and contextually appropriate language.</p>
 </section>
 <section id="discuss" class="level2" data-number="42">
 <h2 data-number="42" class="anchored" data-anchor-id="discuss"><span class="header-section-number">42</span> Discuss</h2>
@@ -1078,6 +1081,22 @@ For models like StableDiffusion, Dalle, EMU video etc. T5
 </div>
 </center>
 <pre></pre>
+<ul>
+<li>Better because of the internet:</li>
+</ul>
+<p>CLIP is pre-trained on a large dataset with diverse images and associated text from the internet. This diverse pre-training data helps the model learn features that are more transferable across different tasks and domains. In contrast, a supervised ImageNet model might be optimized for the specific categories present in ImageNet, and its features may not generalize as well to new, unseen classes.</p>
+<ul>
+<li>Better because we can guide it using engineered prompts:</li>
+</ul>
+<p>In zero-shot learning with CLIP, you can provide textual prompts to guide the model’s behavior. This allows you to specify the task or class you’re interested in, enabling the model to adapt its predictions based on the provided textual information</p>
+<ul>
+<li>Less prone to overfitting due to have trained in larger dataset:</li>
+</ul>
+<p>Supervised models trained on specific datasets, such as ImageNet, may be prone to overfitting to the idiosyncrasies of that dataset. CLIP, having been trained on a broader range of data, may be less prone to overfitting to specific dataset biases</p>
+<ul>
+<li>More data more understanding of semantics:</li>
+</ul>
+<p>CLIP’s strength lies in its ability to understand the semantic relationships between images and text. A larger dataset provides more examples of diverse language-image pairs, allowing the model to learn richer semantic embeddings</p>
 </section>
 <section id="clip-usage-in-other-models" class="level2" data-number="49">
 <h2 data-number="49" class="anchored" data-anchor-id="clip-usage-in-other-models"><span class="header-section-number">49</span> CLIP: Usage in other models</h2>
@@ -1102,7 +1121,7 @@ For models like StableDiffusion, Dalle, EMU video etc. T5
 </div>
 </center>
 <pre></pre>
-<p>CLIP does not have a decoder</p>
+<p>CLIP does not have a decoder, so it cannot generate text</p>
 </section>
 <section id="visual-language-model-flamingo" class="level2" data-number="51">
 <h2 data-number="51" class="anchored" data-anchor-id="visual-language-model-flamingo"><span class="header-section-number">51</span> Visual Language Model: Flamingo</h2>
@@ -1115,6 +1134,9 @@ For models like StableDiffusion, Dalle, EMU video etc. T5
 </div>
 </center>
 <pre></pre>
+<p>Basically with CLIP you give images, out labels in form of a prompt text</p>
+<p>With flamingo you give images and text prompts and can generate now the output cpation for an specific image</p>
+<p>GPT, you give it some text and is able to see what is next because it uses decoders</p>
 </section>
 <section id="visual-language-model-flamingo-1" class="level2" data-number="52">
 <h2 data-number="52" class="anchored" data-anchor-id="visual-language-model-flamingo-1"><span class="header-section-number">52</span> Visual Language Model: Flamingo</h2>
@@ -1127,6 +1149,8 @@ For models like StableDiffusion, Dalle, EMU video etc. T5
 </div>
 </center>
 <pre></pre>
+<p>The language model is frozen, but you add this cross attention gates. So the cross atentions is sort of similar to the encoder decoder structure, when this language model can attend to the visual inputs. The pink is what is being learned. The visual encoder are also keept frozen.</p>
+<p>The perciver part allows you to change the representation of the encoder</p>
 </section>
 <section id="visual-language-model-flamingo-2" class="level2" data-number="53">
 <h2 data-number="53" class="anchored" data-anchor-id="visual-language-model-flamingo-2"><span class="header-section-number">53</span> Visual Language Model: Flamingo</h2>
@@ -1139,6 +1163,7 @@ For models like StableDiffusion, Dalle, EMU video etc. T5
 </div>
 </center>
 <pre></pre>
+<p>Here there is an encoder and a decoder</p>
 </section>
 <section id="vision-transformer" class="level2" data-number="54">
 <h2 data-number="54" class="anchored" data-anchor-id="vision-transformer"><span class="header-section-number">54</span> Vision Transformer</h2>
@@ -1163,9 +1188,19 @@ For models like StableDiffusion, Dalle, EMU video etc. T5
 </div>
 </center>
 <pre></pre>
+<p>This is similar to BERT, in bert we have positional embedding.</p>
+<p>Here we split the picture but still we conserve the order by remembering the index values which define the value</p>
+<p>Bert process information in parallel, like in the paper see image below and why do we need positional embeding is because:</p>
+<p>BERT (Bidirectional Encoder Representations from Transformers) is a transformer-based model designed for natural language processing tasks. Unlike traditional sequential models, transformers process input data in parallel, which makes them highly efficient but also means they don’t inherently understand the order of the input sequence. To address this limitation and enable transformers to capture sequential information, positional embeddings are used.</p>
+<p>Positional embeddings are added to the input embeddings to provide information about the position of each token in a sequence. In BERT, the model processes the input tokens in parallel, and without positional embeddings, it would have no inherent understanding of the order of the tokens. Positional embeddings help the model distinguish between tokens based on their position in the sequence, allowing it to capture the sequential structure of the input.</p>
+<p>Coming back to ViT model, here we can see that the model also process information in parallel that’s why we need positional embedding so that we can then learnthe order of how the pic was constructed</p>
+<center>
+<img src="2023-11-28-23-58-08.png" class="w550 img-fluid">
+</center>
+<pre></pre>
 </section>
 <section id="quiz-from-what-you-now-know-about-attention-what" class="level2" data-number="56">
-<h2 data-number="56" class="anchored" data-anchor-id="quiz-from-what-you-now-know-about-attention-what"><span class="header-section-number">56</span> ; Quiz: From what you now know about attention, what</h2>
+<h2 data-number="56" class="anchored" data-anchor-id="quiz-from-what-you-now-know-about-attention-what"><span class="header-section-number">56</span> Quiz: From what you now know about attention, what</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1319,6 +1354,38 @@ For models like StableDiffusion, Dalle, EMU video etc. T5
 </div>
 </center>
 <pre></pre>
+</section>
+<section id="notes-on-weight-sharing-for-cnn" class="level2" data-number="69">
+<h2 data-number="69" class="anchored" data-anchor-id="notes-on-weight-sharing-for-cnn"><span class="header-section-number">69</span> Notes on weight sharing for CNN</h2>
+<p>A convolutional layer is generally comprised of many “filters”, which are usually 2x2 or 3x3. These filters are applied in a “sliding window” across the entire layer’s input. The “weight sharing” is using fixed weights for this filter across the entire input. It does not mean that all of the filters are equivalent.</p>
+<p>To be concrete, let’s imagine a 2x2 filter 𝐹 striding a 3x3 input 𝑋 with padding, so the filter gets applied 4 times. Let’s denote the unrolled filter 𝛽</p>
+<p><span class="math display">\[
+\mathbf{X} = \begin{bmatrix}
+  x_{11} &amp; x_{21} &amp; x_{31} \\
+  x_{12} &amp; x_{22} &amp; x_{32} \\
+  x_{13} &amp; x_{23} &amp; x_{33} \\
+\end{bmatrix}
+\]</span></p>
+<p><span class="math display">\[
+\mathbf{F} = \begin{bmatrix}
+  w_{11} &amp; w_{21} \\
+  w_{12} &amp; w_{22} \\
+\end{bmatrix}
+\]</span></p>
+<p><span class="math display">\[
+\boldsymbol{\beta} = \begin{bmatrix}
+  w_{11} &amp; w_{12} &amp; w_{21} &amp; w_{22} \\
+\end{bmatrix}
+\]</span></p>
+<p><span class="math display">\[
+\mathbf{F} \cdot \boldsymbol{\beta} = \begin{bmatrix}
+  \beta \cdot [x_{11}, x_{12}, x_{21}, x_{22}] &amp; \beta \cdot [x_{12}, x_{13}, x_{22}, x_{23}] \\
+  \beta \cdot [x_{21}, x_{22}, x_{31}, x_{32}] &amp; \beta \cdot [x_{22}, x_{23}, x_{32}, x_{33}]
+\end{bmatrix}
+\]</span></p>
+<p>“Weight sharing” means when we apply this 2x2 filter to our 3x3 input, we reuse the same four weights given by the filter across the entire input. The alternative would be each filter application having its own set of inputs (which would really be a separate filter for each region of the image), giving a total of 16 weights, or a dense layer with 4 nodes giving 36 weights.</p>
+<p>Sharing weights in this way significantly reduces the number of weights we have to learn, making it easier to learn very deep architectures, and additionally allows us to learn features that are agnostic to what region of the input is being considered.</p>
+<p><img src="https://i.stack.imgur.com/cWe7D.gif" class="img-fluid"></p>
 
 
 </section>

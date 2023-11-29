@@ -7193,7 +7193,7 @@
     "href": "blog/2023-11-27_attention-&-transformers/index.html#clip-robustness",
     "title": "Attention & Transformers",
     "section": "48 CLIP: Robustness",
-    "text": "48 CLIP: Robustness\n\n\n\n\nSlide 53"
+    "text": "48 CLIP: Robustness\n\n\n\n\nSlide 53\n\n\n\n\n\nBetter because of the internet:\n\nCLIP is pre-trained on a large dataset with diverse images and associated text from the internet. This diverse pre-training data helps the model learn features that are more transferable across different tasks and domains. In contrast, a supervised ImageNet model might be optimized for the specific categories present in ImageNet, and its features may not generalize as well to new, unseen classes.\n\nBetter because we can guide it using engineered prompts:\n\nIn zero-shot learning with CLIP, you can provide textual prompts to guide the model’s behavior. This allows you to specify the task or class you’re interested in, enabling the model to adapt its predictions based on the provided textual information\n\nLess prone to overfitting due to have trained in larger dataset:\n\nSupervised models trained on specific datasets, such as ImageNet, may be prone to overfitting to the idiosyncrasies of that dataset. CLIP, having been trained on a broader range of data, may be less prone to overfitting to specific dataset biases\n\nMore data more understanding of semantics:\n\nCLIP’s strength lies in its ability to understand the semantic relationships between images and text. A larger dataset provides more examples of diverse language-image pairs, allowing the model to learn richer semantic embeddings"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#clip-usage-in-other-models",
@@ -7207,28 +7207,28 @@
     "href": "blog/2023-11-27_attention-&-transformers/index.html#clip-shortcomings",
     "title": "Attention & Transformers",
     "section": "50 CLIP: Shortcomings",
-    "text": "50 CLIP: Shortcomings\n\n\n\n\nSlide 55\n\n\n\n\nCLIP does not have a decoder"
+    "text": "50 CLIP: Shortcomings\n\n\n\n\nSlide 55\n\n\n\n\nCLIP does not have a decoder, so it cannot generate text"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#visual-language-model-flamingo",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#visual-language-model-flamingo",
     "title": "Attention & Transformers",
     "section": "51 Visual Language Model: Flamingo",
-    "text": "51 Visual Language Model: Flamingo\n\n\n\n\nSlide 56"
+    "text": "51 Visual Language Model: Flamingo\n\n\n\n\nSlide 56\n\n\n\n\nBasically with CLIP you give images, out labels in form of a prompt text\nWith flamingo you give images and text prompts and can generate now the output cpation for an specific image\nGPT, you give it some text and is able to see what is next because it uses decoders"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#visual-language-model-flamingo-1",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#visual-language-model-flamingo-1",
     "title": "Attention & Transformers",
     "section": "52 Visual Language Model: Flamingo",
-    "text": "52 Visual Language Model: Flamingo\n\n\n\n\nSlide 57"
+    "text": "52 Visual Language Model: Flamingo\n\n\n\n\nSlide 57\n\n\n\n\nThe language model is frozen, but you add this cross attention gates. So the cross atentions is sort of similar to the encoder decoder structure, when this language model can attend to the visual inputs. The pink is what is being learned. The visual encoder are also keept frozen.\nThe perciver part allows you to change the representation of the encoder"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#visual-language-model-flamingo-2",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#visual-language-model-flamingo-2",
     "title": "Attention & Transformers",
     "section": "53 Visual Language Model: Flamingo",
-    "text": "53 Visual Language Model: Flamingo\n\n\n\n\nSlide 58"
+    "text": "53 Visual Language Model: Flamingo\n\n\n\n\nSlide 58\n\n\n\n\nHere there is an encoder and a decoder"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#vision-transformer",
@@ -7242,14 +7242,14 @@
     "href": "blog/2023-11-27_attention-&-transformers/index.html#understanding-a-figure-1",
     "title": "Attention & Transformers",
     "section": "55 Understanding a “Figure 1”",
-    "text": "55 Understanding a “Figure 1”\n\n\n\n\nSlide 60"
+    "text": "55 Understanding a “Figure 1”\n\n\n\n\nSlide 60\n\n\n\n\nThis is similar to BERT, in bert we have positional embedding.\nHere we split the picture but still we conserve the order by remembering the index values which define the value\nBert process information in parallel, like in the paper see image below and why do we need positional embeding is because:\nBERT (Bidirectional Encoder Representations from Transformers) is a transformer-based model designed for natural language processing tasks. Unlike traditional sequential models, transformers process input data in parallel, which makes them highly efficient but also means they don’t inherently understand the order of the input sequence. To address this limitation and enable transformers to capture sequential information, positional embeddings are used.\nPositional embeddings are added to the input embeddings to provide information about the position of each token in a sequence. In BERT, the model processes the input tokens in parallel, and without positional embeddings, it would have no inherent understanding of the order of the tokens. Positional embeddings help the model distinguish between tokens based on their position in the sequence, allowing it to capture the sequential structure of the input.\nComing back to ViT model, here we can see that the model also process information in parallel that’s why we need positional embedding so that we can then learnthe order of how the pic was constructed"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#quiz-from-what-you-now-know-about-attention-what",
     "href": "blog/2023-11-27_attention-&-transformers/index.html#quiz-from-what-you-now-know-about-attention-what",
     "title": "Attention & Transformers",
-    "section": "56 ; Quiz: From what you now know about attention, what",
-    "text": "56 ; Quiz: From what you now know about attention, what\n\n\n\n\nSlide 61"
+    "section": "56 Quiz: From what you now know about attention, what",
+    "text": "56 Quiz: From what you now know about attention, what\n\n\n\n\nSlide 61"
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#vision-transformer-1",
@@ -8033,7 +8033,7 @@
     "href": "blog/2023-11-27_attention-&-transformers/index.html#gpt-in--context-learning",
     "title": "Attention & Transformers",
     "section": "41 GPT: In- context learning",
-    "text": "41 GPT: In- context learning\nThe three settings we explore for in-context learning Traditional fine-tuning (not used for GPT-3)\n\n\n\n\nSlide 46\n\n\n\n\nThe ability to not train gradients is a cool ability that these hug models have"
+    "text": "41 GPT: In- context learning\nThe three settings we explore for in-context learning Traditional fine-tuning (not used for GPT-3)\n\n\n\n\nSlide 46\n\n\n\n\nThe ability to not train gradients is a cool ability that these hug models have\nWhat is in-context learning?\nIn natural language processing or conversation, understanding a word or phrase in context means considering the words or sentences that precede and follow it to grasp its intended meaning. This is important because the same word can have different meanings in different situations.\nIn the context of machine learning, especially with language models like GPT-3, providing information “in context” often involves supplying relevant details or context so that the model can generate responses or perform tasks that take into account the broader context of the input. This is particularly important for tasks that require understanding and generating coherent and contextually appropriate language."
   },
   {
     "objectID": "blog/2023-11-27_attention-&-transformers/index.html#discuss",
@@ -8041,5 +8041,19 @@
     "title": "Attention & Transformers",
     "section": "42 Discuss",
     "text": "42 Discuss\nFor models like StableDiffusion, Dalle, EMU video etc. T5\n\n\n\n\nSlide 47\n\n\n\n\nWhy may encoders models be favorable compared to decoder models?\n\nDecoders are also trained with masks but if you want to predict the next word, this representation looks at everything that comes before, so in a way if that is what you care about there is no mack really (because you are looking at everything that was looked before)\nNobody knows the answer for this question\nHypothesis is that encoders compress the information, while for Large language models, they are basically the job of encoding and decoding at the same time, because th closer you get to the ouput the more you need to go back to i.e correct grammar and very low level features, and somewhere in the middle of these decoder models there is the summary semantics that you could use for the vission models but you don’t know exactly where those features are. So for encoders you know exaclty where th summary is because that is still the bottleneck still but for decoders we dont know where to take the features\nA CNN is an encoder\nUnet also has this decoder then the decoder part like"
+  },
+  {
+    "objectID": "blog/2023-11-27_attention-&-transformers/index.html#nots-on-weight-sharing-for-cnn",
+    "href": "blog/2023-11-27_attention-&-transformers/index.html#nots-on-weight-sharing-for-cnn",
+    "title": "Attention & Transformers",
+    "section": "69 Nots on weight sharing for CNN",
+    "text": "69 Nots on weight sharing for CNN\nA convolutional layer is generally comprised of many “filters”, which are usually 2x2 or 3x3. These filters are applied in a “sliding window” across the entire layer’s input. The “weight sharing” is using fixed weights for this filter across the entire input. It does not mean that all of the filters are equivalent.\nTo be concrete, let’s imagine a 2x2 filter 𝐹 striding a 3x3 input 𝑋 with padding, so the filter gets applied 4 times. Let’s denote the unrolled filter 𝛽 .\n“Weight sharing” means when we apply this 2x2 filter to our 3x3 input, we reuse the same four weights given by the filter across the entire input. The alternative would be each filter application having its own set of inputs (which would really be a separate filter for each region of the image), giving a total of 16 weights, or a dense layer with 4 nodes giving 36 weights.\nSharing weights in this way significantly reduces the number of weights we have to learn, making it easier to learn very deep architectures, and additionally allows us to learn features that are agnostic to what region of the input is being considered."
+  },
+  {
+    "objectID": "blog/2023-11-27_attention-&-transformers/index.html#notes-on-weight-sharing-for-cnn",
+    "href": "blog/2023-11-27_attention-&-transformers/index.html#notes-on-weight-sharing-for-cnn",
+    "title": "Attention & Transformers",
+    "section": "69 Notes on weight sharing for CNN",
+    "text": "69 Notes on weight sharing for CNN\nA convolutional layer is generally comprised of many “filters”, which are usually 2x2 or 3x3. These filters are applied in a “sliding window” across the entire layer’s input. The “weight sharing” is using fixed weights for this filter across the entire input. It does not mean that all of the filters are equivalent.\nTo be concrete, let’s imagine a 2x2 filter 𝐹 striding a 3x3 input 𝑋 with padding, so the filter gets applied 4 times. Let’s denote the unrolled filter 𝛽\n\\[\n\\mathbf{X} = \\begin{bmatrix}\n  x_{11} & x_{21} & x_{31} \\\\\n  x_{12} & x_{22} & x_{32} \\\\\n  x_{13} & x_{23} & x_{33} \\\\\n\\end{bmatrix}\n\\]\n\\[\n\\mathbf{F} = \\begin{bmatrix}\n  w_{11} & w_{21} \\\\\n  w_{12} & w_{22} \\\\\n\\end{bmatrix}\n\\]\n\\[\n\\boldsymbol{\\beta} = \\begin{bmatrix}\n  w_{11} & w_{12} & w_{21} & w_{22} \\\\\n\\end{bmatrix}\n\\]\n\\[\n\\mathbf{F} \\cdot \\boldsymbol{\\beta} = \\begin{bmatrix}\n  \\beta \\cdot [x_{11}, x_{12}, x_{21}, x_{22}] & \\beta \\cdot [x_{12}, x_{13}, x_{22}, x_{23}] \\\\\n  \\beta \\cdot [x_{21}, x_{22}, x_{31}, x_{32}] & \\beta \\cdot [x_{22}, x_{23}, x_{32}, x_{33}]\n\\end{bmatrix}\n\\]\n“Weight sharing” means when we apply this 2x2 filter to our 3x3 input, we reuse the same four weights given by the filter across the entire input. The alternative would be each filter application having its own set of inputs (which would really be a separate filter for each region of the image), giving a total of 16 weights, or a dense layer with 4 nodes giving 36 weights.\nSharing weights in this way significantly reduces the number of weights we have to learn, making it easier to learn very deep architectures, and additionally allows us to learn features that are agnostic to what region of the input is being considered."
   }
 ]
