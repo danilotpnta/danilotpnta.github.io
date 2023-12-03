@@ -35,6 +35,9 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/2023-12-03_interpretability-of-nlp-models/index.html",
+      "/blog/2023-12-03_discourse-processing/index.html",
+      "/blog/2023-12-03_large-language-models/index.html",
       "/blog/2023-11-27_equivariances-&-graphical-neural-networks/index.html",
       "/blog/2023-11-27_attention-&-transformers/index.html",
       "/blog/2023-11-25_why-using-logit-scaling-in-softmax/index.html",

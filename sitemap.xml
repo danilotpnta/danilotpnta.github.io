@@ -202,7 +202,7 @@
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/index.html</loc>
-    <lastmod>2023-11-29T07:24:25.463Z</lastmod>
+    <lastmod>2023-12-03T19:52:14.278Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-11-07_numpy-reshape-rgb-image-to-1d-array/index.html</loc>
@@ -307,5 +307,17 @@
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-11-27_equivariances-&-graphical-neural-networks/index.html</loc>
     <lastmod>2023-11-28T16:07:31.577Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-12-03_discourse-processing/index.html</loc>
+    <lastmod>2023-12-03T19:52:11.326Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-12-03_interpretability-of-nlp-models/index.html</loc>
+    <lastmod>2023-12-03T19:51:14.253Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-12-03_large-language-models/index.html</loc>
+    <lastmod>2023-12-03T19:52:04.747Z</lastmod>
   </url>
 </urlset>
