@@ -5946,785 +5946,785 @@
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title",
     "title": "Compositional semantics and sentence representations",
-    "section": "1 Title",
-    "text": "1 Title\n\n\n\n\nSlide 2"
+    "section": "14 Title",
+    "text": "14 Title\n\n\n\n\nSlide 17"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#compositional-semantics",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#compositional-semantics",
     "title": "Compositional semantics and sentence representations",
-    "section": "2 Compositional semantics",
-    "text": "2 Compositional semantics\n\n\n\n\nSlide 3"
+    "section": "1 Compositional semantics",
+    "text": "1 Compositional semantics\n\n\n\n\nSlide 3\n\n\n\n\nDeep here we mean as deeper understanding of language no NN"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#compositional-semantics-alongside-syntax",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#compositional-semantics-alongside-syntax",
     "title": "Compositional semantics and sentence representations",
-    "section": "3 Compositional semantics alongside syntax",
-    "text": "3 Compositional semantics alongside syntax\n\n\n\n\nSlide 4"
+    "section": "2 Compositional semantics alongside syntax",
+    "text": "2 Compositional semantics alongside syntax\n\n\n\n\nSlide 4\n\n\n\n\nIf we want to model semantics alongside syntax. Word meaning then phrase meaning, then sentence meaning."
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#non-trivial-issues-with-semantic-composition",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#non-trivial-issues-with-semantic-composition",
     "title": "Compositional semantics and sentence representations",
-    "section": "4 Non-trivial issues with semantic composition",
-    "text": "4 Non-trivial issues with semantic composition\n\n\n\n\nSlide 5"
+    "section": "3 Non-trivial issues with semantic composition",
+    "text": "3 Non-trivial issues with semantic composition\n\n\n\n\nSlide 5\n\n\n\n\nHere in the first i, it refers maybe to a dog. The second one it does not refer to anything. So even if they have same syntax structure they have different meanings\nThe problem with last one is that even though these phrases can mean soomthing unqiue like the second refere to a person has passed away. Sometimes we may also express that a person just kick the bucket"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#non-trivial-issues-with-semantic-composition-1",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#non-trivial-issues-with-semantic-composition-1",
     "title": "Compositional semantics and sentence representations",
-    "section": "5 Non-trivial issues with semantic composition",
-    "text": "5 Non-trivial issues with semantic composition\n\n\n\n\nSlide 6"
+    "section": "4 Non-trivial issues with semantic composition",
+    "text": "4 Non-trivial issues with semantic composition\n\n\n\n\nSlide 6"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#issues-with-semantic-composition",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#issues-with-semantic-composition",
     "title": "Compositional semantics and sentence representations",
-    "section": "6 Issues with semantic composition",
-    "text": "6 Issues with semantic composition\n\n\n\n\nSlide 7"
+    "section": "5 Issues with semantic composition",
+    "text": "5 Issues with semantic composition\n\n\n\n\nSlide 7\n\n\n\n\nThis represent recursion"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#modelling-comvositional-semantics",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#modelling-comvositional-semantics",
     "title": "Compositional semantics and sentence representations",
-    "section": "7 Modelling comvositional semantics",
-    "text": "7 Modelling comvositional semantics\n\n\n\n\nSlide 8"
+    "section": "6 Modelling comvositional semantics",
+    "text": "6 Modelling comvositional semantics\n\n\n\n\nSlide 8"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-1",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-1",
     "title": "Compositional semantics and sentence representations",
-    "section": "8 Title",
-    "text": "8 Title\n\n\n\n\nSlide 9"
+    "section": "15 Title",
+    "text": "15 Title\n\n\n\n\nSlide 18"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#compositional-distributional-semantics",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#compositional-distributional-semantics",
     "title": "Compositional semantics and sentence representations",
-    "section": "9 Compositional distributional semantics",
-    "text": "9 Compositional distributional semantics\n\n\n\n\nSlide 10"
+    "section": "7 Compositional distributional semantics",
+    "text": "7 Compositional distributional semantics\nThese are the all general purpose unsupervised way\n\n\n\n\nSlide 10\n\n\n\n\nThe idea come up, we were successful to create word representations, why not phrases, then why not in the sentence level.\nIf you have a finite vocab you can still create an infinitely amount of sentences\nIt is unfeseable because you dont have every possible sentence there and create a sentence representation for that. But we can do somthing similar which is, instead of learning sentence representatins directly you would try to use the word representation for the sentences and composed to create a sentence representatio.\nIn principle you need only word representations for all words which is more doable than getting word representations for all sentences"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#vector-mixture-models",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#vector-mixture-models",
     "title": "Compositional semantics and sentence representations",
-    "section": "10 Vector mixture models",
-    "text": "10 Vector mixture models\n\n\n\n\nSlide 11"
+    "section": "8 Vector mixture models",
+    "text": "8 Vector mixture models\n\n\n\n\nSlide 11"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#additive-and-multiplicative-models",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#additive-and-multiplicative-models",
     "title": "Compositional semantics and sentence representations",
-    "section": "11 Additive and multiplicative models",
-    "text": "11 Additive and multiplicative models\n\n\n\n\nSlide 12"
+    "section": "9 Additive and multiplicative models",
+    "text": "9 Additive and multiplicative models\n\n\n\n\nSlide 12\n\n\n\n\nBecause summation is symmetric representation, we get the same representation so this model has a flaw\nPrepositions are used flexibly in any position, which means they dont have a strong behavioral profile but the content words they do. For example they appear in the same position they co-ocurr in similar context"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lexical-function-models",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lexical-function-models",
     "title": "Compositional semantics and sentence representations",
-    "section": "12 Lexical function models",
-    "text": "12 Lexical function models\n\n\n\n\nSlide 13"
+    "section": "10 Lexical function models",
+    "text": "10 Lexical function models\n\n\n\n\nSlide 13"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lexical-function-models-1",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lexical-function-models-1",
     "title": "Compositional semantics and sentence representations",
-    "section": "13 Lexical function models",
-    "text": "13 Lexical function models\n\n\n\n\nSlide 14"
+    "section": "11 Lexical function models",
+    "text": "11 Lexical function models\n\n\n\n\nSlide 14"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#learning-adjective-matrices",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#learning-adjective-matrices",
     "title": "Compositional semantics and sentence representations",
-    "section": "14 Learning adjective matrices",
-    "text": "14 Learning adjective matrices\n\n\n\n\nSlide 15"
+    "section": "12 Learning adjective matrices",
+    "text": "12 Learning adjective matrices\n\n\n\n\nSlide 15"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#learning-adjective-matrices-1",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#learning-adjective-matrices-1",
     "title": "Compositional semantics and sentence representations",
-    "section": "15 Learning adjective matrices",
-    "text": "15 Learning adjective matrices\n\n\n\n\nSlide 16"
+    "section": "13 Learning adjective matrices",
+    "text": "13 Learning adjective matrices\n\n\n\n\nSlide 16"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-2",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-2",
     "title": "Compositional semantics and sentence representations",
     "section": "16 Title",
-    "text": "16 Title\n\n\n\n\nSlide 17"
+    "text": "16 Title\n\n\n\n\nSlide 19"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-3",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-3",
     "title": "Compositional semantics and sentence representations",
-    "section": "17 Title",
-    "text": "17 Title\n\n\n\n\nSlide 17"
+    "section": "20 Title",
+    "text": "20 Title\n\n\n\n\nSlide 23"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-4",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-4",
     "title": "Compositional semantics and sentence representations",
-    "section": "18 Title",
-    "text": "18 Title\n\n\n\n\nSlide 18"
+    "section": "23 Title",
+    "text": "23 Title\n\n\n\n\nSlide 26"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-5",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-5",
     "title": "Compositional semantics and sentence representations",
-    "section": "19 Title",
-    "text": "19 Title\n\n\n\n\nSlide 19"
+    "section": "26 Title",
+    "text": "26 Title\n\n\n\n\nSlide 29"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#task-sentiment-classification-of-movie-reviews",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#task-sentiment-classification-of-movie-reviews",
     "title": "Compositional semantics and sentence representations",
-    "section": "20 Task: Sentiment classification of movie reviews",
-    "text": "20 Task: Sentiment classification of movie reviews\n\n\n\n\nSlide 20"
+    "section": "17 Task: Sentiment classification of movie reviews",
+    "text": "17 Task: Sentiment classification of movie reviews\n\n\n\n\nSlide 20"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#words-and-sentences-into-vectors",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#words-and-sentences-into-vectors",
     "title": "Compositional semantics and sentence representations",
-    "section": "21 Words (and sentences) into vectors",
-    "text": "21 Words (and sentences) into vectors\n\n\n\n\nSlide 21"
+    "section": "18 Words (and sentences) into vectors",
+    "text": "18 Words (and sentences) into vectors\n\n\n\n\nSlide 21"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#sentence-representation-a-very-simplified-picture",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#sentence-representation-a-very-simplified-picture",
     "title": "Compositional semantics and sentence representations",
-    "section": "22 Sentence representation: A (very) simplified picture",
-    "text": "22 Sentence representation: A (very) simplified picture\n\n\n\n\nSlide 22"
+    "section": "19 Sentence representation: A (very) simplified picture",
+    "text": "19 Sentence representation: A (very) simplified picture\n\n\n\n\nSlide 22"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-6",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-6",
     "title": "Compositional semantics and sentence representations",
-    "section": "23 Title",
-    "text": "23 Title\n\n\n\n\nSlide 23"
+    "section": "27 Title",
+    "text": "27 Title\n\n\n\n\nSlide 30\n\n\n\n\nHere we do not model order or syntax"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#dataset-stanford-sentiment-treebank-sst",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#dataset-stanford-sentiment-treebank-sst",
     "title": "Compositional semantics and sentence representations",
-    "section": "24 Dataset: Stanford Sentiment Treebank (SST)",
-    "text": "24 Dataset: Stanford Sentiment Treebank (SST)\n\n\n\n\nSlide 24"
+    "section": "21 Dataset: Stanford Sentiment Treebank (SST)",
+    "text": "21 Dataset: Stanford Sentiment Treebank (SST)\n\n\n\n\nSlide 24"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#binary-parse-tree-one-example",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#binary-parse-tree-one-example",
     "title": "Compositional semantics and sentence representations",
-    "section": "25 Binary parse tree: One example",
-    "text": "25 Binary parse tree: One example\n\n\n\n\nSlide 25"
+    "section": "22 Binary parse tree: One example",
+    "text": "22 Binary parse tree: One example\n\n\n\n\nSlide 25"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-7",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-7",
     "title": "Compositional semantics and sentence representations",
-    "section": "26 Title",
-    "text": "26 Title\n\n\n\n\nSlide 26"
+    "section": "32 Title",
+    "text": "32 Title\n\n\n\n\nSlide 35"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#models",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#models",
     "title": "Compositional semantics and sentence representations",
-    "section": "27 Models",
-    "text": "27 Models\n\n\n\n\nSlide 27"
+    "section": "24 Models",
+    "text": "24 Models\n\n\n\n\nSlide 27"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#first-approach-sentence-sentiment",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#first-approach-sentence-sentiment",
     "title": "Compositional semantics and sentence representations",
-    "section": "28 First approach: Sentence + Sentiment",
-    "text": "28 First approach: Sentence + Sentiment\n\n\n\n\nSlide 28"
+    "section": "25 First approach: Sentence + Sentiment",
+    "text": "25 First approach: Sentence + Sentiment\n\n\n\n\nSlide 28"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-8",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-8",
     "title": "Compositional semantics and sentence representations",
-    "section": "29 Title",
-    "text": "29 Title\n\n\n\n\nSlide 29"
+    "section": "33 Title",
+    "text": "33 Title\n\n\n\n\nSlide 36\n\n\n\n\nNow because the vector representation can squezze more detail in the embedding about the word, then this increase in dimensionality is better"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-9",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-9",
     "title": "Compositional semantics and sentence representations",
-    "section": "30 Title",
-    "text": "30 Title\n\n\n\n\nSlide 30"
+    "section": "38 Title",
+    "text": "38 Title\n\n\n\n\nSlide 41"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#bag-of-words",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#bag-of-words",
     "title": "Compositional semantics and sentence representations",
-    "section": "31 Bag of Words",
-    "text": "31 Bag of Words\n\n\n\n\nSlide 31"
+    "section": "28 Bag of Words",
+    "text": "28 Bag of Words\n\n\n\n\nSlide 31"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#bag-of-words-1",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#bag-of-words-1",
     "title": "Compositional semantics and sentence representations",
-    "section": "32 Bag of Words",
-    "text": "32 Bag of Words\n\n\n\n\nSlide 32"
+    "section": "29 Bag of Words",
+    "text": "29 Bag of Words\n\n\n\n\nSlide 32\n\n\n\n\nBecause you don’t consider order the example in the sentece is the same, so there is a flaw in this model"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#turning-words-into-numbers",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#turning-words-into-numbers",
     "title": "Compositional semantics and sentence representations",
-    "section": "33 Turning words into numbers",
-    "text": "33 Turning words into numbers\n\n\n\n\nSlide 33"
+    "section": "30 Turning words into numbers",
+    "text": "30 Turning words into numbers\n\n\n\n\nSlide 33"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#one-hot-vectors-select-word-embeddings",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#one-hot-vectors-select-word-embeddings",
     "title": "Compositional semantics and sentence representations",
-    "section": "34 One-hot vectors select word embeddings",
-    "text": "34 One-hot vectors select word embeddings\n\n\n\n\nSlide 34"
+    "section": "31 One-hot vectors select word embeddings",
+    "text": "31 One-hot vectors select word embeddings\n\n\n\n\nSlide 34"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-10",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-10",
     "title": "Compositional semantics and sentence representations",
-    "section": "35 Title",
-    "text": "35 Title\n\n\n\n\nSlide 35"
+    "section": "39 Title",
+    "text": "39 Title\n\n\n\n\nSlide 42\n\n\n\n\nHere we just learn more layers, so more complexity to the model\n\n\n\n\nSlide 43"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-11",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-11",
     "title": "Compositional semantics and sentence representations",
-    "section": "36 Title",
-    "text": "36 Title\n\n\n\n\nSlide 36"
+    "section": "42 Title",
+    "text": "42 Title\n\n\n\n\nSlide 46"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#continuous-bag-of-words-cbow",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#continuous-bag-of-words-cbow",
     "title": "Compositional semantics and sentence representations",
-    "section": "37 Continuous Bag of Words (CBOW)",
-    "text": "37 Continuous Bag of Words (CBOW)\n\n\n\n\nSlide 37"
+    "section": "34 Continuous Bag of Words (CBOW)",
+    "text": "34 Continuous Bag of Words (CBOW)\n\n\n\n\nSlide 37"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#recall-matrix-multiplication",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#recall-matrix-multiplication",
     "title": "Compositional semantics and sentence representations",
-    "section": "38 Recall: Matrix Multiplication",
-    "text": "38 Recall: Matrix Multiplication\n\n\n\n\nSlide 38"
+    "section": "35 Recall: Matrix Multiplication",
+    "text": "35 Recall: Matrix Multiplication\n\n\n\n\nSlide 38"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#what-about-this",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#what-about-this",
     "title": "Compositional semantics and sentence representations",
-    "section": "39 What about this?",
-    "text": "39 What about this?\n\n\n\n\nSlide 39"
+    "section": "36 What about this?",
+    "text": "36 What about this?\n\n\n\n\nSlide 39\n\n\n\n\nHere the problem of just concatenating is that you dont know the size of the W to multiply because the sentence embeddings are vary in length"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#what-about-this-1",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#what-about-this-1",
     "title": "Compositional semantics and sentence representations",
-    "section": "40 What about this?",
-    "text": "40 What about this?\n\n\n\n\nSlide 40"
+    "section": "37 What about this?",
+    "text": "37 What about this?\n\n\n\n\nSlide 40"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-12",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-12",
     "title": "Compositional semantics and sentence representations",
-    "section": "41 Title",
-    "text": "41 Title\n\n\n\n\nSlide 41"
+    "section": "44 Title",
+    "text": "44 Title\n\n\n\n\nSlide 48\n\n\n\n\nThere is two paradigms by using pre-trained embeddings\n\nYou can keep these representations frozen: so not for training\nor you fine-tune the word representations toguether with your task. This means the word represenation becomes more specialized for the task"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-13",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-13",
     "title": "Compositional semantics and sentence representations",
-    "section": "42 Title",
-    "text": "42 Title\n\n\n\n\nSlide 42"
+    "section": "48 Title",
+    "text": "48 Title\n\n\n\n\nSlide 52\n\n\n\n\nFeed forward NNs were not able to contain word order information, RNN can do it\nHere the words would be conditioned in the previous words"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#mn.-prl-at",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#mn.-prl-at",
     "title": "Compositional semantics and sentence representations",
-    "section": "43 mn. PRL AT",
-    "text": "43 mn. PRL AT\n\n\n\n\nSlide 43"
+    "section": "40 mn. PRL AT",
+    "text": "40 mn. PRL AT\n\n\n\n\nSlide 43"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#what-about-this-2",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#what-about-this-2",
     "title": "Compositional semantics and sentence representations",
-    "section": "44 What about this?",
-    "text": "44 What about this?\n\n\n\n\nSlide 44"
+    "section": "40 What about this?",
+    "text": "40 What about this?\n\n\n\n\nSlide 44\n\n\n\n\nDeeper is not always better because we might start to overfit, and at test time it will not generalize well"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#question",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#question",
     "title": "Compositional semantics and sentence representations",
-    "section": "45 Question",
-    "text": "45 Question\n\n\n\n\nSlide 45"
+    "section": "41 Question",
+    "text": "41 Question\n\n\n\n\nSlide 45"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-14",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-14",
     "title": "Compositional semantics and sentence representations",
-    "section": "46 Title",
-    "text": "46 Title\n\n\n\n\nSlide 46"
+    "section": "86 Title",
+    "text": "86 Title\n\n\n\n\nSlide 92"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#deep-cbow-with-pretrained-embeddings",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#deep-cbow-with-pretrained-embeddings",
     "title": "Compositional semantics and sentence representations",
-    "section": "47 Deep CBOW with pretrained embeddings",
-    "text": "47 Deep CBOW with pretrained embeddings\n\n\n\n\nSlide 47"
+    "section": "43 Deep CBOW with pretrained embeddings",
+    "text": "43 Deep CBOW with pretrained embeddings\n\n\n\n\nSlide 47\n\n\n\n\nIt will be easier if the models already know the word meaning and then it can get the sentoment fo the sentece. Here we have a prior which is our word representation"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-15",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-15",
     "title": "Compositional semantics and sentence representations",
-    "section": "48 Title",
-    "text": "48 Title\n\n\n\n\nSlide 48"
+    "section": "87 Title",
+    "text": "87 Title\n\n\n\n\nSlide 93"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#recap-training-a-neural-network",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#recap-training-a-neural-network",
     "title": "Compositional semantics and sentence representations",
-    "section": "49 Recap: Training a neural network",
-    "text": "49 Recap: Training a neural network\n\n\n\n\nSlide 49"
+    "section": "45 Recap: Training a neural network",
+    "text": "45 Recap: Training a neural network\n\n\n\n\nSlide 49"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#cross-entropy-loss",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#cross-entropy-loss",
     "title": "Compositional semantics and sentence representations",
-    "section": "50 Cross Entropy Loss",
-    "text": "50 Cross Entropy Loss\n\n\n\n\nSlide 50"
+    "section": "46 Cross Entropy Loss",
+    "text": "46 Cross Entropy Loss\n\n\n\n\nSlide 50"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#softmax",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#softmax",
     "title": "Compositional semantics and sentence representations",
-    "section": "51 Softmax",
-    "text": "51 Softmax\n\n\n\n\nSlide 51"
+    "section": "47 Softmax",
+    "text": "47 Softmax\n\n\n\n\nSlide 51"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-16",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-16",
     "title": "Compositional semantics and sentence representations",
-    "section": "52 Title",
-    "text": "52 Title\n\n\n\n\nSlide 52"
+    "section": "97 Title",
+    "text": "97 Title\n\n\n\n\nSlide 103\n\n\n\n\nBecause we are doing this in sequence so putting thins on the stack and then to the tree we cannot dot his in parallel, so this is slow. Thus, we want to do mini-batch where you process multiple sentences at the same time and"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#introduction-recurrent-neural-network-rnn",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#introduction-recurrent-neural-network-rnn",
     "title": "Compositional semantics and sentence representations",
-    "section": "53 Introduction: Recurrent Neural Network (RNN)",
-    "text": "53 Introduction: Recurrent Neural Network (RNN)\n\n\n\n\nSlide 53"
+    "section": "49 Introduction: Recurrent Neural Network (RNN)",
+    "text": "49 Introduction: Recurrent Neural Network (RNN)\n\n\n\n\nSlide 53"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#introduction-recurrent-neural-network-rnn-1",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#introduction-recurrent-neural-network-rnn-1",
     "title": "Compositional semantics and sentence representations",
-    "section": "54 Introduction: Recurrent Neural Network (RNN)",
-    "text": "54 Introduction: Recurrent Neural Network (RNN)\n\n\n\n\nSlide 54"
+    "section": "50 Introduction: Recurrent Neural Network (RNN)",
+    "text": "50 Introduction: Recurrent Neural Network (RNN)\n\n\n\n\nSlide 54\n\n\n\n\n6 words 6 times steps"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#introduction-recurrent-neural-network-rnn-2",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#introduction-recurrent-neural-network-rnn-2",
     "title": "Compositional semantics and sentence representations",
-    "section": "55 Introduction: Recurrent Neural Network (RNN)",
-    "text": "55 Introduction: Recurrent Neural Network (RNN)\n\n\n\n\nSlide 55"
+    "section": "51 Introduction: Recurrent Neural Network (RNN)",
+    "text": "51 Introduction: Recurrent Neural Network (RNN)\n\n\n\n\nSlide 55"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#introduction-unfolding-the-rnn",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#introduction-unfolding-the-rnn",
     "title": "Compositional semantics and sentence representations",
-    "section": "56 Introduction: Unfolding the RNN",
-    "text": "56 Introduction: Unfolding the RNN\n\n\n\n\nSlide 56"
+    "section": "52 Introduction: Unfolding the RNN",
+    "text": "52 Introduction: Unfolding the RNN\n\n\n\n\nSlide 56\n\n\n\n\nThe W and the R amtrix are the same, they are shared"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#introduction-making-a-prediction",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#introduction-making-a-prediction",
     "title": "Compositional semantics and sentence representations",
-    "section": "57 Introduction: Making a prediction",
-    "text": "57 Introduction: Making a prediction\n\n\n\n\nSlide 57"
+    "section": "53 Introduction: Making a prediction",
+    "text": "53 Introduction: Making a prediction\n\n\n\n\nSlide 57\n\n\n\n\nWhen you reach the end of the sentence, then you use the ouput vector for this word as the sentence representation. We can do this vecause this last time step was influenced by the entire history so that is why we substitute, this as our sentence representation. And then we can project it as 5 dimensional representation and then we take the argmax or softmax based on this representation"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#introduction-the-vanishing-gradient-problem",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#introduction-the-vanishing-gradient-problem",
     "title": "Compositional semantics and sentence representations",
-    "section": "58 Introduction: The vanishing gradient problem",
-    "text": "58 Introduction: The vanishing gradient problem\n\n\n\n\nSlide 58"
+    "section": "54 Introduction: The vanishing gradient problem",
+    "text": "54 Introduction: The vanishing gradient problem\n\n\n\n\nSlide 58\n\n\n\n\nThey tend to surfer from the vanishing problem"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#introduction-the-vanishing-gradient-problem-1",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#introduction-the-vanishing-gradient-problem-1",
     "title": "Compositional semantics and sentence representations",
-    "section": "59 Introduction: The vanishing gradient problem",
-    "text": "59 Introduction: The vanishing gradient problem\n\n\n\n\nSlide 59"
+    "section": "55 Introduction: The vanishing gradient problem",
+    "text": "55 Introduction: The vanishing gradient problem\n\n\n\n\nSlide 59\n\n\n\n\nHere 5 num unrolls N refers to the amount of words you have in a sentence"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#what-about-this-3",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#what-about-this-3",
     "title": "Compositional semantics and sentence representations",
-    "section": "60 What about this?",
-    "text": "60 What about this?\n\n\n\n\nSlide 60"
+    "section": "56 What about this?",
+    "text": "56 What about this?\n\n\n\n\nSlide 60"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#rnn-vs-ann",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#rnn-vs-ann",
     "title": "Compositional semantics and sentence representations",
-    "section": "61 RNN vs ANN",
-    "text": "61 RNN vs ANN\n\n\n\n\nSlide 61"
+    "section": "57 RNN vs ANN",
+    "text": "57 RNN vs ANN\n\n\n\n\nSlide 61\n\n\n\n\nIn the ANN you have different parameters for your matrix in each layer and the problem could cancel out. However even in ANN you can run into vanishing/exploding gradients\n\n\n\n\n\nSlide 62"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-17",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-17",
     "title": "Compositional semantics and sentence representations",
-    "section": "62 Title",
-    "text": "62 Title\n\n\n\n\nSlide 62"
+    "section": "105 Title",
+    "text": "105 Title\n\n\n\n\nSlide 111"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#long-short-term-memory-lstm",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#long-short-term-memory-lstm",
     "title": "Compositional semantics and sentence representations",
-    "section": "63 Long Short-Term Memory (LSTM)",
-    "text": "63 Long Short-Term Memory (LSTM)\n\n\n\n\nSlide 63"
+    "section": "58 Long Short-Term Memory (LSTM)",
+    "text": "58 Long Short-Term Memory (LSTM)\nCV: resNET skip connections to aliviate exploding/vanishing gradients\nNLP: LSTM were introduced\n\n\n\n\nSlide 63\n\n\n\n\nLSTM are good to deal with long-term dependencies because they are able to cpe with exploding/vanishing gradients"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lstm-core-idea",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lstm-core-idea",
     "title": "Compositional semantics and sentence representations",
-    "section": "64 LSTM: Core idea",
-    "text": "64 LSTM: Core idea\n\n\n\n\nSlide 64"
+    "section": "59 LSTM: Core idea",
+    "text": "59 LSTM: Core idea\n\n\n\n\nSlide 64\n\n\n\n\nThe cells are supposed to capture the long term memory information from the sentence\nThis is good because backpropagation through time with have this partially uninterrupted gradient flow"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lstms",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lstms",
     "title": "Compositional semantics and sentence representations",
-    "section": "65 LSTMs",
-    "text": "65 LSTMs\n\n\n\n\nSlide 65"
+    "section": "60 LSTMs",
+    "text": "60 LSTMs\n\n\n\n\nSlide 65\n\n\n\n\nNow the activation function here would be the LSTM, so each copy would contain an LSTM cell where before we have one layer and now we will have the cell with four different layers interacting with each other"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lstm-cell",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lstm-cell",
     "title": "Compositional semantics and sentence representations",
-    "section": "66 LSTM cell",
-    "text": "66 LSTM cell\n\n\n\n\nSlide 66"
+    "section": "61 LSTM cell",
+    "text": "61 LSTM cell\n\n\n\n\nSlide 66\n\n\n\n\n3 gates:\n\nforget gate\ninput gate\noutput gate\n\nc_t is the memory cell, here we do not apply any weights, we just do multiplication and summation. This is why people call it as a conveyers belt. So here we forget information, we add information but information flows interrupted"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lstm-cell-state",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lstm-cell-state",
     "title": "Compositional semantics and sentence representations",
-    "section": "67 LSTM: Cell state",
-    "text": "67 LSTM: Cell state\n\n\n\n\nSlide 67"
+    "section": "62 LSTM: Cell state",
+    "text": "62 LSTM: Cell state\n\n\n\n\nSlide 67"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lstm-forget-gate",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lstm-forget-gate",
     "title": "Compositional semantics and sentence representations",
-    "section": "68 LSTM: Forget gate",
-    "text": "68 LSTM: Forget gate\n\n\n\n\nSlide 68"
+    "section": "63 LSTM: Forget gate",
+    "text": "63 LSTM: Forget gate\n\n\n\n\nSlide 68"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lstm-candidate-cell",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lstm-candidate-cell",
     "title": "Compositional semantics and sentence representations",
-    "section": "69 LSTM: Candidate cell",
-    "text": "69 LSTM: Candidate cell\n\n\n\n\nSlide 69"
+    "section": "64 LSTM: Candidate cell",
+    "text": "64 LSTM: Candidate cell\n\n\n\n\nSlide 69"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lstm-input-gate",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lstm-input-gate",
     "title": "Compositional semantics and sentence representations",
-    "section": "70 LSTM: Input gate",
-    "text": "70 LSTM: Input gate\n\n\n\n\nSlide 70"
+    "section": "65 LSTM: Input gate",
+    "text": "65 LSTM: Input gate\n\n\n\n\nSlide 70"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lstm",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lstm",
     "title": "Compositional semantics and sentence representations",
-    "section": "71 LSTM",
-    "text": "71 LSTM\n\n\n\n\nSlide 71"
+    "section": "66 LSTM",
+    "text": "66 LSTM\n\n\n\n\nSlide 71"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lstm-output-gate",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lstm-output-gate",
     "title": "Compositional semantics and sentence representations",
-    "section": "72 LSTM: Output gate",
-    "text": "72 LSTM: Output gate\n\n\n\n\nSlide 72"
+    "section": "67 LSTM: Output gate",
+    "text": "67 LSTM: Output gate\n\n\n\n\nSlide 72\n\n\n\n\nHere we are saying what do I want to keep from my long term memory. The ouput of that is going to be my new output vector.\n\n67.1 Recap\n\n\n\n\n\nUse the forget gate to get the input word x_t and the previous h_{t-1} with that you do apply softmax which then you multiply to the cell state which is the memory.\n\nHere if you multiply by 1, then you wan to keep those items in memory. If 0 then you do not want to conserve them.\n\nWe use the candidate gate where you mutliply the ouput of the tanh which gives candidate values between -1 and 1 with some scaled softmax from the input gate. With this we selectively add what to conserve in the memory cell\nWe update the values of the ouput gate which we take: from the cell memory values between -1 to 1 and we multiply these by a softmax version from the input words x_t and also the previous state h_{t-1}\n\n\nStep 1 & 2 is called long-term memory\nStep 3, is the short term memory. This is a filtered version of the long-term memory."
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#long-short-term-memory-lstm-1",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#long-short-term-memory-lstm-1",
     "title": "Compositional semantics and sentence representations",
-    "section": "73 Long Short-Term Memory (LSTM)",
-    "text": "73 Long Short-Term Memory (LSTM)\n\n\n\n\nSlide 73"
+    "section": "68 Long Short-Term Memory (LSTM)",
+    "text": "68 Long Short-Term Memory (LSTM)\n\n\n\n\nSlide 73\n\n\n\n\n\nCell state is the long term memory\nHidden state is your short term memory"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lstms-applications-success-in-nlp",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lstms-applications-success-in-nlp",
     "title": "Compositional semantics and sentence representations",
-    "section": "74 LSTMs: Applications & Success in NLP",
-    "text": "74 LSTMs: Applications & Success in NLP\n\n\n\n\nSlide 74"
+    "section": "69 LSTMs: Applications & Success in NLP",
+    "text": "69 LSTMs: Applications & Success in NLP\n\n\n\n\nSlide 74\n\n\n\n\n\n\n\n\n\nSlide 75"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-18",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-18",
     "title": "Compositional semantics and sentence representations",
-    "section": "75 Title",
-    "text": "75 Title\n\n\n\n\nSlide 75"
+    "section": "107 Title",
+    "text": "107 Title\n\n\n\n\nSlide 113"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#qa-rfar-arr-pparnppaaanantatiannaiasnthkh-aiaila",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#qa-rfar-arr-pparnppaaanantatiannaiasnthkh-aiaila",
     "title": "Compositional semantics and sentence representations",
-    "section": "76 QA RFAR ARR PpARnPpaAanantatiannaiasnthkh AIAILA",
-    "text": "76 QA RFAR ARR PpARnPpaAanantatiannaiasnthkh AIAILA\n\n\n\n\nSlide 76"
+    "section": "70 QA RFAR ARR PpARnPpaAanantatiannaiasnthkh AIAILA",
+    "text": "70 QA RFAR ARR PpARnPpaAanantatiannaiasnthkh AIAILA\n\n\n\n\nSlide 76"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#second-approach-sentence-sentiment-syntax",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#second-approach-sentence-sentiment-syntax",
     "title": "Compositional semantics and sentence representations",
-    "section": "77 Second approach: Sentence + Sentiment + Syntax",
-    "text": "77 Second approach: Sentence + Sentiment + Syntax\n\n\n\n\nSlide 77"
+    "section": "71 Second approach: Sentence + Sentiment + Syntax",
+    "text": "71 Second approach: Sentence + Sentiment + Syntax\n\n\n\n\nSlide 77"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#exploiting-tree-structure",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#exploiting-tree-structure",
     "title": "Compositional semantics and sentence representations",
-    "section": "78 Exploiting tree structure",
-    "text": "78 Exploiting tree structure\n\n\n\n\nSlide 78"
+    "section": "72 Exploiting tree structure",
+    "text": "72 Exploiting tree structure\n\n\n\n\nSlide 78\n\n\n\n\nCompositionality was this idea that you cannot derive the meaning of sentences from the meaning of the individual words.\nIn the models seen so far, we were getting the sentence representation deriving it from the individual words. But we were not taken the syntactic structure into account. These Tree LSTM allow us to do both. So we will get the meaning of the words and also the rules that combine them"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#why-would-it-be-useful",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#why-would-it-be-useful",
     "title": "Compositional semantics and sentence representations",
-    "section": "79 Why would it be useful?",
-    "text": "79 Why would it be useful?\n\n\n\n\nSlide 79"
+    "section": "73 Why would it be useful?",
+    "text": "73 Why would it be useful?\n\n\n\n\nSlide 79"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#constituency-parse",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#constituency-parse",
     "title": "Compositional semantics and sentence representations",
-    "section": "80 Constituency Parse",
-    "text": "80 Constituency Parse\n\n\n\n\nSlide 80"
+    "section": "74 Constituency Parse",
+    "text": "74 Constituency Parse\n\n\n\n\nSlide 80"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#recurrent-vs-tree-recursive-nn",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#recurrent-vs-tree-recursive-nn",
     "title": "Compositional semantics and sentence representations",
-    "section": "81 Recurrent vs Tree Recursive NN",
-    "text": "81 Recurrent vs Tree Recursive NN\n\n\n\n\nSlide 81"
+    "section": "75 Recurrent vs Tree Recursive NN",
+    "text": "75 Recurrent vs Tree Recursive NN\n\n\n\n\nSlide 81\n\n\n\n\nRecurrent NNS that are LSTMs but you also have tree RNN which are recursive\nIf you input “I loved this movie” to the RNN you will not be able to model, the phrase independetly of the previous words in the sentence. So for instance “this movie” is dependent of having seen “I Loved” that means I cannot extract separate phrase representations from your sentence representations\nThis is different in the three recursive NN, because you explicitly first compose “this movie” into a phrase representation and then you would make it dependent on the previous word while you go up in the three"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#tree-recursive-nn",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#tree-recursive-nn",
     "title": "Compositional semantics and sentence representations",
-    "section": "82 Tree Recursive NN",
-    "text": "82 Tree Recursive NN\n\n\n\n\nSlide 82"
+    "section": "76 Tree Recursive NN",
+    "text": "76 Tree Recursive NN\n\n\n\n\nSlide 82"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#practical-ii-data-set-stanford-sentiment-treebank-sst",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#practical-ii-data-set-stanford-sentiment-treebank-sst",
     "title": "Compositional semantics and sentence representations",
-    "section": "83 Practical II data set: Stanford Sentiment Treebank (SST)",
-    "text": "83 Practical II data set: Stanford Sentiment Treebank (SST)\n\n\n\n\nSlide 83"
+    "section": "77 Practical II data set: Stanford Sentiment Treebank (SST)",
+    "text": "77 Practical II data set: Stanford Sentiment Treebank (SST)\n\n\n\n\nSlide 83"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#tree-lstms-generalize-lstm-to-tree-structure",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#tree-lstms-generalize-lstm-to-tree-structure",
     "title": "Compositional semantics and sentence representations",
-    "section": "84 Tree LSTMs: Generalize LSTM to tree structure",
-    "text": "84 Tree LSTMs: Generalize LSTM to tree structure\n\n\n\n\nSlide 84"
+    "section": "78 Tree LSTMs: Generalize LSTM to tree structure",
+    "text": "78 Tree LSTMs: Generalize LSTM to tree structure\n\n\n\n\nSlide 84\n\n\n\n\nWe can input multiple children in each time step"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#tree-lstms",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#tree-lstms",
     "title": "Compositional semantics and sentence representations",
-    "section": "85 Tree LSTMs",
-    "text": "85 Tree LSTMs\n\n\n\n\nSlide 85"
+    "section": "79 Tree LSTMs",
+    "text": "79 Tree LSTMs\n\n\n\n\nSlide 85\n\n\n\n\n\nYou can use any number of children that you want but you will loose child order information\nN-ary Tree LSTM: in practical Binary parse tree"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#child-sum-tree-lstm",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#child-sum-tree-lstm",
     "title": "Compositional semantics and sentence representations",
-    "section": "86 Child-Sum Tree LSTM",
-    "text": "86 Child-Sum Tree LSTM\n\n\n\n\nSlide 86"
+    "section": "80 Child-Sum Tree LSTM",
+    "text": "80 Child-Sum Tree LSTM\n\n\n\n\nSlide 86"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#child-sum-tree-lstm-1",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#child-sum-tree-lstm-1",
     "title": "Compositional semantics and sentence representations",
-    "section": "87 Child-Sum Tree LSTM",
-    "text": "87 Child-Sum Tree LSTM\n\n\n\n\nSlide 87"
+    "section": "81 Child-Sum Tree LSTM",
+    "text": "81 Child-Sum Tree LSTM\n\n\n\n\nSlide 87"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#n-ary-tree-lstm",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#n-ary-tree-lstm",
     "title": "Compositional semantics and sentence representations",
-    "section": "88 N-ary Tree LSTM",
-    "text": "88 N-ary Tree LSTM\n\n\n\n\nSlide 88"
+    "section": "82 N-ary Tree LSTM",
+    "text": "82 N-ary Tree LSTM\n\n\n\n\nSlide 88\n\n\n\n\nThat means I have to input separatly to the model because they have separate parameters matrices, so you not just summed them up."
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#n-ary-tree-lstm-1",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#n-ary-tree-lstm-1",
     "title": "Compositional semantics and sentence representations",
-    "section": "89 N-ary Tree LSTM",
-    "text": "89 N-ary Tree LSTM\n\n\n\n\nSlide 89"
+    "section": "83 N-ary Tree LSTM",
+    "text": "83 N-ary Tree LSTM\n\n\n\n\nSlide 66\n\n\n\n\n\n\n\n\nSlide 89"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#n-ary-tree-lstm-2",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#n-ary-tree-lstm-2",
     "title": "Compositional semantics and sentence representations",
-    "section": "90 N-ary Tree LSTM",
-    "text": "90 N-ary Tree LSTM\n\n\n\n\nSlide 90"
+    "section": "84 N-ary Tree LSTM",
+    "text": "84 N-ary Tree LSTM\n\n\n\n\nSlide 90\n\n\n\n\n\\(u_j\\) is for the candidate gate\nFor each child \\(h_j\\), we have a separate parameter matrix and you ill be summing\n\n\n\n\nSlide 73"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lstms-vs-tree-lstms",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#lstms-vs-tree-lstms",
     "title": "Compositional semantics and sentence representations",
-    "section": "91 LSTMs vs Tree-LSTMs",
-    "text": "91 LSTMs vs Tree-LSTMs\n\n\n\n\nSlide 91"
+    "section": "85 LSTMs vs Tree-LSTMs",
+    "text": "85 LSTMs vs Tree-LSTMs\n\n\n\n\nSlide 91\n\n\n\n\nTree-LSTM general, general LSTM its just a Tree-LSTM with one child. So if you have one child then you have your standard tree LSTM"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-19",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-19",
     "title": "Compositional semantics and sentence representations",
-    "section": "92 Title",
-    "text": "92 Title\n\n\n\n\nSlide 92"
+    "section": "108 Title",
+    "text": "108 Title\n\n\n\n\nSlide 113"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-20",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-20",
     "title": "Compositional semantics and sentence representations",
-    "section": "93 Title",
-    "text": "93 Title\n\n\n\n\nSlide 93"
+    "section": "109 Title",
+    "text": "109 Title\n\n\n\n\nSlide 113"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#building-a-tree-with-a-transition-sequence",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#building-a-tree-with-a-transition-sequence",
     "title": "Compositional semantics and sentence representations",
-    "section": "94 Building a tree with a transition sequence",
-    "text": "94 Building a tree with a transition sequence\n\n\n\n\nSlide 94"
+    "section": "88 Building a tree with a transition sequence",
+    "text": "88 Building a tree with a transition sequence\n\n\n\n\nSlide 94"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example",
     "title": "Compositional semantics and sentence representations",
-    "section": "95 Transition sequence example",
-    "text": "95 Transition sequence example\n\n\n\n\nSlide 95"
+    "section": "89 Transition sequence example",
+    "text": "89 Transition sequence example\n\n\n\n\nSlide 95"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-1",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-1",
     "title": "Compositional semantics and sentence representations",
-    "section": "96 Transition sequence example",
-    "text": "96 Transition sequence example\n\n\n\n\nSlide 96"
+    "section": "90 Transition sequence example",
+    "text": "90 Transition sequence example\n\n\n\n\nSlide 96"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-2",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-2",
     "title": "Compositional semantics and sentence representations",
-    "section": "97 Transition sequence example",
-    "text": "97 Transition sequence example\n\n\n\n\nSlide 97"
+    "section": "91 Transition sequence example",
+    "text": "91 Transition sequence example\n\n\n\n\nSlide 97"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-3",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-3",
     "title": "Compositional semantics and sentence representations",
-    "section": "98 Transition sequence example",
-    "text": "98 Transition sequence example\n\n\n\n\nSlide 98"
+    "section": "92 Transition sequence example",
+    "text": "92 Transition sequence example\n\n\n\n\nSlide 98"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-4",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-4",
     "title": "Compositional semantics and sentence representations",
-    "section": "99 Transition sequence example",
-    "text": "99 Transition sequence example\n\n\n\n\nSlide 99"
+    "section": "93 Transition sequence example",
+    "text": "93 Transition sequence example\n\n\n\n\nSlide 99"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-5",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-5",
     "title": "Compositional semantics and sentence representations",
-    "section": "100 Transition sequence example",
-    "text": "100 Transition sequence example\n\n\n\n\nSlide 100"
+    "section": "94 Transition sequence example",
+    "text": "94 Transition sequence example\n\n\n\n\nSlide 100"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-6",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-6",
     "title": "Compositional semantics and sentence representations",
-    "section": "101 Transition sequence example",
-    "text": "101 Transition sequence example\n\n\n\n\nSlide 101"
+    "section": "95 Transition sequence example",
+    "text": "95 Transition sequence example\n\n\n\n\nSlide 101"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-7",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-7",
     "title": "Compositional semantics and sentence representations",
-    "section": "102 Transition sequence example",
-    "text": "102 Transition sequence example\n\n\n\n\nSlide 102"
+    "section": "96 Transition sequence example",
+    "text": "96 Transition sequence example\n\n\n\n\nSlide 102"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-21",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-21",
     "title": "Compositional semantics and sentence representations",
-    "section": "103 Title",
-    "text": "103 Title\n\n\n\n\nSlide 103"
+    "section": "111 Title",
+    "text": "111 Title\n\n\n\n\nSlide 113"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-mini-batched",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-mini-batched",
     "title": "Compositional semantics and sentence representations",
-    "section": "104 Transition sequence example (mini-batched)",
-    "text": "104 Transition sequence example (mini-batched)\n\n\n\n\nSlide 104"
+    "section": "98 Transition sequence example (mini-batched)",
+    "text": "98 Transition sequence example (mini-batched)\n\n\n\n\nSlide 104"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-mini-batched-1",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-mini-batched-1",
     "title": "Compositional semantics and sentence representations",
-    "section": "105 Transition sequence example (mini-batched)",
-    "text": "105 Transition sequence example (mini-batched)\n\n\n\n\nSlide 105"
+    "section": "99 Transition sequence example (mini-batched)",
+    "text": "99 Transition sequence example (mini-batched)\n\n\n\n\nSlide 105"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-mini-batched-2",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-mini-batched-2",
     "title": "Compositional semantics and sentence representations",
-    "section": "106 Transition sequence example (mini-batched)",
-    "text": "106 Transition sequence example (mini-batched)\n\n\n\n\nSlide 106"
+    "section": "100 Transition sequence example (mini-batched)",
+    "text": "100 Transition sequence example (mini-batched)\n\n\n\n\nSlide 106"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-mini-batched-3",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-mini-batched-3",
     "title": "Compositional semantics and sentence representations",
-    "section": "107 Transition sequence example (mini-batched)",
-    "text": "107 Transition sequence example (mini-batched)\n\n\n\n\nSlide 107"
+    "section": "101 Transition sequence example (mini-batched)",
+    "text": "101 Transition sequence example (mini-batched)\n\n\n\n\nSlide 107"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-mini-batched-4",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-mini-batched-4",
     "title": "Compositional semantics and sentence representations",
-    "section": "108 Transition sequence example (mini-batched)",
-    "text": "108 Transition sequence example (mini-batched)\n\n\n\n\nSlide 108"
+    "section": "102 Transition sequence example (mini-batched)",
+    "text": "102 Transition sequence example (mini-batched)\n\n\n\n\nSlide 108"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-mini-batched-5",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#transition-sequence-example-mini-batched-5",
     "title": "Compositional semantics and sentence representations",
-    "section": "109 Transition sequence example (mini-batched)",
-    "text": "109 Transition sequence example (mini-batched)\n\n\n\n\nSlide 109"
+    "section": "103 Transition sequence example (mini-batched)",
+    "text": "103 Transition sequence example (mini-batched)\n\n\n\n\nSlide 109"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#optional-approach-sentence-sentiment-syntax-node-level-sentiment",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#optional-approach-sentence-sentiment-syntax-node-level-sentiment",
     "title": "Compositional semantics and sentence representations",
-    "section": "110 Optional approach: Sentence + Sentiment + Syntax + Node-level sentiment",
-    "text": "110 Optional approach: Sentence + Sentiment + Syntax + Node-level sentiment\n\n\n\n\nSlide 110"
+    "section": "104 Optional approach: Sentence + Sentiment + Syntax + Node-level sentiment",
+    "text": "104 Optional approach: Sentence + Sentiment + Syntax + Node-level sentiment\n\n\n\n\nSlide 110"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-22",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-22",
     "title": "Compositional semantics and sentence representations",
-    "section": "111 Title",
-    "text": "111 Title\n\n\n\n\nSlide 111"
+    "section": "112 Title",
+    "text": "112 Title\n\n\n\n\nSlide 113"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#recap",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#recap",
     "title": "Compositional semantics and sentence representations",
-    "section": "112 Recap",
-    "text": "112 Recap\n\n\n\n\nSlide 112"
+    "section": "107 Recap",
+    "text": "107 Recap\n\n\n\n\nSlide 112"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#title-23",
@@ -6737,50 +6737,50 @@
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#input",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#input",
     "title": "Compositional semantics and sentence representations",
-    "section": "114 Input",
-    "text": "114 Input\n\n\n\n\nSlide 114"
+    "section": "108 Input",
+    "text": "108 Input\n\n\n\n\nSlide 114"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#recap-activation-functions",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#recap-activation-functions",
     "title": "Compositional semantics and sentence representations",
-    "section": "115 Recap: Activation functions",
-    "text": "115 Recap: Activation functions\n\n\n\n\nSlide 115"
+    "section": "109 Recap: Activation functions",
+    "text": "109 Recap: Activation functions\n\n\n\n\nSlide 115"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#introduction-intuition-to-solving-the-vanishing-gradient",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#introduction-intuition-to-solving-the-vanishing-gradient",
     "title": "Compositional semantics and sentence representations",
-    "section": "116 Introduction: Intuition to solving the vanishing gradient",
-    "text": "116 Introduction: Intuition to solving the vanishing gradient\n\n\n\n\nSlide 116"
+    "section": "110 Introduction: Intuition to solving the vanishing gradient",
+    "text": "110 Introduction: Intuition to solving the vanishing gradient\n\n\n\n\nSlide 116"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#introduction-a-small-improvement",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#introduction-a-small-improvement",
     "title": "Compositional semantics and sentence representations",
-    "section": "117 Introduction: A small improvement",
-    "text": "117 Introduction: A small improvement\n\n\n\n\nSlide 117"
+    "section": "111 Introduction: A small improvement",
+    "text": "111 Introduction: A small improvement\n\n\n\n\nSlide 117"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#child-sum-tree-lstm-2",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#child-sum-tree-lstm-2",
     "title": "Compositional semantics and sentence representations",
-    "section": "118 Child-Sum Tree LSTM",
-    "text": "118 Child-Sum Tree LSTM\n\n\n\n\nSlide 118"
+    "section": "112 Child-Sum Tree LSTM",
+    "text": "112 Child-Sum Tree LSTM\n\n\n\n\nSlide 118"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#a-naive-recursive-nn",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#a-naive-recursive-nn",
     "title": "Compositional semantics and sentence representations",
-    "section": "119 A naive recursive NN",
-    "text": "119 A naive recursive NN\n\n\n\n\nSlide 119"
+    "section": "113 A naive recursive NN",
+    "text": "113 A naive recursive NN\n\n\n\n\nSlide 119"
   },
   {
     "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#sgd-vs-gd",
     "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#sgd-vs-gd",
     "title": "Compositional semantics and sentence representations",
-    "section": "120 SGD vs GD",
-    "text": "120 SGD vs GD\n\n\n\n\nSlide 120"
+    "section": "114 SGD vs GD",
+    "text": "114 SGD vs GD\n\n\n\n\nSlide 120"
   },
   {
     "objectID": "blog/2023-11-22_lexical-semantics-and-word-embeddings/index.html#carriage-bike-vehicle-train-truck-lorry-coach-taxi",
@@ -8082,329 +8082,329 @@
     "href": "blog/2023-12-03_discourse-processing/index.html#title",
     "title": "Discourse processing",
     "section": "1 Title",
-    "text": "1 Title\n\n\n\n\nSlide"
+    "text": "1 Title\n\n\n\n\nSlide 1"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#outline.",
     "href": "blog/2023-12-03_discourse-processing/index.html#outline.",
     "title": "Discourse processing",
     "section": "2 Outline.",
-    "text": "2 Outline.\n\n\n\n\nSlide"
+    "text": "2 Outline.\n\n\n\n\nSlide 2"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#document-structure-and-discourse-structure",
     "href": "blog/2023-12-03_discourse-processing/index.html#document-structure-and-discourse-structure",
     "title": "Discourse processing",
     "section": "3 Document structure and discourse structure",
-    "text": "3 Document structure and discourse structure\n\n\n\n\nSlide"
+    "text": "3 Document structure and discourse structure\n\n\n\n\nSlide 3"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#rhetorical-relations",
     "href": "blog/2023-12-03_discourse-processing/index.html#rhetorical-relations",
     "title": "Discourse processing",
     "section": "4 Rhetorical relations",
-    "text": "4 Rhetorical relations\n\n\n\n\nSlide"
+    "text": "4 Rhetorical relations\n\n\n\n\nSlide 4"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#rhetorical-relations-1",
     "href": "blog/2023-12-03_discourse-processing/index.html#rhetorical-relations-1",
     "title": "Discourse processing",
     "section": "5 Rhetorical relations",
-    "text": "5 Rhetorical relations\n\n\n\n\nSlide"
+    "text": "5 Rhetorical relations\n\n\n\n\nSlide 5"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#rhetorical-relations-2",
     "href": "blog/2023-12-03_discourse-processing/index.html#rhetorical-relations-2",
     "title": "Discourse processing",
     "section": "6 Rhetorical relations",
-    "text": "6 Rhetorical relations\n\n\n\n\nSlide"
+    "text": "6 Rhetorical relations\n\n\n\n\nSlide 6"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#coherence",
     "href": "blog/2023-12-03_discourse-processing/index.html#coherence",
     "title": "Discourse processing",
     "section": "7 Coherence",
-    "text": "7 Coherence\n\n\n\n\nSlide"
+    "text": "7 Coherence\n\n\n\n\nSlide 7"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#coherence-1",
     "href": "blog/2023-12-03_discourse-processing/index.html#coherence-1",
     "title": "Discourse processing",
     "section": "8 Coherence",
-    "text": "8 Coherence\n\n\n\n\nSlide"
+    "text": "8 Coherence\n\n\n\n\nSlide 8"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#coherence-in-interpretation",
     "href": "blog/2023-12-03_discourse-processing/index.html#coherence-in-interpretation",
     "title": "Discourse processing",
     "section": "9 Coherence in interpretation",
-    "text": "9 Coherence in interpretation\n\n\n\n\nSlide"
+    "text": "9 Coherence in interpretation\n\n\n\n\nSlide 9"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#factors-influencing-discourse-interpretation",
     "href": "blog/2023-12-03_discourse-processing/index.html#factors-influencing-discourse-interpretation",
     "title": "Discourse processing",
     "section": "10 Factors influencing discourse interpretation",
-    "text": "10 Factors influencing discourse interpretation\n\n\n\n\nSlide"
+    "text": "10 Factors influencing discourse interpretation\n\n\n\n\nSlide 10"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#discourse-parsing",
     "href": "blog/2023-12-03_discourse-processing/index.html#discourse-parsing",
     "title": "Discourse processing",
     "section": "11 Discourse parsing",
-    "text": "11 Discourse parsing\n\n\n\n\nSlide"
+    "text": "11 Discourse parsing\n\n\n\n\nSlide 11"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#outline.-1",
     "href": "blog/2023-12-03_discourse-processing/index.html#outline.-1",
     "title": "Discourse processing",
     "section": "12 Outline.",
-    "text": "12 Outline.\n\n\n\n\nSlide"
+    "text": "12 Outline.\n\n\n\n\nSlide 12"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#document-representations",
     "href": "blog/2023-12-03_discourse-processing/index.html#document-representations",
     "title": "Discourse processing",
     "section": "13 Document representations",
-    "text": "13 Document representations\n\n\n\n\nSlide"
+    "text": "13 Document representations\n\n\n\n\nSlide 13"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#learning-document-representations",
     "href": "blog/2023-12-03_discourse-processing/index.html#learning-document-representations",
     "title": "Discourse processing",
     "section": "14 Learning document representations",
-    "text": "14 Learning document representations\nSD eg at LATA fav lnnrninn rantannn\n\n\n\n\nSlide"
+    "text": "14 Learning document representations\nSD eg at LATA fav lnnrninn rantannn\n\n\n\n\nSlide 14"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#bidirectional-lstm",
     "href": "blog/2023-12-03_discourse-processing/index.html#bidirectional-lstm",
     "title": "Discourse processing",
     "section": "15 Bidirectional LSTM",
-    "text": "15 Bidirectional LSTM\n\n\n\n\nSlide"
+    "text": "15 Bidirectional LSTM\n\n\n\n\nSlide 15"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#what-is-the-sentence-representation",
     "href": "blog/2023-12-03_discourse-processing/index.html#what-is-the-sentence-representation",
     "title": "Discourse processing",
     "section": "16 What is the sentence representation?",
-    "text": "16 What is the sentence representation?\n\n\n\n\nSlide"
+    "text": "16 What is the sentence representation?\n\n\n\n\nSlide 16"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#attention-mechanism",
     "href": "blog/2023-12-03_discourse-processing/index.html#attention-mechanism",
     "title": "Discourse processing",
     "section": "17 Attention mechanism",
-    "text": "17 Attention mechanism\nQApnntanro ranracantatinn 9c 49 ciim anf all hidctatoc\n\n\n\n\nSlide"
+    "text": "17 Attention mechanism\nQApnntanro ranracantatinn 9c 49 ciim anf all hidctatoc\n\n\n\n\nSlide 17"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#building-a-document-representation",
     "href": "blog/2023-12-03_discourse-processing/index.html#building-a-document-representation",
     "title": "Discourse processing",
     "section": "18 Building a document representation",
-    "text": "18 Building a document representation\n\n\n\n\nSlide"
+    "text": "18 Building a document representation\n\n\n\n\nSlide 18"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#building-a-document-representation-1",
     "href": "blog/2023-12-03_discourse-processing/index.html#building-a-document-representation-1",
     "title": "Discourse processing",
     "section": "19 Building a document representation",
-    "text": "19 Building a document representation\n\n\n\n\nSlide"
+    "text": "19 Building a document representation\n\n\n\n\nSlide 19"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#hierarchical-attention-networks",
     "href": "blog/2023-12-03_discourse-processing/index.html#hierarchical-attention-networks",
     "title": "Discourse processing",
     "section": "20 Hierarchical attention networks",
-    "text": "20 Hierarchical attention networks\n\n\n\n\nSlide"
+    "text": "20 Hierarchical attention networks\n\n\n\n\nSlide 20"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#hierarchical-attention-network",
     "href": "blog/2023-12-03_discourse-processing/index.html#hierarchical-attention-network",
     "title": "Discourse processing",
     "section": "21 Hierarchical attention network",
-    "text": "21 Hierarchical attention network\nsoftmax\n\n\n\n\nSlide"
+    "text": "21 Hierarchical attention network\nsoftmax\n\n\n\n\nSlide 21"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#han-output-with-attention-visualised",
     "href": "blog/2023-12-03_discourse-processing/index.html#han-output-with-attention-visualised",
     "title": "Discourse processing",
     "section": "22 HAN output with attention visualised",
-    "text": "22 HAN output with attention visualised\n\n\n\n\nSlide"
+    "text": "22 HAN output with attention visualised\n\n\n\n\nSlide 22"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#han-output-with-attention-visualised-1",
     "href": "blog/2023-12-03_discourse-processing/index.html#han-output-with-attention-visualised-1",
     "title": "Discourse processing",
     "section": "23 HAN output with attention visualised",
-    "text": "23 HAN output with attention visualised\n\n\n\n\nSlide"
+    "text": "23 HAN output with attention visualised\n\n\n\n\nSlide 23"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#outline.-2",
     "href": "blog/2023-12-03_discourse-processing/index.html#outline.-2",
     "title": "Discourse processing",
     "section": "24 Outline.",
-    "text": "24 Outline.\n\n\n\n\nSlide"
+    "text": "24 Outline.\n\n\n\n\nSlide 24"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#co-reference-and-referring-expressions",
     "href": "blog/2023-12-03_discourse-processing/index.html#co-reference-and-referring-expressions",
     "title": "Discourse processing",
     "section": "25 Co-reference and referring expressions",
-    "text": "25 Co-reference and referring expressions\n\n\n\n\nSlide"
+    "text": "25 Co-reference and referring expressions\n\n\n\n\nSlide 25"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#pronoun-resolution",
     "href": "blog/2023-12-03_discourse-processing/index.html#pronoun-resolution",
     "title": "Discourse processing",
     "section": "26 Pronoun resolution",
-    "text": "26 Pronoun resolution\n\n\n\n\nSlide"
+    "text": "26 Pronoun resolution\n\n\n\n\nSlide 26"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#pronoun-resolution-1",
     "href": "blog/2023-12-03_discourse-processing/index.html#pronoun-resolution-1",
     "title": "Discourse processing",
     "section": "27 Pronoun resolution",
-    "text": "27 Pronoun resolution\n\n\n\n\nSlide"
+    "text": "27 Pronoun resolution\n\n\n\n\nSlide 27"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#outline.-3",
     "href": "blog/2023-12-03_discourse-processing/index.html#outline.-3",
     "title": "Discourse processing",
     "section": "28 Outline.",
-    "text": "28 Outline.\n\n\n\n\nSlide"
+    "text": "28 Outline.\n\n\n\n\nSlide 28"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#coreference-resolution-as-supervised-classification",
     "href": "blog/2023-12-03_discourse-processing/index.html#coreference-resolution-as-supervised-classification",
     "title": "Discourse processing",
     "section": "29 Coreference resolution as supervised classification",
-    "text": "29 Coreference resolution as supervised classification\n\n\n\n\nSlide"
+    "text": "29 Coreference resolution as supervised classification\n\n\n\n\nSlide 29"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#hard-constraints-pronoun-agreement",
     "href": "blog/2023-12-03_discourse-processing/index.html#hard-constraints-pronoun-agreement",
     "title": "Discourse processing",
     "section": "30 Hard constraints: Pronoun agreement",
-    "text": "30 Hard constraints: Pronoun agreement\n\n\n\n\nSlide"
+    "text": "30 Hard constraints: Pronoun agreement\n\n\n\n\nSlide 30"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#hard-constraints-reflexives",
     "href": "blog/2023-12-03_discourse-processing/index.html#hard-constraints-reflexives",
     "title": "Discourse processing",
     "section": "31 Hard constraints: Reflexives",
-    "text": "31 Hard constraints: Reflexives\n\n\n\n\nSlide"
+    "text": "31 Hard constraints: Reflexives\n\n\n\n\nSlide 31"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#hard-constraints-pleonastic-pronouns",
     "href": "blog/2023-12-03_discourse-processing/index.html#hard-constraints-pleonastic-pronouns",
     "title": "Discourse processing",
     "section": "32 Hard constraints: Pleonastic pronouns",
-    "text": "32 Hard constraints: Pleonastic pronouns\n\n\n\n\nSlide"
+    "text": "32 Hard constraints: Pleonastic pronouns\n\n\n\n\nSlide 32"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#soft-preferences-salience",
     "href": "blog/2023-12-03_discourse-processing/index.html#soft-preferences-salience",
     "title": "Discourse processing",
     "section": "33 Soft preferences: Salience",
-    "text": "33 Soft preferences: Salience\n\n\n\n\nSlide"
+    "text": "33 Soft preferences: Salience\n\n\n\n\nSlide 33"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#soft-preferences-salience-1",
     "href": "blog/2023-12-03_discourse-processing/index.html#soft-preferences-salience-1",
     "title": "Discourse processing",
     "section": "34 Soft preferences: Salience",
-    "text": "34 Soft preferences: Salience\n\n\n\n\nSlide"
+    "text": "34 Soft preferences: Salience\n\n\n\n\nSlide 34"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#features",
     "href": "blog/2023-12-03_discourse-processing/index.html#features",
     "title": "Discourse processing",
     "section": "35 Features",
-    "text": "35 Features\nCatanhoric Rinarv: t if nranniin hafnra antaradant\n\n\n\n\nSlide"
+    "text": "35 Features\nCatanhoric Rinarv: t if nranniin hafnra antaradant\n\n\n\n\nSlide 35"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#feature-vectors",
     "href": "blog/2023-12-03_discourse-processing/index.html#feature-vectors",
     "title": "Discourse processing",
     "section": "36 Feature vectors",
-    "text": "36 Feature vectors\n\n\n\n\nSlide"
+    "text": "36 Feature vectors\n\n\n\n\nSlide 36"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#problems-with-simple-classification-model",
     "href": "blog/2023-12-03_discourse-processing/index.html#problems-with-simple-classification-model",
     "title": "Discourse processing",
     "section": "37 Problems with simple classification model",
-    "text": "37 Problems with simple classification model\n\n\n\n\nSlide"
+    "text": "37 Problems with simple classification model\n\n\n\n\nSlide 37"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#neural-end-to-end-coreference-resolution",
     "href": "blog/2023-12-03_discourse-processing/index.html#neural-end-to-end-coreference-resolution",
     "title": "Discourse processing",
     "section": "38 Neural end-to-end coreference resolution",
-    "text": "38 Neural end-to-end coreference resolution\n\n\n\n\nSlide"
+    "text": "38 Neural end-to-end coreference resolution\n\n\n\n\nSlide 38"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#task-definition",
     "href": "blog/2023-12-03_discourse-processing/index.html#task-definition",
     "title": "Discourse processing",
     "section": "39 Task definition",
-    "text": "39 Task definition\nNaninn nankh nnann J Ann AnntnnnANAnt i\n\n\n\n\nSlide"
+    "text": "39 Task definition\nNaninn nankh nnann J Ann AnntnnnANAnt i\n\n\n\n\nSlide 39"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#computing-the-score-s",
     "href": "blog/2023-12-03_discourse-processing/index.html#computing-the-score-s",
     "title": "Discourse processing",
     "section": "40 Computing the score s",
-    "text": "40 Computing the score s\n\n\n\n\nSlide"
+    "text": "40 Computing the score s\n\n\n\n\nSlide 40"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#computing-the-scoring-functions-m-and-c",
     "href": "blog/2023-12-03_discourse-processing/index.html#computing-the-scoring-functions-m-and-c",
     "title": "Discourse processing",
     "section": "41 Computing the scoring functions m and c",
-    "text": "41 Computing the scoring functions m and c\n\n\n\n\nSlide"
+    "text": "41 Computing the scoring functions m and c\n\n\n\n\nSlide 41"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#learning-span-representations",
     "href": "blog/2023-12-03_discourse-processing/index.html#learning-span-representations",
     "title": "Discourse processing",
     "section": "42 Learning span representations",
-    "text": "42 Learning span representations\n\n\n\n\nSlide"
+    "text": "42 Learning span representations\n\n\n\n\nSlide 42"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#computing-the-score",
     "href": "blog/2023-12-03_discourse-processing/index.html#computing-the-score",
     "title": "Discourse processing",
     "section": "43 Computing the score",
-    "text": "43 Computing the score\n\n\n\n\nSlide"
+    "text": "43 Computing the score\n\n\n\n\nSlide 43"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#computing-the-score-1",
     "href": "blog/2023-12-03_discourse-processing/index.html#computing-the-score-1",
     "title": "Discourse processing",
     "section": "44 Computing the score",
-    "text": "44 Computing the score\n\n\n\n\nSlide"
+    "text": "44 Computing the score\n\n\n\n\nSlide 44"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#model-output-with-attention-visualised",
     "href": "blog/2023-12-03_discourse-processing/index.html#model-output-with-attention-visualised",
     "title": "Discourse processing",
     "section": "45 Model output with attention visualised",
-    "text": "45 Model output with attention visualised\n\n\n\n\nSlide"
+    "text": "45 Model output with attention visualised\n\n\n\n\nSlide 45"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#examples-of-errors",
     "href": "blog/2023-12-03_discourse-processing/index.html#examples-of-errors",
     "title": "Discourse processing",
     "section": "46 Examples of errors",
-    "text": "46 Examples of errors\n\n\n\n\nSlide"
+    "text": "46 Examples of errors\n\n\n\n\nSlide 46"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#acknowledgement",
     "href": "blog/2023-12-03_discourse-processing/index.html#acknowledgement",
     "title": "Discourse processing",
     "section": "47 Acknowledgement",
-    "text": "47 Acknowledgement\n\n\n\n\nSlide"
+    "text": "47 Acknowledgement\n\n\n\n\nSlide 47"
   },
   {
     "objectID": "blog/2023-12-03_large-language-models/index.html#title",
@@ -9714,5 +9714,33 @@
     "title": "Interpretability of NLP models",
     "section": "105 References",
     "text": "105 References\n\n\n\n\nSlide 105"
+  },
+  {
+    "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#modelling-compositional-semantics",
+    "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#modelling-compositional-semantics",
+    "title": "Compositional semantics and sentence representations",
+    "section": "6 Modelling compositional semantics",
+    "text": "6 Modelling compositional semantics\n\n\n\n\nSlide 8\n\n\n\n\nThese are two modelling frameworks\n\nHere we do the composition directly in vector space\n\nUnsupervised methods, they are general purpose. They capture the meaning of a word based on the similarity with other words.\n\nHere you train your representation in a supervised way, which means you need a task to get the learning signal from. For example in sentiment classification.\n\nFor instance if you train your representations to sentiment analysis and then you want to do translation this will not work, cause you train on a different task\n\n\n\n\nSlide 9"
+  },
+  {
+    "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#recap-1",
+    "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#recap-1",
+    "title": "Compositional semantics and sentence representations",
+    "section": "106 Recap",
+    "text": "106 Recap\n\n\n\n\nSlide 112"
+  },
+  {
+    "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#sumary",
+    "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#sumary",
+    "title": "Compositional semantics and sentence representations",
+    "section": "70 Sumary",
+    "text": "70 Sumary\n\n\n\n\nSlide 76"
+  },
+  {
+    "objectID": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#summary-fo-models-seen-so-far",
+    "href": "blog/2023-11-22_compositional-semantics-and-sentence-representations/index.html#summary-fo-models-seen-so-far",
+    "title": "Compositional semantics and sentence representations",
+    "section": "70 Summary fo models seen so far",
+    "text": "70 Summary fo models seen so far\n\n\n\n\nSlide 76\n\n\n\n\nSequence models :\n\nRNN\nLSTM\n\nTree-structure models are the ones that are also sensitive to the syntactic structure"
   }
 ]

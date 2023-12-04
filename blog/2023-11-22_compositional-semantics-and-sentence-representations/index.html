@@ -77,6 +77,8 @@ window.MathJax = {
 </script>
 <link rel="shortcut icon" href="../../../../../../../../../../../assets/danilo.ico">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../css/index-posts.css">
 </head>
@@ -386,8 +388,7 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
-<section id="title" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="title"><span class="header-section-number">1</span> Title</h2>
+<!-- ## Title -->
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -397,9 +398,8 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
-</section>
-<section id="compositional-semantics" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="compositional-semantics"><span class="header-section-number">2</span> Compositional semantics</h2>
+<section id="compositional-semantics" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="compositional-semantics"><span class="header-section-number">1</span> Compositional semantics</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -409,9 +409,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Deep here we mean as deeper understanding of language no NN</p>
 </section>
-<section id="compositional-semantics-alongside-syntax" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="compositional-semantics-alongside-syntax"><span class="header-section-number">3</span> Compositional semantics alongside syntax</h2>
+<section id="compositional-semantics-alongside-syntax" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="compositional-semantics-alongside-syntax"><span class="header-section-number">2</span> Compositional semantics alongside syntax</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -421,9 +422,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>If we want to model semantics alongside syntax. Word meaning then phrase meaning, then sentence meaning.</p>
 </section>
-<section id="non-trivial-issues-with-semantic-composition" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="non-trivial-issues-with-semantic-composition"><span class="header-section-number">4</span> Non-trivial issues with semantic composition</h2>
+<section id="non-trivial-issues-with-semantic-composition" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="non-trivial-issues-with-semantic-composition"><span class="header-section-number">3</span> Non-trivial issues with semantic composition</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -433,9 +435,11 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Here in the first i, it refers maybe to a dog. The second one it does not refer to anything. So even if they have same syntax structure they have different meanings</p>
+<p>The problem with last one is that even though these phrases can mean soomthing unqiue like the second refere to a person has passed away. Sometimes we may also express that a person just kick the bucket</p>
 </section>
-<section id="non-trivial-issues-with-semantic-composition-1" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="non-trivial-issues-with-semantic-composition-1"><span class="header-section-number">5</span> Non-trivial issues with semantic composition</h2>
+<section id="non-trivial-issues-with-semantic-composition-1" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="non-trivial-issues-with-semantic-composition-1"><span class="header-section-number">4</span> Non-trivial issues with semantic composition</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -446,8 +450,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="issues-with-semantic-composition" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="issues-with-semantic-composition"><span class="header-section-number">6</span> Issues with semantic composition</h2>
+<section id="issues-with-semantic-composition" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="issues-with-semantic-composition"><span class="header-section-number">5</span> Issues with semantic composition</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -457,9 +461,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>This represent recursion</p>
 </section>
-<section id="modelling-comvositional-semantics" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="modelling-comvositional-semantics"><span class="header-section-number">7</span> Modelling comvositional semantics</h2>
+<section id="modelling-compositional-semantics" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="modelling-compositional-semantics"><span class="header-section-number">6</span> Modelling compositional semantics</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -469,9 +474,15 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
-</section>
-<section id="title-1" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="title-1"><span class="header-section-number">8</span> Title</h2>
+<p>These are two modelling frameworks</p>
+<ol type="1">
+<li>Here we do the composition directly in vector space</li>
+</ol>
+<p>Unsupervised methods, they are general purpose. They capture the meaning of a word based on the similarity with other words.</p>
+<ol start="2" type="1">
+<li>Here you train your representation in a supervised way, which means you need a task to get the learning signal from. For example in sentiment classification.</li>
+</ol>
+<p>For instance if you train your representations to sentiment analysis and then you want to do translation this will not work, cause you train on a different task</p>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -482,8 +493,9 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="compositional-distributional-semantics" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="compositional-distributional-semantics"><span class="header-section-number">9</span> Compositional distributional semantics</h2>
+<section id="compositional-distributional-semantics" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="compositional-distributional-semantics"><span class="header-section-number">7</span> Compositional distributional semantics</h2>
+These are the all <strong>general</strong> purpose <strong>unsupervised</strong> way
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -493,9 +505,13 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>The idea come up, we were successful to create word representations, why not phrases, then why not in the sentence level.</p>
+<p>If you have a finite vocab you can still create an infinitely amount of sentences</p>
+<p>It is unfeseable because you dont have every possible sentence there and create a sentence representation for that. But we can do somthing similar which is, instead of learning sentence representatins directly you would try to use the word representation for the sentences and composed to create a sentence representatio.</p>
+<p>In principle you need only word representations for all words which is more doable than getting word representations for all sentences</p>
 </section>
-<section id="vector-mixture-models" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="vector-mixture-models"><span class="header-section-number">10</span> Vector mixture models</h2>
+<section id="vector-mixture-models" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="vector-mixture-models"><span class="header-section-number">8</span> Vector mixture models</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -506,8 +522,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="additive-and-multiplicative-models" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="additive-and-multiplicative-models"><span class="header-section-number">11</span> Additive and multiplicative models</h2>
+<section id="additive-and-multiplicative-models" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="additive-and-multiplicative-models"><span class="header-section-number">9</span> Additive and multiplicative models</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -517,9 +533,11 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Because summation is symmetric representation, we get the same representation so this model has a flaw</p>
+<p>Prepositions are used flexibly in any position, which means they dont have a strong behavioral profile but the content words they do. For example they appear in the same position they co-ocurr in similar context</p>
 </section>
-<section id="lexical-function-models" class="level2" data-number="12">
-<h2 data-number="12" class="anchored" data-anchor-id="lexical-function-models"><span class="header-section-number">12</span> Lexical function models</h2>
+<section id="lexical-function-models" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="lexical-function-models"><span class="header-section-number">10</span> Lexical function models</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -530,8 +548,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="lexical-function-models-1" class="level2" data-number="13">
-<h2 data-number="13" class="anchored" data-anchor-id="lexical-function-models-1"><span class="header-section-number">13</span> Lexical function models</h2>
+<section id="lexical-function-models-1" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="lexical-function-models-1"><span class="header-section-number">11</span> Lexical function models</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -542,8 +560,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="learning-adjective-matrices" class="level2" data-number="14">
-<h2 data-number="14" class="anchored" data-anchor-id="learning-adjective-matrices"><span class="header-section-number">14</span> Learning adjective matrices</h2>
+<section id="learning-adjective-matrices" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="learning-adjective-matrices"><span class="header-section-number">12</span> Learning adjective matrices</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -554,8 +572,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="learning-adjective-matrices-1" class="level2" data-number="15">
-<h2 data-number="15" class="anchored" data-anchor-id="learning-adjective-matrices-1"><span class="header-section-number">15</span> Learning adjective matrices</h2>
+<section id="learning-adjective-matrices-1" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="learning-adjective-matrices-1"><span class="header-section-number">13</span> Learning adjective matrices</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -565,9 +583,11 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<!-- ## Title
+<center>![Slide 17](imgs/page_17.png){.w575}</center><pre></pre> -->
 </section>
-<section id="title-2" class="level2" data-number="16">
-<h2 data-number="16" class="anchored" data-anchor-id="title-2"><span class="header-section-number">16</span> Title</h2>
+<section id="title" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="title"><span class="header-section-number">14</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -578,20 +598,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="title-3" class="level2" data-number="17">
-<h2 data-number="17" class="anchored" data-anchor-id="title-3"><span class="header-section-number">17</span> Title</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_17.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 17</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-</section>
-<section id="title-4" class="level2" data-number="18">
-<h2 data-number="18" class="anchored" data-anchor-id="title-4"><span class="header-section-number">18</span> Title</h2>
+<section id="title-1" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="title-1"><span class="header-section-number">15</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -602,8 +610,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="title-5" class="level2" data-number="19">
-<h2 data-number="19" class="anchored" data-anchor-id="title-5"><span class="header-section-number">19</span> Title</h2>
+<section id="title-2" class="level2" data-number="16">
+<h2 data-number="16" class="anchored" data-anchor-id="title-2"><span class="header-section-number">16</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -614,8 +622,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="task-sentiment-classification-of-movie-reviews" class="level2" data-number="20">
-<h2 data-number="20" class="anchored" data-anchor-id="task-sentiment-classification-of-movie-reviews"><span class="header-section-number">20</span> Task: Sentiment classification of movie reviews</h2>
+<section id="task-sentiment-classification-of-movie-reviews" class="level2" data-number="17">
+<h2 data-number="17" class="anchored" data-anchor-id="task-sentiment-classification-of-movie-reviews"><span class="header-section-number">17</span> Task: Sentiment classification of movie reviews</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -626,8 +634,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="words-and-sentences-into-vectors" class="level2" data-number="21">
-<h2 data-number="21" class="anchored" data-anchor-id="words-and-sentences-into-vectors"><span class="header-section-number">21</span> Words (and sentences) into vectors</h2>
+<section id="words-and-sentences-into-vectors" class="level2" data-number="18">
+<h2 data-number="18" class="anchored" data-anchor-id="words-and-sentences-into-vectors"><span class="header-section-number">18</span> Words (and sentences) into vectors</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -638,8 +646,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="sentence-representation-a-very-simplified-picture" class="level2" data-number="22">
-<h2 data-number="22" class="anchored" data-anchor-id="sentence-representation-a-very-simplified-picture"><span class="header-section-number">22</span> Sentence representation: A (very) simplified picture</h2>
+<section id="sentence-representation-a-very-simplified-picture" class="level2" data-number="19">
+<h2 data-number="19" class="anchored" data-anchor-id="sentence-representation-a-very-simplified-picture"><span class="header-section-number">19</span> Sentence representation: A (very) simplified picture</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -650,8 +658,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="title-6" class="level2" data-number="23">
-<h2 data-number="23" class="anchored" data-anchor-id="title-6"><span class="header-section-number">23</span> Title</h2>
+<section id="title-3" class="level2" data-number="20">
+<h2 data-number="20" class="anchored" data-anchor-id="title-3"><span class="header-section-number">20</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -662,8 +670,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="dataset-stanford-sentiment-treebank-sst" class="level2" data-number="24">
-<h2 data-number="24" class="anchored" data-anchor-id="dataset-stanford-sentiment-treebank-sst"><span class="header-section-number">24</span> Dataset: Stanford Sentiment Treebank (SST)</h2>
+<section id="dataset-stanford-sentiment-treebank-sst" class="level2" data-number="21">
+<h2 data-number="21" class="anchored" data-anchor-id="dataset-stanford-sentiment-treebank-sst"><span class="header-section-number">21</span> Dataset: Stanford Sentiment Treebank (SST)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -674,8 +682,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="binary-parse-tree-one-example" class="level2" data-number="25">
-<h2 data-number="25" class="anchored" data-anchor-id="binary-parse-tree-one-example"><span class="header-section-number">25</span> Binary parse tree: One example</h2>
+<section id="binary-parse-tree-one-example" class="level2" data-number="22">
+<h2 data-number="22" class="anchored" data-anchor-id="binary-parse-tree-one-example"><span class="header-section-number">22</span> Binary parse tree: One example</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -686,8 +694,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="title-7" class="level2" data-number="26">
-<h2 data-number="26" class="anchored" data-anchor-id="title-7"><span class="header-section-number">26</span> Title</h2>
+<section id="title-4" class="level2" data-number="23">
+<h2 data-number="23" class="anchored" data-anchor-id="title-4"><span class="header-section-number">23</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -698,8 +706,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="models" class="level2" data-number="27">
-<h2 data-number="27" class="anchored" data-anchor-id="models"><span class="header-section-number">27</span> Models</h2>
+<section id="models" class="level2" data-number="24">
+<h2 data-number="24" class="anchored" data-anchor-id="models"><span class="header-section-number">24</span> Models</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -710,8 +718,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="first-approach-sentence-sentiment" class="level2" data-number="28">
-<h2 data-number="28" class="anchored" data-anchor-id="first-approach-sentence-sentiment"><span class="header-section-number">28</span> First approach: Sentence + Sentiment</h2>
+<section id="first-approach-sentence-sentiment" class="level2" data-number="25">
+<h2 data-number="25" class="anchored" data-anchor-id="first-approach-sentence-sentiment"><span class="header-section-number">25</span> First approach: Sentence + Sentiment</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -722,8 +730,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="title-8" class="level2" data-number="29">
-<h2 data-number="29" class="anchored" data-anchor-id="title-8"><span class="header-section-number">29</span> Title</h2>
+<section id="title-5" class="level2" data-number="26">
+<h2 data-number="26" class="anchored" data-anchor-id="title-5"><span class="header-section-number">26</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -734,8 +742,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="title-9" class="level2" data-number="30">
-<h2 data-number="30" class="anchored" data-anchor-id="title-9"><span class="header-section-number">30</span> Title</h2>
+<section id="title-6" class="level2" data-number="27">
+<h2 data-number="27" class="anchored" data-anchor-id="title-6"><span class="header-section-number">27</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -745,9 +753,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Here we do not model order or syntax</p>
 </section>
-<section id="bag-of-words" class="level2" data-number="31">
-<h2 data-number="31" class="anchored" data-anchor-id="bag-of-words"><span class="header-section-number">31</span> Bag of Words</h2>
+<section id="bag-of-words" class="level2" data-number="28">
+<h2 data-number="28" class="anchored" data-anchor-id="bag-of-words"><span class="header-section-number">28</span> Bag of Words</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -758,8 +767,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="bag-of-words-1" class="level2" data-number="32">
-<h2 data-number="32" class="anchored" data-anchor-id="bag-of-words-1"><span class="header-section-number">32</span> Bag of Words</h2>
+<section id="bag-of-words-1" class="level2" data-number="29">
+<h2 data-number="29" class="anchored" data-anchor-id="bag-of-words-1"><span class="header-section-number">29</span> Bag of Words</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -769,9 +778,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Because you don’t consider order the example in the sentece is the same, so there is a flaw in this model</p>
 </section>
-<section id="turning-words-into-numbers" class="level2" data-number="33">
-<h2 data-number="33" class="anchored" data-anchor-id="turning-words-into-numbers"><span class="header-section-number">33</span> Turning words into numbers</h2>
+<section id="turning-words-into-numbers" class="level2" data-number="30">
+<h2 data-number="30" class="anchored" data-anchor-id="turning-words-into-numbers"><span class="header-section-number">30</span> Turning words into numbers</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -782,8 +792,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="one-hot-vectors-select-word-embeddings" class="level2" data-number="34">
-<h2 data-number="34" class="anchored" data-anchor-id="one-hot-vectors-select-word-embeddings"><span class="header-section-number">34</span> One-hot vectors select word embeddings</h2>
+<section id="one-hot-vectors-select-word-embeddings" class="level2" data-number="31">
+<h2 data-number="31" class="anchored" data-anchor-id="one-hot-vectors-select-word-embeddings"><span class="header-section-number">31</span> One-hot vectors select word embeddings</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -794,8 +804,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="title-10" class="level2" data-number="35">
-<h2 data-number="35" class="anchored" data-anchor-id="title-10"><span class="header-section-number">35</span> Title</h2>
+<section id="title-7" class="level2" data-number="32">
+<h2 data-number="32" class="anchored" data-anchor-id="title-7"><span class="header-section-number">32</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -806,8 +816,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="title-11" class="level2" data-number="36">
-<h2 data-number="36" class="anchored" data-anchor-id="title-11"><span class="header-section-number">36</span> Title</h2>
+<section id="title-8" class="level2" data-number="33">
+<h2 data-number="33" class="anchored" data-anchor-id="title-8"><span class="header-section-number">33</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -817,9 +827,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Now because the vector representation can squezze more detail in the embedding about the word, then this increase in dimensionality is better</p>
 </section>
-<section id="continuous-bag-of-words-cbow" class="level2" data-number="37">
-<h2 data-number="37" class="anchored" data-anchor-id="continuous-bag-of-words-cbow"><span class="header-section-number">37</span> Continuous Bag of Words (CBOW)</h2>
+<section id="continuous-bag-of-words-cbow" class="level2" data-number="34">
+<h2 data-number="34" class="anchored" data-anchor-id="continuous-bag-of-words-cbow"><span class="header-section-number">34</span> Continuous Bag of Words (CBOW)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -830,8 +841,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="recall-matrix-multiplication" class="level2" data-number="38">
-<h2 data-number="38" class="anchored" data-anchor-id="recall-matrix-multiplication"><span class="header-section-number">38</span> Recall: Matrix Multiplication</h2>
+<section id="recall-matrix-multiplication" class="level2" data-number="35">
+<h2 data-number="35" class="anchored" data-anchor-id="recall-matrix-multiplication"><span class="header-section-number">35</span> Recall: Matrix Multiplication</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -842,8 +853,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="what-about-this" class="level2" data-number="39">
-<h2 data-number="39" class="anchored" data-anchor-id="what-about-this"><span class="header-section-number">39</span> What about this?</h2>
+<section id="what-about-this" class="level2" data-number="36">
+<h2 data-number="36" class="anchored" data-anchor-id="what-about-this"><span class="header-section-number">36</span> What about this?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -853,9 +864,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Here the problem of just concatenating is that you dont know the size of the W to multiply because the sentence embeddings are vary in length</p>
 </section>
-<section id="what-about-this-1" class="level2" data-number="40">
-<h2 data-number="40" class="anchored" data-anchor-id="what-about-this-1"><span class="header-section-number">40</span> What about this?</h2>
+<section id="what-about-this-1" class="level2" data-number="37">
+<h2 data-number="37" class="anchored" data-anchor-id="what-about-this-1"><span class="header-section-number">37</span> What about this?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -866,8 +878,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="title-12" class="level2" data-number="41">
-<h2 data-number="41" class="anchored" data-anchor-id="title-12"><span class="header-section-number">41</span> Title</h2>
+<section id="title-9" class="level2" data-number="38">
+<h2 data-number="38" class="anchored" data-anchor-id="title-9"><span class="header-section-number">38</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -878,8 +890,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="title-13" class="level2" data-number="42">
-<h2 data-number="42" class="anchored" data-anchor-id="title-13"><span class="header-section-number">42</span> Title</h2>
+<section id="title-10" class="level2" data-number="39">
+<h2 data-number="39" class="anchored" data-anchor-id="title-10"><span class="header-section-number">39</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -889,9 +901,7 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
-</section>
-<section id="mn.-prl-at" class="level2" data-number="43">
-<h2 data-number="43" class="anchored" data-anchor-id="mn.-prl-at"><span class="header-section-number">43</span> mn. PRL AT</h2>
+<p>Here we just learn more layers, so more complexity to the model</p>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -902,8 +912,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="what-about-this-2" class="level2" data-number="44">
-<h2 data-number="44" class="anchored" data-anchor-id="what-about-this-2"><span class="header-section-number">44</span> What about this?</h2>
+<section id="what-about-this-2" class="level2" data-number="40">
+<h2 data-number="40" class="anchored" data-anchor-id="what-about-this-2"><span class="header-section-number">40</span> What about this?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -913,9 +923,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Deeper is not always better because we might start to overfit, and at test time it will not generalize well</p>
 </section>
-<section id="question" class="level2" data-number="45">
-<h2 data-number="45" class="anchored" data-anchor-id="question"><span class="header-section-number">45</span> Question</h2>
+<section id="question" class="level2" data-number="41">
+<h2 data-number="41" class="anchored" data-anchor-id="question"><span class="header-section-number">41</span> Question</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -926,8 +937,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="title-14" class="level2" data-number="46">
-<h2 data-number="46" class="anchored" data-anchor-id="title-14"><span class="header-section-number">46</span> Title</h2>
+<section id="title-11" class="level2" data-number="42">
+<h2 data-number="42" class="anchored" data-anchor-id="title-11"><span class="header-section-number">42</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -938,8 +949,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="deep-cbow-with-pretrained-embeddings" class="level2" data-number="47">
-<h2 data-number="47" class="anchored" data-anchor-id="deep-cbow-with-pretrained-embeddings"><span class="header-section-number">47</span> Deep CBOW with pretrained embeddings</h2>
+<section id="deep-cbow-with-pretrained-embeddings" class="level2" data-number="43">
+<h2 data-number="43" class="anchored" data-anchor-id="deep-cbow-with-pretrained-embeddings"><span class="header-section-number">43</span> Deep CBOW with pretrained embeddings</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -949,9 +960,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>It will be easier if the models already know the word meaning and then it can get the sentoment fo the sentece. Here we have a prior which is our word representation</p>
 </section>
-<section id="title-15" class="level2" data-number="48">
-<h2 data-number="48" class="anchored" data-anchor-id="title-15"><span class="header-section-number">48</span> Title</h2>
+<section id="title-12" class="level2" data-number="44">
+<h2 data-number="44" class="anchored" data-anchor-id="title-12"><span class="header-section-number">44</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -961,9 +973,14 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>There is two paradigms by using pre-trained embeddings</p>
+<ol type="1">
+<li>You can keep these representations frozen: so not for training</li>
+<li>or you fine-tune the word representations toguether with your task. This means the word represenation becomes more specialized for the task</li>
+</ol>
 </section>
-<section id="recap-training-a-neural-network" class="level2" data-number="49">
-<h2 data-number="49" class="anchored" data-anchor-id="recap-training-a-neural-network"><span class="header-section-number">49</span> Recap: Training a neural network</h2>
+<section id="recap-training-a-neural-network" class="level2" data-number="45">
+<h2 data-number="45" class="anchored" data-anchor-id="recap-training-a-neural-network"><span class="header-section-number">45</span> Recap: Training a neural network</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -974,8 +991,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="cross-entropy-loss" class="level2" data-number="50">
-<h2 data-number="50" class="anchored" data-anchor-id="cross-entropy-loss"><span class="header-section-number">50</span> Cross Entropy Loss</h2>
+<section id="cross-entropy-loss" class="level2" data-number="46">
+<h2 data-number="46" class="anchored" data-anchor-id="cross-entropy-loss"><span class="header-section-number">46</span> Cross Entropy Loss</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -986,8 +1003,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="softmax" class="level2" data-number="51">
-<h2 data-number="51" class="anchored" data-anchor-id="softmax"><span class="header-section-number">51</span> Softmax</h2>
+<section id="softmax" class="level2" data-number="47">
+<h2 data-number="47" class="anchored" data-anchor-id="softmax"><span class="header-section-number">47</span> Softmax</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -998,8 +1015,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="title-16" class="level2" data-number="52">
-<h2 data-number="52" class="anchored" data-anchor-id="title-16"><span class="header-section-number">52</span> Title</h2>
+<section id="title-13" class="level2" data-number="48">
+<h2 data-number="48" class="anchored" data-anchor-id="title-13"><span class="header-section-number">48</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1009,9 +1026,11 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Feed forward NNs were not able to contain word order information, RNN can do it</p>
+<p>Here the words would be conditioned in the previous words</p>
 </section>
-<section id="introduction-recurrent-neural-network-rnn" class="level2" data-number="53">
-<h2 data-number="53" class="anchored" data-anchor-id="introduction-recurrent-neural-network-rnn"><span class="header-section-number">53</span> Introduction: Recurrent Neural Network (RNN)</h2>
+<section id="introduction-recurrent-neural-network-rnn" class="level2" data-number="49">
+<h2 data-number="49" class="anchored" data-anchor-id="introduction-recurrent-neural-network-rnn"><span class="header-section-number">49</span> Introduction: Recurrent Neural Network (RNN)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1022,8 +1041,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="introduction-recurrent-neural-network-rnn-1" class="level2" data-number="54">
-<h2 data-number="54" class="anchored" data-anchor-id="introduction-recurrent-neural-network-rnn-1"><span class="header-section-number">54</span> Introduction: Recurrent Neural Network (RNN)</h2>
+<section id="introduction-recurrent-neural-network-rnn-1" class="level2" data-number="50">
+<h2 data-number="50" class="anchored" data-anchor-id="introduction-recurrent-neural-network-rnn-1"><span class="header-section-number">50</span> Introduction: Recurrent Neural Network (RNN)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1033,9 +1052,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>6 words 6 times steps</p>
 </section>
-<section id="introduction-recurrent-neural-network-rnn-2" class="level2" data-number="55">
-<h2 data-number="55" class="anchored" data-anchor-id="introduction-recurrent-neural-network-rnn-2"><span class="header-section-number">55</span> Introduction: Recurrent Neural Network (RNN)</h2>
+<section id="introduction-recurrent-neural-network-rnn-2" class="level2" data-number="51">
+<h2 data-number="51" class="anchored" data-anchor-id="introduction-recurrent-neural-network-rnn-2"><span class="header-section-number">51</span> Introduction: Recurrent Neural Network (RNN)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1046,8 +1066,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="introduction-unfolding-the-rnn" class="level2" data-number="56">
-<h2 data-number="56" class="anchored" data-anchor-id="introduction-unfolding-the-rnn"><span class="header-section-number">56</span> Introduction: Unfolding the RNN</h2>
+<section id="introduction-unfolding-the-rnn" class="level2" data-number="52">
+<h2 data-number="52" class="anchored" data-anchor-id="introduction-unfolding-the-rnn"><span class="header-section-number">52</span> Introduction: Unfolding the RNN</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1057,9 +1077,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>The W and the R amtrix are the same, they are shared</p>
 </section>
-<section id="introduction-making-a-prediction" class="level2" data-number="57">
-<h2 data-number="57" class="anchored" data-anchor-id="introduction-making-a-prediction"><span class="header-section-number">57</span> Introduction: Making a prediction</h2>
+<section id="introduction-making-a-prediction" class="level2" data-number="53">
+<h2 data-number="53" class="anchored" data-anchor-id="introduction-making-a-prediction"><span class="header-section-number">53</span> Introduction: Making a prediction</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1069,9 +1090,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>When you reach the end of the sentence, then you use the ouput vector for this word as the sentence representation. We can do this vecause this last time step was influenced by the entire history so that is why we substitute, this as our sentence representation. And then we can project it as 5 dimensional representation and then we take the argmax or softmax based on this representation</p>
 </section>
-<section id="introduction-the-vanishing-gradient-problem" class="level2" data-number="58">
-<h2 data-number="58" class="anchored" data-anchor-id="introduction-the-vanishing-gradient-problem"><span class="header-section-number">58</span> Introduction: The vanishing gradient problem</h2>
+<section id="introduction-the-vanishing-gradient-problem" class="level2" data-number="54">
+<h2 data-number="54" class="anchored" data-anchor-id="introduction-the-vanishing-gradient-problem"><span class="header-section-number">54</span> Introduction: The vanishing gradient problem</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1081,9 +1103,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>They tend to surfer from the vanishing problem</p>
 </section>
-<section id="introduction-the-vanishing-gradient-problem-1" class="level2" data-number="59">
-<h2 data-number="59" class="anchored" data-anchor-id="introduction-the-vanishing-gradient-problem-1"><span class="header-section-number">59</span> Introduction: The vanishing gradient problem</h2>
+<section id="introduction-the-vanishing-gradient-problem-1" class="level2" data-number="55">
+<h2 data-number="55" class="anchored" data-anchor-id="introduction-the-vanishing-gradient-problem-1"><span class="header-section-number">55</span> Introduction: The vanishing gradient problem</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1093,9 +1116,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Here 5 num unrolls N refers to the amount of words you have in a sentence</p>
 </section>
-<section id="what-about-this-3" class="level2" data-number="60">
-<h2 data-number="60" class="anchored" data-anchor-id="what-about-this-3"><span class="header-section-number">60</span> What about this?</h2>
+<section id="what-about-this-3" class="level2" data-number="56">
+<h2 data-number="56" class="anchored" data-anchor-id="what-about-this-3"><span class="header-section-number">56</span> What about this?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1106,8 +1130,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="rnn-vs-ann" class="level2" data-number="61">
-<h2 data-number="61" class="anchored" data-anchor-id="rnn-vs-ann"><span class="header-section-number">61</span> RNN vs ANN</h2>
+<section id="rnn-vs-ann" class="level2" data-number="57">
+<h2 data-number="57" class="anchored" data-anchor-id="rnn-vs-ann"><span class="header-section-number">57</span> RNN vs ANN</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1117,9 +1141,8 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
-</section>
-<section id="title-17" class="level2" data-number="62">
-<h2 data-number="62" class="anchored" data-anchor-id="title-17"><span class="header-section-number">62</span> Title</h2>
+<p>In the ANN you have different parameters for your matrix in each layer and the problem could cancel out. However even in ANN you can run into vanishing/exploding gradients</p>
+<!-- ## Title -->
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1130,8 +1153,10 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="long-short-term-memory-lstm" class="level2" data-number="63">
-<h2 data-number="63" class="anchored" data-anchor-id="long-short-term-memory-lstm"><span class="header-section-number">63</span> Long Short-Term Memory (LSTM)</h2>
+<section id="long-short-term-memory-lstm" class="level2" data-number="58">
+<h2 data-number="58" class="anchored" data-anchor-id="long-short-term-memory-lstm"><span class="header-section-number">58</span> Long Short-Term Memory (LSTM)</h2>
+<p>CV: resNET skip connections to aliviate exploding/vanishing gradients</p>
+<p>NLP: LSTM were introduced</p>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1141,9 +1166,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>LSTM are good to deal with long-term dependencies because they are able to cpe with exploding/vanishing gradients</p>
 </section>
-<section id="lstm-core-idea" class="level2" data-number="64">
-<h2 data-number="64" class="anchored" data-anchor-id="lstm-core-idea"><span class="header-section-number">64</span> LSTM: Core idea</h2>
+<section id="lstm-core-idea" class="level2" data-number="59">
+<h2 data-number="59" class="anchored" data-anchor-id="lstm-core-idea"><span class="header-section-number">59</span> LSTM: Core idea</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1153,9 +1179,11 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>The cells are supposed to capture the long term memory information from the sentence</p>
+<p>This is good because backpropagation through time with have this partially uninterrupted gradient flow</p>
 </section>
-<section id="lstms" class="level2" data-number="65">
-<h2 data-number="65" class="anchored" data-anchor-id="lstms"><span class="header-section-number">65</span> LSTMs</h2>
+<section id="lstms" class="level2" data-number="60">
+<h2 data-number="60" class="anchored" data-anchor-id="lstms"><span class="header-section-number">60</span> LSTMs</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1165,9 +1193,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Now the activation function here would be the LSTM, so each copy would contain an LSTM cell where before we have one layer and now we will have the cell with <strong>four different layers</strong> interacting with each other</p>
 </section>
-<section id="lstm-cell" class="level2" data-number="66">
-<h2 data-number="66" class="anchored" data-anchor-id="lstm-cell"><span class="header-section-number">66</span> LSTM cell</h2>
+<section id="lstm-cell" class="level2" data-number="61">
+<h2 data-number="61" class="anchored" data-anchor-id="lstm-cell"><span class="header-section-number">61</span> LSTM cell</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1177,9 +1206,16 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>3 gates:</p>
+<ul>
+<li>forget gate</li>
+<li>input gate</li>
+<li>output gate</li>
+</ul>
+<p>c_t is the memory cell, here we do not apply any weights, we just do multiplication and summation. This is why people call it as a conveyers belt. So here we forget information, we add information but information flows interrupted</p>
 </section>
-<section id="lstm-cell-state" class="level2" data-number="67">
-<h2 data-number="67" class="anchored" data-anchor-id="lstm-cell-state"><span class="header-section-number">67</span> LSTM: Cell state</h2>
+<section id="lstm-cell-state" class="level2" data-number="62">
+<h2 data-number="62" class="anchored" data-anchor-id="lstm-cell-state"><span class="header-section-number">62</span> LSTM: Cell state</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1190,8 +1226,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="lstm-forget-gate" class="level2" data-number="68">
-<h2 data-number="68" class="anchored" data-anchor-id="lstm-forget-gate"><span class="header-section-number">68</span> LSTM: Forget gate</h2>
+<section id="lstm-forget-gate" class="level2" data-number="63">
+<h2 data-number="63" class="anchored" data-anchor-id="lstm-forget-gate"><span class="header-section-number">63</span> LSTM: Forget gate</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1202,8 +1238,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="lstm-candidate-cell" class="level2" data-number="69">
-<h2 data-number="69" class="anchored" data-anchor-id="lstm-candidate-cell"><span class="header-section-number">69</span> LSTM: Candidate cell</h2>
+<section id="lstm-candidate-cell" class="level2" data-number="64">
+<h2 data-number="64" class="anchored" data-anchor-id="lstm-candidate-cell"><span class="header-section-number">64</span> LSTM: Candidate cell</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1214,8 +1250,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="lstm-input-gate" class="level2" data-number="70">
-<h2 data-number="70" class="anchored" data-anchor-id="lstm-input-gate"><span class="header-section-number">70</span> LSTM: Input gate</h2>
+<section id="lstm-input-gate" class="level2" data-number="65">
+<h2 data-number="65" class="anchored" data-anchor-id="lstm-input-gate"><span class="header-section-number">65</span> LSTM: Input gate</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1226,8 +1262,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="lstm" class="level2" data-number="71">
-<h2 data-number="71" class="anchored" data-anchor-id="lstm"><span class="header-section-number">71</span> LSTM</h2>
+<section id="lstm" class="level2" data-number="66">
+<h2 data-number="66" class="anchored" data-anchor-id="lstm"><span class="header-section-number">66</span> LSTM</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1238,8 +1274,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="lstm-output-gate" class="level2" data-number="72">
-<h2 data-number="72" class="anchored" data-anchor-id="lstm-output-gate"><span class="header-section-number">72</span> LSTM: Output gate</h2>
+<section id="lstm-output-gate" class="level2" data-number="67">
+<h2 data-number="67" class="anchored" data-anchor-id="lstm-output-gate"><span class="header-section-number">67</span> LSTM: Output gate</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1249,9 +1285,29 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Here we are saying what do I want to keep from my long term memory. The ouput of that is going to be my new output vector.</p>
+<section id="recap" class="level3" data-number="67.1">
+<h3 data-number="67.1" class="anchored" data-anchor-id="recap"><span class="header-section-number">67.1</span> Recap</h3>
+<center>
+<img src="imgs/page_66.png" class="w575 img-fluid">
+</center>
+<pre></pre>
+<ol type="1">
+<li>Use the <strong>forget gate</strong> to get the input word x_t and the previous h_{t-1} with that you do apply softmax which then you multiply to the cell state which is the memory.</li>
+</ol>
+<p>Here if you multiply by 1, then you wan to keep those items in memory. If 0 then you do not want to conserve them.</p>
+<ol start="2" type="1">
+<li><p>We use the <strong>candidate gate</strong> where you mutliply the ouput of the tanh which gives candidate values between -1 and 1 with some scaled softmax from the <strong>input gate</strong>. With this we selectively add what to conserve in the memory cell</p></li>
+<li><p>We update the values of the <strong>ouput gate</strong> which we take: from the cell memory values between -1 to 1 and we multiply these by a softmax version from the input words x_t and also the previous state h_{t-1}</p></li>
+</ol>
+<ul>
+<li>Step 1 &amp; 2 is called <strong>long-term memory</strong></li>
+<li>Step 3, is the <strong>short term memory</strong>. This is a filtered version of the long-term memory.</li>
+</ul>
 </section>
-<section id="long-short-term-memory-lstm-1" class="level2" data-number="73">
-<h2 data-number="73" class="anchored" data-anchor-id="long-short-term-memory-lstm-1"><span class="header-section-number">73</span> Long Short-Term Memory (LSTM)</h2>
+</section>
+<section id="long-short-term-memory-lstm-1" class="level2" data-number="68">
+<h2 data-number="68" class="anchored" data-anchor-id="long-short-term-memory-lstm-1"><span class="header-section-number">68</span> Long Short-Term Memory (LSTM)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1261,9 +1317,13 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<ul>
+<li>Cell state is the <strong>long term memory</strong></li>
+<li>Hidden state is your <strong>short term memory</strong></li>
+</ul>
 </section>
-<section id="lstms-applications-success-in-nlp" class="level2" data-number="74">
-<h2 data-number="74" class="anchored" data-anchor-id="lstms-applications-success-in-nlp"><span class="header-section-number">74</span> LSTMs: Applications &amp; Success in NLP</h2>
+<section id="lstms-applications-success-in-nlp" class="level2" data-number="69">
+<h2 data-number="69" class="anchored" data-anchor-id="lstms-applications-success-in-nlp"><span class="header-section-number">69</span> LSTMs: Applications &amp; Success in NLP</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1273,9 +1333,7 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
-</section>
-<section id="title-18" class="level2" data-number="75">
-<h2 data-number="75" class="anchored" data-anchor-id="title-18"><span class="header-section-number">75</span> Title</h2>
+<!-- ## Title -->
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1286,8 +1344,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="qa-rfar-arr-pparnppaaanantatiannaiasnthkh-aiaila" class="level2" data-number="76">
-<h2 data-number="76" class="anchored" data-anchor-id="qa-rfar-arr-pparnppaaanantatiannaiasnthkh-aiaila"><span class="header-section-number">76</span> QA RFAR ARR PpARnPpaAanantatiannaiasnthkh AIAILA</h2>
+<section id="summary-fo-models-seen-so-far" class="level2" data-number="70">
+<h2 data-number="70" class="anchored" data-anchor-id="summary-fo-models-seen-so-far"><span class="header-section-number">70</span> Summary fo models seen so far</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1297,9 +1355,15 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Sequence models :</p>
+<ul>
+<li>RNN</li>
+<li>LSTM</li>
+</ul>
+<p>Tree-structure models are the ones that are also sensitive to the <strong>syntactic structure</strong></p>
 </section>
-<section id="second-approach-sentence-sentiment-syntax" class="level2" data-number="77">
-<h2 data-number="77" class="anchored" data-anchor-id="second-approach-sentence-sentiment-syntax"><span class="header-section-number">77</span> Second approach: Sentence + Sentiment + Syntax</h2>
+<section id="second-approach-sentence-sentiment-syntax" class="level2" data-number="71">
+<h2 data-number="71" class="anchored" data-anchor-id="second-approach-sentence-sentiment-syntax"><span class="header-section-number">71</span> Second approach: Sentence + Sentiment + Syntax</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1310,8 +1374,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="exploiting-tree-structure" class="level2" data-number="78">
-<h2 data-number="78" class="anchored" data-anchor-id="exploiting-tree-structure"><span class="header-section-number">78</span> Exploiting tree structure</h2>
+<section id="exploiting-tree-structure" class="level2" data-number="72">
+<h2 data-number="72" class="anchored" data-anchor-id="exploiting-tree-structure"><span class="header-section-number">72</span> Exploiting tree structure</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1321,9 +1385,11 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p><strong>Compositionality</strong> was this idea that you cannot derive the meaning of sentences from the meaning of the individual words.</p>
+<p>In the models seen so far, we were getting the sentence representation deriving it from the individual words. But we were not taken the syntactic structure into account. These Tree LSTM allow us to do both. So we will get the meaning of the words and also the rules that combine them</p>
 </section>
-<section id="why-would-it-be-useful" class="level2" data-number="79">
-<h2 data-number="79" class="anchored" data-anchor-id="why-would-it-be-useful"><span class="header-section-number">79</span> Why would it be useful?</h2>
+<section id="why-would-it-be-useful" class="level2" data-number="73">
+<h2 data-number="73" class="anchored" data-anchor-id="why-would-it-be-useful"><span class="header-section-number">73</span> Why would it be useful?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1334,8 +1400,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="constituency-parse" class="level2" data-number="80">
-<h2 data-number="80" class="anchored" data-anchor-id="constituency-parse"><span class="header-section-number">80</span> Constituency Parse</h2>
+<section id="constituency-parse" class="level2" data-number="74">
+<h2 data-number="74" class="anchored" data-anchor-id="constituency-parse"><span class="header-section-number">74</span> Constituency Parse</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1346,8 +1412,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="recurrent-vs-tree-recursive-nn" class="level2" data-number="81">
-<h2 data-number="81" class="anchored" data-anchor-id="recurrent-vs-tree-recursive-nn"><span class="header-section-number">81</span> Recurrent vs Tree Recursive NN</h2>
+<section id="recurrent-vs-tree-recursive-nn" class="level2" data-number="75">
+<h2 data-number="75" class="anchored" data-anchor-id="recurrent-vs-tree-recursive-nn"><span class="header-section-number">75</span> Recurrent vs Tree Recursive NN</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1357,9 +1423,12 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Recurrent NNS that are LSTMs but you also have tree RNN which are <strong>recursive</strong></p>
+<p>If you input “I loved this movie” to the RNN you will not be able to model, the phrase independetly of the previous words in the sentence. So for instance “this movie” is dependent of having seen “I Loved” that means I cannot extract separate phrase representations from your sentence representations</p>
+<p>This is different in the three recursive NN, because you explicitly first compose “this movie” into a <strong>phrase representation</strong> and then you would make it dependent on the previous word while you go up in the three</p>
 </section>
-<section id="tree-recursive-nn" class="level2" data-number="82">
-<h2 data-number="82" class="anchored" data-anchor-id="tree-recursive-nn"><span class="header-section-number">82</span> Tree Recursive NN</h2>
+<section id="tree-recursive-nn" class="level2" data-number="76">
+<h2 data-number="76" class="anchored" data-anchor-id="tree-recursive-nn"><span class="header-section-number">76</span> Tree Recursive NN</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1370,8 +1439,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="practical-ii-data-set-stanford-sentiment-treebank-sst" class="level2" data-number="83">
-<h2 data-number="83" class="anchored" data-anchor-id="practical-ii-data-set-stanford-sentiment-treebank-sst"><span class="header-section-number">83</span> Practical II data set: Stanford Sentiment Treebank (SST)</h2>
+<section id="practical-ii-data-set-stanford-sentiment-treebank-sst" class="level2" data-number="77">
+<h2 data-number="77" class="anchored" data-anchor-id="practical-ii-data-set-stanford-sentiment-treebank-sst"><span class="header-section-number">77</span> Practical II data set: Stanford Sentiment Treebank (SST)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1382,8 +1451,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="tree-lstms-generalize-lstm-to-tree-structure" class="level2" data-number="84">
-<h2 data-number="84" class="anchored" data-anchor-id="tree-lstms-generalize-lstm-to-tree-structure"><span class="header-section-number">84</span> Tree LSTMs: Generalize LSTM to tree structure</h2>
+<section id="tree-lstms-generalize-lstm-to-tree-structure" class="level2" data-number="78">
+<h2 data-number="78" class="anchored" data-anchor-id="tree-lstms-generalize-lstm-to-tree-structure"><span class="header-section-number">78</span> Tree LSTMs: Generalize LSTM to tree structure</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1393,9 +1462,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>We can input multiple children in each time step</p>
 </section>
-<section id="tree-lstms" class="level2" data-number="85">
-<h2 data-number="85" class="anchored" data-anchor-id="tree-lstms"><span class="header-section-number">85</span> Tree LSTMs</h2>
+<section id="tree-lstms" class="level2" data-number="79">
+<h2 data-number="79" class="anchored" data-anchor-id="tree-lstms"><span class="header-section-number">79</span> Tree LSTMs</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1405,9 +1475,13 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<ol type="1">
+<li><p>You can use any number of children that you want but you will loose child order information</p></li>
+<li><p>N-ary Tree LSTM: in practical Binary parse tree</p></li>
+</ol>
 </section>
-<section id="child-sum-tree-lstm" class="level2" data-number="86">
-<h2 data-number="86" class="anchored" data-anchor-id="child-sum-tree-lstm"><span class="header-section-number">86</span> Child-Sum Tree LSTM</h2>
+<section id="child-sum-tree-lstm" class="level2" data-number="80">
+<h2 data-number="80" class="anchored" data-anchor-id="child-sum-tree-lstm"><span class="header-section-number">80</span> Child-Sum Tree LSTM</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1418,8 +1492,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="child-sum-tree-lstm-1" class="level2" data-number="87">
-<h2 data-number="87" class="anchored" data-anchor-id="child-sum-tree-lstm-1"><span class="header-section-number">87</span> Child-Sum Tree LSTM</h2>
+<section id="child-sum-tree-lstm-1" class="level2" data-number="81">
+<h2 data-number="81" class="anchored" data-anchor-id="child-sum-tree-lstm-1"><span class="header-section-number">81</span> Child-Sum Tree LSTM</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1430,8 +1504,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="n-ary-tree-lstm" class="level2" data-number="88">
-<h2 data-number="88" class="anchored" data-anchor-id="n-ary-tree-lstm"><span class="header-section-number">88</span> N-ary Tree LSTM</h2>
+<section id="n-ary-tree-lstm" class="level2" data-number="82">
+<h2 data-number="82" class="anchored" data-anchor-id="n-ary-tree-lstm"><span class="header-section-number">82</span> N-ary Tree LSTM</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1441,9 +1515,19 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>That means I have to input separatly to the model because they have separate parameters matrices, so you not just summed them up.</p>
 </section>
-<section id="n-ary-tree-lstm-1" class="level2" data-number="89">
-<h2 data-number="89" class="anchored" data-anchor-id="n-ary-tree-lstm-1"><span class="header-section-number">89</span> N-ary Tree LSTM</h2>
+<section id="n-ary-tree-lstm-1" class="level2" data-number="83">
+<h2 data-number="83" class="anchored" data-anchor-id="n-ary-tree-lstm-1"><span class="header-section-number">83</span> N-ary Tree LSTM</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_66.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 66</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1454,8 +1538,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="n-ary-tree-lstm-2" class="level2" data-number="90">
-<h2 data-number="90" class="anchored" data-anchor-id="n-ary-tree-lstm-2"><span class="header-section-number">90</span> N-ary Tree LSTM</h2>
+<section id="n-ary-tree-lstm-2" class="level2" data-number="84">
+<h2 data-number="84" class="anchored" data-anchor-id="n-ary-tree-lstm-2"><span class="header-section-number">84</span> N-ary Tree LSTM</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1465,9 +1549,20 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p><span class="math inline">\(u_j\)</span> is for the candidate gate</p>
+<p>For each child <span class="math inline">\(h_j\)</span>, we have a separate parameter matrix and you ill be summing</p>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_73.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 73</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
 </section>
-<section id="lstms-vs-tree-lstms" class="level2" data-number="91">
-<h2 data-number="91" class="anchored" data-anchor-id="lstms-vs-tree-lstms"><span class="header-section-number">91</span> LSTMs vs Tree-LSTMs</h2>
+<section id="lstms-vs-tree-lstms" class="level2" data-number="85">
+<h2 data-number="85" class="anchored" data-anchor-id="lstms-vs-tree-lstms"><span class="header-section-number">85</span> LSTMs vs Tree-LSTMs</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1477,9 +1572,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Tree-LSTM general, general LSTM its just a Tree-LSTM with one child. So if you have one child then you have your standard tree LSTM</p>
 </section>
-<section id="title-19" class="level2" data-number="92">
-<h2 data-number="92" class="anchored" data-anchor-id="title-19"><span class="header-section-number">92</span> Title</h2>
+<section id="title-14" class="level2" data-number="86">
+<h2 data-number="86" class="anchored" data-anchor-id="title-14"><span class="header-section-number">86</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1490,8 +1586,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="title-20" class="level2" data-number="93">
-<h2 data-number="93" class="anchored" data-anchor-id="title-20"><span class="header-section-number">93</span> Title</h2>
+<section id="title-15" class="level2" data-number="87">
+<h2 data-number="87" class="anchored" data-anchor-id="title-15"><span class="header-section-number">87</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1502,8 +1598,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="building-a-tree-with-a-transition-sequence" class="level2" data-number="94">
-<h2 data-number="94" class="anchored" data-anchor-id="building-a-tree-with-a-transition-sequence"><span class="header-section-number">94</span> Building a tree with a transition sequence</h2>
+<section id="building-a-tree-with-a-transition-sequence" class="level2" data-number="88">
+<h2 data-number="88" class="anchored" data-anchor-id="building-a-tree-with-a-transition-sequence"><span class="header-section-number">88</span> Building a tree with a transition sequence</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1514,8 +1610,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="transition-sequence-example" class="level2" data-number="95">
-<h2 data-number="95" class="anchored" data-anchor-id="transition-sequence-example"><span class="header-section-number">95</span> Transition sequence example</h2>
+<section id="transition-sequence-example" class="level2" data-number="89">
+<h2 data-number="89" class="anchored" data-anchor-id="transition-sequence-example"><span class="header-section-number">89</span> Transition sequence example</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1526,8 +1622,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="transition-sequence-example-1" class="level2" data-number="96">
-<h2 data-number="96" class="anchored" data-anchor-id="transition-sequence-example-1"><span class="header-section-number">96</span> Transition sequence example</h2>
+<section id="transition-sequence-example-1" class="level2" data-number="90">
+<h2 data-number="90" class="anchored" data-anchor-id="transition-sequence-example-1"><span class="header-section-number">90</span> Transition sequence example</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1538,8 +1634,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="transition-sequence-example-2" class="level2" data-number="97">
-<h2 data-number="97" class="anchored" data-anchor-id="transition-sequence-example-2"><span class="header-section-number">97</span> Transition sequence example</h2>
+<section id="transition-sequence-example-2" class="level2" data-number="91">
+<h2 data-number="91" class="anchored" data-anchor-id="transition-sequence-example-2"><span class="header-section-number">91</span> Transition sequence example</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1550,8 +1646,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="transition-sequence-example-3" class="level2" data-number="98">
-<h2 data-number="98" class="anchored" data-anchor-id="transition-sequence-example-3"><span class="header-section-number">98</span> Transition sequence example</h2>
+<section id="transition-sequence-example-3" class="level2" data-number="92">
+<h2 data-number="92" class="anchored" data-anchor-id="transition-sequence-example-3"><span class="header-section-number">92</span> Transition sequence example</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1562,8 +1658,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="transition-sequence-example-4" class="level2" data-number="99">
-<h2 data-number="99" class="anchored" data-anchor-id="transition-sequence-example-4"><span class="header-section-number">99</span> Transition sequence example</h2>
+<section id="transition-sequence-example-4" class="level2" data-number="93">
+<h2 data-number="93" class="anchored" data-anchor-id="transition-sequence-example-4"><span class="header-section-number">93</span> Transition sequence example</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1574,8 +1670,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="transition-sequence-example-5" class="level2" data-number="100">
-<h2 data-number="100" class="anchored" data-anchor-id="transition-sequence-example-5"><span class="header-section-number">100</span> Transition sequence example</h2>
+<section id="transition-sequence-example-5" class="level2" data-number="94">
+<h2 data-number="94" class="anchored" data-anchor-id="transition-sequence-example-5"><span class="header-section-number">94</span> Transition sequence example</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1586,8 +1682,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="transition-sequence-example-6" class="level2" data-number="101">
-<h2 data-number="101" class="anchored" data-anchor-id="transition-sequence-example-6"><span class="header-section-number">101</span> Transition sequence example</h2>
+<section id="transition-sequence-example-6" class="level2" data-number="95">
+<h2 data-number="95" class="anchored" data-anchor-id="transition-sequence-example-6"><span class="header-section-number">95</span> Transition sequence example</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1598,8 +1694,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="transition-sequence-example-7" class="level2" data-number="102">
-<h2 data-number="102" class="anchored" data-anchor-id="transition-sequence-example-7"><span class="header-section-number">102</span> Transition sequence example</h2>
+<section id="transition-sequence-example-7" class="level2" data-number="96">
+<h2 data-number="96" class="anchored" data-anchor-id="transition-sequence-example-7"><span class="header-section-number">96</span> Transition sequence example</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1610,8 +1706,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="title-21" class="level2" data-number="103">
-<h2 data-number="103" class="anchored" data-anchor-id="title-21"><span class="header-section-number">103</span> Title</h2>
+<section id="title-16" class="level2" data-number="97">
+<h2 data-number="97" class="anchored" data-anchor-id="title-16"><span class="header-section-number">97</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1621,9 +1717,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Because we are doing this in sequence so putting thins on the stack and then to the tree we cannot dot his in parallel, so this is slow. Thus, we want to do mini-batch where you process multiple sentences at the same time and</p>
 </section>
-<section id="transition-sequence-example-mini-batched" class="level2" data-number="104">
-<h2 data-number="104" class="anchored" data-anchor-id="transition-sequence-example-mini-batched"><span class="header-section-number">104</span> Transition sequence example (mini-batched)</h2>
+<section id="transition-sequence-example-mini-batched" class="level2" data-number="98">
+<h2 data-number="98" class="anchored" data-anchor-id="transition-sequence-example-mini-batched"><span class="header-section-number">98</span> Transition sequence example (mini-batched)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1634,8 +1731,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="transition-sequence-example-mini-batched-1" class="level2" data-number="105">
-<h2 data-number="105" class="anchored" data-anchor-id="transition-sequence-example-mini-batched-1"><span class="header-section-number">105</span> Transition sequence example (mini-batched)</h2>
+<section id="transition-sequence-example-mini-batched-1" class="level2" data-number="99">
+<h2 data-number="99" class="anchored" data-anchor-id="transition-sequence-example-mini-batched-1"><span class="header-section-number">99</span> Transition sequence example (mini-batched)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1646,8 +1743,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="transition-sequence-example-mini-batched-2" class="level2" data-number="106">
-<h2 data-number="106" class="anchored" data-anchor-id="transition-sequence-example-mini-batched-2"><span class="header-section-number">106</span> Transition sequence example (mini-batched)</h2>
+<section id="transition-sequence-example-mini-batched-2" class="level2" data-number="100">
+<h2 data-number="100" class="anchored" data-anchor-id="transition-sequence-example-mini-batched-2"><span class="header-section-number">100</span> Transition sequence example (mini-batched)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1658,8 +1755,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="transition-sequence-example-mini-batched-3" class="level2" data-number="107">
-<h2 data-number="107" class="anchored" data-anchor-id="transition-sequence-example-mini-batched-3"><span class="header-section-number">107</span> Transition sequence example (mini-batched)</h2>
+<section id="transition-sequence-example-mini-batched-3" class="level2" data-number="101">
+<h2 data-number="101" class="anchored" data-anchor-id="transition-sequence-example-mini-batched-3"><span class="header-section-number">101</span> Transition sequence example (mini-batched)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1670,8 +1767,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="transition-sequence-example-mini-batched-4" class="level2" data-number="108">
-<h2 data-number="108" class="anchored" data-anchor-id="transition-sequence-example-mini-batched-4"><span class="header-section-number">108</span> Transition sequence example (mini-batched)</h2>
+<section id="transition-sequence-example-mini-batched-4" class="level2" data-number="102">
+<h2 data-number="102" class="anchored" data-anchor-id="transition-sequence-example-mini-batched-4"><span class="header-section-number">102</span> Transition sequence example (mini-batched)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1682,8 +1779,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="transition-sequence-example-mini-batched-5" class="level2" data-number="109">
-<h2 data-number="109" class="anchored" data-anchor-id="transition-sequence-example-mini-batched-5"><span class="header-section-number">109</span> Transition sequence example (mini-batched)</h2>
+<section id="transition-sequence-example-mini-batched-5" class="level2" data-number="103">
+<h2 data-number="103" class="anchored" data-anchor-id="transition-sequence-example-mini-batched-5"><span class="header-section-number">103</span> Transition sequence example (mini-batched)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1694,8 +1791,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="optional-approach-sentence-sentiment-syntax-node-level-sentiment" class="level2" data-number="110">
-<h2 data-number="110" class="anchored" data-anchor-id="optional-approach-sentence-sentiment-syntax-node-level-sentiment"><span class="header-section-number">110</span> Optional approach: Sentence + Sentiment + Syntax + Node-level sentiment</h2>
+<section id="optional-approach-sentence-sentiment-syntax-node-level-sentiment" class="level2" data-number="104">
+<h2 data-number="104" class="anchored" data-anchor-id="optional-approach-sentence-sentiment-syntax-node-level-sentiment"><span class="header-section-number">104</span> Optional approach: Sentence + Sentiment + Syntax + Node-level sentiment</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1706,8 +1803,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="title-22" class="level2" data-number="111">
-<h2 data-number="111" class="anchored" data-anchor-id="title-22"><span class="header-section-number">111</span> Title</h2>
+<section id="title-17" class="level2" data-number="105">
+<h2 data-number="105" class="anchored" data-anchor-id="title-17"><span class="header-section-number">105</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1718,8 +1815,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="recap" class="level2" data-number="112">
-<h2 data-number="112" class="anchored" data-anchor-id="recap"><span class="header-section-number">112</span> Recap</h2>
+<section id="recap-1" class="level2" data-number="106">
+<h2 data-number="106" class="anchored" data-anchor-id="recap-1"><span class="header-section-number">106</span> Recap</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1730,8 +1827,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="title-23" class="level2" data-number="113">
-<h2 data-number="113" class="anchored" data-anchor-id="title-23"><span class="header-section-number">113</span> Title</h2>
+<section id="title-18" class="level2" data-number="107">
+<h2 data-number="107" class="anchored" data-anchor-id="title-18"><span class="header-section-number">107</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1742,8 +1839,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="input" class="level2" data-number="114">
-<h2 data-number="114" class="anchored" data-anchor-id="input"><span class="header-section-number">114</span> Input</h2>
+<section id="input" class="level2" data-number="108">
+<h2 data-number="108" class="anchored" data-anchor-id="input"><span class="header-section-number">108</span> Input</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1754,8 +1851,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="recap-activation-functions" class="level2" data-number="115">
-<h2 data-number="115" class="anchored" data-anchor-id="recap-activation-functions"><span class="header-section-number">115</span> Recap: Activation functions</h2>
+<section id="recap-activation-functions" class="level2" data-number="109">
+<h2 data-number="109" class="anchored" data-anchor-id="recap-activation-functions"><span class="header-section-number">109</span> Recap: Activation functions</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1766,8 +1863,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="introduction-intuition-to-solving-the-vanishing-gradient" class="level2" data-number="116">
-<h2 data-number="116" class="anchored" data-anchor-id="introduction-intuition-to-solving-the-vanishing-gradient"><span class="header-section-number">116</span> Introduction: Intuition to solving the vanishing gradient</h2>
+<section id="introduction-intuition-to-solving-the-vanishing-gradient" class="level2" data-number="110">
+<h2 data-number="110" class="anchored" data-anchor-id="introduction-intuition-to-solving-the-vanishing-gradient"><span class="header-section-number">110</span> Introduction: Intuition to solving the vanishing gradient</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1778,8 +1875,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="introduction-a-small-improvement" class="level2" data-number="117">
-<h2 data-number="117" class="anchored" data-anchor-id="introduction-a-small-improvement"><span class="header-section-number">117</span> Introduction: A small improvement</h2>
+<section id="introduction-a-small-improvement" class="level2" data-number="111">
+<h2 data-number="111" class="anchored" data-anchor-id="introduction-a-small-improvement"><span class="header-section-number">111</span> Introduction: A small improvement</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1790,8 +1887,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="child-sum-tree-lstm-2" class="level2" data-number="118">
-<h2 data-number="118" class="anchored" data-anchor-id="child-sum-tree-lstm-2"><span class="header-section-number">118</span> Child-Sum Tree LSTM</h2>
+<section id="child-sum-tree-lstm-2" class="level2" data-number="112">
+<h2 data-number="112" class="anchored" data-anchor-id="child-sum-tree-lstm-2"><span class="header-section-number">112</span> Child-Sum Tree LSTM</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1802,8 +1899,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="a-naive-recursive-nn" class="level2" data-number="119">
-<h2 data-number="119" class="anchored" data-anchor-id="a-naive-recursive-nn"><span class="header-section-number">119</span> A naive recursive NN</h2>
+<section id="a-naive-recursive-nn" class="level2" data-number="113">
+<h2 data-number="113" class="anchored" data-anchor-id="a-naive-recursive-nn"><span class="header-section-number">113</span> A naive recursive NN</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1814,8 +1911,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="sgd-vs-gd" class="level2" data-number="120">
-<h2 data-number="120" class="anchored" data-anchor-id="sgd-vs-gd"><span class="header-section-number">120</span> SGD vs GD</h2>
+<section id="sgd-vs-gd" class="level2" data-number="114">
+<h2 data-number="114" class="anchored" data-anchor-id="sgd-vs-gd"><span class="header-section-number">114</span> SGD vs GD</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
