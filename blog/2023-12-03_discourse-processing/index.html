@@ -77,6 +77,8 @@ window.MathJax = {
 </script>
 <link rel="shortcut icon" href="../../../../../../../../../../../assets/danilo.ico">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../css/index-posts.css">
 </head>
@@ -412,6 +414,7 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>There is explicit relations between sentences, these are called rhetorical relations. If in a text sentences do not have relations then it will be difficult for us to understand because they will not be coherent</p>
 </section>
 <section id="rhetorical-relations" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="rhetorical-relations"><span class="header-section-number">4</span> Rhetorical relations</h2>
@@ -424,6 +427,11 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Here there is two sentences in this discourse. Individually these sentences are not ambiguous. However, the discourse itself has some ambiguity</p>
+<ol start="2" type="1">
+<li>We are describing a sequence of events</li>
+</ol>
+<p>The cue phrases, are the relationship between the two sentences. However, these relations are implicit, which means to interpret the whole text we need to be able somehow and derive those relationships between the sentences by analyzing the language of the document</p>
 </section>
 <section id="rhetorical-relations-1" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="rhetorical-relations-1"><span class="header-section-number">5</span> Rhetorical relations</h2>
@@ -436,6 +444,8 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>They are typically not symmetric, which means there would be a main clause akak <strong>nucleus</strong> or subsidiary caluse aka the <strong>satelite</strong>. So here not all sentences are equally important in the document. There would be a main phrase and the satellite phrases would be contributing to these. This is important for analyzing text for instance to do a summary of the text you will want to know which sentences are the main ones. If we then want to interpret the text in a more fine grained we need to understand these relations.</p>
+<p>On the other hands some rethorical relations have equal weight for instance when we do Narration. This is when we describe a sequence of events that took place so none of them is more important than the other</p>
 </section>
 <section id="rhetorical-relations-2" class="level2" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="rhetorical-relations-2"><span class="header-section-number">6</span> Rhetorical relations</h2>
@@ -484,6 +494,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<ul>
+<li><strong>Explanation</strong> here we are explaining that because he=Bill got to Jhon an expensive gift, now Jhon likes Bill</li>
+<li><strong>Justification</strong> here we are saying that Jhon likes Bill and because of that he=Jhon is buying it an expensive gift. The latter is the evidence that support the fact that Jhon likes Bill and thus the evidence of his act</li>
+</ul>
 </section>
 <section id="factors-influencing-discourse-interpretation" class="level2" data-number="10">
 <h2 data-number="10" class="anchored" data-anchor-id="factors-influencing-discourse-interpretation"><span class="header-section-number">10</span> Factors influencing discourse interpretation</h2>
@@ -496,6 +510,7 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Here the bracket is like an explanations, if is a comma it is likelly to be narration. These are explicit signals, of rethorical relations</p>
 </section>
 <section id="discourse-parsing" class="level2" data-number="11">
 <h2 data-number="11" class="anchored" data-anchor-id="discourse-parsing"><span class="header-section-number">11</span> Discourse parsing</h2>
@@ -508,6 +523,9 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>The task of automatically identifying the retorical relations is called discourse parsing.</p>
+<p>To conduct discourse parsing it requires to analyse the full text. This is because we need to identify teh relations of all the sentences and derive a tree like structure for the discourse where the main phrases and the subsidiary phrases and so on, so how they connect to each other. If we do that then this would give us a picture of the discourse. But this is difficult to do.</p>
+<p>There has been many approaches to that, in early research they use hand crafted rules based on the signals like punctuation , cue ..They treated it as a supervised classification problem where the input is the two sentences and the ouput which rectorial relation is.</p>
 </section>
 <section id="outline.-1" class="level2" data-number="12">
 <h2 data-number="12" class="anchored" data-anchor-id="outline.-1"><span class="header-section-number">12</span> Outline.</h2>
@@ -532,10 +550,13 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>All these are training for specific task. The features that they capture is task dependent. More general methods we can find:</p>
+<ul>
+<li>Skip-grams word embeddings. These are trained with unlabeled data</li>
+</ul>
 </section>
 <section id="learning-document-representations" class="level2" data-number="14">
 <h2 data-number="14" class="anchored" data-anchor-id="learning-document-representations"><span class="header-section-number">14</span> Learning document representations</h2>
-SD eg at LATA fav lnnrninn rantannn
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -545,6 +566,7 @@ SD eg at LATA fav lnnrninn rantannn
 </div>
 </center>
 <pre></pre>
+<p>Here this is a RNN, we go through the sentence word by word. And per time step</p>
 </section>
 <section id="bidirectional-lstm" class="level2" data-number="15">
 <h2 data-number="15" class="anchored" data-anchor-id="bidirectional-lstm"><span class="header-section-number">15</span> Bidirectional LSTM</h2>
@@ -557,6 +579,8 @@ SD eg at LATA fav lnnrninn rantannn
 </div>
 </center>
 <pre></pre>
+<p>Uni directional LSTM, is one that we traverse the sentence from beginning to end in one direction. The problem with this is that at each time step we only record representations of the sentence that we have seen so far. To derive a representation for every token we dont consider the context that comes after that token. The problem with that is that the subsequent context is also informative of what this particular token at time t can mean. Ideally we want to incorporate conext in both directions. Thus we use a bidirectional LSTM.</p>
+<p>At each token we have two representations the context representation from the beginning of the sentence to the token and the representation of that token after the end of the sentence.</p>
 </section>
 <section id="what-is-the-sentence-representation" class="level2" data-number="16">
 <h2 data-number="16" class="anchored" data-anchor-id="what-is-the-sentence-representation"><span class="header-section-number">16</span> What is the sentence representation?</h2>
@@ -569,10 +593,17 @@ SD eg at LATA fav lnnrninn rantannn
 </div>
 </center>
 <pre></pre>
+<p>How do we actually obtain the representation of a whole sentence because BiLSTM ouputs representations for individual token. So how do we combine token representations into sentence representations. We have few options here:</p>
+<ol type="1">
+<li><p>We can apply LSTM, then once we have traverse the whole sentence so the last representation at the last token is going to be the sentence representation, as it incorporates the whole sentence. The problem with this is that because LSTM are sequential models, the more recent input(so the last token) is always going to be represented better than early inputs. The cell state tries to mitigiate this however for realistically long sentences we still have the problem that more recent context is better represented by earlier context.</p></li>
+<li><p>In this way information from all tokens is incorporated equally so we get a representation of a sentence</p></li>
+<li><p>Here as well we take our hidden representations at all steps and then for each vector component, for each dimensions, we pick the higuest values across all token representations in the sentence and then we put it into the vector sentence.</p></li>
+<li><p>An attention mechanism basically computes a weighted sum of all hidden representations of all tokens.</p></li>
+</ol>
 </section>
 <section id="attention-mechanism" class="level2" data-number="17">
 <h2 data-number="17" class="anchored" data-anchor-id="attention-mechanism"><span class="header-section-number">17</span> Attention mechanism</h2>
-QApnntanro ranracantatinn 9c 49 ciim anf all hidctatoc
+<!-- QApnntanro ranracantatinn 9c 49 \wwaoinhtandn ciim anf all hid\dan ctatoc -->
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -582,6 +613,11 @@ QApnntanro ranracantatinn 9c 49 ciim anf all hidctatoc
 </div>
 </center>
 <pre></pre>
+<p>It is a good idea because in fact not all words are equally importnat in the document. For instance if you think of sentiment analysis taks then there is going to be positive, negative and neutral words. So here neutrals are not that relevant thus we need some way how we can put more weight into pos and neg words. For the latter we use the attention mechanism</p>
+<p>Humans pay more attention to some words than others. So how do we compute attention weights, we can compute them from learnable parametes in the model, so the vector <span class="math inline">\(W_\alpha\)</span> and so we learn it FFNN (feed forward neural network) is the hidden representation at time t.</p>
+<p>There is different models of attention, sometimes you take the hidden representation and you pass it through a Feed NN, and the use that to compute the attention weights.</p>
+<p>Sometimes people take the hidden state and compute the dot product of that with the attention vector. Here if we use a weighted sum then we need to care that our vector add up to 1, so normalize this alpha. And the this give us our final attention weights <span class="math inline">\(a_t\)</span> and finally the sentence representation is going to be computed as a weighted sum of hiddent states of individual tokes <span class="math inline">\(h_t\)</span> using the attention weights</p>
+<p>The attention weights will not be transferable because we are learning for a task so its really what are the toeksn that provide good features for that task and that is not transferable across tasks</p>
 </section>
 <section id="building-a-document-representation" class="level2" data-number="18">
 <h2 data-number="18" class="anchored" data-anchor-id="building-a-document-representation"><span class="header-section-number">18</span> Building a document representation</h2>
@@ -606,6 +642,18 @@ QApnntanro ranracantatinn 9c 49 ciim anf all hidctatoc
 </div>
 </center>
 <pre></pre>
+<p>The things that we saw above was to compute sentence representations, now we want document representations.</p>
+<ol type="1">
+<li>This is not a good idea because LSTM suffer from forgetting things from the previous previous inputs.</li>
+</ol>
+<p>However attention helps to mittigate this because you can pick important components of the different parts of the document but still the document is pretty long and just picking up separate words here and there and forgetting a lot of the other information is not going to give us a very good model. So this is not a good idea, m</p>
+<ol start="2" type="1">
+<li>A much better way is to build a hierarchical model</li>
+</ol>
+<ul>
+<li>First compute sentence representations using a sentence encoder and then we want to take those sentence representations and then</li>
+<li>We want to combine them into a document representation in some way for example a document encoder, or also could be done using attention or perhaps using both. You will then train your model with a document objective with your task objective</li>
+</ul>
 </section>
 <section id="hierarchical-attention-networks" class="level2" data-number="20">
 <h2 data-number="20" class="anchored" data-anchor-id="hierarchical-attention-networks"><span class="header-section-number">20</span> Hierarchical attention networks</h2>
@@ -618,10 +666,15 @@ QApnntanro ranracantatinn 9c 49 ciim anf all hidctatoc
 </div>
 </center>
 <pre></pre>
+<p>This is a model that came before the transformer.</p>
+<p>The idea is that this model has two separate encoders, 1 a sentence encoder, take word representations as inputs, these sentence representations are passed to another encoder which then will represent my document. So we learn specifically to combine sentences into document representations.</p>
+<p>This is a good idea because these two encoders can focus on learning different kind of information, so the sentence encoder will learn to compose the meaning of words into the meaning of sentences and your document encoder is going to learn to compose sentences into the document, here is wher potntial rethorical relations can happen and other properties of the document. Then we train our model with our task specific</p>
+<p>The larger you make the model the more parameters you need to learn, the larger the dataset you need. If you have a large dataset then you may be better off with more parameters more complex models, if you have a small dataset then you may be better off with a model with fewer paramters that you can tune a simple architecture</p>
+<p>Here they use pretrained word embeddings and that is a very good idea because your dataset is not very alrge because then you already starting with an inform position because the word embeddings already capture some general semantic knowledge, so you know in a sense what the words mean and you just need to learn the relations between those words that are relevant to solve your task.</p>
+<p>If you have a really long document and you just have one label for it, very often you can predict the label by analysing part of the document and what people do is you want to decide what is a reasonable size of the input to predict from and then just cut that input at some point.</p>
 </section>
 <section id="hierarchical-attention-network" class="level2" data-number="21">
 <h2 data-number="21" class="anchored" data-anchor-id="hierarchical-attention-network"><span class="header-section-number">21</span> Hierarchical attention network</h2>
-softmax
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -634,6 +687,7 @@ softmax
 </section>
 <section id="han-output-with-attention-visualised" class="level2" data-number="22">
 <h2 data-number="22" class="anchored" data-anchor-id="han-output-with-attention-visualised"><span class="header-section-number">22</span> HAN output with attention visualised</h2>
+Here we can visualize this attention weights
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -667,6 +721,9 @@ softmax
 </div>
 </center>
 <pre></pre>
+<p>We will now perform another discourse processing task called reference resolution. So besides rhetorical relations and topics and sections and so on.</p>
+<p>To perform full task opinion mining we need to retrieve relevant documents, then we need to take this documents and then we need to identify all the mentions of a particular person or person in this company. And we need to link then together to better understand how a particular person is described so for instance: if we want to identify opinions about Joe Biden then we need to identify all the references to Joe biden in the text. For example something that says president Biden, he or him and so on.</p>
+<p>So <strong>co-reference resolutions</strong> is identifying bits of text that refer to the same identity through the discourse.</p>
 </section>
 <section id="co-reference-and-referring-expressions" class="level2" data-number="25">
 <h2 data-number="25" class="anchored" data-anchor-id="co-reference-and-referring-expressions"><span class="header-section-number">25</span> Co-reference and referring expressions</h2>
@@ -679,6 +736,17 @@ softmax
 </div>
 </center>
 <pre></pre>
+<p>Here there is two people. Niall and Stephen.</p>
+<ul>
+<li>The <strong>referent</strong> is a real world entity that some piece of text or speech refers to. For instance here we are refering to the prof Ferguson</li>
+<li>The <strong>refering expressions</strong>, these are the expresions that are used to refer these words</li>
+<li>The <strong>antecedent</strong> is the text that initially introduces the referent. This is the first time that somebody is mentioned.</li>
+<li><strong>Anaphora</strong> this is when we refers to something that is previously mention.</li>
+<li><strong>Cataphora</strong> is rare and we use it when we refer to something that is only introduced something later in the text. For instance: She loves her dog, Kim bought her some gifts. So here we mention “She” first and then we ontroduce the name “Kim”.</li>
+</ul>
+<p>Anaphora resolution is linking to the correct antecedent so finding what is the real word entity that they are refering to.</p>
+<p>We have a lot of noun phrases like: <em>a snappy dresser</em> where it purely plays a descriptive role so they do not refer to anything. To complicate things even more it is not every noun phrase that actually has to refer to something. So these are non-referential phrases because they do no refer to anything. They are also called <em>predicative use</em>.</p>
+<p>So in conclusion we have that some <strong>noun phrases</strong> are not going to refer to anything. But most of them they do</p>
 </section>
 <section id="pronoun-resolution" class="level2" data-number="26">
 <h2 data-number="26" class="anchored" data-anchor-id="pronoun-resolution"><span class="header-section-number">26</span> Pronoun resolution</h2>
@@ -691,6 +759,9 @@ softmax
 </div>
 </center>
 <pre></pre>
+<p>Here we want to identify the <strong>antecedents</strong> of pronouns. So if a sentence contains a pronoun then we want to know which pronoun (he, she and so on) we are referring to.</p>
+<p>Here we wat to find the <strong>referent</strong> so which is the real word entity we are refering to by using the pronoun i.e she, he, we and so on.</p>
+<p>So here <strong>him</strong> refers to Niall Fergusson and <strong>he</strong> refers to Stephen Moss. So the task here is to be able to link the <strong>pronoun</strong> to the correct <strong>antecedent</strong></p>
 </section>
 <section id="pronoun-resolution-1" class="level2" data-number="27">
 <h2 data-number="27" class="anchored" data-anchor-id="pronoun-resolution-1"><span class="header-section-number">27</span> Pronoun resolution</h2>
@@ -727,6 +798,48 @@ softmax
 </div>
 </center>
 <pre></pre>
+<p>Here our training instances are going to be pairs of refering expressions, for instance pronouns and the possiblle additions, and for each pair we have to automatically ouput if is a correct or incorrect link. So if there is a correct co-reference or not. That is the classification task (binary in this case).</p>
+<ul>
+<li>Our training data you use data where you have correct pairs where you have correct pairs between pronouns and noun phrases and then you want to learn some features from the text that signal that these pronouns co-refer to this noun phrase.</li>
+</ul>
+<p>Tipically the way the dataset is constructed for classification is that we would take our sentence that contains a pronoun then we take all the noun phrases in this sentence, we can extract for instance using a parser</p>
+<p>We also are going to extract the noun phrases in the preceding five sentences because they also be candidates as well. Why 5 sentences because wea re limited to some extend by human cognitive capacity so actually humans cannot keep track of the pronouns for long texts. We can oly resolve the pronoun if the noun phrase has been mentioned ideally in the same sentence or in the previous sentence. 5 is even larger for us to remember</p>
+<p>So in our example we would have all kind of pairs such as “He and Niall Ferguson”, “He and snappy dresser”, “He and Stephen Moss” and so on from the sentence also in the preceding 5 sentences.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Remember what is noun phrase and examples
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A noun phrase is a group of words centered around a noun that functions as a single unit within a sentence. It typically consists of the noun and its modifiers. Here are some examples of noun phrases:</p>
+<ol type="1">
+<li><strong>The big red ball</strong>
+<ul>
+<li><em>Noun:</em> ball</li>
+<li><em>Modifiers:</em> the, big, red</li>
+</ul></li>
+<li><strong>My favorite book</strong>
+<ul>
+<li><em>Noun:</em> book</li>
+<li><em>Modifiers:</em> my, favorite</li>
+</ul></li>
+<li><strong>An old, dusty suitcase</strong>
+<ul>
+<li><em>Noun:</em> suitcase</li>
+<li><em>Modifiers:</em> an, old, dusty</li>
+</ul></li>
+<li><strong>The talented and charismatic actor</strong>
+<ul>
+<li><em>Noun:</em> actor</li>
+<li><em>Modifiers:</em> the, talented, charismatic</li>
+</ul></li>
+</ol>
+</div>
+</div>
 </section>
 <section id="hard-constraints-pronoun-agreement" class="level2" data-number="30">
 <h2 data-number="30" class="anchored" data-anchor-id="hard-constraints-pronoun-agreement"><span class="header-section-number">30</span> Hard constraints: Pronoun agreement</h2>
@@ -739,6 +852,12 @@ softmax
 </div>
 </center>
 <pre></pre>
+<p>So then we asked to ourselves. How can we build such a system? Answer: the earlier models use hand crafted features, and those were based on how humans understand language. So there is some rules that needs to be observed and those already signal if is a correct or incorrect pairing. So for instance:</p>
+<ul>
+<li><p>Pronoun agreement: here we agree with the noun phrase with the number and gender.</p></li>
+<li><p>Here in the first example it would be odd to say: “see what he wants” so then when we are referring that needs to be an agreement we mean in <em>gender</em> and also <em>number</em></p></li>
+<li><p>In “Kim <em>and</em> Sandy” here the coordinate conjunction makes the pronoun to be “they”</p></li>
+</ul>
 </section>
 <section id="hard-constraints-reflexives" class="level2" data-number="31">
 <h2 data-number="31" class="anchored" data-anchor-id="hard-constraints-reflexives"><span class="header-section-number">31</span> Hard constraints: Reflexives</h2>
@@ -751,6 +870,7 @@ softmax
 </div>
 </center>
 <pre></pre>
+<p>Another hard constraint is “himself, or herself” or so on. These are called reflexive pronouns</p>
 </section>
 <section id="hard-constraints-pleonastic-pronouns" class="level2" data-number="32">
 <h2 data-number="32" class="anchored" data-anchor-id="hard-constraints-pleonastic-pronouns"><span class="header-section-number">32</span> Hard constraints: Pleonastic pronouns</h2>
@@ -763,6 +883,7 @@ softmax
 </div>
 </center>
 <pre></pre>
+<p>They are empty and do not refer to anything. In other contest “it” can actually refer to a “dog” i.e “it is hungry”. So this is a complication because we need to determine pleonastic pronouns whether they refer to something or no.</p>
 </section>
 <section id="soft-preferences-salience" class="level2" data-number="33">
 <h2 data-number="33" class="anchored" data-anchor-id="soft-preferences-salience"><span class="header-section-number">33</span> Soft preferences: Salience</h2>
@@ -775,6 +896,12 @@ softmax
 </div>
 </center>
 <pre></pre>
+<p>The soft preferences are not constraints but they are some factors that indicate the right linking</p>
+<ul>
+<li><strong>Recency</strong> More recent antecedents ( is the text that initially introduces the referent. This is the first time that somebody is mentioned.) are preferred</li>
+<li><strong>Grammatical role</strong> we are more likely to introduce an antecedent as the subject as opposed to an object. So here subjects are preferred</li>
+<li><strong>Repeated mention</strong> entities that have been mentioned a lot in the text are also preferred</li>
+</ul>
 </section>
 <section id="soft-preferences-salience-1" class="level2" data-number="34">
 <h2 data-number="34" class="anchored" data-anchor-id="soft-preferences-salience-1"><span class="header-section-number">34</span> Soft preferences: Salience</h2>
@@ -787,10 +914,20 @@ softmax
 </div>
 </center>
 <pre></pre>
+<ul>
+<li><p><strong>Prallelism</strong> this means that the pronoun is in the same grammatical position as the noun phrase. So here in the same order, Freud is mention at the end and when we use the pronoun “him” at the end, then we are referring to “Freud”</p></li>
+<li><p><strong>Coherence effects</strong>. Bill in this example Likes Fred, because he=Fred has a great sense of humour. So if we interpreted as having hummor is a reason to like someone then we know he=Fred. Here we are using <em>Justitication</em> because the we are providing evidence</p></li>
+</ul>
+<blockquote class="blockquote">
+<p>“Jhon likes Bill. He gave him an expensive gift”</p>
+</blockquote>
+<ul>
+<li><strong>Explanation</strong> here we are explaining that because he=Bill got to Jhon an expensive gift, now Jhon likes Bill</li>
+<li><strong>Justification</strong> here we are saying that Jhon likes Bill and because of that he=Jhon is buying it an expensive gift. The latter is the evidence that support the fact that Jhon likes Bill and thus the evidence of his act</li>
+</ul>
 </section>
 <section id="features" class="level2" data-number="35">
 <h2 data-number="35" class="anchored" data-anchor-id="features"><span class="header-section-number">35</span> Features</h2>
-Catanhoric Rinarv: t if nranniin hafnra antaradant
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -800,6 +937,14 @@ Catanhoric Rinarv: t if nranniin hafnra antaradant
 </div>
 </center>
 <pre></pre>
+<p>For the models that operate in handcrafted features, you can design features like the ones below:</p>
+<p>Slide 25: Cataphoric was defined as pronouns that appear before the referent (this is rare)</p>
+<ul>
+<li><strong>Same verb</strong>: here we refer to the reflexive pronouns which must be coreferntial with a preceeding argument of the same verb</li>
+<li>The <strong>distance</strong> in the text so <strong>Recency</strong> more recent antecedents are preferred</li>
+<li><strong>Grammatical Role</strong> when we are more likely to introduce an antecedent as the subject as opposed to an object. So here subjects are preferred</li>
+<li>The <strong>Linguistic form</strong> of the noun phrase, so is it a “proper noun” like a name, or is it definite or indefinite such as “a scientist” vs “the scientist” or is it a pronoun itself i.e “You, she, he”. Those are usefull indicators</li>
+</ul>
 </section>
 <section id="feature-vectors" class="level2" data-number="36">
 <h2 data-number="36" class="anchored" data-anchor-id="feature-vectors"><span class="header-section-number">36</span> Feature vectors</h2>
@@ -812,6 +957,11 @@ Catanhoric Rinarv: t if nranniin hafnra antaradant
 </div>
 </center>
 <pre></pre>
+<p>With these features we can create a feature vector and train a classifier to predict: for each pair of a pronoun and possible antecedent whether is a correct or incorrect link. This is the task. The task is to transfer the dataset using those features and then learn from them.</p>
+<p>So here for instance we see construct per each pair a vector (the row in the table) and we fill in the features, (each column) according to this data pair i.e (him, Niall F.)</p>
+<ul>
+<li>Remember each feature would be either: “Binary” or “Discrete”, see slide above</li>
+</ul>
 </section>
 <section id="problems-with-simple-classification-model" class="level2" data-number="37">
 <h2 data-number="37" class="anchored" data-anchor-id="problems-with-simple-classification-model"><span class="header-section-number">37</span> Problems with simple classification model</h2>
@@ -824,6 +974,14 @@ Catanhoric Rinarv: t if nranniin hafnra antaradant
 </div>
 </center>
 <pre></pre>
+<ol type="1">
+<li>You dont take into consideration anything else, but just consider pairs in isolations. So you cannot model “repeated effect”</li>
+</ol>
+<p>You have problems because you take the isolated pairs and you simply predict for them. The problem is that you cannot implement repeated mention effects, you now how frequent a particular reference expression was, but you just consider pairs in isolation from the rest of the text</p>
+<ol start="2" type="1">
+<li>In real text we dont have just co-reference pairs but instead co-reference chains</li>
+</ol>
+<p>You are also going to have chains of references. So first you start talking about one person, then using another pronoun we talk about it again, then another noun phrase and so on. This is a chain co-reference. Ideally to build a fuller model of this we actually want to process those chains as well.</p>
 </section>
 <section id="neural-end-to-end-coreference-resolution" class="level2" data-number="38">
 <h2 data-number="38" class="anchored" data-anchor-id="neural-end-to-end-coreference-resolution"><span class="header-section-number">38</span> Neural end-to-end coreference resolution</h2>
@@ -836,6 +994,7 @@ Catanhoric Rinarv: t if nranniin hafnra antaradant
 </div>
 </center>
 <pre></pre>
+<p>Here the set up is different from the previous set-up we discuss, they just</p>
 </section>
 <section id="task-definition" class="level2" data-number="39">
 <h2 data-number="39" class="anchored" data-anchor-id="task-definition"><span class="header-section-number">39</span> Task definition</h2>

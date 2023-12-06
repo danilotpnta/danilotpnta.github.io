@@ -1831,7 +1831,7 @@
     "href": "index.html",
     "title": "Danilo Toapanta",
     "section": "",
-    "text": "Quick links:  Slides  |  Projects  | Books  | What I’m doing now\n\nNews\n\n\n    \n        \n            Sep 2023 - I am attending, OpenAI: AI and the Future of Humanity\n            Jun 2023 - I will do an intership at IMEC\n            May 2023 - Have been accepted to the M.Sc. in AI at UvA\n            Feb 2023 - Now the website has a Blog section\n            Nov 2023 - Have completed AI Berkeley Course\n        \n    \n\n\n\n\n\n\n\nNote\n\n\n\nThis website is under construction. To review changes visit DEV page of this site."
+    "text": "Quick links:  Slides  |  Projects  | Books \n\n\nNews\n\n\n    \n        \n            Sep 2023 - I am attending, OpenAI: AI and the Future of Humanity\n            Jun 2023 - I will do an intership at IMEC\n            \n            Feb 2023 - Now the website has a Blog section\n            Nov 2023 - Have completed AI Berkeley Course\n        \n    \n\n\n\n\n\n\n\nNote\n\n\n\nThis website is under construction. To review changes visit DEV page of this site."
   },
   {
     "objectID": "about/index.html",
@@ -8096,21 +8096,21 @@
     "href": "blog/2023-12-03_discourse-processing/index.html#document-structure-and-discourse-structure",
     "title": "Discourse processing",
     "section": "3 Document structure and discourse structure",
-    "text": "3 Document structure and discourse structure\n\n\n\n\nSlide 3"
+    "text": "3 Document structure and discourse structure\n\n\n\n\nSlide 3\n\n\n\n\nThere is explicit relations between sentences, these are called rhetorical relations. If in a text sentences do not have relations then it will be difficult for us to understand because they will not be coherent"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#rhetorical-relations",
     "href": "blog/2023-12-03_discourse-processing/index.html#rhetorical-relations",
     "title": "Discourse processing",
     "section": "4 Rhetorical relations",
-    "text": "4 Rhetorical relations\n\n\n\n\nSlide 4"
+    "text": "4 Rhetorical relations\n\n\n\n\nSlide 4\n\n\n\n\nHere there is two sentences in this discourse. Individually these sentences are not ambiguous. However, the discourse itself has some ambiguity\n\nWe are describing a sequence of events\n\nThe cue phrases, are the relationship between the two sentences. However, these relations are implicit, which means to interpret the whole text we need to be able somehow and derive those relationships between the sentences by analyzing the language of the document"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#rhetorical-relations-1",
     "href": "blog/2023-12-03_discourse-processing/index.html#rhetorical-relations-1",
     "title": "Discourse processing",
     "section": "5 Rhetorical relations",
-    "text": "5 Rhetorical relations\n\n\n\n\nSlide 5"
+    "text": "5 Rhetorical relations\n\n\n\n\nSlide 5\n\n\n\n\nThey are typically not symmetric, which means there would be a main clause akak nucleus or subsidiary caluse aka the satelite. So here not all sentences are equally important in the document. There would be a main phrase and the satellite phrases would be contributing to these. This is important for analyzing text for instance to do a summary of the text you will want to know which sentences are the main ones. If we then want to interpret the text in a more fine grained we need to understand these relations.\nOn the other hands some rethorical relations have equal weight for instance when we do Narration. This is when we describe a sequence of events that took place so none of them is more important than the other"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#rhetorical-relations-2",
@@ -8138,21 +8138,21 @@
     "href": "blog/2023-12-03_discourse-processing/index.html#coherence-in-interpretation",
     "title": "Discourse processing",
     "section": "9 Coherence in interpretation",
-    "text": "9 Coherence in interpretation\n\n\n\n\nSlide 9"
+    "text": "9 Coherence in interpretation\n\n\n\n\nSlide 9\n\n\n\n\n\nExplanation here we are explaining that because he=Bill got to Jhon an expensive gift, now Jhon likes Bill\nJustification here we are saying that Jhon likes Bill and because of that he=Jhon is buying it an expensive gift. The latter is the evidence that support the fact that Jhon likes Bill and thus the evidence of his act"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#factors-influencing-discourse-interpretation",
     "href": "blog/2023-12-03_discourse-processing/index.html#factors-influencing-discourse-interpretation",
     "title": "Discourse processing",
     "section": "10 Factors influencing discourse interpretation",
-    "text": "10 Factors influencing discourse interpretation\n\n\n\n\nSlide 10"
+    "text": "10 Factors influencing discourse interpretation\n\n\n\n\nSlide 10\n\n\n\n\nHere the bracket is like an explanations, if is a comma it is likelly to be narration. These are explicit signals, of rethorical relations"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#discourse-parsing",
     "href": "blog/2023-12-03_discourse-processing/index.html#discourse-parsing",
     "title": "Discourse processing",
     "section": "11 Discourse parsing",
-    "text": "11 Discourse parsing\n\n\n\n\nSlide 11"
+    "text": "11 Discourse parsing\n\n\n\n\nSlide 11\n\n\n\n\nThe task of automatically identifying the retorical relations is called discourse parsing.\nTo conduct discourse parsing it requires to analyse the full text. This is because we need to identify teh relations of all the sentences and derive a tree like structure for the discourse where the main phrases and the subsidiary phrases and so on, so how they connect to each other. If we do that then this would give us a picture of the discourse. But this is difficult to do.\nThere has been many approaches to that, in early research they use hand crafted rules based on the signals like punctuation , cue ..They treated it as a supervised classification problem where the input is the two sentences and the ouput which rectorial relation is."
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#outline.-1",
@@ -8166,35 +8166,35 @@
     "href": "blog/2023-12-03_discourse-processing/index.html#document-representations",
     "title": "Discourse processing",
     "section": "13 Document representations",
-    "text": "13 Document representations\n\n\n\n\nSlide 13"
+    "text": "13 Document representations\n\n\n\n\nSlide 13\n\n\n\n\nAll these are training for specific task. The features that they capture is task dependent. More general methods we can find:\n\nSkip-grams word embeddings. These are trained with unlabeled data"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#learning-document-representations",
     "href": "blog/2023-12-03_discourse-processing/index.html#learning-document-representations",
     "title": "Discourse processing",
     "section": "14 Learning document representations",
-    "text": "14 Learning document representations\nSD eg at LATA fav lnnrninn rantannn\n\n\n\n\nSlide 14"
+    "text": "14 Learning document representations\n\n\n\n\nSlide 14\n\n\n\n\nHere this is a RNN, we go through the sentence word by word. And per time step"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#bidirectional-lstm",
     "href": "blog/2023-12-03_discourse-processing/index.html#bidirectional-lstm",
     "title": "Discourse processing",
     "section": "15 Bidirectional LSTM",
-    "text": "15 Bidirectional LSTM\n\n\n\n\nSlide 15"
+    "text": "15 Bidirectional LSTM\n\n\n\n\nSlide 15\n\n\n\n\nUni directional LSTM, is one that we traverse the sentence from beginning to end in one direction. The problem with this is that at each time step we only record representations of the sentence that we have seen so far. To derive a representation for every token we dont consider the context that comes after that token. The problem with that is that the subsequent context is also informative of what this particular token at time t can mean. Ideally we want to incorporate conext in both directions. Thus we use a bidirectional LSTM.\nAt each token we have two representations the context representation from the beginning of the sentence to the token and the representation of that token after the end of the sentence."
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#what-is-the-sentence-representation",
     "href": "blog/2023-12-03_discourse-processing/index.html#what-is-the-sentence-representation",
     "title": "Discourse processing",
     "section": "16 What is the sentence representation?",
-    "text": "16 What is the sentence representation?\n\n\n\n\nSlide 16"
+    "text": "16 What is the sentence representation?\n\n\n\n\nSlide 16\n\n\n\n\nHow do we actually obtain the representation of a whole sentence because BiLSTM ouputs representations for individual token. So how do we combine token representations into sentence representations. We have few options here:\n\nWe can apply LSTM, then once we have traverse the whole sentence so the last representation at the last token is going to be the sentence representation, as it incorporates the whole sentence. The problem with this is that because LSTM are sequential models, the more recent input(so the last token) is always going to be represented better than early inputs. The cell state tries to mitigiate this however for realistically long sentences we still have the problem that more recent context is better represented by earlier context.\nIn this way information from all tokens is incorporated equally so we get a representation of a sentence\nHere as well we take our hidden representations at all steps and then for each vector component, for each dimensions, we pick the higuest values across all token representations in the sentence and then we put it into the vector sentence.\nAn attention mechanism basically computes a weighted sum of all hidden representations of all tokens."
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#attention-mechanism",
     "href": "blog/2023-12-03_discourse-processing/index.html#attention-mechanism",
     "title": "Discourse processing",
     "section": "17 Attention mechanism",
-    "text": "17 Attention mechanism\nQApnntanro ranracantatinn 9c 49 ciim anf all hidctatoc\n\n\n\n\nSlide 17"
+    "text": "17 Attention mechanism\n\n\n\n\n\nSlide 17\n\n\n\n\nIt is a good idea because in fact not all words are equally importnat in the document. For instance if you think of sentiment analysis taks then there is going to be positive, negative and neutral words. So here neutrals are not that relevant thus we need some way how we can put more weight into pos and neg words. For the latter we use the attention mechanism\nHumans pay more attention to some words than others. So how do we compute attention weights, we can compute them from learnable parametes in the model, so the vector \\(W_\\alpha\\) and so we learn it FFNN (feed forward neural network) is the hidden representation at time t.\nThere is different models of attention, sometimes you take the hidden representation and you pass it through a Feed NN, and the use that to compute the attention weights.\nSometimes people take the hidden state and compute the dot product of that with the attention vector. Here if we use a weighted sum then we need to care that our vector add up to 1, so normalize this alpha. And the this give us our final attention weights \\(a_t\\) and finally the sentence representation is going to be computed as a weighted sum of hiddent states of individual tokes \\(h_t\\) using the attention weights\nThe attention weights will not be transferable because we are learning for a task so its really what are the toeksn that provide good features for that task and that is not transferable across tasks"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#building-a-document-representation",
@@ -8208,28 +8208,28 @@
     "href": "blog/2023-12-03_discourse-processing/index.html#building-a-document-representation-1",
     "title": "Discourse processing",
     "section": "19 Building a document representation",
-    "text": "19 Building a document representation\n\n\n\n\nSlide 19"
+    "text": "19 Building a document representation\n\n\n\n\nSlide 19\n\n\n\n\nThe things that we saw above was to compute sentence representations, now we want document representations.\n\nThis is not a good idea because LSTM suffer from forgetting things from the previous previous inputs.\n\nHowever attention helps to mittigate this because you can pick important components of the different parts of the document but still the document is pretty long and just picking up separate words here and there and forgetting a lot of the other information is not going to give us a very good model. So this is not a good idea, m\n\nA much better way is to build a hierarchical model\n\n\nFirst compute sentence representations using a sentence encoder and then we want to take those sentence representations and then\nWe want to combine them into a document representation in some way for example a document encoder, or also could be done using attention or perhaps using both. You will then train your model with a document objective with your task objective"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#hierarchical-attention-networks",
     "href": "blog/2023-12-03_discourse-processing/index.html#hierarchical-attention-networks",
     "title": "Discourse processing",
     "section": "20 Hierarchical attention networks",
-    "text": "20 Hierarchical attention networks\n\n\n\n\nSlide 20"
+    "text": "20 Hierarchical attention networks\n\n\n\n\nSlide 20\n\n\n\n\nThis is a model that came before the transformer.\nThe idea is that this model has two separate encoders, 1 a sentence encoder, take word representations as inputs, these sentence representations are passed to another encoder which then will represent my document. So we learn specifically to combine sentences into document representations.\nThis is a good idea because these two encoders can focus on learning different kind of information, so the sentence encoder will learn to compose the meaning of words into the meaning of sentences and your document encoder is going to learn to compose sentences into the document, here is wher potntial rethorical relations can happen and other properties of the document. Then we train our model with our task specific\nThe larger you make the model the more parameters you need to learn, the larger the dataset you need. If you have a large dataset then you may be better off with more parameters more complex models, if you have a small dataset then you may be better off with a model with fewer paramters that you can tune a simple architecture\nHere they use pretrained word embeddings and that is a very good idea because your dataset is not very alrge because then you already starting with an inform position because the word embeddings already capture some general semantic knowledge, so you know in a sense what the words mean and you just need to learn the relations between those words that are relevant to solve your task.\nIf you have a really long document and you just have one label for it, very often you can predict the label by analysing part of the document and what people do is you want to decide what is a reasonable size of the input to predict from and then just cut that input at some point."
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#hierarchical-attention-network",
     "href": "blog/2023-12-03_discourse-processing/index.html#hierarchical-attention-network",
     "title": "Discourse processing",
     "section": "21 Hierarchical attention network",
-    "text": "21 Hierarchical attention network\nsoftmax\n\n\n\n\nSlide 21"
+    "text": "21 Hierarchical attention network\n\n\n\n\nSlide 21"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#han-output-with-attention-visualised",
     "href": "blog/2023-12-03_discourse-processing/index.html#han-output-with-attention-visualised",
     "title": "Discourse processing",
     "section": "22 HAN output with attention visualised",
-    "text": "22 HAN output with attention visualised\n\n\n\n\nSlide 22"
+    "text": "22 HAN output with attention visualised\nHere we can visualize this attention weights\n\n\n\n\nSlide 22"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#han-output-with-attention-visualised-1",
@@ -8243,21 +8243,21 @@
     "href": "blog/2023-12-03_discourse-processing/index.html#outline.-2",
     "title": "Discourse processing",
     "section": "24 Outline.",
-    "text": "24 Outline.\n\n\n\n\nSlide 24"
+    "text": "24 Outline.\n\n\n\n\nSlide 24\n\n\n\n\nWe will now perform another discourse processing task called reference resolution. So besides rhetorical relations and topics and sections and so on.\nTo perform full task opinion mining we need to retrieve relevant documents, then we need to take this documents and then we need to identify all the mentions of a particular person or person in this company. And we need to link then together to better understand how a particular person is described so for instance: if we want to identify opinions about Joe Biden then we need to identify all the references to Joe biden in the text. For example something that says president Biden, he or him and so on.\nSo co-reference resolutions is identifying bits of text that refer to the same identity through the discourse."
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#co-reference-and-referring-expressions",
     "href": "blog/2023-12-03_discourse-processing/index.html#co-reference-and-referring-expressions",
     "title": "Discourse processing",
     "section": "25 Co-reference and referring expressions",
-    "text": "25 Co-reference and referring expressions\n\n\n\n\nSlide 25"
+    "text": "25 Co-reference and referring expressions\n\n\n\n\nSlide 25\n\n\n\n\nHere there is two people. Niall and Stephen.\n\nThe referent is a real world entity that some piece of text or speech refers to. For instance here we are refering to the prof Ferguson\nThe refering expressions, these are the expresions that are used to refer these words\nThe antecedent is the text that initially introduces the referent. This is the first time that somebody is mentioned.\nAnaphora this is when we refers to something that is previously mention.\nCataphora is rare and we use it when we refer to something that is only introduced something later in the text. For instance: She loves her dog, Kim bought her some gifts. So here we mention “She” first and then we ontroduce the name “Kim”.\n\nAnaphora resolution is linking to the correct antecedent so finding what is the real word entity that they are refering to.\nWe have a lot of noun phrases like: a snappy dresser where it purely plays a descriptive role so they do not refer to anything. To complicate things even more it is not every noun phrase that actually has to refer to something. So these are non-referential phrases because they do no refer to anything. They are also called predicative use.\nSo in conclusion we have that some noun phrases are not going to refer to anything. But most of them they do"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#pronoun-resolution",
     "href": "blog/2023-12-03_discourse-processing/index.html#pronoun-resolution",
     "title": "Discourse processing",
     "section": "26 Pronoun resolution",
-    "text": "26 Pronoun resolution\n\n\n\n\nSlide 26"
+    "text": "26 Pronoun resolution\n\n\n\n\nSlide 26\n\n\n\n\nHere we want to identify the antecedents of pronouns. So if a sentence contains a pronoun then we want to know which pronoun (he, she and so on) we are referring to.\nHere we wat to find the referent so which is the real word entity we are refering to by using the pronoun i.e she, he, we and so on.\nSo here him refers to Niall Fergusson and he refers to Stephen Moss. So the task here is to be able to link the pronoun to the correct antecedent"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#pronoun-resolution-1",
@@ -8278,70 +8278,70 @@
     "href": "blog/2023-12-03_discourse-processing/index.html#coreference-resolution-as-supervised-classification",
     "title": "Discourse processing",
     "section": "29 Coreference resolution as supervised classification",
-    "text": "29 Coreference resolution as supervised classification\n\n\n\n\nSlide 29"
+    "text": "29 Coreference resolution as supervised classification\n\n\n\n\nSlide 29\n\n\n\n\nHere our training instances are going to be pairs of refering expressions, for instance pronouns and the possiblle additions, and for each pair we have to automatically ouput if is a correct or incorrect link. So if there is a correct co-reference or not. That is the classification task (binary in this case).\n\nOur training data you use data where you have correct pairs where you have correct pairs between pronouns and noun phrases and then you want to learn some features from the text that signal that these pronouns co-refer to this noun phrase.\n\nTipically the way the dataset is constructed for classification is that we would take our sentence that contains a pronoun then we take all the noun phrases in this sentence, we can extract for instance using a parser\nWe also are going to extract the noun phrases in the preceding five sentences because they also be candidates as well. Why 5 sentences because wea re limited to some extend by human cognitive capacity so actually humans cannot keep track of the pronouns for long texts. We can oly resolve the pronoun if the noun phrase has been mentioned ideally in the same sentence or in the previous sentence. 5 is even larger for us to remember\nSo in our example we would have all kind of pairs such as “He and Niall Ferguson”, “He and snappy dresser”, “He and Stephen Moss” and so on from the sentence also in the preceding 5 sentences.\n\n\n\n\n\n\nRemember what is noun phrase and examples\n\n\n\nA noun phrase is a group of words centered around a noun that functions as a single unit within a sentence. It typically consists of the noun and its modifiers. Here are some examples of noun phrases:\n\nThe big red ball\n\nNoun: ball\nModifiers: the, big, red\n\nMy favorite book\n\nNoun: book\nModifiers: my, favorite\n\nAn old, dusty suitcase\n\nNoun: suitcase\nModifiers: an, old, dusty\n\nThe talented and charismatic actor\n\nNoun: actor\nModifiers: the, talented, charismatic"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#hard-constraints-pronoun-agreement",
     "href": "blog/2023-12-03_discourse-processing/index.html#hard-constraints-pronoun-agreement",
     "title": "Discourse processing",
     "section": "30 Hard constraints: Pronoun agreement",
-    "text": "30 Hard constraints: Pronoun agreement\n\n\n\n\nSlide 30"
+    "text": "30 Hard constraints: Pronoun agreement\n\n\n\n\nSlide 30\n\n\n\n\nSo then we asked to ourselves. How can we build such a system? Answer: the earlier models use hand crafted features, and those were based on how humans understand language. So there is some rules that needs to be observed and those already signal if is a correct or incorrect pairing. So for instance:\n\nPronoun agreement: here we agree with the noun phrase with the number and gender.\nHere in the first example it would be odd to say: “see what he wants” so then when we are referring that needs to be an agreement we mean in gender and also number\nIn “Kim and Sandy” here the coordinate conjunction makes the pronoun to be “they”"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#hard-constraints-reflexives",
     "href": "blog/2023-12-03_discourse-processing/index.html#hard-constraints-reflexives",
     "title": "Discourse processing",
     "section": "31 Hard constraints: Reflexives",
-    "text": "31 Hard constraints: Reflexives\n\n\n\n\nSlide 31"
+    "text": "31 Hard constraints: Reflexives\n\n\n\n\nSlide 31\n\n\n\n\nAnother hard constraint is “himself, or herself” or so on. These are called reflexive pronouns"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#hard-constraints-pleonastic-pronouns",
     "href": "blog/2023-12-03_discourse-processing/index.html#hard-constraints-pleonastic-pronouns",
     "title": "Discourse processing",
     "section": "32 Hard constraints: Pleonastic pronouns",
-    "text": "32 Hard constraints: Pleonastic pronouns\n\n\n\n\nSlide 32"
+    "text": "32 Hard constraints: Pleonastic pronouns\n\n\n\n\nSlide 32\n\n\n\n\nThey are empty and do not refer to anything. In other contest “it” can actually refer to a “dog” i.e “it is hungry”. So this is a complication because we need to determine pleonastic pronouns whether they refer to something or no."
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#soft-preferences-salience",
     "href": "blog/2023-12-03_discourse-processing/index.html#soft-preferences-salience",
     "title": "Discourse processing",
     "section": "33 Soft preferences: Salience",
-    "text": "33 Soft preferences: Salience\n\n\n\n\nSlide 33"
+    "text": "33 Soft preferences: Salience\n\n\n\n\nSlide 33\n\n\n\n\nThe soft preferences are not constraints but they are some factors that indicate the right linking\n\nRecency More recent antecedents ( is the text that initially introduces the referent. This is the first time that somebody is mentioned.) are preferred\nGrammatical role we are more likely to introduce an antecedent as the subject as opposed to an object. So here subjects are preferred\nRepeated mention entities that have been mentioned a lot in the text are also preferred"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#soft-preferences-salience-1",
     "href": "blog/2023-12-03_discourse-processing/index.html#soft-preferences-salience-1",
     "title": "Discourse processing",
     "section": "34 Soft preferences: Salience",
-    "text": "34 Soft preferences: Salience\n\n\n\n\nSlide 34"
+    "text": "34 Soft preferences: Salience\n\n\n\n\nSlide 34\n\n\n\n\n\nPrallelism this means that the pronoun is in the same grammatical position as the noun phrase. So here in the same order, Freud is mention at the end and when we use the pronoun “him” at the end, then we are referring to “Freud”\nCoherence effects. Bill in this example Likes Fred, because he=Fred has a great sense of humour. So if we interpreted as having hummor is a reason to like someone then we know he=Fred. Here we are using Justitication because the we are providing evidence\n\n\n“Jhon likes Bill. He gave him an expensive gift”\n\n\nExplanation here we are explaining that because he=Bill got to Jhon an expensive gift, now Jhon likes Bill\nJustification here we are saying that Jhon likes Bill and because of that he=Jhon is buying it an expensive gift. The latter is the evidence that support the fact that Jhon likes Bill and thus the evidence of his act"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#features",
     "href": "blog/2023-12-03_discourse-processing/index.html#features",
     "title": "Discourse processing",
     "section": "35 Features",
-    "text": "35 Features\nCatanhoric Rinarv: t if nranniin hafnra antaradant\n\n\n\n\nSlide 35"
+    "text": "35 Features\n\n\n\n\nSlide 35\n\n\n\n\nFor the models that operate in handcrafted features, you can design features like the ones below:\nSlide 25: Cataphoric was defined as pronouns that appear before the referent (this is rare)\n\nSame verb: here we refer to the reflexive pronouns which must be coreferntial with a preceeding argument of the same verb\nThe distance in the text so Recency more recent antecedents are preferred\nGrammatical Role when we are more likely to introduce an antecedent as the subject as opposed to an object. So here subjects are preferred\nThe Linguistic form of the noun phrase, so is it a “proper noun” like a name, or is it definite or indefinite such as “a scientist” vs “the scientist” or is it a pronoun itself i.e “You, she, he”. Those are usefull indicators"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#feature-vectors",
     "href": "blog/2023-12-03_discourse-processing/index.html#feature-vectors",
     "title": "Discourse processing",
     "section": "36 Feature vectors",
-    "text": "36 Feature vectors\n\n\n\n\nSlide 36"
+    "text": "36 Feature vectors\n\n\n\n\nSlide 36\n\n\n\n\nWith these features we can create a feature vector and train a classifier to predict: for each pair of a pronoun and possible antecedent whether is a correct or incorrect link. This is the task. The task is to transfer the dataset using those features and then learn from them.\nSo here for instance we see construct per each pair a vector (the row in the table) and we fill in the features, (each column) according to this data pair i.e (him, Niall F.)\n\nRemember each feature would be either: “Binary” or “Discrete”, see slide above"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#problems-with-simple-classification-model",
     "href": "blog/2023-12-03_discourse-processing/index.html#problems-with-simple-classification-model",
     "title": "Discourse processing",
     "section": "37 Problems with simple classification model",
-    "text": "37 Problems with simple classification model\n\n\n\n\nSlide 37"
+    "text": "37 Problems with simple classification model\n\n\n\n\nSlide 37\n\n\n\n\n\nYou dont take into consideration anything else, but just consider pairs in isolations. So you cannot model “repeated effect”\n\nYou have problems because you take the isolated pairs and you simply predict for them. The problem is that you cannot implement repeated mention effects, you now how frequent a particular reference expression was, but you just consider pairs in isolation from the rest of the text\n\nIn real text we dont have just co-reference pairs but instead co-reference chains\n\nYou are also going to have chains of references. So first you start talking about one person, then using another pronoun we talk about it again, then another noun phrase and so on. This is a chain co-reference. Ideally to build a fuller model of this we actually want to process those chains as well."
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#neural-end-to-end-coreference-resolution",
     "href": "blog/2023-12-03_discourse-processing/index.html#neural-end-to-end-coreference-resolution",
     "title": "Discourse processing",
     "section": "38 Neural end-to-end coreference resolution",
-    "text": "38 Neural end-to-end coreference resolution\n\n\n\n\nSlide 38"
+    "text": "38 Neural end-to-end coreference resolution\n\n\n\n\nSlide 38\n\n\n\n\nHere the set up is different from the previous set-up we discuss, they just"
   },
   {
     "objectID": "blog/2023-12-03_discourse-processing/index.html#task-definition",
@@ -9742,5 +9742,12 @@
     "title": "Compositional semantics and sentence representations",
     "section": "70 Summary fo models seen so far",
     "text": "70 Summary fo models seen so far\n\n\n\n\nSlide 76\n\n\n\n\nSequence models :\n\nRNN\nLSTM\n\nTree-structure models are the ones that are also sensitive to the syntactic structure"
+  },
+  {
+    "objectID": "blog/2023-12-03_discourse-processing/index.html#a-much-better-way-is-to-build-a-hierarchical-model",
+    "href": "blog/2023-12-03_discourse-processing/index.html#a-much-better-way-is-to-build-a-hierarchical-model",
+    "title": "Discourse processing",
+    "section": "19 2. A much better way is to build a hierarchical model",
+    "text": "19 2. A much better way is to build a hierarchical model"
   }
 ]
