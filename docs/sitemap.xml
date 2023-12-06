@@ -190,7 +190,7 @@
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/index.html</loc>
-    <lastmod>2023-12-06T21:59:21.130Z</lastmod>
+    <lastmod>2023-12-06T23:37:46.975Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-11-07_numpy-reshape-rgb-image-to-1d-array/index.html</loc>
@@ -290,7 +290,7 @@
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-12-03_discourse-processing/index.html</loc>
-    <lastmod>2023-12-06T21:59:16.486Z</lastmod>
+    <lastmod>2023-12-06T21:59:32.509Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-12-03_interpretability-of-nlp-models/index.html</loc>
@@ -299,5 +299,17 @@
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-12-03_large-language-models/index.html</loc>
     <lastmod>2023-12-03T19:52:04.747Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html</loc>
+    <lastmod>2023-12-06T23:31:01.783Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-12-07_deep-learning-&-the-natural-sciences/index.html</loc>
+    <lastmod>2023-12-06T23:37:42.529Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html</loc>
+    <lastmod>2023-12-06T23:37:34.222Z</lastmod>
   </url>
 </urlset>
