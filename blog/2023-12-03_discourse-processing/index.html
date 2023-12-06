@@ -943,7 +943,13 @@ Remember what is noun phrase and examples
 <li><strong>Same verb</strong>: here we refer to the reflexive pronouns which must be coreferntial with a preceeding argument of the same verb</li>
 <li>The <strong>distance</strong> in the text so <strong>Recency</strong> more recent antecedents are preferred</li>
 <li><strong>Grammatical Role</strong> when we are more likely to introduce an antecedent as the subject as opposed to an object. So here subjects are preferred</li>
-<li>The <strong>Linguistic form</strong> of the noun phrase, so is it a “proper noun” like a name, or is it definite or indefinite such as “a scientist” vs “the scientist” or is it a pronoun itself i.e “You, she, he”. Those are usefull indicators</li>
+<li>The <strong>Linguistic form</strong> of the noun phrase, so is it a:
+<ul>
+<li>Proper noun: like a <strong>name</strong> or is it</li>
+<li>Definite noun: such as “<strong>the</strong> scientist” or is it</li>
+<li>Indefinite noun: “<strong>a</strong> scientist” or is it</li>
+<li>Pronoun itself i.e “you, she, he”</li>
+</ul></li>
 </ul>
 </section>
 <section id="feature-vectors" class="level2" data-number="36">
@@ -957,6 +963,9 @@ Remember what is noun phrase and examples
 </div>
 </center>
 <pre></pre>
+<blockquote class="blockquote">
+<p>Distance: here we are referring if they are in the same sentence then dist=0 if there is one sentence before the pronoun then dist=1 and so on.</p>
+</blockquote>
 <p>With these features we can create a feature vector and train a classifier to predict: for each pair of a pronoun and possible antecedent whether is a correct or incorrect link. This is the task. The task is to transfer the dataset using those features and then learn from them.</p>
 <p>So here for instance we see construct per each pair a vector (the row in the table) and we fill in the features, (each column) according to this data pair i.e (him, Niall F.)</p>
 <ul>
@@ -994,11 +1003,17 @@ Remember what is noun phrase and examples
 </div>
 </center>
 <pre></pre>
-<p>Here the set up is different from the previous set-up we discuss, they just</p>
+<p>Here the set up is different from the previous set-up we discuss, they did not just consider pairs but instead of a parser we want the whole thing to be end-to-end trainable. So we will take the text and the we will divide the text up into <strong>spans</strong>. So then they define their spans simply as n-grams, so sequence of different length.</p>
+<p>So take the text, split it up in possible spans of different length. Then say for instace at a given moment in your classification you are at a particular span in the text. For instance lets call it A. Then what they do is only consider things <strong>backwards</strong>, so they did not consider cataphors, so the task is out of pspans that proceed that span we want to find which ones or which one it would be the correct co-reference link so the correct antecedent.</p>
+<p>So this is a task of classifying still pairs in a sense of the span in question pair with all previous spans and classifying them as corrct or not. What was different from their approach as well was that they output a probability distribution over all of the previous spans in that text. So not only which pair is correct but also the probability of each of the spans to be a correct co-reference link</p>
+<p>All these method they called the mention-ranking paradigm.</p>
+<p>One differentiating factor is that they did not only consider pronouns i.e “he or she” but also they consider co-reference between different noun phrases which is something that you need to do in your real word.</p>
+<blockquote class="blockquote">
+<p>Remember: discourse is referred to the analysis of how sentences and phrases are linked together to form a coherent and meaningful conversation or written passage.</p>
+</blockquote>
 </section>
 <section id="task-definition" class="level2" data-number="39">
 <h2 data-number="39" class="anchored" data-anchor-id="task-definition"><span class="header-section-number">39</span> Task definition</h2>
-Naninn nankh nnann J Ann AnntnnnANAnt i
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1008,6 +1023,11 @@ Naninn nankh nnann J Ann AnntnnnANAnt i
 </div>
 </center>
 <pre></pre>
+<p>For each span i which is in the text, we want to assign a correct antecedent <span class="math inline">\(y_i\)</span> that is selected out of the dataset</p>
+<p>This dataset is going to be all the spans that preceed span ‘i’ (so only spans before ‘i’). In the set there is <span class="math inline">\(\epsilon\)</span> indicating the emtpy span, so the empty token rather, it is included for the model to be able to indicate that a particular span is non-referential. There is going to be a lot of spans that are not referential, so they do not refer anything in the preceeding set. For instance when a new entity is introduced in the text, then there is not gonna be an antecedent befora that. If is a verb for instance then it is not refering to anything else before. It is also going to be the case for predicative phrases i.e ‘snappy dresser’ not all noun phrases references are. So basically we need epsilon for the model to tell us when a span is not refering to any of the spans that we have seen before, meaning this span does not co-refer to them.</p>
+<p>In order to assign an antecedent this model scores pairs of spans i and j (the candidate antecedent). we are going to assing an score that measure the strenght of co-reference of that link. To ctually compute a distribution over all the possible antecedents, we will take the scores and we pass it through a softmax function</p>
+<p>So this is what the model ouputs, it ouputs a distribution over previously seen spans at a given span in the text.</p>
+<p>So we take our text, we split it in spans, of different lenght (we decide how many we want). We collect and say we are pointing in to a certain span i, then we collect all possible pairs of spans that occur before in the text. All posible one word spans, all possible two words spans, all possible three words spans, all possible ten words spans. These are the spans that are before our choice span. Now the model assumes that those are all possible antecedents of our span ‘i’ and that is our dataset Y. Remember then, we take all those spans and we want to rank them by the probability of co-reference link</p>
 </section>
 <section id="computing-the-score-s" class="level2" data-number="40">
 <h2 data-number="40" class="anchored" data-anchor-id="computing-the-score-s"><span class="header-section-number">40</span> Computing the score s</h2>
@@ -1020,6 +1040,12 @@ Naninn nankh nnann J Ann AnntnnnANAnt i
 </div>
 </center>
 <pre></pre>
+<ul>
+<li><p>m(i): tell us how likely a particular span is to be a valid mention because they are taking all possible spans of certain length they are going to have some gramatical phrases they will have some verbs that do not refer but what we want is noun phrases that can actually refer to somthing. So in a sense this function m, serves as a filter. A filter because we want to learn what are the properties of a good span that could potentially be a valid mention or referring expression.</p></li>
+<li><p>c(i,j) stands for candidate. This indicates whether ‘j’ is the antecedent of ‘i’.</p></li>
+<li><p>s(i,j) here we compute the score for those mentioned scores.</p></li>
+</ul>
+<p>The <span class="math inline">\(s(i, \epsilon)\)</span> means that if a model predicts a positive score for one of the spans then that spans is potentially co-referential, if is a negative score then it should abstain and not predict anything at all because then it just predict the empty span.</p>
 </section>
 <section id="computing-the-scoring-functions-m-and-c" class="level2" data-number="41">
 <h2 data-number="41" class="anchored" data-anchor-id="computing-the-scoring-functions-m-and-c"><span class="header-section-number">41</span> Computing the scoring functions m and c</h2>
@@ -1032,6 +1058,10 @@ Naninn nankh nnann J Ann AnntnnnANAnt i
 </div>
 </center>
 <pre></pre>
+<p>How do we compute m and c?</p>
+<p>Our representations of spans comes from our LSTM model. So we have an LSTM encoder and then from that we compute our span representations. The way the spans are represented is the vector <span class="math inline">\(g\)</span>, so here we take the hidden state of our start token in our span, so the first word in the span, then we take the hidden state of the last word in our span, then we use an attention mechanism to compute an overall span representation</p>
+<p>The phi in g_i is a hand crafted feature which is the lenght of the span. So then g_i si the represntation of the span</p>
+<p>our function c is a joint representation of the two spans and we want to elarn some feature interaction from these join representation to tell us something about co-reference</p>
 </section>
 <section id="learning-span-representations" class="level2" data-number="42">
 <h2 data-number="42" class="anchored" data-anchor-id="learning-span-representations"><span class="header-section-number">42</span> Learning span representations</h2>
@@ -1080,6 +1110,7 @@ Naninn nankh nnann J Ann AnntnnnANAnt i
 </div>
 </center>
 <pre></pre>
+<p>Here we have correct pairs in bold and attention is highlighted. For instance we have the noun phrase: “A fire in a Bangladeshi garment factory” this was identified as a whole span, then it found the co-reference the blaze. Fire=blaze, because we have word embeddings we already start with semantic information then the model was able to connect these two phrases</p>
 </section>
 <section id="examples-of-errors" class="level2" data-number="46">
 <h2 data-number="46" class="anchored" data-anchor-id="examples-of-errors"><span class="header-section-number">46</span> Examples of errors</h2>
