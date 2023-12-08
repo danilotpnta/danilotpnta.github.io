@@ -377,32 +377,14 @@ window.MathJax = {
     
 </main>
 
-<section id="title" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="title"><span class="header-section-number">1</span> Title</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_1.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 1</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-</section>
-<section id="organisation" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="organisation"><span class="header-section-number">2</span> Organisation</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_2.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 2</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-</section>
-<section id="lecture-overview" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="lecture-overview"><span class="header-section-number">3</span> Lecture overview</h2>
+<!-- ## Title
+<center>![Slide 1](imgs/page_1.jpeg){.w575}</center><pre></pre>
+
+
+## Organisation
+<center>![Slide 2](imgs/page_2.jpeg){.w575}</center><pre></pre> -->
+<section id="lecture-overview" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="lecture-overview"><span class="header-section-number">1</span> Lecture overview</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -412,9 +394,26 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+What are implicit density models?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
+<p>These mode ls are “implicit” because they do not explicitly define the probability distribution, but rather define it indirectly. Instead of specifying a probability density function, implicit density models rely on generating samples from a distribution and use these samples to implicitly model the underlying probability distribution.</p>
+<p>One popular approach to implicit density modeling is through the use of generative models</p>
+</div>
+</div>
+</div>
 </section>
-<section id="a-map-of-generative-models" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="a-map-of-generative-models"><span class="header-section-number">4</span> A map of generative models</h2>
+<section id="a-map-of-generative-models" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="a-map-of-generative-models"><span class="header-section-number">2</span> A map of generative models</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -424,9 +423,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Here in the implicity density you can sample from the probability distribution, but it cannot give you an estimate of how likely a particular image is</p>
 </section>
-<section id="last-time" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="last-time"><span class="header-section-number">5</span> Last time</h2>
+<section id="last-time" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="last-time"><span class="header-section-number">3</span> Last time</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -437,8 +437,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="today" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="today"><span class="header-section-number">6</span> Today</h2>
+<section id="today" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="today"><span class="header-section-number">4</span> Today</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -448,9 +448,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Here we say Generated as refering to fake, because it was generated. The <strong>Discriminator</strong> would be in such a manner that it will learn how to tell between real and fake. And the <strong>Generator</strong> will also be a NN trained in a manner that tries to fool the Discriminator</p>
 </section>
-<section id="explicit-density-vs-implicit-density" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="explicit-density-vs-implicit-density"><span class="header-section-number">7</span> Explicit density vs implicit density</h2>
+<section id="explicit-density-vs-implicit-density" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="explicit-density-vs-implicit-density"><span class="header-section-number">5</span> Explicit density vs implicit density</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -460,9 +461,19 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<ul>
+<li>Purple: if x was taken from the true distribution then P_theta is high
+<ul>
+<li>Explicit and VAE kinda do both, it includes both things. Explicitly density is more difficult because we can do both escentially. In terms of variational and having a _ network there is exist works that combine t</li>
+</ul></li>
+<li>Green: samples taken from p_theta they should behave similar to the real sample
+<ul>
+<li>Here we can get a sample but we cannot give get the distribution p_theta of x so the probability values</li>
+</ul></li>
+</ul>
 </section>
-<section id="learning-an-implicit-density-function" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="learning-an-implicit-density-function"><span class="header-section-number">8</span> Learning an implicit density function</h2>
+<section id="learning-an-implicit-density-function" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="learning-an-implicit-density-function"><span class="header-section-number">6</span> Learning an implicit density function</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -473,8 +484,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="generations-of-high-quality-various-potential-applications" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="generations-of-high-quality-various-potential-applications"><span class="header-section-number">9</span> Generations of high quality, various potential applications</h2>
+<section id="generations-of-high-quality-various-potential-applications" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="generations-of-high-quality-various-potential-applications"><span class="header-section-number">7</span> Generations of high quality, various potential applications</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -485,8 +496,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="title-1" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="title-1"><span class="header-section-number">10</span> Title</h2>
+<section id="title" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="title"><span class="header-section-number">8</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -497,8 +508,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="what-is-agan" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="what-is-agan"><span class="header-section-number">11</span> What is aGAN?</h2>
+<section id="what-is-agan" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="what-is-agan"><span class="header-section-number">9</span> What is aGAN?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -509,8 +520,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="gan-intuition-arms-race" class="level2" data-number="12">
-<h2 data-number="12" class="anchored" data-anchor-id="gan-intuition-arms-race"><span class="header-section-number">12</span> GAN: Intuition: arms race</h2>
+<section id="gan-intuition-arms-race" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="gan-intuition-arms-race"><span class="header-section-number">10</span> GAN: Intuition: arms race</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -521,8 +532,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="title-2" class="level2" data-number="13">
-<h2 data-number="13" class="anchored" data-anchor-id="title-2"><span class="header-section-number">13</span> Title</h2>
+<section id="title-1" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="title-1"><span class="header-section-number">11</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -533,8 +544,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="gan-architecture" class="level2" data-number="14">
-<h2 data-number="14" class="anchored" data-anchor-id="gan-architecture"><span class="header-section-number">14</span> GAN architecture</h2>
+<section id="gan-architecture" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="gan-architecture"><span class="header-section-number">12</span> GAN architecture</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -545,8 +556,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="gan-has-no-encoder-its-a-discriminator" class="level2" data-number="15">
-<h2 data-number="15" class="anchored" data-anchor-id="gan-has-no-encoder-its-a-discriminator"><span class="header-section-number">15</span> GAN has no ”encoder” — it’s a discriminator</h2>
+<section id="gan-has-no-encoder-its-a-discriminator" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="gan-has-no-encoder-its-a-discriminator"><span class="header-section-number">13</span> GAN has no ”encoder” — it’s a discriminator</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -557,8 +568,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="generator-network-x-gz-0c" class="level2" data-number="16">
-<h2 data-number="16" class="anchored" data-anchor-id="generator-network-x-gz-0c"><span class="header-section-number">16</span> 1) Generator network x = G(z; 0c)</h2>
+<section id="generator-network-x-gz-0c" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="generator-network-x-gz-0c"><span class="header-section-number">14</span> 1) Generator network x = G(z; 0c)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -569,8 +580,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="discriminator-network-y-dx-8p" class="level2" data-number="17">
-<h2 data-number="17" class="anchored" data-anchor-id="discriminator-network-y-dx-8p"><span class="header-section-number">17</span> 2) Discriminator network y = D(x; 8p)</h2>
+<section id="discriminator-network-y-dx-8p" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="discriminator-network-y-dx-8p"><span class="header-section-number">15</span> 2) Discriminator network y = D(x; 8p)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -581,8 +592,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="generator-discriminator-implementation" class="level2" data-number="18">
-<h2 data-number="18" class="anchored" data-anchor-id="generator-discriminator-implementation"><span class="header-section-number">18</span> Generator &amp; Discriminator: Implementation</h2>
+<section id="generator-discriminator-implementation" class="level2" data-number="16">
+<h2 data-number="16" class="anchored" data-anchor-id="generator-discriminator-implementation"><span class="header-section-number">16</span> Generator &amp; Discriminator: Implementation</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -593,8 +604,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="ouiz-the-starting-point-of-the-gan-is-the-random-noise-z." class="level2" data-number="19">
-<h2 data-number="19" class="anchored" data-anchor-id="ouiz-the-starting-point-of-the-gan-is-the-random-noise-z."><span class="header-section-number">19</span> - Ouiz: The starting point of the GAN is the random noise z.</h2>
+<section id="ouiz-the-starting-point-of-the-gan-is-the-random-noise-z." class="level2" data-number="17">
+<h2 data-number="17" class="anchored" data-anchor-id="ouiz-the-starting-point-of-the-gan-is-the-random-noise-z."><span class="header-section-number">17</span> - Ouiz: The starting point of the GAN is the random noise z.</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -605,8 +616,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="how-do-we-train-the-generator" class="level2" data-number="20">
-<h2 data-number="20" class="anchored" data-anchor-id="how-do-we-train-the-generator"><span class="header-section-number">20</span> How do we train the generator?</h2>
+<section id="how-do-we-train-the-generator" class="level2" data-number="18">
+<h2 data-number="18" class="anchored" data-anchor-id="how-do-we-train-the-generator"><span class="header-section-number">18</span> How do we train the generator?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -617,8 +628,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="minimax-loss" class="level2" data-number="21">
-<h2 data-number="21" class="anchored" data-anchor-id="minimax-loss"><span class="header-section-number">21</span> 1) Minimax Loss</h2>
+<section id="minimax-loss" class="level2" data-number="19">
+<h2 data-number="19" class="anchored" data-anchor-id="minimax-loss"><span class="header-section-number">19</span> 1) Minimax Loss</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -629,8 +640,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="minimax-loss-1" class="level2" data-number="22">
-<h2 data-number="22" class="anchored" data-anchor-id="minimax-loss-1"><span class="header-section-number">22</span> 1) Minimax Loss</h2>
+<section id="minimax-loss-1" class="level2" data-number="20">
+<h2 data-number="20" class="anchored" data-anchor-id="minimax-loss-1"><span class="header-section-number">20</span> 1) Minimax Loss</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -641,8 +652,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="heuristic-non-saturating-loss" class="level2" data-number="23">
-<h2 data-number="23" class="anchored" data-anchor-id="heuristic-non-saturating-loss"><span class="header-section-number">23</span> 2) Heuristic non-saturating loss</h2>
+<section id="heuristic-non-saturating-loss" class="level2" data-number="21">
+<h2 data-number="21" class="anchored" data-anchor-id="heuristic-non-saturating-loss"><span class="header-section-number">21</span> 2) Heuristic non-saturating loss</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -653,8 +664,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="modifying-gans-for-max-likelihood" class="level2" data-number="24">
-<h2 data-number="24" class="anchored" data-anchor-id="modifying-gans-for-max-likelihood"><span class="header-section-number">24</span> 3) Modifying GANs for max-likelihood</h2>
+<section id="modifying-gans-for-max-likelihood" class="level2" data-number="22">
+<h2 data-number="22" class="anchored" data-anchor-id="modifying-gans-for-max-likelihood"><span class="header-section-number">22</span> 3) Modifying GANs for max-likelihood</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -665,8 +676,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="comparison-of-generator-losses" class="level2" data-number="25">
-<h2 data-number="25" class="anchored" data-anchor-id="comparison-of-generator-losses"><span class="header-section-number">25</span> Comparison of Generator Losses</h2>
+<section id="comparison-of-generator-losses" class="level2" data-number="23">
+<h2 data-number="23" class="anchored" data-anchor-id="comparison-of-generator-losses"><span class="header-section-number">23</span> Comparison of Generator Losses</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -677,8 +688,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="optimal-discriminator" class="level2" data-number="26">
-<h2 data-number="26" class="anchored" data-anchor-id="optimal-discriminator"><span class="header-section-number">26</span> Optimal discriminator</h2>
+<section id="optimal-discriminator" class="level2" data-number="24">
+<h2 data-number="24" class="anchored" data-anchor-id="optimal-discriminator"><span class="header-section-number">24</span> Optimal discriminator</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -689,8 +700,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="why-is-this-the-optimal-discriminator" class="level2" data-number="27">
-<h2 data-number="27" class="anchored" data-anchor-id="why-is-this-the-optimal-discriminator"><span class="header-section-number">27</span> Why is this the optimal discriminator?</h2>
+<section id="why-is-this-the-optimal-discriminator" class="level2" data-number="25">
+<h2 data-number="25" class="anchored" data-anchor-id="why-is-this-the-optimal-discriminator"><span class="header-section-number">25</span> Why is this the optimal discriminator?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -701,8 +712,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="gans-and-jensen-shannon-divergence" class="level2" data-number="28">
-<h2 data-number="28" class="anchored" data-anchor-id="gans-and-jensen-shannon-divergence"><span class="header-section-number">28</span> GANs and Jensen-Shannon divergence</h2>
+<section id="gans-and-jensen-shannon-divergence" class="level2" data-number="26">
+<h2 data-number="26" class="anchored" data-anchor-id="gans-and-jensen-shannon-divergence"><span class="header-section-number">26</span> GANs and Jensen-Shannon divergence</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -713,8 +724,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="is-the-divergence-important" class="level2" data-number="29">
-<h2 data-number="29" class="anchored" data-anchor-id="is-the-divergence-important"><span class="header-section-number">29</span> Is the divergence important?</h2>
+<section id="is-the-divergence-important" class="level2" data-number="27">
+<h2 data-number="27" class="anchored" data-anchor-id="is-the-divergence-important"><span class="header-section-number">27</span> Is the divergence important?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -725,8 +736,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="kl-vs-js" class="level2" data-number="30">
-<h2 data-number="30" class="anchored" data-anchor-id="kl-vs-js"><span class="header-section-number">30</span> KL vs JS</h2>
+<section id="kl-vs-js" class="level2" data-number="28">
+<h2 data-number="28" class="anchored" data-anchor-id="kl-vs-js"><span class="header-section-number">28</span> KL vs JS</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -737,8 +748,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="is-the-divergence-important-1" class="level2" data-number="31">
-<h2 data-number="31" class="anchored" data-anchor-id="is-the-divergence-important-1"><span class="header-section-number">31</span> Is the divergence important?</h2>
+<section id="is-the-divergence-important-1" class="level2" data-number="29">
+<h2 data-number="29" class="anchored" data-anchor-id="is-the-divergence-important-1"><span class="header-section-number">29</span> Is the divergence important?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -749,8 +760,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="general-observations" class="level2" data-number="32">
-<h2 data-number="32" class="anchored" data-anchor-id="general-observations"><span class="header-section-number">32</span> General observations</h2>
+<section id="general-observations" class="level2" data-number="30">
+<h2 data-number="30" class="anchored" data-anchor-id="general-observations"><span class="header-section-number">30</span> General observations</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -761,8 +772,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="training-procedure" class="level2" data-number="33">
-<h2 data-number="33" class="anchored" data-anchor-id="training-procedure"><span class="header-section-number">33</span> Training procedure</h2>
+<section id="training-procedure" class="level2" data-number="31">
+<h2 data-number="31" class="anchored" data-anchor-id="training-procedure"><span class="header-section-number">31</span> Training procedure</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -773,8 +784,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="how-research-gets-done-part-8" class="level2" data-number="34">
-<h2 data-number="34" class="anchored" data-anchor-id="how-research-gets-done-part-8"><span class="header-section-number">34</span> How research gets done part 8</h2>
+<section id="how-research-gets-done-part-8" class="level2" data-number="32">
+<h2 data-number="32" class="anchored" data-anchor-id="how-research-gets-done-part-8"><span class="header-section-number">32</span> How research gets done part 8</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -785,8 +796,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="title-3" class="level2" data-number="35">
-<h2 data-number="35" class="anchored" data-anchor-id="title-3"><span class="header-section-number">35</span> Title</h2>
+<section id="title-2" class="level2" data-number="33">
+<h2 data-number="33" class="anchored" data-anchor-id="title-2"><span class="header-section-number">33</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -797,8 +808,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="challenge-1-vanishing-gradients" class="level2" data-number="36">
-<h2 data-number="36" class="anchored" data-anchor-id="challenge-1-vanishing-gradients"><span class="header-section-number">36</span> Challenge 1: Vanishing Gradients</h2>
+<section id="challenge-1-vanishing-gradients" class="level2" data-number="34">
+<h2 data-number="34" class="anchored" data-anchor-id="challenge-1-vanishing-gradients"><span class="header-section-number">34</span> Challenge 1: Vanishing Gradients</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -809,8 +820,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="challenge-2-low-dimensional-supports" class="level2" data-number="37">
-<h2 data-number="37" class="anchored" data-anchor-id="challenge-2-low-dimensional-supports"><span class="header-section-number">37</span> Challenge 2: Low dimensional supports</h2>
+<section id="challenge-2-low-dimensional-supports" class="level2" data-number="35">
+<h2 data-number="35" class="anchored" data-anchor-id="challenge-2-low-dimensional-supports"><span class="header-section-number">35</span> Challenge 2: Low dimensional supports</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -821,8 +832,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="challenge-3-batch-normalization" class="level2" data-number="38">
-<h2 data-number="38" class="anchored" data-anchor-id="challenge-3-batch-normalization"><span class="header-section-number">38</span> Challenge 3: Batch Normalization</h2>
+<section id="challenge-3-batch-normalization" class="level2" data-number="36">
+<h2 data-number="36" class="anchored" data-anchor-id="challenge-3-batch-normalization"><span class="header-section-number">36</span> Challenge 3: Batch Normalization</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -833,8 +844,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="reference-batch-normalization" class="level2" data-number="39">
-<h2 data-number="39" class="anchored" data-anchor-id="reference-batch-normalization"><span class="header-section-number">39</span> Reference batch normalization</h2>
+<section id="reference-batch-normalization" class="level2" data-number="37">
+<h2 data-number="37" class="anchored" data-anchor-id="reference-batch-normalization"><span class="header-section-number">37</span> Reference batch normalization</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -845,8 +856,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="virtual-batch-normalization" class="level2" data-number="40">
-<h2 data-number="40" class="anchored" data-anchor-id="virtual-batch-normalization"><span class="header-section-number">40</span> Virtual batch normalization</h2>
+<section id="virtual-batch-normalization" class="level2" data-number="38">
+<h2 data-number="38" class="anchored" data-anchor-id="virtual-batch-normalization"><span class="header-section-number">38</span> Virtual batch normalization</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -857,8 +868,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="challenge-4-convergence" class="level2" data-number="41">
-<h2 data-number="41" class="anchored" data-anchor-id="challenge-4-convergence"><span class="header-section-number">41</span> Challenge 4: Convergence</h2>
+<section id="challenge-4-convergence" class="level2" data-number="39">
+<h2 data-number="39" class="anchored" data-anchor-id="challenge-4-convergence"><span class="header-section-number">39</span> Challenge 4: Convergence</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -869,8 +880,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="challenge-mode-collapse" class="level2" data-number="42">
-<h2 data-number="42" class="anchored" data-anchor-id="challenge-mode-collapse"><span class="header-section-number">42</span> Challenge: mode collapse</h2>
+<section id="challenge-mode-collapse" class="level2" data-number="40">
+<h2 data-number="40" class="anchored" data-anchor-id="challenge-mode-collapse"><span class="header-section-number">40</span> Challenge: mode collapse</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -881,8 +892,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="potential-solution-regularize-for-diversity" class="level2" data-number="43">
-<h2 data-number="43" class="anchored" data-anchor-id="potential-solution-regularize-for-diversity"><span class="header-section-number">43</span> Potential solution regularize for diversity</h2>
+<section id="potential-solution-regularize-for-diversity" class="level2" data-number="41">
+<h2 data-number="41" class="anchored" data-anchor-id="potential-solution-regularize-for-diversity"><span class="header-section-number">41</span> Potential solution regularize for diversity</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -893,8 +904,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="mode-collapse-vs-over-generalisation" class="level2" data-number="44">
-<h2 data-number="44" class="anchored" data-anchor-id="mode-collapse-vs-over-generalisation"><span class="header-section-number">44</span> Mode-collapse vs over-generalisation</h2>
+<section id="mode-collapse-vs-over-generalisation" class="level2" data-number="42">
+<h2 data-number="42" class="anchored" data-anchor-id="mode-collapse-vs-over-generalisation"><span class="header-section-number">42</span> Mode-collapse vs over-generalisation</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -905,8 +916,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="challenge-how-to-evaluate" class="level2" data-number="45">
-<h2 data-number="45" class="anchored" data-anchor-id="challenge-how-to-evaluate"><span class="header-section-number">45</span> Challenge: how to evaluate?</h2>
+<section id="challenge-how-to-evaluate" class="level2" data-number="43">
+<h2 data-number="43" class="anchored" data-anchor-id="challenge-how-to-evaluate"><span class="header-section-number">43</span> Challenge: how to evaluate?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -917,8 +928,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="challenge-beyond-images" class="level2" data-number="46">
-<h2 data-number="46" class="anchored" data-anchor-id="challenge-beyond-images"><span class="header-section-number">46</span> Challenge: beyond images</h2>
+<section id="challenge-beyond-images" class="level2" data-number="44">
+<h2 data-number="44" class="anchored" data-anchor-id="challenge-beyond-images"><span class="header-section-number">44</span> Challenge: beyond images</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -929,8 +940,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="some-open-challenges-for-gans" class="level2" data-number="47">
-<h2 data-number="47" class="anchored" data-anchor-id="some-open-challenges-for-gans"><span class="header-section-number">47</span> Some open challenges for GANs</h2>
+<section id="some-open-challenges-for-gans" class="level2" data-number="45">
+<h2 data-number="45" class="anchored" data-anchor-id="some-open-challenges-for-gans"><span class="header-section-number">45</span> Some open challenges for GANs</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -941,8 +952,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="one-sided-label-smoothing" class="level2" data-number="48">
-<h2 data-number="48" class="anchored" data-anchor-id="one-sided-label-smoothing"><span class="header-section-number">48</span> One-sided label smoothing</h2>
+<section id="one-sided-label-smoothing" class="level2" data-number="46">
+<h2 data-number="46" class="anchored" data-anchor-id="one-sided-label-smoothing"><span class="header-section-number">46</span> One-sided label smoothing</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -953,8 +964,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="benefits-of-label-smoothing" class="level2" data-number="49">
-<h2 data-number="49" class="anchored" data-anchor-id="benefits-of-label-smoothing"><span class="header-section-number">49</span> Benefits of label smoothing</h2>
+<section id="benefits-of-label-smoothing" class="level2" data-number="47">
+<h2 data-number="47" class="anchored" data-anchor-id="benefits-of-label-smoothing"><span class="header-section-number">47</span> Benefits of label smoothing</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -965,8 +976,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="ganss-sometimes-explode" class="level2" data-number="50">
-<h2 data-number="50" class="anchored" data-anchor-id="ganss-sometimes-explode"><span class="header-section-number">50</span> GANSs sometimes explode</h2>
+<section id="ganss-sometimes-explode" class="level2" data-number="48">
+<h2 data-number="48" class="anchored" data-anchor-id="ganss-sometimes-explode"><span class="header-section-number">48</span> GANSs sometimes explode</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -977,8 +988,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="title-4" class="level2" data-number="51">
-<h2 data-number="51" class="anchored" data-anchor-id="title-4"><span class="header-section-number">51</span> Title</h2>
+<section id="title-3" class="level2" data-number="49">
+<h2 data-number="49" class="anchored" data-anchor-id="title-3"><span class="header-section-number">49</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -989,8 +1000,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="dcgan" class="level2" data-number="52">
-<h2 data-number="52" class="anchored" data-anchor-id="dcgan"><span class="header-section-number">52</span> DCGAN</h2>
+<section id="dcgan" class="level2" data-number="50">
+<h2 data-number="50" class="anchored" data-anchor-id="dcgan"><span class="header-section-number">50</span> DCGAN</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1001,8 +1012,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="examples" class="level2" data-number="53">
-<h2 data-number="53" class="anchored" data-anchor-id="examples"><span class="header-section-number">53</span> Examples</h2>
+<section id="examples" class="level2" data-number="51">
+<h2 data-number="51" class="anchored" data-anchor-id="examples"><span class="header-section-number">51</span> Examples</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1013,8 +1024,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="even-vector-space-arithmetics" class="level2" data-number="54">
-<h2 data-number="54" class="anchored" data-anchor-id="even-vector-space-arithmetics"><span class="header-section-number">54</span> Even vector space arithmetics …</h2>
+<section id="even-vector-space-arithmetics" class="level2" data-number="52">
+<h2 data-number="52" class="anchored" data-anchor-id="even-vector-space-arithmetics"><span class="header-section-number">52</span> Even vector space arithmetics …</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1025,8 +1036,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="can-generate-new-views" class="level2" data-number="55">
-<h2 data-number="55" class="anchored" data-anchor-id="can-generate-new-views"><span class="header-section-number">55</span> Can generate new views</h2>
+<section id="can-generate-new-views" class="level2" data-number="53">
+<h2 data-number="53" class="anchored" data-anchor-id="can-generate-new-views"><span class="header-section-number">53</span> Can generate new views</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1037,8 +1048,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="wasserstein-gan" class="level2" data-number="56">
-<h2 data-number="56" class="anchored" data-anchor-id="wasserstein-gan"><span class="header-section-number">56</span> Wasserstein GAN</h2>
+<section id="wasserstein-gan" class="level2" data-number="54">
+<h2 data-number="54" class="anchored" data-anchor-id="wasserstein-gan"><span class="header-section-number">54</span> Wasserstein GAN</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1049,8 +1060,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="differences-in-gans" class="level2" data-number="57">
-<h2 data-number="57" class="anchored" data-anchor-id="differences-in-gans"><span class="header-section-number">57</span> Differences in GANs</h2>
+<section id="differences-in-gans" class="level2" data-number="55">
+<h2 data-number="55" class="anchored" data-anchor-id="differences-in-gans"><span class="header-section-number">55</span> Differences in GANs</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1061,8 +1072,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="bigbigan" class="level2" data-number="58">
-<h2 data-number="58" class="anchored" data-anchor-id="bigbigan"><span class="header-section-number">58</span> BigBiGAN</h2>
+<section id="bigbigan" class="level2" data-number="56">
+<h2 data-number="56" class="anchored" data-anchor-id="bigbigan"><span class="header-section-number">56</span> BigBiGAN</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1073,8 +1084,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="so-what-changed-more-data-no" class="level2" data-number="59">
-<h2 data-number="59" class="anchored" data-anchor-id="so-what-changed-more-data-no"><span class="header-section-number">59</span> So what changed? More data? – No</h2>
+<section id="so-what-changed-more-data-no" class="level2" data-number="57">
+<h2 data-number="57" class="anchored" data-anchor-id="so-what-changed-more-data-no"><span class="header-section-number">57</span> So what changed? More data? – No</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1085,8 +1096,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="so-what-changed-architectures-and-compute-yes" class="level2" data-number="60">
-<h2 data-number="60" class="anchored" data-anchor-id="so-what-changed-architectures-and-compute-yes"><span class="header-section-number">60</span> So what changed? Architectures and compute: yes</h2>
+<section id="so-what-changed-architectures-and-compute-yes" class="level2" data-number="58">
+<h2 data-number="58" class="anchored" data-anchor-id="so-what-changed-architectures-and-compute-yes"><span class="header-section-number">58</span> So what changed? Architectures and compute: yes</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1097,8 +1108,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="conditional-gan" class="level2" data-number="61">
-<h2 data-number="61" class="anchored" data-anchor-id="conditional-gan"><span class="header-section-number">61</span> Conditional GAN</h2>
+<section id="conditional-gan" class="level2" data-number="59">
+<h2 data-number="59" class="anchored" data-anchor-id="conditional-gan"><span class="header-section-number">59</span> Conditional GAN</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1109,8 +1120,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="image-to-image-translation" class="level2" data-number="62">
-<h2 data-number="62" class="anchored" data-anchor-id="image-to-image-translation"><span class="header-section-number">62</span> Image to image translation</h2>
+<section id="image-to-image-translation" class="level2" data-number="60">
+<h2 data-number="60" class="anchored" data-anchor-id="image-to-image-translation"><span class="header-section-number">60</span> Image to image translation</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1121,8 +1132,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="adversarial-autoencoders-and-adversarial-network-in-latent-space" class="level2" data-number="63">
-<h2 data-number="63" class="anchored" data-anchor-id="adversarial-autoencoders-and-adversarial-network-in-latent-space"><span class="header-section-number">63</span> Adversarial AutoEncoders: and adversarial network in latent space</h2>
+<section id="adversarial-autoencoders-and-adversarial-network-in-latent-space" class="level2" data-number="61">
+<h2 data-number="61" class="anchored" data-anchor-id="adversarial-autoencoders-and-adversarial-network-in-latent-space"><span class="header-section-number">61</span> Adversarial AutoEncoders: and adversarial network in latent space</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1133,8 +1144,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="cyclegan-img2img-models" class="level2" data-number="64">
-<h2 data-number="64" class="anchored" data-anchor-id="cyclegan-img2img-models"><span class="header-section-number">64</span> CycleGAN: “img2img” models</h2>
+<section id="cyclegan-img2img-models" class="level2" data-number="62">
+<h2 data-number="62" class="anchored" data-anchor-id="cyclegan-img2img-models"><span class="header-section-number">62</span> CycleGAN: “img2img” models</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1145,8 +1156,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="stylegan-and-styleganv2" class="level2" data-number="65">
-<h2 data-number="65" class="anchored" data-anchor-id="stylegan-and-styleganv2"><span class="header-section-number">65</span> StyleGAN and StyleGANv2</h2>
+<section id="stylegan-and-styleganv2" class="level2" data-number="63">
+<h2 data-number="63" class="anchored" data-anchor-id="stylegan-and-styleganv2"><span class="header-section-number">63</span> StyleGAN and StyleGANv2</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1157,8 +1168,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="title-5" class="level2" data-number="66">
-<h2 data-number="66" class="anchored" data-anchor-id="title-5"><span class="header-section-number">66</span> Title</h2>
+<section id="title-4" class="level2" data-number="64">
+<h2 data-number="64" class="anchored" data-anchor-id="title-4"><span class="header-section-number">64</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1169,8 +1180,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="overview-of-methods" class="level2" data-number="67">
-<h2 data-number="67" class="anchored" data-anchor-id="overview-of-methods"><span class="header-section-number">67</span> Overview of methods</h2>
+<section id="overview-of-methods" class="level2" data-number="65">
+<h2 data-number="65" class="anchored" data-anchor-id="overview-of-methods"><span class="header-section-number">65</span> Overview of methods</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1181,8 +1192,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="basic-idea-of-diffusion-models-learning-how-to-denoise" class="level2" data-number="68">
-<h2 data-number="68" class="anchored" data-anchor-id="basic-idea-of-diffusion-models-learning-how-to-denoise"><span class="header-section-number">68</span> Basic idea of diffusion models: learning how to denoise</h2>
+<section id="basic-idea-of-diffusion-models-learning-how-to-denoise" class="level2" data-number="66">
+<h2 data-number="66" class="anchored" data-anchor-id="basic-idea-of-diffusion-models-learning-how-to-denoise"><span class="header-section-number">66</span> Basic idea of diffusion models: learning how to denoise</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1193,8 +1204,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="diffusion-models-turn-generative-learning-into-a-sequence-of-supervised-problems" class="level2" data-number="69">
-<h2 data-number="69" class="anchored" data-anchor-id="diffusion-models-turn-generative-learning-into-a-sequence-of-supervised-problems"><span class="header-section-number">69</span> Diffusion models turn generative learning into a sequence of supervised problems</h2>
+<section id="diffusion-models-turn-generative-learning-into-a-sequence-of-supervised-problems" class="level2" data-number="67">
+<h2 data-number="67" class="anchored" data-anchor-id="diffusion-models-turn-generative-learning-into-a-sequence-of-supervised-problems"><span class="header-section-number">67</span> Diffusion models turn generative learning into a sequence of supervised problems</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1205,8 +1216,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="the-architecture-a-modified-u-net-that-uses-diffusion-time-t" class="level2" data-number="70">
-<h2 data-number="70" class="anchored" data-anchor-id="the-architecture-a-modified-u-net-that-uses-diffusion-time-t"><span class="header-section-number">70</span> The architecture: a modified U-Net that uses diffusion time t</h2>
+<section id="the-architecture-a-modified-u-net-that-uses-diffusion-time-t" class="level2" data-number="68">
+<h2 data-number="68" class="anchored" data-anchor-id="the-architecture-a-modified-u-net-that-uses-diffusion-time-t"><span class="header-section-number">68</span> The architecture: a modified U-Net that uses diffusion time t</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1217,8 +1228,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="combining-this-with-text-as-cond.-inputs-dall-e-v2-unclip" class="level2" data-number="71">
-<h2 data-number="71" class="anchored" data-anchor-id="combining-this-with-text-as-cond.-inputs-dall-e-v2-unclip"><span class="header-section-number">71</span> Combining this with text as cond. inputs: DALL-E v2 / “unCLIP”</h2>
+<section id="combining-this-with-text-as-cond.-inputs-dall-e-v2-unclip" class="level2" data-number="69">
+<h2 data-number="69" class="anchored" data-anchor-id="combining-this-with-text-as-cond.-inputs-dall-e-v2-unclip"><span class="header-section-number">69</span> Combining this with text as cond. inputs: DALL-E v2 / “unCLIP”</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1229,8 +1240,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="final-note-about-deep-fakes-and-ethics" class="level2" data-number="72">
-<h2 data-number="72" class="anchored" data-anchor-id="final-note-about-deep-fakes-and-ethics"><span class="header-section-number">72</span> Final note about deep fakes and ethics</h2>
+<section id="final-note-about-deep-fakes-and-ethics" class="level2" data-number="70">
+<h2 data-number="70" class="anchored" data-anchor-id="final-note-about-deep-fakes-and-ethics"><span class="header-section-number">70</span> Final note about deep fakes and ethics</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1241,8 +1252,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="recommended-watch-just-34min" class="level2" data-number="73">
-<h2 data-number="73" class="anchored" data-anchor-id="recommended-watch-just-34min"><span class="header-section-number">73</span> Recommended watch (just 34min)</h2>
+<section id="recommended-watch-just-34min" class="level2" data-number="71">
+<h2 data-number="71" class="anchored" data-anchor-id="recommended-watch-just-34min"><span class="header-section-number">71</span> Recommended watch (just 34min)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1253,8 +1264,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="quiz-what-dimensions-need-to-be-considered-when-thinking-about" class="level2" data-number="74">
-<h2 data-number="74" class="anchored" data-anchor-id="quiz-what-dimensions-need-to-be-considered-when-thinking-about"><span class="header-section-number">74</span> ; Quiz: what dimensions need to be considered when thinking about ;</h2>
+<section id="quiz-what-dimensions-need-to-be-considered-when-thinking-about" class="level2" data-number="72">
+<h2 data-number="72" class="anchored" data-anchor-id="quiz-what-dimensions-need-to-be-considered-when-thinking-about"><span class="header-section-number">72</span> ; Quiz: what dimensions need to be considered when thinking about ;</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1265,8 +1276,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="more-on-that-previous-one.." class="level2" data-number="75">
-<h2 data-number="75" class="anchored" data-anchor-id="more-on-that-previous-one.."><span class="header-section-number">75</span> More on that previous one..</h2>
+<section id="more-on-that-previous-one.." class="level2" data-number="73">
+<h2 data-number="73" class="anchored" data-anchor-id="more-on-that-previous-one.."><span class="header-section-number">73</span> More on that previous one..</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1277,8 +1288,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="sy-generative-adversarial-networks-gans-are-a-type-of-deep-learning-model" class="level2" data-number="76">
-<h2 data-number="76" class="anchored" data-anchor-id="sy-generative-adversarial-networks-gans-are-a-type-of-deep-learning-model"><span class="header-section-number">76</span> Sy Generative Adversarial Networks (GANs) are a type of deep learning model</h2>
+<section id="sy-generative-adversarial-networks-gans-are-a-type-of-deep-learning-model" class="level2" data-number="74">
+<h2 data-number="74" class="anchored" data-anchor-id="sy-generative-adversarial-networks-gans-are-a-type-of-deep-learning-model"><span class="header-section-number">74</span> Sy Generative Adversarial Networks (GANs) are a type of deep learning model</h2>
 <p>Si | I } } I } } ar of GANs that is used for unsupervised learning. GANs consist of two components: a</p>
 generative model, which is trained to generate samples that are similar to a
 <center>
@@ -1291,8 +1302,8 @@ generative model, which is trained to generate samples that are similar to a
 </center>
 <pre></pre>
 </section>
-<section id="title-6" class="level2" data-number="77">
-<h2 data-number="77" class="anchored" data-anchor-id="title-6"><span class="header-section-number">77</span> Title</h2>
+<section id="title-5" class="level2" data-number="75">
+<h2 data-number="75" class="anchored" data-anchor-id="title-5"><span class="header-section-number">75</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">

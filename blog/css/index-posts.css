@@ -206,3 +206,38 @@ h1.title {
     display: flex;
     justify-content: center;
 }
+
+/* Default math eqns size */
+mjx-container[jax="CHTML"][display="true"] {
+    font-size: 110% !important;
+}
+
+/* Resze eqns from Mathjax */
+
+/* .eq_w110 mjx-container[jax="CHTML"][display="true"] {
+    font-size: 110% !important;
+} */
+
+.eq_w105 mjx-container[jax="CHTML"][display="true"] {
+    font-size: 105% !important;
+}
+
+.eq_w100 mjx-container[jax="CHTML"][display="true"] {
+font-size: 100% !important;
+}
+
+.eq_w95 mjx-container[jax="CHTML"][display="true"] {
+font-size: 95% !important;
+}
+
+.eq_w90 mjx-container[jax="CHTML"][display="true"] {
+font-size: 90% !important;
+}
+
+.eq_w85 mjx-container[jax="CHTML"][display="true"] {
+font-size: 85% !important;
+}
+
+.eq_w80 mjx-container[jax="CHTML"][display="true"] {
+font-size: 80% !important;
+}

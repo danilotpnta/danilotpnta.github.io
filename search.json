@@ -9712,8 +9712,8 @@
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#title",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#title",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "1 Title",
-    "text": "1 Title\n\n\n\n\nSlide 1"
+    "section": "8 Title",
+    "text": "8 Title\n\n\n\n\nSlide 10"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#organisation",
@@ -9726,519 +9726,519 @@
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#lecture-overview",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#lecture-overview",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "3 Lecture overview",
-    "text": "3 Lecture overview\n\n\n\n\nSlide 3"
+    "section": "1 Lecture overview",
+    "text": "1 Lecture overview\n\n\n\n\nSlide 3\n\n\n\n\n\n\n\n\n\n\nWhat are implicit density models?\n\n\n\n\n\nThese mode ls are “implicit” because they do not explicitly define the probability distribution, but rather define it indirectly. Instead of specifying a probability density function, implicit density models rely on generating samples from a distribution and use these samples to implicitly model the underlying probability distribution.\nOne popular approach to implicit density modeling is through the use of generative models"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#a-map-of-generative-models",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#a-map-of-generative-models",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "4 A map of generative models",
-    "text": "4 A map of generative models\n\n\n\n\nSlide 4"
+    "section": "2 A map of generative models",
+    "text": "2 A map of generative models\n\n\n\n\nSlide 4\n\n\n\n\nHere in the implicity density you can sample from the probability distribution, but it cannot give you an estimate of how likely a particular image is"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#last-time",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#last-time",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "5 Last time",
-    "text": "5 Last time\n\n\n\n\nSlide 5"
+    "section": "3 Last time",
+    "text": "3 Last time\n\n\n\n\nSlide 5"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#today",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#today",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "6 Today",
-    "text": "6 Today\n\n\n\n\nSlide 6"
+    "section": "4 Today",
+    "text": "4 Today\n\n\n\n\nSlide 6\n\n\n\n\nHere we say Generated as refering to fake, because it was generated. The Discriminator would be in such a manner that it will learn how to tell between real and fake. And the Generator will also be a NN trained in a manner that tries to fool the Discriminator"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#explicit-density-vs-implicit-density",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#explicit-density-vs-implicit-density",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "7 Explicit density vs implicit density",
-    "text": "7 Explicit density vs implicit density\n\n\n\n\nSlide 7"
+    "section": "5 Explicit density vs implicit density",
+    "text": "5 Explicit density vs implicit density\n\n\n\n\nSlide 7\n\n\n\n\n\nPurple: if x was taken from the true distribution then P_theta is high\n\nExplicit and VAE kinda do both, it includes both things. Explicitly density is more difficult because we can do both escentially. In terms of variational and having a _ network there is exist works that combine t\n\nGreen: samples taken from p_theta they should behave similar to the real sample\n\nHere we can get a sample but we cannot give get the distribution p_theta of x so the probability values"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#learning-an-implicit-density-function",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#learning-an-implicit-density-function",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "8 Learning an implicit density function",
-    "text": "8 Learning an implicit density function\n\n\n\n\nSlide 8"
+    "section": "6 Learning an implicit density function",
+    "text": "6 Learning an implicit density function\n\n\n\n\nSlide 8"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#generations-of-high-quality-various-potential-applications",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#generations-of-high-quality-various-potential-applications",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "9 Generations of high quality, various potential applications",
-    "text": "9 Generations of high quality, various potential applications\n\n\n\n\nSlide 9"
+    "section": "7 Generations of high quality, various potential applications",
+    "text": "7 Generations of high quality, various potential applications\n\n\n\n\nSlide 9"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#title-1",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#title-1",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "10 Title",
-    "text": "10 Title\n\n\n\n\nSlide 10"
+    "section": "11 Title",
+    "text": "11 Title\n\n\n\n\nSlide 13"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#what-is-agan",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#what-is-agan",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "11 What is aGAN?",
-    "text": "11 What is aGAN?\n\n\n\n\nSlide 11"
+    "section": "9 What is aGAN?",
+    "text": "9 What is aGAN?\n\n\n\n\nSlide 11"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#gan-intuition-arms-race",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#gan-intuition-arms-race",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "12 GAN: Intuition: arms race",
-    "text": "12 GAN: Intuition: arms race\n\n\n\n\nSlide 12"
+    "section": "10 GAN: Intuition: arms race",
+    "text": "10 GAN: Intuition: arms race\n\n\n\n\nSlide 12"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#title-2",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#title-2",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "13 Title",
-    "text": "13 Title\n\n\n\n\nSlide 13"
+    "section": "33 Title",
+    "text": "33 Title\n\n\n\n\nSlide 35"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#gan-architecture",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#gan-architecture",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "14 GAN architecture",
-    "text": "14 GAN architecture\n\n\n\n\nSlide 14"
+    "section": "12 GAN architecture",
+    "text": "12 GAN architecture\n\n\n\n\nSlide 14"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#gan-has-no-encoder-its-a-discriminator",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#gan-has-no-encoder-its-a-discriminator",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "15 GAN has no ”encoder” — it’s a discriminator",
-    "text": "15 GAN has no ”encoder” — it’s a discriminator\n\n\n\n\nSlide 15"
+    "section": "13 GAN has no ”encoder” — it’s a discriminator",
+    "text": "13 GAN has no ”encoder” — it’s a discriminator\n\n\n\n\nSlide 15"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#generator-network-x-gz-0c",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#generator-network-x-gz-0c",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "16 1) Generator network x = G(z; 0c)",
-    "text": "16 1) Generator network x = G(z; 0c)\n\n\n\n\nSlide 16"
+    "section": "14 1) Generator network x = G(z; 0c)",
+    "text": "14 1) Generator network x = G(z; 0c)\n\n\n\n\nSlide 16"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#discriminator-network-y-dx-8p",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#discriminator-network-y-dx-8p",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "17 2) Discriminator network y = D(x; 8p)",
-    "text": "17 2) Discriminator network y = D(x; 8p)\n\n\n\n\nSlide 17"
+    "section": "15 2) Discriminator network y = D(x; 8p)",
+    "text": "15 2) Discriminator network y = D(x; 8p)\n\n\n\n\nSlide 17"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#generator-discriminator-implementation",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#generator-discriminator-implementation",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "18 Generator & Discriminator: Implementation",
-    "text": "18 Generator & Discriminator: Implementation\n\n\n\n\nSlide 18"
+    "section": "16 Generator & Discriminator: Implementation",
+    "text": "16 Generator & Discriminator: Implementation\n\n\n\n\nSlide 18"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#ouiz-the-starting-point-of-the-gan-is-the-random-noise-z.",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#ouiz-the-starting-point-of-the-gan-is-the-random-noise-z.",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "19 - Ouiz: The starting point of the GAN is the random noise z.",
-    "text": "19 - Ouiz: The starting point of the GAN is the random noise z.\n\n\n\n\nSlide 19"
+    "section": "17 - Ouiz: The starting point of the GAN is the random noise z.",
+    "text": "17 - Ouiz: The starting point of the GAN is the random noise z.\n\n\n\n\nSlide 19"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#how-do-we-train-the-generator",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#how-do-we-train-the-generator",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "20 How do we train the generator?",
-    "text": "20 How do we train the generator?\n\n\n\n\nSlide 20"
+    "section": "18 How do we train the generator?",
+    "text": "18 How do we train the generator?\n\n\n\n\nSlide 20"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#minimax-loss",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#minimax-loss",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "21 1) Minimax Loss",
-    "text": "21 1) Minimax Loss\n\n\n\n\nSlide 21"
+    "section": "19 1) Minimax Loss",
+    "text": "19 1) Minimax Loss\n\n\n\n\nSlide 21"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#minimax-loss-1",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#minimax-loss-1",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "22 1) Minimax Loss",
-    "text": "22 1) Minimax Loss\n\n\n\n\nSlide 22"
+    "section": "20 1) Minimax Loss",
+    "text": "20 1) Minimax Loss\n\n\n\n\nSlide 22"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#heuristic-non-saturating-loss",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#heuristic-non-saturating-loss",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "23 2) Heuristic non-saturating loss",
-    "text": "23 2) Heuristic non-saturating loss\n\n\n\n\nSlide 23"
+    "section": "21 2) Heuristic non-saturating loss",
+    "text": "21 2) Heuristic non-saturating loss\n\n\n\n\nSlide 23"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#modifying-gans-for-max-likelihood",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#modifying-gans-for-max-likelihood",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "24 3) Modifying GANs for max-likelihood",
-    "text": "24 3) Modifying GANs for max-likelihood\n\n\n\n\nSlide 24"
+    "section": "22 3) Modifying GANs for max-likelihood",
+    "text": "22 3) Modifying GANs for max-likelihood\n\n\n\n\nSlide 24"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#comparison-of-generator-losses",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#comparison-of-generator-losses",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "25 Comparison of Generator Losses",
-    "text": "25 Comparison of Generator Losses\n\n\n\n\nSlide 25"
+    "section": "23 Comparison of Generator Losses",
+    "text": "23 Comparison of Generator Losses\n\n\n\n\nSlide 25"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#optimal-discriminator",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#optimal-discriminator",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "26 Optimal discriminator",
-    "text": "26 Optimal discriminator\n\n\n\n\nSlide 26"
+    "section": "24 Optimal discriminator",
+    "text": "24 Optimal discriminator\n\n\n\n\nSlide 26"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#why-is-this-the-optimal-discriminator",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#why-is-this-the-optimal-discriminator",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "27 Why is this the optimal discriminator?",
-    "text": "27 Why is this the optimal discriminator?\n\n\n\n\nSlide 27"
+    "section": "25 Why is this the optimal discriminator?",
+    "text": "25 Why is this the optimal discriminator?\n\n\n\n\nSlide 27"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#gans-and-jensen-shannon-divergence",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#gans-and-jensen-shannon-divergence",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "28 GANs and Jensen-Shannon divergence",
-    "text": "28 GANs and Jensen-Shannon divergence\n\n\n\n\nSlide 28"
+    "section": "26 GANs and Jensen-Shannon divergence",
+    "text": "26 GANs and Jensen-Shannon divergence\n\n\n\n\nSlide 28"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#is-the-divergence-important",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#is-the-divergence-important",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "29 Is the divergence important?",
-    "text": "29 Is the divergence important?\n\n\n\n\nSlide 29"
+    "section": "27 Is the divergence important?",
+    "text": "27 Is the divergence important?\n\n\n\n\nSlide 29"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#kl-vs-js",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#kl-vs-js",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "30 KL vs JS",
-    "text": "30 KL vs JS\n\n\n\n\nSlide 30"
+    "section": "28 KL vs JS",
+    "text": "28 KL vs JS\n\n\n\n\nSlide 30"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#is-the-divergence-important-1",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#is-the-divergence-important-1",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "31 Is the divergence important?",
-    "text": "31 Is the divergence important?\n\n\n\n\nSlide 31"
+    "section": "29 Is the divergence important?",
+    "text": "29 Is the divergence important?\n\n\n\n\nSlide 31"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#general-observations",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#general-observations",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "32 General observations",
-    "text": "32 General observations\n\n\n\n\nSlide 32"
+    "section": "30 General observations",
+    "text": "30 General observations\n\n\n\n\nSlide 32"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#training-procedure",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#training-procedure",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "33 Training procedure",
-    "text": "33 Training procedure\n\n\n\n\nSlide 33"
+    "section": "31 Training procedure",
+    "text": "31 Training procedure\n\n\n\n\nSlide 33"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#how-research-gets-done-part-8",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#how-research-gets-done-part-8",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "34 How research gets done part 8",
-    "text": "34 How research gets done part 8\n\n\n\n\nSlide 34"
+    "section": "32 How research gets done part 8",
+    "text": "32 How research gets done part 8\n\n\n\n\nSlide 34"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#title-3",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#title-3",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "35 Title",
-    "text": "35 Title\n\n\n\n\nSlide 35"
+    "section": "49 Title",
+    "text": "49 Title\n\n\n\n\nSlide 51"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#challenge-1-vanishing-gradients",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#challenge-1-vanishing-gradients",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "36 Challenge 1: Vanishing Gradients",
-    "text": "36 Challenge 1: Vanishing Gradients\n\n\n\n\nSlide 36"
+    "section": "34 Challenge 1: Vanishing Gradients",
+    "text": "34 Challenge 1: Vanishing Gradients\n\n\n\n\nSlide 36"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#challenge-2-low-dimensional-supports",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#challenge-2-low-dimensional-supports",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "37 Challenge 2: Low dimensional supports",
-    "text": "37 Challenge 2: Low dimensional supports\n\n\n\n\nSlide 37"
+    "section": "35 Challenge 2: Low dimensional supports",
+    "text": "35 Challenge 2: Low dimensional supports\n\n\n\n\nSlide 37"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#challenge-3-batch-normalization",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#challenge-3-batch-normalization",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "38 Challenge 3: Batch Normalization",
-    "text": "38 Challenge 3: Batch Normalization\n\n\n\n\nSlide 38"
+    "section": "36 Challenge 3: Batch Normalization",
+    "text": "36 Challenge 3: Batch Normalization\n\n\n\n\nSlide 38"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#reference-batch-normalization",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#reference-batch-normalization",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "39 Reference batch normalization",
-    "text": "39 Reference batch normalization\n\n\n\n\nSlide 39"
+    "section": "37 Reference batch normalization",
+    "text": "37 Reference batch normalization\n\n\n\n\nSlide 39"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#virtual-batch-normalization",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#virtual-batch-normalization",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "40 Virtual batch normalization",
-    "text": "40 Virtual batch normalization\n\n\n\n\nSlide 40"
+    "section": "38 Virtual batch normalization",
+    "text": "38 Virtual batch normalization\n\n\n\n\nSlide 40"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#challenge-4-convergence",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#challenge-4-convergence",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "41 Challenge 4: Convergence",
-    "text": "41 Challenge 4: Convergence\n\n\n\n\nSlide 41"
+    "section": "39 Challenge 4: Convergence",
+    "text": "39 Challenge 4: Convergence\n\n\n\n\nSlide 41"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#challenge-mode-collapse",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#challenge-mode-collapse",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "42 Challenge: mode collapse",
-    "text": "42 Challenge: mode collapse\n\n\n\n\nSlide 42"
+    "section": "40 Challenge: mode collapse",
+    "text": "40 Challenge: mode collapse\n\n\n\n\nSlide 42"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#potential-solution-regularize-for-diversity",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#potential-solution-regularize-for-diversity",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "43 Potential solution regularize for diversity",
-    "text": "43 Potential solution regularize for diversity\n\n\n\n\nSlide 43"
+    "section": "41 Potential solution regularize for diversity",
+    "text": "41 Potential solution regularize for diversity\n\n\n\n\nSlide 43"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#mode-collapse-vs-over-generalisation",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#mode-collapse-vs-over-generalisation",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "44 Mode-collapse vs over-generalisation",
-    "text": "44 Mode-collapse vs over-generalisation\n\n\n\n\nSlide 44"
+    "section": "42 Mode-collapse vs over-generalisation",
+    "text": "42 Mode-collapse vs over-generalisation\n\n\n\n\nSlide 44"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#challenge-how-to-evaluate",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#challenge-how-to-evaluate",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "45 Challenge: how to evaluate?",
-    "text": "45 Challenge: how to evaluate?\n\n\n\n\nSlide 45"
+    "section": "43 Challenge: how to evaluate?",
+    "text": "43 Challenge: how to evaluate?\n\n\n\n\nSlide 45"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#challenge-beyond-images",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#challenge-beyond-images",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "46 Challenge: beyond images",
-    "text": "46 Challenge: beyond images\n\n\n\n\nSlide 46"
+    "section": "44 Challenge: beyond images",
+    "text": "44 Challenge: beyond images\n\n\n\n\nSlide 46"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#some-open-challenges-for-gans",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#some-open-challenges-for-gans",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "47 Some open challenges for GANs",
-    "text": "47 Some open challenges for GANs\n\n\n\n\nSlide 47"
+    "section": "45 Some open challenges for GANs",
+    "text": "45 Some open challenges for GANs\n\n\n\n\nSlide 47"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#one-sided-label-smoothing",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#one-sided-label-smoothing",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "48 One-sided label smoothing",
-    "text": "48 One-sided label smoothing\n\n\n\n\nSlide 48"
+    "section": "46 One-sided label smoothing",
+    "text": "46 One-sided label smoothing\n\n\n\n\nSlide 48"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#benefits-of-label-smoothing",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#benefits-of-label-smoothing",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "49 Benefits of label smoothing",
-    "text": "49 Benefits of label smoothing\n\n\n\n\nSlide 49"
+    "section": "47 Benefits of label smoothing",
+    "text": "47 Benefits of label smoothing\n\n\n\n\nSlide 49"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#ganss-sometimes-explode",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#ganss-sometimes-explode",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "50 GANSs sometimes explode",
-    "text": "50 GANSs sometimes explode\n\n\n\n\nSlide 50"
+    "section": "48 GANSs sometimes explode",
+    "text": "48 GANSs sometimes explode\n\n\n\n\nSlide 50"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#title-4",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#title-4",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "51 Title",
-    "text": "51 Title\n\n\n\n\nSlide 51"
+    "section": "64 Title",
+    "text": "64 Title\n\n\n\n\nSlide 66"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#dcgan",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#dcgan",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "52 DCGAN",
-    "text": "52 DCGAN\n\n\n\n\nSlide 52"
+    "section": "50 DCGAN",
+    "text": "50 DCGAN\n\n\n\n\nSlide 52"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#examples",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#examples",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "53 Examples",
-    "text": "53 Examples\n\n\n\n\nSlide 53"
+    "section": "51 Examples",
+    "text": "51 Examples\n\n\n\n\nSlide 53"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#even-vector-space-arithmetics",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#even-vector-space-arithmetics",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "54 Even vector space arithmetics …",
-    "text": "54 Even vector space arithmetics …\n\n\n\n\nSlide 54"
+    "section": "52 Even vector space arithmetics …",
+    "text": "52 Even vector space arithmetics …\n\n\n\n\nSlide 54"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#can-generate-new-views",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#can-generate-new-views",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "55 Can generate new views",
-    "text": "55 Can generate new views\n\n\n\n\nSlide 55"
+    "section": "53 Can generate new views",
+    "text": "53 Can generate new views\n\n\n\n\nSlide 55"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#wasserstein-gan",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#wasserstein-gan",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "56 Wasserstein GAN",
-    "text": "56 Wasserstein GAN\n\n\n\n\nSlide 56"
+    "section": "54 Wasserstein GAN",
+    "text": "54 Wasserstein GAN\n\n\n\n\nSlide 56"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#differences-in-gans",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#differences-in-gans",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "57 Differences in GANs",
-    "text": "57 Differences in GANs\n\n\n\n\nSlide 57"
+    "section": "55 Differences in GANs",
+    "text": "55 Differences in GANs\n\n\n\n\nSlide 57"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#bigbigan",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#bigbigan",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "58 BigBiGAN",
-    "text": "58 BigBiGAN\n\n\n\n\nSlide 58"
+    "section": "56 BigBiGAN",
+    "text": "56 BigBiGAN\n\n\n\n\nSlide 58"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#so-what-changed-more-data-no",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#so-what-changed-more-data-no",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "59 So what changed? More data? – No",
-    "text": "59 So what changed? More data? – No\n\n\n\n\nSlide 59"
+    "section": "57 So what changed? More data? – No",
+    "text": "57 So what changed? More data? – No\n\n\n\n\nSlide 59"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#so-what-changed-architectures-and-compute-yes",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#so-what-changed-architectures-and-compute-yes",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "60 So what changed? Architectures and compute: yes",
-    "text": "60 So what changed? Architectures and compute: yes\n\n\n\n\nSlide 60"
+    "section": "58 So what changed? Architectures and compute: yes",
+    "text": "58 So what changed? Architectures and compute: yes\n\n\n\n\nSlide 60"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#conditional-gan",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#conditional-gan",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "61 Conditional GAN",
-    "text": "61 Conditional GAN\n\n\n\n\nSlide 61"
+    "section": "59 Conditional GAN",
+    "text": "59 Conditional GAN\n\n\n\n\nSlide 61"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#image-to-image-translation",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#image-to-image-translation",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "62 Image to image translation",
-    "text": "62 Image to image translation\n\n\n\n\nSlide 62"
+    "section": "60 Image to image translation",
+    "text": "60 Image to image translation\n\n\n\n\nSlide 62"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#adversarial-autoencoders-and-adversarial-network-in-latent-space",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#adversarial-autoencoders-and-adversarial-network-in-latent-space",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "63 Adversarial AutoEncoders: and adversarial network in latent space",
-    "text": "63 Adversarial AutoEncoders: and adversarial network in latent space\n\n\n\n\nSlide 63"
+    "section": "61 Adversarial AutoEncoders: and adversarial network in latent space",
+    "text": "61 Adversarial AutoEncoders: and adversarial network in latent space\n\n\n\n\nSlide 63"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#cyclegan-img2img-models",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#cyclegan-img2img-models",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "64 CycleGAN: “img2img” models",
-    "text": "64 CycleGAN: “img2img” models\n\n\n\n\nSlide 64"
+    "section": "62 CycleGAN: “img2img” models",
+    "text": "62 CycleGAN: “img2img” models\n\n\n\n\nSlide 64"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#stylegan-and-styleganv2",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#stylegan-and-styleganv2",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "65 StyleGAN and StyleGANv2",
-    "text": "65 StyleGAN and StyleGANv2\n\n\n\n\nSlide 65"
+    "section": "63 StyleGAN and StyleGANv2",
+    "text": "63 StyleGAN and StyleGANv2\n\n\n\n\nSlide 65"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#title-5",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#title-5",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "66 Title",
-    "text": "66 Title\n\n\n\n\nSlide 66"
+    "section": "75 Title",
+    "text": "75 Title\n\n\n\n\nSlide 77"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#overview-of-methods",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#overview-of-methods",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "67 Overview of methods",
-    "text": "67 Overview of methods\n\n\n\n\nSlide 67"
+    "section": "65 Overview of methods",
+    "text": "65 Overview of methods\n\n\n\n\nSlide 67"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#basic-idea-of-diffusion-models-learning-how-to-denoise",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#basic-idea-of-diffusion-models-learning-how-to-denoise",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "68 Basic idea of diffusion models: learning how to denoise",
-    "text": "68 Basic idea of diffusion models: learning how to denoise\n\n\n\n\nSlide 68"
+    "section": "66 Basic idea of diffusion models: learning how to denoise",
+    "text": "66 Basic idea of diffusion models: learning how to denoise\n\n\n\n\nSlide 68"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#diffusion-models-turn-generative-learning-into-a-sequence-of-supervised-problems",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#diffusion-models-turn-generative-learning-into-a-sequence-of-supervised-problems",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "69 Diffusion models turn generative learning into a sequence of supervised problems",
-    "text": "69 Diffusion models turn generative learning into a sequence of supervised problems\n\n\n\n\nSlide 69"
+    "section": "67 Diffusion models turn generative learning into a sequence of supervised problems",
+    "text": "67 Diffusion models turn generative learning into a sequence of supervised problems\n\n\n\n\nSlide 69"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#the-architecture-a-modified-u-net-that-uses-diffusion-time-t",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#the-architecture-a-modified-u-net-that-uses-diffusion-time-t",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "70 The architecture: a modified U-Net that uses diffusion time t",
-    "text": "70 The architecture: a modified U-Net that uses diffusion time t\n\n\n\n\nSlide 70"
+    "section": "68 The architecture: a modified U-Net that uses diffusion time t",
+    "text": "68 The architecture: a modified U-Net that uses diffusion time t\n\n\n\n\nSlide 70"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#combining-this-with-text-as-cond.-inputs-dall-e-v2-unclip",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#combining-this-with-text-as-cond.-inputs-dall-e-v2-unclip",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "71 Combining this with text as cond. inputs: DALL-E v2 / “unCLIP”",
-    "text": "71 Combining this with text as cond. inputs: DALL-E v2 / “unCLIP”\n\n\n\n\nSlide 71"
+    "section": "69 Combining this with text as cond. inputs: DALL-E v2 / “unCLIP”",
+    "text": "69 Combining this with text as cond. inputs: DALL-E v2 / “unCLIP”\n\n\n\n\nSlide 71"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#final-note-about-deep-fakes-and-ethics",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#final-note-about-deep-fakes-and-ethics",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "72 Final note about deep fakes and ethics",
-    "text": "72 Final note about deep fakes and ethics\n\n\n\n\nSlide 72"
+    "section": "70 Final note about deep fakes and ethics",
+    "text": "70 Final note about deep fakes and ethics\n\n\n\n\nSlide 72"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#recommended-watch-just-34min",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#recommended-watch-just-34min",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "73 Recommended watch (just 34min)",
-    "text": "73 Recommended watch (just 34min)\n\n\n\n\nSlide 73"
+    "section": "71 Recommended watch (just 34min)",
+    "text": "71 Recommended watch (just 34min)\n\n\n\n\nSlide 73"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#quiz-what-dimensions-need-to-be-considered-when-thinking-about",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#quiz-what-dimensions-need-to-be-considered-when-thinking-about",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "74 ; Quiz: what dimensions need to be considered when thinking about ;",
-    "text": "74 ; Quiz: what dimensions need to be considered when thinking about ;\n\n\n\n\nSlide 74"
+    "section": "72 ; Quiz: what dimensions need to be considered when thinking about ;",
+    "text": "72 ; Quiz: what dimensions need to be considered when thinking about ;\n\n\n\n\nSlide 74"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#more-on-that-previous-one..",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#more-on-that-previous-one..",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "75 More on that previous one..",
-    "text": "75 More on that previous one..\n\n\n\n\nSlide 75"
+    "section": "73 More on that previous one..",
+    "text": "73 More on that previous one..\n\n\n\n\nSlide 75"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#sy-generative-adversarial-networks-gans-are-a-type-of-deep-learning-model",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#sy-generative-adversarial-networks-gans-are-a-type-of-deep-learning-model",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "76 Sy Generative Adversarial Networks (GANs) are a type of deep learning model",
-    "text": "76 Sy Generative Adversarial Networks (GANs) are a type of deep learning model\nSi | I } } I } } ar of GANs that is used for unsupervised learning. GANs consist of two components: a\ngenerative model, which is trained to generate samples that are similar to a\n\n\n\n\nSlide 76"
+    "section": "74 Sy Generative Adversarial Networks (GANs) are a type of deep learning model",
+    "text": "74 Sy Generative Adversarial Networks (GANs) are a type of deep learning model\nSi | I } } I } } ar of GANs that is used for unsupervised learning. GANs consist of two components: a\ngenerative model, which is trained to generate samples that are similar to a\n\n\n\n\nSlide 76"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#title-6",
@@ -10265,120 +10265,120 @@
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#title",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#title",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "1 Title",
-    "text": "1 Title\n\n\n\n\nSlide 1"
+    "section": "2 Title",
+    "text": "2 Title\n\n\n\n\nSlide 9"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#your-feedback",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#your-feedback",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "2 Your feedback",
-    "text": "2 Your feedback\n\n\n\n\nSlide 2"
+    "section": "1 Your feedback",
+    "text": "1 Your feedback\n\n\n\n\nSlide 2"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#your-feedback-1",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#your-feedback-1",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "3 Your feedback:",
-    "text": "3 Your feedback:\n\n\n\n\nSlide 3"
+    "section": "2 Your feedback:",
+    "text": "2 Your feedback:\n\n\n\n\nSlide 3"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#your-feedback-2",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#your-feedback-2",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "4 Your feedback",
-    "text": "4 Your feedback\n\n\n\n\nSlide 4"
+    "section": "3 Your feedback",
+    "text": "3 Your feedback\n\n\n\n\nSlide 4"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#your-feedback-3",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#your-feedback-3",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "5 Your feedback",
-    "text": "5 Your feedback\n\n\n\n\nSlide 5"
+    "section": "4 Your feedback",
+    "text": "4 Your feedback\n\n\n\n\nSlide 5"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#your-feedback-4",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#your-feedback-4",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "6 Your feedback",
-    "text": "6 Your feedback\n\n\n\n\nSlide 6"
+    "section": "5 Your feedback",
+    "text": "5 Your feedback\n\n\n\n\nSlide 6"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#title-1",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#title-1",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "7 Title",
-    "text": "7 Title\n\n\n\n\nSlide 7"
+    "section": "4 Title",
+    "text": "4 Title\n\n\n\n\nSlide 11"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#re-cap-graph-representation-for-us",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#re-cap-graph-representation-for-us",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "8 Re Cap Graph representation for us",
-    "text": "8 Re Cap Graph representation for us\n\n\n\n\nSlide 8"
+    "section": "1 Re Cap Graph representation for us",
+    "text": "1 Re Cap Graph representation for us\n\n\n\n\nSlide 8"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#title-2",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#title-2",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "9 Title",
-    "text": "9 Title\n\n\n\n\nSlide 9"
+    "section": "11 Title",
+    "text": "11 Title\n\n\n\n\nSlide 18"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#recap-sss-yyy",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#recap-sss-yyy",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "10 Recap sss yyy",
-    "text": "10 Recap sss yyy\n\n\n\n\nSlide 10"
+    "section": "3 Recap sss yyy",
+    "text": "3 Recap sss yyy\n\n\n\n\nSlide 10"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#title-3",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#title-3",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "11 Title",
-    "text": "11 Title\n\n\n\n\nSlide 11"
+    "section": "12 Title",
+    "text": "12 Title\n\n\n\n\nSlide 18"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#todays-lecture-overview",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#todays-lecture-overview",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "12 Today’s lecture Overview",
-    "text": "12 Today’s lecture Overview\n\n\n\n\nSlide 12"
+    "section": "5 Today’s lecture Overview",
+    "text": "5 Today’s lecture Overview\n\n\n\n\nSlide 12"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#what-is-generative-modelling",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#what-is-generative-modelling",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "13 What is generative modelling?",
-    "text": "13 What is generative modelling?\n\n\n\n\nSlide 13"
+    "section": "6 What is generative modelling?",
+    "text": "6 What is generative modelling?\n\n\n\n\nSlide 13\n\n\n\n\n\nGeneral: - p(x) is the probability distribution of the data itself.\n\nDiscriminative model: discriminate between different kinds of data instances - you predict \\(y\\) given \\(x\\), where \\(y\\) could be the label i.e what kind of dog is in the image and \\(x\\) is the data. - p(y|x) Its aim is to model the decision boundary (whether is A or B, the cat class or the dog class) or the relationship between input features and the output directly. - p(y|x) says get me a certain label conditional on some inputs. - Typically more effective when the primary goal is to perform a specific task, such as classification or regression.\nGenerative models: can generate new data instances. - They focus on estimating the probability of observing a particular set of input features - p(x) says how probable an image is to be i.e a dog - Can be used for tasks like data generation, missing data imputation, and anomaly detection. - capture the joint probability p(X, Y), or just p(X) if there are no labels.\nThe difference:\nA generative model could generate new photos of animals that look like real animals, while a discriminative model could tell a dog from a cat. GANs are just one kind of generative model.\nAbout probability dsitributions:\nA Discriminative classifier like a decision tree can label an instance without assigning a probability to that label. Such a classifier would still be a model because the distribution of all predicted labels would model the real distribution of labels in the data.\nA Generative model can model a distribution by producing convincing “fake” data that looks like it’s drawn from that distribution.\n\n\n\n\n\n\nGenerative models are Hard, they model more\n\n\n\n\n\nGenerative models tackle a more difficult task than analogous discriminative models. Generative models have to model more.\nA generative model for images might capture correlations like “things that look like boats are probably going to appear near things that look like water” and “eyes are unlikely to appear on foreheads.” These are very complicated distributions.\nIn contrast, a discriminative model might learn the difference between “sailboat” or “not sailboat” by just looking for a few tell-tale patterns. It could ignore many of the correlations that the generative model must get right.\nDiscriminative models try to draw boundaries in the data space, while generative models try to model how data is placed throughout the space. For example, the following diagram shows discriminative and generative models of handwritten digits:\n\n\n\n\nThe discriminative model tries to tell the difference between handwritten 0’s and 1’s by drawing a line in the data space. If it gets the line right, it can distinguish 0’s from 1’s without ever having to model exactly where the instances are placed in the data space on either side of the line.\nIn contrast, the generative model tries to produce convincing 1’s and 0’s by generating digits that fall close to their real counterparts in the data space. It has to model the distribution throughout the data space.\nGANs offer an effective way to train such rich models to resemble a real distribution. To understand how they work we’ll need to understand the basic structure of a GAN."
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#why-generative-modelling",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#why-generative-modelling",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "14 Why generative modelling?",
-    "text": "14 Why generative modelling?\n\n\n\n\nSlide 14"
+    "section": "7 Why generative modelling?",
+    "text": "7 Why generative modelling?\n\n\n\n\nSlide 14"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#why-generative-modelling-more-reasons",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#why-generative-modelling-more-reasons",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "15 Why generative modelling? More reasons",
-    "text": "15 Why generative modelling? More reasons\n\n\n\n\nSlide 15"
+    "section": "8 Why generative modelling? More reasons",
+    "text": "8 Why generative modelling? More reasons\n\n\n\n\nSlide 15"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#bayes-rule-if-we-have-generative-models-we-have-it-all",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#bayes-rule-if-we-have-generative-models-we-have-it-all",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "16 Bayes rule: if we have generative models: we have it all",
-    "text": "16 Bayes rule: if we have generative models: we have it all\n\n\n\n\nSlide 16"
+    "section": "9 Bayes rule: if we have generative models: we have it all",
+    "text": "9 Bayes rule: if we have generative models: we have it all\n\n\n\n\nSlide 16\n\n\n\n\np(y|x) was all ConvNets, the transformers and all models before.\np(x) is parametrize with theta"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#a-map-of-generative-models",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#a-map-of-generative-models",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "17 A map of generative models",
-    "text": "17 A map of generative models\n\n\n\n\nSlide 17"
+    "section": "10 A map of generative models",
+    "text": "10 A map of generative models\n\n\n\n\nSlide 17\n\n\n\n\nHere with GANs you can sample images but you cannot say how likely a given image is\nTypes of Generative models\n\n\n\n\nLil’s Blog"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#title-4",
@@ -10391,518 +10391,532 @@
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#autoencoders-shape",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#autoencoders-shape",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "19 Autoencoders: shape",
-    "text": "19 Autoencoders: shape\n\n\n\n\nSlide 19"
+    "section": "12 Autoencoders: shape",
+    "text": "12 Autoencoders: shape\n\n\n\n\nSlide 19\n\n\n\n\nIt is called Autoencoder because the ouput has the same size as the input\nBecause of the bottle neck it will only learn what is important to reconstruct the input back, which could be for instance noise"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#autoencoders-structure",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#autoencoders-structure",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "20 Autoencoders: structure",
-    "text": "20 Autoencoders: structure\n\n\n\n\nSlide 20"
+    "section": "13 Autoencoders: structure",
+    "text": "13 Autoencoders: structure\n\n\n\n\nSlide 20\n\n\n\n\nFor instance CNN because it is important for us to have in every layer the proper dimensions"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#learning-autoencoders",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#learning-autoencoders",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "21 Learning Autoencoders",
-    "text": "21 Learning Autoencoders\n\n\n\n\nSlide 21"
+    "section": "14 Learning Autoencoders",
+    "text": "14 Learning Autoencoders\n\n\n\n\nSlide 21\n\n\n\n\nHere is an unsupervised loss, because we do not use any labels"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#autoencoders-why-though",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#autoencoders-why-though",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "22 Autoencoders: why though?",
-    "text": "22 Autoencoders: why though?\n\n\n\n\nSlide 22"
+    "section": "15 Autoencoders: why though?",
+    "text": "15 Autoencoders: why though?\n\n\n\n\nSlide 22\n\n\n\n\nThe encoder learns to compress the input but compress it just enougth such that the decoder can reconstructed again"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#autoencoders-for-representation-learning-ie-use-the-encoder-afterwards",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#autoencoders-for-representation-learning-ie-use-the-encoder-afterwards",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "23 Autoencoders for representation learning (ie use the encoder afterwards)",
-    "text": "23 Autoencoders for representation learning (ie use the encoder afterwards)\n\n\n\n\nSlide 23"
+    "section": "16 Autoencoders for representation learning (ie use the encoder afterwards)",
+    "text": "16 Autoencoders for representation learning (ie use the encoder afterwards)\n\n\n\n\nSlide 23\n\n\n\n\nThe loss does not have any dependency on labels, no prior knowledge"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#autoencoders-for-representation-learning",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#autoencoders-for-representation-learning",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "24 Autoencoders for representation learning",
-    "text": "24 Autoencoders for representation learning\n\n\n\n\nSlide 24"
+    "section": "17 Autoencoders for representation learning",
+    "text": "17 Autoencoders for representation learning\n\n\n\n\nSlide 24\n\n\n\n\nCompared to PCA approach the colors are better separated, both use same data. Except that the autoencoder uses a NN"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#autoencoders-for-representation-learning-13years-later-bigbigan",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#autoencoders-for-representation-learning-13years-later-bigbigan",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "25 “Autoencoders” for representation learning (13years later): BigBiGAN",
-    "text": "25 “Autoencoders” for representation learning (13years later): BigBiGAN\n\n\n\n\nSlide 25"
+    "section": "18 “Autoencoders” for representation learning (13years later): BigBiGAN",
+    "text": "18 “Autoencoders” for representation learning (13years later): BigBiGAN\n\n\n\n\nSlide 25"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#dimensionality-of-latent-space",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#dimensionality-of-latent-space",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "26 Dimensionality of latent space",
-    "text": "26 Dimensionality of latent space\n\n\n\n\nSlide 26"
+    "section": "19 Dimensionality of latent space",
+    "text": "19 Dimensionality of latent space\n\n\n\n\nSlide 26\n\n\n\n\nIf the dimensionality of the latent is too low then you cannot reconstruct all the details, because there is so much information that you can compress in a 2D space"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#quiz",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#quiz",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "27 . Quiz:",
-    "text": "27 . Quiz:\n\n\n\n\nSlide 27"
+    "section": "20 Quiz:",
+    "text": "20 Quiz:\n\n\n\n\nSlide 27\n\n\n\n\n\nTrue: because PCA minimizes the L2 norm so it has the same problems as Least Square fitting. So L2 looks like a quadratic function depending how far are you from the thing that you are trying to fit. So all the stuff that is further away gets quadratically exaggerated.\nNot quite True: PCA gives you linear combinations of features that could be interpretable but mostly they are not because for example you want to estimate the price of a house, then what you end up is you have 5 times the size of the house - 0.2 the location of the house, which then you get a feature with positive and negative coefficients which is not interpretable"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#mother-hmmm-this-certainly-sounds-good-but-am-not-sure",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#mother-hmmm-this-certainly-sounds-good-but-am-not-sure",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "28 Mother: Hmmm, this certainly sounds good, but | am not sure |",
-    "text": "28 Mother: Hmmm, this certainly sounds good, but | am not sure |\nunderstand. What do you actually mean when you say that these new\nA ia efre sher @o PCA characteristics “summarize” the list of wines? ( a — We can compose a whole list of different characteristics of each wine in oul You: | guess le can give two different answers to this question. The first answer\neT\n\n\n\n\nSlide 28"
+    "section": "21 Mother: Hmmm, this certainly sounds good, but | am not sure |",
+    "text": "21 Mother: Hmmm, this certainly sounds good, but | am not sure |\n\n\n\n\nSlide 28"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#autoencoder-applications",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#autoencoder-applications",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "29 Autoencoder applications",
-    "text": "29 Autoencoder applications\n\n\n\n\nSlide 29"
+    "section": "22 Autoencoder applications",
+    "text": "22 Autoencoder applications\n\n\n\n\n\n\n\n\nSlide 29\n\n\n\n\nAutoencoder do not need prior knowledge abour invariances, or augmentations."
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#why-can-they-not-generate-new-data-points",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#why-can-they-not-generate-new-data-points",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "30 Why can they not generate new data points?",
-    "text": "30 Why can they not generate new data points?\n\n\n\n\nSlide 30"
+    "section": "23 Why can they not generate new data points?",
+    "text": "23 Why can they not generate new data points?\n\n\n\n\nSlide 30\n\n\n\n\n\nThey can reconstruct the input: encoder\nThey cannot generate new data: decoder\n\nWe cannot generate new data because the latent representation can be extremely “entagled”. For instance there is no way to know if i.e the 1st dimension is ranging from,…. So we don’t know how the dimensions are related.\nThat means we do not know how we would sample a new datapoint from this latent space because the NN has been trained to reconstruct the input. It has not been given any instruction that if I take a different input in this latent space that it should still reconstruct something."
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#what-we-will-arrive-at-in-this-lecture",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#what-we-will-arrive-at-in-this-lecture",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "31 What we will arrive at in this lecture",
-    "text": "31 What we will arrive at in this lecture\n\n\n\n\nSlide 31"
+    "section": "24 What we will arrive at in this lecture",
+    "text": "24 What we will arrive at in this lecture\n\n\n\n\nSlide 31\n\n\n\n\nNow we parametrized the latent z with \\(\\mu, \\sigma\\), those are the variables that will be coming from a Gaussian and with these variables we are parametrize a latent distribution over the latent p(z)\nWith this p(z) data distribution we can sample a sample ‘z’, push it trough the decoder and then we can get an ouput out.\nVAE sample from the data and get a probability for a particular image"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#recent-vae-use-cases",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#recent-vae-use-cases",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "32 Recent VAE use cases",
-    "text": "32 Recent VAE use cases\n\n\n\n\nSlide 32"
+    "section": "25 Recent VAE use cases",
+    "text": "25 Recent VAE use cases\n\n\n\n\nSlide 32"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#for-vaes-we-need-to-understand-latent-variable-models",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#for-vaes-we-need-to-understand-latent-variable-models",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "33 For VAEs we need to understand latent variable models",
-    "text": "33 For VAEs we need to understand latent variable models\n\n\n\n\nSlide 33"
+    "section": "26 For VAEs we need to understand latent variable models",
+    "text": "26 For VAEs we need to understand latent variable models\n\n\n\n\nSlide 33\n\n\n\n\n\n\n\n\n\n\nNotes on this slide\n\n\n\n\n\nYou first sample z and that generates with a different distribution generates your observed data x\nGoal is to compute:\n\n\\(p(x)\\) likelihood\n\\(p(z|x)\\) posterior distribution\n\n\n\n\n\n\\(p_{\\theta}(z)\\): Prior, distribution for the latent variable\n\\(p_{\\theta}(x|z)\\): Likelihood, connects the latent variable wot the observation\n\\(p_{\\theta}(z|x)\\): Posterior\n\n\n\n\n\nSource at Lil’s Blog\n\n\n\n\n\n\n\n\nSource in my blog about: Latent models"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#latent-variable-models",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#latent-variable-models",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "34 Latent variable models",
-    "text": "34 Latent variable models\n\n\n\n\nSlide 34"
+    "section": "27 Latent variable models",
+    "text": "27 Latent variable models\n\n\n\n\nSlide 34\n\n\n\n\n\nFirst we sample z, so from the distribution p(z)\nSecond we sample x from p(x|z)\nThird we do “statistical Inference” where is defined as the process of going from the observations to the latent variable z, so we want to know the factors that generate the data. So we want to calculate the posterior p(z|x)"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#reminder-notes-from-ml1",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#reminder-notes-from-ml1",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "35 Reminder: notes from ML1",
-    "text": "35 Reminder: notes from ML1\n\n\n\n\nSlide 35"
+    "section": "28 Reminder: notes from ML1",
+    "text": "28 Reminder: notes from ML1\n\n\n\n\nSlide 35"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#inference",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#inference",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "36 Inference",
-    "text": "36 Inference\n\n\n\n\nSlide 36"
+    "section": "29 Inference",
+    "text": "29 Inference\n\n\n\n\nSlide 36\n\n\n\n\nWhen we want to do inference, so compute the posterior p(z|x) we see that this involves the join (numerator) and the marginal likelihood p(x) (denominator). To compute the marginal p(x) we use the integration over the join, but this is expensive computationally.\n\n\n\n\n\n\nWhy is expensive?"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#inference-1",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#inference-1",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "37 Inference",
-    "text": "37 Inference\n\n\n\n\nSlide 37"
+    "section": "30 Inference",
+    "text": "30 Inference\nWe will talk how to solve computing p(x), which is in the denominator for calculating the posterior aka doing inference. Inference is going from the generated observation to the latent variable z\n\n\n\n\nSlide 37\n\n\n\n\nIf we can generate data using the latent variable so from z -&gt; x. We can do the inverse and that would be inference\nSo we can have our data where x is generated from p(x) and then given this distribution (so given p(x)) we can derive p(z|x). That is expressed in the last line with formulas. That means that we arrive to p(x,z) the join which is a step to calculate the inference step aka posterior.\nThis we can do because we have have a dataset x which has been sample from the world and now we want to get a z out of the observations. The join distribution that we will be modelling is always the same because of bayes rule"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#why-shall-we-do-inference",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#why-shall-we-do-inference",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "38 Why shall we do inference?",
-    "text": "38 Why shall we do inference?\n\n\n\n\nSlide 38"
+    "section": "31 Why shall we do inference?",
+    "text": "31 Why shall we do inference?\n\n\n\n\nSlide 38\n\n\n\n\n\n\n\n\nSlide 36\n\n\n\n\nWe want to do inference, so computing the posterioir p(z|x), because then we can explain the observation. See the bulletpoints"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#inference-via-maximum-likelihood",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#inference-via-maximum-likelihood",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "39 Inference via maximum likelihood",
-    "text": "39 Inference via maximum likelihood\n\n\n\n\nSlide 39"
+    "section": "32 Inference via maximum likelihood",
+    "text": "32 Inference via maximum likelihood\n\n\n\n\nSlide 39\n\n\n\n\nMLE is all about finding the \\(\\theta\\) that maximizes modelling the distribution that represents the data \\(p_{\\theta}(x)\\)\nFor laten variable models there is no closed-form solution. It is not like you can derive with regards to theta (set it to zero and solve for theta) no you cannot.\nHere we are also assuming that all datapoints are independent see next slide\n\n\n\n\n\n\nWhy are we talking about p(x)?\n\n\n\n\n\nWe do it because it is in the denominator when we want to do inference. Remember inference was the posterior\n\n\n\n\nAnd recall we want to do inference because it was one of the 3 steps. Also recall that doing Inference is like going back because inference is defined as the process of going from the observations to the latent variable z"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#reminder-why-the-sum-of-logarithms",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#reminder-why-the-sum-of-logarithms",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "40 Reminder: Why the sum of logarithms?",
-    "text": "40 Reminder: Why the sum of logarithms?\n\n\n\n\nSlide 40"
+    "section": "33 Reminder: Why the sum of logarithms?",
+    "text": "33 Reminder: Why the sum of logarithms?\n\n\n\n\nSlide 40"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#the-gradient-of-max-likelihood",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#the-gradient-of-max-likelihood",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "41 The gradient of max likelihood",
-    "text": "41 The gradient of max likelihood\n\n\n\n\nSlide 41"
+    "section": "34 The gradient of max likelihood",
+    "text": "34 The gradient of max likelihood\n\n\n\n\nSlide 41\n\n\n\n\n\n\n\n\nBecause computing the \\(\\theta\\) that maximizes \\(p_{\\theta}(x)\\) has not closed form solution, we can do SGD. Thus why in this slide we explain how to calculate the derivative of \\(log p_{\\theta}(x)\\).\n\nFirst line, second equal p(x) we just make it into a joint distribution, where we add z and integrate over the whole z.\nSecond line, we can change the integral and the gradient. This is because the gradient does not depend on thetha but dz (so the integral depends on z). Here we also use the same identiy but with p(x,z)\nThird line, we see that to compute the gradient of the marginal we need to compute the posterior \\(p(z|x)\\). Which as we saw before is very expensive"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#but-exact-inference-is-hard",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#but-exact-inference-is-hard",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "42 But: Exact inference is hard",
-    "text": "42 But: Exact inference is hard\n\n\n\n\nSlide 42"
+    "section": "35 But: Exact inference is hard",
+    "text": "35 But: Exact inference is hard\n\n\n\n\nSlide 42\n\n\n\n\nSo as we see in the last slide from third line and second as well, computing the prior is very expensive we see an example that if we have an image with 20 dimensions then we will end up summing over 1M latents (because of integral or summation). Thus is very expensive.\nSo this approach of modelling the probabilities, so the latent distribution p(z) is not feseable because we would have to do inference in this way and we cannot solve this integral even not with brute force"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#lets-take-a-breath.-where-are-we-me",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#lets-take-a-breath.-where-are-we-me",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "43 Let’s take a breath. Where are we? me",
-    "text": "43 Let’s take a breath. Where are we? me\n\n\n\n\nSlide 43"
+    "section": "36 Let’s take a breath. Where are we? me",
+    "text": "36 Let’s take a breath. Where are we? me\n\n\n\n\nSlide 43\n\n\n\n\nHere in the last bullet point by normalize we mean we want to sum/integram across all data but this is intractable"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-inference",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-inference",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "44 Variational Inference",
-    "text": "44 Variational Inference\n\n\n\n\nSlide 44"
+    "section": "37 Variational Inference",
+    "text": "37 Variational Inference\n\n\n\n\nSlide 44\n\n\n\n\nSo because we this is intractable we will aproximate the integrals, which means we go from statistical inference to optimization.\nSo basically have a NN for the inference process for us"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#approximate-inference",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#approximate-inference",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "45 Approximate inference",
-    "text": "45 Approximate inference\n\n\n\n\nSlide 45"
+    "section": "38 Approximate inference",
+    "text": "38 Approximate inference\n\n\n\n\nSlide 45\n\n\n\n\nWith Variational inference, we say we do not know the posterior p(z|x) but we can model it, we just say is a Gaussian distribution which makes everything super easy. So instead of computing the full posterior we want to approximate it for example as we said by saying is a Gaussian distribution and then we want a NN to then learn the parameters wrt to the distribution and thus now the untractable problem becomes an optimization problem\nThis method however, will make it into a single forward pass which means we cannot trade computation for accuracy. Whereas in markov chain monte carlo we just know we keep running it for long and then we will get more and more accurate but this is not an option for NNs"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#revisit-kullbackleibler-divergence",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#revisit-kullbackleibler-divergence",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "46 Revisit: Kullback—Leibler divergence",
-    "text": "46 Revisit: Kullback—Leibler divergence\n\n\n\n\nSlide 46"
+    "section": "39 Revisit: Kullback—Leibler divergence",
+    "text": "39 Revisit: Kullback—Leibler divergence\n\n\n\n\nSlide 46"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#tool-1-jensens-inequality",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#tool-1-jensens-inequality",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "47 Tool 1: Jensen’s inequality",
-    "text": "47 Tool 1: Jensen’s inequality\n\n\n\n\nSlide 47"
+    "section": "40 Tool 1: Jensen’s inequality",
+    "text": "40 Tool 1: Jensen’s inequality\n\n\n\n\nSlide 47"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#tool-2-monte-carlo-methods",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#tool-2-monte-carlo-methods",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "48 Tool 2: Monte Carlo methods",
-    "text": "48 Tool 2: Monte Carlo methods\n\n\n\n\nSlide 48"
+    "section": "41 Tool 2: Monte Carlo methods",
+    "text": "41 Tool 2: Monte Carlo methods\n\n\n\n\nSlide 48"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#tool-2-monte-carlo-methods-1",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#tool-2-monte-carlo-methods-1",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "49 Tool 2: Monte Carlo methods",
-    "text": "49 Tool 2: Monte Carlo methods\n\n\n\n\nSlide 49"
+    "section": "42 Tool 2: Monte Carlo methods",
+    "text": "42 Tool 2: Monte Carlo methods\n\n\n\n\nSlide 49"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-inference-1",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-inference-1",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "50 Variational inference",
-    "text": "50 Variational inference\n\n\n\n\nSlide 50"
+    "section": "43 Variational inference",
+    "text": "43 Variational inference\n\n\n\n\nSlide 50"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-inference-2",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-inference-2",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "51 Variational inference",
-    "text": "51 Variational inference\n\n\n\n\nSlide 51"
+    "section": "44 Variational inference",
+    "text": "44 Variational inference\n\n\n\n\nSlide 51"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#training-with-variational-inference",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#training-with-variational-inference",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "52 Training with variational inference",
-    "text": "52 Training with variational inference\n\n\n\n\nSlide 52"
+    "section": "45 Training with variational inference",
+    "text": "45 Training with variational inference\n\n\n\n\nSlide 52"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#important-how-to-arrive-at-the-variational-lower-bound",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#important-how-to-arrive-at-the-variational-lower-bound",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "53 Important: How to arrive at the variational lower bound",
-    "text": "53 Important: How to arrive at the variational lower bound\n\n\n\n\nSlide 53"
+    "section": "46 Important: How to arrive at the variational lower bound",
+    "text": "46 Important: How to arrive at the variational lower bound\n\n\n\n\nSlide 53"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-lower-bound",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-lower-bound",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "54 Variational lower bound",
-    "text": "54 Variational lower bound\n\n\n\n\nSlide 54"
+    "section": "47 Variational lower bound",
+    "text": "47 Variational lower bound\n\n\n\n\nSlide 54"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-lower-bound-1",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-lower-bound-1",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "55 Variational lower bound",
-    "text": "55 Variational lower bound\n\n\n\n\nSlide 55"
+    "section": "48 Variational lower bound",
+    "text": "48 Variational lower bound\n\n\n\n\nSlide 55"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#derive-elbo-in-a-different-way",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#derive-elbo-in-a-different-way",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "56 Derive ELBO in a different way",
-    "text": "56 Derive ELBO in a different way\n\n\n\n\nSlide 56"
+    "section": "49 Derive ELBO in a different way",
+    "text": "49 Derive ELBO in a different way\n\n\n\n\nSlide 56"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#entropy-regularization",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#entropy-regularization",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "57 Entropy regularization",
-    "text": "57 Entropy regularization\n\n\n\n\nSlide 57"
+    "section": "50 Entropy regularization",
+    "text": "50 Entropy regularization\n\n\n\n\nSlide 57"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-gap",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-gap",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "58 Variational gap",
-    "text": "58 Variational gap\n\n\n\n\nSlide 58"
+    "section": "51 Variational gap",
+    "text": "51 Variational gap\n\n\n\n\nSlide 58"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-gap-1",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-gap-1",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "59 Variational gap",
-    "text": "59 Variational gap\n\n\n\n\nSlide 59"
+    "section": "52 Variational gap",
+    "text": "52 Variational gap\n\n\n\n\nSlide 59"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#fitting-the-variational-posterior",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#fitting-the-variational-posterior",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "60 Fitting the variational posterior",
-    "text": "60 Fitting the variational posterior\n\n\n\n\nSlide 60"
+    "section": "53 Fitting the variational posterior",
+    "text": "53 Fitting the variational posterior\n\n\n\n\nSlide 60"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#training-the-model",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#training-the-model",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "61 Training the model",
-    "text": "61 Training the model\n\n\n\n\nSlide 61"
+    "section": "54 Training the model",
+    "text": "54 Training the model\n\n\n\n\nSlide 61"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#where-are-we",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#where-are-we",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "62 Where are we? ——",
-    "text": "62 Where are we? ——\n\n\n\n\nSlide 62"
+    "section": "55 Where are we? ——",
+    "text": "55 Where are we? ——\n\n\n\n\nSlide 62"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#choosing-the-form-of-the-variational-posterior",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#choosing-the-form-of-the-variational-posterior",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "63 Choosing the form of the variational posterior",
-    "text": "63 Choosing the form of the variational posterior\n\n\n\n\nSlide 63"
+    "section": "56 Choosing the form of the variational posterior",
+    "text": "56 Choosing the form of the variational posterior\n\n\n\n\nSlide 63"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#amortized-variational-inference",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#amortized-variational-inference",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "64 Amortized variational inference",
-    "text": "64 Amortized variational inference\n\n\n\n\nSlide 64"
+    "section": "57 Amortized variational inference",
+    "text": "57 Amortized variational inference\n\n\n\n\nSlide 64"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#amortized-variational-inference-the-deep-learners-inference",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#amortized-variational-inference-the-deep-learners-inference",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "65 Amortized variational inference: the Deep Learner’s inference",
-    "text": "65 Amortized variational inference: the Deep Learner’s inference\n\n\n\n\nSlide 65"
+    "section": "58 Amortized variational inference: the Deep Learner’s inference",
+    "text": "58 Amortized variational inference: the Deep Learner’s inference\n\n\n\n\nSlide 65"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#amortized-variational-inference-1",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#amortized-variational-inference-1",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "66 Amortized variational inference",
-    "text": "66 Amortized variational inference\n\n\n\n\nSlide 66"
+    "section": "59 Amortized variational inference",
+    "text": "59 Amortized variational inference\n\n\n\n\nSlide 66"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#benefits-of-using-amortization",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#benefits-of-using-amortization",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "67 Benefits of using amortization",
-    "text": "67 Benefits of using amortization\n\n\n\n\nSlide 67"
+    "section": "60 Benefits of using amortization",
+    "text": "60 Benefits of using amortization\n\n\n\n\nSlide 67"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#maximizing-the-elbo",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#maximizing-the-elbo",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "68 Maximizing the ELBO",
-    "text": "68 Maximizing the ELBO\n\n\n\n\nSlide 68"
+    "section": "61 Maximizing the ELBO",
+    "text": "61 Maximizing the ELBO\n\n\n\n\nSlide 68"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#take-3-min-and-discuss-with-your-neighbor-the-following-points",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#take-3-min-and-discuss-with-your-neighbor-the-following-points",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "69 Take 3 min and discuss with your neighbor the following points",
-    "text": "69 Take 3 min and discuss with your neighbor the following points\n\n\n\n\nSlide 69"
+    "section": "62 Take 3 min and discuss with your neighbor the following points",
+    "text": "62 Take 3 min and discuss with your neighbor the following points\n\n\n\n\nSlide 69"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#gradient-w.r.t.-the-model-parameters",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#gradient-w.r.t.-the-model-parameters",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "70 Gradient w.r.t. the model parameters",
-    "text": "70 Gradient w.r.t. the model parameters\n\n\n\n\nSlide 70"
+    "section": "63 Gradient w.r.t. the model parameters",
+    "text": "63 Gradient w.r.t. the model parameters\n\n\n\n\nSlide 70"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#gradient-w.r.t.-variational-parameters",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#gradient-w.r.t.-variational-parameters",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "71 Gradient w.r.t. variational parameters",
-    "text": "71 Gradient w.r.t. variational parameters\n\n\n\n\nSlide 71"
+    "section": "64 Gradient w.r.t. variational parameters",
+    "text": "64 Gradient w.r.t. variational parameters\n\n\n\n\nSlide 71"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#gradients-of-expectations",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#gradients-of-expectations",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "72 Gradients of expectations",
-    "text": "72 Gradients of expectations\n\n\n\n\nSlide 72"
+    "section": "65 Gradients of expectations",
+    "text": "65 Gradients of expectations\n\n\n\n\nSlide 72"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#reparameterization-trick",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#reparameterization-trick",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "73 Reparameterization trick",
-    "text": "73 Reparameterization trick\n\n\n\n\nSlide 73"
+    "section": "66 Reparameterization trick",
+    "text": "66 Reparameterization trick\n\n\n\n\nSlide 73"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#reparameterization-trick-1",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#reparameterization-trick-1",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "74 Reparameterization trick",
-    "text": "74 Reparameterization trick\n\n\n\n\nSlide 74"
+    "section": "67 Reparameterization trick",
+    "text": "67 Reparameterization trick\n\n\n\n\nSlide 74"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#reparameterization-trick-visualised",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#reparameterization-trick-visualised",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "75 Reparameterization trick visualised",
-    "text": "75 Reparameterization trick visualised\n\n\n\n\nSlide 75"
+    "section": "68 Reparameterization trick visualised",
+    "text": "68 Reparameterization trick visualised\n\n\n\n\nSlide 75"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#where-are-we-ee",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#where-are-we-ee",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "76 Where are we? ee:",
-    "text": "76 Where are we? ee:\n\n\n\n\nSlide 76"
+    "section": "69 Where are we? ee:",
+    "text": "69 Where are we? ee:\n\n\n\n\nSlide 76"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-autoencoders-summary",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-autoencoders-summary",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "77 Variational autoencoders summary",
-    "text": "77 Variational autoencoders summary\n\n\n\n\nSlide 77"
+    "section": "70 Variational autoencoders summary",
+    "text": "70 Variational autoencoders summary\n\n\n\n\nSlide 77"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-autoencoders-elbo",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-autoencoders-elbo",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "78 Variational autoencoders ELBO",
-    "text": "78 Variational autoencoders ELBO\n\n\n\n\nSlide 78"
+    "section": "71 Variational autoencoders ELBO",
+    "text": "71 Variational autoencoders ELBO\n\n\n\n\nSlide 78"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#encoder-decoder",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#encoder-decoder",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "79 Encoder & Decoder",
-    "text": "79 Encoder & Decoder\n\n\n\n\nSlide 79"
+    "section": "72 Encoder & Decoder",
+    "text": "72 Encoder & Decoder\n\n\n\n\nSlide 79"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#generating-data",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#generating-data",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "80 Generating Data",
-    "text": "80 Generating Data\n\n\n\n\nSlide 80"
+    "section": "73 Generating Data",
+    "text": "73 Generating Data\n\n\n\n\nSlide 80"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#dimensionality-of-latent-space-1",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#dimensionality-of-latent-space-1",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "81 Dimensionality of latent space",
-    "text": "81 Dimensionality of latent space\n\n\n\n\nSlide 81"
+    "section": "74 Dimensionality of latent space",
+    "text": "74 Dimensionality of latent space\n\n\n\n\nSlide 81"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#face-generation",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#face-generation",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "82 Face generation",
-    "text": "82 Face generation\n\n\n\n\nSlide 82"
+    "section": "75 Face generation",
+    "text": "75 Face generation\n\n\n\n\nSlide 82"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#inference-suboptimality",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#inference-suboptimality",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "83 Inference suboptimality",
-    "text": "83 Inference suboptimality\n\n\n\n\nSlide 83"
+    "section": "76 Inference suboptimality",
+    "text": "76 Inference suboptimality\n\n\n\n\nSlide 83"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#inference-gaps",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#inference-gaps",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "84 Inference Gaps",
-    "text": "84 Inference Gaps\n\n\n\n\nSlide 84"
+    "section": "77 Inference Gaps",
+    "text": "77 Inference Gaps\n\n\n\n\nSlide 84"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#vae-variants",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#vae-variants",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "85 VAE variants",
-    "text": "85 VAE variants\n\n\n\n\nSlide 85"
+    "section": "78 VAE variants",
+    "text": "78 VAE variants\n\n\n\n\nSlide 85"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#conditional-vaes",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#conditional-vaes",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "86 Conditional VAEs",
-    "text": "86 Conditional VAEs\n\n\n\n\nSlide 86"
+    "section": "79 Conditional VAEs",
+    "text": "79 Conditional VAEs\n\n\n\n\nSlide 86"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#conditional-vaes-1",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#conditional-vaes-1",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "87 Conditional VAEs",
-    "text": "87 Conditional VAEs\n\n\n\n\nSlide 87"
+    "section": "80 Conditional VAEs",
+    "text": "80 Conditional VAEs\n\n\n\n\nSlide 87"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#conditional-vaes-2",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#conditional-vaes-2",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "88 Conditional VAEs",
-    "text": "88 Conditional VAEs\n\n\n\n\nSlide 88"
+    "section": "81 Conditional VAEs",
+    "text": "81 Conditional VAEs\n\n\n\n\nSlide 88"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#beta-vae",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#beta-vae",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "89 Beta-VAE",
-    "text": "89 Beta-VAE\n\n\n\n\nSlide 89"
+    "section": "82 Beta-VAE",
+    "text": "82 Beta-VAE\n\n\n\n\nSlide 89"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#beta-vae-1",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#beta-vae-1",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "90 Beta-VAE",
-    "text": "90 Beta-VAE\n\n\n\n\nSlide 90"
+    "section": "83 Beta-VAE",
+    "text": "83 Beta-VAE\n\n\n\n\nSlide 90"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#vq-vae-and-vq-vae2",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#vq-vae-and-vq-vae2",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "91 VQ-VAE and VQ-VAE2",
-    "text": "91 VQ-VAE and VQ-VAE2\n\n\n\n\nSlide 91"
+    "section": "84 VQ-VAE and VQ-VAE2",
+    "text": "84 VQ-VAE and VQ-VAE2\n\n\n\n\nSlide 91"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#further-reading",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#further-reading",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "92 Further reading",
-    "text": "92 Further reading\n\n\n\n\nSlide 92"
+    "section": "85 Further reading",
+    "text": "85 Further reading\n\n\n\n\nSlide 92"
+  },
+  {
+    "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#pca-refresher",
+    "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#pca-refresher",
+    "title": "Generative modelling and Deep Variational Inference",
+    "section": "21 PCA Refresher",
+    "text": "21 PCA Refresher\n\n\n\n\nSlide 28\n\n\n\n\nContinue this explanation here"
+  },
+  {
+    "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#inference-2",
+    "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#inference-2",
+    "title": "Generative modelling and Deep Variational Inference",
+    "section": "32 Inference",
+    "text": "32 Inference\n\n\n\n\nSlide 36\n\n\n\n\nWe want to do inference, so computing the posterioir p(z|x), because we"
   }
 ]
