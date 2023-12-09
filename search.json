@@ -10581,35 +10581,35 @@
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#revisit-kullbackleibler-divergence",
     "title": "Generative modelling and Deep Variational Inference",
     "section": "39 Revisit: Kullback—Leibler divergence",
-    "text": "39 Revisit: Kullback—Leibler divergence\n\n\n\n\nSlide 46"
+    "text": "39 Revisit: Kullback—Leibler divergence\n\n\n\n\nSlide 46\n\n\n\n\nKL is not symetric.\nThat means if you have q fix and you optimize p. This will give you a different result if you write it like this instead of the other way. This is because you will have the mode seeking behavior of this process. That means in one case it will learn q and you observing data p(x), it will try to fit both of these peaks. While if you use the reverse KL that will just collapse into one of the modes and model a peak instead of both"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#tool-1-jensens-inequality",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#tool-1-jensens-inequality",
     "title": "Generative modelling and Deep Variational Inference",
     "section": "40 Tool 1: Jensen’s inequality",
-    "text": "40 Tool 1: Jensen’s inequality\n\n\n\n\nSlide 47"
+    "text": "40 Tool 1: Jensen’s inequality\n\n\n\n\nSlide 47\n\n\n\n\nIt says that the logarithm is monotonic. Monotonic refers tgat:\n\na&lt;b -&gt; log(a) &lt; log(b). So it conserves the order\n\nSo here the Jensens is defined for log and it just says that a line connecting two points will always be below the function"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#tool-2-monte-carlo-methods",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#tool-2-monte-carlo-methods",
     "title": "Generative modelling and Deep Variational Inference",
     "section": "41 Tool 2: Monte Carlo methods",
-    "text": "41 Tool 2: Monte Carlo methods\n\n\n\n\nSlide 48"
+    "text": "41 Tool 2: Monte Carlo methods\n\n\n\n\nSlide 48\n\n\n\n\nHere we would be doing one-sample montecarlo"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#tool-2-monte-carlo-methods-1",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#tool-2-monte-carlo-methods-1",
     "title": "Generative modelling and Deep Variational Inference",
     "section": "42 Tool 2: Monte Carlo methods",
-    "text": "42 Tool 2: Monte Carlo methods\n\n\n\n\nSlide 49"
+    "text": "42 Tool 2: Monte Carlo methods\n\n\n\n\nSlide 49\n\n\n\n\n\np(x) is a probability distribution\n\nThis integral, you cannot just find a close form solution. Because we cannot do this we will use solve it numerically and we use Montecarlo then we do an estimation fo sampling points ‘x’ from this distribution p(x) and then just plug in it, and summing then up. That is how you get an estimate of this integral So Montecarlo here just samples from p(x). The longer you do this sampling the more the samples will have been approximated by probabilities distributions and the more accurate of the integral would be.\nIf n goes to infinity you will have the exact same solution"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-inference-1",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-inference-1",
     "title": "Generative modelling and Deep Variational Inference",
     "section": "43 Variational inference",
-    "text": "43 Variational inference\n\n\n\n\nSlide 50"
+    "text": "43 Variational inference\n\n\n\n\nSlide 50\n\n\n\n\nThis changes the task of finding the posterior distribution into an optimization problem. So now we approximate:\n\nThe posterior with a variational posterior\n\nThe parameters phi they do not need to be NNs later on they will be NN parameters, but in general variational inference is not the case"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-inference-2",
@@ -10623,28 +10623,28 @@
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#training-with-variational-inference",
     "title": "Generative modelling and Deep Variational Inference",
     "section": "45 Training with variational inference",
-    "text": "45 Training with variational inference\n\n\n\n\nSlide 52"
+    "text": "45 Training with variational inference\n\n\n\n\nSlide 52\n\n\n\n\n\n\n\n\nWe want to go up for the log likelihood p(x), if we learn a lower bound that means if we keep increasing the low bound we will actually be maximizing the log likelihood p(x).\nHere we will be training the model with Variational inference by maximizing the variational lower bound"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#important-how-to-arrive-at-the-variational-lower-bound",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#important-how-to-arrive-at-the-variational-lower-bound",
     "title": "Generative modelling and Deep Variational Inference",
     "section": "46 Important: How to arrive at the variational lower bound",
-    "text": "46 Important: How to arrive at the variational lower bound\n\n\n\n\nSlide 53"
+    "text": "46 Important: How to arrive at the variational lower bound\n\n\n\n\nSlide 53\n\n\n\n\nNow we can express it as an expectation over the sample of q. We multiply everything with q, so we may as well sampling it instead. This is the montecarlo estimate of this difficult integral.\nThis expectation is in theory infinite samples but we just take a few of this"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-lower-bound",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-lower-bound",
     "title": "Generative modelling and Deep Variational Inference",
     "section": "47 Variational lower bound",
-    "text": "47 Variational lower bound\n\n\n\n\nSlide 54"
+    "text": "47 Variational lower bound\n\n\n\n\nSlide 54\n\n\n\n\nNow we can have a loss function because we got the variational lower bound.\nWe can now maximize this L instead of the untractable log p(x)"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-lower-bound-1",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-lower-bound-1",
     "title": "Generative modelling and Deep Variational Inference",
     "section": "48 Variational lower bound",
-    "text": "48 Variational lower bound\n\n\n\n\nSlide 55"
+    "text": "48 Variational lower bound\nHere note we are designing a variational posterior q(z|x) not q(z) as we have before. And we do it as simple as possible i.e Normal dist.\n\n\n\n\nSlide 55\n\n\n\n\nThis function is called the Evidence Lower Bound. It is called evidence (another term for describing the data we see)"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#derive-elbo-in-a-different-way",
@@ -10658,14 +10658,14 @@
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#entropy-regularization",
     "title": "Generative modelling and Deep Variational Inference",
     "section": "50 Entropy regularization",
-    "text": "50 Entropy regularization\n\n\n\n\nSlide 57"
+    "text": "50 Entropy regularization\n\n\n\n\nSlide 57\n\n\n\n\nWe want high entropy which means we carry more information"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-gap",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-gap",
     "title": "Generative modelling and Deep Variational Inference",
     "section": "51 Variational gap",
-    "text": "51 Variational gap\n\n\n\n\nSlide 58"
+    "text": "51 Variational gap\n\n\n\n\nSlide 58\n\n\n\n\nThere is a gap between the lower bound, So between ELBO =second line and p(x). It turns out the gap is the second term of the third line\nSo this is the difference between the real likelihood and the lowe bound ELBO"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-gap-1",
@@ -10679,63 +10679,63 @@
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#fitting-the-variational-posterior",
     "title": "Generative modelling and Deep Variational Inference",
     "section": "53 Fitting the variational posterior",
-    "text": "53 Fitting the variational posterior\n\n\n\n\nSlide 60"
+    "text": "53 Fitting the variational posterior\n\n\n\n\nSlide 60\n\n\n\n\nThe error loss is on the RHS of the red equation, we CAN optimize. These two things are untractable:\n\np(x) expensive to compute the integral\np(z|x) we dont know\n\nSee the picture:\n\n\n\n\nBut two things that are untractable can be tractable"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#training-the-model",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#training-the-model",
     "title": "Generative modelling and Deep Variational Inference",
     "section": "54 Training the model",
-    "text": "54 Training the model\n\n\n\n\nSlide 61"
+    "text": "54 Training the model\n\n\n\n\n\n\n\nSlide 61\n\n\n\n\nFirst we want to optimize the model parameters:\n\nWe want to update the model parameters thetha to increase the ELBO. This belongs to the model parameters\nBy optimizing the thetha:\n\nincrease log p(x) prob\ndecrease the varational gap\n\n\nFor this we should use the most expressive psoterior that we can such that we are as closs as possible to modelling the actual distribution. Now the question is how do we choose the variational posterior q"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#where-are-we",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#where-are-we",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "55 Where are we? ——",
-    "text": "55 Where are we? ——\n\n\n\n\nSlide 62"
+    "section": "55 Where are we?",
+    "text": "55 Where are we?\n\n\n\n\nSlide 62\n\n\n\n\nThe last point refers to how to choose variational posterior q that is expresive enough so that is close to the actual distribution"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#choosing-the-form-of-the-variational-posterior",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#choosing-the-form-of-the-variational-posterior",
     "title": "Generative modelling and Deep Variational Inference",
     "section": "56 Choosing the form of the variational posterior",
-    "text": "56 Choosing the form of the variational posterior\n\n\n\n\nSlide 63"
+    "text": "56 Choosing the form of the variational posterior\n\n\n\n\nSlide 63\n\n\n\n\nThe simples way is to fully factorize the distribution, where we say the full distribution of z is the multiplication of all different z_i distributions. That means they are very simply related all of these points are identically distributed so idd\nIn clasic Variational inference, the idd is also know as mean field approximation.\nHere we model the high-level latent factors that can cature independent factors such as camera, angle, lighthening, etc such that forgetting the main latent representation you just multiply all these together\nThe treadoff: in practice for VAE the mean field approximation is used. Where we have gaussian distributions, so every z so every latent dimension is independent of each other"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#amortized-variational-inference",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#amortized-variational-inference",
     "title": "Generative modelling and Deep Variational Inference",
     "section": "57 Amortized variational inference",
-    "text": "57 Amortized variational inference\n\n\n\n\nSlide 64"
+    "text": "57 Amortized variational inference\n\n\n\n\nSlide 64\n\n\n\n\nHere you have your observation x and now you have a complicated procedure back and forth to gradually arrive at your variational parameters phi. Now because we say q would be Gaussians then \\(\\phi\\) represents \\(\\mu\\) and \\(\\sigma\\) which are the parameters of a Gaussian distribution\nNow because p(z|x) is different for each observation x, we would do something more efficient called amortized inference, where amortized just means we will reuse things and therefore we do not have to do this iterative for each data sample"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#amortized-variational-inference-the-deep-learners-inference",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#amortized-variational-inference-the-deep-learners-inference",
     "title": "Generative modelling and Deep Variational Inference",
     "section": "58 Amortized variational inference: the Deep Learner’s inference",
-    "text": "58 Amortized variational inference: the Deep Learner’s inference\n\n\n\n\nSlide 65"
+    "text": "58 Amortized variational inference: the Deep Learner’s inference\n\n\n\n\nSlide 65\n\n\n\n\nInstead of optimizing a set of free paramaters, we use a NN that accepts an observation an input and ouputs these \\(\\mu\\) and \\(\\sigma\\) directly.\nSo instead of having this blackbox, for every single sample that gradually learns \\(\\mu\\) and \\(\\sigma\\) which is done tipically in statistics, we just have a NN to approximate this behavior\nIt is amortized because across all the samples in the dataset we are using the same NN to do this, thus we are amortizing this process"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#amortized-variational-inference-1",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#amortized-variational-inference-1",
     "title": "Generative modelling and Deep Variational Inference",
     "section": "59 Amortized variational inference",
-    "text": "59 Amortized variational inference\n\n\n\n\nSlide 66"
+    "text": "59 Amortized variational inference\n\n\n\n\nSlide 66\n\n\n\n\nSo because now \\(\\phi\\) represents the weights of our NN, and we can train jointly with the model using the ELBO loss"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#benefits-of-using-amortization",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#benefits-of-using-amortization",
     "title": "Generative modelling and Deep Variational Inference",
     "section": "60 Benefits of using amortization",
-    "text": "60 Benefits of using amortization\n\n\n\n\nSlide 67"
+    "text": "60 Benefits of using amortization\n\n\n\n\n\n\n\nSlide 67\n\n\n\n\nIt is fast, for every new observation all we need to do is one single forward pass and then we have all the approximate posterior \\(q_{\\phi}(z|x)\\) distribution parameters \\(\\mu\\) and \\(\\sigma\\). With the paramaters then we have the approximate posterior distribution as well because we are saying is a Gaussian distribution"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#maximizing-the-elbo",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#maximizing-the-elbo",
     "title": "Generative modelling and Deep Variational Inference",
     "section": "61 Maximizing the ELBO",
-    "text": "61 Maximizing the ELBO\n\n\n\n\nSlide 68"
+    "text": "61 Maximizing the ELBO\n\n\n\n\nSlide 68\n\n\n\n\nBecause to maximize the ELBO is a non-convex optimization we need to estimate the gradients. We will now estimating the gradient because you still have this expectations over this distribution, we will be estimating the gradients using Montecarlo sampling"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#take-3-min-and-discuss-with-your-neighbor-the-following-points",
@@ -10748,162 +10748,162 @@
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#gradient-w.r.t.-the-model-parameters",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#gradient-w.r.t.-the-model-parameters",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "63 Gradient w.r.t. the model parameters",
-    "text": "63 Gradient w.r.t. the model parameters\n\n\n\n\nSlide 70"
+    "section": "62 Gradient w.r.t. the model parameters",
+    "text": "62 Gradient w.r.t. the model parameters\n\n\n\n\nSlide 70\n\n\n\n\nInstead of taking computing the whole expectation (which the formula for expectations involves an integral) we just take \\(k\\) samples to approximate it. This is a Montecarlo approach. Thus by taking k samples we get a rough estimate of the gradient. So instead of sampling the whole thing we do the simplest montecarlo estimate that is possible"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#gradient-w.r.t.-variational-parameters",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#gradient-w.r.t.-variational-parameters",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "64 Gradient w.r.t. variational parameters",
-    "text": "64 Gradient w.r.t. variational parameters\n\n\n\n\nSlide 71"
+    "section": "63 Gradient w.r.t. variational parameters",
+    "text": "63 Gradient w.r.t. variational parameters\n\n\n\n\nSlide 71\n\n\n\n\nIt is not obvious how to take the derivative of a distribution from where we are sampling"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#gradients-of-expectations",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#gradients-of-expectations",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "65 Gradients of expectations",
-    "text": "65 Gradients of expectations\n\n\n\n\nSlide 72"
+    "section": "64 Gradients of expectations",
+    "text": "64 Gradients of expectations\n\n\n\n\nSlide 72"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#reparameterization-trick",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#reparameterization-trick",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "66 Reparameterization trick",
-    "text": "66 Reparameterization trick\n\n\n\n\nSlide 73"
+    "section": "65 Reparameterization trick",
+    "text": "65 Reparameterization trick\n\n\n\n\nSlide 73\n\n\n\n\nFirst we sample \\(z\\) form the approximated posterior distribution \\(q(\\textbf{z}_n | \\textbf{x}_n)\\)\nThen express the random variable \\(z\\) as a deterministic variable \\(z=g(\\epsilon, \\phi)\\), where \\(\\epsilon\\) is an auxiliary independent random variable, and the transformation function \\(g(.)\\) parameterized by \\(\\phi\\) converts \\(\\epsilon\\) to \\(z\\).\nThe problem that we have before is that the get the gradient of the expectation over \\(q(\\textbf{z}_n | \\textbf{x}_n)\\) was not feasible, as this requires us to sample infinietly, so now instead we do reparametrization which instead of sampling \\(z\\) we will be sampling from the this parametrized function \\(g(\\epsilon, \\phi)\\)\nThis \\(\\epsilon\\) will form a distribution which in practice in a Normal dsitr.\nSo the crucial bit is that with reparametrization we shift in the expectation from which distribution to sample in this case from \\(p(\\epsilon)\\). So now we can take the gradient and now the gradient can go inside because the sampling is not done by anithing that depends on the parameters \\(\\phi\\). So then we end up with the last line of equation above by taking the Chain Rule."
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#reparameterization-trick-1",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#reparameterization-trick-1",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "67 Reparameterization trick",
-    "text": "67 Reparameterization trick\n\n\n\n\nSlide 74"
+    "section": "66 Reparameterization trick",
+    "text": "66 Reparameterization trick\n\n\n\n\nSlide 74\n\n\n\n\n\n\n\n\nWe want to learn \\(\\mu\\) and \\(\\sigma\\) so the last line represent the reparametrization where now we can sample from \\(\\epsilon\\).\nEven though we add stotastichs because we sample from epsilon, this make it differentiable which was a problem before by just taking the gradient of the expectation"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#reparameterization-trick-visualised",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#reparameterization-trick-visualised",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "68 Reparameterization trick visualised",
-    "text": "68 Reparameterization trick visualised\n\n\n\n\nSlide 75"
+    "section": "67 Reparameterization trick visualised",
+    "text": "67 Reparameterization trick visualised\n\n\n\n\nSlide 75\n\n\n\n\nIf sample as in the left you cannot take gradients because there is no way how you could do that. However, if you add the reparametrization you get a noisy sample and then you multiply by \\(\\sigma\\) and add \\(\\mu\\) and that is differentiable.\nHere in the most right we have a vector because we have a mean for every latent dimension i.e this could be 120 dimensions and then we have a standard deviation for every latent dimension that is being ouputed. So now you have our parameters \\(\\sigma\\) and \\(\\mu\\) so then we can get p(z|x). You also get your \\(z =\\mu + \\sigma circ \\epsilon\\) because we did the reparametrization trick. Now you put this sample \\(z\\) into the decoder network to deconstruct it."
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#where-are-we-ee",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#where-are-we-ee",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "69 Where are we? ee:",
-    "text": "69 Where are we? ee:\n\n\n\n\nSlide 76"
+    "section": "68 Where are we? ee:",
+    "text": "68 Where are we? ee:\n\n\n\n\nSlide 76"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-autoencoders-summary",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-autoencoders-summary",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "70 Variational autoencoders summary",
-    "text": "70 Variational autoencoders summary\n\n\n\n\nSlide 77"
+    "section": "69 Variational autoencoders summary",
+    "text": "69 Variational autoencoders summary\n\n\n\n\nSlide 77\n\n\n\n\n\n\n\n\n\nVAE are generative models with continous latent variables. We do not chunk them into zeros or ones\nThe likelihood p(x) and the variational posterioir \\(q_\\theta\\) are NNs\nThe last point refers that the noise comes from the epsilon"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-autoencoders-elbo",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#variational-autoencoders-elbo",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "71 Variational autoencoders ELBO",
-    "text": "71 Variational autoencoders ELBO\n\n\n\n\nSlide 78"
+    "section": "70 Variational autoencoders ELBO",
+    "text": "70 Variational autoencoders ELBO\n\n\n\n\nSlide 78"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#encoder-decoder",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#encoder-decoder",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "72 Encoder & Decoder",
-    "text": "72 Encoder & Decoder\n\n\n\n\nSlide 79"
+    "section": "71 Encoder & Decoder",
+    "text": "71 Encoder & Decoder\n\n\n\n\nSlide 79\n\n\n\n\nWith your input data you get your \\(\\mu\\) and \\(\\sigma\\) and then you get \\(z\\). And then given this \\(z\\) you can reconstruct the input. In between these steeps there is a reparametrization step when you do the training"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#generating-data",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#generating-data",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "73 Generating Data",
-    "text": "73 Generating Data\n\n\n\n\nSlide 80"
+    "section": "72 Generating Data",
+    "text": "72 Generating Data\n\n\n\n\nSlide 80\n\n\n\n\nWhen you generate new data, you can now simply sample \\(z\\) from this Gaussian distrivution with mean zero and std \\(I\\). And then for example if your Gaussian distribution is 2D then you can sample a point from the top left all the way to the bottom right and each time you sample \\(z\\) through the decoder network you can vizualise it based on where it cames from for instance if it comes from the left corner or top corner or so on.\n\nWe sample first from from p(z) to then obtain the values of \\(\\mu\\) and \\(\\sigma\\)\nWith those now we samoke from \\(p(z|z)\\) that comes from this new Gaussian distribution with the parameters we found in the prev step."
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#dimensionality-of-latent-space-1",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#dimensionality-of-latent-space-1",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "74 Dimensionality of latent space",
-    "text": "74 Dimensionality of latent space\n\n\n\n\nSlide 81"
+    "section": "73 Dimensionality of latent space",
+    "text": "73 Dimensionality of latent space\n\n\n\n\nSlide 81\n\n\n\n\nOnce we have more dimensions we get more noisy data"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#face-generation",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#face-generation",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "75 Face generation",
-    "text": "75 Face generation\n\n\n\n\nSlide 82"
+    "section": "74 Face generation",
+    "text": "74 Face generation\n\n\n\n\nSlide 82\n\n\n\n\nIt is blurry because now we have more dimensions"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#inference-suboptimality",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#inference-suboptimality",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "76 Inference suboptimality",
-    "text": "76 Inference suboptimality\n\n\n\n\nSlide 83"
+    "section": "75 Inference suboptimality",
+    "text": "75 Inference suboptimality\n\n\n\n\nSlide 83\n\n\n\n\n\nVariational psoterior: \\(q_{\\phi}(\\textbf{z}_n | \\textbf{x}_n)\\) match to the true posterior \\(p_{\\theta}(\\textbf{z}_n)\\)\n\nIn terms ob observations: - The divergence from the true posterioir is often imperfect mostly due to the amortized inference network rather that the limmiting capacity or complexity of the approximating distribution"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#inference-gaps",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#inference-gaps",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "77 Inference Gaps",
-    "text": "77 Inference Gaps\n\n\n\n\nSlide 84"
+    "section": "76 Inference Gaps",
+    "text": "76 Inference Gaps\n\n\n\n\nSlide 84\n\n\n\n\nHere the approximation gap is the same as Variational gap\n\nVariational gap: if this is small then you can make it samll by having an expressive variational distribution\nAmortization Gap: you can make this small by having a stronger bigger NN"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#vae-variants",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#vae-variants",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "78 VAE variants",
-    "text": "78 VAE variants\n\n\n\n\nSlide 85"
+    "section": "77 VAE variants",
+    "text": "77 VAE variants"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#conditional-vaes",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#conditional-vaes",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "79 Conditional VAEs",
-    "text": "79 Conditional VAEs\n\n\n\n\nSlide 86"
+    "section": "78 Conditional VAEs",
+    "text": "78 Conditional VAEs\n\n\n\n\nSlide 86"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#conditional-vaes-1",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#conditional-vaes-1",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "80 Conditional VAEs",
-    "text": "80 Conditional VAEs\n\n\n\n\nSlide 87"
+    "section": "79 Conditional VAEs",
+    "text": "79 Conditional VAEs\n\n\n\n\nSlide 87"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#conditional-vaes-2",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#conditional-vaes-2",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "81 Conditional VAEs",
-    "text": "81 Conditional VAEs\n\n\n\n\nSlide 88"
+    "section": "80 Conditional VAEs",
+    "text": "80 Conditional VAEs\n\n\n\n\nSlide 88"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#beta-vae",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#beta-vae",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "82 Beta-VAE",
-    "text": "82 Beta-VAE\n\n\n\n\nSlide 89"
+    "section": "81 Beta-VAE",
+    "text": "81 Beta-VAE\n\n\n\n\nSlide 89"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#beta-vae-1",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#beta-vae-1",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "83 Beta-VAE",
-    "text": "83 Beta-VAE\n\n\n\n\nSlide 90"
+    "section": "82 Beta-VAE",
+    "text": "82 Beta-VAE\n\n\n\n\nSlide 90"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#vq-vae-and-vq-vae2",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#vq-vae-and-vq-vae2",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "84 VQ-VAE and VQ-VAE2",
-    "text": "84 VQ-VAE and VQ-VAE2\n\n\n\n\nSlide 91"
+    "section": "83 VQ-VAE and VQ-VAE2",
+    "text": "83 VQ-VAE and VQ-VAE2\n\n\n\n\nSlide 91"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#further-reading",
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#further-reading",
     "title": "Generative modelling and Deep Variational Inference",
-    "section": "85 Further reading",
-    "text": "85 Further reading\n\n\n\n\nSlide 92"
+    "section": "84 Further reading",
+    "text": "84 Further reading\n\n\n\n\nSlide 92"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#pca-refresher",
@@ -10918,5 +10918,12 @@
     "title": "Generative modelling and Deep Variational Inference",
     "section": "32 Inference",
     "text": "32 Inference\n\n\n\n\nSlide 36\n\n\n\n\nWe want to do inference, so computing the posterioir p(z|x), because we"
+  },
+  {
+    "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#where-are-we-1",
+    "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#where-are-we-1",
+    "title": "Generative modelling and Deep Variational Inference",
+    "section": "68 Where are we?:",
+    "text": "68 Where are we?:\n\n\n\n\nSlide 76\n\n\n\n\nSo we can choose any simple approximation for our posterior q but when we want to optimizie this then we get into the trouble of not knowing how to get the gradient of a expectation which we need to samply from this distribution. This gradient of the expectation involves the variational parameters that we wish to take take the derivative from.\nSo instead we reparametrized this to have have a generic stochastic epsilon that we could map us back to our z whihc before was difficult to compute.\nA sampling procedure is like you have an image and then you are taking the crop, so then you cannot take the gradients with regards to the cropping procedure. You can fake it by doing the reparametrization because you are saying okay you take the sample but then you shift it and you scale it by exaclty the same thing. Note, for images is different because we do not have just a gaussian distribution.\nWhat we say is that all latent dimensions are idenpendent so basically your covariance matrix your sigma has only entries on the diagonal matrix, technically this does not need to be the case. It will just mean that this network will ouput a lot more standard deviations. But genreally Gaussians are simple, they stay gaussian even if you take the derivative"
   }
 ]

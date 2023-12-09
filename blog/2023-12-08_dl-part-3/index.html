@@ -362,11 +362,24 @@ window.MathJax = {
     
 </main>
 
+<!-- \mathbfcal{I} -->
 <section id="q1.1" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="q1.1"><span class="header-section-number">1</span> Q1.1</h2>
+<ol type="1">
+<li>We sample <span class="math inline">\(\textbf{z}_n\)</span> from the the normal distribution <span class="math inline">\(\mathcal(N)(0, \textbf{\textit{I}}_D)\)</span></li>
+<li></li>
+</ol>
 </section>
 <section id="q1.2" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="q1.2"><span class="header-section-number">2</span> Q1.2</h2>
+<center>
+<img src="2023-12-08-20-31-16.png" class="w350 img-fluid">
+</center>
+<pre></pre>
+<ol type="1">
+<li><p>If we use Montecarlo to approximate <span class="math inline">\(\log p(\textbf{x}_n)\)</span> we will be sampling <span class="math inline">\(\textbf{z}_{n}^{(l)}\)</span> from the prior distribution <span class="math inline">\(p(\textbf{z}_n)\)</span>. However, we can see that for most of these samples <span class="math inline">\(p(\textbf{x}_n|\textbf{z}_n^{(l)})\)</span> will be close to zero. This is a problem because we see that in order to sample <span class="math inline">\(\textbf{z}_n\)</span> which is then used to compute <span class="math inline">\(p(\textbf{x}_n|\textbf{z}_n^{(l)})\)</span> we want to fall in the small region represented by the posterior (depicted with blue line contours). Thus we would be sampling many times but only a small portion of those samples would be beneficial to approximate <span class="math inline">\(\log p(\textbf{x}_n)\)</span> thereby not an efficient method.</p></li>
+<li><p>As we can see in the graph this is a 2-dimensional latent space showing the prior and the posterior distributions. If we would increase the dimensionality of this space (the dimensionality of <span class="math inline">\(\textbf{z}_n\)</span> increases as well) then effectively we are increasing the region from which we can sample <span class="math inline">\(\textbf{z}_n\)</span>. Thus, to get samples that contribute to compute <span class="math inline">\(\log p(\textbf{x}_n)\)</span> we would have to sample even more which is inefficient.</p></li>
+</ol>
 </section>
 <section id="q1.3" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="q1.3"><span class="header-section-number">3</span> Q1.3</h2>
@@ -382,9 +395,31 @@ window.MathJax = {
 <h2 data-number="4" class="anchored" data-anchor-id="q1.4"><span class="header-section-number">4</span> Q1.4</h2>
 <p>When the lower bound is pushed up effectively the <span class="math inline">\(\log p(\textbf{x}_n)\)</span> is being maximized. Conversely this makes <span class="math inline">\(KL(q(\textbf{z}_n | \textbf{x}_n) || p(\textbf{z}_n | \textbf{x}_n) ))\)</span> to be minimized. This implies:</p>
 <ol type="1">
-<li>If we maximize the <span class="math inline">\(\log p(\textbf{x}_n)\)</span> then our learned posterior approaches to the true posterior. In other words, the optimized posterior becomes a better approximation of the distribution of the data.</li>
-<li>If we minimize <span class="math inline">\(KL(q(\textbf{z}_n | \textbf{x}_n) || p(\textbf{z}_n | \textbf{x}_n) ))\)</span>, the estimated distribution <span class="math inline">\(q (\textbf{z}_n | \textbf{x}_n)\)</span> will approximate to the true posterior <span class="math inline">\(p(\textbf{z}_n | \textbf{x}_n))\)</span>. Thus the problem of <span class="math inline">\(p(\textbf{z}_n | \textbf{x}_n) )\)</span> not being tractable is solved.</li>
+<li>The gap to the log-liklelihood <span class="math inline">\(\log p(\textbf{x}_n)\)</span> tightens. This in turn means we have a better generative model.</li>
+<li>If we minimize <span class="math inline">\(KL(q(\textbf{z}_n | \textbf{x}_n) || p(\textbf{z}_n | \textbf{x}_n) ))\)</span> that means <span class="math inline">\(q (\textbf{z}_n | \textbf{x}_n)\)</span> will approximate to the true posterior <span class="math inline">\(p(\textbf{z}_n | \textbf{x}_n))\)</span>. This in turn means that we have a better latent representation. This also means that the problem of <span class="math inline">\(p(\textbf{z}_n | \textbf{x}_n) )\)</span> not being tractable is solved.</li>
 </ol>
+</section>
+<section id="q1.4-1" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="q1.4-1"><span class="header-section-number">5</span> Q1.4</h2>
+<center>
+<img src="2023-12-09-02-06-15.png" class="w475 img-fluid">
+</center>
+<pre></pre>
+<p>Img Source at: lilianweng.github.io</p>
+<ul>
+<li><p>In the first case the term reconstruction is appropriate because <span class="math inline">\(\mathbb{E}_{q_{\phi} (\textbf{z}_n | \textbf{x}_n)} [\log p(\textbf{x}_n | \textbf{z}_n)]\)</span> represents the expected value of <span class="math inline">\(x\)</span> if we were to sample <span class="math inline">\(z_n\)</span> from the approximated posterior <span class="math inline">\(q_{\phi}(\textbf{z}_n | \textbf{x}_n)\)</span> and then reconstruct it using <span class="math inline">\(p_{\theta}(\textbf{z}_n | \textbf{x}_n) )\)</span>. In other words how well the model predicts/reconstructs an observation from a sample from the variational posterior.</p></li>
+<li><p>For the second case the term regularization is appropriate because the KL-divergence pushes the variational posterior <span class="math inline">\(q_{\phi}(\textbf{z}_n | \textbf{x}_n)\)</span> towards the prior <span class="math inline">\(p_{\theta}(\textbf{z}_n)\)</span>. In other words the KL-divergence term tries to approximate/regulate that the distribution <span class="math inline">\(q_{\phi}(\textbf{z}_n | \textbf{x}_n)\)</span> (blue circle above) be as close as possible to the distribution of the latent variable <span class="math inline">\(p_{\theta}(\textbf{z}_n)\)</span> (red circle).</p></li>
+</ul>
+<!-- 
+The term is appropriate because  
+
+The reconstruction loss measures the difference between the original input and the ouput generated by the decoder. This is what this equation is doing. IT first samples a z from our approximated posterior q(z|x), and then using p(x|z) reconstructs x.   
+
+We do this by first sampling z from our approximated posterior q(z|x), and then using p(x|z) to reconstruct x. 
+Thus this loss measures how well the sample (due to the hint) has been reconstructed. A h
+
+
+Ideally we want this loss to be as close to zero means means the reconstructed data  -->
 
 
 </section>

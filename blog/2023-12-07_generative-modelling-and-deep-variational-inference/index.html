@@ -1074,6 +1074,8 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>KL is not symetric.</p>
+<p>That means if you have q fix and you optimize p.&nbsp;This will give you a different result if you write it like this instead of the other way. This is because you will have the mode seeking behavior of this process. That means in one case it will learn q and you observing data p(x), it will try to fit both of these peaks. While if you use the reverse KL that will just collapse into one of the modes and model a peak instead of both</p>
 </section>
 <section id="tool-1-jensens-inequality" class="level2" data-number="40">
 <h2 data-number="40" class="anchored" data-anchor-id="tool-1-jensens-inequality"><span class="header-section-number">40</span> Tool 1: Jensen’s inequality</h2>
@@ -1086,6 +1088,11 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>It says that the logarithm is monotonic. Monotonic refers tgat:</p>
+<ul>
+<li>a&lt;b -&gt; log(a) &lt; log(b). So it conserves the order</li>
+</ul>
+<p>So here the Jensens is defined for log and it just says that a line connecting two points will always be below the function</p>
 </section>
 <section id="tool-2-monte-carlo-methods" class="level2" data-number="41">
 <h2 data-number="41" class="anchored" data-anchor-id="tool-2-monte-carlo-methods"><span class="header-section-number">41</span> Tool 2: Monte Carlo methods</h2>
@@ -1098,6 +1105,7 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>Here we would be doing one-sample montecarlo</p>
 </section>
 <section id="tool-2-monte-carlo-methods-1" class="level2" data-number="42">
 <h2 data-number="42" class="anchored" data-anchor-id="tool-2-monte-carlo-methods-1"><span class="header-section-number">42</span> Tool 2: Monte Carlo methods</h2>
@@ -1110,6 +1118,11 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<ul>
+<li>p(x) is a probability distribution</li>
+</ul>
+<p>This integral, you cannot just find a close form solution. Because we cannot do this we will use solve it numerically and we use Montecarlo then we do an estimation fo sampling points ‘x’ from this distribution p(x) and then just plug in it, and summing then up. That is how you get an estimate of this integral So Montecarlo here just samples from p(x). The longer you do this sampling the more the samples will have been approximated by probabilities distributions and the more accurate of the integral would be.</p>
+<p>If n goes to infinity you will have the exact same solution</p>
 </section>
 <section id="variational-inference-1" class="level2" data-number="43">
 <h2 data-number="43" class="anchored" data-anchor-id="variational-inference-1"><span class="header-section-number">43</span> Variational inference</h2>
@@ -1122,6 +1135,11 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>This changes the task of finding the posterior distribution into an optimization problem. So now we approximate:</p>
+<ul>
+<li>The posterior with a <strong>variational posterior</strong></li>
+</ul>
+<p>The parameters phi they do not need to be NNs later on they will be NN parameters, but in general variational inference is not the case</p>
 </section>
 <section id="variational-inference-2" class="level2" data-number="44">
 <h2 data-number="44" class="anchored" data-anchor-id="variational-inference-2"><span class="header-section-number">44</span> Variational inference</h2>
@@ -1146,6 +1164,12 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<center>
+<img src="2023-12-08-22-00-24.png" class="w500 img-fluid">
+</center>
+<pre></pre>
+<p>We want to go up for the log likelihood p(x), if we learn a lower bound that means if we keep increasing the low bound we will actually be maximizing the log likelihood p(x).</p>
+<p>Here we will be training the model with Variational inference by maximizing the <strong>variational lower bound</strong></p>
 </section>
 <section id="important-how-to-arrive-at-the-variational-lower-bound" class="level2" data-number="46">
 <h2 data-number="46" class="anchored" data-anchor-id="important-how-to-arrive-at-the-variational-lower-bound"><span class="header-section-number">46</span> Important: How to arrive at the variational lower bound</h2>
@@ -1158,6 +1182,8 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>Now we can express it as an expectation over the sample of q. We multiply everything with q, so we may as well sampling it instead. This is the montecarlo estimate of this difficult integral.</p>
+<p>This expectation is in theory infinite samples but we just take a few of this</p>
 </section>
 <section id="variational-lower-bound" class="level2" data-number="47">
 <h2 data-number="47" class="anchored" data-anchor-id="variational-lower-bound"><span class="header-section-number">47</span> Variational lower bound</h2>
@@ -1170,9 +1196,12 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>Now we can have a loss function because we got the variational lower bound.</p>
+<p>We can now maximize this L instead of the untractable log p(x)</p>
 </section>
 <section id="variational-lower-bound-1" class="level2" data-number="48">
 <h2 data-number="48" class="anchored" data-anchor-id="variational-lower-bound-1"><span class="header-section-number">48</span> Variational lower bound</h2>
+<p>Here note we are designing a variational posterior q(z|x) not q(z) as we have before. And we do it as simple as possible i.e Normal dist.</p>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1182,6 +1211,7 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>This function is called the <strong>Evidence Lower Bound</strong>. It is called evidence (another term for describing the data we see)</p>
 </section>
 <section id="derive-elbo-in-a-different-way" class="level2" data-number="49">
 <h2 data-number="49" class="anchored" data-anchor-id="derive-elbo-in-a-different-way"><span class="header-section-number">49</span> Derive ELBO in a different way</h2>
@@ -1206,6 +1236,7 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>We want high entropy which means we carry more information</p>
 </section>
 <section id="variational-gap" class="level2" data-number="51">
 <h2 data-number="51" class="anchored" data-anchor-id="variational-gap"><span class="header-section-number">51</span> Variational gap</h2>
@@ -1218,6 +1249,8 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>There is a gap between the lower bound, So between ELBO =second line and p(x). It turns out the gap is the second term of the third line</p>
+<p>So this is the difference between the real likelihood and the lowe bound ELBO</p>
 </section>
 <section id="variational-gap-1" class="level2" data-number="52">
 <h2 data-number="52" class="anchored" data-anchor-id="variational-gap-1"><span class="header-section-number">52</span> Variational gap</h2>
@@ -1242,9 +1275,23 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>The error loss is on the RHS of the red equation, we CAN optimize. These two things are untractable:</p>
+<ol type="1">
+<li>p(x) expensive to compute the integral</li>
+<li>p(z|x) we dont know</li>
+</ol>
+See the picture:
+<center>
+<img src="2023-12-09-00-44-29.png" class="w150 img-fluid">
+</center>
+<pre></pre>
+<p>But two things that are untractable can be tractable</p>
 </section>
 <section id="training-the-model" class="level2" data-number="54">
 <h2 data-number="54" class="anchored" data-anchor-id="training-the-model"><span class="header-section-number">54</span> Training the model</h2>
+<center>
+<img src="https://lilianweng.github.io/posts/2018-08-12-vae/VAE-graphical-model.png" class="w375 img-fluid">
+</center>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1254,9 +1301,19 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>First we want to optimize the model parameters:</p>
+<ul>
+<li>We want to update the model parameters thetha to increase the ELBO. This belongs to the model parameters</li>
+<li>By optimizing the thetha:
+<ul>
+<li>increase log p(x) prob</li>
+<li>decrease the varational gap</li>
+</ul></li>
+</ul>
+<p>For this we should use the most expressive psoterior that we can such that we are as closs as possible to modelling the actual distribution. Now the question is how do we choose the variational posterior q</p>
 </section>
 <section id="where-are-we" class="level2" data-number="55">
-<h2 data-number="55" class="anchored" data-anchor-id="where-are-we"><span class="header-section-number">55</span> Where are we? ——</h2>
+<h2 data-number="55" class="anchored" data-anchor-id="where-are-we"><span class="header-section-number">55</span> Where are we?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1266,6 +1323,7 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>The last point refers to how to choose variational posterior q that is expresive enough so that is close to the actual distribution</p>
 </section>
 <section id="choosing-the-form-of-the-variational-posterior" class="level2" data-number="56">
 <h2 data-number="56" class="anchored" data-anchor-id="choosing-the-form-of-the-variational-posterior"><span class="header-section-number">56</span> Choosing the form of the variational posterior</h2>
@@ -1278,6 +1336,10 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>The simples way is to fully factorize the distribution, where we say the full distribution of z is the multiplication of all different z_i distributions. That means they are very simply related all of these points are identically distributed so idd</p>
+<p>In clasic Variational inference, the <strong>idd</strong> is also know as mean field approximation.</p>
+<p>Here we model the high-level latent factors that can cature independent factors such as camera, angle, lighthening, etc such that forgetting the main latent representation you just multiply all these together</p>
+<p>The treadoff: in practice for VAE the <strong>mean field</strong> approximation is used. Where we have gaussian distributions, so every z so every latent dimension is independent of each other</p>
 </section>
 <section id="amortized-variational-inference" class="level2" data-number="57">
 <h2 data-number="57" class="anchored" data-anchor-id="amortized-variational-inference"><span class="header-section-number">57</span> Amortized variational inference</h2>
@@ -1290,6 +1352,8 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>Here you have your observation x and now you have a complicated procedure back and forth to gradually arrive at your variational parameters phi. Now because we say q would be Gaussians then <span class="math inline">\(\phi\)</span> represents <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> which are the parameters of a Gaussian distribution</p>
+<p>Now because p(z|x) is different for each observation x, we would do something more efficient called <em>amortized inference</em>, where amortized just means we will reuse things and therefore we do not have to do this iterative for each data sample</p>
 </section>
 <section id="amortized-variational-inference-the-deep-learners-inference" class="level2" data-number="58">
 <h2 data-number="58" class="anchored" data-anchor-id="amortized-variational-inference-the-deep-learners-inference"><span class="header-section-number">58</span> Amortized variational inference: the Deep Learner’s inference</h2>
@@ -1302,6 +1366,9 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>Instead of optimizing a set of free paramaters, we use a NN that accepts an observation an input and ouputs these <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> directly.</p>
+<p>So instead of having this blackbox, for every single sample that gradually learns <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> which is done tipically in statistics, we just have a NN to approximate this behavior</p>
+<p>It is amortized because across all the samples in the dataset we are using the same NN to do this, thus we are amortizing this process</p>
 </section>
 <section id="amortized-variational-inference-1" class="level2" data-number="59">
 <h2 data-number="59" class="anchored" data-anchor-id="amortized-variational-inference-1"><span class="header-section-number">59</span> Amortized variational inference</h2>
@@ -1314,9 +1381,13 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>So because now <span class="math inline">\(\phi\)</span> represents the weights of our NN, and we can train jointly with the model using the ELBO loss</p>
 </section>
 <section id="benefits-of-using-amortization" class="level2" data-number="60">
 <h2 data-number="60" class="anchored" data-anchor-id="benefits-of-using-amortization"><span class="header-section-number">60</span> Benefits of using amortization</h2>
+<center>
+<img src="https://lilianweng.github.io/posts/2018-08-12-vae/VAE-graphical-model.png" class="w375 img-fluid">
+</center>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1326,6 +1397,7 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>It is fast, for every new observation all we need to do is one single forward pass and then we have all the approximate posterior <span class="math inline">\(q_{\phi}(z|x)\)</span> distribution parameters <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span>. With the paramaters then we have the approximate posterior distribution as well because we are saying is a Gaussian distribution</p>
 </section>
 <section id="maximizing-the-elbo" class="level2" data-number="61">
 <h2 data-number="61" class="anchored" data-anchor-id="maximizing-the-elbo"><span class="header-section-number">61</span> Maximizing the ELBO</h2>
@@ -1338,21 +1410,12 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>Because to maximize the ELBO is a non-convex optimization we need to estimate the gradients. We will now estimating the gradient because you still have this expectations over this distribution, we will be estimating the gradients using Montecarlo sampling</p>
+<!-- ## Take 3 min and discuss with your neighbor the following points
+<center>![Slide 69](imgs/page_69.jpeg){.w575}</center><pre></pre> -->
 </section>
-<section id="take-3-min-and-discuss-with-your-neighbor-the-following-points" class="level2" data-number="62">
-<h2 data-number="62" class="anchored" data-anchor-id="take-3-min-and-discuss-with-your-neighbor-the-following-points"><span class="header-section-number">62</span> Take 3 min and discuss with your neighbor the following points</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_69.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 69</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-</section>
-<section id="gradient-w.r.t.-the-model-parameters" class="level2" data-number="63">
-<h2 data-number="63" class="anchored" data-anchor-id="gradient-w.r.t.-the-model-parameters"><span class="header-section-number">63</span> Gradient w.r.t. the model parameters</h2>
+<section id="gradient-w.r.t.-the-model-parameters" class="level2" data-number="62">
+<h2 data-number="62" class="anchored" data-anchor-id="gradient-w.r.t.-the-model-parameters"><span class="header-section-number">62</span> Gradient w.r.t. the model parameters</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1362,9 +1425,10 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>Instead of taking computing the whole expectation (which the formula for expectations involves an integral) we just take <span class="math inline">\(k\)</span> samples to approximate it. This is a Montecarlo approach. Thus by taking k samples we get a rough estimate of the gradient. So instead of sampling the whole thing we do the simplest montecarlo estimate that is possible</p>
 </section>
-<section id="gradient-w.r.t.-variational-parameters" class="level2" data-number="64">
-<h2 data-number="64" class="anchored" data-anchor-id="gradient-w.r.t.-variational-parameters"><span class="header-section-number">64</span> Gradient w.r.t. variational parameters</h2>
+<section id="gradient-w.r.t.-variational-parameters" class="level2" data-number="63">
+<h2 data-number="63" class="anchored" data-anchor-id="gradient-w.r.t.-variational-parameters"><span class="header-section-number">63</span> Gradient w.r.t. variational parameters</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1374,9 +1438,10 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>It is not obvious how to take the derivative of a distribution from where we are sampling</p>
 </section>
-<section id="gradients-of-expectations" class="level2" data-number="65">
-<h2 data-number="65" class="anchored" data-anchor-id="gradients-of-expectations"><span class="header-section-number">65</span> Gradients of expectations</h2>
+<section id="gradients-of-expectations" class="level2" data-number="64">
+<h2 data-number="64" class="anchored" data-anchor-id="gradients-of-expectations"><span class="header-section-number">64</span> Gradients of expectations</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1387,8 +1452,8 @@ Why are we talking about p(x)?
 </center>
 <pre></pre>
 </section>
-<section id="reparameterization-trick" class="level2" data-number="66">
-<h2 data-number="66" class="anchored" data-anchor-id="reparameterization-trick"><span class="header-section-number">66</span> Reparameterization trick</h2>
+<section id="reparameterization-trick" class="level2" data-number="65">
+<h2 data-number="65" class="anchored" data-anchor-id="reparameterization-trick"><span class="header-section-number">65</span> Reparameterization trick</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1398,9 +1463,14 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>First we sample <span class="math inline">\(z\)</span> form the approximated posterior distribution <span class="math inline">\(q(\textbf{z}_n | \textbf{x}_n)\)</span></p>
+<p>Then express the random variable <span class="math inline">\(z\)</span> as a deterministic variable <span class="math inline">\(z=g(\epsilon, \phi)\)</span>, where <span class="math inline">\(\epsilon\)</span> is an auxiliary independent random variable, and the transformation function <span class="math inline">\(g(.)\)</span> parameterized by <span class="math inline">\(\phi\)</span> converts <span class="math inline">\(\epsilon\)</span> to <span class="math inline">\(z\)</span>.</p>
+<p>The problem that we have before is that the get the gradient of the expectation over <span class="math inline">\(q(\textbf{z}_n | \textbf{x}_n)\)</span> was not feasible, as this requires us to sample infinietly, so now instead we do reparametrization which instead of sampling <span class="math inline">\(z\)</span> we will be sampling from the this parametrized function <span class="math inline">\(g(\epsilon, \phi)\)</span></p>
+<p>This <span class="math inline">\(\epsilon\)</span> will form a distribution which in practice in a Normal dsitr.</p>
+<p>So the crucial bit is that with reparametrization we shift in the expectation from which distribution to sample in this case from <span class="math inline">\(p(\epsilon)\)</span>. So now we can take the gradient and now the gradient can go inside because the sampling is not done by anithing that depends on the parameters <span class="math inline">\(\phi\)</span>. So then we end up with the last line of equation above by taking the Chain Rule.</p>
 </section>
-<section id="reparameterization-trick-1" class="level2" data-number="67">
-<h2 data-number="67" class="anchored" data-anchor-id="reparameterization-trick-1"><span class="header-section-number">67</span> Reparameterization trick</h2>
+<section id="reparameterization-trick-1" class="level2" data-number="66">
+<h2 data-number="66" class="anchored" data-anchor-id="reparameterization-trick-1"><span class="header-section-number">66</span> Reparameterization trick</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1410,9 +1480,15 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<center>
+<img src="https://lilianweng.github.io/posts/2018-08-12-vae/reparameterization-trick.png" class="w375 img-fluid">
+</center>
+<pre></pre>
+<p>We want to learn <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> so the last line represent the reparametrization where now we can sample from <span class="math inline">\(\epsilon\)</span>.</p>
+<p>Even though we add stotastichs because we sample from epsilon, this make it differentiable which was a problem before by just taking the gradient of the expectation</p>
 </section>
-<section id="reparameterization-trick-visualised" class="level2" data-number="68">
-<h2 data-number="68" class="anchored" data-anchor-id="reparameterization-trick-visualised"><span class="header-section-number">68</span> Reparameterization trick visualised</h2>
+<section id="reparameterization-trick-visualised" class="level2" data-number="67">
+<h2 data-number="67" class="anchored" data-anchor-id="reparameterization-trick-visualised"><span class="header-section-number">67</span> Reparameterization trick visualised</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1422,9 +1498,11 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>If sample as in the left you cannot take gradients because there is no way how you could do that. However, if you add the reparametrization you get a noisy sample and then you multiply by <span class="math inline">\(\sigma\)</span> and add <span class="math inline">\(\mu\)</span> and that is differentiable.</p>
+<p>Here in the most right we have a vector because we have a mean for every latent dimension i.e this could be 120 dimensions and then we have a standard deviation for every latent dimension that is being ouputed. So now you have our parameters <span class="math inline">\(\sigma\)</span> and <span class="math inline">\(\mu\)</span> so then we can get p(z|x). You also get your <span class="math inline">\(z =\mu + \sigma circ \epsilon\)</span> because we did the reparametrization trick. Now you put this sample <span class="math inline">\(z\)</span> into the decoder network to deconstruct it.</p>
 </section>
-<section id="where-are-we-ee" class="level2" data-number="69">
-<h2 data-number="69" class="anchored" data-anchor-id="where-are-we-ee"><span class="header-section-number">69</span> Where are we? ee:</h2>
+<section id="where-are-we-1" class="level2" data-number="68">
+<h2 data-number="68" class="anchored" data-anchor-id="where-are-we-1"><span class="header-section-number">68</span> Where are we?:</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1434,9 +1512,13 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>So we can choose any simple approximation for our posterior q but when we want to optimizie this then we get into the trouble of not knowing how to get the gradient of a expectation which we need to samply from this distribution. This gradient of the expectation involves the variational parameters that we wish to take take the derivative from.</p>
+<p>So instead we reparametrized this to have have a generic stochastic epsilon that we could map us back to our z whihc before was difficult to compute.</p>
+<p>A sampling procedure is like you have an image and then you are taking the crop, so then you cannot take the gradients with regards to the cropping procedure. You can fake it by doing the reparametrization because you are saying okay you take the sample but then you shift it and you scale it by exaclty the same thing. Note, for images is different because we do not have just a gaussian distribution.</p>
+<p>What we say is that all latent dimensions are idenpendent so basically your covariance matrix your sigma has only entries on the diagonal matrix, technically this does not need to be the case. It will just mean that this network will ouput a lot more standard deviations. But genreally Gaussians are simple, they stay gaussian even if you take the derivative</p>
 </section>
-<section id="variational-autoencoders-summary" class="level2" data-number="70">
-<h2 data-number="70" class="anchored" data-anchor-id="variational-autoencoders-summary"><span class="header-section-number">70</span> Variational autoencoders summary</h2>
+<section id="variational-autoencoders-summary" class="level2" data-number="69">
+<h2 data-number="69" class="anchored" data-anchor-id="variational-autoencoders-summary"><span class="header-section-number">69</span> Variational autoencoders summary</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1446,9 +1528,18 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<center>
+<img src="https://lilianweng.github.io/posts/2018-08-12-vae/vae-gaussian.png" class="w575 img-fluid">
+</center>
+<pre></pre>
+<ul>
+<li>VAE are generative models with continous latent variables. We do not chunk them into zeros or ones</li>
+<li>The likelihood p(x) and the variational posterioir <span class="math inline">\(q_\theta\)</span> are NNs</li>
+<li>The last point refers that the noise comes from the epsilon</li>
+</ul>
 </section>
-<section id="variational-autoencoders-elbo" class="level2" data-number="71">
-<h2 data-number="71" class="anchored" data-anchor-id="variational-autoencoders-elbo"><span class="header-section-number">71</span> Variational autoencoders ELBO</h2>
+<section id="variational-autoencoders-elbo" class="level2" data-number="70">
+<h2 data-number="70" class="anchored" data-anchor-id="variational-autoencoders-elbo"><span class="header-section-number">70</span> Variational autoencoders ELBO</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1459,8 +1550,8 @@ Why are we talking about p(x)?
 </center>
 <pre></pre>
 </section>
-<section id="encoder-decoder" class="level2" data-number="72">
-<h2 data-number="72" class="anchored" data-anchor-id="encoder-decoder"><span class="header-section-number">72</span> Encoder &amp; Decoder</h2>
+<section id="encoder-decoder" class="level2" data-number="71">
+<h2 data-number="71" class="anchored" data-anchor-id="encoder-decoder"><span class="header-section-number">71</span> Encoder &amp; Decoder</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1470,9 +1561,10 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>With your input data you get your <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> and then you get <span class="math inline">\(z\)</span>. And then given this <span class="math inline">\(z\)</span> you can reconstruct the input. In between these steeps there is a reparametrization step when you do the training</p>
 </section>
-<section id="generating-data" class="level2" data-number="73">
-<h2 data-number="73" class="anchored" data-anchor-id="generating-data"><span class="header-section-number">73</span> Generating Data</h2>
+<section id="generating-data" class="level2" data-number="72">
+<h2 data-number="72" class="anchored" data-anchor-id="generating-data"><span class="header-section-number">72</span> Generating Data</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1482,9 +1574,14 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>When you generate new data, you can now simply sample <span class="math inline">\(z\)</span> from this Gaussian distrivution with mean zero and std <span class="math inline">\(I\)</span>. And then for example if your Gaussian distribution is 2D then you can sample a point from the top left all the way to the bottom right and each time you sample <span class="math inline">\(z\)</span> through the decoder network you can vizualise it based on where it cames from for instance if it comes from the left corner or top corner or so on.</p>
+<ul>
+<li>We sample first from from p(z) to then obtain the values of <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span></li>
+<li>With those now we samoke from <span class="math inline">\(p(z|z)\)</span> that comes from this new Gaussian distribution with the parameters we found in the prev step.</li>
+</ul>
 </section>
-<section id="dimensionality-of-latent-space-1" class="level2" data-number="74">
-<h2 data-number="74" class="anchored" data-anchor-id="dimensionality-of-latent-space-1"><span class="header-section-number">74</span> Dimensionality of latent space</h2>
+<section id="dimensionality-of-latent-space-1" class="level2" data-number="73">
+<h2 data-number="73" class="anchored" data-anchor-id="dimensionality-of-latent-space-1"><span class="header-section-number">73</span> Dimensionality of latent space</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1494,9 +1591,10 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>Once we have more dimensions we get more noisy data</p>
 </section>
-<section id="face-generation" class="level2" data-number="75">
-<h2 data-number="75" class="anchored" data-anchor-id="face-generation"><span class="header-section-number">75</span> Face generation</h2>
+<section id="face-generation" class="level2" data-number="74">
+<h2 data-number="74" class="anchored" data-anchor-id="face-generation"><span class="header-section-number">74</span> Face generation</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1506,9 +1604,10 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>It is blurry because now we have more dimensions</p>
 </section>
-<section id="inference-suboptimality" class="level2" data-number="76">
-<h2 data-number="76" class="anchored" data-anchor-id="inference-suboptimality"><span class="header-section-number">76</span> Inference suboptimality</h2>
+<section id="inference-suboptimality" class="level2" data-number="75">
+<h2 data-number="75" class="anchored" data-anchor-id="inference-suboptimality"><span class="header-section-number">75</span> Inference suboptimality</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1518,9 +1617,13 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<ul>
+<li><strong>Variational psoterior:</strong> <span class="math inline">\(q_{\phi}(\textbf{z}_n | \textbf{x}_n)\)</span> match to the true posterior <span class="math inline">\(p_{\theta}(\textbf{z}_n)\)</span></li>
+</ul>
+<p>In terms ob observations: - The divergence from the true posterioir is often imperfect mostly due to the amortized inference network rather that the limmiting capacity or complexity of the approximating distribution</p>
 </section>
-<section id="inference-gaps" class="level2" data-number="77">
-<h2 data-number="77" class="anchored" data-anchor-id="inference-gaps"><span class="header-section-number">77</span> Inference Gaps</h2>
+<section id="inference-gaps" class="level2" data-number="76">
+<h2 data-number="76" class="anchored" data-anchor-id="inference-gaps"><span class="header-section-number">76</span> Inference Gaps</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1530,21 +1633,18 @@ Why are we talking about p(x)?
 </div>
 </center>
 <pre></pre>
+<p>Here the approximation gap is the same as Variational gap</p>
+<ul>
+<li><p>Variational gap: if this is small then you can make it samll by having an expressive variational distribution</p></li>
+<li><p>Amortization Gap: you can make this small by having a stronger bigger NN</p></li>
+</ul>
 </section>
-<section id="vae-variants" class="level2" data-number="78">
-<h2 data-number="78" class="anchored" data-anchor-id="vae-variants"><span class="header-section-number">78</span> VAE variants</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_85.jpeg" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 85</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
+<section id="vae-variants" class="level2" data-number="77">
+<h2 data-number="77" class="anchored" data-anchor-id="vae-variants"><span class="header-section-number">77</span> VAE variants</h2>
+<!-- <center>![Slide 85](imgs/page_85.jpeg){.w575}</center><pre></pre> -->
 </section>
-<section id="conditional-vaes" class="level2" data-number="79">
-<h2 data-number="79" class="anchored" data-anchor-id="conditional-vaes"><span class="header-section-number">79</span> Conditional VAEs</h2>
+<section id="conditional-vaes" class="level2" data-number="78">
+<h2 data-number="78" class="anchored" data-anchor-id="conditional-vaes"><span class="header-section-number">78</span> Conditional VAEs</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1555,8 +1655,8 @@ Why are we talking about p(x)?
 </center>
 <pre></pre>
 </section>
-<section id="conditional-vaes-1" class="level2" data-number="80">
-<h2 data-number="80" class="anchored" data-anchor-id="conditional-vaes-1"><span class="header-section-number">80</span> Conditional VAEs</h2>
+<section id="conditional-vaes-1" class="level2" data-number="79">
+<h2 data-number="79" class="anchored" data-anchor-id="conditional-vaes-1"><span class="header-section-number">79</span> Conditional VAEs</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1567,8 +1667,8 @@ Why are we talking about p(x)?
 </center>
 <pre></pre>
 </section>
-<section id="conditional-vaes-2" class="level2" data-number="81">
-<h2 data-number="81" class="anchored" data-anchor-id="conditional-vaes-2"><span class="header-section-number">81</span> Conditional VAEs</h2>
+<section id="conditional-vaes-2" class="level2" data-number="80">
+<h2 data-number="80" class="anchored" data-anchor-id="conditional-vaes-2"><span class="header-section-number">80</span> Conditional VAEs</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1579,8 +1679,8 @@ Why are we talking about p(x)?
 </center>
 <pre></pre>
 </section>
-<section id="beta-vae" class="level2" data-number="82">
-<h2 data-number="82" class="anchored" data-anchor-id="beta-vae"><span class="header-section-number">82</span> Beta-VAE</h2>
+<section id="beta-vae" class="level2" data-number="81">
+<h2 data-number="81" class="anchored" data-anchor-id="beta-vae"><span class="header-section-number">81</span> Beta-VAE</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1591,8 +1691,8 @@ Why are we talking about p(x)?
 </center>
 <pre></pre>
 </section>
-<section id="beta-vae-1" class="level2" data-number="83">
-<h2 data-number="83" class="anchored" data-anchor-id="beta-vae-1"><span class="header-section-number">83</span> Beta-VAE</h2>
+<section id="beta-vae-1" class="level2" data-number="82">
+<h2 data-number="82" class="anchored" data-anchor-id="beta-vae-1"><span class="header-section-number">82</span> Beta-VAE</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1603,8 +1703,8 @@ Why are we talking about p(x)?
 </center>
 <pre></pre>
 </section>
-<section id="vq-vae-and-vq-vae2" class="level2" data-number="84">
-<h2 data-number="84" class="anchored" data-anchor-id="vq-vae-and-vq-vae2"><span class="header-section-number">84</span> VQ-VAE and VQ-VAE2</h2>
+<section id="vq-vae-and-vq-vae2" class="level2" data-number="83">
+<h2 data-number="83" class="anchored" data-anchor-id="vq-vae-and-vq-vae2"><span class="header-section-number">83</span> VQ-VAE and VQ-VAE2</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1615,8 +1715,8 @@ Why are we talking about p(x)?
 </center>
 <pre></pre>
 </section>
-<section id="further-reading" class="level2" data-number="85">
-<h2 data-number="85" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">85</span> Further reading</h2>
+<section id="further-reading" class="level2" data-number="84">
+<h2 data-number="84" class="anchored" data-anchor-id="further-reading"><span class="header-section-number">84</span> Further reading</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
