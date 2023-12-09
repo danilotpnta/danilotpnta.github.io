@@ -420,6 +420,49 @@ Thus this loss measures how well the sample (due to the hint) has been reconstru
 
 
 Ideally we want this loss to be as close to zero means means the reconstructed data  -->
+</section>
+<section id="q1.5" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="q1.5"><span class="header-section-number">6</span> Q1.5</h2>
+<p>Passing the derivative through samples can be done using the reparameterization trick. In a few sentences, explain why the act of sampling usually prevents us from computing ∇φL, and how the reparameterization trick solves this problem.</p>
+<center>
+<img src="https://www.deeplearningbook.com.br/wp-content/uploads/2019/12/form11.png" class="img-fluid">
+</center>
+<pre></pre>
+<p>Img Source at: deeplearningbook.com</p>
+<p><strong>Why the act of sampling usually prevents us from computing ∇φL?</strong></p>
+<p>This is because sampling <span class="math inline">\(\textbf{z}\)</span> from <span class="math inline">\(q_{\phi}(\textbf{z}_n | \textbf{x}_n)\)</span> directly is not differentiable. To minimize the loss and learn the variational parameters we need this to be differentiable so that we can do backpropagation and thus learn the parameters. This problem can be visualized in the left side of the above picture.</p>
+<p>A way to circumvent this problem is by using the reparametrization trick. Essentially we want to be able to rewrite the expectation so that the distribution w.r.t. which we take the gradient is independent of parameter <span class="math inline">\(\phi\)</span>. To achieve this, we can reparametrize a sample from <span class="math inline">\(q_{\phi}(\textbf{z}_n | \textbf{x}_n)\)</span> by expressing it as a function of a sample <span class="math inline">\(\epsilon\)</span> from some distribution <span class="math inline">\(p(\epsilon)\)</span></p>
+<p><span class="math display">\[
+z = g(\epsilon, \phi)
+\]</span></p>
+<p>Here <span class="math inline">\(g(\epsilon, \phi)\)</span> is the function that maps <span class="math inline">\(\epsilon\)</span> to <span class="math inline">\(z\)</span>. Importantly, this function needs to be differentiable w.r.t <span class="math inline">\(\phi\)</span>, i.e a Gaussian distribution so that <span class="math inline">\(z\)</span> becomes:</p>
+<p><span class="math display">\[
+z = \mu + \sigma \, \odot \, \epsilon \quad \text{with}\quad \epsilon \sim  N(0, I) \tag{1}
+\]</span></p>
+<p>What we accomplish with eq (1) is that now the sampling is done over <span class="math inline">\(\epsilon\)</span>. This means that now we can compute backpropagatin over <span class="math inline">\(\mu, \sigma\)</span> which are deterministic parameters that we can learn to optimize the loss. Recall the loss was composed of two terms the <span class="math inline">\(L_{reg}\)</span> and <span class="math inline">\(L_{recon}\)</span> (which this later is the one we use the reparametrization trick). To wrap up, this idea of sampling with reparametrization can be visualized in the right side of the picture above.</p>
+<p><!-- so that our expectation can be rewriten as follows:
+
+$$
+\nabla_{\phi} E_{q_{\phi}(z)}[f(z)] = E_{p(\epsilon)}[\nabla_{z}f(z)\nabla_{\phi}g(\epsilon, \phi)]
+$$
+
+
+The above equation this allow us is to compute now the gradient of z to do backprogatation. This is illustrated in the picture above in the right side. There we can see that if i.e  $g(\epsilon, \phi)$ is a Gaussian distribution then we would be able to take its gradient. --> <!-- 
+Summing out, we have use this trick so the Montecarlo estimate of the expectation is differentiable w.r.t. $\phi$. This then allow us to compute $L_{recon}$ which is one of the terms that we need to compute the total loss as defined as follows: --></p>
+<!-- 
+
+ need to make the stochastic element in  $q_{\phi}(\textbf{z}_n | \textbf{x}_n)$ be independent of $\phi$. Hence, we write $z$ as:
+
+$$
+z = \mu + \sigma \, \odot \, \epsilon \quad \text{with}\quad \epsilon \sim  N(0, I)
+$$
+
+
+
+
+<center>![](2023-12-09-20-06-58.png){.w550}</center><pre></pre>
+Img Source at: regorygundersen.com 
+ -->
 
 
 </section>
