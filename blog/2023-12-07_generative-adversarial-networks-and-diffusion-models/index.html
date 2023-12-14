@@ -77,6 +77,8 @@ window.MathJax = {
 </script>
 <link rel="shortcut icon" href="../../../../../../../../../../../assets/danilo.ico">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../css/index-posts.css">
 </head>
@@ -406,7 +408,7 @@ What are implicit density models?
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse show">
 <div class="callout-body-container callout-body">
-<p>These mode ls are “implicit” because they do not explicitly define the probability distribution, but rather define it indirectly. Instead of specifying a probability density function, implicit density models rely on generating samples from a distribution and use these samples to implicitly model the underlying probability distribution.</p>
+<p>These models are “implicit” because they do not explicitly define the probability distribution, but rather define it indirectly. Instead of specifying a probability density function, implicit density models rely on generating samples from a distribution and use these samples to implicitly model the underlying probability distribution.</p>
 <p>One popular approach to implicit density modeling is through the use of generative models</p>
 </div>
 </div>
@@ -464,7 +466,7 @@ What are implicit density models?
 <ul>
 <li>Purple: if x was taken from the true distribution then P_theta is high
 <ul>
-<li>Explicit and VAE kinda do both, it includes both things. Explicitly density is more difficult because we can do both escentially. In terms of variational and having a _ network there is exist works that combine t</li>
+<li>Explicit and VAE kinda do both, it includes both things. Explicitly density is more difficult because we can do both escentially.</li>
 </ul></li>
 <li>Green: samples taken from p_theta they should behave similar to the real sample
 <ul>
@@ -483,6 +485,7 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>If the generation is not possible, then lets train some gradients to train the generator.</p>
 </section>
 <section id="generations-of-high-quality-various-potential-applications" class="level2" data-number="7">
 <h2 data-number="7" class="anchored" data-anchor-id="generations-of-high-quality-various-potential-applications"><span class="header-section-number">7</span> Generations of high quality, various potential applications</h2>
@@ -507,9 +510,20 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>LEFT:</p>
+<ol type="1">
+<li>Sample on image from the dataset</li>
+<li>Put it through the differentiable function <span class="math inline">\(D\)</span>, <code>Discriminator</code>. Now the descriminator for real iamges will try to retunr a value near 1, if is from the real image.</li>
+</ol>
+<p>RIGHT: Generated image</p>
+<ol type="1">
+<li>Sample noise</li>
+<li>Put it into the generator <span class="math inline">\(G\)</span> network and we will end up with some image.</li>
+</ol>
+<p>Then we do it all over again. Sample x from data, but now the Discriminator tries to detect if its wrong, a fake image. The Generator then tries to fool it</p>
 </section>
-<section id="what-is-agan" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="what-is-agan"><span class="header-section-number">9</span> What is aGAN?</h2>
+<section id="what-is-a-gan" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="what-is-a-gan"><span class="header-section-number">9</span> What is a GAN?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -531,6 +545,8 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>At the start the discriminator will discriminate well. The analogy is of detecting money. At the begining, we want to detect whether the money is true. Both do not have clue. At the beginning the police is the baby and the money looks rather fake. You start trianing these and they become better.</p>
+<p>When they reach Nash equilibrium it means they cannot improve their solution in its own. It may not be a globally optimal solution but that is how the Nash equilibrium is defined.</p>
 </section>
 <section id="title-1" class="level2" data-number="11">
 <h2 data-number="11" class="anchored" data-anchor-id="title-1"><span class="header-section-number">11</span> Title</h2>
@@ -567,9 +583,11 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>GAN has no encoder but instead it has a discriminator. The features that the discriminator learn are not necessarily as noise as for example the higuer level features may be car types or not. Because for detecting real vs fake all what we need is for example if the image is blurry. GANs do not end up with blurry features if trained correctly vs VAE tend to end up with blurry features</p>
+<p>We cannot test the likelihood but we can only sample new data points</p>
 </section>
-<section id="generator-network-x-gz-0c" class="level2" data-number="14">
-<h2 data-number="14" class="anchored" data-anchor-id="generator-network-x-gz-0c"><span class="header-section-number">14</span> 1) Generator network x = G(z; 0c)</h2>
+<section id="generator-network-x-gz-theta_g" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="generator-network-x-gz-theta_g"><span class="header-section-number">14</span> 1) Generator network x = G(z; <span class="math inline">\(\theta\)</span>_G)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -579,9 +597,11 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>We start with a lower dimensionality z, and generate x, except we are not giveing z any constraints. We are simply sampling it from some distribution. Since i.e you are sampling from a Gaussian distribution 0, 1, whithou any correlations between the dimensions of z, it means you can sample new samples easility because you just generate a new noise sample and is very likely that if you sample a new one, this has not been seen yet. So then this new image that is not seen it goes trhough the network and you get a completely new sample.</p>
+<p>In the image on the right you see de-convolutions happening to create a new image. With transpose convolutions you also have the bias that neighboring pixels are similar and that operations are shared across the spatial dimensions</p>
 </section>
-<section id="discriminator-network-y-dx-8p" class="level2" data-number="15">
-<h2 data-number="15" class="anchored" data-anchor-id="discriminator-network-y-dx-8p"><span class="header-section-number">15</span> 2) Discriminator network y = D(x; 8p)</h2>
+<section id="discriminator-network-y-dx-theta_d9" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="discriminator-network-y-dx-theta_d9"><span class="header-section-number">15</span> 2) Discriminator network y = D(x; <span class="math inline">\(\theta\)</span>_D9)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -591,6 +611,7 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>The loss that we will learn is the binary cross entropy loss, because we are simply trying to detect between one and another class so the loss is a binary Cross entropy loss. We want to ouput 1 if real, 0 if fake,</p>
 </section>
 <section id="generator-discriminator-implementation" class="level2" data-number="16">
 <h2 data-number="16" class="anchored" data-anchor-id="generator-discriminator-implementation"><span class="header-section-number">16</span> Generator &amp; Discriminator: Implementation</h2>
@@ -604,8 +625,8 @@ What are implicit density models?
 </center>
 <pre></pre>
 </section>
-<section id="ouiz-the-starting-point-of-the-gan-is-the-random-noise-z." class="level2" data-number="17">
-<h2 data-number="17" class="anchored" data-anchor-id="ouiz-the-starting-point-of-the-gan-is-the-random-noise-z."><span class="header-section-number">17</span> - Ouiz: The starting point of the GAN is the random noise z.</h2>
+<section id="quiz-the-starting-point-of-the-gan-is-the-random-noise-z." class="level2" data-number="17">
+<h2 data-number="17" class="anchored" data-anchor-id="quiz-the-starting-point-of-the-gan-is-the-random-noise-z."><span class="header-section-number">17</span> Quiz: The starting point of the GAN is the random noise z.</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -615,6 +636,13 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<ol type="1">
+<li>Is always true because anything can be called regularizer. It simply means help training</li>
+<li>Not true because you are really using augmentations. You dont want a network that i.e to ouput heavily color jiter ouputs or you dont want vertically flipped images. Noisy isn’t really meant for that</li>
+<li>It is not true because it is trained in a manner that it should do because as long as you sampling z from the Gaussian distribution so you could end up with a point that is very far away but is unlikely</li>
+<li>If your dataset is small enough, for i.e it is only 5k points then, one millions points is close to be random at that point. And should work because even if you grid is a fixed thins and your model needs to map this to a dog and this to a cat. It will do it by itself</li>
+</ol>
+<p>Z needs to vary. If z is much smaller than the dataset size you will have trouble becuase then you can only generate say 3 different kind of classes but the dataset is 4 classes. Then the discriminator will have an easy time at telling what is real and what is fake</p>
 </section>
 <section id="how-do-we-train-the-generator" class="level2" data-number="18">
 <h2 data-number="18" class="anchored" data-anchor-id="how-do-we-train-the-generator"><span class="header-section-number">18</span> How do we train the generator?</h2>
@@ -627,6 +655,14 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>We generate somthing that looks like a deer and we can compare it to an image of a deer. We cannot do this. They are completely independent</p>
+<p>The question is how can we get meaningfull gradients if we are not comaparing the same things?</p>
+<p>We have:</p>
+<ol type="1">
+<li>Minimax Loss</li>
+<li>Heuristic non-saturating loss</li>
+<li>Modifying GANs for max-likelihood</li>
+</ol>
 </section>
 <section id="minimax-loss" class="level2" data-number="19">
 <h2 data-number="19" class="anchored" data-anchor-id="minimax-loss"><span class="header-section-number">19</span> 1) Minimax Loss</h2>
@@ -639,6 +675,8 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>So basically the loss of the generator is the negative version of the discriminator. his make it symmetric, the higher one the lower the other</p>
+<p>It is called minimax because the discriminator tries to maximize its loss so <span class="math inline">\(J_D\)</span> and then the generator tries to minimize that loss. What you end up with this min max loss is topically a saddle point. See next slide</p>
 </section>
 <section id="minimax-loss-1" class="level2" data-number="20">
 <h2 data-number="20" class="anchored" data-anchor-id="minimax-loss-1"><span class="header-section-number">20</span> 1) Minimax Loss</h2>
@@ -651,6 +689,8 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>We get a saddle point as the learning stops at some point. At that point we have have gradients being zero in both directions</p>
+<p>The generator first will not recieve any gradient anymore and at that point the discriminator will also not get any gradients any more. This behaviour is not great because it allows for easy analysis but it will cause training to get stuck because the job of the discriminator is very easy at that point.</p>
 </section>
 <section id="heuristic-non-saturating-loss" class="level2" data-number="21">
 <h2 data-number="21" class="anchored" data-anchor-id="heuristic-non-saturating-loss"><span class="header-section-number">21</span> 2) Heuristic non-saturating loss</h2>
@@ -663,6 +703,13 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>This is the adapeted version of minmax which is a non saturated loss.</p>
+<p>Changes pretty easily in that, changes to the discriminator loss as it is. And instead you use the generator loss.</p>
+<p>Now, you cannot describe the equilibrium by a single loss anymore as we did earlier with the minus loss. That means you dont end up at a saddle point. The discriminator job is now to maximize the log-likelihood of discovering the real samples and the fake samples. And the generator maximizes the log likelihood of the discriminator being wrong</p>
+<p>What changes now is that the generator learns still when the discriminator is too good on real images. This is because previously the generator loss is also this mixture of how good the discriminator is on real images and how good it is in fake iamges and now the generator loss only depend on the generator ouputs</p>
+<p>What you generate with GANs can look like augmentations but depending on the augmentation, z can model that.</p>
+<p>A generator is not a different augmentation, a generator has a whole different purpose that you actually can model and generate whole new images. It is not like these faces are just slightly blurrier or slightly brighter of existing faces. It is literally new samples that do not exist in the real word. This is different from augmentations</p>
+<p>In the above formulas we can sample three batches from the generator and one batch from the real distribution and still calculate the loss. You can leave out the 1/2, you can simply multiply by the learning rate by 1/2 and then you end with the same result. These batches are computed in average so you could compute this loss with ten times as many from the real one and only one from the real distribution</p>
 </section>
 <section id="modifying-gans-for-max-likelihood" class="level2" data-number="22">
 <h2 data-number="22" class="anchored" data-anchor-id="modifying-gans-for-max-likelihood"><span class="header-section-number">22</span> 3) Modifying GANs for max-likelihood</h2>
@@ -675,6 +722,11 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>By computing this loss we have the advantage that when the discriminator is optimal, the gradient for the generator gradient matches that of maximum likelihood.</p>
+<!-- A value of 0 on the x-axis means that the discriminator is unable to distinguish between real and fake samples, while a value of 1 means that the discriminator is able to perfectly distinguish between real and fake samples.
+
+In other words, the x-axis represents the difficulty of the task for the generator. When the discriminator is too good (i.e., D(G(z)) is close to 1), the generator has a harder time fooling the discriminator. This is why the generator's loss is higher when the discriminator is too good. -->
+<!-- The plot shows that the non-saturating heuristic loss is more effective at training GANs when the discriminator is too good. This is because the non-saturating heuristic loss has a non-flat loss curve when D(G(z)) is close to 1. This means that the generator has gradients to follow and can continue to improve its performance. -->
 </section>
 <section id="comparison-of-generator-losses" class="level2" data-number="23">
 <h2 data-number="23" class="anchored" data-anchor-id="comparison-of-generator-losses"><span class="header-section-number">23</span> Comparison of Generator Losses</h2>
@@ -687,6 +739,9 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>0 means we can detect the fake images and thus we set them with a lower value. When is 1 it means that the discriminator believes that the generated image is a true image.</p>
+<p>1: Not a good discriminator because he thinks the fake image is true</p>
+<p>0: Good discriminator, can distinguish between fake an real images</p>
 </section>
 <section id="optimal-discriminator" class="level2" data-number="24">
 <h2 data-number="24" class="anchored" data-anchor-id="optimal-discriminator"><span class="header-section-number">24</span> Optimal discriminator</h2>
@@ -699,6 +754,7 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>The real distribution given the data is given in black. The model distribution is in green, that is the thing that the generator would be adapting. The discrimnator after a while stops learning. That is the picture from the right. The discriminator tries to see where the overlap is. At the last point the discriminator measure this ratio of overlaps</p>
 </section>
 <section id="why-is-this-the-optimal-discriminator" class="level2" data-number="25">
 <h2 data-number="25" class="anchored" data-anchor-id="why-is-this-the-optimal-discriminator"><span class="header-section-number">25</span> Why is this the optimal discriminator?</h2>
@@ -711,6 +767,9 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>X: is data</p>
+<p>z: is the generated data</p>
+<p>We sum the losses, in the second row we rewrite z into another x</p>
 </section>
 <section id="gans-and-jensen-shannon-divergence" class="level2" data-number="26">
 <h2 data-number="26" class="anchored" data-anchor-id="gans-and-jensen-shannon-divergence"><span class="header-section-number">26</span> GANs and Jensen-Shannon divergence</h2>
@@ -723,6 +782,8 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>The Jenses-Shannon divergence (in grey) is a metric to compare two distributions, it compares them by taking the weighted average of the KL.</p>
+<p>Now solving for the optimal discriminator and you get the two term. There you can see these two integrals. Rewriting we have that the loss is two times the Jensen-Shannon between the two probabilities distributions. For the optimal loss -2log2. Then that means the Jensen divergence is minimized, meaning it becomes zero. What we are optimizing is actually the Jensen divergence between these two probabilities distributions.</p>
 </section>
 <section id="is-the-divergence-important" class="level2" data-number="27">
 <h2 data-number="27" class="anchored" data-anchor-id="is-the-divergence-important"><span class="header-section-number">27</span> Is the divergence important?</h2>
@@ -735,6 +796,7 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>The question is why is the divergence important, it could be any kind of divergence like the KL and another ones.</p>
 </section>
 <section id="kl-vs-js" class="level2" data-number="28">
 <h2 data-number="28" class="anchored" data-anchor-id="kl-vs-js"><span class="header-section-number">28</span> KL vs JS</h2>
@@ -747,6 +809,7 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>Here we see that the JS is symmetric</p>
 </section>
 <section id="is-the-divergence-important-1" class="level2" data-number="29">
 <h2 data-number="29" class="anchored" data-anchor-id="is-the-divergence-important-1"><span class="header-section-number">29</span> Is the divergence important?</h2>
@@ -759,6 +822,8 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>It matters which divergence metric we take depending on what we do. You will either capture something that is in between two modes of the data which means the samples you will get will not be realistic or only rarely. Or the other option is that you capture one mode i.e with the reversed KL, except that in our case is the other way around which means the KL wil give you the mode capturing so depending on how you write you will have this risk of adversion behaviour this mode capturing behaviour.</p>
+<p>For the backward KL is also called ‘zero forcing’ which make it more conservative, it will try to avoid putting probability mass where there is none. So it will avoid this zero areas whereas on the other way around is completely fine</p>
 </section>
 <section id="general-observations" class="level2" data-number="30">
 <h2 data-number="30" class="anchored" data-anchor-id="general-observations"><span class="header-section-number">30</span> General observations</h2>
@@ -796,8 +861,8 @@ What are implicit density models?
 </center>
 <pre></pre>
 </section>
-<section id="title-2" class="level2" data-number="33">
-<h2 data-number="33" class="anchored" data-anchor-id="title-2"><span class="header-section-number">33</span> Title</h2>
+<section id="challenges-of-training-gans" class="level2" data-number="33">
+<h2 data-number="33" class="anchored" data-anchor-id="challenges-of-training-gans"><span class="header-section-number">33</span> Challenges of Training GANs</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -807,6 +872,7 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>There is three versions Loss of GANS and the original one (minimax) does not work in practice</p>
 </section>
 <section id="challenge-1-vanishing-gradients" class="level2" data-number="34">
 <h2 data-number="34" class="anchored" data-anchor-id="challenge-1-vanishing-gradients"><span class="header-section-number">34</span> Challenge 1: Vanishing Gradients</h2>
@@ -819,6 +885,8 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>Here in the right you see a trained GAN model. You keep the generator fix and you only train the discriminator for a few iterations. Then what you can observe is that in the y-axis is the loss that you would get to the generator so you keep the generator fix but you simply look at the loss that the generator would get for this given discriminator. What you can see is that the loss is given in absolute value and you can see that the blue line goes from 10^0 to 10^-3. So it crosses three levels of magnitude the red one even crosses 5 values of magnitud which means the discriminator can learn to distinguish this real-true extremely quickly and at that point your gradients are 10^-6 so then is like zero. At that point you do not get gradients anymore if the discriminator is really good, so the gradients will go to zero.</p>
+<p>If the discriminator is bad then the generator will not get any good gradients as well which means it will not get good training. Specially earlier in the training where everything is bad. The discriminator will have an easier time because it can still recognize these weird patches and rare edges, so some solutions is that you give to the generator more iterations. Another solution is that you add an encoder that encodes a real image and then you discriminate on this encoding of the image</p>
 </section>
 <section id="challenge-2-low-dimensional-supports" class="level2" data-number="35">
 <h2 data-number="35" class="anchored" data-anchor-id="challenge-2-low-dimensional-supports"><span class="header-section-number">35</span> Challenge 2: Low dimensional supports</h2>
@@ -831,6 +899,9 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>Another challenge is the with low-dimensional manifolds. They idally capture a theme or an object and once you have them all the pixels can be generated from it very easily. That is why this low dimensional embedding space. However if this manifolds (which are surfaces or lines) they do not match at all so it is very easy for the discriminator to simple put a line trough this and understand they are different.</p>
+<p>In training the manifold is not completely perfect so it is extremelly easy for these models to discriminate this because the Jensen divergence gives you extremelly low value if they do not have an overlap. So here you have a chicken-egg problem that the loss will start being meningful once your generationed data is good.</p>
+<p>For this we have the solution wGAN which basically uses other metric to compare the real vs false. So even if you have 2D surfaces, such as here, you can see that the overlap will be fairly low that means the discriminator has a easy time</p>
 </section>
 <section id="challenge-3-batch-normalization" class="level2" data-number="36">
 <h2 data-number="36" class="anchored" data-anchor-id="challenge-3-batch-normalization"><span class="header-section-number">36</span> Challenge 3: Batch Normalization</h2>
@@ -843,6 +914,7 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>Batch norm is a problem here because you are mixing for example batches of real images and batches from not real images. Then you compute the bach statistics from this combination. That leads to a smooth but awkward faces. So instead of this you can do the following. See next slide</p>
 </section>
 <section id="reference-batch-normalization" class="level2" data-number="37">
 <h2 data-number="37" class="anchored" data-anchor-id="reference-batch-normalization"><span class="header-section-number">37</span> Reference batch normalization</h2>
@@ -855,6 +927,7 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>Here we can keeo a refence batch. Say you train with two minibatches, you have a reference batch where you compute the mean and standard deviation. Then you use the other second minibatch for training. However this lack of variation wrt to the reference batch will give you troubles because one of the main benefits from batch norm was that it sort of gives you this variability and regularization effect. A solution for that is</p>
 </section>
 <section id="virtual-batch-normalization" class="level2" data-number="38">
 <h2 data-number="38" class="anchored" data-anchor-id="virtual-batch-normalization"><span class="header-section-number">38</span> Virtual batch normalization</h2>
@@ -879,6 +952,9 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>The other challenge is convergence. In the context of Generative Adversarial Networks (GANs), convergence to a saddle point is the desired outcome of the training process. This is because saddle points represent a stable equilibrium point in the game between the generator and the discriminator, where neither agent can unilaterally improve its performance. In other words, both the generator and the discriminator are “optimal” in their respective roles, but they cannot push each other further towards their respective optima without sacrificing their own performance.</p>
+<p><strong>The Challenges of Saddle Points</strong></p>
+<p>While saddle points are the desired outcome of GAN training, they can be challenging to achieve due to the complex and non-convex nature of the optimization landscape. This means that there are many different paths that the training process can take, and it is possible to get stuck in local optima that are not truly optimal.</p>
 </section>
 <section id="challenge-mode-collapse" class="level2" data-number="40">
 <h2 data-number="40" class="anchored" data-anchor-id="challenge-mode-collapse"><span class="header-section-number">40</span> Challenge: mode collapse</h2>
@@ -891,6 +967,9 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p><strong>Mode-collapse</strong> is a phenomenon that occurs when the generator becomes unable to generate a diverse range of samples. Instead, the generator becomes fixated on producing a small subset of samples, effectively “collapsing” into a single mode. This can result in blurry, repetitive, or unrealistic generated images.</p>
+<p>For example if you have this simple target distribution of these 8 Gaussians and you want to train a generative model, it sometimes will fit towards one of these modes and it will have a difficult time fitting to one of these modes of input data. Similarly for image based models you can see that all these images of flowers they literally look the same, so there is no variation capture at all. It is simply capturing one of the modes. This happens because if the discriminator wants to see that it look similar to the real data. Then the Generator can simply learn only one target and not care about divergence at all.</p>
+<p>This is not desired and so a solution would be to add diversity as a regularization loss</p>
 </section>
 <section id="potential-solution-regularize-for-diversity" class="level2" data-number="41">
 <h2 data-number="41" class="anchored" data-anchor-id="potential-solution-regularize-for-diversity"><span class="header-section-number">41</span> Potential solution regularize for diversity</h2>
@@ -903,6 +982,7 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>The solution for falling into mode-collapse is that you compare each sample by the other examples in the mini-batch. Yuo check whether you can discriminate between these two. You look what is the entropy whithin these samples. And you can add this as a loss. If you simply inforce a huge amount of entropy whithin the mini-batch then this will give more more varied exmaples but this will not look realistic pictures anymore</p>
 </section>
 <section id="mode-collapse-vs-over-generalisation" class="level2" data-number="42">
 <h2 data-number="42" class="anchored" data-anchor-id="mode-collapse-vs-over-generalisation"><span class="header-section-number">42</span> Mode-collapse vs over-generalisation</h2>
@@ -915,6 +995,8 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>Here in over-generalization is not like you train with cat and dogs and then you can generate pictures of planes. Here in generalization images go over the training set which generally means they are looking realistic</p>
+<p>In the case of unconditional generation, we generate dogs and catgs. In the case con conditinal generation we generate dogs from different type of dogs</p>
 </section>
 <section id="challenge-how-to-evaluate" class="level2" data-number="43">
 <h2 data-number="43" class="anchored" data-anchor-id="challenge-how-to-evaluate"><span class="header-section-number">43</span> Challenge: how to evaluate?</h2>
@@ -927,6 +1009,15 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>FReshee inception distance, You push the real and the generated images of same size through a pre-trained inception network. You then use the dense features and compare these dense features by contruction a Gaussian distribution out of them. So you then comparing them by simply taking the difference between the dataset wise features. This tells me how good a set of generated images matches another images.</p>
+<ul>
+<li><p>Low FID: the distribution of the real images is similar to the fake ones.<br>
+For instance if you do mode dropping the FID will be low because the distance to all these dog images would be suddenly pretty high</p></li>
+<li><p>High FID: the distribution of the real images is <em>different</em> to the fake ones.<br>
+If these things do not look at all like the real class then the FDI would be high</p></li>
+</ul>
+<p>The Fréchet Inception Distance (FID) is a metric used to measure the similarity between the distribution of real and fake images generated by a GAN. It is calculated by comparing the activations of a pre-trained InceptionNet model on both the real and fake images.</p>
+<p>The FID is a powerful metric for evaluating the performance of GANs, as it can provide insights into both the realism and diversity of the generated images. A <strong>lower</strong> FID indicates that the distribution of the fake images is more similar to the distribution of the real images, suggesting that the GAN is generating more realistic and diverse images.</p>
 </section>
 <section id="challenge-beyond-images" class="level2" data-number="44">
 <h2 data-number="44" class="anchored" data-anchor-id="challenge-beyond-images"><span class="header-section-number">44</span> Challenge: beyond images</h2>
@@ -939,6 +1030,9 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<ul>
+<li>Text are discrete chunks, so you cannot model as continous variables where you can simply push the gradietns trough, which is what we are doing for RGB images. For these iamges we are pretending that they are continuous.</li>
+</ul>
 </section>
 <section id="some-open-challenges-for-gans" class="level2" data-number="45">
 <h2 data-number="45" class="anchored" data-anchor-id="some-open-challenges-for-gans"><span class="header-section-number">45</span> Some open challenges for GANs</h2>
@@ -951,6 +1045,16 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p><strong>What sorts of distributions can GANs model?</strong></p>
+<p>GANs can model a wide variety of distributions, including both continuous and discrete distributions. For example, GANs have been used to generate images, text, music, and code.</p>
+<p><strong>What can we say about the global convergence of the training dynamics?</strong></p>
+<p>The global convergence of GAN training dynamics is a challenging problem that is not fully understood. However, there has been some progress in developing theoretical guarantees for the convergence of GANs. For example, it has been shown that GANs can converge to a Nash equilibrium under certain conditions.</p>
+<p><strong>How should we evaluate GANs and when should we use them?</strong></p>
+<p>There is no single best way to evaluate GANs. However, some common evaluation metrics include the Fréchet Inception Distance (FID) for image generation and the BLEU score for text generation. GANs should be used when the goal is to generate realistic and diverse samples from a given distribution.</p>
+<p><strong>GAN scaling: dataset size and model size</strong></p>
+<p>GANs can be scaled to large datasets and model sizes. However, scaling GANs can be challenging, as it can lead to training instability and mode collapse. There are a number of techniques that have been developed to help scale GANs, such as gradient clipping and spectral normalization.</p>
+<p><strong>GANs and adversarial examples?</strong></p>
+<p>GANs have been used to generate adversarial examples, which are inputs that are designed to fool machine learning models. Adversarial examples can be a security risk, as they can be used to attack machine learning models that are used in critical applications, such as facial recognition and self-driving cars.</p>
 </section>
 <section id="one-sided-label-smoothing" class="level2" data-number="46">
 <h2 data-number="46" class="anchored" data-anchor-id="one-sided-label-smoothing"><span class="header-section-number">46</span> One-sided label smoothing</h2>
@@ -988,8 +1092,8 @@ What are implicit density models?
 </center>
 <pre></pre>
 </section>
-<section id="title-3" class="level2" data-number="49">
-<h2 data-number="49" class="anchored" data-anchor-id="title-3"><span class="header-section-number">49</span> Title</h2>
+<section id="title-2" class="level2" data-number="49">
+<h2 data-number="49" class="anchored" data-anchor-id="title-2"><span class="header-section-number">49</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1143,6 +1247,20 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>In the autoencoder we want to minimize the reconstructed error. Here we simply add an adversarial loss in the latent space <span class="math inline">\(z\)</span>. That means we will now be containing the latent space in a manner that it will be easy to sample from.</p>
+<p><strong>Encoder:</strong> This part takes an input image x and encodes it into a latent representation z through a deterministic function q(z|x), which is typically a neural network. The deterministic aspect means that for the same input x, the encoder will always produce the same latent code z.</p>
+<center>
+<img src="2023-12-14-17-09-46.png" class="w300 img-fluid">
+</center>
+<pre></pre>
+<p>Here the q(z|x) is called the variational posterior. It can be Gaussian and then we will make it Gaussian</p>
+<p>Before we have that we wanted to approximate the real posterior p(z|x) with this q(z|x). So here we are saying that before we use the KL in VAE to give it structure but not the AAE uses an adversarial network for this.</p>
+<p>Remember that: p(z∣x) is the true posterior distribution of the latent variables given the input data, which is generally intractable to compute directly. Remember the picture below we were unable to commpute this posterior because it related to compute this integral</p>
+<center>
+<img src="2023-12-14-17-17-06.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>The AAE does not need to operate in the image domain it can just work in the latent domain. It also does not need to be image model but instead a bunch of MLPs</p>
 </section>
 <section id="cyclegan-img2img-models" class="level2" data-number="62">
 <h2 data-number="62" class="anchored" data-anchor-id="cyclegan-img2img-models"><span class="header-section-number">62</span> CycleGAN: “img2img” models</h2>
@@ -1155,6 +1273,7 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>It is called cycle because you go from one domain to another, if you look at for example image B. You go from domian x to y and then you go back to domain x. And then you know that you should end up in the same place. If you do then that means that the mapping worked perfectly</p>
 </section>
 <section id="stylegan-and-styleganv2" class="level2" data-number="63">
 <h2 data-number="63" class="anchored" data-anchor-id="stylegan-and-styleganv2"><span class="header-section-number">63</span> StyleGAN and StyleGANv2</h2>
@@ -1168,8 +1287,8 @@ What are implicit density models?
 </center>
 <pre></pre>
 </section>
-<section id="title-4" class="level2" data-number="64">
-<h2 data-number="64" class="anchored" data-anchor-id="title-4"><span class="header-section-number">64</span> Title</h2>
+<section id="title-3" class="level2" data-number="64">
+<h2 data-number="64" class="anchored" data-anchor-id="title-3"><span class="header-section-number">64</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1203,6 +1322,29 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>You start with a real image and then you start increasingly adding noise. So you are trying to learn something that is noisy to something that is less noisy.</p>
+<p>This is a completely new paradigm</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+This is how difussion models work
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li><p><strong>Forward Process (Adding Noise):</strong> Starting with an original image <span class="math inline">\(X_0\)</span>, noise is gradually added over a series of steps until the image becomes a noisy version <span class="math inline">\(X_T\)</span> that is typically assumed to follow a Gaussian distribution. This process is termed the forward diffusion process and is denoted by the rightward arrows in the image. Each step adds a controlled amount of noise, progressively making the image less recognizable and more like random noise.</p></li>
+<li><p><strong>Reverse Process (Removing Noise):</strong> The key idea behind diffusion models is to learn how to reverse this noising process. This is where the model learns to ‘denoise’ the image. Starting from a noisy image <span class="math inline">\(X_T\)</span>, the model attempts to recover the clean image <span class="math inline">\(X_0\)</span> through a series of reverse steps. This is the reverse diffusion process and is indicated by the leftward arrows in the image. Each step in the reverse process is denoted by <span class="math inline">\(p_\theta(X_{t-1}|X_t)\)</span>, which is the learned distribution to predict the cleaner image <span class="math inline">\(X_{t-1}\)</span> from the noisier image <span class="math inline">\(X_t\)</span>.</p></li>
+<li><p><strong>Variational Lower Bound:</strong> The training of diffusion models involves optimizing the variational lower bound, which is a way to ensure that the learned distribution over the reverse process closely matches the true distribution of the data. It’s a technique derived from variational inference used to approximate complex distributions.</p></li>
+<li><p><strong>Unknown Transition Distributions:</strong> In the diagram, it is noted that <span class="math inline">\(q(X_{t-1}|X_t)\)</span> is unknown. This represents the true reverse transition probabilities from a noisier to a less noisy image, which we do not have explicitly. The model has to learn an approximation <span class="math inline">\(p_\theta(X_{t-1}|X_t)\)</span> without knowing <span class="math inline">\(q(X_{t-1}|X_t)\)</span>.</p></li>
+<li><p><strong>Learning Process:</strong> During training, the model learns the parameters <span class="math inline">\(\theta\)</span> that define how to reverse the noise added during the forward process effectively. The learned distribution <span class="math inline">\(p_\theta(X_{t-1}|X_t)\)</span> is used to iteratively generate less noisy images until a clear image is formed.</p></li>
+<li><p><strong>Image Generation:</strong> Once trained, diffusion models can generate new images by sampling from the noise distribution <span class="math inline">\(X_T\)</span> and applying the reverse process. This allows the model to create images that were not in the training set but share the same statistical properties.</p></li>
+</ol>
+</div>
+</div>
+<p>Escentially what you are trying to learn is the green function which is how to reverse the noise added during the forward process</p>
 </section>
 <section id="diffusion-models-turn-generative-learning-into-a-sequence-of-supervised-problems" class="level2" data-number="67">
 <h2 data-number="67" class="anchored" data-anchor-id="diffusion-models-turn-generative-learning-into-a-sequence-of-supervised-problems"><span class="header-section-number">67</span> Diffusion models turn generative learning into a sequence of supervised problems</h2>
@@ -1215,6 +1357,7 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>These difussion models basically turn generative modelling into a sequence of supervised models because you have your image and you have noise. So you know how it looks before so you simply are trying to turn this whole dinoising procedure into a different steps. These steps are form <span class="math inline">\(t\)</span> to <span class="math inline">\(t-1\)</span>. You can use this as a supervised learning method</p>
 </section>
 <section id="the-architecture-a-modified-u-net-that-uses-diffusion-time-t" class="level2" data-number="68">
 <h2 data-number="68" class="anchored" data-anchor-id="the-architecture-a-modified-u-net-that-uses-diffusion-time-t"><span class="header-section-number">68</span> The architecture: a modified U-Net that uses diffusion time t</h2>
@@ -1227,6 +1370,7 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>The architecture here is a U-Net because a U-Net is an architecture that takes an image in and ouputs an image out. Like one of those segmentations. The only difference is that there is a time <span class="math inline">\(t\)</span> which is used for going from going noisy to less noisy. In adittion the NN also knows when this time frame is</p>
 </section>
 <section id="combining-this-with-text-as-cond.-inputs-dall-e-v2-unclip" class="level2" data-number="69">
 <h2 data-number="69" class="anchored" data-anchor-id="combining-this-with-text-as-cond.-inputs-dall-e-v2-unclip"><span class="header-section-number">69</span> Combining this with text as cond. inputs: DALL-E v2 / “unCLIP”</h2>
@@ -1239,6 +1383,7 @@ What are implicit density models?
 </div>
 </center>
 <pre></pre>
+<p>So you first train a CLIP which gives you an encoding and a text encoding and then image encoding. Afterwards you use this text encondings to convert</p>
 </section>
 <section id="final-note-about-deep-fakes-and-ethics" class="level2" data-number="70">
 <h2 data-number="70" class="anchored" data-anchor-id="final-note-about-deep-fakes-and-ethics"><span class="header-section-number">70</span> Final note about deep fakes and ethics</h2>
@@ -1265,7 +1410,7 @@ What are implicit density models?
 <pre></pre>
 </section>
 <section id="quiz-what-dimensions-need-to-be-considered-when-thinking-about" class="level2" data-number="72">
-<h2 data-number="72" class="anchored" data-anchor-id="quiz-what-dimensions-need-to-be-considered-when-thinking-about"><span class="header-section-number">72</span> ; Quiz: what dimensions need to be considered when thinking about ;</h2>
+<h2 data-number="72" class="anchored" data-anchor-id="quiz-what-dimensions-need-to-be-considered-when-thinking-about"><span class="header-section-number">72</span> Quiz: what dimensions need to be considered when thinking about ;</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1302,8 +1447,8 @@ generative model, which is trained to generate samples that are similar to a
 </center>
 <pre></pre>
 </section>
-<section id="title-5" class="level2" data-number="75">
-<h2 data-number="75" class="anchored" data-anchor-id="title-5"><span class="header-section-number">75</span> Title</h2>
+<section id="title-4" class="level2" data-number="75">
+<h2 data-number="75" class="anchored" data-anchor-id="title-4"><span class="header-section-number">75</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">

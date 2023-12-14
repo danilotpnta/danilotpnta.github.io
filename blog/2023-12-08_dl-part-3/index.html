@@ -457,12 +457,94 @@ $$
 z = \mu + \sigma \, \odot \, \epsilon \quad \text{with}\quad \epsilon \sim  N(0, I)
 $$
 
-
-
-
-<center>![](2023-12-09-20-06-58.png){.w550}</center><pre></pre>
-Img Source at: regorygundersen.com 
  -->
+<center>
+<img src="2023-12-09-20-06-58.png" class="w550 img-fluid">
+</center>
+<pre></pre>
+<p>Img Source at: regorygundersen.com</p>
+</section>
+<section id="q2.1" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="q2.1"><span class="header-section-number">7</span> Q2.1</h2>
+<p>The distribution <span class="math inline">\(q(z)\)</span> in the context of autoencoders is the approximation of the posterior distribution <span class="math inline">\(p(z|x)\)</span>, which is the distribution of the latent variables <span class="math inline">\(z\)</span> given an observation <span class="math inline">\(x\)</span>. The method for computing <span class="math inline">\(q(z)\)</span> depends on the assumptions made about the encoder:</p>
+<ol type="1">
+<li><strong>Deterministic function (Dirac delta distribution)</strong>:
+<ul>
+<li>When the encoder is deterministic, <span class="math inline">\(q(z|x)\)</span> is modeled as a Dirac delta distribution centered around a single point, which means it always outputs the same <span class="math inline">\(z\)</span> for the same <span class="math inline">\(x\)</span>.</li>
+<li>Mathematically, for a deterministic encoder, <span class="math inline">\(q(z|x) = \delta(z - f(x))\)</span>, where <span class="math inline">\(f(x)\)</span> is the deterministic function mapping <span class="math inline">\(x\)</span> to <span class="math inline">\(z\)</span>. There is no uncertainty in <span class="math inline">\(z\)</span> given <span class="math inline">\(x\)</span>; the output is a single point in the latent space.</li>
+<li>To compute <span class="math inline">\(q(z)\)</span>, you would essentially just collect the points <span class="math inline">\(z\)</span> for all <span class="math inline">\(x\)</span> in your dataset, which would give you an empirical distribution of the latent codes.</li>
+</ul></li>
+<li><strong>Gaussian posterior</strong>:
+<ul>
+<li>In this case, the encoder outputs parameters of a Gaussian distribution, typically the mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma\)</span> (or variance <span class="math inline">\(\sigma^2\)</span>) for each latent variable.</li>
+<li><span class="math inline">\(q(z|x)\)</span> is then a Gaussian distribution <span class="math inline">\(\mathcal{N}(z; \mu(x), \sigma^2(x))\)</span>, where <span class="math inline">\(\mu(x)\)</span> and <span class="math inline">\(\sigma^2(x)\)</span> are the outputs of the encoder.</li>
+<li>To compute <span class="math inline">\(q(z)\)</span>, you sample from the Gaussian distribution parameterized by the mean and variance predicted by the encoder for each input <span class="math inline">\(x\)</span>. During training, the reparameterization trick is often used to allow for gradient backpropagation through the random sampling process.</li>
+</ul></li>
+<li><strong>Universal approximator posterior</strong>:
+<ul>
+<li>Here, the encoder is capable of modeling arbitrarily complex distributions, not limited to Gaussian. This can be achieved using normalizing flows, autoregressive models, or other flexible density estimation techniques.</li>
+<li><span class="math inline">\(q(z|x)\)</span> in this case could be any parameterizable distribution that the encoder is designed to approximate.</li>
+<li>Computing <span class="math inline">\(q(z)\)</span> involves using the encoder to output the parameters that define the distribution for each <span class="math inline">\(x\)</span>, and then sampling from this distribution. Depending on the complexity, different techniques such as Monte Carlo sampling may be employed to approximate samples from <span class="math inline">\(q(z|x)\)</span>.</li>
+</ul></li>
+</ol>
+<p>In each case, the encoder learns to map inputs <span class="math inline">\(x\)</span> to the latent space in a way that captures the underlying distribution of the data. For deterministic encoders, this is straightforward, but for stochastic encoders (like the latter two cases), the process involves learning the parameters of the distributions that can generate the observed data when sampled.</p>
+</section>
+<section id="q2.2" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="q2.2"><span class="header-section-number">8</span> Q2.2</h2>
+<p>Adversarial autoencoders (AAEs) are a type of generative model that can help to reduce the mode collapse problem compared to the vanilla GAN. AAE has the following advantages over GANs:</p>
+<ul>
+<li><p><strong>Encourages the generator to learn the latent space of the data:</strong> The autoencoder in AAE learns the latent space of the data by compressing and then reconstructing the data. This helps to ensure that the generator learns a representation of the data that is consistent with the latent space.</p></li>
+<li><p><strong>Regularizes the generator:</strong> The autoencoder in AAE also acts as a regularizer for the generator. This helps to prevent the generator from overfitting to the data and to instead focus on learning a general representation of the data.</p></li>
+<li><p><strong>Constrains the generator to generate realistic data:</strong> The autoencoder in AAE helps to constrain the generator to generate realistic data. This is because the autoencoder needs to be able to reconstruct the data that the generator generates. As a result, the generator is encouraged to generate data that is similar to the data that was used to train the autoencoder.</p></li>
+</ul>
+<p>Overall, AAE is a more stable and robust method for training GANs than the vanilla GAN. This is because AAE helps to prevent mode collapse and to encourage the generator to learn a good representation of the data. As a result, AAE can be used to train more realistic and diverse generative models.</p>
+<p>Here is a table that summarizes the differences between AAE and GANs:</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Feature</th>
+<th>Adversarial Autoencoder (AAE)</th>
+<th>Vanilla GAN</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Use of autoencoder</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>Regularization</td>
+<td>Autoencoder acts as regularizer</td>
+<td>No autoencoder</td>
+</tr>
+<tr class="odd">
+<td>Consistency with latent space</td>
+<td>Encouraged by autoencoder</td>
+<td>Not explicitly encouraged</td>
+</tr>
+<tr class="even">
+<td>Likelihood of mode collapse</td>
+<td>Lower</td>
+<td>Higher</td>
+</tr>
+<tr class="odd">
+<td>Realism of generated samples</td>
+<td>Higher</td>
+<td>Lower</td>
+</tr>
+<tr class="even">
+<td>Diversity of generated samples</td>
+<td>Higher</td>
+<td>Lower</td>
+</tr>
+</tbody>
+</table>
 
 
 </section>
