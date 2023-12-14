@@ -190,7 +190,7 @@
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/index.html</loc>
-    <lastmod>2023-12-14T17:23:49.149Z</lastmod>
+    <lastmod>2023-12-14T18:28:59.620Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-11-07_numpy-reshape-rgb-image-to-1d-array/index.html</loc>
@@ -311,5 +311,9 @@
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html</loc>
     <lastmod>2023-12-09T12:05:15.577Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2023-12-14_self-supervised-learning-i/index.html</loc>
+    <lastmod>2023-12-14T18:28:56.993Z</lastmod>
   </url>
 </urlset>
