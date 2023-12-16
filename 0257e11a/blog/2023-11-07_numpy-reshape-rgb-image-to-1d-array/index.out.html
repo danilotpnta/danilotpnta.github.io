@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Danilo Toapanta">
 
-<title>Danilo Toapanta - About</title>
+<title>Danilo Toapanta - Numpy reshape RGB image to 1D array</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,28 +20,62 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../assets/danilo.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../assets/danilo.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -76,7 +109,6 @@ window.MathJax = {
 <link rel="shortcut icon" href="../../../../../../../../../../../assets/danilo.ico">
 
 
-<link rel="stylesheet" href="index.css">
 </head>
 
 <body class="floating nav-fixed">
@@ -86,7 +118,7 @@ window.MathJax = {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../../index.html">
     <span class="navbar-title"><span id="danilo_topanta_brand"> Danilo Toapanta</span> <a id="mysite" class="mysite" href="../../../../../sites/">MySites</a></span>
     </a>
   </div>
@@ -97,19 +129,19 @@ window.MathJax = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
+    <a class="nav-link" href="../../../index.html" rel="" target="">
  <span class="menu-text"><span id="home-welcome-msg">Home</span></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../blog/index.html" rel="" target="">
+    <a class="nav-link" href="../../../blog/index.html" rel="" target="">
  <span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../projects/index.html" rel="" target="">
+    <a class="nav-link" href="../../../projects/index.html" rel="" target="">
  <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../about/index.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="../../../about/index.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -136,41 +168,104 @@ window.MathJax = {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
-
-
-<div class="disable-link-underline page-columns page-full">
-<!-- This is how you cna share your searches 
-https://www.google.com/search?q=university+of+twente -->
-<div class="quarto-about-solana column-body">
-    <div class="about-entity">
-        <div class="entity-contents">
-            <div class="about-contents">
-                <main class="content" id="quarto-document-content">
-                    <p>
-                        <code>Hi, there! This is Danilo.</code>
-                    </p>
-                    <p>I’m an AI researcher based in the Netherlands.</p>
-                    <p>I studied Computer Science &amp; Electrical Engineering in my undergraduate programme and now I am doing my master in Artificial Intelligence.</p>
-                    <p>When I am not trying to figure out how my computer works, I like to <a href="../books/index.html" style="color:inherit; text-decoration:underline;text-decoration-color:#a3a6a8a1 ">read books</a>, run, go for a swim, and spend some quality time with my family.</p>
-                    <!-- <a href="../tailor/index.qmd" style="color:inherit; text-decoration:underline;text-decoration-color:#a3a6a8a1 ">tailor my clothes</a>, -->
-                    <p>
-                        You can look me up on <a href="https://github.com/danilotpnta?tab=repositories" target="_blank">Github</a>↗.<br> 
-                        Check out my <a href="https://www.linkedin.com/in/DaniloToapnta/" target="_blank">LinkedIn</a>↗.<br> 
-                        Read my lastest <a href="../blog/2023-12-14_self-supervised-learning-ii">post</a>.<br> 
-                        <!-- My (outdated) <a href="404.qmd">résumé</a>.<br>  -->
-                        Or send me an<a href="mailto:danilotpnta@gmail.com?subject=%5BWebsite%5D%20-%20%27Insert%20Subject%20Here%27" target="_blank">
-                            email</a>↗.<br>
-                        <!-- Or see <a href="../now/index.qmd">what I’m working right now</a>. -->
-                    </p>
-                </main>
-            </div>
-        </div>
-        <img src="../assets/danilo.jpeg" class="about-image rounded" style="width: 15em;">
-    </div>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Numpy reshape RGB image to 1D array</h1>
 </div>
 
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<p>| <a href="">Danilo Toapanta</a><br>
+2023-11-07</p>
+<p>Imagine you want to train a NN with:</p>
+<ul>
+<li>X: s x 3 x 32 x 32</li>
+</ul>
+<p>Where:</p>
+<ul>
+<li>s: num samples</li>
+<li>3 x 32 x 32: color img</li>
+</ul>
+<p>Now to feed in the NN we want the shapes to be:</p>
+<ul>
+<li>X: s x (3072)</li>
+</ul>
+<p>Do we lose information? The answers is not, we just reshape X.</p>
+<p>The following takes 2 imgs, with dimensions 2x2:</p>
+<div class="cell" data-execution_count="1">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create example 3x2x2 images (two images)</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>original_images <span class="op">=</span> np.array([[[[<span class="dv">1</span>, <span class="dv">2</span>],</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>                             [<span class="dv">3</span>, <span class="dv">4</span>]],</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>                            [[<span class="dv">5</span>, <span class="dv">6</span>],</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>                             [<span class="dv">7</span>, <span class="dv">8</span>]],</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>                            [[<span class="dv">9</span>, <span class="dv">10</span>],</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>                             [<span class="dv">11</span>, <span class="dv">12</span>]]],</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>                           [[[<span class="dv">13</span>, <span class="dv">14</span>],</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>                             [<span class="dv">15</span>, <span class="dv">16</span>]],</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                            [[<span class="dv">17</span>, <span class="dv">18</span>],</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>                             [<span class="dv">19</span>, <span class="dv">20</span>]],</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                            [[<span class="dv">21</span>, <span class="dv">22</span>],</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>                             [<span class="dv">23</span>, <span class="dv">24</span>]]]])</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the shape of the original images</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Original Images Shape:"</span>, original_images.shape)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the original images</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Original Images:</span><span class="ch">\n</span><span class="st">"</span>, original_images)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Reshape the images into num_imgs x (3*2*2) matrices</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>num_imgs <span class="op">=</span> original_images.shape[<span class="dv">0</span>]</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>reshaped_images <span class="op">=</span> original_images.reshape(num_imgs, <span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the shape of the reshaped images</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Reshaped Images Shape:"</span>, reshaped_images.shape)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Print the reshaped images</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Reshaped Images:</span><span class="ch">\n</span><span class="st">"</span>, reshaped_images)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Original Images Shape: (2, 3, 2, 2)
+Original Images:
+ [[[[ 1  2]
+   [ 3  4]]
+
+  [[ 5  6]
+   [ 7  8]]
+
+  [[ 9 10]
+   [11 12]]]
+
+
+ [[[13 14]
+   [15 16]]
+
+  [[17 18]
+   [19 20]]
+
+  [[21 22]
+   [23 24]]]]
+Reshaped Images Shape: (2, 12)
+Reshaped Images:
+ [[ 1  2  3  4  5  6  7  8  9 10 11 12]
+ [13 14 15 16 17 18 19 20 21 22 23 24]]</code></pre>
+</div>
 </div>
 
 
@@ -533,13 +628,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="../about/index.html"><span class="footerDaniloToapanta">Mantained by Danilo Toapanta</span></a>
+    <a class="nav-link" href="../../../about/index.html"><span class="footerDaniloToapanta">Mantained by Danilo Toapanta</span></a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../coming-soon.html">Newsletter</a>
+    <a class="nav-link" href="../../../coming-soon.html">Newsletter</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../docs/sitemap.xml">RSS</a>
+    <a class="nav-link" href="../../../docs/sitemap.xml">RSS</a>
   </li>  
 </ul>
     </div>

@@ -1577,7 +1577,7 @@ See the picture:
 <p>When you generate new data, you can now simply sample <span class="math inline">\(z\)</span> from this Gaussian distrivution with mean zero and std <span class="math inline">\(I\)</span>. And then for example if your Gaussian distribution is 2D then you can sample a point from the top left all the way to the bottom right and each time you sample <span class="math inline">\(z\)</span> through the decoder network you can vizualise it based on where it cames from for instance if it comes from the left corner or top corner or so on.</p>
 <ul>
 <li>We sample first from from p(z) to then obtain the values of <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span></li>
-<li>With those now we samoke from <span class="math inline">\(p(z|z)\)</span> that comes from this new Gaussian distribution with the parameters we found in the prev step.</li>
+<li>With those now we sample from <span class="math inline">\(p(x|z)\)</span> that comes from this new Gaussian distribution with the parameters we found in the prev step.</li>
 </ul>
 </section>
 <section id="dimensionality-of-latent-space-1" class="level2" data-number="73">
@@ -1591,7 +1591,8 @@ See the picture:
 </div>
 </center>
 <pre></pre>
-<p>Once we have more dimensions we get more noisy data</p>
+<p>Once we have more dimensions we get more noisy data. This is because it start to fit the noise which is not particualrly usefull</p>
+<p>If you go to higuer dimensionalities, then you will start to have optimizations issues.</p>
 </section>
 <section id="face-generation" class="level2" data-number="74">
 <h2 data-number="74" class="anchored" data-anchor-id="face-generation"><span class="header-section-number">74</span> Face generation</h2>
@@ -1604,7 +1605,7 @@ See the picture:
 </div>
 </center>
 <pre></pre>
-<p>It is blurry because now we have more dimensions</p>
+<p>It is not blurry is noisy because now we have more dimensions</p>
 </section>
 <section id="inference-suboptimality" class="level2" data-number="75">
 <h2 data-number="75" class="anchored" data-anchor-id="inference-suboptimality"><span class="header-section-number">75</span> Inference suboptimality</h2>
@@ -1618,7 +1619,7 @@ See the picture:
 </center>
 <pre></pre>
 <ul>
-<li><strong>Variational psoterior:</strong> <span class="math inline">\(q_{\phi}(\textbf{z}_n | \textbf{x}_n)\)</span> match to the true posterior <span class="math inline">\(p_{\theta}(\textbf{z}_n)\)</span></li>
+<li><strong>Variational poterior:</strong> <span class="math inline">\(q_{\phi}(\textbf{z}_n | \textbf{x}_n)\)</span> match to the true posterior <span class="math inline">\(p_{\theta}(\textbf{z}_n)\)</span></li>
 </ul>
 <p>In terms ob observations: - The divergence from the true posterioir is often imperfect mostly due to the amortized inference network rather that the limmiting capacity or complexity of the approximating distribution</p>
 </section>

@@ -1233,10 +1233,15 @@ Condition number
 </div>
 </center>
 <pre></pre>
+<p>A higher Beta means that the algorithm relies more heavily on the past gradients.</p>
+<p>A value too close to 1 might lead to not adapting quickly enough to changes, while a value too low might lead to too much fluctuation in the gradients</p>
 <p>It is easy to compute it recursively: Take your previous point * Beta + (1-Beta)*current_observation.</p>
 <p>You can compute this from left to right so that you dont keep track of the points.</p>
-<p>Here the momentum is of your previous gradient</p>
-<p>Here we notice that if you have 1. Large beta then it is more smoother so it tends to have more momentum so it is basically tends to be the values that you have seen 2. Smaller beta so less smooth, which means that it reacts more to the current observation</p>
+<p>Here the momentum is of your previous gradient Here we notice that if you have:</p>
+<ol type="1">
+<li>Large beta then it is more smoother so it tends to have more momentum so it is basically tends to be the values that you have seen</li>
+<li>Smaller beta so less smooth, which means that it reacts more to the current observation</li>
+</ol>
 <p>Because we set V_0 = 0 then it will always be baised towards V_0, but you can correct for thi using the formulas above</p>
 </section>
 <section id="momentum-1" class="level2" data-number="49">
