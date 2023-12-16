@@ -2062,7 +2062,7 @@
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#for-vaes-we-need-to-understand-latent-variable-models",
     "title": "Generative modelling and Deep Variational Inference",
     "section": "26 For VAEs we need to understand latent variable models",
-    "text": "26 For VAEs we need to understand latent variable models\n\n\n\n\nSlide 33\n\n\n\n\n\n\n\n\n\n\nNotes on this slide\n\n\n\n\n\nYou first sample z and that generates with a different distribution generates your observed data x\nGoal is to compute:\n\n\\(p(x)\\) likelihood\n\\(p(z|x)\\) posterior distribution\n\n\n\n\n\n\\(p_{\\theta}(z)\\): Prior, distribution for the latent variable\n\\(p_{\\theta}(x|z)\\): Likelihood, connects the latent variable wot the observation\n\\(p_{\\theta}(z|x)\\): Posterior\n\n\n\n\n\nSource at Lil’s Blog\n\n\n\n\n\n\n\n\nSource in my blog about: Latent models"
+    "text": "26 For VAEs we need to understand latent variable models\n\n\n\n\nSlide 33\n\n\n\n\n\n\n\n\n\n\nNotes on this slide\n\n\n\n\n\nYou first sample z and that generates with a different distribution generates your observed data x\nGoal is to compute:\n\n\\(p(x)\\) likelihood\n\\(p(z|x)\\) posterior distribution\n\n\n\n\n\n\\(p_{\\theta}(z)\\): Prior, distribution for the latent variable\n\\(p_{\\theta}(x|z)\\): Likelihood, connects the latent variable wot the observation\n\\(p_{\\theta}(z|x)\\): Posterior\n\n\n\n\n\nSource at Lil’s Blog\n\n\n\n\n\n\n\n\nSource in my blog about: Latent models\n\n\n\n\n\n\n\n\n\n\nSummary of VAE\n\n\n\nVariational Autoencoders (VAEs) are a type of generative model that learn to represent data in a lower-dimensional latent space and can generate new data that resemble the input data. Here’s an overview of the formulas involved, the known and unknown distributions, what corresponds to each part of the VAE architecture, and what needs to be computed, trained, or optimized.\n\n26.1 Known Distributions:\n\nPrior Distribution of Latent Variables (p(z)):\n\nTypically assumed to be a standard normal distribution: \\(p(z) = \\mathcal{N}(z; 0, I)\\).\nThis is a design choice and is known a priori.\n\nLikelihood of Data Given Latent Variables (p(x|z)):\n\nThis is modeled by the decoder network, usually parameterized as a normal distribution \\(\\mathcal{N}(x; \\mu_{\\theta}(z), \\sigma^2_{\\theta}(z)I)\\) where \\(\\mu_{\\theta}(z)\\) and \\(\\sigma^2_{\\theta}(z)\\) are the outputs of the decoder.\nThe parameters \\(\\theta\\) of the decoder network that determine this distribution are unknown and need to be learned.\n\n\n\n\n26.2 Unknown Distributions:\n\nPosterior Distribution of Latent Variables Given Data (p(z|x)):\n\nThis is the true but intractable distribution we want to approximate.\nIt cannot be computed directly in most cases.\n\n\n\n\n26.3 Approximate Distribution:\n\nVariational Approximation to the Posterior (q(z|x)):\n\nThis is approximated by the encoder network, usually parameterized as a normal distribution \\(q(z|x) = \\mathcal{N}(z; \\mu_{\\phi}(x), \\sigma^2_{\\phi}(x)I)\\) where \\(\\mu_{\\phi}(x)\\) and \\(\\sigma^2_{\\phi}(x)\\) are the outputs of the encoder.\nThe parameters \\(\\phi\\) of the encoder network that determine this distribution are unknown and need to be learned.\n\n\n\n\n26.4 Objective Function:\n\nEvidence Lower Bound (ELBO):\n\nThe ELBO is the objective function that VAEs maximize. It is a lower bound on the logarithm of the marginal likelihood of the data \\(p(x)\\).\nThe ELBO is given by: \\(\\text{ELBO} = \\mathbb{E}_{q(z|x)}[\\log p(x|z)] - \\text{KL}[q(z|x) || p(z)]\\)\nThe first term is the expected log likelihood of the data given the latent variables, which encourages the decoder to reconstruct the data well.\nThe second term is the Kullback-Leibler divergence between the approximate posterior and the prior, which encourages the approximate posterior to be similar to the prior.\n\n\n\n\n26.5 Example:\n\nLet’s say we have a dataset of images and we want to model the distribution of these images using a VAE.\nEncoder (Approximate Posterior q(z|x)): An image \\(x\\) is input into the encoder, which outputs parameters \\(\\mu_{\\phi}(x)\\) and \\(\\sigma^2_{\\phi}(x)\\) of a normal distribution representing the distribution of the latent variables for this image.\nDecoder (Likelihood p(x|z)): A latent variable \\(z\\) is sampled from the approximate posterior and input into the decoder, which outputs parameters of a distribution over images. For simplicity, assume this is also a normal distribution with mean \\(\\mu_{\\theta}(z)\\) and fixed variance.\n\n\n\n26.6 What We Compute and Optimize:\n\nCompute: We can compute the ELBO for given parameters \\(\\phi\\) and \\(\\theta\\).\nOptimize: We use stochastic gradient descent or a variant to optimize the parameters \\(\\phi\\) and \\(\\theta\\) to maximize the ELBO.\nTrain: We train the encoder and decoder networks by using backpropagation based on gradients computed from the ELBO.\n\n\n\n26.7 What We Cannot Compute Directly:\n\nPosterior p(z|x): We cannot compute this directly; it’s typically intractable due to the integral over all possible values of \\(z\\).\nMarginal Likelihood p(x): We also cannot compute this directly; it involves an integral over all latent variables which is typically intractable.\n\nVAEs aim to learn the parameters of the encoder and decoder networks such that the latent space effectively captures the variations in the data, and new data can be generated that resemble the input data. We optimize the ELBO because the true posterior \\(p(z|x)\\) and the marginal likelihood \\(p(x)\\) are intractable to compute directly"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#latent-variable-models",
@@ -2405,7 +2405,7 @@
     "href": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#inference-suboptimality",
     "title": "Generative modelling and Deep Variational Inference",
     "section": "75 Inference suboptimality",
-    "text": "75 Inference suboptimality\n\n\n\n\nSlide 83\n\n\n\n\n\nVariational poterior: \\(q_{\\phi}(\\textbf{z}_n | \\textbf{x}_n)\\) match to the true posterior \\(p_{\\theta}(\\textbf{z}_n)\\)\n\nIn terms ob observations: - The divergence from the true posterioir is often imperfect mostly due to the amortized inference network rather that the limmiting capacity or complexity of the approximating distribution"
+    "text": "75 Inference suboptimality\n\n\n\n\nSlide 83\n\n\n\n\n\nVariational posterior: \\(q_{\\phi}(\\textbf{z}_n | \\textbf{x}_n)\\) match to the true posterior \\(p_{\\theta}(\\textbf{z}_n)\\)\n\nIn terms ob observations: - The divergence from the true posterioir is often imperfect mostly due to the amortized inference network rather that the limmiting capacity or complexity of the approximating distribution"
   },
   {
     "objectID": "blog/2023-12-07_generative-modelling-and-deep-variational-inference/index.html#inference-gaps",
@@ -7501,7 +7501,7 @@
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#manual-annotations-for-the-data-are-limiting.",
     "title": "Self-supervised Learning I",
     "section": "7 Manual annotations for the data are limiting.",
-    "text": "7 Manual annotations for the data are limiting.\n\n\n\n\nSlide 7"
+    "text": "7 Manual annotations for the data are limiting.\n\n\n\n\nSlide 7\n\n\n\n\n\nWeak supervised learnings are for i.e hastags in instagram, this can be noisy because a person can show a pic of a dog with #cute which is not very representative as a label\nWeak supervised learning is a type of machine learning that falls between supervised and unsupervised learning. In weakly supervised learning, the training data is labeled, but the labels are noisy, incomplete, or imprecise. This approach is often used when it’s challenging or expensive to obtain a fully labeled dataset"
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#solving-the-problem-of-expensive-annotations-self-supervision.",
@@ -7515,14 +7515,14 @@
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#general-procedure-of-self-supervised-learning.",
     "title": "Self-supervised Learning I",
     "section": "9 General procedure of self-supervised learning.",
-    "text": "9 General procedure of self-supervised learning.\n\n\n\n\nSlide 9"
+    "text": "9 General procedure of self-supervised learning.\n\n\n\n\nSlide 9\n\n\n\n\nHere your transformation could be augmentations for instance.\nThe proxy task provides you with some gradients. That trains the DNN. Proxy tasks could be geometry based, clustering and so on"
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#general-procedure-of-self-supervised-learning.-1",
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#general-procedure-of-self-supervised-learning.-1",
     "title": "Self-supervised Learning I",
     "section": "10 General procedure of self-supervised learning.",
-    "text": "10 General procedure of self-supervised learning.\n\n\n\n\nSlide 10"
+    "text": "10 General procedure of self-supervised learning.\n\n\n\n\nSlide 10\n\n\n\n\nIn Representation Learning you get image in and then vector out\nSueful Slef-supervised learning: You pose some task which was previously done in a supervised manner as a self-supervised task. This could be object detection & segmentation"
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#title-1",
@@ -7557,21 +7557,21 @@
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#reason-2-accessibility-generalisability",
     "title": "Self-supervised Learning I",
     "section": "15 Reason 2: Accessibility & generalisability",
-    "text": "15 Reason 2: Accessibility & generalisability\n\n\n\n\nSlide 15"
+    "text": "15 Reason 2: Accessibility & generalisability\n\n\n\n\nSlide 15\n\n\n\n\nWhy do we want to do self-supervised learning?\nOnce you have a pre-trained model you can example use it to classify samples\nSo you can do pre-training on a lot of data and then aftwerwards you can fine tuning it on your specific i.e hospital data.\nAlso pre-trained representations have been used in archeology for figuring out whether a particular sample belongs to a particular period"
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#reason-3-ambiguity-of-labels",
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#reason-3-ambiguity-of-labels",
     "title": "Self-supervised Learning I",
     "section": "16 Reason 3: Ambiguity of labels",
-    "text": "16 Reason 3: Ambiguity of labels\n\n\n\n\nSlide 16"
+    "text": "16 Reason 3: Ambiguity of labels\n\n\n\n\nSlide 16\n\n\n\n\nIn weakly supervised learning you dont used lables that humans specifically provided but instead labels that you found i.e hastags that people place. Also for instance for the CLIP model where you have images and captions. This were just drawn from the internet so some of this captions you may see i.e a laptop and the labels may not be laptop but read product #15, or another example there may be a pic of a dog and it may say ‘my fav partner to go on a walk’. So that is ambiguous and confusing for the model. So instead serlf-supervise model implies that we only use the raw data, so we dont use any of the annotations.\nSo a reason to do self-supervised learning is that because these lalbels from the internet are already not accurate then you dont want to use them. Instead you can do slef-supervised learning where you train a DNN with unlabel data and then use it into your task at hand"
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#reason-4-investigating-the-fundamentals-of-visual-understanding",
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#reason-4-investigating-the-fundamentals-of-visual-understanding",
     "title": "Self-supervised Learning I",
     "section": "17 Reason 4: Investigating the fundamentals of visual understanding",
-    "text": "17 Reason 4: Investigating the fundamentals of visual understanding\n\n\n\n\nSlide 17"
+    "text": "17 Reason 4: Investigating the fundamentals of visual understanding\n\n\n\n\nSlide 17\n\n\n\n\nCan we understand really what happens without labels? so the fundamentals of computer vision."
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#quiz-turn-to-your-neighbour-and-briefly-explain-the-core",
@@ -7599,14 +7599,14 @@
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#how-does-one-learn-without-labels",
     "title": "Self-supervised Learning I",
     "section": "21 How does one learn without labels?",
-    "text": "21 How does one learn without labels?\n\n\n\n\nSlide 21"
+    "text": "21 How does one learn without labels?\n\n\n\n\nSlide 21\n\n\n\n\n\nWe say that we need to generate gradients. So some type of signals that we can leverage include:\nReconstructions: we can remove some aprt of the image and ask the model to reconstruct what has been hidden\nGeometry"
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#early-methods-context-prediction",
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#early-methods-context-prediction",
     "title": "Self-supervised Learning I",
     "section": "22 Early methods: Context prediction",
-    "text": "22 Early methods: Context prediction\nee ee ee on” mA\n\n\n\n\nSlide 22"
+    "text": "22 Early methods: Context prediction\n\n\n\n\nSlide 22"
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#note-similar-to-how-bert-has-been-trained",
@@ -7620,7 +7620,7 @@
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#early-methods",
     "title": "Self-supervised Learning I",
     "section": "24 Early methods",
-    "text": "24 Early methods\nee o* - Pad ws\n\n\n\n\nSlide 24"
+    "text": "24 Early methods\n\n\n\n\nSlide 24\n\n\n\n\n\nContext Encoders, you maks now a part of a image, so you put a white mask on top of the image and then you trained a model to ouput a dense feature map that will put the pixeles at that location. You only apply the loss at this locations but because you use a CNN you train all the weights."
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#geometry-rotnet-learn-features-by-predicting-which-way-is-up.",
@@ -7634,14 +7634,14 @@
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#image-uniqueness-exemplar-cnn-precursor-to-contrastive-learning",
     "title": "Self-supervised Learning I",
     "section": "26 Image-uniqueness: Exemplar CNN, precursor to contrastive learning",
-    "text": "26 Image-uniqueness: Exemplar CNN, precursor to contrastive learning\n\n\n\n\nSlide 26"
+    "text": "26 Image-uniqueness: Exemplar CNN, precursor to contrastive learning\n\n\n\n\nSlide 26\n\n\n\n\nEXampler CNN came before Contrastive Learning, this helps to work on CLip. Here you augment the image multiple times for each iamge, and now you model needs to ouput which image identity it was.\nThe idea of image uniqueness is that if you have near dusplicate copies of the same image then it makes for a string signal. For isntance if you have a dog jumping vs a dog sitting, that is very difficult to differentiate so in that sense the model needs to learn quite some good feature in order to be differentiating these two classes.\nThis also enforces augmentation-invariance because all the different views, all the different augmentations of the image they should be the same"
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#modern-noise-contrastive-self-supervised-learning",
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#modern-noise-contrastive-self-supervised-learning",
     "title": "Self-supervised Learning I",
     "section": "27 Modern Noise-contrastive self-supervised learning",
-    "text": "27 Modern Noise-contrastive self-supervised learning\n\n\n\n\nSlide 27"
+    "text": "27 Modern Noise-contrastive self-supervised learning\n\n\n\n\nSlide 27\n\n\n\n\nAfter that people develop contrastive models.\nThe basic idea for simCLR is: you take two views for two images. You have two augmentations of the dogs a and two for the chair.\nHere the softmax is calcualting the similarity of z_i and z_j. These are the last representations. The sim() function is the dot products which tells you how similar they are. You apply the softmax across all these dot products"
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#clip-from-lect-9-and-assignment-2-simply-applies-simclr-across-modalities",
@@ -7662,7 +7662,7 @@
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#masked-image-modelling-recent-development",
     "title": "Self-supervised Learning I",
     "section": "30 Masked Image Modelling (recent development)",
-    "text": "30 Masked Image Modelling (recent development)\n\n\n\n\nSlide 30"
+    "text": "30 Masked Image Modelling (recent development)\n\n\n\n\nSlide 30\n\n\n\n\nTransformers work on sequences but CNN this approach would not work because the ouputs are always spatial that means you can simply leave some. Then you get a representation and your task is to predict all these missing patches given the patches that you have seen"
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#clustering",
@@ -7675,8 +7675,8 @@
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#title-2",
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#title-2",
     "title": "Self-supervised Learning I",
-    "section": "32 Title",
-    "text": "32 Title\n\n\n\n\nSlide 32"
+    "section": "19 Title",
+    "text": "19 Title\n\n\n\n\nSlide 19"
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#datasets-for-images-pretraining-and-downstream",
@@ -7696,8 +7696,8 @@
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#title-3",
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#title-3",
     "title": "Self-supervised Learning I",
-    "section": "35 Title",
-    "text": "35 Title\n\n\n\n\nSlide 35"
+    "section": "32 Title",
+    "text": "32 Title\n\n\n\n\nSlide 32"
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#the-dataset-diverse-containing-nature-and-buildings.",
@@ -7718,21 +7718,21 @@
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#downstream-semi-supervised-tasks-self-supervised-learning-helps",
     "title": "Self-supervised Learning I",
     "section": "38 Downstream semi-supervised tasks: Self-supervised Learning helps",
-    "text": "38 Downstream semi-supervised tasks: Self-supervised Learning helps\n\n\n\n\nSlide 38"
+    "text": "38 Downstream semi-supervised tasks: Self-supervised Learning helps\n\n\n\n\nSlide 38\n\n\n\n\n\nSupervised: red\nSelf-supervised: Blue"
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#title-4",
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#title-4",
     "title": "Self-supervised Learning I",
-    "section": "39 Title",
-    "text": "39 Title\n\n\n\n\nSlide 39"
+    "section": "35 Title",
+    "text": "35 Title\n\n\n\n\nSlide 35"
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#title-5",
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#title-5",
     "title": "Self-supervised Learning I",
-    "section": "40 Title",
-    "text": "40 Title\n\n\n\n\nSlide 40"
+    "section": "39 Title",
+    "text": "39 Title\n\n\n\n\nSlide 39"
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#goal-discover-visual-concepts-without-annotations.",
@@ -7753,7 +7753,7 @@
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#the-key-to-image-understanding-is-separating-meaning-from-appearance.",
     "title": "Self-supervised Learning I",
     "section": "43 The key to image understanding is separating meaning from appearance.",
-    "text": "43 The key to image understanding is separating meaning from appearance.\n\n\n\n\nSlide 43"
+    "text": "43 The key to image understanding is separating meaning from appearance.\n\n\n\n\nSlide 43\n\n\n\n\nEven though the pixel values are different"
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#quiz-what-other-ways-of-incorporating-prior-knowledge",
@@ -7781,7 +7781,7 @@
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#how-can-we-optimize-the-labels-and-make-assignments-consistents",
     "title": "Self-supervised Learning I",
     "section": "47 How can we optimize the labels and make assignments consistents",
-    "text": "47 How can we optimize the labels and make assignments consistents\n\n\n\n\nSlide 47"
+    "text": "47 How can we optimize the labels and make assignments consistents\n\n\n\n\nSlide 47\n\n\n\n\nhere we want to make y differentiable because we want to learn those labels."
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#sk-optimisation-not-needed-for-exam",
@@ -7795,7 +7795,7 @@
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#sk-optimisation-of-assignments-q-not-needed-for-exam",
     "title": "Self-supervised Learning I",
     "section": "49 SK optimisation of assignments Q (not needed for exam)",
-    "text": "49 SK optimisation of assignments Q (not needed for exam)\ne ° mingeyLl = mingey| (Q, — log P) - -n(Q)|\n\n\n\n\nSlide 49"
+    "text": "49 SK optimisation of assignments Q (not needed for exam)\n\n\n\n\nSlide 49"
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#algorithm",
@@ -7865,7 +7865,7 @@
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#self-supervised-learning-of-object-parts-for-semantic-segmentation",
     "title": "Self-supervised Learning I",
     "section": "59 Self-Supervised Learning of Object Parts for Semantic Segmentation",
-    "text": "59 Self-Supervised Learning of Object Parts for Semantic Segmentation\n(CVPR IOI?\n\n\n\n\nSlide 59"
+    "text": "59 Self-Supervised Learning of Object Parts for Semantic Segmentation\n\n\n\n\nSlide 59"
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#self-supervised-larning-of-odject-parts-for-semantic-segmentation",
@@ -7892,15 +7892,15 @@
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#quiz-why-did-we-use-rol-align-and-not-rol-pools",
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#quiz-why-did-we-use-rol-align-and-not-rol-pools",
     "title": "Self-supervised Learning I",
-    "section": "63 , Quiz: Why did we use Rol-Align and not Rol-Pools |",
-    "text": "63 , Quiz: Why did we use Rol-Align and not Rol-Pools |\n\n\n\n\nSlide 63"
+    "section": "63 Quiz: Why did we use Rol-Align and not Rol-Pools |",
+    "text": "63 Quiz: Why did we use Rol-Align and not Rol-Pools |\n\n\n\n\nSlide 63"
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#title-6",
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#title-6",
     "title": "Self-supervised Learning I",
-    "section": "64 Title",
-    "text": "64 Title\n\n\n\n\nSlide 64"
+    "section": "40 Title",
+    "text": "40 Title\n\n\n\n\nSlide 40"
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#additional-innovation-2-overclustering-with-community-detection-cd",
@@ -7920,8 +7920,8 @@
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#title-7",
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#title-7",
     "title": "Self-supervised Learning I",
-    "section": "67 Title",
-    "text": "67 Title\n\n\n\n\nSlide 67"
+    "section": "57 Title",
+    "text": "57 Title\n\n\n\n\nSlide 57"
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#leopart-improves-fully-unsupervised-sota-by-6",
@@ -8026,7 +8026,7 @@
     "href": "blog/2023-12-14_self-supervised-learning-i/index.html#unsup.-pre-train",
     "title": "Self-supervised Learning I",
     "section": "82 unsup. pre-train",
-    "text": "82 unsup. pre-train\nMLP aug+ cos epochs\nAugmentations revisited ===\nVOC detection augmentations (besides longer Pso AP AP3s5 2 3 training and MLP head and\nKattar laarnino rata crhadiiley\n\n\n\n\nSlide 82"
+    "text": "82 unsup. pre-train\n\n\n\n\nSlide 82"
   },
   {
     "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#yi-5-.-fam-remove-all-the-human-.",
@@ -10267,5 +10267,54 @@
     "title": "Numpy reshape RGB image to 1D array",
     "section": "",
     "text": "| Danilo Toapanta\n2023-11-07\nImagine you want to train a NN with:\n\nX: s x 3 x 32 x 32\n\nWhere:\n\ns: num samples\n3 x 32 x 32: color img\n\nNow to feed in the NN we want the shapes to be:\n\nX: s x (3072)\n\nDo we lose information? The answers is not, we just reshape X.\nThe following takes 2 imgs, with dimensions 2x2:\n\n\nCode\nimport numpy as np\n\n# Create example 3x2x2 images (two images)\noriginal_images = np.array([[[[1, 2],\n                             [3, 4]],\n                            [[5, 6],\n                             [7, 8]],\n                            [[9, 10],\n                             [11, 12]]],\n\n                           [[[13, 14],\n                             [15, 16]],\n                            [[17, 18],\n                             [19, 20]],\n                            [[21, 22],\n                             [23, 24]]]])\n\n# Print the shape of the original images\nprint(\"Original Images Shape:\", original_images.shape)\n\n# Print the original images\nprint(\"Original Images:\\n\", original_images)\n\n# Reshape the images into num_imgs x (3*2*2) matrices\nnum_imgs = original_images.shape[0]\nreshaped_images = original_images.reshape(num_imgs, -1)\n\n# Print the shape of the reshaped images\nprint(\"Reshaped Images Shape:\", reshaped_images.shape)\n\n# Print the reshaped images\nprint(\"Reshaped Images:\\n\", reshaped_images)\n\n\nOriginal Images Shape: (2, 3, 2, 2)\nOriginal Images:\n [[[[ 1  2]\n   [ 3  4]]\n\n  [[ 5  6]\n   [ 7  8]]\n\n  [[ 9 10]\n   [11 12]]]\n\n\n [[[13 14]\n   [15 16]]\n\n  [[17 18]\n   [19 20]]\n\n  [[21 22]\n   [23 24]]]]\nReshaped Images Shape: (2, 12)\nReshaped Images:\n [[ 1  2  3  4  5  6  7  8  9 10 11 12]\n [13 14 15 16 17 18 19 20 21 22 23 24]]"
+  },
+  {
+    "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#quiz",
+    "href": "blog/2023-12-14_self-supervised-learning-i/index.html#quiz",
+    "title": "Self-supervised Learning I",
+    "section": "18 Quiz:",
+    "text": "18 Quiz:\n\n\n\n\nSlide 18\n\n\n\n\nSlef-supervised refers more to you want get something that you can use for another datasets. So topically in representation learning the dinstiction is clear because if you are learning a contrastive model that by itself is not usefull but in that case you can say self-supervised learning is part of supervised learning methodologies.\n\nNormal AE are unsupervised learning methods\nThere another autoencoders that are self-supervised learners."
+  },
+  {
+    "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#title-8",
+    "href": "blog/2023-12-14_self-supervised-learning-i/index.html#title-8",
+    "title": "Self-supervised Learning I",
+    "section": "64 Title",
+    "text": "64 Title\n\n\n\n\nSlide 64"
+  },
+  {
+    "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#quiz-1",
+    "href": "blog/2023-12-14_self-supervised-learning-i/index.html#quiz-1",
+    "title": "Self-supervised Learning I",
+    "section": "44 Quiz:",
+    "text": "44 Quiz:\n\n\n\n\nSlide 44\n\n\n\n\n\nSo if you stay in the same domain, or a clone one you know that that the \\(lr\\) would be quite similar\nYou also can set the network architecture because if you know is a vision recognition taks then you know a Conv architecture is meaningful.\nIf your dataset is small then you reduce it because you trained before with tons of images so the epochs were also big"
+  },
+  {
+    "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#title-9",
+    "href": "blog/2023-12-14_self-supervised-learning-i/index.html#title-9",
+    "title": "Self-supervised Learning I",
+    "section": "67 Title",
+    "text": "67 Title\n\n\n\n\nSlide 67"
+  },
+  {
+    "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#self-supervised-learning-of-odject-parts-for-semantic-segmentation",
+    "href": "blog/2023-12-14_self-supervised-learning-i/index.html#self-supervised-learning-of-odject-parts-for-semantic-segmentation",
+    "title": "Self-supervised Learning I",
+    "section": "60 Self-Supervised Learning of Odject Parts for semantic Segmentation",
+    "text": "60 Self-Supervised Learning of Odject Parts for semantic Segmentation\n\n\n\n\nSlide 60"
+  },
+  {
+    "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#quiz-2",
+    "href": "blog/2023-12-14_self-supervised-learning-i/index.html#quiz-2",
+    "title": "Self-supervised Learning I",
+    "section": "63 Quiz",
+    "text": "63 Quiz\n\n\n\n\nSlide 63\n\n\n\n\n\nFalse. ROI-Align cannot take care of non-recatangular selections\nFalse, just like any pooling can provide gradients"
+  },
+  {
+    "objectID": "blog/2023-12-14_self-supervised-learning-i/index.html#title-10",
+    "href": "blog/2023-12-14_self-supervised-learning-i/index.html#title-10",
+    "title": "Self-supervised Learning I",
+    "section": "83 Title",
+    "text": "83 Title\n\n\n\n\nSlide 83"
   }
 ]

@@ -838,6 +838,90 @@ Notes on this slide
 </div>
 </center>
 <pre></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Summary of VAE
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Variational Autoencoders (VAEs) are a type of generative model that learn to represent data in a lower-dimensional latent space and can generate new data that resemble the input data. Here’s an overview of the formulas involved, the known and unknown distributions, what corresponds to each part of the VAE architecture, and what needs to be computed, trained, or optimized.</p>
+<section id="known-distributions" class="level3" data-number="26.1">
+<h3 data-number="26.1" class="anchored" data-anchor-id="known-distributions"><span class="header-section-number">26.1</span> Known Distributions:</h3>
+<ol type="1">
+<li><strong>Prior Distribution of Latent Variables (p(z))</strong>:
+<ul>
+<li>Typically assumed to be a standard normal distribution: <span class="math inline">\(p(z) = \mathcal{N}(z; 0, I)\)</span>.</li>
+<li>This is a design choice and is known a priori.</li>
+</ul></li>
+<li><strong>Likelihood of Data Given Latent Variables (p(x|z))</strong>:
+<ul>
+<li>This is modeled by the decoder network, usually parameterized as a normal distribution <span class="math inline">\(\mathcal{N}(x; \mu_{\theta}(z), \sigma^2_{\theta}(z)I)\)</span> where <span class="math inline">\(\mu_{\theta}(z)\)</span> and <span class="math inline">\(\sigma^2_{\theta}(z)\)</span> are the outputs of the decoder.</li>
+<li>The parameters <span class="math inline">\(\theta\)</span> of the decoder network that determine this distribution are unknown and need to be learned.</li>
+</ul></li>
+</ol>
+</section>
+<section id="unknown-distributions" class="level3" data-number="26.2">
+<h3 data-number="26.2" class="anchored" data-anchor-id="unknown-distributions"><span class="header-section-number">26.2</span> Unknown Distributions:</h3>
+<ol type="1">
+<li><strong>Posterior Distribution of Latent Variables Given Data (p(z|x))</strong>:
+<ul>
+<li>This is the true but intractable distribution we want to approximate.</li>
+<li>It cannot be computed directly in most cases.</li>
+</ul></li>
+</ol>
+</section>
+<section id="approximate-distribution" class="level3" data-number="26.3">
+<h3 data-number="26.3" class="anchored" data-anchor-id="approximate-distribution"><span class="header-section-number">26.3</span> Approximate Distribution:</h3>
+<ol type="1">
+<li><strong>Variational Approximation to the Posterior (q(z|x))</strong>:
+<ul>
+<li>This is approximated by the encoder network, usually parameterized as a normal distribution <span class="math inline">\(q(z|x) = \mathcal{N}(z; \mu_{\phi}(x), \sigma^2_{\phi}(x)I)\)</span> where <span class="math inline">\(\mu_{\phi}(x)\)</span> and <span class="math inline">\(\sigma^2_{\phi}(x)\)</span> are the outputs of the encoder.</li>
+<li>The parameters <span class="math inline">\(\phi\)</span> of the encoder network that determine this distribution are unknown and need to be learned.</li>
+</ul></li>
+</ol>
+</section>
+<section id="objective-function" class="level3" data-number="26.4">
+<h3 data-number="26.4" class="anchored" data-anchor-id="objective-function"><span class="header-section-number">26.4</span> Objective Function:</h3>
+<ol type="1">
+<li><strong>Evidence Lower Bound (ELBO)</strong>:
+<ul>
+<li>The ELBO is the objective function that VAEs maximize. It is a lower bound on the logarithm of the marginal likelihood of the data <span class="math inline">\(p(x)\)</span>.</li>
+<li>The ELBO is given by: <span class="math inline">\(\text{ELBO} = \mathbb{E}_{q(z|x)}[\log p(x|z)] - \text{KL}[q(z|x) || p(z)]\)</span></li>
+<li>The first term is the expected log likelihood of the data given the latent variables, which encourages the decoder to reconstruct the data well.</li>
+<li>The second term is the Kullback-Leibler divergence between the approximate posterior and the prior, which encourages the approximate posterior to be similar to the prior.</li>
+</ul></li>
+</ol>
+</section>
+<section id="example" class="level3" data-number="26.5">
+<h3 data-number="26.5" class="anchored" data-anchor-id="example"><span class="header-section-number">26.5</span> Example:</h3>
+<ul>
+<li>Let’s say we have a dataset of images and we want to model the distribution of these images using a VAE.</li>
+<li><strong>Encoder (Approximate Posterior q(z|x))</strong>: An image <span class="math inline">\(x\)</span> is input into the encoder, which outputs parameters <span class="math inline">\(\mu_{\phi}(x)\)</span> and <span class="math inline">\(\sigma^2_{\phi}(x)\)</span> of a normal distribution representing the distribution of the latent variables for this image.</li>
+<li><strong>Decoder (Likelihood p(x|z))</strong>: A latent variable <span class="math inline">\(z\)</span> is sampled from the approximate posterior and input into the decoder, which outputs parameters of a distribution over images. For simplicity, assume this is also a normal distribution with mean <span class="math inline">\(\mu_{\theta}(z)\)</span> and fixed variance.</li>
+</ul>
+</section>
+<section id="what-we-compute-and-optimize" class="level3" data-number="26.6">
+<h3 data-number="26.6" class="anchored" data-anchor-id="what-we-compute-and-optimize"><span class="header-section-number">26.6</span> What We Compute and Optimize:</h3>
+<ul>
+<li><strong>Compute</strong>: We can compute the ELBO for given parameters <span class="math inline">\(\phi\)</span> and <span class="math inline">\(\theta\)</span>.</li>
+<li><strong>Optimize</strong>: We use stochastic gradient descent or a variant to optimize the parameters <span class="math inline">\(\phi\)</span> and <span class="math inline">\(\theta\)</span> to maximize the ELBO.</li>
+<li><strong>Train</strong>: We train the encoder and decoder networks by using backpropagation based on gradients computed from the ELBO.</li>
+</ul>
+</section>
+<section id="what-we-cannot-compute-directly" class="level3" data-number="26.7">
+<h3 data-number="26.7" class="anchored" data-anchor-id="what-we-cannot-compute-directly"><span class="header-section-number">26.7</span> What We Cannot Compute Directly:</h3>
+<ul>
+<li><strong>Posterior p(z|x)</strong>: We cannot compute this directly; it’s typically intractable due to the integral over all possible values of <span class="math inline">\(z\)</span>.</li>
+<li><strong>Marginal Likelihood p(x)</strong>: We also cannot compute this directly; it involves an integral over all latent variables which is typically intractable.</li>
+</ul>
+<p>VAEs aim to learn the parameters of the encoder and decoder networks such that the latent space effectively captures the variations in the data, and new data can be generated that resemble the input data. We optimize the ELBO because the true posterior <span class="math inline">\(p(z|x)\)</span> and the marginal likelihood <span class="math inline">\(p(x)\)</span> are intractable to compute directly</p>
+</section>
+</div>
+</div>
 </section>
 <section id="latent-variable-models" class="level2" data-number="27">
 <h2 data-number="27" class="anchored" data-anchor-id="latent-variable-models"><span class="header-section-number">27</span> Latent variable models</h2>
@@ -881,7 +965,7 @@ Notes on this slide
 <pre></pre>
 <p>When we want to do inference, so compute the posterior p(z|x) we see that this involves the join (numerator) and the marginal likelihood p(x) (denominator). To compute the marginal p(x) we use the integration over the join, but this is expensive computationally.</p>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -890,7 +974,7 @@ Why is expensive?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <center>
 <img src="2023-12-07-21-17-15.png" class="w550 img-fluid">
@@ -953,7 +1037,7 @@ Why is expensive?
 <p>For laten variable models there is no closed-form solution. It is not like you can derive with regards to theta (set it to zero and solve for theta) no you cannot.</p>
 <p>Here we are also assuming that all datapoints are independent see next slide</p>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -962,7 +1046,7 @@ Why are we talking about p(x)?
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>We do it because it is in the denominator when we want to do inference. Remember inference was the posterior</p>
 <center>
@@ -1619,7 +1703,7 @@ See the picture:
 </center>
 <pre></pre>
 <ul>
-<li><strong>Variational poterior:</strong> <span class="math inline">\(q_{\phi}(\textbf{z}_n | \textbf{x}_n)\)</span> match to the true posterior <span class="math inline">\(p_{\theta}(\textbf{z}_n)\)</span></li>
+<li><strong>Variational posterior:</strong> <span class="math inline">\(q_{\phi}(\textbf{z}_n | \textbf{x}_n)\)</span> match to the true posterior <span class="math inline">\(p_{\theta}(\textbf{z}_n)\)</span></li>
 </ul>
 <p>In terms ob observations: - The divergence from the true posterioir is often imperfect mostly due to the amortized inference network rather that the limmiting capacity or complexity of the approximating distribution</p>
 </section>

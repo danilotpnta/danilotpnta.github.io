@@ -77,6 +77,8 @@ window.MathJax = {
 </script>
 <link rel="shortcut icon" href="../../../../../../../../../../../assets/danilo.ico">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../css/index-posts.css">
 </head>
@@ -460,6 +462,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<ul>
+<li><p>Weak supervised learnings are for i.e hastags in instagram, this can be noisy because a person can show a pic of a dog with #cute which is not very representative as a label</p></li>
+<li><p>Weak supervised learning is a type of machine learning that falls between supervised and unsupervised learning. In weakly supervised learning, the training data is labeled, but the labels are noisy, incomplete, or imprecise. This approach is often used when it’s challenging or expensive to obtain a fully labeled dataset</p></li>
+</ul>
 </section>
 <section id="solving-the-problem-of-expensive-annotations-self-supervision." class="level2" data-number="8">
 <h2 data-number="8" class="anchored" data-anchor-id="solving-the-problem-of-expensive-annotations-self-supervision."><span class="header-section-number">8</span> Solving the problem of expensive annotations: self-supervision.</h2>
@@ -484,6 +490,8 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Here your transformation could be augmentations for instance.</p>
+<p>The proxy task provides you with some gradients. That trains the DNN. Proxy tasks could be geometry based, clustering and so on</p>
 </section>
 <section id="general-procedure-of-self-supervised-learning.-1" class="level2" data-number="10">
 <h2 data-number="10" class="anchored" data-anchor-id="general-procedure-of-self-supervised-learning.-1"><span class="header-section-number">10</span> General procedure of self-supervised learning.</h2>
@@ -496,6 +504,8 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>In Representation Learning you get image in and then vector out</p>
+<p>Sueful Slef-supervised learning: You pose some task which was previously done in a supervised manner as a self-supervised task. This could be object detection &amp; segmentation</p>
 </section>
 <section id="title-1" class="level2" data-number="11">
 <h2 data-number="11" class="anchored" data-anchor-id="title-1"><span class="header-section-number">11</span> Title</h2>
@@ -556,6 +566,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Why do we want to do self-supervised learning?</p>
+<p>Once you have a pre-trained model you can example use it to classify samples</p>
+<p>So you can do pre-training on a lot of data and then aftwerwards you can fine tuning it on your specific i.e hospital data.</p>
+<p>Also pre-trained representations have been used in archeology for figuring out whether a particular sample belongs to a particular period</p>
 </section>
 <section id="reason-3-ambiguity-of-labels" class="level2" data-number="16">
 <h2 data-number="16" class="anchored" data-anchor-id="reason-3-ambiguity-of-labels"><span class="header-section-number">16</span> Reason 3: Ambiguity of labels</h2>
@@ -568,6 +582,8 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>In weakly supervised learning you dont used lables that humans specifically provided but instead labels that you found i.e hastags that people place. Also for instance for the CLIP model where you have images and captions. This were just drawn from the internet so some of this captions you may see i.e a laptop and the labels may not be laptop but read product #15, or another example there may be a pic of a dog and it may say ‘my fav partner to go on a walk’. So that is ambiguous and confusing for the model. So instead serlf-supervise model implies that we only use the raw data, so we dont use any of the annotations.</p>
+<p>So a reason to do self-supervised learning is that because these lalbels from the internet are already not accurate then you dont want to use them. Instead you can do slef-supervised learning where you train a DNN with unlabel data and then use it into your task at hand</p>
 </section>
 <section id="reason-4-investigating-the-fundamentals-of-visual-understanding" class="level2" data-number="17">
 <h2 data-number="17" class="anchored" data-anchor-id="reason-4-investigating-the-fundamentals-of-visual-understanding"><span class="header-section-number">17</span> Reason 4: Investigating the fundamentals of visual understanding</h2>
@@ -580,10 +596,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Can we understand really what happens without labels? so the fundamentals of computer vision.</p>
 </section>
-<section id="quiz-turn-to-your-neighbour-and-briefly-explain-the-core" class="level2" data-number="18">
-<h2 data-number="18" class="anchored" data-anchor-id="quiz-turn-to-your-neighbour-and-briefly-explain-the-core"><span class="header-section-number">18</span> Quiz: turn to your neighbour and briefly explain the core</h2>
-idea behind self-supervised learning.
+<section id="quiz" class="level2" data-number="18">
+<h2 data-number="18" class="anchored" data-anchor-id="quiz"><span class="header-section-number">18</span> Quiz:</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -593,9 +609,14 @@ idea behind self-supervised learning.
 </div>
 </center>
 <pre></pre>
+<p>Slef-supervised refers more to you want get something that you can use for another datasets. So topically in representation learning the dinstiction is clear because if you are learning a contrastive model that by itself is not usefull but in that case you can say self-supervised learning is part of supervised learning methodologies.</p>
+<ul>
+<li><p>Normal AE are unsupervised learning methods</p></li>
+<li><p>There another autoencoders that are self-supervised learners.</p></li>
+</ul>
 </section>
-<section id="icwiakmitovat-raf-calf." class="level2" data-number="19">
-<h2 data-number="19" class="anchored" data-anchor-id="icwiakmitovat-raf-calf."><span class="header-section-number">19</span> ICWIAKMITOVAT RAF Calf.</h2>
+<section id="title-2" class="level2" data-number="19">
+<h2 data-number="19" class="anchored" data-anchor-id="title-2"><span class="header-section-number">19</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -630,10 +651,14 @@ Further details and recent developments can be found here:
 </div>
 </center>
 <pre></pre>
+<ul>
+<li><p>We say that we need to generate gradients. So some type of signals that we can leverage include:</p></li>
+<li><p>Reconstructions: we can remove some aprt of the image and ask the model to reconstruct what has been hidden</p></li>
+<li><p>Geometry</p></li>
+</ul>
 </section>
 <section id="early-methods-context-prediction" class="level2" data-number="22">
 <h2 data-number="22" class="anchored" data-anchor-id="early-methods-context-prediction"><span class="header-section-number">22</span> Early methods: Context prediction</h2>
-ee ee ee on” mA
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -658,7 +683,6 @@ ee ee ee on” mA
 </section>
 <section id="early-methods" class="level2" data-number="24">
 <h2 data-number="24" class="anchored" data-anchor-id="early-methods"><span class="header-section-number">24</span> Early methods</h2>
-ee o* - Pad ws
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -668,6 +692,9 @@ ee o* - Pad ws
 </div>
 </center>
 <pre></pre>
+<ul>
+<li>Context Encoders, you maks now a part of a image, so you put a white mask on top of the image and then you trained a model to ouput a dense feature map that will put the pixeles at that location. You only apply the loss at this locations but because you use a CNN you train all the weights.</li>
+</ul>
 </section>
 <section id="geometry-rotnet-learn-features-by-predicting-which-way-is-up." class="level2" data-number="25">
 <h2 data-number="25" class="anchored" data-anchor-id="geometry-rotnet-learn-features-by-predicting-which-way-is-up."><span class="header-section-number">25</span> Geometry: RotNet: learn features by predicting “which way is up”.</h2>
@@ -692,6 +719,9 @@ ee o* - Pad ws
 </div>
 </center>
 <pre></pre>
+<p>EXampler CNN came before Contrastive Learning, this helps to work on CLip. Here you augment the image multiple times for each iamge, and now you model needs to ouput which image identity it was.</p>
+<p>The idea of image uniqueness is that if you have near dusplicate copies of the same image then it makes for a string signal. For isntance if you have a dog jumping vs a dog sitting, that is very difficult to differentiate so in that sense the model needs to learn quite some good feature in order to be differentiating these two classes.</p>
+<p>This also enforces augmentation-invariance because all the different views, all the different augmentations of the image they should be the same</p>
 </section>
 <section id="modern-noise-contrastive-self-supervised-learning" class="level2" data-number="27">
 <h2 data-number="27" class="anchored" data-anchor-id="modern-noise-contrastive-self-supervised-learning"><span class="header-section-number">27</span> Modern Noise-contrastive self-supervised learning</h2>
@@ -704,6 +734,9 @@ ee o* - Pad ws
 </div>
 </center>
 <pre></pre>
+<p>After that people develop contrastive models.</p>
+<p>The basic idea for simCLR is: you take two views for two images. You have two augmentations of the dogs a and two for the chair.</p>
+<p>Here the softmax is calcualting the similarity of z_i and z_j. These are the last representations. The sim() function is the dot products which tells you how similar they are. You apply the softmax across all these dot products</p>
 </section>
 <section id="clip-from-lect-9-and-assignment-2-simply-applies-simclr-across-modalities" class="level2" data-number="28">
 <h2 data-number="28" class="anchored" data-anchor-id="clip-from-lect-9-and-assignment-2-simply-applies-simclr-across-modalities"><span class="header-section-number">28</span> CLIP from Lect 9 and assignment 2 simply applies SimCLR across modalities</h2>
@@ -740,6 +773,7 @@ ee o* - Pad ws
 </div>
 </center>
 <pre></pre>
+<p>Transformers work on sequences but CNN this approach would not work because the ouputs are always spatial that means you can simply leave some. Then you get a representation and your task is to predict all these missing patches given the patches that you have seen</p>
 </section>
 <section id="clustering" class="level2" data-number="31">
 <h2 data-number="31" class="anchored" data-anchor-id="clustering"><span class="header-section-number">31</span> Clustering</h2>
@@ -753,8 +787,8 @@ ee o* - Pad ws
 </center>
 <pre></pre>
 </section>
-<section id="title-2" class="level2" data-number="32">
-<h2 data-number="32" class="anchored" data-anchor-id="title-2"><span class="header-section-number">32</span> Title</h2>
+<section id="title-3" class="level2" data-number="32">
+<h2 data-number="32" class="anchored" data-anchor-id="title-3"><span class="header-section-number">32</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -789,8 +823,8 @@ ee o* - Pad ws
 </center>
 <pre></pre>
 </section>
-<section id="title-3" class="level2" data-number="35">
-<h2 data-number="35" class="anchored" data-anchor-id="title-3"><span class="header-section-number">35</span> Title</h2>
+<section id="title-4" class="level2" data-number="35">
+<h2 data-number="35" class="anchored" data-anchor-id="title-4"><span class="header-section-number">35</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -836,9 +870,13 @@ ee o* - Pad ws
 </div>
 </center>
 <pre></pre>
+<ul>
+<li>Supervised: red</li>
+<li>Self-supervised: Blue</li>
+</ul>
 </section>
-<section id="title-4" class="level2" data-number="39">
-<h2 data-number="39" class="anchored" data-anchor-id="title-4"><span class="header-section-number">39</span> Title</h2>
+<section id="title-5" class="level2" data-number="39">
+<h2 data-number="39" class="anchored" data-anchor-id="title-5"><span class="header-section-number">39</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -849,8 +887,8 @@ ee o* - Pad ws
 </center>
 <pre></pre>
 </section>
-<section id="title-5" class="level2" data-number="40">
-<h2 data-number="40" class="anchored" data-anchor-id="title-5"><span class="header-section-number">40</span> Title</h2>
+<section id="title-6" class="level2" data-number="40">
+<h2 data-number="40" class="anchored" data-anchor-id="title-6"><span class="header-section-number">40</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -896,10 +934,10 @@ ee o* - Pad ws
 </div>
 </center>
 <pre></pre>
+<p>Even though the pixel values are different</p>
 </section>
-<section id="quiz-what-other-ways-of-incorporating-prior-knowledge" class="level2" data-number="44">
-<h2 data-number="44" class="anchored" data-anchor-id="quiz-what-other-ways-of-incorporating-prior-knowledge"><span class="header-section-number">44</span> , Quiz: What other ways of incorporating prior knowledge |</h2>
-have we already learned about? (MC)
+<section id="quiz-1" class="level2" data-number="44">
+<h2 data-number="44" class="anchored" data-anchor-id="quiz-1"><span class="header-section-number">44</span> Quiz:</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -909,6 +947,11 @@ have we already learned about? (MC)
 </div>
 </center>
 <pre></pre>
+<ol type="1">
+<li>So if you stay in the same domain, or a clone one you know that that the <span class="math inline">\(lr\)</span> would be quite similar</li>
+<li>You also can set the network architecture because if you know is a vision recognition taks then you know a Conv architecture is meaningful.</li>
+<li>If your dataset is small then you reduce it because you trained before with tons of images so the epochs were also big</li>
+</ol>
 </section>
 <section id="our-work-applies-the-idea-of-augmentation-invariance-to-assign-concepts." class="level2" data-number="45">
 <h2 data-number="45" class="anchored" data-anchor-id="our-work-applies-the-idea-of-augmentation-invariance-to-assign-concepts."><span class="header-section-number">45</span> Our work applies the idea of augmentation invariance to assign concepts.</h2>
@@ -945,6 +988,7 @@ have we already learned about? (MC)
 </div>
 </center>
 <pre></pre>
+<p>here we want to make y differentiable because we want to learn those labels.</p>
 </section>
 <section id="sk-optimisation-not-needed-for-exam" class="level2" data-number="48">
 <h2 data-number="48" class="anchored" data-anchor-id="sk-optimisation-not-needed-for-exam"><span class="header-section-number">48</span> SK optimisation (not needed for exam)</h2>
@@ -960,7 +1004,6 @@ have we already learned about? (MC)
 </section>
 <section id="sk-optimisation-of-assignments-q-not-needed-for-exam" class="level2" data-number="49">
 <h2 data-number="49" class="anchored" data-anchor-id="sk-optimisation-of-assignments-q-not-needed-for-exam"><span class="header-section-number">49</span> SK optimisation of assignments Q (not needed for exam)</h2>
-e ° mingeyLl = mingey| (Q, — log P) - -n(Q)|
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1056,13 +1099,8 @@ Examples
 </center>
 <pre></pre>
 </section>
-<section id="am-rebelling-against-the-hierarchical-system-that-7m-fraser-stoddart" class="level2" data-number="57">
-<h2 data-number="57" class="anchored" data-anchor-id="am-rebelling-against-the-hierarchical-system-that-7m-fraser-stoddart"><span class="header-section-number">57</span> | am rebelling against the hierarchical system that {7m Fraser Stoddart:</h2>
-<p>How research gets done: part 9 visited me during the early days of my career. Bef You’ve got to</p>
-<dl>
-<dt>. - break the rules”</dt>
-<dd>
-IN Previous parts: a ee” [fundamental understanding/read papers. how-to-read-papers. implement &amp; tinker with code. realise and seek funny
+<section id="title-7" class="level2" data-number="57">
+<h2 data-number="57" class="anchored" data-anchor-id="title-7"><span class="header-section-number">57</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1072,8 +1110,6 @@ IN Previous parts: a ee” [fundamental understanding/read papers. how-to-read-p
 </div>
 </center>
 <pre></pre>
-</dd>
-</dl>
 </section>
 <section id="however-the-world-is-not-object-centric." class="level2" data-number="58">
 <h2 data-number="58" class="anchored" data-anchor-id="however-the-world-is-not-object-centric."><span class="header-section-number">58</span> However: The world is not object-centric.</h2>
@@ -1089,7 +1125,6 @@ IN Previous parts: a ee” [fundamental understanding/read papers. how-to-read-p
 </section>
 <section id="self-supervised-learning-of-object-parts-for-semantic-segmentation" class="level2" data-number="59">
 <h2 data-number="59" class="anchored" data-anchor-id="self-supervised-learning-of-object-parts-for-semantic-segmentation"><span class="header-section-number">59</span> Self-Supervised Learning of Object Parts for Semantic Segmentation</h2>
-(CVPR IOI?
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1100,9 +1135,8 @@ IN Previous parts: a ee” [fundamental understanding/read papers. how-to-read-p
 </center>
 <pre></pre>
 </section>
-<section id="self-supervised-larning-of-odject-parts-for-semantic-segmentation" class="level2" data-number="60">
-<h2 data-number="60" class="anchored" data-anchor-id="self-supervised-larning-of-odject-parts-for-semantic-segmentation"><span class="header-section-number">60</span> Self-Supervised L@arning of Odject Parts for semantic Segmentation</h2>
-gs, i z=. ==&gt;, aa, Be Ea, Ae
+<section id="self-supervised-learning-of-odject-parts-for-semantic-segmentation" class="level2" data-number="60">
+<h2 data-number="60" class="anchored" data-anchor-id="self-supervised-learning-of-odject-parts-for-semantic-segmentation"><span class="header-section-number">60</span> Self-Supervised Learning of Odject Parts for semantic Segmentation</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1137,8 +1171,8 @@ gs, i z=. ==&gt;, aa, Be Ea, Ae
 </center>
 <pre></pre>
 </section>
-<section id="quiz-why-did-we-use-rol-align-and-not-rol-pools" class="level2" data-number="63">
-<h2 data-number="63" class="anchored" data-anchor-id="quiz-why-did-we-use-rol-align-and-not-rol-pools"><span class="header-section-number">63</span> , Quiz: Why did we use Rol-Align and not Rol-Pools |</h2>
+<section id="quiz-2" class="level2" data-number="63">
+<h2 data-number="63" class="anchored" data-anchor-id="quiz-2"><span class="header-section-number">63</span> Quiz</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1148,9 +1182,13 @@ gs, i z=. ==&gt;, aa, Be Ea, Ae
 </div>
 </center>
 <pre></pre>
+<ol start="2" type="1">
+<li>False. ROI-Align cannot take care of non-recatangular selections</li>
+<li>False, just like any pooling can provide gradients</li>
+</ol>
 </section>
-<section id="title-6" class="level2" data-number="64">
-<h2 data-number="64" class="anchored" data-anchor-id="title-6"><span class="header-section-number">64</span> Title</h2>
+<section id="title-8" class="level2" data-number="64">
+<h2 data-number="64" class="anchored" data-anchor-id="title-8"><span class="header-section-number">64</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1185,8 +1223,8 @@ gs, i z=. ==&gt;, aa, Be Ea, Ae
 </center>
 <pre></pre>
 </section>
-<section id="title-7" class="level2" data-number="67">
-<h2 data-number="67" class="anchored" data-anchor-id="title-7"><span class="header-section-number">67</span> Title</h2>
+<section id="title-9" class="level2" data-number="67">
+<h2 data-number="67" class="anchored" data-anchor-id="title-9"><span class="header-section-number">67</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1373,10 +1411,6 @@ we get even closer for fine-tuning tasks.
 </section>
 <section id="unsup.-pre-train" class="level2" data-number="82">
 <h2 data-number="82" class="anchored" data-anchor-id="unsup.-pre-train"><span class="header-section-number">82</span> unsup. pre-train</h2>
-<p>MLP aug+ cos epochs</p>
-<p>Augmentations revisited ===</p>
-<p>VOC detection augmentations (besides longer Pso AP AP3s5 2 3 training and MLP head and</p>
-Kattar laarnino rata crhadiiley
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -1387,9 +1421,8 @@ Kattar laarnino rata crhadiiley
 </center>
 <pre></pre>
 </section>
-<section id="yi-5-.-fam-remove-all-the-human-." class="level2" data-number="83">
-<h2 data-number="83" class="anchored" data-anchor-id="yi-5-.-fam-remove-all-the-human-."><span class="header-section-number">83</span> ’ : yi 5 — . , ’ fam : Remove all the human .</h2>
-) z ; , , rat et Part: Why’? map Bee
+<section id="title-10" class="level2" data-number="83">
+<h2 data-number="83" class="anchored" data-anchor-id="title-10"><span class="header-section-number">83</span> Title</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
