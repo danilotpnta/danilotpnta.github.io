@@ -830,7 +830,7 @@
     "href": "blog/2023-11-08_deep-learning-optimizations-i/index.html#visual-overview",
     "title": "Deep Learning Optimizations I",
     "section": "64 Visual overview",
-    "text": "64 Visual overview\n\n\n\n\nSlide 67\n\n\n\n\nAdam is a heavy ball with a lot of friction and all the other, like the yellow one tends to overshoot a lot and adam introduces this friction term to the optimizer"
+    "text": "64 Visual overview\n\n\n\n\nSlide 67\n\n\n\n\n\n\n\n\nSource\n\n\n\n\nAdam is a heavy ball with a lot of friction and all the other, like the yellow one tends to overshoot a lot and adam introduces this friction term to the optimizer"
   },
   {
     "objectID": "blog/2023-11-08_deep-learning-optimizations-i/index.html#which-optimizer-to-use",
@@ -8999,7 +8999,7 @@
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#wasserstein-gan",
     "title": "Generative Adversarial Networks and Diffusion models",
     "section": "54 Wasserstein GAN",
-    "text": "54 Wasserstein GAN\n\n\n\n\nSlide 56"
+    "text": "54 Wasserstein GAN\n\n\n\n\nSlide 56\n\n\n\n\nYou can get gradients even if this two distributions do no match. Here we would have a 1 W value indicating the distributions do not match at all. So even if the discriminator is having an easy time, you still are getting gradients"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#differences-in-gans",
@@ -9124,8 +9124,8 @@
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#quiz-what-dimensions-need-to-be-considered-when-thinking-about",
     "href": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#quiz-what-dimensions-need-to-be-considered-when-thinking-about",
     "title": "Generative Adversarial Networks and Diffusion models",
-    "section": "72 Quiz: what dimensions need to be considered when thinking about ;",
-    "text": "72 Quiz: what dimensions need to be considered when thinking about ;\n\n\n\n\nSlide 74"
+    "section": "72 Quiz: What dimensions need to be considered when thinking about",
+    "text": "72 Quiz: What dimensions need to be considered when thinking about\n\n\n\n\nSlide 74"
   },
   {
     "objectID": "blog/2023-12-07_generative-adversarial-networks-and-diffusion-models/index.html#more-on-that-previous-one..",
