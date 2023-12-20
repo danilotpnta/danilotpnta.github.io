@@ -367,7 +367,8 @@ window.MathJax = {
 <h2 data-number="1" class="anchored" data-anchor-id="q1.1"><span class="header-section-number">1</span> Q1.1</h2>
 <ol type="1">
 <li>We sample <span class="math inline">\(\textbf{z}_n\)</span> from the the normal distribution <span class="math inline">\(\mathcal(N)(0, \textbf{\textit{I}}_D)\)</span></li>
-<li></li>
+<li>We feed the sampled latent vector into the decoder <span class="math inline">\(f_{\theta}(\textbf{z}_n)\)</span></li>
+<li>For every m pixel we sample <span class="math inline">\(x_n\)</span> from the categorical distribution as expressed in fig (5). Ultimately we get <span class="math inline">\(p(x_n | z_n)\)</span> which we can use is to generate an image</li>
 </ol>
 </section>
 <section id="q1.2" class="level2" data-number="2">
