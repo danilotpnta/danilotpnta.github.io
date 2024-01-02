@@ -803,7 +803,7 @@ Why do we use a mask in the decoder of self attention?
 <p>Let’s consider a simple example with a sequence of length <span class="math inline">\(N\)</span>. For simplicity, let’s assume each input element has a dimension of 1 for illustration purposes.</p>
 <p>What about other dimensions, wel that can be possible because remember we have our embeddings as the input to the NN, not the words itself</p>
 <center>
-<img src="2023-11-28-17-32-03.png" class="w350 img-fluid">
+<img src="imgs/2023-11-28-17-32-03.png" class="w350 img-fluid">
 </center>
 <pre></pre>
 <p>Like in this picture our dimensions are clearly larger than 1 for the embeddings</p>
@@ -1195,7 +1195,7 @@ For models like StableDiffusion, Dalle, EMU video etc. T5
 <p>Positional embeddings are added to the input embeddings to provide information about the position of each token in a sequence. In BERT, the model processes the input tokens in parallel, and without positional embeddings, it would have no inherent understanding of the order of the tokens. Positional embeddings help the model distinguish between tokens based on their position in the sequence, allowing it to capture the sequential structure of the input.</p>
 <p>Coming back to ViT model, here we can see that the model also process information in parallel that’s why we need positional embedding so that we can then learnthe order of how the pic was constructed</p>
 <center>
-<img src="2023-11-28-23-58-08.png" class="w550 img-fluid">
+<img src="imgs/2023-11-28-23-58-08.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 </section>

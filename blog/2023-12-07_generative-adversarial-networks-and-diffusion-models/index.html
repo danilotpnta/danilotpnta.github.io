@@ -1251,14 +1251,14 @@ If these things do not look at all like the real class then the FDI would be hig
 <p>In the autoencoder we want to minimize the reconstructed error. Here we simply add an adversarial loss in the latent space <span class="math inline">\(z\)</span>. That means we will now be containing the latent space in a manner that it will be easy to sample from.</p>
 <p><strong>Encoder:</strong> This part takes an input image x and encodes it into a latent representation z through a deterministic function q(z|x), which is typically a neural network. The deterministic aspect means that for the same input x, the encoder will always produce the same latent code z.</p>
 <center>
-<img src="2023-12-14-17-09-46.png" class="w300 img-fluid">
+<img src="imgs/2023-12-14-17-09-46.png" class="w300 img-fluid">
 </center>
 <pre></pre>
 <p>Here the q(z|x) is called the variational posterior. It can be Gaussian and then we will make it Gaussian</p>
 <p>Before we have that we wanted to approximate the real posterior p(z|x) with this q(z|x). So here we are saying that before we use the KL in VAE to give it structure but not the AAE uses an adversarial network for this.</p>
 <p>Remember that: p(z∣x) is the true posterior distribution of the latent variables given the input data, which is generally intractable to compute directly. Remember the picture below we were unable to commpute this posterior because it related to compute this integral</p>
 <center>
-<img src="2023-12-14-17-17-06.png" class="w550 img-fluid">
+<img src="imgs/2023-12-14-17-17-06.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p>The AAE does not need to operate in the image domain it can just work in the latent domain. It also does not need to be image model but instead a bunch of MLPs</p>

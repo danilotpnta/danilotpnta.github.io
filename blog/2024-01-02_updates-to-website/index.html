@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Danilo Toapanta">
-<meta name="dcterms.date" content="2023-12-08">
+<meta name="dcterms.date" content="2024-01-02">
 <meta name="description" content="Description of this Post">
 
-<title>Danilo Toapanta - DL Part 3</title>
+<title>Danilo Toapanta - Updates to Website</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -77,11 +77,8 @@ window.MathJax = {
 </script>
 <link rel="shortcut icon" href="../../../../../../../../../../../assets/danilo.ico">
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../css/index-posts.css">
-<link rel="stylesheet" href="../css/custom_page_width/800px.css">
 </head>
 
 <body class="floating nav-fixed fullcontent">
@@ -134,7 +131,7 @@ window.MathJax = {
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full blog-page" style="display: none;">
     <div class="quarto-title-banner page-columns page-full">
         <div class="quarto-title column-body">
-            <h1 class="title">DL Part 3</h1>
+            <h1 class="title">Updates to Website</h1>
                 
             <!-- Description Block -->
                         <div>
@@ -178,7 +175,7 @@ window.MathJax = {
         <div>
         <div class="quarto-title-meta-heading">Published</div>
         <div class="quarto-title-meta-contents">
-          <p class="date">December 8, 2023</p>
+          <p class="date">January 2, 2024</p>
         </div>
       </div>
       
@@ -271,7 +268,7 @@ window.MathJax = {
 <main id="title-block-header" class="quarto-title-block default page-columns page-full" style="padding-bottom: 40px;">
 
     <div class="quarto-title column-body" style="margin-bottom: 1em;">
-        <h1 class="title" style="padding-bottom:8px" ;="">DL Part 3</h1>
+        <h1 class="title" style="padding-bottom:8px" ;="">Updates to Website</h1>
         
         <!-- Description Block -->
                     <div>
@@ -350,7 +347,7 @@ window.MathJax = {
         <div>
         <div class="quarto-title-meta-heading">Published</div>
         <div class="quarto-title-meta-contents">
-          <p class="date">December 8, 2023</p>
+          <p class="date">January 2, 2024</p>
         </div>
       </div>
       
@@ -362,280 +359,8 @@ window.MathJax = {
     
 </main>
 
-<!-- \mathbfcal{I} -->
-<section id="q1.1" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="q1.1"><span class="header-section-number">1</span> Q1.1</h2>
-<ol type="1">
-<li>We sample <span class="math inline">\(\textbf{z}_n\)</span> from the the normal distribution <span class="math inline">\(\mathcal(N)(0, \textbf{\textit{I}}_D)\)</span></li>
-<li>We feed the sampled latent vector into the decoder <span class="math inline">\(f_{\theta}(\textbf{z}_n)\)</span></li>
-<li>For every m pixel we sample <span class="math inline">\(x_n\)</span> from the categorical distribution as expressed in fig (5). Ultimately we get <span class="math inline">\(p(x_n | z_n)\)</span> which we can use is to generate an image</li>
-</ol>
-</section>
-<section id="q1.2" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="q1.2"><span class="header-section-number">2</span> Q1.2</h2>
-<center>
-<img src="2023-12-08-20-31-16.png" class="w350 img-fluid">
-</center>
-<pre></pre>
-<ol type="1">
-<li><p>If we use Montecarlo to approximate <span class="math inline">\(\log p(\textbf{x}_n)\)</span> we will be sampling <span class="math inline">\(\textbf{z}_{n}^{(l)}\)</span> from the prior distribution <span class="math inline">\(p(\textbf{z}_n)\)</span>. However, we can see that for most of these samples <span class="math inline">\(p(\textbf{x}_n|\textbf{z}_n^{(l)})\)</span> will be close to zero. This is a problem because we see that in order to sample <span class="math inline">\(\textbf{z}_n\)</span> which is then used to compute <span class="math inline">\(p(\textbf{x}_n|\textbf{z}_n^{(l)})\)</span> we want to fall in the small region represented by the posterior (depicted with blue line contours). Thus we would be sampling many times but only a small portion of those samples would be beneficial to approximate <span class="math inline">\(\log p(\textbf{x}_n)\)</span> thereby not an efficient method.</p></li>
-<li><p>As we can see in the graph this is a 2-dimensional latent space showing the prior and the posterior distributions. If we would increase the dimensionality of this space (the dimensionality of <span class="math inline">\(\textbf{z}_n\)</span> increases as well) then effectively we are increasing the region from which we can sample <span class="math inline">\(\textbf{z}_n\)</span>. Thus, to get samples that contribute to compute <span class="math inline">\(\log p(\textbf{x}_n)\)</span> we would have to sample even more which is inefficient.</p></li>
-</ol>
-</section>
-<section id="q1.3" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="q1.3"><span class="header-section-number">3</span> Q1.3</h2>
-<p>Because the term <span class="math inline">\(KL(q(\textbf{z}_n | \textbf{x}_n) || p(\textbf{z}_n | \textbf{x}_n) ))≥ 0\)</span> is always positive. It follows that:</p>
-<p><span class="math display">\[
-\begin{align*}
-\log p(\textbf{x}_n) - KL(q(\textbf{z}_n | \textbf{x}_n) || p(\textbf{z}_n | \textbf{x}_n) )) &amp;= \mathbb{E}_{q (\textbf{z}_n | \textbf{x}_n)} [\log p(\textbf{x}_n | \textbf{z}_n)] - KL(q(\textbf{z}_n | \textbf{x}_n) || p(\textbf{z}_n))\\
-\log p(\textbf{x}_n) &amp;≥ \mathbb{E}_{q (\textbf{z}_n | \textbf{x}_n)} [\log p(\textbf{x}_n | \textbf{z}_n)] - KL(q(\textbf{z}_n | \textbf{x}_n) || p(\textbf{z}_n)) \tag{2}
-\end{align*}
-\]</span> Therefore the RHS of the equation (2) is a lower bound for <span class="math inline">\(\log p(x)\)</span>.</p>
-</section>
-<section id="q1.4" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="q1.4"><span class="header-section-number">4</span> Q1.4</h2>
-<p>When the lower bound is pushed up effectively the <span class="math inline">\(\log p(\textbf{x}_n)\)</span> is being maximized. Conversely this makes <span class="math inline">\(KL(q(\textbf{z}_n | \textbf{x}_n) || p(\textbf{z}_n | \textbf{x}_n) ))\)</span> to be minimized. This implies:</p>
-<ol type="1">
-<li>The gap to the log-liklelihood <span class="math inline">\(\log p(\textbf{x}_n)\)</span> tightens. This in turn means we have a better generative model.</li>
-<li>If we minimize <span class="math inline">\(KL(q(\textbf{z}_n | \textbf{x}_n) || p(\textbf{z}_n | \textbf{x}_n) ))\)</span> that means <span class="math inline">\(q (\textbf{z}_n | \textbf{x}_n)\)</span> will approximate to the true posterior <span class="math inline">\(p(\textbf{z}_n | \textbf{x}_n))\)</span>. This in turn means that we have a better latent representation. This also means that the problem of <span class="math inline">\(p(\textbf{z}_n | \textbf{x}_n) )\)</span> not being tractable is solved.</li>
-</ol>
-</section>
-<section id="q1.4-1" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="q1.4-1"><span class="header-section-number">5</span> Q1.4</h2>
-<center>
-<img src="imgs/2023-12-09-02-06-15.png" class="w475 img-fluid">
-</center>
-<pre></pre>
-<p>Img Source at: lilianweng.github.io</p>
-<ul>
-<li><p>In the first case the term reconstruction is appropriate because <span class="math inline">\(\mathbb{E}_{q_{\phi} (\textbf{z}_n | \textbf{x}_n)} [\log p(\textbf{x}_n | \textbf{z}_n)]\)</span> represents the expected value of <span class="math inline">\(x\)</span> if we were to sample <span class="math inline">\(z_n\)</span> from the approximated posterior <span class="math inline">\(q_{\phi}(\textbf{z}_n | \textbf{x}_n)\)</span> and then reconstruct it using <span class="math inline">\(p_{\theta}(\textbf{x}_n | \textbf{z}_n) )\)</span>. In other words how well the model predicts/reconstructs an observation from a sample from the variational posterior.</p></li>
-<li><p>For the second case the term regularization is appropriate because the KL-divergence pushes the variational posterior <span class="math inline">\(q_{\phi}(\textbf{z}_n | \textbf{x}_n)\)</span> towards the prior <span class="math inline">\(p_{\theta}(\textbf{z}_n)\)</span>. In other words the KL-divergence term tries to approximate/regulate that the distribution <span class="math inline">\(q_{\phi}(\textbf{z}_n | \textbf{x}_n)\)</span> (blue circle above) be as close as possible to the distribution of the latent variable <span class="math inline">\(p_{\theta}(\textbf{z}_n)\)</span> (red circle).</p></li>
-</ul>
-<!-- 46,59
-The term is appropriate because  
-
-The reconstruction loss measures the difference between the original input and the ouput generated by the decoder. This is what this equation is doing. IT first samples a z from our approximated posterior q(z|x), and then using p(x|z) reconstructs x.   
-
-We do this by first sampling z from our approximated posterior q(z|x), and then using p(x|z) to reconstruct x. 
-Thus this loss measures how well the sample (due to the hint) has been reconstructed. A h
 
 
-Ideally we want this loss to be as close to zero means means the reconstructed data  -->
-</section>
-<section id="q1.5" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="q1.5"><span class="header-section-number">6</span> Q1.5</h2>
-<p>Passing the derivative through samples can be done using the reparameterization trick. In a few sentences, explain why the act of sampling usually prevents us from computing ∇φL, and how the reparameterization trick solves this problem.</p>
-<center>
-<img src="https://www.deeplearningbook.com.br/wp-content/uploads/2019/12/form11.png" class="img-fluid">
-</center>
-<pre></pre>
-<p>Img Source at: deeplearningbook.com</p>
-<p><strong>Why the act of sampling usually prevents us from computing ∇φL?</strong></p>
-<p>This is because sampling <span class="math inline">\(\textbf{z}\)</span> from <span class="math inline">\(q_{\phi}(\textbf{z}_n | \textbf{x}_n)\)</span> directly is not differentiable. To minimize the loss and learn the variational parameters we need this to be differentiable so that we can do backpropagation and thus learn the parameters. This problem can be visualized in the left side of the above picture.</p>
-<p>A way to circumvent this problem is by using the reparametrization trick. Essentially we want to be able to rewrite the expectation so that the distribution w.r.t. which we take the gradient is independent of parameter <span class="math inline">\(\phi\)</span>. To achieve this, we can reparametrize a sample from <span class="math inline">\(q_{\phi}(\textbf{z}_n | \textbf{x}_n)\)</span> by expressing it as a function of a sample <span class="math inline">\(\epsilon\)</span> from some distribution <span class="math inline">\(p(\epsilon)\)</span></p>
-<p><span class="math display">\[
-z = g(\epsilon, \phi)
-\]</span></p>
-<p>Here <span class="math inline">\(g(\epsilon, \phi)\)</span> is the function that maps <span class="math inline">\(\epsilon\)</span> to <span class="math inline">\(z\)</span>. Importantly, this function needs to be differentiable w.r.t <span class="math inline">\(\phi\)</span>, i.e a Gaussian distribution so that <span class="math inline">\(z\)</span> becomes:</p>
-<p><span class="math display">\[
-z = \mu + \sigma \, \odot \, \epsilon \quad \text{with}\quad \epsilon \sim  N(0, I) \tag{1}
-\]</span></p>
-<p>What we accomplish with eq (1) is that now the sampling is done over <span class="math inline">\(\epsilon\)</span>. This means that now we can compute backpropagatin over <span class="math inline">\(\mu, \sigma\)</span> which are deterministic parameters that we can learn to optimize the loss. Recall the loss was composed of two terms the <span class="math inline">\(L_{reg}\)</span> and <span class="math inline">\(L_{recon}\)</span> (which this later is the one we use the reparametrization trick). To wrap up, this idea of sampling with reparametrization can be visualized in the right side of the picture above.</p>
-<p><!-- so that our expectation can be rewriten as follows:
-
-$$
-\nabla_{\phi} E_{q_{\phi}(z)}[f(z)] = E_{p(\epsilon)}[\nabla_{z}f(z)\nabla_{\phi}g(\epsilon, \phi)]
-$$
-
-
-The above equation this allow us is to compute now the gradient of z to do backprogatation. This is illustrated in the picture above in the right side. There we can see that if i.e  $g(\epsilon, \phi)$ is a Gaussian distribution then we would be able to take its gradient. --> <!-- 
-Summing out, we have use this trick so the Montecarlo estimate of the expectation is differentiable w.r.t. $\phi$. This then allow us to compute $L_{recon}$ which is one of the terms that we need to compute the total loss as defined as follows: --></p>
-<!-- 
-
- need to make the stochastic element in  $q_{\phi}(\textbf{z}_n | \textbf{x}_n)$ be independent of $\phi$. Hence, we write $z$ as:
-
-$$
-z = \mu + \sigma \, \odot \, \epsilon \quad \text{with}\quad \epsilon \sim  N(0, I)
-$$
-
- -->
-<center>
-<img src="imgs/2023-12-09-20-06-58.png" class="w550 img-fluid">
-</center>
-<pre></pre>
-<p>Img Source at: regorygundersen.com</p>
-</section>
-<section id="q2.1" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="q2.1"><span class="header-section-number">7</span> Q2.1</h2>
-<ol type="1">
-<li>When q(z|x) is a dirac delta distribution the encoder always produce the same latent code z given input x. That means to obtain q(z) we can sample the encoders ouput for a given number of x inputs to obtain this distribution. We can accomplish this because the encoder will map x to a given z (deterministically) so the more you sample from the encoder given a particular x the more we get close to the true distribution q(z). Analytically, this can be expressed as follows:</li>
-</ol>
-<p><span class="math display">\[
-q(z) = \int_{x} q(z|x) p_d(x) dx
-\]</span><br>
-Where <span class="math inline">\(p_d(x)\)</span> represents the distribution of our data <span class="math inline">\(x\)</span>.</p>
-<ol start="2" type="1">
-<li><p>When the posterior is a Gaussian distribution then the encoder will predict a mean <span class="math inline">\(\mu\)</span> and std <span class="math inline">\(\sigma\)</span> for each latent variable. To obtain q(z), similarly as the previous case, we can sample from q(z|x) and the resulting distribution will be gaussian with the parameters <span class="math inline">\(\mu\)</span> and <span class="math inline">\(\sigma\)</span> dictated by the encoder’s ouput.</p></li>
-<li><p>When an arbitraty complex posterioir distribution is used, we can think of the encoder as a function that takes input x, and random noise <span class="math inline">\(\eta\)</span> to produce a sample from <span class="math inline">\(q(z|x, \eta)\)</span> [Makhzani et al., 2015]. To obtain q(z) similarly as with the previous two methods we will sample as many times possible as to get close to the real distribution. Mathematically, we can express this distribution as follows:</p></li>
-</ol>
-<p><span class="math display">\[
-q(z) = \int_{x} \int_{\eta} q(z|x,\eta) p_d(x) p_{\eta}(\eta) d_{\eta}dx
-\]</span><br>
-Where <span class="math inline">\(p_{\eta}(\eta)\)</span> represents the distribution to account for the random noise.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Research
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<p>The distribution <span class="math inline">\(q(z)\)</span> in the context of autoencoders is the approximation of the posterior distribution <span class="math inline">\(p(z|x)\)</span>, which is the distribution of the latent variables <span class="math inline">\(z\)</span> given an observation <span class="math inline">\(x\)</span>. The method for computing <span class="math inline">\(q(z)\)</span> depends on the assumptions made about the encoder:</p>
-<ol type="1">
-<li><strong>Deterministic function (Dirac delta distribution)</strong>:
-<ul>
-<li>When the encoder is deterministic, <span class="math inline">\(q(z|x)\)</span> is modeled as a Dirac delta distribution centered around a single point, which means it always outputs the same <span class="math inline">\(z\)</span> for the same <span class="math inline">\(x\)</span>.</li>
-<li>Mathematically, for a deterministic encoder, <span class="math inline">\(q(z|x) = \delta(z - f(x))\)</span>, where <span class="math inline">\(f(x)\)</span> is the deterministic function mapping <span class="math inline">\(x\)</span> to <span class="math inline">\(z\)</span>. There is no uncertainty in <span class="math inline">\(z\)</span> given <span class="math inline">\(x\)</span>; the output is a single point in the latent space.</li>
-<li>To compute <span class="math inline">\(q(z)\)</span>, you would essentially just collect the points <span class="math inline">\(z\)</span> for all <span class="math inline">\(x\)</span> in your dataset, which would give you an empirical distribution of the latent codes.</li>
-</ul></li>
-<li><strong>Gaussian posterior</strong>:
-<ul>
-<li>In this case, the encoder outputs parameters of a Gaussian distribution, typically the mean <span class="math inline">\(\mu\)</span> and standard deviation <span class="math inline">\(\sigma\)</span> (or variance <span class="math inline">\(\sigma^2\)</span>) for each latent variable.</li>
-<li><span class="math inline">\(q(z|x)\)</span> is then a Gaussian distribution <span class="math inline">\(\mathcal{N}(z; \mu(x), \sigma^2(x))\)</span>, where <span class="math inline">\(\mu(x)\)</span> and <span class="math inline">\(\sigma^2(x)\)</span> are the outputs of the encoder.</li>
-<li>To compute <span class="math inline">\(q(z)\)</span>, you sample from the Gaussian distribution parameterized by the mean and variance predicted by the encoder for each input <span class="math inline">\(x\)</span>. During training, the reparameterization trick is often used to allow for gradient backpropagation through the random sampling process.</li>
-</ul></li>
-<li><strong>Universal approximator posterior</strong>:
-<ul>
-<li>Here, the encoder is capable of modeling arbitrarily complex distributions, not limited to Gaussian. This can be achieved using normalizing flows, autoregressive models, or other flexible density estimation techniques.</li>
-<li><span class="math inline">\(q(z|x)\)</span> in this case could be any parameterizable distribution that the encoder is designed to approximate.</li>
-<li>Computing <span class="math inline">\(q(z)\)</span> involves using the encoder to output the parameters that define the distribution for each <span class="math inline">\(x\)</span>, and then sampling from this distribution. Depending on the complexity, different techniques such as Monte Carlo sampling may be employed to approximate samples from <span class="math inline">\(q(z|x)\)</span>.</li>
-</ul></li>
-</ol>
-<p>In each case, the encoder learns to map inputs <span class="math inline">\(x\)</span> to the latent space in a way that captures the underlying distribution of the data. For deterministic encoders, this is straightforward, but for stochastic encoders (like the latter two cases), the process involves learning the parameters of the distributions that can generate the observed data when sampled.</p>
-<section id="nd-source" class="level3" data-number="7.1">
-<h3 data-number="7.1" class="anchored" data-anchor-id="nd-source"><span class="header-section-number">7.1</span> 2nd Source</h3>
-<p><strong>Question 2.1:</strong></p>
-<p><strong>How to compute q(z)</strong> based on each of the following encoders:</p>
-<ul>
-<li><p>A deterministic function, i.e.&nbsp;q(z|x) being a dirac delta distribution</p></li>
-<li><p>Gaussian posterior, i.e.&nbsp;the encoder predicts a mean and std per latent</p></li>
-<li><p>A universal approximator posterior, i.e.&nbsp;q(z|x) being arbitrary complex distributions</p></li>
-</ul>
-<p><strong>Answer:</strong></p>
-<p><strong>Deterministic function:</strong></p>
-<p>If q(z|x) is a dirac delta distribution, then q(z) is simply the distribution of the latent codes z. This distribution can be computed by sampling from the encoder’s output and then taking the average.</p>
-<p><strong>Gaussian posterior:</strong></p>
-<p>If the encoder predicts a mean and std per latent, then q(z) is a Gaussian distribution with the predicted mean and std.</p>
-<p><strong>Universal approximator posterior:</strong></p>
-<p>If q(z|x) is an arbitrary complex distribution, then q(z) can be computed by using a sampling-based approach. For example, we can sample from the encoder’s output and then take the average.</p>
-</section>
-</div>
-</div>
-</div>
-</section>
-<section id="q2.2" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="q2.2"><span class="header-section-number">8</span> Q2.2</h2>
-<p>In vanilla GANs, mode collapse problem occur because the generator is unable to produce diverse data samples. This could be as we saw in the lectures with the flowers example that the generator may have picked one single data point that believes it will fool the discriminator. If this strategy is sacksful then the generator has no reason to explore other possible data samples. Thus the generator gets stuck in producing images that look repetitive. AAE mitigate this problem by encouraging/guiding the generator to produce latent codes that are distributed according to p(z). We can do this because the adversarial network provides feedback to the encoder, which is also the generator in this adversarial network, about how well its latent codes match the prior distribution p(z). Thus, this procedure allows to the discriminator to give a signal on how the encoder is doing. Before with vanilla GANs there was not feedback loop that will guide the encoder to be diverse with this second network we regularize the autoencoder from overfitting to the training data.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="true" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Research
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse show">
-<div class="callout-body-container callout-body">
-<p>Adversarial autoencoders (AAEs) are a type of generative model that can help to reduce the mode collapse problem compared to the vanilla GAN. AAE has the following advantages over GANs:</p>
-<ul>
-<li><p><strong>Encourages the generator to learn the latent space of the data:</strong> The autoencoder in AAE learns the latent space of the data by compressing and then reconstructing the data. This helps to ensure that the generator learns a representation of the data that is consistent with the latent space.</p></li>
-<li><p><strong>Regularizes the generator:</strong> The autoencoder in AAE also acts as a regularizer for the generator. This helps to prevent the generator from overfitting to the data and to instead focus on learning a general representation of the data.</p></li>
-<li><p><strong>Constrains the generator to generate realistic data:</strong> The autoencoder in AAE helps to constrain the generator to generate realistic data. This is because the autoencoder needs to be able to reconstruct the data that the generator generates. As a result, the generator is encouraged to generate data that is similar to the data that was used to train the autoencoder.</p></li>
-</ul>
-<p>Overall, AAE is a more stable and robust method for training GANs than the vanilla GAN. This is because AAE helps to prevent mode collapse and to encourage the generator to learn a good representation of the data. As a result, AAE can be used to train more realistic and diverse generative models.</p>
-<p>Here is a table that summarizes the differences between AAE and GANs:</p>
-<table class="table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Feature</th>
-<th>Adversarial Autoencoder (AAE)</th>
-<th>Vanilla GAN</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Use of autoencoder</td>
-<td>Yes</td>
-<td>No</td>
-</tr>
-<tr class="even">
-<td>Regularization</td>
-<td>Autoencoder acts as regularizer</td>
-<td>No autoencoder</td>
-</tr>
-<tr class="odd">
-<td>Consistency with latent space</td>
-<td>Encouraged by autoencoder</td>
-<td>Not explicitly encouraged</td>
-</tr>
-<tr class="even">
-<td>Likelihood of mode collapse</td>
-<td>Lower</td>
-<td>Higher</td>
-</tr>
-<tr class="odd">
-<td>Realism of generated samples</td>
-<td>Higher</td>
-<td>Lower</td>
-</tr>
-<tr class="even">
-<td>Diversity of generated samples</td>
-<td>Higher</td>
-<td>Lower</td>
-</tr>
-</tbody>
-</table>
-<p>2.2 mine</p>
-<p>The distribution q(z) helps the generator guide the generator in generating realistic data samples. The generator of the adversarial network is also the encoder of the autoencoder q(z|x). The goal of the adversarial autoencoder is to train the encoder to produce latent codes that are distributed according to p(z). The adversarial network helps to achieve this goal by providing feedback to the encoder about how well its latent codes match the prior distribution p(z). The discriminator in the adversarial network is trained to distinguish between real data and data that is generated by the autoencoder. The encoder is trained to produce latent codes that are so realistic that the discriminator cannot tell that they are not real.</p>
-<p>By using an adversarial network, the adversarial autoencoder can be trained to generate data that is both realistic and diverse.</p>
-<p>Once the training procedure is done, the decoder of the autoencoder will define a generative model that maps the imposed prior of p(z) to the data distribution</p>
-<section id="nd-source-1" class="level3" data-number="8.1">
-<h3 data-number="8.1" class="anchored" data-anchor-id="nd-source-1"><span class="header-section-number">8.1</span> 2nd Source:</h3>
-<p><strong>Question 2.2:</strong></p>
-<p><strong>How adversarial auto-encoders can reduce the mode collapse problem compared to the vanilla GAN.</strong></p>
-<p><strong>Answer:</strong></p>
-<p>Adversarial auto-encoders (AAEs) can reduce the mode collapse problem compared to vanilla GANs in a few ways. First, the autoencoder component of the AAE helps to regularize the generator and prevent it from overfitting to the training data. Second, the adversarial component of the AAE helps to encourage the generator to produce diverse samples.</p>
-<p>Here is a more detailed explanation of how each of these components contributes to reducing mode collapse:</p>
-<ul>
-<li><p><strong>Autoencoder regularization:</strong> The autoencoder component of the AAE is trained to reconstruct the input data. This helps to regularize the generator and prevent it from overfitting to the training data. Overfitting is a major cause of mode collapse in GANs, so by preventing overfitting, the AAE can help to reduce mode collapse.</p></li>
-<li><p><strong>Adversarial diversity:</strong> The adversarial component of the AAE is trained to distinguish between real data and fake data generated by the generator. This encourages the generator to produce diverse samples, so that it can fool the discriminator. Mode collapse occurs when the generator learns to produce a small number of samples that can fool the discriminator. By encouraging the generator to produce diverse samples, the adversarial component of the AAE can help to reduce mode collapse.</p></li>
-</ul>
-<p>Overall, AAEs are a more robust and stable method for training GANs than vanilla GANs. This is because AAEs help to prevent overfitting and encourage diversity, which are two common causes of mode collapse in GANs.</p>
-<p>AAE can reduce this problem by imposing a prior distribution p(z) on the latent codes as this helps to:</p>
-<ol type="1">
-<li>Regularize the autoencoder from overfitting to the training data</li>
-<li>Guide the generated data to follow a specific distribution p(z) so as to produce diverse samples.</li>
-</ol>
-<p>This helps to mitigate the mode collapse problem as how we saw the example in the lectures with the flowers. All generated flowers would be similar. There was no diversity. Thus if we can encourage the model to generate diverse samples then we can solve this problem. By guide here we mean that the adversarial network in this architecture will try to make</p>
-<p>The distribution q(z) helps the generator guide the generator in generating realistic data samples. The generator of the adversarial network is also the encoder of the autoencoder q(z|x). The goal of the adversarial autoencoder is to train the encoder to produce latent codes that are distributed according to p(z). The adversarial network helps to achieve this goal by providing feedback to the encoder about how well its latent codes match the prior distribution p(z). The discriminator in the adversarial network is trained to distinguish between real data and data that is generated by the autoencoder. The encoder is trained to produce latent codes that are so realistic that the discriminator cannot tell that they are not real.</p>
-</section>
-</div>
-</div>
-</div>
-
-
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
