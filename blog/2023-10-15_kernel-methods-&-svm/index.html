@@ -8,7 +8,7 @@
 
 <meta name="author" content="Danilo Toapanta">
 <meta name="dcterms.date" content="2023-10-15">
-<meta name="description" content="Lecture Notes UvA on 9-10-2023">
+<meta name="description" content="Lecture Notes on 9-10-2023">
 
 <title>Danilo Toapanta - Kernel methods &amp; SVM</title>
 <style>
@@ -138,7 +138,7 @@ window.MathJax = {
             <!-- Description Block -->
                         <div>
                 <div class="description">
-                    Lecture Notes UvA on 9-10-2023
+                    Lecture Notes on 9-10-2023
                 </div>
             </div>
                         
@@ -152,8 +152,8 @@ window.MathJax = {
                             </a>
                         </div> 
                                             <div class="quarto-category">
-                            <a href="../../blog/#category=Education">
-                                Education
+                            <a href="../../blog/#category=Machine Learning">
+                                Machine Learning
                             </a>
                         </div> 
                                             <div class="quarto-category">
@@ -280,7 +280,7 @@ window.MathJax = {
         <!-- Description Block -->
                     <div>
                 <div class="description">
-                    Lecture Notes UvA on 9-10-2023
+                    Lecture Notes on 9-10-2023
                 </div>
             </div>
         
@@ -297,9 +297,9 @@ window.MathJax = {
                                 All
                             </a>
                         </div>
-                                            <div id="Education" class="quarto-category">
-                            <a href="../../blog/#category=Education">
-                                Education
+                                            <div id="Machine Learning" class="quarto-category">
+                            <a href="../../blog/#category=Machine Learning">
+                                Machine Learning
                             </a>
                         </div>
                                             <div id="TAGS" class="quarto-category">
@@ -330,12 +330,12 @@ window.MathJax = {
                                 All
                             </a>
                         </div>
-                                            <div id="Education-from-here" class="quarto-category tags-title" style="display: none;">
-                            <a href="../../blog/#category=Education">
+                                            <div id="Machine Learning-from-here" class="quarto-category tags-title" style="display: none;">
+                            <a href="../../blog/#category=Machine Learning">
                                <!-- <span class="hasth-tag">
                                 #
                                 </span> -->
-                                Education
+                                Machine Learning
                             </a>
                         </div>
                                             <div id="TAGS-from-here" class="quarto-category tags-title" style="display: none;">
@@ -393,7 +393,7 @@ window.MathJax = {
 <li>Find model parameters via ML, MAP (or use fully Bayesian)</li>
 <li>If we want to avoid overfilling we include a prior
 <center>
-<img src="2023-10-15-00-31-35.png" class="w250 img-fluid">
+<img src="imgs/2023-10-15-00-31-35.png" class="w250 img-fluid">
 </center>
 <pre></pre></li>
 </ul></li>
@@ -407,7 +407,7 @@ window.MathJax = {
 </li>
 <li>If we want to avoid overfilling we include a prior
 <center>
-<img src="2023-10-15-00-29-12.png" class="w250 img-fluid">
+<img src="imgs/2023-10-15-00-29-12.png" class="w250 img-fluid">
 </center>
 <pre></pre></li>
 </ul></li>
@@ -475,7 +475,7 @@ window.MathJax = {
 <section id="so-far-parametric-models" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="so-far-parametric-models"><span class="header-section-number">2</span> So Far: Parametric Models</h2>
 <center>
-<img src="2023-10-15-10-31-31.png" class="w550 img-fluid">
+<img src="imgs/2023-10-15-10-31-31.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <ul>
@@ -485,7 +485,7 @@ window.MathJax = {
 <section id="parametric-vs-non-parametric-models" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="parametric-vs-non-parametric-models"><span class="header-section-number">3</span> Parametric vs Non-Parametric Models</h2>
 <center>
-<img src="2023-10-15-10-38-54.png" class="w550 img-fluid">
+<img src="imgs/2023-10-15-10-38-54.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <ul>
@@ -500,7 +500,7 @@ This means we have a continuos representation of our space. We can sample as fin
 <section id="non-parametric-kernel-methods" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="non-parametric-kernel-methods"><span class="header-section-number">4</span> Non-Parametric Kernel Methods</h2>
 <center>
-<img src="2023-10-15-10-56-47.png" class="w550 img-fluid">
+<img src="imgs/2023-10-15-10-56-47.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p>Ridge regression can be defined in kernelize form without using explicit using basis functions.</p>
@@ -513,29 +513,29 @@ This means we have a continuos representation of our space. We can sample as fin
 <li>The kernel it just computing the similarity between <span class="math inline">\(x\)</span> and <span class="math inline">\(x'\)</span></li>
 </ul>
 <center>
-<img src="2023-10-15-11-26-12.png" class="w550 img-fluid">
+<img src="imgs/2023-10-15-11-26-12.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 </section>
 <section id="kernelized-ridge-regression" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="kernelized-ridge-regression"><span class="header-section-number">5</span> Kernelized Ridge Regression</h2>
 <center>
-<img src="2023-10-15-11-26-58.png" class="w550 img-fluid">
+<img src="imgs/2023-10-15-11-26-58.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <center>
-<img src="2023-10-15-11-28-35.png" class="w550 img-fluid">
+<img src="imgs/2023-10-15-11-28-35.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <center>
-<img src="2023-10-15-11-29-00.png" class="w550 img-fluid">
+<img src="imgs/2023-10-15-11-29-00.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 </section>
 <section id="primal-vs-dualkernel-approach" class="level2" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="primal-vs-dualkernel-approach"><span class="header-section-number">6</span> Primal vs Dual/Kernel Approach</h2>
 <center>
-<img src="2023-10-15-11-30-21.png" class="w550 img-fluid">
+<img src="imgs/2023-10-15-11-30-21.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 </section>
@@ -563,7 +563,7 @@ How it works?
 </div>
 </div>
 <center>
-<img src="2023-10-15-13-12-48.png" class="w550 img-fluid">
+<img src="imgs/2023-10-15-13-12-48.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p>If a choice any basis function it induces a kernel simply by computing inner product in the new feature space</p>
@@ -571,7 +571,7 @@ How it works?
 <section id="deriving-the-corresponding-feature-vector" class="level2" data-number="8">
 <h2 data-number="8" class="anchored" data-anchor-id="deriving-the-corresponding-feature-vector"><span class="header-section-number">8</span> Deriving the corresponding feature vector</h2>
 <center>
-<img src="2023-10-15-14-24-31.png" class="w550 img-fluid">
+<img src="imgs/2023-10-15-14-24-31.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p>For every positive definite kernel there exist a set of basis from <span class="math inline">\(R^d\)</span> to <span class="math inline">\(R^M\)</span>. Meaning there would be a set of basis which means instead of solving for the basis we can just get a valid kernel and not learn the basis</p>
@@ -594,7 +594,7 @@ Why do I want to go from basis (finite) to valid kernels (can be infinitely?
 <section id="note-on-infinite-dimensional-feature-space-of-gaussian-kernels" class="level3" data-number="8.1">
 <h3 data-number="8.1" class="anchored" data-anchor-id="note-on-infinite-dimensional-feature-space-of-gaussian-kernels"><span class="header-section-number">8.1</span> Note on infinite dimensional feature space of Gaussian kernels</h3>
 <center>
-<img src="2023-10-15-14-49-56.png" class="w550 img-fluid">
+<img src="imgs/2023-10-15-14-49-56.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 </section>
@@ -602,14 +602,14 @@ Why do I want to go from basis (finite) to valid kernels (can be infinitely?
 <section id="kernel-trick-kernel-substitution" class="level2" data-number="9">
 <h2 data-number="9" class="anchored" data-anchor-id="kernel-trick-kernel-substitution"><span class="header-section-number">9</span> Kernel Trick/ Kernel substitution</h2>
 <center>
-<img src="2023-10-15-14-49-32.png" class="w550 img-fluid">
+<img src="imgs/2023-10-15-14-49-32.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 </section>
 <section id="example-polynomial-kernel" class="level2" data-number="10">
 <h2 data-number="10" class="anchored" data-anchor-id="example-polynomial-kernel"><span class="header-section-number">10</span> Example: polynomial kernel</h2>
 <center>
-<img src="2023-10-15-13-50-21.png" class="w550 img-fluid">
+<img src="imgs/2023-10-15-13-50-21.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p>This shows that if we have this polynomial kernel then that we can decompose it into <span class="math inline">\(\mathbb{\phi}(\textbf{x}_n)^T\mathbb{\phi}(\textbf{x}_n)\)</span></p>
@@ -618,7 +618,7 @@ Why do I want to go from basis (finite) to valid kernels (can be infinitely?
 <section id="examples-of-valid-kernels" class="level2" data-number="11">
 <h2 data-number="11" class="anchored" data-anchor-id="examples-of-valid-kernels"><span class="header-section-number">11</span> Examples of valid Kernels</h2>
 <center>
-<img src="2023-10-15-13-54-26.png" class="w550 img-fluid">
+<img src="imgs/2023-10-15-13-54-26.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <ul>
@@ -629,7 +629,7 @@ Why do I want to go from basis (finite) to valid kernels (can be infinitely?
 <h2 data-number="12" class="anchored" data-anchor-id="support-vector-machines"><span class="header-section-number">12</span> Support vector machines</h2>
 <p>SVM are kernel methods but with sparse solutions. MEaning some <span class="math inline">\(a_n = 0\)</span> so that we do not compute all datapoints but only relevant. The ones that are relevant are called <strong>suport vectors</strong></p>
 <center>
-<img src="2023-10-15-18-20-46.png" class="w550 img-fluid">
+<img src="imgs/2023-10-15-18-20-46.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <ul>
@@ -639,7 +639,7 @@ Why do I want to go from basis (finite) to valid kernels (can be infinitely?
 <section id="linearly-separable-dataset" class="level2" data-number="13">
 <h2 data-number="13" class="anchored" data-anchor-id="linearly-separable-dataset"><span class="header-section-number">13</span> Linearly Separable dataset</h2>
 <center>
-<img src="2023-10-15-18-23-40.png" class="w550 img-fluid">
+<img src="imgs/2023-10-15-18-23-40.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <ul>
@@ -649,7 +649,7 @@ Why do I want to go from basis (finite) to valid kernels (can be infinitely?
 <p><strong>Goal:</strong> we want to maximize the margin to have a stable classifier. To classify the size of the margin we can use some linear projections to the boundary we see this in the next topic</p>
 </blockquote>
 <center>
-<img src="2023-10-15-18-24-30.png" class="w550 img-fluid">
+<img src="imgs/2023-10-15-18-24-30.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p>The graph above is taking into account that we classify the data correctly in two parts so the blue points in one side the red in another.</p>
@@ -658,14 +658,14 @@ Why do I want to go from basis (finite) to valid kernels (can be infinitely?
 <h2 data-number="14" class="anchored" data-anchor-id="maximum-margin-classifier"><span class="header-section-number">14</span> Maximum Margin Classifier</h2>
 <p>Now that we have a expression for the margin our objective is to <strong>maximize</strong> this margin</p>
 <center>
-<img src="2023-10-15-19-42-31.png" class="w550 img-fluid">
+<img src="imgs/2023-10-15-19-42-31.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <ul>
 <li>In this case we have <span class="math inline">\(r_n\)</span> so we could tune <span class="math inline">\(w\)</span> to obtain the maximum margin to a point. How do we do this? we follow:</li>
 </ul>
 <center>
-<img src="2023-10-15-21-31-23.png" class="w550 img-fluid">
+<img src="imgs/2023-10-15-21-31-23.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <ol type="1">
@@ -677,7 +677,7 @@ Why do I want to go from basis (finite) to valid kernels (can be infinitely?
 <li>We maximize the size of the margin given by 1/|W| with the inequality constraint</li>
 </ol>
 <center>
-<img src="2023-10-15-21-44-42.png" class="w550 img-fluid">
+<img src="imgs/2023-10-15-21-44-42.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -701,15 +701,15 @@ Maximum Margin Classifier: Goal
 <section id="constrained-optimization-inequality-constraint" class="level2" data-number="15">
 <h2 data-number="15" class="anchored" data-anchor-id="constrained-optimization-inequality-constraint"><span class="header-section-number">15</span> Constrained optimization (inequality constraint)</h2>
 <center>
-<img src="2023-10-16-00-53-20.png" class="w550 img-fluid">
+<img src="imgs/2023-10-16-00-53-20.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <center>
-<img src="2023-10-16-00-54-51.png" class="w550 img-fluid">
+<img src="imgs/2023-10-16-00-54-51.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <center>
-<img src="2023-10-16-00-54-43.png" class="w550 img-fluid">
+<img src="imgs/2023-10-16-00-54-43.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <ul>
@@ -741,7 +741,7 @@ Then you approach the limit from below</li>
 <section id="calculating-the-lagrange" class="level3" data-number="16.1">
 <h3 data-number="16.1" class="anchored" data-anchor-id="calculating-the-lagrange"><span class="header-section-number">16.1</span> Calculating the Lagrange</h3>
 <center>
-<img src="2023-10-16-12-37-05.png" class="w550 img-fluid">
+<img src="imgs/2023-10-16-12-37-05.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -773,7 +773,7 @@ Steps to compute the lagrange
 <li>For the case of SVM we start by step 1.</li>
 </ol>
 <center>
-<img src="2023-10-16-13-08-50.png" class="w550 img-fluid">
+<img src="imgs/2023-10-16-13-08-50.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p>We write the primal Lagrange with the constriant. Also, we introduce the dual variables (lagrange multipliers) <span class="math inline">\(\textbf{a}_n\)</span> meaning for every each datapoint we want it to lie in the proper side of the boundary. This condition that <span class="math inline">\(\textbf{a}_n\)</span> imposes comes from the <strong>KKT</strong> conditions</p>
@@ -781,12 +781,12 @@ Steps to compute the lagrange
 <li>We solve for <span class="math inline">\(\frac{\partial L}{\partial \textbf{w}}=0\)</span>, <span class="math inline">\(\frac{\partial L}{\partial b}=0\)</span> and rewrite the Primal to the Dual Lagrangian</li>
 </ol>
 <center>
-<img src="2023-10-16-13-09-11.png" class="w550 img-fluid">
+<img src="imgs/2023-10-16-13-09-11.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 Once we have those parameters we plug in again in the Lagrange in step 1. Then the function will be dependent on <span class="math inline">\(a_n\)</span> which is then called the <strong>Dual Lagrangian</strong>
 <center>
-<img src="2023-10-16-13-47-54.png" class="w550 img-fluid">
+<img src="imgs/2023-10-16-13-47-54.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <blockquote class="blockquote">
@@ -794,7 +794,7 @@ Once we have those parameters we plug in again in the Lagrange in step 1. Then t
 </blockquote>
 <p>Now that we have <strong>derived</strong> the dual we can now apply the kernel trick as follows:</p>
 <center>
-<img src="2023-10-17-12-57-17.png" class="w550 img-fluid">
+<img src="imgs/2023-10-17-12-57-17.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 </section>
@@ -816,7 +816,7 @@ Kernel trick uses fewer points rather than <span class="math inline">\(x_n\)</sp
 </div>
 </div>
 <center>
-<img src="2023-10-17-13-08-25.png" class="w550 img-fluid">
+<img src="imgs/2023-10-17-13-08-25.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 </section>
@@ -825,13 +825,13 @@ Kernel trick uses fewer points rather than <span class="math inline">\(x_n\)</sp
 <p>So far we have solve <span class="math inline">\(y(\textbf{x})\)</span> but we still have <span class="math inline">\(\textbf{b}\)</span>. So now we solve for this latter variable:</p>
 <p>Recall we have the constraint that we derive deriving the primal wrt to <span class="math inline">\(b\)</span>:</p>
 <center>
-<img src="2023-10-17-16-32-26.png" class="w100 img-fluid">
+<img src="imgs/2023-10-17-16-32-26.png" class="w100 img-fluid">
 </center>
 <pre></pre>
 <p>That means I can pick whathever <span class="math inline">\(\textbf{b}\)</span> I want as long the KKT constraints are satisfied</p>
 <p>No we use the final constraint that <span class="math inline">\(t_ny_n(x)=1\)</span></p>
 <center>
-<img src="2023-10-17-16-44-56.png" class="w550 img-fluid">
+<img src="imgs/2023-10-17-16-44-56.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <ul>
@@ -841,7 +841,7 @@ Kernel trick uses fewer points rather than <span class="math inline">\(x_n\)</sp
 <section id="maximum-margin-classifier-contours" class="level2" data-number="19">
 <h2 data-number="19" class="anchored" data-anchor-id="maximum-margin-classifier-contours"><span class="header-section-number">19</span> Maximum Margin Classifier: Contours</h2>
 <center>
-<img src="2023-10-17-16-57-50.png" class="w550 img-fluid">
+<img src="imgs/2023-10-17-16-57-50.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <ul>
@@ -853,7 +853,7 @@ Kernel trick uses fewer points rather than <span class="math inline">\(x_n\)</sp
 <section id="note-on-outliers" class="level2" data-number="20">
 <h2 data-number="20" class="anchored" data-anchor-id="note-on-outliers"><span class="header-section-number">20</span> Note on outliers</h2>
 <center>
-<img src="2023-10-17-17-04-22.png" class="w550 img-fluid">
+<img src="imgs/2023-10-17-17-04-22.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p>Due to the capability of the Maximum Margin Classifier all outliers would be calssified well which sometimes may not be desirable, to avoid this irregular boundaries we introduce <em>slackness variables</em>. This notion leads to SVM with <strong>Soft Margins</strong></p>
@@ -861,7 +861,7 @@ Kernel trick uses fewer points rather than <span class="math inline">\(x_n\)</sp
 <section id="soft-margin-classifiers" class="level2" data-number="21">
 <h2 data-number="21" class="anchored" data-anchor-id="soft-margin-classifiers"><span class="header-section-number">21</span> Soft Margin Classifiers</h2>
 <center>
-<img src="2023-10-17-17-11-23.png" class="w550 img-fluid">
+<img src="imgs/2023-10-17-17-11-23.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <ul>
@@ -869,7 +869,7 @@ Kernel trick uses fewer points rather than <span class="math inline">\(x_n\)</sp
 <li>Penalty is proportional to the boundary</li>
 </ul>
 <center>
-<img src="2023-10-17-19-20-21.png" class="w550 img-fluid">
+<img src="imgs/2023-10-17-19-20-21.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p>So now because we introduce this slack variable we have a new constraint optimization problem.</p>
@@ -877,7 +877,7 @@ Kernel trick uses fewer points rather than <span class="math inline">\(x_n\)</sp
 <section id="maximum-margin-classifiers-soft-margins" class="level2" data-number="22">
 <h2 data-number="22" class="anchored" data-anchor-id="maximum-margin-classifiers-soft-margins"><span class="header-section-number">22</span> Maximum Margin Classifiers: Soft Margins</h2>
 <center>
-<img src="2023-10-17-19-39-44.png" class="w550 img-fluid">
+<img src="imgs/2023-10-17-19-39-44.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <ul>
@@ -886,7 +886,7 @@ Kernel trick uses fewer points rather than <span class="math inline">\(x_n\)</sp
 </ul>
 <p><strong>Solving steps 1 -&gt; 2:</strong></p>
 <center>
-<img src="2023-10-17-19-51-50.png" class="w550 img-fluid">
+<img src="imgs/2023-10-17-19-51-50.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <ul>
@@ -898,19 +898,19 @@ Kernel trick uses fewer points rather than <span class="math inline">\(x_n\)</sp
 <li>Solving the derivatives for the primal variables <span class="math inline">\(\textbf{w}\)</span>, <span class="math inline">\(\textbf{b}\)</span> and <span class="math inline">\(\xi_n\)</span></li>
 </ul>
 <center>
-<img src="2023-10-17-19-57-56.png" class="w550 img-fluid">
+<img src="imgs/2023-10-17-19-57-56.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p><strong>Solving mid-step: Box constraints:</strong></p>
 <center>
-<img src="2023-10-17-21-32-47.png" class="w550 img-fluid">
+<img src="imgs/2023-10-17-21-32-47.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <ul>
 <li>The box constraint comes from the green highlighted equations</li>
 </ul>
 <center>
-<img src="2023-10-17-21-41-35.png" class="w550 img-fluid">
+<img src="imgs/2023-10-17-21-41-35.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 </section>
@@ -933,7 +933,7 @@ Kernel trick uses fewer points rather than <span class="math inline">\(x_n\)</sp
 <strong>Before</strong> &amp; <strong>After</strong><br>
 
 <center>
-<img src="2023-10-17-21-51-07.png" class="w250 img-fluid"><img src="2023-10-17-21-50-19.png" class="w275 img-fluid">
+<img src="imgs/2023-10-17-21-51-07.png" class="w250 img-fluid"><img src="imgs/2023-10-17-21-50-19.png" class="w275 img-fluid">
 </center>
 <pre></pre></li>
 </ul></li>

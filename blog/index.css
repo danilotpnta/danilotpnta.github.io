@@ -178,18 +178,40 @@ table.quarto-listing-table a {
     /* margin-bottom: 1.5rem; */
 }
 
+
+a.tag {
+    text-decoration: none;
+    margin: 0 0rem !important;
+    /* background: #f6f6f6 !important; */
+    border: 1px solid #7b7a7a52;
+    border-radius: 6px;
+    /* color: var(--font-color-base); */
+    font-size: .8rem !important;
+    font-weight: 400;
+    padding: 0.1rem 0.27rem;
+}
+
+
+.list-blog-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .3rem;
+}
+
+
+
+.list-blog a {
+    background-color: transparent;
+    font-size: 0.9rem;
+    margin: 0 -.3rem;
+    padding: .0rem .5rem;
+}
+
 a.category {
     align-items: center;
     display: flex;
     justify-content: space-between;
     text-decoration: none;
-}
-
-.list-blog a {
-    background-color: transparent;
-    font-size: 1rem;
-    margin: 0 -.3rem;
-    padding: .0rem .5rem;
 }
 
 .category .count {

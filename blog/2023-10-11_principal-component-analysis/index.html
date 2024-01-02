@@ -8,7 +8,7 @@
 
 <meta name="author" content="Danilo Toapanta">
 <meta name="dcterms.date" content="2023-10-11">
-<meta name="description" content="Lecture Notes UvA on 9-10-2023">
+<meta name="description" content="Lecture Notes on 9-10-2023">
 
 <title>Danilo Toapanta - Principal Component Analysis (PCA)</title>
 <style>
@@ -138,7 +138,7 @@ window.MathJax = {
             <!-- Description Block -->
                         <div>
                 <div class="description">
-                    Lecture Notes UvA on 9-10-2023
+                    Lecture Notes on 9-10-2023
                 </div>
             </div>
                         
@@ -152,8 +152,8 @@ window.MathJax = {
                             </a>
                         </div> 
                                             <div class="quarto-category">
-                            <a href="../../blog/#category=Education">
-                                Education
+                            <a href="../../blog/#category=Machine Learning">
+                                Machine Learning
                             </a>
                         </div> 
                                             <div class="quarto-category">
@@ -285,7 +285,7 @@ window.MathJax = {
         <!-- Description Block -->
                     <div>
                 <div class="description">
-                    Lecture Notes UvA on 9-10-2023
+                    Lecture Notes on 9-10-2023
                 </div>
             </div>
         
@@ -302,9 +302,9 @@ window.MathJax = {
                                 All
                             </a>
                         </div>
-                                            <div id="Education" class="quarto-category">
-                            <a href="../../blog/#category=Education">
-                                Education
+                                            <div id="Machine Learning" class="quarto-category">
+                            <a href="../../blog/#category=Machine Learning">
+                                Machine Learning
                             </a>
                         </div>
                                             <div id="TAGS" class="quarto-category">
@@ -340,12 +340,12 @@ window.MathJax = {
                                 All
                             </a>
                         </div>
-                                            <div id="Education-from-here" class="quarto-category tags-title" style="display: none;">
-                            <a href="../../blog/#category=Education">
+                                            <div id="Machine Learning-from-here" class="quarto-category tags-title" style="display: none;">
+                            <a href="../../blog/#category=Machine Learning">
                                <!-- <span class="hasth-tag">
                                 #
                                 </span> -->
-                                Education
+                                Machine Learning
                             </a>
                         </div>
                                             <div id="TAGS-from-here" class="quarto-category tags-title" style="display: none;">
@@ -406,7 +406,7 @@ window.MathJax = {
 <p>Imagine I have the bottom right plot in multiple dimensions so not only 2D dimensions. I can compute a mean and a covariance matrix to fit this data.</p>
 <p>Now I pick only line and I will fit the data in 1D-dimension i.e using Gaussian with the mean and convariance from the original plot. This mapping depends on the direction on the line for the PCA, imagine now the green line below then the gaussian will look different</p>
 <center>
-<img src="2023-10-11-08-34-05.png" class="w500 img-fluid">
+<img src="imgs/2023-10-11-08-34-05.png" class="w500 img-fluid">
 </center>
 <pre></pre>
 <ul>
@@ -430,20 +430,20 @@ window.MathJax = {
 <h2 data-number="5" class="anchored" data-anchor-id="maximizing-the-variance-of-1-component"><span class="header-section-number">5</span> Maximizing the variance of 1 component</h2>
 <p>The principal components are the <span class="math inline">\(u_1\)</span> the lines (the directions)</p>
 <center>
-<img src="2023-10-12-20-20-56.png" class="w575 img-fluid">
+<img src="imgs/2023-10-12-20-20-56.png" class="w575 img-fluid">
 </center>
 <pre></pre>
 <section id="pca-via-maximum-variance" class="level3" data-number="5.1">
 <h3 data-number="5.1" class="anchored" data-anchor-id="pca-via-maximum-variance"><span class="header-section-number">5.1</span> PCA via maximum variance</h3>
 <center>
-<img src="2023-10-13-09-49-50.png" class="w550 img-fluid">
+<img src="imgs/2023-10-13-09-49-50.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 </section>
 <section id="reminder-eigen-de-composition" class="level3" data-number="5.2">
 <h3 data-number="5.2" class="anchored" data-anchor-id="reminder-eigen-de-composition"><span class="header-section-number">5.2</span> Reminder: eigen de-composition</h3>
 <center>
-<img src="2023-10-12-20-20-09.png" class="w550 img-fluid">
+<img src="imgs/2023-10-12-20-20-09.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p>Remarks:</p>
@@ -456,21 +456,21 @@ window.MathJax = {
 <section id="how-to-choose-m" class="level3" data-number="5.3">
 <h3 data-number="5.3" class="anchored" data-anchor-id="how-to-choose-m"><span class="header-section-number">5.3</span> How to choose M?</h3>
 <center>
-<img src="2023-10-12-20-27-46.png" class="w550 img-fluid">
+<img src="imgs/2023-10-12-20-27-46.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 </section>
 <section id="feature-decorrelation" class="level3" data-number="5.4">
 <h3 data-number="5.4" class="anchored" data-anchor-id="feature-decorrelation"><span class="header-section-number">5.4</span> Feature Decorrelation</h3>
 <center>
-<img src="2023-10-13-09-51-53.png" class="w550 img-fluid">
+<img src="imgs/2023-10-13-09-51-53.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 </section>
 <section id="applications-whitening" class="level3" data-number="5.5">
 <h3 data-number="5.5" class="anchored" data-anchor-id="applications-whitening"><span class="header-section-number">5.5</span> Applications: Whitening</h3>
 <center>
-<img src="2023-10-13-09-53-03.png" class="w550 img-fluid">
+<img src="imgs/2023-10-13-09-53-03.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 </section>
@@ -504,7 +504,7 @@ Recall difference in Discrete and Continuous latent variable
 <section id="continuous-latent-variable-model" class="level3" data-number="6.1">
 <h3 data-number="6.1" class="anchored" data-anchor-id="continuous-latent-variable-model"><span class="header-section-number">6.1</span> Continuous latent variable model</h3>
 <center>
-<img src="2023-10-13-12-06-24.png" class="w500 img-fluid">
+<img src="imgs/2023-10-13-12-06-24.png" class="w500 img-fluid">
 </center>
 <pre></pre>
 <ul>
@@ -515,7 +515,7 @@ Recall difference in Discrete and Continuous latent variable
 <section id="ppca-modelling-assumptions" class="level3" data-number="6.2">
 <h3 data-number="6.2" class="anchored" data-anchor-id="ppca-modelling-assumptions"><span class="header-section-number">6.2</span> PPCA modelling assumptions</h3>
 <center>
-<img src="2023-10-13-11-16-02.png" class="w575 img-fluid">
+<img src="imgs/2023-10-13-11-16-02.png" class="w575 img-fluid">
 </center>
 <pre></pre>
 <blockquote class="blockquote">
@@ -534,10 +534,10 @@ Recall difference in Discrete and Continuous latent variable
 <section id="it-follows" class="level3" data-number="6.3">
 <h3 data-number="6.3" class="anchored" data-anchor-id="it-follows"><span class="header-section-number">6.3</span> It follows</h3>
 <center>
-<img src="2023-10-13-11-17-08.png" class="w550 img-fluid">
+<img src="imgs/2023-10-13-11-17-08.png" class="w550 img-fluid">
 </center>
 <center>
-<img src="2023-10-13-12-31-31.png" class="w550 img-fluid">
+<img src="imgs/2023-10-13-12-31-31.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <ul>
@@ -547,7 +547,7 @@ Recall difference in Discrete and Continuous latent variable
 <section id="probabilistic-pca-in-a-picture" class="level3" data-number="6.4">
 <h3 data-number="6.4" class="anchored" data-anchor-id="probabilistic-pca-in-a-picture"><span class="header-section-number">6.4</span> Probabilistic PCA in a picture</h3>
 <center>
-<img src="2023-10-13-11-22-04.png" class="w550 img-fluid">
+<img src="imgs/2023-10-13-11-22-04.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p>From now on we can find the parameters by doing MLE</p>
@@ -555,21 +555,21 @@ Recall difference in Discrete and Continuous latent variable
 <section id="the-log-likelihood" class="level3" data-number="6.5">
 <h3 data-number="6.5" class="anchored" data-anchor-id="the-log-likelihood"><span class="header-section-number">6.5</span> The log-likelihood</h3>
 <center>
-<img src="2023-10-13-13-12-37.png" class="w550 img-fluid">
+<img src="imgs/2023-10-13-13-12-37.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 </section>
 <section id="ppca-has-closed-form-solutions" class="level3" data-number="6.6">
 <h3 data-number="6.6" class="anchored" data-anchor-id="ppca-has-closed-form-solutions"><span class="header-section-number">6.6</span> PPCA has closed-form solutions</h3>
 <center>
-<img src="2023-10-13-13-14-00.png" class="w550 img-fluid">
+<img src="imgs/2023-10-13-13-14-00.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 </section>
 <section id="ppca-summary" class="level3" data-number="6.7">
 <h3 data-number="6.7" class="anchored" data-anchor-id="ppca-summary"><span class="header-section-number">6.7</span> PPCA Summary</h3>
 <center>
-<img src="2023-10-13-13-18-12.png" class="w550 img-fluid">
+<img src="imgs/2023-10-13-13-18-12.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p><strong>Three views:</strong></p>
@@ -609,7 +609,7 @@ Recall difference in Discrete and Continuous latent variable
 <h2 data-number="8" class="anchored" data-anchor-id="pca-using-basis-functions"><span class="header-section-number">8</span> PCA using basis functions</h2>
 <p>The question is how do we map these non-linear data to a linear line such that we use basis function. We can do this in two ways:</p>
 <center>
-<img src="2023-10-13-17-35-45.png" class="w550 img-fluid">
+<img src="imgs/2023-10-13-17-35-45.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <ol type="1">
@@ -637,7 +637,7 @@ How to craft Basis functions?
 <section id="auto-encoders-auto-associative-neural-nets" class="level2" data-number="9">
 <h2 data-number="9" class="anchored" data-anchor-id="auto-encoders-auto-associative-neural-nets"><span class="header-section-number">9</span> Auto-encoders (auto-associative neural nets)</h2>
 <center>
-<img src="2023-10-13-17-45-08.png" class="w550 img-fluid">
+<img src="imgs/2023-10-13-17-45-08.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p>If <span class="math inline">\(f(x)=w^Tx\)</span> is a linear projection that goes from D to M then this resembles to PCA where we have <span class="math inline">\(z=\mu_M^T(x-\bar x)\)</span>. So if the function <span class="math inline">\(f(x)\)</span> is of form like in the PCA case then we have a linear projection that can transform our points to a lower dimensional space</p>
@@ -645,7 +645,7 @@ How to craft Basis functions?
 <section id="autoencoder-objective" class="level2" data-number="10">
 <h2 data-number="10" class="anchored" data-anchor-id="autoencoder-objective"><span class="header-section-number">10</span> Autoencoder objective</h2>
 <center>
-<img src="2023-10-13-17-58-20.png" class="w550 img-fluid">
+<img src="imgs/2023-10-13-17-58-20.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <ul>
@@ -658,7 +658,7 @@ How to craft Basis functions?
 <section id="autoencoder-as-generator" class="level2" data-number="11">
 <h2 data-number="11" class="anchored" data-anchor-id="autoencoder-as-generator"><span class="header-section-number">11</span> Autoencoder as generator</h2>
 <center>
-<img src="2023-10-14-23-53-31.png" class="w550 img-fluid">
+<img src="imgs/2023-10-14-23-53-31.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 </section>

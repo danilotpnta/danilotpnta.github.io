@@ -8,7 +8,7 @@
 
 <meta name="author" content="Danilo Toapanta">
 <meta name="dcterms.date" content="2023-10-04">
-<meta name="description" content="Lecture Notes UvA on 25-9-2023">
+<meta name="description" content="Lecture Notes on 25-9-2023">
 
 <title>Danilo Toapanta - Logistic Regression</title>
 <style>
@@ -172,7 +172,7 @@ window.MathJax = {
             <!-- Description Block -->
                         <div>
                 <div class="description">
-                    Lecture Notes UvA on 25-9-2023
+                    Lecture Notes on 25-9-2023
                 </div>
             </div>
                         
@@ -183,11 +183,6 @@ window.MathJax = {
                                             <div class="quarto-category">
                             <a href="../../blog/#category=All">
                                 All
-                            </a>
-                        </div> 
-                                            <div class="quarto-category">
-                            <a href="../../blog/#category=Education">
-                                Education
                             </a>
                         </div> 
                                             <div class="quarto-category">
@@ -324,7 +319,7 @@ window.MathJax = {
         <!-- Description Block -->
                     <div>
                 <div class="description">
-                    Lecture Notes UvA on 25-9-2023
+                    Lecture Notes on 25-9-2023
                 </div>
             </div>
         
@@ -339,11 +334,6 @@ window.MathJax = {
                                             <div id="All" class="quarto-category">
                             <a href="../../blog/#category=All">
                                 All
-                            </a>
-                        </div>
-                                            <div id="Education" class="quarto-category">
-                            <a href="../../blog/#category=Education">
-                                Education
                             </a>
                         </div>
                                             <div id="Machine Learning" class="quarto-category">
@@ -382,14 +372,6 @@ window.MathJax = {
                                 #
                                 </span> -->
                                 All
-                            </a>
-                        </div>
-                                            <div id="Education-from-here" class="quarto-category tags-title" style="display: none;">
-                            <a href="../../blog/#category=Education">
-                               <!-- <span class="hasth-tag">
-                                #
-                                </span> -->
-                                Education
                             </a>
                         </div>
                                             <div id="Machine Learning-from-here" class="quarto-category tags-title" style="display: none;">
@@ -574,7 +556,7 @@ p(C|x)
 <li>The only difference between these two its how you train the model.</li>
 </ul>
 <center>
-<span class="w400"><img src="2023-10-03-10-59-38.png" class="img-fluid"></span>
+<span class="w400"><img src="imgs/2023-10-03-10-59-38.png" class="img-fluid"></span>
 </center>
 <section id="deriving-logistic-regression" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="deriving-logistic-regression"><span class="header-section-number">3</span> Deriving Logistic Regression</h2>
@@ -586,28 +568,28 @@ p(C|x)
 <li>When we set up Bayes Classifiers, We look at the ratio of probabilities.</li>
 </ul>
 <center>
-<span class="w300"><img src="2023-10-03-11-09-14.png" class="img-fluid"></span>
+<span class="w300"><img src="imgs/2023-10-03-11-09-14.png" class="img-fluid"></span>
 </center>
 <p>Here we are saying that this ratio would not work because i.e if we would predict a negative value for this ratio that would mean that either the denominator or denominator would be negative. But negative probables cannot happen.</p>
 <p>The solution, make compute the <span class="math inline">\(\ln\)</span></p>
 <center>
-<span class="w300"><img src="2023-10-03-11-16-12.png" class="img-fluid"></span>
+<span class="w300"><img src="imgs/2023-10-03-11-16-12.png" class="img-fluid"></span>
 </center>
 <p>Note that at the decision boundary meaning when <span class="math inline">\(p(C_1|x)=p(C_2|x)\)</span> we would have that the ratio is zero.</p>
 <p>Now, rearranging the expression above:</p>
 <center>
-<span class="w300"><img src="2023-10-03-11-21-54.png" class="img-fluid"></span>
+<span class="w300"><img src="imgs/2023-10-03-11-21-54.png" class="img-fluid"></span>
 </center>
 <center>
-<span class="w300"><img src="2023-10-03-11-44-35.png" class="img-fluid"></span>
+<span class="w300"><img src="imgs/2023-10-03-11-44-35.png" class="img-fluid"></span>
 </center>
 <center>
-<span class="w300"><img src="2023-10-03-11-50-37.png" class="img-fluid"></span>
+<span class="w300"><img src="imgs/2023-10-03-11-50-37.png" class="img-fluid"></span>
 </center>
 <center>
 <div id="fig-plot_sigmoid" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
-<p><img src="2023-10-03-11-47-57.png" class="img-fluid figure-img"></p>
+<p><img src="imgs/2023-10-03-11-47-57.png" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">Figure&nbsp;1: Sigmoid</figcaption>
 </figure>
 </div>
@@ -616,7 +598,7 @@ p(C|x)
 <section id="logistic-regression-making-predictions" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="logistic-regression-making-predictions"><span class="header-section-number">4</span> Logistic Regression: Making Predictions</h2>
 <center>
-<span class="w300"><img src="2023-10-03-11-53-34.png" class="img-fluid"></span>
+<span class="w300"><img src="imgs/2023-10-03-11-53-34.png" class="img-fluid"></span>
 </center>
 </section>
 <section id="counting-parameters" class="level2" data-number="5">
@@ -648,7 +630,7 @@ In a bayes classifier we fixed our unbalance data with the prior. So we have one
 <h2 data-number="6" class="anchored" data-anchor-id="learning-via-log-likelihood"><span class="header-section-number">6</span> Learning via Log-Likelihood</h2>
 <p>We talked about our Logistic Regression model, now lets see how do we fit into our data.</p>
 <center>
-<span><img src="2023-10-03-13-58-09.png" class="img-fluid"></span>
+<span><img src="imgs/2023-10-03-13-58-09.png" class="img-fluid"></span>
 </center>
 </section>
 <section id="learning-via-log-likelihood-1" class="level2" data-number="7">
@@ -656,20 +638,20 @@ In a bayes classifier we fixed our unbalance data with the prior. So we have one
 <p>We assume our data are ID.</p>
 <p>Now that we have our labels which are binary we could use a Bernouli distribution to model this.</p>
 <center>
-<span class="w300"><img src="2023-10-03-13-50-32.png" class="img-fluid"></span>
+<span class="w300"><img src="imgs/2023-10-03-13-50-32.png" class="img-fluid"></span>
 </center>
 <p>Where, <span class="math inline">\(\pi\)</span> represents the probability of sucess and <span class="math inline">\(t\)</span> represents our possible outcomes. In this case our outcomes would be to belong to class <span class="math inline">\(0\)</span> if <span class="math inline">\(C_0\)</span> or <span class="math inline">\(1\)</span> if <span class="math inline">\(C_1\)</span></p>
 <center>
-<span class="w300"><img src="2023-10-03-14-05-43.png" class="img-fluid"></span>
+<span class="w300"><img src="imgs/2023-10-03-14-05-43.png" class="img-fluid"></span>
 </center>
 <p>Where, <span class="math inline">\(\sigma(\textbf{w}^T\textbf{x}_n)^{t_n}\)</span> is equal to <span class="math inline">\(p(C1|x)\)</span>. See the graph of the sigmoid <a href="#fig-plot_sigmoid">Figure&nbsp;1</a></p>
 <p>Now lets take the log of this Likelihood</p>
 <center>
-<img src="2023-10-03-14-28-19.png" class="w350 img-fluid">
+<img src="imgs/2023-10-03-14-28-19.png" class="w350 img-fluid">
 </center>
 <p>To compute the Error we have:</p>
 <center>
-<img src="2023-10-03-17-04-41.png" class="w400 img-fluid">
+<img src="imgs/2023-10-03-17-04-41.png" class="w400 img-fluid">
 </center>
 <p>This is equation is also called <em>cross-entropy loss</em></p>
 <p>if the label <span class="math inline">\(t_n=1\)</span> then second term will go away. Because we want to have the error to go to zero, then we need to make the log to go to zero. This happens when <span class="math inline">\(log(1)\)</span> thus the <span class="math inline">\(\sigma(\textbf{w}^T\textbf{x}_n)\)</span> needs to equal one. This will only happen when the value of <span class="math inline">\(\textbf{w}^T\textbf{x}_n\)</span> is large enough so that the <span class="math inline">\(\sigma()\)</span> computes it to one, meaning that <span class="math inline">\(p(C_1|x)=1\)</span> which means we have predicted the correct label. Recall <span class="math inline">\(t_n=1\)</span>.</p>
@@ -678,7 +660,7 @@ In a bayes classifier we fixed our unbalance data with the prior. So we have one
 <ul>
 <li>What is convex decision boundaries?
 <center>
-<img src="2023-10-03-17-24-19.png" class="w300 img-fluid">
+<img src="imgs/2023-10-03-17-24-19.png" class="w300 img-fluid">
 </center></li>
 </ul>
 <p>if you take any two points within the boundary, the line segment connecting those points lies entirely within the boundary as well</p>
@@ -686,12 +668,12 @@ In a bayes classifier we fixed our unbalance data with the prior. So we have one
 <section id="class-entropy-loss" class="level2" data-number="8">
 <h2 data-number="8" class="anchored" data-anchor-id="class-entropy-loss"><span class="header-section-number">8</span> Class-Entropy Loss</h2>
 <center>
-<img src="2023-10-03-17-31-13.png" class="w300 img-fluid">
+<img src="imgs/2023-10-03-17-31-13.png" class="w300 img-fluid">
 </center>
 <section id="comparing-logistic-regression-and-square-regression" class="level3" data-number="8.1">
 <h3 data-number="8.1" class="anchored" data-anchor-id="comparing-logistic-regression-and-square-regression"><span class="header-section-number">8.1</span> Comparing Logistic Regression and Square Regression</h3>
 <center>
-<img src="2023-10-03-17-35-30.png" class="w400 img-fluid">
+<img src="imgs/2023-10-03-17-35-30.png" class="w400 img-fluid">
 </center>
 <p>Logistic Regression is on the green line, Least Square Regression the purple.</p>
 <ul>
@@ -706,7 +688,7 @@ In a bayes classifier we fixed our unbalance data with the prior. So we have one
 <p>Note, because we saw that the <a href="#error">Error</a> of the Log-likelihood of Logistic Regression cannot be solved analytically then we turn into gradient descent</p>
 </blockquote>
 <center>
-<img src="2023-10-03-18-37-13.png" class="w350 img-fluid">
+<img src="imgs/2023-10-03-18-37-13.png" class="w350 img-fluid">
 </center>
 <pre></pre>
 <p>Because the above summation is expensive then we got variants.</p>
@@ -716,49 +698,49 @@ In a bayes classifier we fixed our unbalance data with the prior. So we have one
 Here we pick a random point <span class="math inline">\(i\)</span> and we multiply by <span class="math inline">\(N\)</span> to replicate the magnitude of learning rate. This is to keep same scale as the full gradient descent formula we see above. In other words this is just to conserve the magnitude of the <span class="math inline">\(\eta\)</span> value</li>
 </ul>
 <center>
-<img src="2023-10-03-18-46-48.png" class="w350 img-fluid">
+<img src="imgs/2023-10-03-18-46-48.png" class="w350 img-fluid">
 </center>
 <ul>
 <li><strong>Mini-Batch:</strong> Use B data points where 1 &lt; B &lt; N. Usually B much less than N (B &lt;&lt; N)</li>
 </ul>
 <center>
-<img src="2023-10-03-18-47-54.png" class="w350 img-fluid">
+<img src="imgs/2023-10-03-18-47-54.png" class="w350 img-fluid">
 </center>
 <section id="gradient-descent-variants-performance" class="level3" data-number="9.1">
 <h3 data-number="9.1" class="anchored" data-anchor-id="gradient-descent-variants-performance"><span class="header-section-number">9.1</span> Gradient Descent: Variants Performance</h3>
 <center>
-<img src="2023-10-03-18-51-55.png" class="w400 img-fluid">
+<img src="imgs/2023-10-03-18-51-55.png" class="w400 img-fluid">
 </center>
 </section>
 </section>
 <section id="gradient-calculation" class="level2" data-number="10">
 <h2 data-number="10" class="anchored" data-anchor-id="gradient-calculation"><span class="header-section-number">10</span> Gradient Calculation</h2>
 <center>
-<img src="2023-10-03-19-36-33.png" class="w300 img-fluid">
+<img src="imgs/2023-10-03-19-36-33.png" class="w300 img-fluid">
 </center>
 <center>
-<img src="2023-10-03-19-36-56.png" class="w350 img-fluid">
+<img src="imgs/2023-10-03-19-36-56.png" class="w350 img-fluid">
 </center>
 <center>
-<img src="2023-10-03-19-41-28.png" class="w450 img-fluid">
+<img src="imgs/2023-10-03-19-41-28.png" class="w450 img-fluid">
 </center>
 <center>
-<img src="2023-10-03-19-39-58.png" class="w450 img-fluid">
+<img src="imgs/2023-10-03-19-39-58.png" class="w450 img-fluid">
 </center>
-<p>The answer look identical to the one proposed for the perceptron in our prev <a href="../2023-10-03_the-perceptron/#perceptron-learning-as-gradient-descent">post</a></p>
+<p>The answer look identical to the one proposed for the perceptron in our prev <a href="../imgs/2023-10-03_the-perceptron/#perceptron-learning-as-gradient-descent">post</a></p>
 <center>
-<img src="2023-10-03-21-16-01.png" class="w350 img-fluid">
+<img src="imgs/2023-10-03-21-16-01.png" class="w350 img-fluid">
 </center>
 <ul>
 <li>The difference with the perceptron its that the update for the weights its softer.</li>
-<li>The Gradient descent with logistic regresion will keep updating until <span class="math inline">\(t_i-\sigma(\textbf{w}_t^T\textbf{x}_i)\)</span> is close to zero, whereas the perceptron because of this <span class="math inline">\(f(w^T\phi)&gt;0\)</span> condition will be: <span class="math inline">\(t_i-\sigma(\textbf{w}_t^T\textbf{x}_i)\)</span> this is close enough (review the inequality <a href="../2023-10-03_the-perceptron/#the-perceptron-model">post</a>) to zero then we do not update the weight.</li>
+<li>The Gradient descent with logistic regresion will keep updating until <span class="math inline">\(t_i-\sigma(\textbf{w}_t^T\textbf{x}_i)\)</span> is close to zero, whereas the perceptron because of this <span class="math inline">\(f(w^T\phi)&gt;0\)</span> condition will be: <span class="math inline">\(t_i-\sigma(\textbf{w}_t^T\textbf{x}_i)\)</span> this is close enough (review the inequality <a href="../imgs/2023-10-03_the-perceptron/#the-perceptron-model">post</a>) to zero then we do not update the weight.</li>
 </ul>
 </section>
 <section id="stochastic-gradient-descent" class="level2" data-number="11">
 <h2 data-number="11" class="anchored" data-anchor-id="stochastic-gradient-descent"><span class="header-section-number">11</span> Stochastic Gradient Descent</h2>
 <p>Here the perceptron choose only misclassified, here in Stochastic Gradient Descent we would pick any point randomly. Even if it’s well classified already.</p>
 <center>
-<img src="2023-10-03-21-31-30.png" class="w450 img-fluid">
+<img src="imgs/2023-10-03-21-31-30.png" class="w450 img-fluid">
 </center>
 <p>Now the question is: how do I set this parameter <span class="math inline">\(\eta\)</span> the learning rate. The answer to that is a method that help us find that. It’s called Newton-Raphson</p>
 </section>
@@ -775,7 +757,7 @@ Here we pick a random point <span class="math inline">\(i\)</span> and we multip
 <p>The second derivative corresponds to the curvature of the loss function, thus</p>
 <p>This captures the notion of curvature</p>
 <center>
-<img src="2023-10-03-22-31-31.png" class="w400 img-fluid">
+<img src="imgs/2023-10-03-22-31-31.png" class="w400 img-fluid">
 </center>
 <ul>
 <li><p><strong>Small second derivative –&gt; large learning rate</strong><br>
@@ -786,18 +768,18 @@ In the second case with the green arrows, this time the second derivative is lar
 <section id="computing-2nd-derivative-for-scalar" class="level3" data-number="13.1">
 <h3 data-number="13.1" class="anchored" data-anchor-id="computing-2nd-derivative-for-scalar"><span class="header-section-number">13.1</span> Computing 2nd Derivative (for scalar)</h3>
 <center>
-<img src="2023-10-03-22-37-44.png" class="w400 img-fluid">
+<img src="imgs/2023-10-03-22-37-44.png" class="w400 img-fluid">
 </center>
 <p>Here the second derivative <span class="math inline">\(\frac{\partial^2}{\partial w_t^2}\)</span> represents the curvature of the loss function so the answer that we will show below is just the graph of how this curvature would look like.</p>
 <center>
-<img src="2023-10-03-22-56-20.png" class="w400 img-fluid">
+<img src="imgs/2023-10-03-22-56-20.png" class="w400 img-fluid">
 </center>
 <ol type="1">
 <li><p>The error curvature would be maximized when the model is uncertain. The intuition is that if you have a lot of points next to the decision boundary then</p></li>
 <li><p>It is small when the model is certain.</p></li>
 </ol>
 <center>
-<img src="2023-10-03-23-43-59.png" class="w400 img-fluid">
+<img src="imgs/2023-10-03-23-43-59.png" class="w400 img-fluid">
 </center>
 <p>Where we have introduce the normalization term</p>
 </section>
@@ -805,7 +787,7 @@ In the second case with the green arrows, this time the second derivative is lar
 <section id="steepest-descent-vs-newton-raphson" class="level2" data-number="14">
 <h2 data-number="14" class="anchored" data-anchor-id="steepest-descent-vs-newton-raphson"><span class="header-section-number">14</span> Steepest DEscent vs Newton-Raphson</h2>
 <center>
-<img src="2023-10-03-23-48-19.png" class="w400 img-fluid">
+<img src="imgs/2023-10-03-23-48-19.png" class="w400 img-fluid">
 </center>
 <pre></pre>
 <p>Thus, we see tha the Newton-Raphson takes a more direct path because it considers the curvature of the error loss.</p>
@@ -834,15 +816,15 @@ Derivative of vector^T with respect to vector
 <section id="newton-raphson-iterative-optimization" class="level2" data-number="15">
 <h2 data-number="15" class="anchored" data-anchor-id="newton-raphson-iterative-optimization"><span class="header-section-number">15</span> Newton-Raphson Iterative Optimization</h2>
 <center>
-<img src="2023-10-04-00-06-19.png" class="w400 img-fluid">
+<img src="imgs/2023-10-04-00-06-19.png" class="w400 img-fluid">
 </center>
 <center>
-<img src="2023-10-04-00-07-50.png" class="img-fluid">
+<img src="imgs/2023-10-04-00-07-50.png" class="img-fluid">
 </center>
 <section id="what-is-the-h" class="level3" data-number="15.1">
 <h3 data-number="15.1" class="anchored" data-anchor-id="what-is-the-h"><span class="header-section-number">15.1</span> What is the H?</h3>
 <center>
-<img src="2023-10-04-00-15-24.png" class="w350 img-fluid">
+<img src="imgs/2023-10-04-00-15-24.png" class="w350 img-fluid">
 </center>
 <pre></pre>
 <p>The blue highlighted section means that we have taken the second derivative over the error of the log-likelihood which has a minus hence why the blue hihglited parts vary in order.</p>
@@ -851,7 +833,7 @@ Derivative of vector^T with respect to vector
 <section id="newton-rpahson-iterative-optimization" class="level2" data-number="16">
 <h2 data-number="16" class="anchored" data-anchor-id="newton-rpahson-iterative-optimization"><span class="header-section-number">16</span> Newton-Rpahson Iterative Optimization</h2>
 <center>
-<img src="2023-10-04-00-20-39.png" class="w400 img-fluid">
+<img src="imgs/2023-10-04-00-20-39.png" class="w400 img-fluid">
 </center>
 <!-- ## Iterative Reweighted Least Squares
 

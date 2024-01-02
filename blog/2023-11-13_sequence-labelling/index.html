@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2023-11-13">
 <meta name="description" content="Description of this Post">
 
-<title>Danilo Toapanta - (3) Sequence Labelling</title>
+<title>Danilo Toapanta - Sequence Labelling</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -133,7 +133,7 @@ window.MathJax = {
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full blog-page" style="display: none;">
     <div class="quarto-title-banner page-columns page-full">
         <div class="quarto-title column-body">
-            <h1 class="title">(3) Sequence Labelling</h1>
+            <h1 class="title">Sequence Labelling</h1>
                 
             <!-- Description Block -->
                         <div>
@@ -275,7 +275,7 @@ window.MathJax = {
 <main id="title-block-header" class="quarto-title-block default page-columns page-full" style="padding-bottom: 40px;">
 
     <div class="quarto-title column-body" style="margin-bottom: 1em;">
-        <h1 class="title" style="padding-bottom:8px" ;="">(3) Sequence Labelling</h1>
+        <h1 class="title" style="padding-bottom:8px" ;="">Sequence Labelling</h1>
         
         <!-- Description Block -->
                     <div>
@@ -382,7 +382,7 @@ window.MathJax = {
 <section id="representing-and-estimating-categorical-distributions-the-logistic-case" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="representing-and-estimating-categorical-distributions-the-logistic-case"><span class="header-section-number">1</span> Representing and estimating Categorical distributions: the logistic case</h2>
 <center>
-<img src="2023-11-13-22-47-11.png" class="w550 img-fluid">
+<img src="imgs/2023-11-13-22-47-11.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p>W is condition on the Random variable H, which can be a history</p>
@@ -407,12 +407,12 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 <p>CPDs= Conditional Probability Distribution</p>
 <p>What we are predicting with this Categorical distribution is the probabilities per each W under the condition of an <span class="math inline">\(h\)</span> so on a row. Essentially we are predicting every single entry in the tabular representation. I am interest then to map these to</p>
 <center>
-<img src="2023-11-13-22-51-44.png" class="w550 img-fluid">
+<img src="imgs/2023-11-13-22-51-44.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p>after each conditional information has been mapped to a point, I will map those points to a different space. I want a vecgor with <span class="math inline">\(V\)</span> probabilities in it, one per each possible outcomes of the random variable <span class="math inline">\(W\)</span>.</p>
 <center>
-<img src="2023-11-13-23-03-45.png" class="w550 img-fluid">
+<img src="imgs/2023-11-13-23-03-45.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p>Here we have <span class="math inline">\(\phi\)</span>(small,birs) <span class="math inline">\(\in \mathbb{R}^{2}\)</span> so in 2D that means I need my <span class="math inline">\(W_1\)</span> also to be in 2D so when I multiply with <span class="math inline">\(\phi\)</span>(small,birs), I get an scalar value. <span class="math inline">\(b_1\)</span> is just an scalar.</p>
@@ -423,14 +423,14 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 \]</span></p>
 <p>Here, <span class="math inline">\(p_i\)</span> represents the probability of event <span class="math inline">\(i\)</span>, and the conditions <span class="math inline">\(p_i \geq 0\)</span> and <span class="math inline">\(\sum_{i=1}^n p_i = 1\)</span> ensure that the vector lies within the simplex.</p>
 <center>
-<img src="2023-11-13-23-18-35.png" class="w550 img-fluid">
+<img src="imgs/2023-11-13-23-18-35.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p>The model can turn the h into a vector of <span class="math inline">\(V\)</span> probabilities. so the <span class="math inline">\(\textbf{f}_1(h,\theta), \textbf{f}_2(h,\theta)...\)</span></p>
 <section id="why-is-this-a-great-idea" class="level3" data-number="2.1">
 <h3 data-number="2.1" class="anchored" data-anchor-id="why-is-this-a-great-idea"><span class="header-section-number">2.1</span> Why is this a great idea?</h3>
 <center>
-<img src="2023-11-13-23-26-34.png" class="w550 img-fluid">
+<img src="imgs/2023-11-13-23-26-34.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <ol type="1">
@@ -455,7 +455,7 @@ It can take on <span class="math inline">\(V\)</span> categories, so W can take 
 </ul>
 <p>To learn the parameters we initialize it, and then we compute the log likelihood of the parameters <span class="math inline">\(\theta\)</span> give our data <span class="math inline">\(D\)</span>. This can be solve due to the idd assumption.</p>
 <center>
-<img src="2023-11-13-23-40-01.png" class="w550 img-fluid">
+<img src="imgs/2023-11-13-23-40-01.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p>When we solve for the grad wrt. <span class="math inline">\(\theta\)</span> we do not get a closed-form solution like we get in the tabular representation. Thus we use an iterative procedure aka SGD.</p>
@@ -464,7 +464,7 @@ Example:
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="2023-11-14-11-35-53.png" class="w550 img-fluid figure-img"></p>
+<p><img src="imgs/2023-11-14-11-35-53.png" class="w550 img-fluid figure-img"></p>
 <figcaption class="figure-caption">code at <a href="https://www.youtube.com/watch?v=DsflDpm5h-c&amp;ab_channel=WilkerAziz">Colab</a></figcaption>
 </figure>
 </div>
@@ -604,7 +604,7 @@ Example:
 <pre></pre>
 This is a join distribution
 <center>
-<img src="2023-11-14-13-15-14.png" class="w350 img-fluid">
+<img src="imgs/2023-11-14-13-15-14.png" class="w350 img-fluid">
 </center>
 <pre></pre>
 <center>
@@ -677,7 +677,7 @@ This is a join distribution
 <li><p>Another we can do a language model, a language model was a mechanism to assign probabilities to strings without any tags, BUT if you get a distribution over two variables, token sequences and class sequences and you marginalized out one of the variables. ie you marginalized my choice for the first class, for the second class, all the way to the last class. If I sum the probabilities of all possible tag sequences that pair with these word sequence then I get a marginal probability. So in the above equation, the left part:</p></li>
 </ol>
 <center>
-<img src="2023-11-14-15-02-30.png" class="w250 img-fluid">
+<img src="imgs/2023-11-14-15-02-30.png" class="w250 img-fluid">
 </center>
 <pre></pre>
 <p>So that is the probability of a sentence so <span class="math inline">\(P_X(w_{1:l})\)</span> this is a language model.</p>
@@ -693,7 +693,7 @@ This is a join distribution
 </ol>
 <p>This second step is common to all generative model. Every time you have</p>
 <center>
-<img src="2023-11-14-15-13-09.png" class="w350 img-fluid">
+<img src="imgs/2023-11-14-15-13-09.png" class="w350 img-fluid">
 </center>
 <pre></pre>
 <p>C1..C3 is the class tha sits at position 1..3</p>
@@ -719,7 +719,7 @@ This is a join distribution
 <p>Steps: a way of describing the generation of a tag sequence pair. And wathever we call step that is the unit we are gonna sign probabilities to.</p>
 <!-- <center>![Slide 25](imgs/page_25.jpeg){.w575}</center><pre></pre> -->
 <center>
-<img src="2023-11-14-15-20-48.png" class="w550 img-fluid">
+<img src="imgs/2023-11-14-15-20-48.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <pre></pre>
@@ -794,7 +794,7 @@ For instance you can get a Determiner, so do P_w|c(w_i)) and draw a word from it
 </ol>
 <p>If your sequence is too long then stop. And this would be the factorization of the HMM</p>
 <center>
-<img src="2023-11-14-15-20-48.png" class="w550 img-fluid">
+<img src="imgs/2023-11-14-15-20-48.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p>Here in the picture you start with BoS, then you fo to DET and then to the and then to NOUN and book and so on..</p>
@@ -827,7 +827,7 @@ For instance you can get a Determiner, so do P_w|c(w_i)) and draw a word from it
 </center>
 <pre></pre>
 <center>
-<img src="2023-11-14-22-25-47.png" class="w350 img-fluid">
+<img src="imgs/2023-11-14-22-25-47.png" class="w350 img-fluid">
 </center>
 <pre></pre>
 <p>What is the difference between this and what was done last time?</p>
@@ -1020,7 +1020,7 @@ PoS: DET, Prenomial ADJ Examples
 <section id="example-with-3-positions" class="level2" data-number="14">
 <h2 data-number="14" class="anchored" data-anchor-id="example-with-3-positions"><span class="header-section-number">14</span> Example with 3 positions</h2>
 <center>
-<img src="2023-11-15-16-48-53.png" class="w550 img-fluid">
+<img src="imgs/2023-11-15-16-48-53.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <blockquote class="blockquote">
@@ -1095,7 +1095,7 @@ PoS: DET, Prenomial ADJ Examples
 P(X = x) = \sum_{y} P(X = x, Y = y)
 \]</span></p>
 <center>
-<img src="2023-11-15-16-48-53.png" class="w550 img-fluid">
+<img src="imgs/2023-11-15-16-48-53.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p>This is an exmaple, so based on the formula from SLide 46, we have L=3 words K=3 tags</p>
@@ -1106,12 +1106,12 @@ P(X = x) = \sum_{y} P(X = x, Y = y)
 <p>Recall: - Before I was looking for the one tag sequence for which the joint probability was maximum</p>
 <p>Now: - I am marginalizing out, now we are summing all the alternative probabilities. So all the alternative ways I summed them up (so in each columns beecause here we have different assignment of tags) and the result of summing along the columns (which then we have like a vector of sequence L, so the sentence lenght) and now we sum this vector( so each element in this vector will correspond to one word with all the classes summed over) is the probability of the sequence aka the sentence regardless of tag sequences because we wa</p>
 <center>
-<img src="2023-11-15-17-43-44.png" class="w550 img-fluid">
+<img src="imgs/2023-11-15-17-43-44.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p>The algorithms that takes care of this is called the Forward Algorithm where we are interested in find the prob of the sentence regardless of their POS tags</p>
 <center>
-<img src="2023-11-15-18-09-07.png" class="w550 img-fluid">
+<img src="imgs/2023-11-15-18-09-07.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 </section>
@@ -1130,7 +1130,7 @@ P(X = x) = \sum_{y} P(X = x, Y = y)
 <li>Formula for HMM:</li>
 </ul>
 <center>
-<img src="2023-11-15-20-29-57.png" class="w350 img-fluid">
+<img src="imgs/2023-11-15-20-29-57.png" class="w350 img-fluid">
 </center>
 <pre></pre>
 <pre></pre>
@@ -1138,7 +1138,7 @@ P(X = x) = \sum_{y} P(X = x, Y = y)
 <li>Here <span class="math inline">\(P_{XY}()\)</span> is the join probability of words and tags</li>
 </ul>
 <center>
-<img src="2023-11-15-20-35-16.png" class="w150 img-fluid">
+<img src="imgs/2023-11-15-20-35-16.png" class="w150 img-fluid">
 </center>
 <pre></pre>
 <!-- - Tags are in row 
@@ -1153,9 +1153,9 @@ P(X = x) = \sum_{y} P(X = x, Y = y)
 <ol start="2" type="1">
 <li>You may be interested for a language model and what you want to do is evaluate the marginal probability of the word sequence, that is the total probability regardless of what tag sequence may have generated this text. There you would asses the join probaility for each and every configuration from the tag sequence and sum all those probabilities toguether.</li>
 </ol>
-<!-- <center>![](2023-11-15-20-45-26.png){.w550}</center><pre></pre> -->
+<!-- <center>![](imgs/2023-11-15-20-45-26.png){.w550}</center><pre></pre> -->
 <center>
-<img src="2023-11-15-20-46-43.png" class="w550 img-fluid">
+<img src="imgs/2023-11-15-20-46-43.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <section id="the-value-recursion" class="level3" data-number="15.1">
@@ -1178,14 +1178,14 @@ P(X = x) = \sum_{y} P(X = x, Y = y)
 <li>A A B</li>
 </ul>
 <center>
-<img src="2023-11-15-21-04-33.png" class="w250 img-fluid">
+<img src="imgs/2023-11-15-21-04-33.png" class="w250 img-fluid">
 </center>
 <pre></pre>
 <p>A multiplication of all the parameters with classes A A B. Then for the second combination A B B and so on</p>
 <p>Once we have calcualted all these combination we add them all toguether and thdt quantity which is the marginal probability is what we store in the function <span class="math inline">\(\alpha (i,j)\)</span></p>
 <p>Now with this <span class="math inline">\(\alpha (3,B)\)</span> we can expressed in in therm os <span class="math inline">\(\alpha (2,A)\)</span> and <span class="math inline">\(\alpha (2,B)\)</span> and so on.</p>
 <center>
-<img src="2023-11-15-21-54-02.png" class="w550 img-fluid">
+<img src="imgs/2023-11-15-21-54-02.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -1204,12 +1204,12 @@ Recaping Forward Algorithm
 <p>When i is more than one then we have a recursive call to alpha but evaluated in the previous position. So escentially to evaluate alpha(i,j) we check for all candidate tags that could be set in the previous psoition with the fixed word and we asses alpha as if that tag was indeed the tag assign to the previous position and then we transition ot the jth tag and we omit the ith word.</p>
 <p>alpha(4, ESO) is the probability that we are looking for because it evaluates the joint probabilities of all sequences and adds them toguether</p>
 <center>
-<img src="2023-11-15-22-10-42.png" class="w550 img-fluid">
+<img src="imgs/2023-11-15-22-10-42.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p>Complete Forward algorithm:</p>
 <center>
-<img src="2023-11-15-22-15-45.png" class="w550 img-fluid">
+<img src="imgs/2023-11-15-22-15-45.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 </section>
@@ -1219,13 +1219,13 @@ Recaping Forward Algorithm
 <p>Now we want to maximize our choice, we want the probability of the best sequence ending in (c_i=j, w_i=w_i)</p>
 <p>The probability of the sequence that ends in c_i=c_j and emits the ith words from the jth tag is either the probability of the transition emission probability pair when i=j, or when is the second term of the alpha function.</p>
 <center>
-<img src="2023-11-15-22-23-33.png" class="w550 img-fluid">
+<img src="imgs/2023-11-15-22-23-33.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p>So now the best sequence that ends up in the sequence (C_2=A, W_2=nice). Suppose for a moment that going to A is the best choice/the one that maximizes, then to get to alpha(2,A) = alpha(1,A) * <span class="math inline">\(\lambda_A^{A} \theta_{nice}^{A}\)</span> is the biggest among the other path posibility so the path below (aplha(1,B)*…)</p>
 <p>Now for alpha(2,B) the best value is by going from alpha(1,A)*<span class="math inline">\(\lambda_A^{B} \theta_{nice}^{A}\)</span></p>
 <center>
-<img src="2023-11-15-22-37-09.png" class="w550 img-fluid">
+<img src="imgs/2023-11-15-22-37-09.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <p>So if you implement a table of alpha(i,j) values and another table of Backpointers, then you have everything that you need to compute the probability (the sums of probs from the first table) and to compute the tag sequence (from the Backpointers table) and thus outputs the best tag sequence to the user.</p>
@@ -1234,7 +1234,7 @@ Recaping Forward Algorithm
 <h3 data-number="15.3" class="anchored" data-anchor-id="notes-on-these-algorithms"><span class="header-section-number">15.3</span> Notes on these algorithms</h3>
 <p>To solve all htse computation we want to do it in a logarithm scale because logs convert products into sums leading to more numerically stable computations. For that we need to do some extra mods to the alpha function. With these three forumlas in red I can rewrite alpha into somthing called value recursion</p>
 <center>
-<img src="2023-11-15-22-46-19.png" class="w550 img-fluid">
+<img src="imgs/2023-11-15-22-46-19.png" class="w550 img-fluid">
 </center>
 <pre></pre>
 <!-- <center>![Slide 47](imgs/page_47.jpeg){.w575}</center><pre></pre> -->
