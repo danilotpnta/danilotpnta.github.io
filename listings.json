@@ -22,6 +22,10 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/2024-02-08_term-based-retrieval/index.html",
+      "/blog/2024-02-08_introduction-to-ranking/index.html",
+      "/blog/2024-02-09_inverted-index/index.html",
+      "/blog/2024-02-09_text-processing/index.html",
       "/blog/2024-01-02_new-lecture/index.html",
       "/blog/2024-01-02_updates-to-website/index.html",
       "/blog/2023-12-14_self-supervised-learning-i/index.html",
