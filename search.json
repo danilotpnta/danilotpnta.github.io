@@ -10217,14 +10217,14 @@
     "href": "blog/2024-02-08_introduction-to-ranking/index.html#definition-1",
     "title": "Introduction to Ranking",
     "section": "4 Definition",
-    "text": "4 Definition\n\n\n\n\nSlide 5"
+    "text": "4 Definition\n\n\n\n\nSlide 5\n\n\n\n\nThe collection of documents is what we found in the crawling phase.\nWe usually retrieved the top \\(k\\) best documents to look at\nWhat does ad-hoc means?\n\nUnlike predefined queries in some systems, ad hoc queries are formulated on-the-fly, reflecting the user’s immediate information need.\nThere is not fixed dataset. The collection of documents could be static but is often updated with new information."
   },
   {
     "objectID": "blog/2024-02-08_introduction-to-ranking/index.html#document-the-unit-of-retrieval",
     "href": "blog/2024-02-08_introduction-to-ranking/index.html#document-the-unit-of-retrieval",
     "title": "Introduction to Ranking",
     "section": "5 Document: the unit of retrieval",
-    "text": "5 Document: the unit of retrieval\n\n\n\n\nSlide 6"
+    "text": "5 Document: the unit of retrieval\n\n\n\n\nSlide 6\n\n\n\n\nEntity, you expect to get a movie name back or a wikipedia page to a movie. Entity is a proper noun, something that you will write with a capital letter i.e. ‘The Advangers’"
   },
   {
     "objectID": "blog/2024-02-08_introduction-to-ranking/index.html#ranking-problems",
@@ -10336,7 +10336,7 @@
     "href": "blog/2024-02-08_introduction-to-ranking/index.html#query-analysis-pipeline",
     "title": "Introduction to Ranking",
     "section": "11 Query analysis pipeline",
-    "text": "11 Query analysis pipeline\n\n\n\n\nSlide 12"
+    "text": "11 Query analysis pipeline\n\n\n\n\nSlide 12\n\n\n\n\nIf document is lower cased and we upper case the query then the two strings will not match as far as the indexing is concerned and thus even though we may be looking for the same thing because one is lower cased then we will not be able to find this information."
   },
   {
     "objectID": "blog/2024-02-08_introduction-to-ranking/index.html#context-and-definitio",
@@ -10357,7 +10357,7 @@
     "href": "blog/2024-02-08_introduction-to-ranking/index.html#ranking-pipeline",
     "title": "Introduction to Ranking",
     "section": "14 Ranking pipeline",
-    "text": "14 Ranking pipeline\n\n\n\n\nSlide 15"
+    "text": "14 Ranking pipeline\n\n\n\n\nSlide 15\n\n\n\n\nFor instance we use the inverted index to find equals 10 000 top results based on a fast data structure. Then we use a much slower method to re-rank those 10 000 results. Possibly we return a subset"
   },
   {
     "objectID": "blog/2024-02-08_introduction-to-ranking/index.html#ranking-pipeline-1",
@@ -10378,14 +10378,14 @@
     "href": "blog/2024-02-08_introduction-to-ranking/index.html#index-types",
     "title": "Introduction to Ranking",
     "section": "12 Index types",
-    "text": "12 Index types\n\n\n\n\nSlide 13"
+    "text": "12 Index types\n\n\n\n\nSlide 13\n\n\n\n\nAfter we do some pre-processing we put them into some index, and that index is what we use with the retrieval method\n\nInverted Index, maps from the term to the list of occurrences in the document.\nForward Index, we have some document ID and we return the document text. You can think of it has hash mapping from document ID to document text\nApproximate Nearest Neighbor, Here we have a vector representation as the query. So rather than the tokens [‘raw’, ‘string’] as in Inverted Index, we have now a vector ie 100 dimensions. Given this vector representation we ask the Approximate Nearest Neighbor what are the closest matches with this vector. In practice is like saying which documents are closest to this vector, assuming that we have indexed document representations in the index"
   },
   {
     "objectID": "blog/2024-02-08_introduction-to-ranking/index.html#index-types-1",
     "href": "blog/2024-02-08_introduction-to-ranking/index.html#index-types-1",
     "title": "Introduction to Ranking",
     "section": "13 Index types",
-    "text": "13 Index types\n\n\n\n\nSlide 14"
+    "text": "13 Index types\n\n\n\n\nSlide 14\n\n\n\n\n\nInverted Index, these are methods that have sparce representation of a document. If you have say 100000 terms in your vocabulary, you will create a vector of 100000 to represent this vector. You would expect more dimensions in this vector would be zero because most terms do not occur in this specific document. For instance this document could be really long but only has 5000 unique terms.\nIn this method you start with a term and you want to know in which document that specific term occurs and your scoring would be based on this\nApproximate Nearest Neighbor, given a query vector we return the approximately top matching document vectors.\nForward Index, we use this method when we want the document text. Imagine we have a sophisticated method were we want to know what the document originally looks like or what the tokens originally look like. So we need to look at that exact document’s text in order to use this method. You can also use this for snipping extraction"
   },
   {
     "objectID": "blog/2024-02-08_term-based-retrieval/index.html",

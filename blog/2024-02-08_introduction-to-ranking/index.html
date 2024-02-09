@@ -77,6 +77,8 @@ window.MathJax = {
 </script>
 <link rel="shortcut icon" href="../../../../../../../../../../../assets/danilo.ico">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../css/index-posts.css">
 </head>
@@ -433,6 +435,13 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>The collection of documents is what we found in the crawling phase.</p>
+<p>We usually retrieved the top <span class="math inline">\(k\)</span> best documents to look at</p>
+<p><strong>What does ad-hoc means?</strong></p>
+<ul>
+<li><p>Unlike predefined queries in some systems, ad hoc queries are formulated on-the-fly, reflecting the user’s immediate information need.</p></li>
+<li><p>There is not fixed dataset. The collection of documents could be static but is often updated with new information.</p></li>
+</ul>
 </section>
 <section id="document-the-unit-of-retrieval" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="document-the-unit-of-retrieval"><span class="header-section-number">5</span> Document: the unit of retrieval</h2>
@@ -445,6 +454,7 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>Entity, you expect to get a movie name back or a wikipedia page to a movie. Entity is a proper noun, something that you will write with a capital letter i.e.&nbsp;‘The Advangers’</p>
 </section>
 <section id="ranking-problems" class="level2" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="ranking-problems"><span class="header-section-number">6</span> Ranking problems</h2>
@@ -517,6 +527,7 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>If document is lower cased and we upper case the query then the two strings will not match as far as the indexing is concerned and thus even though we may be looking for the same thing because one is lower cased then we will not be able to find this information.</p>
 </section>
 <section id="index-types" class="level2" data-number="12">
 <h2 data-number="12" class="anchored" data-anchor-id="index-types"><span class="header-section-number">12</span> Index types</h2>
@@ -529,6 +540,12 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>After we do some pre-processing we put them into some index, and that index is what we use with the retrieval method</p>
+<ul>
+<li><p><strong>Inverted Index</strong>, maps from the term to the list of occurrences in the document.</p></li>
+<li><p><strong>Forward Index</strong>, we have some document ID and we return the document text. You can think of it has hash mapping from document ID to document text</p></li>
+<li><p><strong>Approximate Nearest Neighbor</strong>, Here we have a vector representation as the query. So rather than the tokens [‘raw’, ‘string’] as in Inverted Index, we have now a vector ie 100 dimensions. Given this vector representation we ask the <em>Approximate Nearest Neighbor</em> what are the closest matches with this vector. In practice is like saying which documents are closest to this vector, assuming that we have indexed document representations in the index</p></li>
+</ul>
 </section>
 <section id="index-types-1" class="level2" data-number="13">
 <h2 data-number="13" class="anchored" data-anchor-id="index-types-1"><span class="header-section-number">13</span> Index types</h2>
@@ -541,6 +558,12 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<ul>
+<li><p><strong>Inverted Index</strong>, these are methods that have sparce representation of a document. If you have say 100000 terms in your vocabulary, you will create a vector of 100000 to represent this vector. You would expect more dimensions in this vector would be zero because most terms do not occur in this specific document. For instance this document could be really long but only has 5000 unique terms.<br>
+In this method you start with a term and you want to know in which document that specific term occurs and your scoring would be based on this</p></li>
+<li><p><strong>Approximate Nearest Neighbor</strong>, given a query vector we return the approximately top matching document vectors.</p></li>
+<li><p><strong>Forward Index</strong>, we use this method when we want the document text. Imagine we have a sophisticated method were we want to know what the document originally looks like or what the tokens originally look like. So we need to look at that exact document’s text in order to use this method. You can also use this for snipping extraction</p></li>
+</ul>
 </section>
 <section id="ranking-pipeline" class="level2" data-number="14">
 <h2 data-number="14" class="anchored" data-anchor-id="ranking-pipeline"><span class="header-section-number">14</span> Ranking pipeline</h2>
@@ -553,6 +576,7 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>For instance we use the inverted index to find equals 10 000 top results based on a fast data structure. Then we use a much slower method to re-rank those 10 000 results. Possibly we return a subset</p>
 </section>
 <section id="ranking-pipeline-1" class="level2" data-number="15">
 <h2 data-number="15" class="anchored" data-anchor-id="ranking-pipeline-1"><span class="header-section-number">15</span> Ranking pipeline</h2>
