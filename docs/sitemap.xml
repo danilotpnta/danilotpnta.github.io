@@ -90,7 +90,7 @@
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/index.html</loc>
-    <lastmod>2024-02-09T22:54:05.607Z</lastmod>
+    <lastmod>2024-02-11T20:34:17.850Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-09-26_maximum-likelihood-estimation-(mle)-vs-maximum-a-posteriori-estimation-(map)/index.html</loc>
@@ -142,7 +142,7 @@
   </url>
   <url>
     <loc>https://www.danilotpnta.com/about/index.html</loc>
-    <lastmod>2024-02-08T23:13:48.017Z</lastmod>
+    <lastmod>2024-02-11T20:36:28.662Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/projects/2022-11-12_artificial-intelligence/index.html</loc>
@@ -314,11 +314,11 @@
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2024-02-08_introduction-to-ranking/index.html</loc>
-    <lastmod>2024-02-09T22:54:02.654Z</lastmod>
+    <lastmod>2024-02-11T20:12:56.760Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2024-02-08_term-based-retrieval/index.html</loc>
-    <lastmod>2024-02-09T22:56:12.878Z</lastmod>
+    <lastmod>2024-02-11T20:34:58.180Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2024-02-09_text-processing/index.html</loc>
@@ -327,5 +327,9 @@
   <url>
     <loc>https://www.danilotpnta.com/blog/2024-02-09_inverted-index/index.html</loc>
     <lastmod>2024-02-08T23:08:39.457Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/blog/2024-02-11_offline-evaluation-metrics/index.html</loc>
+    <lastmod>2024-02-11T20:36:37.406Z</lastmod>
   </url>
 </urlset>

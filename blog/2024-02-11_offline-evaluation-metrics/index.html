@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2024-02-13">
 <meta name="description" content="Description of this Post">
 
-<title>Danilo Toapanta - Introduction to Ranking</title>
+<title>Danilo Toapanta - Offline Evaluation Metrics</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -77,8 +77,6 @@ window.MathJax = {
 </script>
 <link rel="shortcut icon" href="../../../../../../../../../../../assets/danilo.ico">
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../css/index-posts.css">
 </head>
@@ -133,7 +131,7 @@ window.MathJax = {
 <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full blog-page" style="display: none;">
     <div class="quarto-title-banner page-columns page-full">
         <div class="quarto-title column-body">
-            <h1 class="title">Introduction to Ranking</h1>
+            <h1 class="title">Offline Evaluation Metrics</h1>
                 
             <!-- Description Block -->
                         <div>
@@ -275,7 +273,7 @@ window.MathJax = {
 <main id="title-block-header" class="quarto-title-block default page-columns page-full" style="padding-bottom: 40px;">
 
     <div class="quarto-title column-body" style="margin-bottom: 1em;">
-        <h1 class="title" style="padding-bottom:8px" ;="">Introduction to Ranking</h1>
+        <h1 class="title" style="padding-bottom:8px" ;="">Offline Evaluation Metrics</h1>
         
         <!-- Description Block -->
                     <div>
@@ -379,212 +377,241 @@ window.MathJax = {
     
 </main>
 
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_1.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 1</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
 <section id="outline" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="outline"><span class="header-section-number">1</span> Outline</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="imgs/page_2.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 2</figcaption>
+<p><img src="imgs/page_25.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 25</figcaption>
 </figure>
 </div>
 </center>
 <pre></pre>
 </section>
-<section id="context" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="context"><span class="header-section-number">2</span> Context</h2>
+<section id="precision-and-recall" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="precision-and-recall"><span class="header-section-number">2</span> Precision and recall</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="imgs/page_3.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 3</figcaption>
+<p><img src="imgs/page_26.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 26</figcaption>
 </figure>
 </div>
 </center>
 <pre></pre>
 </section>
-<section id="definition" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="definition"><span class="header-section-number">3</span> Definition</h2>
+<section id="precision-and-recall-1" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="precision-and-recall-1"><span class="header-section-number">3</span> Precision and recall</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="imgs/page_4.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 4</figcaption>
+<p><img src="imgs/page_27.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 27</figcaption>
 </figure>
 </div>
 </center>
 <pre></pre>
 </section>
-<section id="definition-1" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="definition-1"><span class="header-section-number">4</span> Definition</h2>
+<section id="precision-recall-curve" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="precision-recall-curve"><span class="header-section-number">4</span> Precision-recall curve</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="imgs/page_5.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 5</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<p>The collection of documents is what we found in the crawling phase.</p>
-<p>We usually retrieved the top <span class="math inline">\(k\)</span> best documents to look at</p>
-<p><strong>What does ad-hoc means?</strong></p>
-<ul>
-<li><p>Unlike predefined queries in some systems, ad hoc queries are formulated on-the-fly, reflecting the user’s immediate information need.</p></li>
-<li><p>There is not fixed dataset. The collection of documents could be static but is often updated with new information.</p></li>
-</ul>
-</section>
-<section id="document-the-unit-of-retrieval" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="document-the-unit-of-retrieval"><span class="header-section-number">5</span> Document: the unit of retrieval</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_6.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 6</figcaption>
-</figure>
-</div>
-</center>
-<pre></pre>
-<p>Entity, you expect to get a movie name back or a wikipedia page to a movie. Entity is a proper noun, something that you will write with a capital letter i.e.&nbsp;‘The Advangers’</p>
-</section>
-<section id="ranking-problems" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="ranking-problems"><span class="header-section-number">6</span> Ranking problems</h2>
-<center>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="imgs/page_7.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 7</figcaption>
+<p><img src="imgs/page_28.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 28</figcaption>
 </figure>
 </div>
 </center>
 <pre></pre>
 </section>
-<section id="ranking-problems-1" class="level2" data-number="7">
-<h2 data-number="7" class="anchored" data-anchor-id="ranking-problems-1"><span class="header-section-number">7</span> Ranking problems</h2>
+<section id="f-measure" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="f-measure"><span class="header-section-number">5</span> F-measure</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="imgs/page_8.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 8</figcaption>
+<p><img src="imgs/page_29.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 29</figcaption>
 </figure>
 </div>
 </center>
 <pre></pre>
 </section>
-<section id="ranking-problems-2" class="level2" data-number="8">
-<h2 data-number="8" class="anchored" data-anchor-id="ranking-problems-2"><span class="header-section-number">8</span> Ranking problems</h2>
+<section id="any-problems-with-the-metrics-so-far" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="any-problems-with-the-metrics-so-far"><span class="header-section-number">6</span> Any problems with the metrics so far?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="imgs/page_9.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 9</figcaption>
+<p><img src="imgs/page_30.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 30</figcaption>
 </figure>
 </div>
 </center>
 <pre></pre>
 </section>
-<section id="outline-1" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="outline-1"><span class="header-section-number">9</span> Outline</h2>
+<section id="outline-1" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="outline-1"><span class="header-section-number">7</span> Outline</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="imgs/page_10.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 10</figcaption>
+<p><img src="imgs/page_31.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 31</figcaption>
 </figure>
 </div>
 </center>
 <pre></pre>
 </section>
-<section id="document-analysis-pipeline" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="document-analysis-pipeline"><span class="header-section-number">10</span> Document analysis pipeline</h2>
+<section id="precision-and-recall-2" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="precision-and-recall-2"><span class="header-section-number">8</span> Precision and recall</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="imgs/page_11.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 11</figcaption>
+<p><img src="imgs/page_32.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 32</figcaption>
 </figure>
 </div>
 </center>
 <pre></pre>
 </section>
-<section id="query-analysis-pipeline" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="query-analysis-pipeline"><span class="header-section-number">11</span> Query analysis pipeline</h2>
+<section id="other-common-metrics" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="other-common-metrics"><span class="header-section-number">9</span> Other common metrics</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="imgs/page_12.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 12</figcaption>
+<p><img src="imgs/page_33.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 33</figcaption>
 </figure>
 </div>
 </center>
 <pre></pre>
-<p>If document is lower cased and we upper case the query then the two strings will not match as far as the indexing is concerned and thus even though we may be looking for the same thing because one is lower cased then we will not be able to find this information.</p>
 </section>
-<section id="index-types" class="level2" data-number="12">
-<h2 data-number="12" class="anchored" data-anchor-id="index-types"><span class="header-section-number">12</span> Index types</h2>
+<section id="any-problems-with-the-metrics-so-far-1" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="any-problems-with-the-metrics-so-far-1"><span class="header-section-number">10</span> Any problems with the metrics so far?</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="imgs/page_13.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 13</figcaption>
+<p><img src="imgs/page_34.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 34</figcaption>
 </figure>
 </div>
 </center>
 <pre></pre>
-<p>After we do some pre-processing we put them into some index, and that index is what we use with the retrieval method</p>
-<ul>
-<li><p><strong>Inverted Index</strong>, maps from the term to the list of occurrences in the document.</p></li>
-<li><p><strong>Forward Index</strong>, we have some document ID and we return the document text. You can think of it has hash mapping from document ID to document text</p></li>
-<li><p><strong>Approximate Nearest Neighbor</strong>, Here we have a vector representation as the query. So rather than the tokens [‘raw’, ‘string’] as in Inverted Index, we have now a vector ie 100 dimensions. Given this vector representation we ask the <em>Approximate Nearest Neighbor</em> what are the closest matches with this vector. In practice is like saying which documents are closest to this vector, assuming that we have indexed document representations in the index</p></li>
-</ul>
 </section>
-<section id="index-types-1" class="level2" data-number="13">
-<h2 data-number="13" class="anchored" data-anchor-id="index-types-1"><span class="header-section-number">13</span> Index types</h2>
+<section id="outline-2" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="outline-2"><span class="header-section-number">11</span> Outline</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="imgs/page_14.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 14</figcaption>
+<p><img src="imgs/page_35.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 35</figcaption>
 </figure>
 </div>
 </center>
 <pre></pre>
-<ul>
-<li><p><strong>Inverted Index</strong>, these are methods that have sparce representation of a document. If you have say 100000 terms in your vocabulary, you will create a vector of 100000 to represent this vector. You would expect more dimensions in this vector would be zero because most terms do not occur in this specific document. For instance this document could be really long but only has 5000 unique terms.<br>
-In this method you start with a term and you want to know in which document that specific term occurs and your scoring would be based on this</p></li>
-<li><p><strong>Approximate Nearest Neighbor</strong>, given a query vector we return the approximately top matching document vectors.</p></li>
-<li><p><strong>Forward Index</strong>, we use this method when we want the document text. Imagine we have a sophisticated method were we want to know what the document originally looks like or what the tokens originally look like. So we need to look at that exact document’s text in order to use this method. You can also use this for snipping extraction</p></li>
-</ul>
 </section>
-<section id="ranking-pipeline" class="level2" data-number="14">
-<h2 data-number="14" class="anchored" data-anchor-id="ranking-pipeline"><span class="header-section-number">14</span> Ranking pipeline</h2>
+<section id="user-search-behavior" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="user-search-behavior"><span class="header-section-number">12</span> User search behavior</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="imgs/page_15.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 15</figcaption>
+<p><img src="imgs/page_36.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 36</figcaption>
 </figure>
 </div>
 </center>
 <pre></pre>
-<p>For instance we use the inverted index to find equals 10 000 top results based on a fast data structure. Then we use a much slower method to re-rank those 10 000 results. Possibly we return a subset</p>
 </section>
-<section id="ranking-pipeline-1" class="level2" data-number="15">
-<h2 data-number="15" class="anchored" data-anchor-id="ranking-pipeline-1"><span class="header-section-number">15</span> Ranking pipeline</h2>
+<section id="discounted-cumulative-gain-dcg" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="discounted-cumulative-gain-dcg"><span class="header-section-number">13</span> Discounted cumulative gain (DCG)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="imgs/page_16.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 16</figcaption>
+<p><img src="imgs/page_37.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 37</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+</section>
+<section id="rank-biased-precision-rbp" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="rank-biased-precision-rbp"><span class="header-section-number">14</span> Rank-biased precision (RBP)</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_38.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 38</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+</section>
+<section id="rank-biased-precision-rbp-1" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="rank-biased-precision-rbp-1"><span class="header-section-number">15</span> Rank-biased precision (RBP)</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_39.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 39</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+</section>
+<section id="expected-reciprocal-rank-err" class="level2" data-number="16">
+<h2 data-number="16" class="anchored" data-anchor-id="expected-reciprocal-rank-err"><span class="header-section-number">16</span> Expected reciprocal rank (ERR)</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_40.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 40</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+</section>
+<section id="expected-reciprocal-rank-err-1" class="level2" data-number="17">
+<h2 data-number="17" class="anchored" data-anchor-id="expected-reciprocal-rank-err-1"><span class="header-section-number">17</span> Expected reciprocal rank (ERR)</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_41.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 41</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+</section>
+<section id="offline-evaluation-summary" class="level2" data-number="18">
+<h2 data-number="18" class="anchored" data-anchor-id="offline-evaluation-summary"><span class="header-section-number">18</span> Offline evaluation summary</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_42.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 42</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+</section>
+<section id="materials" class="level2" data-number="19">
+<h2 data-number="19" class="anchored" data-anchor-id="materials"><span class="header-section-number">19</span> Materials</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_43.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 43</figcaption>
+</figure>
+</div>
+</center>
+<pre></pre>
+</section>
+<section id="materials-1" class="level2" data-number="20">
+<h2 data-number="20" class="anchored" data-anchor-id="materials-1"><span class="header-section-number">20</span> Materials</h2>
+<center>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="imgs/page_44.png" class="w575 img-fluid figure-img"></p>
+<figcaption class="figure-caption">Slide 44</figcaption>
 </figure>
 </div>
 </center>
