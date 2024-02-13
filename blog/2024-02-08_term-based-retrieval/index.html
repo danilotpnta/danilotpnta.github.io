@@ -469,6 +469,7 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>This is more helpfull because it tell us is how salient a token is in a document</p>
 </section>
 <section id="term-frequency-1" class="level2" data-number="8">
 <h2 data-number="8" class="anchored" data-anchor-id="term-frequency-1"><span class="header-section-number">8</span> Term frequency</h2>
@@ -483,8 +484,21 @@ window.MathJax = {
 <pre></pre>
 <p><span class="math inline">\(tf_{t,d}\)</span> is the frequency of token <span class="math inline">\(t\)</span> in document <span class="math inline">\(d\)</span></p>
 </section>
-<section id="inverse-document-frequency" class="level2" data-number="9">
-<h2 data-number="9" class="anchored" data-anchor-id="inverse-document-frequency"><span class="header-section-number">9</span> Inverse document frequency</h2>
+<section id="retrieval-axioms" class="level2" data-number="9">
+<h2 data-number="9" class="anchored" data-anchor-id="retrieval-axioms"><span class="header-section-number">9</span> Retrieval Axioms</h2>
+<section id="tfc2" class="level3" data-number="9.1">
+<h3 data-number="9.1" class="anchored" data-anchor-id="tfc2"><span class="header-section-number">9.1</span> TFC2</h3>
+<p>Signal, we see one term once and the diff on looking it 20 times. But imagine we have also a doc where there is 21 terms, then the log make it the same, because both have about 20 terms</p>
+<p>We penalize with these scoping words, we want to penalize because we do not want to get a document whit many stop words</p>
+</section>
+</section>
+<section id="slide-10" class="level2" data-number="10">
+<h2 data-number="10" class="anchored" data-anchor-id="slide-10"><span class="header-section-number">10</span> Slide 10</h2>
+<p>LNCs, No adding more pages, we prefer the one document has less documents</p>
+<p>The query: University of Amsterdam, we want the terms of the query to be closer to each other</p>
+</section>
+<section id="inverse-document-frequency" class="level2" data-number="11">
+<h2 data-number="11" class="anchored" data-anchor-id="inverse-document-frequency"><span class="header-section-number">11</span> Inverse document frequency</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -493,7 +507,7 @@ window.MathJax = {
 </figure>
 </div>
 </center>
-<pre></pre>
+<p><re></re></p>
 <p>In B25 assignment there is a more complicated on how to calculate <span class="math inline">\(IDF\)</span>.</p>
 <ul>
 <li><p>Term frequency <span class="math inline">\(TF\)</span>, is a proxy for term’s importance in a document</p></li>
@@ -508,8 +522,8 @@ window.MathJax = {
 </ul>
 <p><span class="math inline">\(df\)</span> is the document frequency of token <span class="math inline">\(t\)</span>. For instance, token = ‘run’ df(run) = 8 documents, meaning the word ‘run’ appears in 8 documents</p>
 </section>
-<section id="inverse-document-frequency-1" class="level2" data-number="10">
-<h2 data-number="10" class="anchored" data-anchor-id="inverse-document-frequency-1"><span class="header-section-number">10</span> Inverse document frequency</h2>
+<section id="inverse-document-frequency-1" class="level2" data-number="12">
+<h2 data-number="12" class="anchored" data-anchor-id="inverse-document-frequency-1"><span class="header-section-number">12</span> Inverse document frequency</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -521,8 +535,8 @@ window.MathJax = {
 <pre></pre>
 <p>Calpurnia is a very rare term that does not occur in all documents does, its <span class="math inline">\(IDF\)</span> would be higuer</p>
 </section>
-<section id="tf-idf" class="level2" data-number="11">
-<h2 data-number="11" class="anchored" data-anchor-id="tf-idf"><span class="header-section-number">11</span> TF-IDF</h2>
+<section id="tf-idf" class="level2" data-number="13">
+<h2 data-number="13" class="anchored" data-anchor-id="tf-idf"><span class="header-section-number">13</span> TF-IDF</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -532,9 +546,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>One time versus twn times in the document, how likely we have seen that term in the document, so how useful is to find that term.</p>
 </section>
-<section id="tf-idf-summary" class="level2" data-number="12">
-<h2 data-number="12" class="anchored" data-anchor-id="tf-idf-summary"><span class="header-section-number">12</span> TF-IDF summary</h2>
+<section id="tf-idf-summary" class="level2" data-number="14">
+<h2 data-number="14" class="anchored" data-anchor-id="tf-idf-summary"><span class="header-section-number">14</span> TF-IDF summary</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -545,8 +560,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="outline-2" class="level2" data-number="13">
-<h2 data-number="13" class="anchored" data-anchor-id="outline-2"><span class="header-section-number">13</span> Outline</h2>
+<section id="outline-2" class="level2" data-number="15">
+<h2 data-number="15" class="anchored" data-anchor-id="outline-2"><span class="header-section-number">15</span> Outline</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -557,8 +572,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="outline-3" class="level2" data-number="14">
-<h2 data-number="14" class="anchored" data-anchor-id="outline-3"><span class="header-section-number">14</span> Outline</h2>
+<section id="outline-3" class="level2" data-number="16">
+<h2 data-number="16" class="anchored" data-anchor-id="outline-3"><span class="header-section-number">16</span> Outline</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -569,8 +584,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="language-model" class="level2" data-number="15">
-<h2 data-number="15" class="anchored" data-anchor-id="language-model"><span class="header-section-number">15</span> Language model</h2>
+<section id="language-model" class="level2" data-number="17">
+<h2 data-number="17" class="anchored" data-anchor-id="language-model"><span class="header-section-number">17</span> Language model</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -581,8 +596,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="unigram-language-model-example" class="level2" data-number="16">
-<h2 data-number="16" class="anchored" data-anchor-id="unigram-language-model-example"><span class="header-section-number">16</span> Unigram language model example</h2>
+<section id="unigram-language-model-example" class="level2" data-number="18">
+<h2 data-number="18" class="anchored" data-anchor-id="unigram-language-model-example"><span class="header-section-number">18</span> Unigram language model example</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -593,8 +608,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="documents-as-distributions" class="level2" data-number="17">
-<h2 data-number="17" class="anchored" data-anchor-id="documents-as-distributions"><span class="header-section-number">17</span> Documents as distributions</h2>
+<section id="documents-as-distributions" class="level2" data-number="19">
+<h2 data-number="19" class="anchored" data-anchor-id="documents-as-distributions"><span class="header-section-number">19</span> Documents as distributions</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -604,9 +619,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>What if the term does not appear, int he document even thought we are talkinig about say hollad? We then will not retrieve this document which is clearly not the sace</p>
 </section>
-<section id="match-using-query-likelihood-model-qlm" class="level2" data-number="18">
-<h2 data-number="18" class="anchored" data-anchor-id="match-using-query-likelihood-model-qlm"><span class="header-section-number">18</span> Match using query likelihood model (QLM)</h2>
+<section id="match-using-query-likelihood-model-qlm" class="level2" data-number="20">
+<h2 data-number="20" class="anchored" data-anchor-id="match-using-query-likelihood-model-qlm"><span class="header-section-number">20</span> Match using query likelihood model (QLM)</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -617,8 +633,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="match-using-kl-divergence" class="level2" data-number="19">
-<h2 data-number="19" class="anchored" data-anchor-id="match-using-kl-divergence"><span class="header-section-number">19</span> Match using KL-divergence</h2>
+<section id="match-using-kl-divergence" class="level2" data-number="21">
+<h2 data-number="21" class="anchored" data-anchor-id="match-using-kl-divergence"><span class="header-section-number">21</span> Match using KL-divergence</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -628,9 +644,10 @@ window.MathJax = {
 </div>
 </center>
 <pre></pre>
+<p>The lower the divergene the lower the similarity</p>
 </section>
-<section id="outline-4" class="level2" data-number="20">
-<h2 data-number="20" class="anchored" data-anchor-id="outline-4"><span class="header-section-number">20</span> Outline</h2>
+<section id="outline-4" class="level2" data-number="22">
+<h2 data-number="22" class="anchored" data-anchor-id="outline-4"><span class="header-section-number">22</span> Outline</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -641,8 +658,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="jelinek-mercer-smoothing" class="level2" data-number="21">
-<h2 data-number="21" class="anchored" data-anchor-id="jelinek-mercer-smoothing"><span class="header-section-number">21</span> Jelinek-Mercer smoothing</h2>
+<section id="jelinek-mercer-smoothing" class="level2" data-number="23">
+<h2 data-number="23" class="anchored" data-anchor-id="jelinek-mercer-smoothing"><span class="header-section-number">23</span> Jelinek-Mercer smoothing</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -653,8 +670,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="dirichlet-smoothing" class="level2" data-number="22">
-<h2 data-number="22" class="anchored" data-anchor-id="dirichlet-smoothing"><span class="header-section-number">22</span> Dirichlet smoothing</h2>
+<section id="dirichlet-smoothing" class="level2" data-number="24">
+<h2 data-number="24" class="anchored" data-anchor-id="dirichlet-smoothing"><span class="header-section-number">24</span> Dirichlet smoothing</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -665,8 +682,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="language-modeling-for-ir-summary" class="level2" data-number="23">
-<h2 data-number="23" class="anchored" data-anchor-id="language-modeling-for-ir-summary"><span class="header-section-number">23</span> Language modeling for IR summary</h2>
+<section id="language-modeling-for-ir-summary" class="level2" data-number="25">
+<h2 data-number="25" class="anchored" data-anchor-id="language-modeling-for-ir-summary"><span class="header-section-number">25</span> Language modeling for IR summary</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -677,8 +694,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="outline-5" class="level2" data-number="24">
-<h2 data-number="24" class="anchored" data-anchor-id="outline-5"><span class="header-section-number">24</span> Outline</h2>
+<section id="outline-5" class="level2" data-number="26">
+<h2 data-number="26" class="anchored" data-anchor-id="outline-5"><span class="header-section-number">26</span> Outline</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -689,8 +706,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="bm25" class="level2" data-number="25">
-<h2 data-number="25" class="anchored" data-anchor-id="bm25"><span class="header-section-number">25</span> BM25</h2>
+<section id="bm25" class="level2" data-number="27">
+<h2 data-number="27" class="anchored" data-anchor-id="bm25"><span class="header-section-number">27</span> BM25</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -701,8 +718,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="bm25-1" class="level2" data-number="26">
-<h2 data-number="26" class="anchored" data-anchor-id="bm25-1"><span class="header-section-number">26</span> BM25</h2>
+<section id="bm25-1" class="level2" data-number="28">
+<h2 data-number="28" class="anchored" data-anchor-id="bm25-1"><span class="header-section-number">28</span> BM25</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -713,8 +730,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="bm25-for-long-queries" class="level2" data-number="27">
-<h2 data-number="27" class="anchored" data-anchor-id="bm25-for-long-queries"><span class="header-section-number">27</span> BM25 for long queries</h2>
+<section id="bm25-for-long-queries" class="level2" data-number="29">
+<h2 data-number="29" class="anchored" data-anchor-id="bm25-for-long-queries"><span class="header-section-number">29</span> BM25 for long queries</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -725,8 +742,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="experimental-comparison" class="level2" data-number="28">
-<h2 data-number="28" class="anchored" data-anchor-id="experimental-comparison"><span class="header-section-number">28</span> Experimental comparison</h2>
+<section id="experimental-comparison" class="level2" data-number="30">
+<h2 data-number="30" class="anchored" data-anchor-id="experimental-comparison"><span class="header-section-number">30</span> Experimental comparison</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -737,8 +754,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="experimental-comparison-1" class="level2" data-number="29">
-<h2 data-number="29" class="anchored" data-anchor-id="experimental-comparison-1"><span class="header-section-number">29</span> Experimental comparison</h2>
+<section id="experimental-comparison-1" class="level2" data-number="31">
+<h2 data-number="31" class="anchored" data-anchor-id="experimental-comparison-1"><span class="header-section-number">31</span> Experimental comparison</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -749,8 +766,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="content-based-retrieval-summary" class="level2" data-number="30">
-<h2 data-number="30" class="anchored" data-anchor-id="content-based-retrieval-summary"><span class="header-section-number">30</span> Content-based retrieval summary</h2>
+<section id="content-based-retrieval-summary" class="level2" data-number="32">
+<h2 data-number="32" class="anchored" data-anchor-id="content-based-retrieval-summary"><span class="header-section-number">32</span> Content-based retrieval summary</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -761,8 +778,8 @@ window.MathJax = {
 </center>
 <pre></pre>
 </section>
-<section id="materials" class="level2" data-number="31">
-<h2 data-number="31" class="anchored" data-anchor-id="materials"><span class="header-section-number">31</span> Materials</h2>
+<section id="materials" class="level2" data-number="33">
+<h2 data-number="33" class="anchored" data-anchor-id="materials"><span class="header-section-number">33</span> Materials</h2>
 <center>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
