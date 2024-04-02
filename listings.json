@@ -22,6 +22,16 @@
   {
     "listing": "/blog/index.html",
     "items": [
+      "/blog/2024-04-02_conditioning-message-functions/index.html",
+      "/blog/2024-04-02_message-passing/index.html",
+      "/blog/2024-04-02_motivation-equivariant-graph-nns/index.html",
+      "/blog/2024-04-02_group-convolutions-are-all-you-need/index.html",
+      "/blog/2024-04-02_-group-theory:-transitive-action/index.html",
+      "/blog/2024-04-02_a-brief-history-of-g-cnns/index.html",
+      "/blog/2024-04-02_se(2)-equivariant-nn-example/index.html",
+      "/blog/2024-04-02_regular-group-convolutions:-template-matching-viewpoing/index.html",
+      "/blog/2024-04-02_-group-theory:-groups,-group-product,-inverse,-action/index.html",
+      "/blog/2024-04-02_regular-group-convolutions/index.html",
       "/blog/2024-02-11_offline-evaluation-metrics/index.html",
       "/blog/2024-02-08_term-based-retrieval/index.html",
       "/blog/2024-02-08_introduction-to-ranking/index.html",
