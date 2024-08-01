@@ -80,7 +80,7 @@ h3 {
 @media (max-width: 991px){
     body.floating .page-columns {
         display: block !important;
-        padding: 0em 1.5em !important;
+        padding: 0em 1.5em;
     }
 
     #quarto-sidebar {
@@ -295,4 +295,9 @@ span.hasth-tag {
     display: none;
 }
 
+
+/* Disable author name */
+#title-block-header{
+    display: none !important;
+}
 

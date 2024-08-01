@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
-
+<meta name="generator" content="quarto-1.5.53">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Danilo Toapanta">
-
-<title>Danilo Toapanta - DEV</title>
+<title>Danilo Toapanta - DEV – Danilo Toapanta</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,7 +20,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -34,7 +31,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -57,7 +54,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -78,14 +74,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -94,92 +94,124 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+}</script><link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/material-icons-0.14.2/mi.css" rel="stylesheet">
-<script>
+<!-- <link href="../../site_libs/quarto-contrib/material-icons-0.14.2/mi.css" rel="stylesheet"> --><script>
+document.addEventListener('DOMContentLoaded', function () {
+  function openSearchIfParamExists() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('search')) {
+      // Programmatically click the search icon to open the search overlay
+      const searchIcon = document.querySelector('.bi-search');
+      if (searchIcon) {
+        searchIcon.click(); // Trigger the search icon click to open the search overlay
+        setTimeout(() => {
+          const searchBox = document.querySelector('.aa-Input');
+          if (searchBox) {
+            searchBox.focus(); // Focus on the actual input box
+          }
+        }, 500); // Adjust the timeout as needed
+      }
+    }
+  }
+
+  // Call the function to check the query parameter and open the search if needed
+  openSearchIfParamExists();
+});
+
+</script><script>
 window.MathJax = {
   tex: {
     tags: 'ams'
   }
 };
-</script>
-<link rel="shortcut icon" href="../../../../../../../../../../../assets/danilo.ico">
-
-
+</script><link rel="shortcut icon" href="../../../../../../../../../../../assets/danilo.ico">
 <link rel="stylesheet" href="index.css">
 </head>
-
 <body class="floating nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title"><span id="danilo_topanta_brand"> Danilo Toapanta</span> <a id="mysite" class="mysite" href="../../../../../sites/">MySites</a></span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
- <span class="menu-text"><span id="home-welcome-msg">Home</span></span></a>
+<li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text"><span id="home-welcome-msg">Home</span></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../blog/index.html" rel="" target="">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../projects/index.html" rel="" target="">
- <span class="menu-text">Projects</span></a>
+    <a class="nav-link" href="../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about/index.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../about/index.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/danilotpnta?tab=repositories" rel="" target="_blank"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/danilotpnta?tab=repositories" target="_blank"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
+</div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
-<!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full"><div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      
+                      </div>
+  </div>
     
-</nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Danilo Toapanta </p>
+            </div>
+    </div>
+      
+    
+      <div>
+      <div class="quarto-title-meta-heading">Modified</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date-modified">August 7, 2023</p>
+      </div>
+    </div>
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
-
-
-
-<section id="dev" class="level2 unlisted unnumbered center show-anchor-link">
-<h2 class="unlisted unnumbered anchored" data-anchor-id="dev">Dev</h2>
-</section>
-<p>In this section I have recompiled the sources, links and all the material that were more helpfull during the creation of this website.</p>
+<main class="content quarto-banner-title-block" id="quarto-document-content"><section id="dev" class="level2 unlisted unnumbered center show-anchor-link"><h2 class="unlisted unnumbered anchored" data-anchor-id="dev">Dev</h2>
+</section><p>In this section I have recompiled the sources, links and all the material that were more helpfull during the creation of this website.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -198,131 +230,112 @@ Note about this page
 </div>
 </div>
 </div>
-<section id="to-do" class="level3 unnumbered unlisted to-do">
-<h3 class="unnumbered unlisted anchored" data-anchor-id="to-do">To do</h3>
+<section id="to-do" class="level3 unnumbered unlisted to-do"><h3 class="unnumbered unlisted anchored" data-anchor-id="to-do">To do</h3>
 <p>
 📄 Landing Page
 </p>
 <ul class="task-list">
-<li><input type="checkbox" checked="">Include News Feed</li>
+<li><label><input type="checkbox" checked="">Include News Feed</label></li>
 </ul>
 <p>
 📄 About
 </p>
 <ul class="task-list">
-<li><input type="checkbox" checked="">Take picture and place it in About</li>
-<li><input type="checkbox" checked="">Contact form/ Details</li>
-<li><input type="checkbox" checked="">Update the links i.e.&nbsp;‘Message me’</li>
-<li><input type="checkbox" checked="">Add an extra page called ‘now’ to link to <span class="codeColored"><code>What I am doing now</code></span></li>
-<li><input type="checkbox" checked="">Link <span class="codeColored"><code>recent post</code></span> to a recent post</li>
-<li><input type="checkbox">Add CV to drive like <a href="https://www.dropbox.com/s/mylkuexn11rlifg/R%C3%A9sum%C3%A9%E2%80%94Nono.MA.pdf?dl=0">this</a></li>
+<li><label><input type="checkbox" checked="">Take picture and place it in About</label></li>
+<li><label><input type="checkbox" checked="">Contact form/ Details</label></li>
+<li><label><input type="checkbox" checked="">Update the links i.e.&nbsp;‘Message me’</label></li>
+<li><label><input type="checkbox" checked="">Add an extra page called ‘now’ to link to <span class="codeColored"><code>What I am doing now</code></span></label></li>
+<li><label><input type="checkbox" checked="">Link <span class="codeColored"><code>recent post</code></span> to a recent post</label></li>
+<li><label><input type="checkbox">Add CV to drive like <a href="https://www.dropbox.com/s/mylkuexn11rlifg/R%C3%A9sum%C3%A9%E2%80%94Nono.MA.pdf?dl=0">this</a></label></li>
 </ul>
 <p>
 📄 Blogs
 </p>
 <ul class="task-list">
-<li><input type="checkbox" checked=""><del>Insert on top of page most visited blog</del> - <em>Keep it simple</em></li>
+<li><label><input type="checkbox" checked=""><del>Insert on top of page most visited blog</del> - <em>Keep it simple</em></label></li>
 </ul>
 <p>
 📄 Projects
 </p>
 <ul class="task-list">
-<li><input type="checkbox" checked="">Update projects from CV</li>
-<li><input type="checkbox">Embed the BSc thesis <a href="https://meghan.rbind.io/talk/rstudioconf/">slides</a></li>
+<li><label><input type="checkbox" checked="">Update projects from CV</label></li>
+<li><label><input type="checkbox">Embed the BSc thesis <a href="https://meghan.rbind.io/talk/rstudioconf/">slides</a></label></li>
 </ul>
 <p>
 📄 Sites
 </p>
 <ul class="task-list">
-<li><input type="checkbox" checked="">Create grid to show all my site</li>
-<li><input type="checkbox">Create subdomains</li>
+<li><label><input type="checkbox" checked="">Create grid to show all my site</label></li>
+<li><label><input type="checkbox">Create subdomains</label></li>
 </ul>
 <p>
 <i class="fa-solid fa-code-branch fa-xs" aria-label="code-branch"></i> Deployment
 </p>
 <ul class="task-list">
-<li><input type="checkbox" checked="">See integration with Github</li>
-<li><input type="checkbox" checked="">Get a domain</li>
+<li><label><input type="checkbox" checked="">See integration with Github</label></li>
+<li><label><input type="checkbox" checked="">Get a domain</label></li>
 </ul>
 <p>
 <i class="fa-brands fa-sass fa-xs" aria-label="sass"></i> Styling
 </p>
 <ul class="task-list">
-<li><input type="checkbox" checked="">Comment css sniptes in both themes</li>
-<li><input type="checkbox" checked="">Arrange better the snipets in DEV section</li>
-<li><input type="checkbox" checked="">Make integration mobile version (the hamburger icon)</li>
+<li><label><input type="checkbox" checked="">Comment css sniptes in both themes</label></li>
+<li><label><input type="checkbox" checked="">Arrange better the snipets in DEV section</label></li>
+<li><label><input type="checkbox" checked="">Make integration mobile version (the hamburger icon)</label></li>
 </ul>
 <p>
 <i class="fa-solid fa-wand-magic-sparkles fa-2xs" aria-label="wand-magic-sparkles"></i> Features to implement
 </p>
 <ul class="task-list">
-<li><input type="checkbox" checked="">Add an extra page for ‘Books’</li>
-<li><input type="checkbox" checked="">Create scrollable box for links (show only fixed square)</li>
-<li><input type="checkbox" checked="">Add button to lead to Github project</li>
-<li><input type="checkbox" checked="">Click button to download a pdf version of the current page</li>
-<li><input type="checkbox" checked=""><del>Heart button if you find this blog usefull i.e people find this usefull</del> - <em>Keep it simple</em></li>
+<li><label><input type="checkbox" checked="">Add an extra page for ‘Books’</label></li>
+<li><label><input type="checkbox" checked="">Create scrollable box for links (show only fixed square)</label></li>
+<li><label><input type="checkbox" checked="">Add button to lead to Github project</label></li>
+<li><label><input type="checkbox" checked="">Click button to download a pdf version of the current page</label></li>
+<li><label><input type="checkbox" checked=""><del>Heart button if you find this blog usefull i.e people find this usefull</del> - <em>Keep it simple</em></label></li>
+</ul></section><div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist">
+<li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Useful Snippets</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Important Links</a></li>
 </ul>
-</section>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Useful Snippets</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Important Links</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <div class="scrollableBox">
-<section id="fontawesome-search-fa-icons" class="level6">
-<h6 class="anchored" data-anchor-id="fontawesome-search-fa-icons">Fontawesome <a href="https://fontawesome.com/search?o=r&amp;m=free">Search FA icons</a></h6>
+<section id="fontawesome-search-fa-icons" class="level6"><h6 class="anchored" data-anchor-id="fontawesome-search-fa-icons">Fontawesome <a href="https://fontawesome.com/search?o=r&amp;m=free">Search FA icons</a>
+</h6>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<pre class="text cell-code"><code>{{&lt; fa thumbs-up &gt;}}
+<details class="code-fold"><summary>Code</summary><pre class="text cell-code"><code>{{&lt; fa thumbs-up &gt;}}
 {{&lt; fa brands sass &gt;}}
 {{&lt; fa brands sass size=xs &gt;}}</code></pre>
 </details>
 </div>
 <p>Extension at: <a href="https://github.com/quarto-ext">link</a></p>
-</section>
-<section id="insert-twitter" class="level6">
-<h6 class="anchored" data-anchor-id="insert-twitter">Insert Twitter</h6>
+</section><section id="insert-twitter" class="level6"><h6 class="anchored" data-anchor-id="insert-twitter">Insert Twitter</h6>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">### Tweet {.unlisted .unnumbered}</span></span>
+<details class="code-fold"><summary>Code</summary><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="do">### Tweet {.unlisted .unnumbered}</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">```</span><span class="at">{html}</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="at">        &lt;blockquote class="twitter-tweet"&gt;&lt;p lang="en" dir="ltr"&gt;Deployment of &lt;a href="https://twitter.com/Arabsat?ref_src=twsrc%5Etfw"&gt;@Arabsat&lt;/a&gt; BADR-8 confirmed &lt;a href="https://t.co/97VMx9aaD6"&gt;pic.twitter.com/97VMx9aaD6&lt;/a&gt;&lt;/p&gt;&amp;mdash; SpaceX (@SpaceX) &lt;a href="https://twitter.com/SpaceX/status/1662324844497883136?ref_src=twsrc%5Etfw"&gt;May 27, 2023&lt;/a&gt;&lt;/blockquote&gt; &lt;script async src="https://platform.twitter.com/widgets.js" charset="utf-8"&gt;&lt;/script&gt;</span></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="at">    </span><span class="st">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-</section>
-<section id="use-variables-in-text" class="level6">
-<h6 class="anchored" data-anchor-id="use-variables-in-text">Use variables in text</h6>
+</section><section id="use-variables-in-text" class="level6"><h6 class="anchored" data-anchor-id="use-variables-in-text">Use variables in text</h6>
 <details><summary>Code</summary><blockquote class="blockquote">
 
 Hello world! See [HTML details tag - W3Schools](https://www.w3schools.com/TAGS/tag_details.asp) for more info :)
 
-</blockquote></details>
-</section>
-<section id="to-create-collapsable-code" class="level6">
-<h6 class="anchored" data-anchor-id="to-create-collapsable-code">To create collapsable code</h6>
+</blockquote></details></section><section id="to-create-collapsable-code" class="level6"><h6 class="anchored" data-anchor-id="to-create-collapsable-code">To create collapsable code</h6>
 <details><summary>Code</summary><blockquote class="blockquote">
 
     <!-- ```{{html}} -->
         <details open=""><summary>Hello</summary><blockquote class="blockquote">
           <details><summary>World - click me to open</summary><blockquote class="blockquote">
             :smile:
-          </blockquote></details>
-          <details open=""><summary>World</summary><blockquote class="blockquote">
+          </blockquote></details><details open=""><summary>World</summary><blockquote class="blockquote">
             :smile:
           </blockquote></details>
-        </blockquote></details>
-    <!-- ``` -->
-
-</blockquote></details>
-</section>
-<section id="insert-variables-in-text" class="level6">
-<h6 class="anchored" data-anchor-id="insert-variables-in-text">Insert variables in text</h6>
+</blockquote></details><!-- ``` -->
+</blockquote></details></section><section id="insert-variables-in-text" class="level6"><h6 class="anchored" data-anchor-id="insert-variables-in-text">Insert variables in text</h6>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<pre class="text cell-code"><code>    ```{r}
+<details class="code-fold"><summary>Code</summary><pre class="text cell-code"><code>    ```{r}
     #| code-fold: false
     #| eval: false
     #| echo: false
@@ -332,26 +345,16 @@ Hello world! See [HTML details tag - W3Schools](https://www.w3schools.com/TAGS/t
 </code></pre>
 </details>
 </div>
-</section>
-<section id="to-write-date" class="level6">
-<h6 class="anchored" data-anchor-id="to-write-date">To write Date:</h6>
+</section><section id="to-write-date" class="level6"><h6 class="anchored" data-anchor-id="to-write-date">To write Date:</h6>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<pre class="text cell-code"><code>`r Sys.Date()`</code></pre>
+<details class="code-fold"><summary>Code</summary><pre class="text cell-code"><code>`r Sys.Date()`</code></pre>
 </details>
 </div>
-</section>
-<section id="to-add-some-small-spaces" class="level6">
-<h6 class="anchored" data-anchor-id="to-add-some-small-spaces">To add some small spaces:</h6>
+</section><section id="to-add-some-small-spaces" class="level6"><h6 class="anchored" data-anchor-id="to-add-some-small-spaces">To add some small spaces:</h6>
 <p><code>&lt;pre&gt;&lt;/pre&gt;</code></p>
-</section>
-<section id="too-show-step-by-step-what-you-click-on" class="level6">
-<h6 class="anchored" data-anchor-id="too-show-step-by-step-what-you-click-on">Too show step by step what you click on:</h6>
+</section><section id="too-show-step-by-step-what-you-click-on" class="level6"><h6 class="anchored" data-anchor-id="too-show-step-by-step-what-you-click-on">Too show step by step what you click on:</h6>
 <div class="cell">
-<details>
-<summary>Code</summary>
-<pre class="text cell-code"><code>Scribe: 
+<details class="code-fold"><summary>Code</summary><pre class="text cell-code"><code>Scribe: 
 https://scribehow.com/</code></pre>
 </details>
 </div>
@@ -360,16 +363,13 @@ https://scribehow.com/</code></pre>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="scrollableBox">
-<section id="documentation" class="level6">
-<h6 class="anchored" data-anchor-id="documentation">Documentation</h6>
+<section id="documentation" class="level6"><h6 class="anchored" data-anchor-id="documentation">Documentation</h6>
 <p><a href="https://github.com/twbs/bootstrap/blob/main/scss/_variables.scss">Bootstrap</a></p>
 <p><a href="https://github.com/rladies/meetup-presentations_freiburg/tree/master/2022-06-02_Quarto">QMD Presentations</a></p>
 <p><a href="https://quarto.org/docs/reference/dates.html">Dates</a></p>
 <p><a href="https://uwdata.github.io/visualization-curriculum/altair_marks_encoding.html">Example Jupyter Book</a></p>
 <p><a href="https://stephenleo.github.io/data-science-blog/data-science-blog/python/python.html">Example blog</a></p>
-</section>
-<section id="css-layout-js" class="level6">
-<h6 class="anchored" data-anchor-id="css-layout-js">CSS, Layout, JS</h6>
+</section><section id="css-layout-js" class="level6"><h6 class="anchored" data-anchor-id="css-layout-js">CSS, Layout, JS</h6>
 <p><a href="https://quarto.org/docs/output-formats/page-layout.html">Quarto Layout</a></p>
 <p><a href="https://ucsb-meds.github.io/customizing-quarto-websites/#/use-sass-colors">Tutorial mystyles.css</a></p>
 <p><a href="https://quarto.org/docs/authoring/article-layout.html">Article Layout</a></p>
@@ -392,36 +392,24 @@ https://scribehow.com/</code></pre>
 <p><a href="https://mine-cr.com/about/">How to add an audio file and add it</a></p>
 <p><a href="https://github.com/amirshnll/custom-device-emulation-chrome">Dimensions iPhones Inspector</a></p>
 <p><a href="https://gjkoplik.github.io/spectral_clustering/#spectral_clustering">TOC idea</a></p>
-</section>
-<section id="gallery" class="level6 unlisted unnumbered">
-<h6 class="unlisted unnumbered anchored" data-anchor-id="gallery">Gallery</h6>
+</section><section id="gallery" class="level6 unlisted unnumbered"><h6 class="unlisted unnumbered anchored" data-anchor-id="gallery">Gallery</h6>
 <p><a href="https://github.com/quarto-dev/quarto-web/blob/main/ejs/links.ejs">Links EJs</a></p>
 <p><a href="https://github.com/quarto-dev/quarto-web/blob/main/docs/gallery/gallery.yml">Gallery EJs Example</a></p>
 <p><a href="https://robertmitchellv.com/blog/2022-08-building-with-quarto/building-with-quarto.html">Talks about blocks and :::</a></p>
 <p><a href="https://github.com/kazuyanagimoto/kazuyanagimoto.github.io/blob/main/static/html/research/work-in-progress.ejs">For Examples of EJS Listing galleries</a></p>
-</section>
-<section id="related-to-title-page" class="level6 unlisted unnumbered">
-<h6 class="unlisted unnumbered anchored" data-anchor-id="related-to-title-page">Related to title page</h6>
+</section><section id="related-to-title-page" class="level6 unlisted unnumbered"><h6 class="unlisted unnumbered anchored" data-anchor-id="related-to-title-page">Related to title page</h6>
 <p><a href="https://github.com/quarto-dev/quarto-cli/discussions/1736">link 1</a></p>
 <p><a href="https://github.com/quarto-dev/quarto-cli/discussions/5260">link 2</a></p>
 <p><a href="https://quarto.org/docs/reference/formats/html.html#metadata">link 3</a></p>
-</section>
-<section id="extensions" class="level6 unlisted unnumbered">
-<h6 class="unlisted unnumbered anchored" data-anchor-id="extensions">Extensions:</h6>
+</section><section id="extensions" class="level6 unlisted unnumbered"><h6 class="unlisted unnumbered anchored" data-anchor-id="extensions">Extensions:</h6>
 <p><a href="https://github.com/shafayetShafee/collapse-social-embeds">Collapsable Social media</a></p>
-</section>
-<section id="equations" class="level6 unlisted unnumbered">
-<h6 class="unlisted unnumbered anchored" data-anchor-id="equations">Equations</h6>
+</section><section id="equations" class="level6 unlisted unnumbered"><h6 class="unlisted unnumbered anchored" data-anchor-id="equations">Equations</h6>
 <p><a href="https://katex.org/docs/api.html">Katex, used for rendering math equations fast</a></p>
-</section>
-<section id="youtube-links" class="level6 unlisted unnumbered">
-<h6 class="unlisted unnumbered anchored" data-anchor-id="youtube-links">Youtube Links</h6>
+</section><section id="youtube-links" class="level6 unlisted unnumbered"><h6 class="unlisted unnumbered anchored" data-anchor-id="youtube-links">Youtube Links</h6>
 <p><a href="https://youtu.be/AnrGW8zoLx8">Daniel Chen - Install Python. Quarto Render All the Things | PyData NYC 2022</a></p>
 <p><a href="https://youtu.be/shVSmYna3GM">R-Ladies Freiburg (English) - Getting to know Quarto</a></p>
 <p><a href="https://youtu.be/_f3latmOhew">Get started with Quarto | Mine Çetinkaya-Rundel</a></p>
-</section>
-<section id="redirects" class="level6">
-<h6 class="anchored" data-anchor-id="redirects">Redirects</h6>
+</section><section id="redirects" class="level6"><h6 class="anchored" data-anchor-id="redirects">Redirects</h6>
 <p><a href="https://blog.djnavarro.net/posts/2022-04-20_porting-to-quarto/#notes-on-yaml-headers">Change slug</a></p>
 <p><a href="https://github.com/EllaKaye/ellakaye.co.uk/blob/main/index.qmd">Redirects Slugs</a></p>
 <p><a href="https://quarto.org/docs/websites/website-navigation.html#redirects">Quarto DOCs Redirect</a></p>
@@ -434,8 +422,7 @@ https://scribehow.com/</code></pre>
 
 
 
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -476,6 +463,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -544,13 +558,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -585,18 +601,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -628,11 +633,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/www\.danilotpnta\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -642,8 +686,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -655,7 +708,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -699,6 +875,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -724,6 +901,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -784,30 +987,34 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
       &nbsp;
     </div>   
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item">
-    <a class="nav-link" href="../about/index.html"><span class="footerDaniloToapanta">Mantained by Danilo Toapanta</span></a>
+<li class="nav-item">
+    <a class="nav-link" href="../about/index.html">
+<p><span class="footerDaniloToapanta">Mantained by Danilo Toapanta</span></p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../coming-soon.html">Newsletter</a>
+    <a class="nav-link" href="../coming-soon.html">
+<p>Newsletter</p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../docs/sitemap.xml">RSS</a>
+    <a class="nav-link" href="../docs/sitemap.xml">
+<p>RSS</p>
+</a>
   </li>  
 </ul>
-    </div>
+</div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
   </div>
-</footer>
-<script>
+</footer><script>
 
     let navbar = document.getElementsByClassName("navbar-nav")[0]    
 
@@ -854,9 +1061,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 </script>
-
-
-
 
 
 </body></html>

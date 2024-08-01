@@ -109,3 +109,7 @@ main {
     }
 }
 
+/* Disable author name */
+#title-block-header{
+    display: none !important;
+}

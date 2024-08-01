@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.5.53">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2023-11-20">
 <meta name="description" content="Description of this Post">
 
-<title>Danilo Toapanta - Convolutional Neural Networks</title>
+<title>Convolutional Neural Networks – Danilo Toapanta</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,7 +25,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -36,7 +36,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -85,7 +85,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -94,6 +99,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -101,7 +107,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/material-icons-0.14.2/mi.css" rel="stylesheet">
+<!-- <link href="../../site_libs/quarto-contrib/material-icons-0.14.2/mi.css" rel="stylesheet"> -->
 <script>
 window.MathJax = {
   tex: {
@@ -111,8 +117,35 @@ window.MathJax = {
 </script>
 <link rel="shortcut icon" href="../../../../../../../../../../../assets/danilo.ico">
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../css/index-posts.css">
 </head>
@@ -120,51 +153,54 @@ window.MathJax = {
 <body class="floating nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <div id="quarto-announcement" data-announcement-id="9616bfb5c47a60811ea96e08f2ae1bd0" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p><strong>Alert</strong> - this is some information that you should pay attention to</p>
+</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title"><span id="danilo_topanta_brand"> Danilo Toapanta</span> <a id="mysite" class="mysite" href="../../../../../sites/">MySites</a></span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../index.html" rel="" target="">
- <span class="menu-text"><span id="home-welcome-msg">Home</span></span></a>
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text"><span id="home-welcome-msg">Home</span></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../blog/index.html" rel="" target="">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="../../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects/index.html" rel="" target="">
- <span class="menu-text">Projects</span></a>
+    <a class="nav-link" href="../../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../about/index.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../../about/index.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/danilotpnta?tab=repositories" rel="" target="_blank"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/danilotpnta?tab=repositories" target="_blank"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
+          </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full blog-page" style="display: none;">
+<header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full blog-page" style="display: none !important;">
     <div class="quarto-title-banner page-columns page-full">
         <div class="quarto-title column-body">
             <h1 class="title">Convolutional Neural Networks</h1>
@@ -227,10 +263,10 @@ window.MathJax = {
     
 </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     
 </nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     
 <!-- main -->
@@ -413,6 +449,7 @@ window.MathJax = {
     
 </main>
 
+
 <!-- ## Title
 <center>![Slide 1](imgs/page_1.png){.w575}</center><pre></pre> -->
 <section id="optimizing-neural-networks" class="level2" data-number="1">
@@ -421,7 +458,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_2.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 2</figcaption>
+<figcaption>Slide 2</figcaption>
 </figure>
 </div>
 </center>
@@ -433,7 +470,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_3.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 3</figcaption>
+<figcaption>Slide 3</figcaption>
 </figure>
 </div>
 </center>
@@ -445,7 +482,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_4.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 4</figcaption>
+<figcaption>Slide 4</figcaption>
 </figure>
 </div>
 </center>
@@ -458,7 +495,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_5.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 5</figcaption>
+<figcaption>Slide 5</figcaption>
 </figure>
 </div>
 </center>
@@ -470,7 +507,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_6.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 6</figcaption>
+<figcaption>Slide 6</figcaption>
 </figure>
 </div>
 </center>
@@ -483,7 +520,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_7.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 7</figcaption>
+<figcaption>Slide 7</figcaption>
 </figure>
 </div>
 </center>
@@ -496,7 +533,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_8.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 8</figcaption>
+<figcaption>Slide 8</figcaption>
 </figure>
 </div>
 </center>
@@ -508,7 +545,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_9.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 9</figcaption>
+<figcaption>Slide 9</figcaption>
 </figure>
 </div>
 </center>
@@ -520,7 +557,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_10.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 10</figcaption>
+<figcaption>Slide 10</figcaption>
 </figure>
 </div>
 </center>
@@ -542,7 +579,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_11.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 11</figcaption>
+<figcaption>Slide 11</figcaption>
 </figure>
 </div>
 </center>
@@ -555,7 +592,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_12.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 12</figcaption>
+<figcaption>Slide 12</figcaption>
 </figure>
 </div>
 </center>
@@ -567,7 +604,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_13.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 13</figcaption>
+<figcaption>Slide 13</figcaption>
 </figure>
 </div>
 </center>
@@ -579,7 +616,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_14.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 14</figcaption>
+<figcaption>Slide 14</figcaption>
 </figure>
 </div>
 </center>
@@ -592,7 +629,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_15.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 15</figcaption>
+<figcaption>Slide 15</figcaption>
 </figure>
 </div>
 </center>
@@ -609,7 +646,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_16.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 16</figcaption>
+<figcaption>Slide 16</figcaption>
 </figure>
 </div>
 </center>
@@ -622,7 +659,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_17.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 17</figcaption>
+<figcaption>Slide 17</figcaption>
 </figure>
 </div>
 </center>
@@ -636,7 +673,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_18.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 18</figcaption>
+<figcaption>Slide 18</figcaption>
 </figure>
 </div>
 </center>
@@ -652,7 +689,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_19.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 19</figcaption>
+<figcaption>Slide 19</figcaption>
 </figure>
 </div>
 </center>
@@ -664,7 +701,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_20.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 20</figcaption>
+<figcaption>Slide 20</figcaption>
 </figure>
 </div>
 </center>
@@ -677,7 +714,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_21.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 21</figcaption>
+<figcaption>Slide 21</figcaption>
 </figure>
 </div>
 </center>
@@ -697,7 +734,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_22.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 22</figcaption>
+<figcaption>Slide 22</figcaption>
 </figure>
 </div>
 </center>
@@ -715,7 +752,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_23.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 23</figcaption>
+<figcaption>Slide 23</figcaption>
 </figure>
 </div>
 </center>
@@ -771,7 +808,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_24.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 24</figcaption>
+<figcaption>Slide 24</figcaption>
 </figure>
 </div>
 </center>
@@ -781,7 +818,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_25.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 25</figcaption>
+<figcaption>Slide 25</figcaption>
 </figure>
 </div>
 </center>
@@ -828,7 +865,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_28.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 28</figcaption>
+<figcaption>Slide 28</figcaption>
 </figure>
 </div>
 </center>
@@ -842,7 +879,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_30.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 30</figcaption>
+<figcaption>Slide 30</figcaption>
 </figure>
 </div>
 </center>
@@ -857,7 +894,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_32.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 32</figcaption>
+<figcaption>Slide 32</figcaption>
 </figure>
 </div>
 </center>
@@ -873,7 +910,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_34.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 34</figcaption>
+<figcaption>Slide 34</figcaption>
 </figure>
 </div>
 </center>
@@ -885,7 +922,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_35.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 35</figcaption>
+<figcaption>Slide 35</figcaption>
 </figure>
 </div>
 </center>
@@ -904,7 +941,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_38.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 38</figcaption>
+<figcaption>Slide 38</figcaption>
 </figure>
 </div>
 </center>
@@ -956,7 +993,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_42.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 42</figcaption>
+<figcaption>Slide 42</figcaption>
 </figure>
 </div>
 </center>
@@ -970,7 +1007,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_44.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 44</figcaption>
+<figcaption>Slide 44</figcaption>
 </figure>
 </div>
 </center>
@@ -982,7 +1019,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_45.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 45</figcaption>
+<figcaption>Slide 45</figcaption>
 </figure>
 </div>
 </center>
@@ -1001,7 +1038,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_47.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 47</figcaption>
+<figcaption>Slide 47</figcaption>
 </figure>
 </div>
 </center>
@@ -1017,7 +1054,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_50.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 50</figcaption>
+<figcaption>Slide 50</figcaption>
 </figure>
 </div>
 </center>
@@ -1031,7 +1068,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_52.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 52</figcaption>
+<figcaption>Slide 52</figcaption>
 </figure>
 </div>
 </center>
@@ -1043,7 +1080,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_53.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 53</figcaption>
+<figcaption>Slide 53</figcaption>
 </figure>
 </div>
 </center>
@@ -1055,7 +1092,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_54.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 54</figcaption>
+<figcaption>Slide 54</figcaption>
 </figure>
 </div>
 </center>
@@ -1067,7 +1104,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_55.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 55</figcaption>
+<figcaption>Slide 55</figcaption>
 </figure>
 </div>
 </center>
@@ -1079,7 +1116,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_56.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 56</figcaption>
+<figcaption>Slide 56</figcaption>
 </figure>
 </div>
 </center>
@@ -1091,7 +1128,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_57.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 57</figcaption>
+<figcaption>Slide 57</figcaption>
 </figure>
 </div>
 </center>
@@ -1103,7 +1140,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_58.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 58</figcaption>
+<figcaption>Slide 58</figcaption>
 </figure>
 </div>
 </center>
@@ -1115,7 +1152,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_59.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 59</figcaption>
+<figcaption>Slide 59</figcaption>
 </figure>
 </div>
 </center>
@@ -1127,7 +1164,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_60.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 60</figcaption>
+<figcaption>Slide 60</figcaption>
 </figure>
 </div>
 </center>
@@ -1139,7 +1176,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_61.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 61</figcaption>
+<figcaption>Slide 61</figcaption>
 </figure>
 </div>
 </center>
@@ -1151,7 +1188,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_62.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 62</figcaption>
+<figcaption>Slide 62</figcaption>
 </figure>
 </div>
 </center>
@@ -1163,7 +1200,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_63.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 63</figcaption>
+<figcaption>Slide 63</figcaption>
 </figure>
 </div>
 </center>
@@ -1175,7 +1212,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_64.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 64</figcaption>
+<figcaption>Slide 64</figcaption>
 </figure>
 </div>
 </center>
@@ -1188,7 +1225,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_65.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 65</figcaption>
+<figcaption>Slide 65</figcaption>
 </figure>
 </div>
 </center>
@@ -1200,7 +1237,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_66.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 66</figcaption>
+<figcaption>Slide 66</figcaption>
 </figure>
 </div>
 </center>
@@ -1212,7 +1249,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_67.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 67</figcaption>
+<figcaption>Slide 67</figcaption>
 </figure>
 </div>
 </center>
@@ -1224,7 +1261,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_68.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 68</figcaption>
+<figcaption>Slide 68</figcaption>
 </figure>
 </div>
 </center>
@@ -1236,7 +1273,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_69.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 69</figcaption>
+<figcaption>Slide 69</figcaption>
 </figure>
 </div>
 </center>
@@ -1248,7 +1285,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_70.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 70</figcaption>
+<figcaption>Slide 70</figcaption>
 </figure>
 </div>
 </center>
@@ -1260,7 +1297,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_71.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 71</figcaption>
+<figcaption>Slide 71</figcaption>
 </figure>
 </div>
 </center>
@@ -1274,7 +1311,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_72.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 72</figcaption>
+<figcaption>Slide 72</figcaption>
 </figure>
 </div>
 </center>
@@ -1287,7 +1324,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_73.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 73</figcaption>
+<figcaption>Slide 73</figcaption>
 </figure>
 </div>
 </center>
@@ -1299,7 +1336,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_74.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 74</figcaption>
+<figcaption>Slide 74</figcaption>
 </figure>
 </div>
 </center>
@@ -1311,7 +1348,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_75.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 75</figcaption>
+<figcaption>Slide 75</figcaption>
 </figure>
 </div>
 </center>
@@ -1323,7 +1360,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_76.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 76</figcaption>
+<figcaption>Slide 76</figcaption>
 </figure>
 </div>
 </center>
@@ -1335,7 +1372,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_77.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 77</figcaption>
+<figcaption>Slide 77</figcaption>
 </figure>
 </div>
 </center>
@@ -1347,7 +1384,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_78.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 78</figcaption>
+<figcaption>Slide 78</figcaption>
 </figure>
 </div>
 </center>
@@ -1359,7 +1396,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_79.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 79</figcaption>
+<figcaption>Slide 79</figcaption>
 </figure>
 </div>
 </center>
@@ -1373,7 +1410,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_81.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 81</figcaption>
+<figcaption>Slide 81</figcaption>
 </figure>
 </div>
 </center>
@@ -1386,7 +1423,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_82.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 82</figcaption>
+<figcaption>Slide 82</figcaption>
 </figure>
 </div>
 </center>
@@ -1399,7 +1436,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_83.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 83</figcaption>
+<figcaption>Slide 83</figcaption>
 </figure>
 </div>
 </center>
@@ -1413,7 +1450,7 @@ window.MathJax = {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_84.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 84</figcaption>
+<figcaption>Slide 84</figcaption>
 </figure>
 </div>
 </center>
@@ -1519,7 +1556,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_85.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 85</figcaption>
+<figcaption>Slide 85</figcaption>
 </figure>
 </div>
 </center>
@@ -1534,7 +1571,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_86.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 86</figcaption>
+<figcaption>Slide 86</figcaption>
 </figure>
 </div>
 </center>
@@ -1546,7 +1583,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_87.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 87</figcaption>
+<figcaption>Slide 87</figcaption>
 </figure>
 </div>
 </center>
@@ -1558,7 +1595,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_88.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 88</figcaption>
+<figcaption>Slide 88</figcaption>
 </figure>
 </div>
 </center>
@@ -1570,7 +1607,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_89.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 89</figcaption>
+<figcaption>Slide 89</figcaption>
 </figure>
 </div>
 </center>
@@ -1594,7 +1631,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_93.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 93</figcaption>
+<figcaption>Slide 93</figcaption>
 </figure>
 </div>
 </center>
@@ -1607,7 +1644,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_94.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 94</figcaption>
+<figcaption>Slide 94</figcaption>
 </figure>
 </div>
 </center>
@@ -1622,7 +1659,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_95.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 95</figcaption>
+<figcaption>Slide 95</figcaption>
 </figure>
 </div>
 </center>
@@ -1631,7 +1668,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_96.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 96</figcaption>
+<figcaption>Slide 96</figcaption>
 </figure>
 </div>
 </center>
@@ -1643,7 +1680,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_97.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 97</figcaption>
+<figcaption>Slide 97</figcaption>
 </figure>
 </div>
 </center>
@@ -1655,7 +1692,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_98.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 98</figcaption>
+<figcaption>Slide 98</figcaption>
 </figure>
 </div>
 </center>
@@ -1667,7 +1704,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_99.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 99</figcaption>
+<figcaption>Slide 99</figcaption>
 </figure>
 </div>
 </center>
@@ -1684,7 +1721,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_100.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 100</figcaption>
+<figcaption>Slide 100</figcaption>
 </figure>
 </div>
 </center>
@@ -1696,7 +1733,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_101.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 101</figcaption>
+<figcaption>Slide 101</figcaption>
 </figure>
 </div>
 </center>
@@ -1708,7 +1745,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_102.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 102</figcaption>
+<figcaption>Slide 102</figcaption>
 </figure>
 </div>
 </center>
@@ -1720,7 +1757,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_103.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 103</figcaption>
+<figcaption>Slide 103</figcaption>
 </figure>
 </div>
 </center>
@@ -1732,7 +1769,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_104.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 104</figcaption>
+<figcaption>Slide 104</figcaption>
 </figure>
 </div>
 </center>
@@ -1744,7 +1781,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_105.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 105</figcaption>
+<figcaption>Slide 105</figcaption>
 </figure>
 </div>
 </center>
@@ -1756,7 +1793,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_106.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 106</figcaption>
+<figcaption>Slide 106</figcaption>
 </figure>
 </div>
 </center>
@@ -1768,7 +1805,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_107.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 107</figcaption>
+<figcaption>Slide 107</figcaption>
 </figure>
 </div>
 </center>
@@ -1781,7 +1818,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_108.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 108</figcaption>
+<figcaption>Slide 108</figcaption>
 </figure>
 </div>
 </center>
@@ -1796,7 +1833,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_109.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 109</figcaption>
+<figcaption>Slide 109</figcaption>
 </figure>
 </div>
 </center>
@@ -1808,7 +1845,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_110.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 110</figcaption>
+<figcaption>Slide 110</figcaption>
 </figure>
 </div>
 </center>
@@ -1820,7 +1857,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_111.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 111</figcaption>
+<figcaption>Slide 111</figcaption>
 </figure>
 </div>
 </center>
@@ -1832,7 +1869,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_112.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 112</figcaption>
+<figcaption>Slide 112</figcaption>
 </figure>
 </div>
 </center>
@@ -1845,7 +1882,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_113.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 113</figcaption>
+<figcaption>Slide 113</figcaption>
 </figure>
 </div>
 </center>
@@ -1857,7 +1894,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_114.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 114</figcaption>
+<figcaption>Slide 114</figcaption>
 </figure>
 </div>
 </center>
@@ -1871,7 +1908,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_115.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 115</figcaption>
+<figcaption>Slide 115</figcaption>
 </figure>
 </div>
 </center>
@@ -1884,7 +1921,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_116.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 116</figcaption>
+<figcaption>Slide 116</figcaption>
 </figure>
 </div>
 </center>
@@ -1896,7 +1933,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_117.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 117</figcaption>
+<figcaption>Slide 117</figcaption>
 </figure>
 </div>
 </center>
@@ -1905,7 +1942,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_118.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 118</figcaption>
+<figcaption>Slide 118</figcaption>
 </figure>
 </div>
 </center>
@@ -1917,7 +1954,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_119.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 119</figcaption>
+<figcaption>Slide 119</figcaption>
 </figure>
 </div>
 </center>
@@ -1929,7 +1966,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_120.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 120</figcaption>
+<figcaption>Slide 120</figcaption>
 </figure>
 </div>
 </center>
@@ -1941,7 +1978,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_121.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 121</figcaption>
+<figcaption>Slide 121</figcaption>
 </figure>
 </div>
 </center>
@@ -1954,7 +1991,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_122.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 122</figcaption>
+<figcaption>Slide 122</figcaption>
 </figure>
 </div>
 </center>
@@ -1968,7 +2005,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_123.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 123</figcaption>
+<figcaption>Slide 123</figcaption>
 </figure>
 </div>
 </center>
@@ -1980,7 +2017,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_124.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 124</figcaption>
+<figcaption>Slide 124</figcaption>
 </figure>
 </div>
 </center>
@@ -1994,7 +2031,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_125.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 125</figcaption>
+<figcaption>Slide 125</figcaption>
 </figure>
 </div>
 </center>
@@ -2007,7 +2044,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_126.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 126</figcaption>
+<figcaption>Slide 126</figcaption>
 </figure>
 </div>
 </center>
@@ -2019,7 +2056,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_127.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 127</figcaption>
+<figcaption>Slide 127</figcaption>
 </figure>
 </div>
 </center>
@@ -2031,7 +2068,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_128.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 128</figcaption>
+<figcaption>Slide 128</figcaption>
 </figure>
 </div>
 </center>
@@ -2043,7 +2080,7 @@ More differences:
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="imgs/page_129.png" class="w575 img-fluid figure-img"></p>
-<figcaption class="figure-caption">Slide 129</figcaption>
+<figcaption>Slide 129</figcaption>
 </figure>
 </div>
 </center>
@@ -2094,6 +2131,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -2162,13 +2226,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -2203,18 +2269,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -2246,11 +2301,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/www\.danilotpnta\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -2260,8 +2354,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -2273,7 +2376,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -2317,6 +2543,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -2342,6 +2569,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -2410,13 +2663,19 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="../../about/index.html"><span class="footerDaniloToapanta">Mantained by Danilo Toapanta</span></a>
+    <a class="nav-link" href="../../about/index.html">
+<p><span class="footerDaniloToapanta">Mantained by Danilo Toapanta</span></p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../coming-soon.html">Newsletter</a>
+    <a class="nav-link" href="../../coming-soon.html">
+<p>Newsletter</p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../../docs/sitemap.xml">RSS</a>
+    <a class="nav-link" href="../../docs/sitemap.xml">
+<p>RSS</p>
+</a>
   </li>  
 </ul>
     </div>
@@ -2472,6 +2731,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 </script>
+
 
 
 

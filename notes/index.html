@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
-
+<meta name="generator" content="quarto-1.5.53">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Danilo Toapanta">
-
-<title>Danilo Toapanta - Notes</title>
+<title>Danilo Toapanta - Notes – Danilo Toapanta</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,7 +19,6 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 </style>
-
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
@@ -44,14 +40,18 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -60,12 +60,12 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<script>
+}</script><script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
     const listingTargetEl = window.document.querySelector('#listing-notes-2023 .list');
@@ -75,9 +75,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-project","listing-execute","listing-resources","listing-website","listing-format","listing-language","listing-freeze","listing-title-block-banner","listing-author","listing-css","listing-navbar","listing-toc-title","listing-number-sections","listing-title","listing-description","listing-date","listing-date-format","listing-year","listing-categories","listing-path","listing-outputHref","listing-date-modified","listing-filename","listing-file-modified","listing-reading-time","listing-toc","listing-jupyter"],
+      searchColumns: ["listing-project","listing-execute","listing-resources","listing-website","listing-format","listing-language","listing-freeze","listing-title-block-banner","listing-author","listing-css","listing-navbar","listing-toc-title","listing-number-sections","listing-title","listing-description","listing-date","listing-date-format","listing-year","listing-categories","listing-path","listing-outputHref","listing-date-modified","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-toc","listing-jupyter"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -93,84 +93,121 @@ ul.task-list li input[type="checkbox"] {
       window['quarto-listing-loaded']();
     }
   })
-  </script>
-<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+  </script><link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/material-icons-0.14.2/mi.css" rel="stylesheet">
-<script>
+<!-- <link href="../../site_libs/quarto-contrib/material-icons-0.14.2/mi.css" rel="stylesheet"> --><script>
 window.MathJax = {
   tex: {
     tags: 'ams'
   }
 };
-</script>
-<link rel="shortcut icon" href="../../../../../../../../../../../assets/danilo.ico">
-
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<link rel="stylesheet" href="css/index-posts.css">
+</script><link rel="shortcut icon" href="../../../../../../../../../../../assets/danilo.ico">
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script><link rel="stylesheet" href="css/index-posts.css">
 <link rel="stylesheet" href="index.css">
 </head>
-
 <body class="floating nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner"><nav class="navbar navbar-expand-lg " data-bs-theme="dark"><div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title"><span id="danilo_topanta_brand"> Danilo Toapanta</span> <a id="mysite" class="mysite" href="../../../../../sites/">MySites</a></span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="../index.html" rel="" target="">
- <span class="menu-text"><span id="home-welcome-msg">Home</span></span></a>
+<li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text"><span id="home-welcome-msg">Home</span></span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../blog/index.html" rel="" target="">
- <span class="menu-text">Blog</span></a>
+    <a class="nav-link" href="../blog/index.html"> 
+<span class="menu-text">Blog</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../projects/index.html" rel="" target="">
- <span class="menu-text">Projects</span></a>
+    <a class="nav-link" href="../projects/index.html"> 
+<span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../about/index.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../about/index.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/danilotpnta?tab=repositories" rel="" target="_blank"><i class="bi bi-github" role="img">
+    <a class="nav-link" href="https://github.com/danilotpnta?tab=repositories" target="_blank"> <i class="bi bi-github" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
+</div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
-    </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
-<!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    </nav></header><!-- content --><header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full blog-page" style="display: none;"><div class="quarto-title-banner page-columns page-full">
+        <div class="quarto-title column-body">
+            <h1 class="title"></h1>
+                
+            <!-- Description Block -->
+                        
+            <!-- Categories Block -->
+            
+        </div>
+    </div>
+
+
     
-</nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+    <div class="quarto-title-meta">
+
+        <div>
+        <div class="quarto-title-meta-heading">Author</div>
+        <div class="quarto-title-meta-contents">
+                 <p><a href="https://danilotpnta.github.io/">Danilo Toapanta</a> </p>
+              </div>
+      </div>
+        
+      
+        
+      </div>
+      
+
+    
+</header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
-<script>
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content"><script>
     var currentUrl = window.location.href;
     var index_init_post = currentUrl.lastIndexOf("/20");
     var string_init_post= currentUrl.slice(index_init_post, index_init_post+3 );
@@ -212,818 +249,1851 @@ window.MathJax = {
         brand_container.classList.add("navbar-brand-container-new-padding");
 
     }
-</script>
+</script><!-- <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Running my first Marathon</h1>
+                  <div>
+        <div class="description">
+          I will be running at the 42km TCS Amsterdam 2023, 15th October
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">News</div>
+              </div>
+                  </div>
+  </div> --><!-- ---
+  coming-soon: true
+  tags: [Spanish]
+  --- --><main id="title-block-header" class="quarto-title-block default page-columns page-full" style="padding-bottom: 40px;"><div class="quarto-title column-body" style="margin-bottom: 1em;">
+        <h1 class="title" style="padding-bottom:8px"></h1>
+        
+        <!-- Description Block -->
+        
+        <!-- Categories Block -->
+        
+    </div>
 
 
+    
+    <div class="quarto-title-meta">
 
+        <div>
+        <div class="quarto-title-meta-heading">Author</div>
+        <div class="quarto-title-meta-contents">
+                 <p><a href="https://danilotpnta.github.io/">Danilo Toapanta</a> </p>
+              </div>
+      </div>
+        
+      
+        
+      </div>
+      
 
-<!-- This activates option to run Javascript -->
-<!-- <h1 style="padding: 0em; margin: 0em; padding-bottom: 1rem"> Notes </h1> -->
-<div class="grid-text-showAllCateg">
+    <!-- Current link: Font-awesome, Google icons, Bootstrap icons -->
+    
+</main><!-- This activates option to run Javascript --><!-- <h1 style="padding: 0em; margin: 0em; padding-bottom: 1rem"> Notes </h1> --><div class="grid-text-showAllCateg">
 <div class="background-color-show-posts" style="display: flex; justify-content: center; align-items: center; padding: 5px 0px; border-radius: 5px;">
-<a id="clickable-showing-all-posts" href="../notes" style="text-decoration: none; pointer-events: none;">
-<p align="center" id="showing-all-posts" class="color-show-posts" style="font-weight: 400; margin: 0px; padding: 0px; font-style:italic">
-Showing All Notes
-</p>
-</a> <a id="clickable-show-all-posts" href="../notes/#category=All" style="text-decoration: none; pointer-events: none;">
-<p align="center" id="reload-posts-icon" class="color-show-posts" style="display:none; font-weight: 400; margin: 0px; padding: 0px; font-style:italic;">
-Show All Notes <i style="padding-left:2px;" class="bi bi-arrow-counterclockwise"></i>
-</p>
-</a><p><a id="clickable-show-all-posts" href="../notes/#category=All" style="text-decoration: none; pointer-events: none;"></a></p>
-</div>
-<div class="background-color-show-posts" style="display: flex; justify-content: center; padding: 5px 0px; border-radius: 5px;">
-<!-- <div style="display: flex; justify-content: center; padding-top: 10px; padding-bottom 8px;"> -->
-<a id="clickable-showing-all-posts" href="../blog" style="text-decoration: none;">
-<p align="center" id="showing-all-posts" class="color-show-posts" style="font-weight: 400; margin: 0px; padding: 0px; ">
-Blog
-</p>
-</a><p><a id="clickable-showing-all-posts" href="../blog" style="text-decoration: none;"></a></p>
-</div>
-</div>
-<!-- <div class="background-color-show-posts" style="display: flex; justify-content: center; padding: 5px 0px; border-radius: 5px;">
-  <a id="clickable-showing-all-posts" href="/notes" style="text-decoration: none; pointer-events: none;">
+  <a id="clickable-showing-all-posts" href="../notes" style="text-decoration: none; pointer-events: none;">
     <p align="center" id="showing-all-posts" class="color-show-posts" style="font-weight: 400; margin: 0px; padding: 0px; font-style:italic">
         Showing All Notes 
     </p>
   </a>
-  <a id="clickable-show-all-posts" href="/notes/#category=All" style="text-decoration: none; pointer-events: none;">
+  <a id="clickable-show-all-posts" href="../notes/#category=All" style="text-decoration: none; pointer-events: none;">
     <p align="center" id="reload-posts-icon" class="color-show-posts" style="display:none; font-weight: 400; margin: 0px; padding: 0px; font-style:italic;">
-      Show All Notes <i style="padding-left:2px;" class='bi bi-arrow-counterclockwise'></i> 
+      Show All Notes <i style="padding-left:2px;" class="bi bi-arrow-counterclockwise"></i> 
     </p>
   </a>
-</div> -->
+</div>
+<div class="background-color-show-posts" style="display: flex; justify-content: center; padding: 5px 0px; border-radius: 5px;">
+<!-- <div style="display: flex; justify-content: center; padding-top: 10px; padding-bottom 8px;"> -->
+  <a id="clickable-showing-all-posts" href="../blog" style="text-decoration: none;">
+    <p align="center" id="showing-all-posts" class="color-show-posts" style="font-weight: 400; margin: 0px; padding: 0px; ">
+        Blog
+    </p>
+  </a>
+</div>
+</div>
 <div class="grid-blog">
 <div class="main-content-blog">
 <div id="show-tag-cat-selected" style="display:none;">
-<p style="padding-top:40px; padding-bottom:5px; margin-bottom:0px; color: #838383;">
-<span id="green_number_blog" style="padding-bottom:0px; margin-bottom:0px; color: #14ae73;"> # </span> <span id="tagged_categorized_as"> published: </span>
-</p>
-<h1 id="tag_category_name" style="padding:0px 0px; margin: 0px 0px; padding-bottom:15px; border-bottom: none">
-Python
-</h1>
+  <p style="padding-top:40px; padding-bottom:5px; margin-bottom:0px; color: #838383;">
+    <span id="green_number_blog" style="padding-bottom:0px; margin-bottom:0px; color: #14ae73;">
+      # 
+    </span>
+    <span id="tagged_categorized_as">
+      published:
+    </span>
+  </p>
+  <h1 id="tag_category_name" style="padding:0px 0px; margin: 0px 0px; padding-bottom:15px; border-bottom: none">Python</h1>
 </div>
-<!-- <h3 class="unlisted unnumbered no_anchor_link" style="margin-top: 0px; padding-top:30px; padding-bottom: 8px; font-size: 1.6rem;">2023</h3> -->
-<div style="padding-top:10px; ">
 
-</div>
+<div style="padding-top:10px; "></div>
 <div class="datePadding newFont_and_color">
 <div id="listing-notes-2023" class="quarto-listing quarto-listing-container-custom">
 
 <div style="display: none;">     
+    
     <!-- For loading the IDs NAMES from tables -->
+    
+
+    
+        
+
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
+        
+
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
+        
+        
+
         <!-- if there is no TAG written then do not continue this for-loop  -->
+         
             <!-- +1 to avoid inserting the name TAG -->
+            
+        
+
+    
+        
+
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
+        
+
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
+        
+        
+
         <!-- if there is no TAG written then do not continue this for-loop  -->
+         
             <!-- +1 to avoid inserting the name TAG -->
+            
+        
+
+    
+        
+
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
+        
+
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
+        
+        
+
         <!-- if there is no TAG written then do not continue this for-loop  -->
+         
             <!-- +1 to avoid inserting the name TAG -->
+            
+        
+
+    
+        
+
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
+        
+
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
+        
+        
+
         <!-- if there is no TAG written then do not continue this for-loop  -->
+         
             <!-- +1 to avoid inserting the name TAG -->
+            
+        
+
+    
+        
+
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
+        
+
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
+                                                       
             <!-- Environment  -->
             1
+        
+        
+
         <!-- if there is no TAG written then do not continue this for-loop  -->
+         
             <!-- +1 to avoid inserting the name TAG -->
+            
                 <!-- Conda -->
                 1
+            
+        
+
+    
+        
+
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
+        
+
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
+        
+        
+
         <!-- if there is no TAG written then do not continue this for-loop  -->
+         
             <!-- +1 to avoid inserting the name TAG -->
+            
+        
+
+    
+        
+
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
+        
+
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
+        
+        
+
         <!-- if there is no TAG written then do not continue this for-loop  -->
+         
             <!-- +1 to avoid inserting the name TAG -->
+            
+        
+
+    
+        
+
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
+        
+
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
+        
+        
+
         <!-- if there is no TAG written then do not continue this for-loop  -->
+         
             <!-- +1 to avoid inserting the name TAG -->
+            
+        
+
+    
+        
+
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
+        
+
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
+        
+        
+
         <!-- if there is no TAG written then do not continue this for-loop  -->
+         
             <!-- +1 to avoid inserting the name TAG -->
+            
+        
+
+    
+        
+
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
+        
+
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
+        
+        
+
         <!-- if there is no TAG written then do not continue this for-loop  -->
+         
             <!-- +1 to avoid inserting the name TAG -->
+            
+        
+
+    
+        
+
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
+        
+
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
+        
+        
+
         <!-- if there is no TAG written then do not continue this for-loop  -->
+         
             <!-- +1 to avoid inserting the name TAG -->
+            
+        
+
+    
+        
+
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
+        
+
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
+                                                       
             <!-- Shells  -->
             2
+                                                       
             <!-- Scripting  -->
             3
+        
+        
+
         <!-- if there is no TAG written then do not continue this for-loop  -->
+         
             <!-- +1 to avoid inserting the name TAG -->
+            
                 <!-- Bash -->
                 2
+            
                 <!-- Zsh -->
                 3
+            
+        
+
+    
+        
+
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
+        
+
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
+                                                       
             <!-- GitHub  -->
             4
+        
+        
+
         <!-- if there is no TAG written then do not continue this for-loop  -->
+         
             <!-- +1 to avoid inserting the name TAG -->
+            
+        
+
+    
+        
+
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
+        
+
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
+        
+        
+
         <!-- if there is no TAG written then do not continue this for-loop  -->
+         
             <!-- +1 to avoid inserting the name TAG -->
+            
                 <!-- Python -->
                 4
+            
+        
+
+    
+        
+
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
+        
+
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
+                                                       
             <!-- Environments  -->
             5
+        
+        
+
         <!-- if there is no TAG written then do not continue this for-loop  -->
+         
             <!-- +1 to avoid inserting the name TAG -->
+            
                 <!-- Conda -->
                 5
+            
+        
+
+    
+        
+
         <!-- If -1 means there is no TAG written so go over the loop because
         the rest of the array CATEGORIES could be "categories"  -->
+        
+
         <!--  If there is no CATEGORY written in post skip
         adding this to the array_categories -->
+                                                       
             <!-- Quarto  -->
             6
+        
+        
+
         <!-- if there is no TAG written then do not continue this for-loop  -->
+         
             <!-- +1 to avoid inserting the name TAG -->
-</div>
-<h3 id="Notes-table-title" class="unlisted unnumbered no_anchor_link anchored" style="margin-top: 0px; padding-top:20px; padding-bottom: 8px; font-size: 1.6rem;">Notes</h3><table id="Notes-table" class="quarto-listing-table table">
+            
+        
+
     
+</div>
+
+<h3 id="Notes-table-title" class="unlisted unnumbered no_anchor_link anchored" style="margin-top: 0px; padding-top:20px; padding-bottom: 8px; font-size: 1.6rem;">Notes</h3><table id="Notes-table" class="quarto-listing-table table">
+
+
     <tbody class="list">
-                    <tr id="even-row-blog" data-index="0" data-categories="All,TAGS" data-listing-date-sort="1717936099000" data-listing-file-modified-sort="1717936554422" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                            <td>
+<tr id="even-row-blog" data-index="0" data-categories="All,TAGS" data-listing-date-sort="1717936099000" data-listing-file-modified-sort="1717936554000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="72" i="3" col="" date="" title="" category="">
+<td>
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Jun 09</span>
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
                                     <a href="../notes/2024-06-09_how-to-generate-a-project-directory-tree/index.html" class="title listing-title">
+                                        
                                             How to generate a Project Directory Tree <span class="new_label_post">NEW</span>
+                                        
+                                        
                                     </a>
+                                
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+        
+                                    
+
                                         <!-- Displays only the fist category -->
                                         <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
                                                 <a style="color: inherit; font-size: 0.95em;" href="../notes/#category=All">
                                                     All
                                                 </a>
                                         </span>                                    
+                                    
+        
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Jun 09</span>
+                                
+        
                             </td>
+                        
                     </tr>
-                    <tr id="odd-row-blog" data-index="1" data-categories="All,TAGS" data-listing-date-sort="1696975200000" data-listing-file-modified-sort="1704191294750" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                            <td>
+<tr id="odd-row-blog" data-index="1" data-categories="All,TAGS" data-listing-date-sort="1696975200000" data-listing-file-modified-sort="1704191294000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="70" i="3" col="" date="" title="" category="">
+<td>
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Oct 11</span>
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
                                     <a href="../notes/2023-10-11_basic-terminal-commands-in-windows/index.html" class="title listing-title">
+                                        
                                             Commands in Windows
+                                        
+                                        
                                     </a>
+                                
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+        
+                                    
+
                                         <!-- Displays only the fist category -->
                                         <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
                                                 <a style="color: inherit; font-size: 0.95em;" href="../notes/#category=All">
                                                     All
                                                 </a>
                                         </span>                                    
+                                    
+        
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Oct 11</span>
+                                
+        
                             </td>
+                        
                     </tr>
-                    <tr id="even-row-blog" data-index="2" data-categories="All,TAGS" data-listing-date-sort="1696802400000" data-listing-file-modified-sort="1704191290963" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                            <td>
+<tr id="even-row-blog" data-index="2" data-categories="All,TAGS" data-listing-date-sort="1696802400000" data-listing-file-modified-sort="1704191290000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="111" i="3" col="" date="" title="" category="">
+<td>
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Oct 09</span>
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
                                     <a href="../notes/2023-10-09_numpy-arrays/index.html" class="title listing-title">
+                                        
                                             Numpy Arrays
+                                        
+                                        
                                     </a>
+                                
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+        
+                                    
+
                                         <!-- Displays only the fist category -->
                                         <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
                                                 <a style="color: inherit; font-size: 0.95em;" href="../notes/#category=All">
                                                     All
                                                 </a>
                                         </span>                                    
+                                    
+        
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Oct 09</span>
+                                
+        
                             </td>
+                        
                     </tr>
-                    <tr id="odd-row-blog" data-index="3" data-categories="All,TAGS" data-listing-date-sort="1696543200000" data-listing-file-modified-sort="1704191287736" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                            <td>
+<tr id="odd-row-blog" data-index="3" data-categories="All,TAGS" data-listing-date-sort="1696543200000" data-listing-file-modified-sort="1704191287000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="25" i="3" col="" date="" title="" category="">
+<td>
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Oct 06</span>
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
                                     <a href="../notes/2023-10-06_how-to-embed-ml-application/index.html" class="title listing-title">
+                                        
                                             How to embed ML application?
+                                        
+                                        
                                     </a>
+                                
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+        
+                                    
+
                                         <!-- Displays only the fist category -->
                                         <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
                                                 <a style="color: inherit; font-size: 0.95em;" href="../notes/#category=All">
                                                     All
                                                 </a>
                                         </span>                                    
+                                    
+        
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Oct 06</span>
+                                
+        
                             </td>
+                        
                     </tr>
-                    <tr id="even-row-blog" data-index="4" data-categories="All,Environment,TAGS,Conda" data-listing-date-sort="1694383200000" data-listing-file-modified-sort="1704191284344" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                            <td>
+<tr id="even-row-blog" data-index="4" data-categories="All,Environment,TAGS,Conda" data-listing-date-sort="1694383200000" data-listing-file-modified-sort="1704191284000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="62" i="3" col="" date="" title="" category="">
+<td>
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Sep 11</span>
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
                                     <a href="../notes/2023-09-11_how-to-create-conda-environment-using-yml-file/index.html" class="title listing-title">
+                                        
                                             How to create Conda environment using YML file?
+                                        
+                                        
                                     </a>
+                                
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+        
+                                    
+
                                         <!-- Displays only the fist category -->
                                         <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
                                                 <a style="color: inherit; font-size: 0.95em;" href="../notes/#category=All">
                                                     All
                                                 </a>
                                         </span>                                    
+                                    
+        
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Sep 11</span>
+                                
+        
                             </td>
+                        
                     </tr>
-                    <tr id="odd-row-blog" data-index="5" data-categories="All,TAGS" data-listing-date-sort="1693778400000" data-listing-file-modified-sort="1704191281271" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                            <td>
+<tr id="odd-row-blog" data-index="5" data-categories="All,TAGS" data-listing-date-sort="1693778400000" data-listing-file-modified-sort="1704191281000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="14" i="3" col="" date="" title="" category="">
+<td>
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Sep 04</span>
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
                                     <a href="../notes/2023-09-04_how-to-create-a-jupyther-kernel/index.html" class="title listing-title">
+                                        
                                             How to Create a Jupyther Kernel
+                                        
+                                        
                                     </a>
+                                
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+        
+                                    
+
                                         <!-- Displays only the fist category -->
                                         <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
                                                 <a style="color: inherit; font-size: 0.95em;" href="../notes/#category=All">
                                                     All
                                                 </a>
                                         </span>                                    
+                                    
+        
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Sep 04</span>
+                                
+        
                             </td>
+                        
                     </tr>
-                    <tr id="even-row-blog" data-index="6" data-categories="All,TAGS" data-listing-date-sort="1693692000000" data-listing-file-modified-sort="1704191270757" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                            <td>
+<tr id="even-row-blog" data-index="6" data-categories="All,TAGS" data-listing-date-sort="1693692000000" data-listing-file-modified-sort="1704191270000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="92" i="3" col="" date="" title="" category="">
+<td>
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Sep 03</span>
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
                                     <a href="../notes/2023-09-03_create-website-using-local/index.html" class="title listing-title">
+                                        
                                             Create Website using Local
+                                        
+                                        
                                     </a>
+                                
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+        
+                                    
+
                                         <!-- Displays only the fist category -->
                                         <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
                                                 <a style="color: inherit; font-size: 0.95em;" href="../notes/#category=All">
                                                     All
                                                 </a>
                                         </span>                                    
+                                    
+        
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Sep 03</span>
+                                
+        
                             </td>
+                        
                     </tr>
-                    <tr id="odd-row-blog" data-index="7" data-categories="All,TAGS" data-listing-date-sort="1693692000000" data-listing-file-modified-sort="1704191267771" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                            <td>
+<tr id="odd-row-blog" data-index="7" data-categories="All,TAGS" data-listing-date-sort="1693692000000" data-listing-file-modified-sort="1704191267000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="594" i="3" col="" date="" title="" category="">
+<td>
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Sep 03</span>
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
                                     <a href="../notes/2023-09-03_commands-terminal/index.html" class="title listing-title">
+                                        
                                             Commands Terminal
+                                        
+                                        
                                     </a>
+                                
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+        
+                                    
+
                                         <!-- Displays only the fist category -->
                                         <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
                                                 <a style="color: inherit; font-size: 0.95em;" href="../notes/#category=All">
                                                     All
                                                 </a>
                                         </span>                                    
+                                    
+        
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Sep 03</span>
+                                
+        
                             </td>
+                        
                     </tr>
-                    <tr id="even-row-blog" data-index="8" data-categories="All,TAGS" data-listing-date-sort="1693087200000" data-listing-file-modified-sort="1704191257636" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                            <td>
+<tr id="even-row-blog" data-index="8" data-categories="All,TAGS" data-listing-date-sort="1693087200000" data-listing-file-modified-sort="1704191257000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="537" i="3" col="" date="" title="" category="">
+<td>
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Aug 27</span>
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
                                     <a href="../notes/2023-08-27_changes-to-vanilla-quarto/index.html" class="title listing-title">
+                                        
                                             Changes to Vanilla Quarto
+                                        
+                                        
                                     </a>
+                                
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+        
+                                    
+
                                         <!-- Displays only the fist category -->
                                         <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
                                                 <a style="color: inherit; font-size: 0.95em;" href="../notes/#category=All">
                                                     All
                                                 </a>
                                         </span>                                    
+                                    
+        
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Aug 27</span>
+                                
+        
                             </td>
+                        
                     </tr>
-                    <tr id="odd-row-blog" data-index="9" data-categories="All,TAGS" data-listing-date-sort="1693087200000" data-listing-file-modified-sort="1704191261699" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                            <td>
+<tr id="odd-row-blog" data-index="9" data-categories="All,TAGS" data-listing-date-sort="1693087200000" data-listing-file-modified-sort="1704191261000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="152" i="3" col="" date="" title="" category="">
+<td>
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Aug 27</span>
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
                                     <a href="../notes/2023-08-27_features-tools-&amp;-improvements-website-/index.html" class="title listing-title">
+                                        
                                             Features, tools &amp; improvements website
+                                        
+                                        
                                     </a>
+                                
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+        
+                                    
+
                                         <!-- Displays only the fist category -->
                                         <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
                                                 <a style="color: inherit; font-size: 0.95em;" href="../notes/#category=All">
                                                     All
                                                 </a>
                                         </span>                                    
+                                    
+        
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Aug 27</span>
+                                
+        
                             </td>
+                        
                     </tr>
-                    <tr id="even-row-blog" data-index="10" data-categories="All,TAGS" data-listing-date-sort="1693000800000" data-listing-file-modified-sort="1704191250159" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                            <td>
+<tr id="even-row-blog" data-index="10" data-categories="All,TAGS" data-listing-date-sort="1693000800000" data-listing-file-modified-sort="1704191250000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9" i="3" col="" date="" title="" category="">
+<td>
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Aug 26</span>
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
                                     <a href="../notes/2023-08-26_how-to-highlight-lines-of-code-in-github/index.html" class="title listing-title">
+                                        
                                             How to highlight lines of code in Github
+                                        
+                                        
                                     </a>
+                                
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+        
+                                    
+
                                         <!-- Displays only the fist category -->
                                         <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
                                                 <a style="color: inherit; font-size: 0.95em;" href="../notes/#category=All">
                                                     All
                                                 </a>
                                         </span>                                    
+                                    
+        
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Aug 26</span>
+                                
+        
                             </td>
+                        
                     </tr>
-                    <tr id="odd-row-blog" data-index="11" data-categories="All,Shells,Scripting,TAGS,Bash,Zsh" data-listing-date-sort="1692655200000" data-listing-file-modified-sort="1704191246586" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                            <td>
+<tr id="odd-row-blog" data-index="11" data-categories="All,Shells,Scripting,TAGS,Bash,Zsh" data-listing-date-sort="1692655200000" data-listing-file-modified-sort="1704191246000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="103" i="3" col="" date="" title="" category="">
+<td>
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Aug 22</span>
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
                                     <a href="../notes/2023-08-22_commands-for-shells/index.html" class="title listing-title">
+                                        
                                             Commands Shells
+                                        
+                                        
                                     </a>
+                                
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+        
+                                    
+
                                         <!-- Displays only the fist category -->
                                         <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
                                                 <a style="color: inherit; font-size: 0.95em;" href="../notes/#category=All">
                                                     All
                                                 </a>
                                         </span>                                    
+                                    
+        
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Aug 22</span>
+                                
+        
                             </td>
+                        
                     </tr>
-                    <tr id="even-row-blog" data-index="12" data-categories="All,GitHub,TAGS" data-listing-date-sort="1692655200000" data-listing-file-modified-sort="1704191235373" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                            <td>
+<tr id="even-row-blog" data-index="12" data-categories="All,GitHub,TAGS" data-listing-date-sort="1692655200000" data-listing-file-modified-sort="1704191235000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="92" i="3" col="" date="" title="" category="">
+<td>
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Aug 22</span>
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
                                     <a href="../notes/2023-08-22_commands-for-github/index.html" class="title listing-title">
+                                        
                                             Commands GitHub
+                                        
+                                        
                                     </a>
+                                
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+        
+                                    
+
                                         <!-- Displays only the fist category -->
                                         <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
                                                 <a style="color: inherit; font-size: 0.95em;" href="../notes/#category=All">
                                                     All
                                                 </a>
                                         </span>                                    
+                                    
+        
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Aug 22</span>
+                                
+        
                             </td>
+                        
                     </tr>
-                    <tr id="odd-row-blog" data-index="13" data-categories="All,TAGS,Python" data-listing-date-sort="1692655200000" data-listing-file-modified-sort="1704191238672" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                            <td>
+<tr id="odd-row-blog" data-index="13" data-categories="All,TAGS,Python" data-listing-date-sort="1692655200000" data-listing-file-modified-sort="1704191238000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="22" i="3" col="" date="" title="" category="">
+<td>
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Aug 22</span>
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
                                     <a href="../notes/2023-08-22_commands-for-jupyter/index.html" class="title listing-title">
+                                        
                                             Commands Jupyter
+                                        
+                                        
                                     </a>
+                                
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+        
+                                    
+
                                         <!-- Displays only the fist category -->
                                         <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
                                                 <a style="color: inherit; font-size: 0.95em;" href="../notes/#category=All">
                                                     All
                                                 </a>
                                         </span>                                    
+                                    
+        
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Aug 22</span>
+                                
+        
                             </td>
+                        
                     </tr>
-                    <tr id="even-row-blog" data-index="14" data-categories="All,Environments,TAGS,Conda" data-listing-date-sort="1692655200000" data-listing-file-modified-sort="1704191232336" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                            <td>
+<tr id="even-row-blog" data-index="14" data-categories="All,Environments,TAGS,Conda" data-listing-date-sort="1692655200000" data-listing-file-modified-sort="1704191232000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="619" i="3" col="" date="" title="" category="">
+<td>
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Aug 22</span>
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
                                     <a href="../notes/2023-08-22_command_for_environments/index.html" class="title listing-title">
+                                        
                                             Command Environments
+                                        
+                                        
                                     </a>
+                                
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+        
+                                    
+
                                         <!-- Displays only the fist category -->
                                         <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
                                                 <a style="color: inherit; font-size: 0.95em;" href="../notes/#category=All">
                                                     All
                                                 </a>
                                         </span>                                    
+                                    
+        
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Aug 22</span>
+                                
+        
                             </td>
+                        
                     </tr>
-                    <tr id="odd-row-blog" data-index="15" data-categories="All,Quarto,TAGS" data-listing-date-sort="1692655200000" data-listing-file-modified-sort="1704191243429" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" <!--="" i="3" col,="" date,="" title,="" category="" --="">
-                            <td>
+<tr id="odd-row-blog" data-index="15" data-categories="All,Quarto,TAGS" data-listing-date-sort="1692655200000" data-listing-file-modified-sort="1704191243000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="36" i="3" col="" date="" title="" category="">
+<td>
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Aug 22</span>
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
                                     <a href="../notes/2023-08-22_commands-for-quarto/index.html" class="title listing-title">
+                                        
                                             Commands Quarto
+                                        
+                                        
                                     </a>
+                                
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+        
+                                    
+
                                         <!-- Displays only the fist category -->
                                         <span class="listing-categories listing-categories-hover" style="display: flex; padding-bottom: 0em;">
                                                 <a style="color: inherit; font-size: 0.95em;" href="../notes/#category=All">
                                                     All
                                                 </a>
                                         </span>                                    
+                                    
+        
+                                
+
                                 <!-- DATE -->
+                                
+        
                             </td>
+                        
                             <td>
                                 <!-- DATE -->
+                                
+                                
                                 <!-- TITLE -->
+                                
+                                
                                 <!-- CATEGORY -->
+                                
+
                                 <!-- DATE -->
+                                
                                     <span class="listing-date">Aug 22</span>
+                                
+        
                             </td>
+                        
                     </tr>
-    </tbody>
+</tbody>
 </table>
 <div style="display: none">
+       
         <p class="array_categories"> 
             Environment
         </p>
+       
         <p class="array_categories"> 
             Shells
         </p>
+       
         <p class="array_categories"> 
             Scripting
         </p>
+       
         <p class="array_categories"> 
             GitHub
         </p>
+       
         <p class="array_categories"> 
             Environments
         </p>
+       
         <p class="array_categories"> 
             Quarto
         </p>
+    
+       
         <p class="array_tags"> 
             Conda
         </p>
+       
         <p class="array_tags"> 
             Bash
         </p>
+       
         <p class="array_tags"> 
             Zsh
         </p>
+       
         <p class="array_tags"> 
             Python
         </p>
+       
         <p class="array_tags"> 
             Conda
         </p>
+    
+       
         <p class="array_ids_tables"> 
             Notes-table
         </p>
+    
 </div>
 <div class="listing-no-matching d-none">
 No matching items
@@ -1051,7 +2121,7 @@ No matching items
 </div>
 </div>
 <div class="cell">
-<script type="text/javascript">
+<script>
 // This message is executed first before the js from show-all-postMessage.html
 
 var raw_array_categories = [];
@@ -1128,18 +2198,13 @@ Object.keys(array_tags).forEach((item) => {
 
     list_tags.appendChild(a);
 });
-
-
-
 </script>
 </div>
 
 
 
 
-</main> <!-- /main -->
-
-<script id="script-part">
+</main><!-- /main --><script id="script-part">
     var showCategories = false;
 
     // ------------------------- ON WINDOWS LOAD -------------------------
@@ -1498,8 +2563,7 @@ Object.keys(array_tags).forEach((item) => {
     }
     
 
-</script>
-<script id="quarto-html-after-body" type="application/javascript">
+</script><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1540,6 +2604,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -1608,13 +2699,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1649,18 +2742,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1692,11 +2774,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/www\.danilotpnta\.com");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1706,8 +2827,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1719,7 +2849,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1763,6 +3016,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1788,6 +3042,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1848,30 +3128,34 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
       &nbsp;
     </div>   
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
-    <li class="nav-item">
-    <a class="nav-link" href="../about/index.html"><span class="footerDaniloToapanta">Mantained by Danilo Toapanta</span></a>
+<li class="nav-item">
+    <a class="nav-link" href="../about/index.html">
+<p><span class="footerDaniloToapanta">Mantained by Danilo Toapanta</span></p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../coming-soon.html">Newsletter</a>
+    <a class="nav-link" href="../coming-soon.html">
+<p>Newsletter</p>
+</a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../docs/sitemap.xml">RSS</a>
+    <a class="nav-link" href="../docs/sitemap.xml">
+<p>RSS</p>
+</a>
   </li>  
 </ul>
-    </div>
+</div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
   </div>
-</footer>
-<script>
+</footer><script>
 
     let navbar = document.getElementsByClassName("navbar-nav")[0]    
 
@@ -1918,9 +3202,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 </script>
-
-
-
 
 
 </body></html>

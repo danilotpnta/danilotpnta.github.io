@@ -258,3 +258,8 @@ a.button, button {
 a.anchorjs-link {
     display: none;
 }
+
+/* Disable author name */
+#title-block-header{
+    display: none !important;
+}
