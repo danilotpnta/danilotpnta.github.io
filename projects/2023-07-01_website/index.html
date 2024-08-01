@@ -75,6 +75,30 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <!-- <link href="../../site_libs/quarto-contrib/material-icons-0.14.2/mi.css" rel="stylesheet"> -->
 <script>
+document.addEventListener('DOMContentLoaded', function () {
+  function openSearchIfParamExists() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('search')) {
+      // Programmatically click the search icon to open the search overlay
+      const searchIcon = document.querySelector('.bi-search');
+      if (searchIcon) {
+        searchIcon.click(); // Trigger the search icon click to open the search overlay
+        setTimeout(() => {
+          const searchBox = document.querySelector('.aa-Input');
+          if (searchBox) {
+            searchBox.focus(); // Focus on the actual input box
+          }
+        }, 500); // Adjust the timeout as needed
+      }
+    }
+  }
+
+  // Call the function to check the query parameter and open the search if needed
+  openSearchIfParamExists();
+});
+
+</script>
+<script>
 window.MathJax = {
   tex: {
     tags: 'ams'
@@ -90,8 +114,8 @@ window.MathJax = {
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
-    <div id="quarto-announcement" data-announcement-id="9616bfb5c47a60811ea96e08f2ae1bd0" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
-<p><strong>Alert</strong> - this is some information that you should pay attention to</p>
+    <div id="quarto-announcement" data-announcement-id="af66dd50c39dd2ed9de488e10a192054" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p><strong>Let op</strong> - This website is undergoing scheduled maintenance</p>
 </div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
