@@ -2,6 +2,8 @@
 title: "Video error"
 description: "Description of this Post"
 date: "2023-08-22"
+date-format: long
+year: "2023"
 categories: [All, Quarto]
 draft: true
 toc: false

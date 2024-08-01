@@ -1,0 +1,294 @@
+---
+title: "Deep Feedforward Networks"
+description: "Notes for course DL1 at University of Amsterdam 3 Nov 2023"
+date: "2023-11-05"
+date-format: long
+year: "2023"
+categories: [All, Deep Learning, TAGS]
+toc: false
+jupyter: git-pages
+code-fold: true
+number-sections: true
+---
+
+
+## From linear functions to nonlinear = from shallow to deep
+
+<center>![](imgs/2023-11-05-03-15-39.png){.w550}</center><pre></pre>
+
+Here to apply first a Relu and the output of that another Relu: $\sigma(B\sigma(A\textbf{x}))$
+
+## Deep feedforward networks
+<center>![](imgs/2023-11-05-10-05-14.png){.w550}</center><pre></pre>
+
+MLP is just a combination of multiple linear perceptrons, in each layer there would be parameters ie $A$ is $\theta_1$, $B$ is $\theta_2$
+
+<center>![](imgs/2023-11-05-10-07-11.png){.w550}</center><pre></pre>
+
+## Neural networks in blocks
+
+<center>![](imgs/2023-11-05-10-20-29.png){.w550}</center><pre></pre>
+
+## Non-linear feature learning perspective
+<center>![](imgs/2023-11-05-10-36-15.png){.w550}</center><pre></pre>
+
+Here we are saying that at the end we have just have a linear function $C$ "the linear model" ie.
+
+$$
+C(\sigma(B\sigma(A\textbf{x})))
+$$
+
+to a transformed input $\varphi(x\textbf{x})$ = $\sigma(B\sigma(A\textbf{x}))$
+
+## How to get w? gradiend-based learning
+
+- Due to nonlinearity our loss function would be nonconvex
+- We use then SGD
+- No guarantee of convergence, and sensitive to initialization of the parameters
+
+## Cost Function
+<center>![](imgs/2023-11-05-11-44-01.png){.w550}</center>
+<center>![](imgs/2023-11-05-11-46-27.png){.w550}</center>
+<center>![](imgs/2023-11-05-11-46-42.png){.w550}</center>
+<center>![](imgs/2023-11-05-11-51-55.png){.w550}</center><pre></pre>
+
+Here saturated means that the function becomes very flat so then the gradient of this is very minimal so then we cannot compute optimize because all the derivatives would look like very similar
+
+## Activation Functions
+
+<center>![](imgs/2023-11-05-11-56-34.png){.w550}</center><pre></pre>
+
+- Defined how the weighted sum of the input is transformed into an output from a node or nodes in a layer of the network.
+- If output range limited, then called a “squashing function.” 
+- The choice of activation function has a large impact on the
+capability and performance of the neural network.
+- Different activation functions may be combined, but rare
+- All hidden layers typically use the same activation function 
+- Need to be differentiable at most points
+
+## Linear Units/ "Fully connected layer"
+<center>![](imgs/2023-11-05-13-37-29.png){.w550}</center>
+<center>![](imgs/2023-11-05-13-37-39.png){.w550}</center>
+
+## Advantages of ReLU
+<center>![](imgs/2023-11-05-13-40-29.png){.w550}</center>
+
+ReLu is better for propagation because if i.e take a sin as activation function when we derive close to zero the gradient would be very small, we keep doing this over multiple layers and essentially multiplying small times smalls at the end the result would be close to $0$.
+
+## Disadvantages of ReLU
+<center>![](imgs/2023-11-05-13-45-49.png){.w550}</center>
+
+## Leaky ReLU
+<center>![](imgs/2023-11-05-13-51-40.png){.w550}</center>
+
+## Exponential Linear Unit (ELU)
+<center>![](imgs/2023-11-05-13-54-11.png){.w550}</center>
+
+Used in Language models like BERT
+
+## Gaussian Error Linear Unit
+<center>![](imgs/2023-11-05-13-55-24.png){.w550}</center><pre></pre>
+
+We are not bounded by the computation power but by memory to be loaded in the computation units of the GPUs on Snellius
+
+## Sigmoid and Tanh
+<center>![](imgs/2023-11-05-14-00-24.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-11-05-14-01-24.png){.w275}</center><pre></pre>
+
+## Softmax
+
+<center>![](imgs/2023-11-05-14-06-20.png){.w550}</center><pre></pre>
+
+It outputs a probability distribution because it depends on the denominator which means all the variables would be taken into account. For instance this can be the last activation function to output probabilities of predicting a cat, a dog, a bird and so on.
+
+If we now introduce a term $\tau$ in Softmax (by dividing the $e^{\frac{x_i}{\tau}}$ in the numerator and denominator) then we have the following:
+
+:::{.callout-note}
+# Softamx and $\tau$
+
+If τ is introduced, it can be used to control the temperature or the "sharpness" of the softmax distribution.
+
+When τ is set to a value greater than 1, it has the effect of "softening" the probabilities, making the distribution more uniform. In other words, it makes the probability of all categories more similar to each other. This can be useful in scenarios where you want to explore a wider range of possibilities or reduce the impact of extreme values in the input vector.
+
+Conversely, when τ is set to a value less than 1, it has the effect of "sharpening" the probabilities, making the distribution more peaky, and emphasizing the largest values in the input vector. This can be useful when you want to make more distinct predictions and reduce uncertainty.
+
+:::
+
+## How to Choose and Activation Function
+
+<center>![](imgs/2023-11-05-14-23-43.png){.w550}</center>
+
+Here inference is testing or predicting
+
+### Difference between Multiclass classification vs Multilabel calssification
+
+1. Multiclass Classification:
+   - In multiclass classification, the task is to assign an input data point to one and only one class or category from a set of multiple mutually exclusive classes.
+   - Each data point belongs to exactly one class, and the goal is to determine which class that data point most likely belongs to.
+   - Examples of multiclass classification problems:
+     - Handwritten digit recognition: Given an image of a handwritten digit (0-9), determine which digit it represents.
+     - Species classification: Given a photo of an animal, classify it into one of several species (e.g., dog, cat, bird, etc.).
+
+   Example:
+   Suppose you have a multiclass classification problem where you want to classify fruits into three categories: apples, oranges, and bananas. If you input an image of an apple, the model should predict that it belongs to the "apples" class.
+
+2. Multilabel Classification:
+   - In multilabel classification, each data point can be associated with one or more classes or labels. It's not limited to assigning a single class per data point.
+   - This is used when a data point can have multiple attributes or characteristics simultaneously, and you want to predict all relevant labels.
+   - Examples of multilabel classification problems:
+     - Document categorization: Tagging a document with multiple topics or subjects that are present in it.
+     - Image tagging: Assigning tags to an image to describe its content, where an image may contain multiple objects or scenes.
+
+   Example:
+   Consider an image tagging problem. You have an image containing a beach scene with a dog and a sunset. In a multilabel classification scenario, the model might predict the following labels: "beach," "dog," and "sunset," because all three labels are relevant to the image.
+
+:::{.callout-tip collapse="false"}
+# How to use Softmax in a Multiclass Classification problem?
+
+In a multiclass classification problem, the softmax function is commonly used to convert the raw output scores of a model into a probability distribution over multiple classes. This probability distribution allows you to determine the likelihood of each class for a given input data point. Here's how you use the softmax function in a multiclass classification problem:
+
+
+1. Model Output:
+   - After training your multiclass classification model, you will typically have a final layer in your neural network or a scoring function that produces raw scores (logits) for each class. These scores are not yet probabilities but represent the model's confidence in each class.
+   - Let's say you have N classes, and the model's output for a particular input is a vector of raw scores $z$ with N elements, one for each class.
+
+2. Apply Softmax Function:
+   - To convert the raw scores into probabilities, apply the softmax function to the $z$ vector. The softmax function transforms the scores into a probability distribution where the sum of the probabilities for all classes equals 1.
+   - The softmax function for class $i$ is given by:
+     $\text{softmax}(z)_i = \frac{e^{z_i}}{\sum_{j=1}^N e^{z_j}}$
+   - Calculate the softmax value for each class $i$ in the $z$ vector to obtain a probability distribution.
+
+3. Predict the Class:
+   - The class with the highest probability in the softmax distribution is typically chosen as the predicted class for the input data point. In other words, the class with the highest $\text{softmax}(z)_i$ value is the model's prediction for that input.
+
+Here's a step-by-step example of using softmax for multiclass classification:
+
+Suppose you have a multiclass classification problem with three classes: "cat," "dog," and "bird." After processing an input image, your model produces the following raw scores:
+
+$z = [2.1, 0.9, 1.5]$
+
+1. Apply the softmax function:
+   - Calculate the softmax values for each class:  
+   $\text{softmax}(z)_1 = \frac{e^{2.1}}{e^{2.1} + e^{0.9} + e^{1.5}}$  
+   $\text{softmax}(z)_2 = \frac{e^{0.9}}{e^{2.1} + e^{0.9} + e^{1.5}}$  
+   $\text{softmax}(z)_3 = \frac{e^{1.5}}{e^{2.1} + e^{0.9} + e^{1.5}}$
+
+
+2. Predict the class:
+   - The class with the highest softmax probability is the predicted class. In this case, if $\text{softmax}(z)_1$ is the highest probability, the model predicts "cat."
+
+Using the softmax function in multiclass classification allows you to obtain a probability distribution over classes and select the most likely class as the model's prediction.
+:::
+
+## Width and Depth 
+<center>![](imgs/2023-11-05-15-22-52.png){.w550}</center><pre></pre>
+
+If we have a single big hidden layer (so a lot of parameters) can approximate any functions but in practice this infeasible.
+
+- **Width** is how many neurons in a single layer
+- **Depth** is the number of layers
+
+This also does not tell you how many hidden units you would need. The theorem just says to approx any function you need infinitely.
+
+<center>![](imgs/2023-11-05-15-32-01.png){.w550}</center><pre></pre>
+Here we are saying that Deeper models reduce the loss functions (reduce the generalization error) because they generalize better meaning do not overfit. So do not need one single layer with a lot of neurons but instead multiple layers with fewer neurons.
+
+### Convolution Neural Networks  vsFully Connected Neural Networks
+<center>![](imgs/2023-11-05-15-38-28.png){.w150}</center><pre></pre>
+
+Convolutional needs lees parameters as their inputs are not fully connected to every neuron see pic above
+
+<center>![](imgs/2023-11-05-15-40-57.png){.w550}</center><pre></pre>
+
+- 3 Convolutional is worse than 11 Convolutional, because the latter is more deeper
+
+## Neural Network architectures (jungle)
+
+<center>![](imgs/2023-11-05-15-43-44.png){.w550}</center><pre></pre>
+
+## Computational graph
+
+<center>![](imgs/2023-11-05-16-06-31.png){.w550}</center><pre></pre>
+
+### Example
+<center>![](imgs/2023-11-05-16-17-30.png){.w550}</center><pre></pre>
+
+Problem with activation function ReLU
+
+<center>![](imgs/2023-11-05-16-23-37.png){.w550}</center><pre></pre>
+
+## Chain Rule of Calculus
+
+<center>![](imgs/2023-11-05-16-30-08.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-11-05-16-30-24.png){.w550}</center>
+
+## The Jacobian
+<center>![](imgs/2023-11-05-16-32-28.png){.w550}</center><pre></pre>
+
+<center>![](imgs/2023-11-05-16-48-57.png){.w550}</center><pre></pre>
+
+- The Jacobian measures how a change in the input changes the output
+- The **shape** of the Jacobian is ouputs x inputs
+
+## Computing gradients in complex functions: Chain rule
+<center>![](imgs/2023-11-05-16-55-47.png){.w550}</center><pre></pre>
+
+## Chain rule and tensors, intuitively
+<center>![](imgs/2023-11-05-16-58-34.png){.w550}</center><pre></pre>
+
+## Example
+<center>![](imgs/2023-11-05-17-02-23.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-11-05-17-02-55.png){.w550}</center><pre></pre>
+
+
+## Backpropagation Chain Rule
+<center>![](imgs/2023-11-05-19-36-24.png){.w550}</center>
+<center>![](imgs/2023-11-05-19-50-46.png){.w550}</center>
+<center>![](imgs/2023-11-05-19-50-59.png){.w550}</center><pre></pre>
+
+### Backpropagation in summary
+<center>![](imgs/2023-11-05-19-52-27.png){.w575}</center>
+<center>![](imgs/2023-11-05-19-59-07.png){.w575}</center><pre></pre>
+
+- Note: in the figure above, we know what is $h_0$, $h_1$, $h_2$ and $L$ because we have initialized our $w_1$ and $w_2$ and we also know how the sigmoid function works:
+
+<center>![](imgs/2023-11-05-20-49-31.png){.w250}</center><pre></pre>
+
+- That means all these values are known so that when we calculate the derivatives below everything is know and then we can use SGD to update the  weights
+
+- Then the derivatives wrt. $w$ are:
+
+<center>![](imgs/2023-11-05-20-08-51.png){.w250}</center><pre></pre>
+
+- These last equations is what we need to do SGD
+
+Backprogation allows us to generally reduce the amount of space we need in order to compute all the gradients for all the layers, because storing the Jacobian takes a lot of space. 
+
+## Chain rule visualized
+<center>![](imgs/2023-11-05-20-24-57.png){.w550}</center><pre></pre>
+
+- But now if the ouput is an scalar, we get in the ouput a vector:
+
+<center>![](imgs/2023-11-05-20-27-37.png){.w550}</center><pre></pre>
+
+- Now from the back to front you are only multiplying vector times matrices instead of large matrices with large matrices
+
+<center>![](imgs/2023-11-05-20-29-47.png){.w550}</center>
+<center>![](imgs/2023-11-05-20-30-02.png){.w550}</center>
+<center>![](imgs/2023-11-05-20-30-18.png){.w550}</center>
+<center>![](imgs/2023-11-05-20-30-26.png){.w550}</center>
+
+## But we still need the Jacobian
+
+<center>![](imgs/2023-11-05-20-30-51.png){.w550}</center><pre></pre>
+
+## Computational graphs: Forward graph
+
+<center>![](imgs/2023-11-05-20-44-54.png){.w550}</center><pre></pre>
+
+## Computational graphs: Forward graph
+
+<center>![](imgs/2023-11-05-20-45-27.png){.w550}</center><pre></pre>
+
+
+

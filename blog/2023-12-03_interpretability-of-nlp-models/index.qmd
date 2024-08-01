@@ -1,0 +1,572 @@
+---
+title: "Interpretability of NLP models"
+description: "Description of this Post"
+date: "2023-12-03"
+date-format: long
+year: "2023"
+categories: [All, NLP, TAGS]
+toc: false
+jupyter: git-pages
+code-fold: true
+number-sections: true
+---
+
+## Title
+<center>![Slide 1](imgs/page_1.png){.w575}</center><pre></pre>
+
+
+
+## hE lwoann 
+<center>![Slide 2](imgs/page_2.png){.w575}</center><pre></pre>
+
+
+
+## hE lwoann 
+<center>![Slide 3](imgs/page_3.png){.w575}</center><pre></pre>
+
+
+
+## hE lwoann 
+<center>![Slide 4](imgs/page_4.png){.w575}</center><pre></pre>
+
+
+
+## Plan for today 
+<center>![Slide 5](imgs/page_5.png){.w575}</center><pre></pre>
+
+
+
+## Why do we need interpretability? 
+<center>![Slide 6](imgs/page_6.png){.w575}</center><pre></pre>
+
+
+
+## Why do we need interpretability? |
+<center>![Slide 7](imgs/page_7.png){.w575}</center><pre></pre>
+
+
+
+## Why do we need interpretability? 
+<center>![Slide 8](imgs/page_8.png){.w575}</center><pre></pre>
+
+
+
+## Why do we need interpretability? 
+<center>![Slide 9](imgs/page_9.png){.w575}</center><pre></pre>
+
+
+
+## Why do we need interpretability? 
+<center>![Slide 10](imgs/page_10.png){.w575}</center><pre></pre>
+
+
+
+## Why do we need interpretability? 
+<center>![Slide 11](imgs/page_11.png){.w575}</center><pre></pre>
+
+
+
+## Why do we need interpretability? 
+<center>![Slide 12](imgs/page_12.png){.w575}</center><pre></pre>
+
+
+
+## Why do we need interpretability? 
+<center>![Slide 13](imgs/page_13.png){.w575}</center><pre></pre>
+
+
+
+## Why do we need interpretability? 
+<center>![Slide 14](imgs/page_14.png){.w575}</center><pre></pre>
+
+
+
+## Why do we need interpretability? 
+<center>![Slide 15](imgs/page_15.png){.w575}</center><pre></pre>
+
+
+
+## NOS Nieuws. Sport. Live Programma's 2 Q @
+
+clathodieose oe
+Genweg
+<center>![Slide 16](imgs/page_16.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 17](imgs/page_17.png){.w575}</center><pre></pre>
+
+
+
+## x I BoG =Q
+Fr Nn dows Need ay ey 
+<center>![Slide 18](imgs/page_18.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 19](imgs/page_19.png){.w575}</center><pre></pre>
+
+
+
+## Why do we need interpretability? 
+<center>![Slide 20](imgs/page_20.png){.w575}</center><pre></pre>
+
+
+
+## Why do we need interpretability? 
+<center>![Slide 21](imgs/page_21.png){.w575}</center><pre></pre>
+
+
+
+##  egg
+
+x Can we ever truly understand a large-scale Al model's internal reasoning?
+vy | Wh
+<center>![Slide 22](imgs/page_22.png){.w575}</center><pre></pre>
+
+
+
+## Why do we need interpretability? 
+<center>![Slide 23](imgs/page_23.png){.w575}</center><pre></pre>
+
+
+
+## How do we explain a model? 
+<center>![Slide 24](imgs/page_24.png){.w575}</center><pre></pre>
+
+
+
+## How do we explain a model? 
+<center>![Slide 25](imgs/page_25.png){.w575}</center><pre></pre>
+
+
+
+## How do we explain a model? 
+<center>![Slide 26](imgs/page_26.png){.w575}</center><pre></pre>
+
+
+
+## How do we explain a model? 
+<center>![Slide 27](imgs/page_27.png){.w575}</center><pre></pre>
+
+
+
+## How do we explain a model? 
+<center>![Slide 28](imgs/page_28.png){.w575}</center><pre></pre>
+
+
+
+## How do we explain a model? 
+<center>![Slide 29](imgs/page_29.png){.w575}</center><pre></pre>
+
+
+
+## How do we explain a model? 
+<center>![Slide 30](imgs/page_30.png){.w575}</center><pre></pre>
+
+
+
+## Explanation Faithfulness 
+<center>![Slide 31](imgs/page_31.png){.w575}</center><pre></pre>
+
+
+
+## Explanation Faithfulness 
+<center>![Slide 32](imgs/page_32.png){.w575}</center><pre></pre>
+
+
+
+## Explanation Faithfulness 
+<center>![Slide 33](imgs/page_33.png){.w575}</center><pre></pre>
+
+
+
+## Explanation Methods 
+<center>![Slide 34](imgs/page_34.png){.w575}</center><pre></pre>
+
+
+
+## Explanation Methods 
+<center>![Slide 35](imgs/page_35.png){.w575}</center><pre></pre>
+
+
+
+## Explanation Methods 
+<center>![Slide 36](imgs/page_36.png){.w575}</center><pre></pre>
+
+
+
+## Explanation Methods 
+<center>![Slide 37](imgs/page_37.png){.w575}</center><pre></pre>
+
+
+
+## Behavioural Interpretability 
+<center>![Slide 38](imgs/page_38.png){.w575}</center><pre></pre>
+
+
+
+## Behavioural Interpretability 
+<center>![Slide 39](imgs/page_39.png){.w575}</center><pre></pre>
+
+
+
+## BLIMP 
+<center>![Slide 40](imgs/page_40.png){.w575}</center><pre></pre>
+
+
+
+## BLIMP 
+<center>![Slide 41](imgs/page_41.png){.w575}</center><pre></pre>
+
+
+
+## BLIMP 
+<center>![Slide 42](imgs/page_42.png){.w575}</center><pre></pre>
+
+
+
+## BLIMP 
+<center>![Slide 43](imgs/page_43.png){.w575}</center><pre></pre>
+
+
+
+## BLIMP 
+<center>![Slide 44](imgs/page_44.png){.w575}</center><pre></pre>
+
+
+
+## BLIMP 
+<center>![Slide 45](imgs/page_45.png){.w575}</center><pre></pre>
+
+
+
+## BLIMP 
+<center>![Slide 46](imgs/page_46.png){.w575}</center><pre></pre>
+
+
+
+## BLIMP 
+<center>![Slide 47](imgs/page_47.png){.w575}</center><pre></pre>
+
+
+
+## Behavioural Tests for Uncovering Biases 
+<center>![Slide 48](imgs/page_48.png){.w575}</center><pre></pre>
+
+
+
+## Behavioural Tests for Uncovering Biases 
+<center>![Slide 49](imgs/page_49.png){.w575}</center><pre></pre>
+
+
+
+## Limitations of Behavioural Tests 
+<center>![Slide 50](imgs/page_50.png){.w575}</center><pre></pre>
+
+
+
+## Limitations of Behavioural Tests 
+<center>![Slide 51](imgs/page_51.png){.w575}</center><pre></pre>
+
+
+
+## Feature Attribution Methods 
+<center>![Slide 52](imgs/page_52.png){.w575}</center><pre></pre>
+
+
+
+## Pronoun Resolution
+<center>![Slide 53](imgs/page_53.png){.w575}</center><pre></pre>
+
+
+
+## Pronoun Resolution
+<center>![Slide 54](imgs/page_54.png){.w575}</center><pre></pre>
+
+
+
+## Pronoun Resolution
+<center>![Slide 55](imgs/page_55.png){.w575}</center><pre></pre>
+
+
+
+## Pronoun Resolution
+<center>![Slide 56](imgs/page_56.png){.w575}</center><pre></pre>
+
+
+
+## Pronoun Resolution
+<center>![Slide 57](imgs/page_57.png){.w575}</center><pre></pre>
+
+
+
+## Pronoun Resolution
+<center>![Slide 58](imgs/page_58.png){.w575}</center><pre></pre>
+
+
+
+## Averaae contributions
+<center>![Slide 59](imgs/page_59.png){.w575}</center><pre></pre>
+
+
+
+## Averaae contributions
+<center>![Slide 60](imgs/page_60.png){.w575}</center><pre></pre>
+
+
+
+## Averaae contributions
+<center>![Slide 61](imgs/page_61.png){.w575}</center><pre></pre>
+
+
+
+## Averaae contributions
+<center>![Slide 62](imgs/page_62.png){.w575}</center><pre></pre>
+
+
+
+## Default Reasoning?
+<center>![Slide 63](imgs/page_63.png){.w575}</center><pre></pre>
+
+
+
+## Feature Attribution Methods 
+<center>![Slide 64](imgs/page_64.png){.w575}</center><pre></pre>
+
+
+
+## Feature Attribution Methods 
+<center>![Slide 65](imgs/page_65.png){.w575}</center><pre></pre>
+
+
+
+## Attribution Dimensions
+<center>![Slide 66](imgs/page_66.png){.w575}</center><pre></pre>
+
+
+
+## Feature Removal
+<center>![Slide 67](imgs/page_67.png){.w575}</center><pre></pre>
+
+
+
+## Feature Removal
+<center>![Slide 68](imgs/page_68.png){.w575}</center><pre></pre>
+
+
+
+## Feature Removal
+<center>![Slide 69](imgs/page_69.png){.w575}</center><pre></pre>
+
+
+
+## Feature Removal
+<center>![Slide 70](imgs/page_70.png){.w575}</center><pre></pre>
+
+
+
+## Feature Removal
+<center>![Slide 71](imgs/page_71.png){.w575}</center><pre></pre>
+
+
+
+## Feature Removal
+<center>![Slide 72](imgs/page_72.png){.w575}</center><pre></pre>
+
+
+
+## Feature Removal
+<center>![Slide 73](imgs/page_73.png){.w575}</center><pre></pre>
+
+
+
+## Featu re Removal Conditioned on present features |
+<center>![Slide 74](imgs/page_74.png){.w575}</center><pre></pre>
+
+
+
+## Featu re Removal Conditioned on present features |
+<center>![Slide 75](imgs/page_75.png){.w575}</center><pre></pre>
+
+
+
+## Feature Influence
+<center>![Slide 76](imgs/page_76.png){.w575}</center><pre></pre>
+
+
+
+## Feature Influence
+<center>![Slide 77](imgs/page_77.png){.w575}</center><pre></pre>
+
+
+
+## Shapley Values
+<center>![Slide 78](imgs/page_78.png){.w575}</center><pre></pre>
+
+
+
+## Shapley Values
+<center>![Slide 79](imgs/page_79.png){.w575}</center><pre></pre>
+
+
+
+## Shapley Values
+<center>![Slide 80](imgs/page_80.png){.w575}</center><pre></pre>
+
+
+
+## Shapley Values
+<center>![Slide 81](imgs/page_81.png){.w575}</center><pre></pre>
+
+
+
+## Feature Influence
+<center>![Slide 82](imgs/page_82.png){.w575}</center><pre></pre>
+
+
+
+## Feature Influence
+<center>![Slide 83](imgs/page_83.png){.w575}</center><pre></pre>
+
+
+
+## Highlighting via Input Gradients
+
+e Estimate importance of a feature using derivative of output w.rt that feature
+<center>![Slide 84](imgs/page_84.png){.w575}</center><pre></pre>
+
+
+
+## Example of highlighting: Image classification
+<center>![Slide 85](imgs/page_85.png){.w575}</center><pre></pre>
+
+
+
+## Gradient-based Highlightings for NLP
+
+For NLP, derivative of output w.r.t a feature
+<center>![Slide 86](imgs/page_86.png){.w575}</center><pre></pre>
+
+
+
+## Gradient-based Highlightings for NLP
+
+For NLP, derivative of output w.r.t a feature
+<center>![Slide 87](imgs/page_87.png){.w575}</center><pre></pre>
+
+
+
+## Problems with Using Gradient for Highlighting
+
+e 100 “local” and thus sensitive to slight perturbations
+<center>![Slide 88](imgs/page_88.png){.w575}</center><pre></pre>
+
+
+
+## Problems with Using Gradient for Highlighting
+<center>![Slide 89](imgs/page_89.png){.w575}</center><pre></pre>
+
+
+
+## Problems with Using Gradient for Highlighting
+<center>![Slide 90](imgs/page_90.png){.w575}</center><pre></pre>
+
+
+
+## Extensions of Vanilla Gradient
+
+e too “local” and thus sensitive to slight perturbations
+<center>![Slide 91](imgs/page_91.png){.w575}</center><pre></pre>
+
+
+
+## Extensions of Vanilla Gradient
+
+SmoothGrad: add gaussian noise to input and average the gradient
+<center>![Slide 92](imgs/page_92.png){.w575}</center><pre></pre>
+
+
+
+## Extensions of Vanilla Gradient
+
+Integrated Gradients: average gradients along path from zero to input
+<center>![Slide 93](imgs/page_93.png){.w575}</center><pre></pre>
+
+
+
+## Summary of Gradient-based Highlighting
+
+Positives:
+<center>![Slide 94](imgs/page_94.png){.w575}</center><pre></pre>
+
+
+
+## Summary of Gradient-based Highlighting
+<center>![Slide 95](imgs/page_95.png){.w575}</center><pre></pre>
+
+
+
+## Probing 
+<center>![Slide 96](imgs/page_96.png){.w575}</center><pre></pre>
+
+
+
+## Probing
+<center>![Slide 97](imgs/page_97.png){.w575}</center><pre></pre>
+
+
+
+## Probing | Linauistic
+<center>![Slide 98](imgs/page_98.png){.w575}</center><pre></pre>
+
+
+
+## Probing | os-tase  NER  etc. |
+<center>![Slide 99](imgs/page_99.png){.w575}</center><pre></pre>
+
+
+
+## Representations
+<center>![Slide 100](imgs/page_100.png){.w575}</center><pre></pre>
+
+
+
+## What does probed info imply?
+<center>![Slide 101](imgs/page_101.png){.w575}</center><pre></pre>
+
+
+
+## Why linear?
+<center>![Slide 102](imgs/page_102.png){.w575}</center><pre></pre>
+
+
+
+## K(A) = 1.60 K(s) = 0.19
+Probing | POS-tags | S| 0] k@ets7 K(s) = 0.83
+<center>![Slide 103](imgs/page_103.png){.w575}</center><pre></pre>
+
+
+
+## x
+| x] | Recap 
+<center>![Slide 104](imgs/page_104.png){.w575}</center><pre></pre>
+
+
+
+## References 
+<center>![Slide 105](imgs/page_105.png){.w575}</center><pre></pre>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,122 @@
+---
+title: "Introduction to Ranking"
+description: "Description of this Post"
+date: "2024-02-13T23:16:26"
+date-format: long
+year: "2024"
+categories: [All, Information Retrieval, TAGS]
+toc: false
+jupyter: git-pages
+code-fold: true
+number-sections: true
+---
+
+<center>![Slide 1](imgs/page_1.png){.w575}</center><pre></pre>
+
+
+## Outline
+<center>![Slide 2](imgs/page_2.png){.w575}</center><pre></pre>
+
+
+
+## Context
+<center>![Slide 3](imgs/page_3.png){.w575}</center><pre></pre>
+
+
+
+## Definition
+<center>![Slide 4](imgs/page_4.png){.w575}</center><pre></pre>
+
+## Definition
+<center>![Slide 5](imgs/page_5.png){.w575}</center><pre></pre>
+
+The collection of documents is what we found in the crawling phase.
+
+We usually retrieved the top $k$ best documents to look at
+
+
+**What does ad-hoc means?**
+
+- Unlike predefined queries in some systems, ad hoc queries are formulated on-the-fly, reflecting the user's immediate information need.
+
+- There is not fixed dataset. The collection of documents could be static but is often updated with new information.
+
+## Document: the unit of retrieval
+<center>![Slide 6](imgs/page_6.png){.w575}</center><pre></pre>
+
+Entity, you expect to get a movie name back or a wikipedia page to a movie. Entity is a proper noun, something that you will write with a capital letter i.e. 'The Advangers'
+
+## Ranking problems
+<center>![Slide 7](imgs/page_7.png){.w575}</center><pre></pre>
+
+
+
+## Ranking problems
+<center>![Slide 8](imgs/page_8.png){.w575}</center><pre></pre>
+
+
+
+## Ranking problems
+<center>![Slide 9](imgs/page_9.png){.w575}</center><pre></pre>
+
+
+
+## Outline
+<center>![Slide 10](imgs/page_10.png){.w575}</center><pre></pre>
+
+
+
+## Document analysis pipeline
+<center>![Slide 11](imgs/page_11.png){.w575}</center><pre></pre>
+
+
+
+## Query analysis pipeline
+<center>![Slide 12](imgs/page_12.png){.w575}</center><pre></pre>
+
+If document is lower cased and we upper case the query then the two strings will not match as far as the indexing is concerned and thus even though we may be looking for the same thing because one is lower cased then we will not be able to find this information.
+
+## Index types
+<center>![Slide 13](imgs/page_13.png){.w575}</center><pre></pre>
+
+After we do some pre-processing we put them into some index, and that index is what we use with the retrieval method
+
+- **Inverted Index**, maps from the term to the list of occurrences in the document.
+
+- **Forward Index**, we have some document ID and we return the document text. You can think of it has hash mapping from document ID to document text
+
+- **Approximate Nearest Neighbor**, Here we have a vector representation as the query. So rather than the tokens ['raw', 'string'] as in Inverted Index, we have now a vector ie 100 dimensions. Given this vector representation we ask the *Approximate Nearest Neighbor* what are the closest matches with this vector. In practice is like saying which documents are closest to this vector, assuming that we have indexed document representations in the index 
+
+## Index types
+<center>![Slide 14](imgs/page_14.png){.w575}</center><pre></pre>
+
+- **Inverted Index**, these are methods that have sparce representation of a document. If you have say 100000 terms in your vocabulary, you will create a vector of 100000 to represent this vector. You would expect more dimensions in this vector would be zero because most terms do not occur in this specific document. For instance this document could be really long but only has 5000 unique terms.  
+In this method you start with a term and you want to know in which document that specific term occurs and your scoring would be based on this
+
+- **Approximate Nearest Neighbor**, given a query vector we return the approximately top matching document vectors. 
+
+- **Forward Index**, we use this method when we want the document text. Imagine we have a sophisticated method were we want to know what the document originally looks like or what the tokens originally look like. So we need to look at that exact document's text in order to use this method. You can also use this for snipping extraction
+
+
+
+## Ranking pipeline
+<center>![Slide 15](imgs/page_15.png){.w575}</center><pre></pre>
+
+For instance we use the inverted index to find equals 10 000 top results based on a fast data structure. Then we use a much slower method to re-rank those 10 000 results. Possibly we return a subset 
+
+## Ranking pipeline
+<center>![Slide 16](imgs/page_16.png){.w575}</center><pre></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

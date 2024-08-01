@@ -1,7 +1,9 @@
 ---
 title: "Picking the right tool to show your Machine Learning project"
 date: "2023-07-24"
-categories: [All, DevOps, TAGS, Python, Shiny]
+date-format: long
+year: "2023"
+categories: [All, TAGS, DevOps, Python, Shiny]
 ---
 
 :::{.callout-note}

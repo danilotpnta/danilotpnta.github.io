@@ -2,7 +2,9 @@
 title: "Bayes Rule Equation"
 description: "Description of this Post"
 date: "2023-10-12"
-categories: [All, Education, TAGS, Probability]
+date-format: long
+year: "2023"
+categories: [All, Mathematics, TAGS, Probability Theory]
 toc: false
 jupyter: git-pages
 code-fold: true

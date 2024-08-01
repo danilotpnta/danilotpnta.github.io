@@ -1,0 +1,136 @@
+---
+title: "Regular group convolutions"
+description: "Introduction to Group Equivariant Deep Learning [[1]](https://uvagedl.github.io/)"
+date: "2024-04-02T13:32:00"
+date-format: long
+year: "2024"
+categories: [All, Deep Learning 2, TAGS]
+toc: false
+jupyter: git-pages
+code-fold: true
+number-sections: true
+---
+
+
+<center>![Slide 1](imgs/page_1.png){.w575}</center><pre></pre>
+
+
+<center>![Slide 2](imgs/page_2.png){.w575}</center><pre></pre>
+
+
+## Geometric guarantees (invariance)
+<center>![Slide 3](imgs/page_3.png){.w575}</center><pre></pre>
+
+
+
+## Geometric guarantees (invariance)
+<center>![Slide 4](imgs/page_4.png){.w575}</center><pre></pre>
+
+
+
+## Geometric guarantees (invariance)
+<center>![Slide 5](imgs/page_5.png){.w575}</center><pre></pre>
+
+
+
+## Geometric guarantees (invariance)
+<center>![Slide 6](imgs/page_6.png){.w575}</center><pre></pre>
+
+
+
+## Geometric guarantees (invariance)
+<center>![Slide 7](imgs/page_7.png){.w575}</center><pre></pre>
+
+
+
+## Geometric guarantees (invariance)
+<center>![Slide 8](imgs/page_8.png){.w575}</center><pre></pre>
+
+
+
+## Geometric guarantees (invariance)
+<center>![Slide 9](imgs/page_9.png){.w575}</center><pre></pre>
+
+
+
+## https://distill.pub/2020/circuits/equivariance/
+<center>![Slide 10](imgs/page_10.png){.w575}</center><pre></pre>
+
+
+
+## Geometric guarantees (equivariance)
+<center>![Slide 11](imgs/page_11.png){.w575}</center><pre></pre>
+
+
+
+## Geometric guarantees (equivariance)
+<center>![Slide 12](imgs/page_12.png){.w575}</center><pre></pre>
+
+
+
+## Geometric guarantees (equivariance)
+<center>![Slide 13](imgs/page_13.png){.w575}</center><pre></pre>
+
+
+
+## Geometric guarantees (equivariance)
+<center>![Slide 14](imgs/page_14.png){.w575}</center><pre></pre>
+
+
+
+## Geometric guarantees (equivariance)
+<center>![Slide 15](imgs/page_15.png){.w575}</center><pre></pre>
+
+
+
+## Geometric guarantees (equivariance)
+<center>![Slide 16](imgs/page_16.png){.w575}</center><pre></pre>
+
+
+
+## Geometric guarantees (equivariance)
+<center>![Slide 17](imgs/page_17.png){.w575}</center><pre></pre>
+
+
+
+## Psychology of vision: recognition by components
+<center>![Slide 18](imgs/page_18.png){.w575}</center><pre></pre>
+
+
+
+## Psychology of vision: recognition by components
+<center>![Slide 19](imgs/page_19.png){.w575}</center><pre></pre>
+
+
+
+## Symmetries in nature
+<center>![Slide 20](imgs/page_20.png){.w575}</center><pre></pre>
+
+
+
+## Symmetries in nature
+<center>![Slide 21](imgs/page_21.png){.w575}</center><pre></pre>
+
+
+
+## Symmetries in nature
+<center>![Slide 22](imgs/page_22.png){.w575}</center><pre></pre>
+
+
+
+## Group equivariant deep learning
+<center>![Slide 23](imgs/page_23.png){.w575}</center><pre></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

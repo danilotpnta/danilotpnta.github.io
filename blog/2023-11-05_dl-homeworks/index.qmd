@@ -1,0 +1,82 @@
+---
+title: "DL Homeworks"
+description: "Description of this Post"
+date: "2023-11-05"
+date-format: long
+year: "2023"
+categories: [All, TAGS]
+toc: false
+jupyter: git-pages
+code-fold: true
+number-sections: false
+draft: true
+---
+
+## 1a)
+$$
+\begin{align*}
+\frac{\partial L}{\partial\textbf{W}} &= \left[\frac{\partial L}{\partial\textbf{W}}\right ]_{ij}\\
+&= \frac{\partial L}{\partial W_{ij}} \\
+&= \sum_{m,n} \frac{\partial L}{\partial Y_{mn}} \frac{\partial \left[ \textbf{X}\textbf{W}^T + \textbf{B}\right]_{mn}}{\partial W_{ij}}\\
+&= \sum_{m,n} \frac{\partial L}{\partial Y_{mn}} \frac{\partial \left[ \sum_{k} X_{mk} W_{kn}^{T} + B_{mn}\right]}{\partial W_{ij}}\\
+&= \sum_{m,n} \frac{\partial L}{\partial Y_{mn}} \frac{\partial \left[ \sum_{k} X_{mk} W_{nk} + B_{mn}\right]}{\partial W_{ij}}\\
+&= \sum_{m,n} \frac{\partial L}{\partial Y_{mn}} \left[ \sum_{k} X_{mk}\frac{\partial W_{nk}}{\partial W_{ij}} + \frac{\partial B_{mn} }{\partial W_{ij}} \right] \\
+&= \sum_{m,n} \frac{\partial L}{\partial Y_{mn}} \left[ \sum_{k} X_{mk} \delta_{ni} \delta_{kj} + \textbf{0} \right]\\
+&= \sum_{m,n} \frac{\partial L}{\partial Y_{mn}}  X_{mj} \delta_{ni}\\
+&= \sum_{m} \frac{\partial L}{\partial Y_{mi}}  X_{mj} \\
+&= \frac{\partial L}{\partial \textbf{Y}}^T  \textbf{X} \\
+\end{align*}
+$$
+
+<center>![](imgs/2023-11-06-12-50-32.png){.w575}</center><pre></pre>
+
+## 1b)
+$$
+\begin{align*}
+\frac{\partial L}{\partial\textbf{b}} &= \left[\frac{\partial L}{\partial\textbf{b}}\right ]_{i}\\
+&= \frac{\partial L}{\partial b_{i}} \\
+&= \sum_{m,n} \frac{\partial L}{\partial Y_{mn}} \frac{\partial \left[ \textbf{X}\textbf{W}^T + \textbf{B}\right]_{mn}}{\partial b_{i}}\\
+&= \sum_{m,n} \frac{\partial L}{\partial Y_{mn}} \frac{\partial \left[ \sum_{k} X_{mk} W_{kn}^{T} + B_{mn}\right]}{\partial b_{i}}\\
+&= \sum_{m,n} \frac{\partial L}{\partial Y_{mn}} \frac{\partial \left[ \sum_{k} X_{mk} W_{nk} + b_{n}\right]}{\partial b_{i}}\\
+&= \sum_{m,n} \frac{\partial L}{\partial Y_{mn}} \left[ \textbf{0} + \frac{\partial b_{n} }{\partial b_{i}} \right] \\
+&= \sum_{m,n} \frac{\partial L}{\partial Y_{mn}} \delta_{ni}\\
+&= \sum_{m} \frac{\partial L}{\partial Y_{mi}} \\
+&= \textbf{1}^T \frac{\partial L}{\partial \textbf{Y}} \\
+\end{align*}
+$$
+
+<center>![](imgs/2023-11-06-12-58-29.png){.w550}</center><pre></pre>
+
+## 1c)
+
+$$
+\begin{align*}
+\frac{\partial L}{\partial\textbf{X}} &= \left[\frac{\partial L}{\partial\textbf{X}}\right ]_{ij}\\
+&= \frac{\partial L}{\partial X_{ij}} \\
+&= \sum_{m,n} \frac{\partial L}{\partial Y_{mn}} \frac{\partial \left[ \textbf{X}\textbf{W}^T + \textbf{B}\right]_{mn}}{\partial X_{ij}}\\
+&= \sum_{m,n} \frac{\partial L}{\partial Y_{mn}} \frac{\partial \left[ \sum_{k} X_{mk} W_{kn}^{T} + B_{mn}\right]}{\partial X_{ij}}\\
+&= \sum_{m,n} \frac{\partial L}{\partial Y_{mn}} \frac{\partial \left[ \sum_{k} X_{mk} W_{nk} + B_{mn}\right]}{\partial X_{ij}}\\
+&= \sum_{m,n} \frac{\partial L}{\partial Y_{mn}} \left[ \sum_{k} \frac{\partial X_{mk}}{\partial X_{ij}}W_{nk} + \frac{\partial B_{mn} }{\partial X_{ij}} \right] \\
+&= \sum_{m,n} \frac{\partial L}{\partial Y_{mn}} \left[ \sum_{k} \delta_{im} \delta_{jk} W_{nk} + \textbf{0} \right]\\
+&= \sum_{m,n} \frac{\partial L}{\partial Y_{mn}} \delta_{im} W_{nj}\\
+&= \sum_{m} \frac{\partial L}{\partial Y_{in}}  W_{nj} \\
+&= \frac{\partial L}{\partial \textbf{Y}}  \textbf{W} \\
+\end{align*}
+$$
+<center>![](imgs/2023-11-06-12-57-29.png){.w575}</center><pre></pre>
+
+## 1d)
+$$
+\begin{align*}
+\frac{\partial L}{\partial\textbf{X}} &= \left[\frac{\partial L}{\partial\textbf{X}}\right ]_{ij}\\
+&= \frac{\partial L}{\partial X_{ij}} \\
+&= \sum_{m,n} \frac{\partial L}{\partial Y_{mn}} \frac{\partial Y_{mn}}{\partial X_{ij}}\\
+&= \sum_{m,n} \frac{\partial L}{\partial Y_{mn}} \frac{\partial h(X_{mn})}{\partial X_{ij}} \frac{\partial X_{mn}}{\partial X_{ij}}\\
+&= \sum_{m,n} \frac{\partial L}{\partial Y_{mn}} \frac{\partial h(X_{mn})}{\partial X_{ij}} \delta_{mi}\delta_{nj}\\
+&= \frac{\partial L}{\partial Y_{ij}} \frac{\partial h(X_{ij})}{\partial X_{ij}}  \\
+&= \left[\frac{\partial L}{\partial \textbf{Y}}  \circ \frac{\partial h(\textbf{X})}{\partial \textbf{X}}\right]_{ij} \\
+&= \frac{\partial L}{\partial \textbf{Y}}  \circ \frac{\partial h(\textbf{X})}{\partial \textbf{X}} \\
+\end{align*}
+$$
+<center>![](imgs/2023-11-06-16-58-43.png){.w450}</center><pre></pre>
+

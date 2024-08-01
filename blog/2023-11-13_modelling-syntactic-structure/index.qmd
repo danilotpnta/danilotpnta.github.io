@@ -1,0 +1,307 @@
+---
+title: "Modelling Syntactic Structure"
+description: "Description of this Post"
+date: "2023-11-13"
+date-format: long
+year: "2023"
+categories: [All, NLP, TAGS]
+toc: false
+jupyter: git-pages
+code-fold: true
+number-sections: true
+---
+
+<!-- <center>![Slide 1](imgs/page_1.jpeg){.w575}</center><pre></pre> -->
+
+
+<center>![Slide 2](imgs/page_2.jpeg){.w575}</center><pre></pre>
+
+
+
+<center>![Slide 3](imgs/page_3.jpeg){.w575}</center><pre></pre>
+
+- BoW
+
+Bag of Words does not consider order, it is basically counting what occur in a sentence in arbitrary order
+
+- Markov Models
+
+They are bags of phrases, they have better units but are very sparse  
+
+- HMMs:
+
+Now we work in the tag space. Here we push the memory layer again to another space, in the tag space. So no memory in the word space itself. We capture shallo syntactic patterns such as NOUN is preceeded by an ADJECTIVE in english 
+
+HMMs does not really have power for semantics because words are drawn conditionally independently
+
+<center>![Slide 4](imgs/page_4.jpeg){.w575}</center><pre></pre>
+
+Now instead of just categories we talk about phrase categories.
+
+You can now group words into  phrases and these phrases can be labeled for their syntactic role
+
+<!-- <center>![Slide 5](imgs/page_5.jpeg){.w575}</center><pre></pre> -->
+
+
+<!-- <center>![Slide 6](imgs/page_6.jpeg){.w575}</center><pre></pre> -->
+
+
+
+<!-- <center>![Slide 7](imgs/page_7.jpeg){.w575}</center><pre></pre> -->
+
+
+
+<!-- <center>![Slide 8](imgs/page_8.jpeg){.w575}</center><pre></pre> -->
+
+
+
+<!-- <center>![Slide 9](imgs/page_9.jpeg){.w575}</center><pre></pre> -->
+
+
+
+<center>![Slide 10](imgs/page_10.jpeg){.w575}</center><pre></pre>
+
+Now instead of isolated tags now we considered as phrases
+
+<center>![Slide 11](imgs/page_11.jpeg){.w575}</center><pre></pre>
+
+A phrase usually has what is called a syntactic head, and usually is the first occurrences that name the phrase for i.e NP, NOUN is the head. All remaining after or before its optional but in needs to contain the head 
+
+<center>![Slide 12](imgs/page_12.jpeg){.w575}</center><pre></pre>
+
+Constituency is groups of words that act as a unit once you identify them. An evidence for this is that they appear in similar syntactic environments i.e NP 'Nounn Phrases' tend to appear before a verb
+
+
+
+<!-- <center>![Slide 13](imgs/page_13.jpeg){.w575}</center><pre></pre> -->
+
+
+
+<center>![Slide 14](imgs/page_14.jpeg){.w575}</center><pre></pre>
+ 
+
+
+<center>![Slide 15](imgs/page_15.jpeg){.w575}</center><pre></pre>
+
+
+
+<center>![Slide 16](imgs/page_16.jpeg){.w575}</center><pre></pre>
+
+1. Symbols
+
+- We start from a vocabulary of symbols or (the constants): **words**  
+i.e 'I', 'eat', 'pizza'
+- You have non-terminals or (variables): **phrasal categories**  
+'S', 'NP', 'VP'
+2. Rules: tells you how to rewrite a non-terminal category into a string that is made up of terminal and non-terminal symbols 
+
+The grammar is context free if on the left side of the any rule you have a single non-terminal. That makes it context free. IF there would be a collection of terminals on the   left hand side, that would be context sensitive grammar 
+
+<center>![Slide 17](imgs/page_17.jpeg){.w575}</center><pre></pre>
+
+Every single CFGs is an algorithm to represent a (in)finite set of strings. Is a finite representation of an infinite object  
+
+<center>![Slide 18](imgs/page_18.jpeg){.w575}</center><pre></pre>
+
+(constants): 
+- $\sum$ terminals symbols: **words**  
+i.e 'I', 'eat', 'pizza'
+
+(variables):
+- $\textbf{V}$ non-terminals symbols: **phrasal categories**  
+i.e 'S', 'NP', 'VP', 'ADJ', 'DET'  
+In this set there a start symbol called $S$ that belongs to $\textbf{V}$. We will put this one at the top of the context free grammar tree
+
+<center>![Slide 19](imgs/page_19.jpeg){.w575}</center><pre></pre>
+
+The arity is defined by the longest right hand side on the rule.
+
+All CFGs can be rewritten to be binary that accepts the same exact strings, so the sentences that one accept is the same as the one the other would accept 
+
+<center>![Slide 20](imgs/page_20.jpeg){.w575}</center><pre></pre>
+
+CFG gives a recipe to generate text.
+
+A derivation is a sequence of strings. We start with the 'start' symbol then recursively we rewrite the leftmost non-terminal ('S','NN'.. ) sequence X.
+
+X is a sequence that belongs to $\textbf{V}$ so it can be a subset like:  
+X:{'S', 'DET'} 
+
+<center>![Slide 21](imgs/page_21.jpeg){.w575}</center><pre></pre>
+
+If we are able to determine with the CFG then the sequence its part of the language, the grammar specifies the language, the set of words sequences. If you can derive a word sequences then it is part of the grammar implied by this CFG, its name then you would use is called the hug of the derivation
+
+<center>![Slide 22](imgs/page_22.jpeg){.w575}</center><pre></pre>
+
+1. You start with S
+2. The left most symbol is S, then this is rewriten as Np, VP. There is a rule in the grammar that says S -> NP, VP
+3. NP are usually DETERMINANTS or NOUNS, so we write that
+4. D, now can be replace by its terminal/constant i.e 'the'
+5. N, can be rewrite it as 'dog' and so son..
+
+We accomplished with this 'the dog has barked loudly' which is a full sentence. We use a depth-first order going always left.
+
+From top to bottom: generation, the opposite its recognition.
+
+
+
+<center>![Slide 23](imgs/page_23.jpeg){.w575}</center><pre></pre>
+
+Where does the preposition attach? Does it attach to the noun pizza? So it is pizza with anchovies on top, or does the preposition attach to the verb phrase eat pizza, which then becomes the instrument of eating 
+
+Prepositions are words that show the relationship between a noun (or pronoun) and other elements in a sentence:
+
+1. **In**: I live in the city.
+2. **On**: The book is on the table.
+3. **Under**: The cat is under the chair.
+4. **Between**: Choose between the two options.
+5. **Behind**: The sun sets behind the mountains.
+6. **Across**: They walked across the bridge.
+7. **Through**: We walked through the park.
+8. **Above**: The plane is flying above the clouds.
+9. **Beneath**: The treasure is buried beneath the sand.
+10. **Near**: The store is near the school.
+
+So here there is ambiguity in syntactic parsing. The way we deal with structural ambiguity is by learning a probability distribution
+
+There is not a tree for every single sentence in english so now we have to rely on a prob distribution
+
+<!-- <center>![Slide 24](imgs/page_24.jpeg){.w575}</center><pre></pre> -->
+
+
+
+<!-- <center>![Slide 25](imgs/page_25.jpeg){.w575}</center><pre></pre> -->
+
+
+
+<!-- <center>![Slide 26](imgs/page_26.jpeg){.w575}</center><pre></pre> -->
+
+
+
+<center>![Slide 27](imgs/page_27.jpeg){.w575}</center><pre></pre>
+
+
+
+<center>![Slide 28](imgs/page_28.jpeg){.w575}</center><pre></pre>
+
+
+
+<center>![Slide 29](imgs/page_29.jpeg){.w575}</center><pre></pre>
+
+To assign prob to a 'Derivation' we need random variables again. Here the length of the rule derivation R1...R_m is not the same as the length of the words sequence W1...W_L
+
+The derivations length depends on the grammar, but for every tree structure at the bottom then you find words, so for every sequence of M rule applications there is a sequence of words that you can read at the bottom. I will assign a probability to a derivation by asigning probs to each one of the rules that I applied given the rules that I have already applied (so that is chain rule as how we did it for a sequence of words, but now we do chain rule for a sequence of rules) 
+
+
+<center>![Slide 30](imgs/page_30.jpeg){.w575}</center><pre></pre>
+
+For now we are gonna make Markov assumptions and make rules independently. We are gonna assign probabilities to each rule independently fo the next. A rule in itself it is not an atomic thing. A rule is a pair, a rule has not terminal on the left and a string on the right
+
+This is the trick to introduce some dependency:
+
+We will generate the right hand side of the rule given is not a terminal symbol. So basically we imitate the process by which you go deeper and deeper until you find a terminal 
+
+So you look at the non-terminal and you will rewrite it without access to more context.  
+
+<center>![Slide 31](imgs/page_31.jpeg){.w575}</center><pre></pre>
+
+
+
+<center>![Slide 32](imgs/page_32.jpeg){.w575}</center><pre></pre>
+
+You can sample from the generative history. 
+
+1. Start a queue with an S inside. If all symbols there are terminals, then you are go to go that is a sentence 
+2. IF not true, pick the left most, pop it, take it from that thing and replace it by the RHS of a rule (that has that symbol on the LHS and note that you will have multiple rules, but they have probabilities so you draw one of them follwoing the distribution of their probabilities) rewrite that symbol. Do that with certain probability and repeat from 2. 
+
+<center>![Slide 33](imgs/page_33.jpeg){.w575}</center><pre></pre>
+
+We have a condition distribution where we condition on, the LHS non-terminan symbol  
+
+We generate the RHS string so i.e.
+
+If S is the variable you are rewritting and you happen to know two rules, NP->VP and S-> VP. So you either write a NOUN PHRASE and concatenate with it or you have a VERB PHRASE and you concatenate it. So here we have two parameters, they are probabilities, they are normalized and they summ up to one 
+
+PCFG (usually the number of outcomes will be fixed but here is different), here it is not for every symbol you condition on, the number of outcomes depends on how many rules you know for that symbol. So I know two rules for the start S, but I know 3 terminals for the non-terminal NOUN, cat, dog and bird. So the categorical distribution will have different number of probabilities this time
+
+So the categorical distribution will have different number of probs in them, so when you are given a derivation how do we get its probability mass. Yoy multiply the probabilities for the rules that are inside. And where do we find these probabilities, well this is tabular, so in table 
+
+<center>![Slide 34](imgs/page_34.jpeg){.w575}</center><pre></pre>
+
+Given a dataset can you do MLE, to find the probability that you would rewrite a varaible 'b' into a string Beta. ie.e maybe 'v=NP' and BETA=the terminal NOUN
+
+So what is the probability that you would write a NOUN PHRASE as a sequence of DETERMINER followed by a NOUN. For that to come up I give you a model: PCFG, I give you the model description, I give you an al algorithm so MLE, and give you a dataset.
+
+So this in next slide is how we compute the MLE
+
+$\theta$ is the name of the table, the row is 'v' and the column=sequence on the right so Beta
+
+So we count how many times v has rewrite to B and you divide the numer of times you have seen 'v'
+
+So if this was a NP rewrite to a DETERMINER and a NOUN then, we count how many times I have seen this divide by how many times I have seen NP being rewrite by whatever 
+
+
+<center>![Slide 35](imgs/page_35.jpeg){.w575}</center><pre></pre>
+
+
+
+<center>![Slide 36](imgs/page_36.jpeg){.w575}</center><pre></pre>
+
+
+
+<center>![Slide 37](imgs/page_37.jpeg){.w575}</center><pre></pre>
+
+
+
+<center>![Slide 38](imgs/page_38.jpeg){.w575}</center><pre></pre>
+
+
+
+<center>![Slide 39](imgs/page_39.jpeg){.w575}</center><pre></pre>
+
+
+
+<center>![Slide 40](imgs/page_40.jpeg){.w575}</center><pre></pre>
+
+
+
+<!-- <center>![Slide 41](imgs/page_41.jpeg){.w575}</center><pre></pre> -->
+
+
+
+<!-- <center>![Slide 42](imgs/page_42.jpeg){.w575}</center><pre></pre> -->
+
+
+
+<!-- <center>![Slide 43](imgs/page_43.jpeg){.w575}</center><pre></pre> -->
+
+
+
+<!-- <center>![Slide 44](imgs/page_44.jpeg){.w575}</center><pre></pre> -->
+
+
+
+<!-- <center>![Slide 45](imgs/page_45.jpeg){.w575}</center><pre></pre> -->
+
+
+
+<!-- <center>![Slide 46](imgs/page_46.jpeg){.w575}</center><pre></pre> -->
+
+
+
+<!-- <center>![Slide 47](imgs/page_47.jpeg){.w575}</center><pre></pre> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

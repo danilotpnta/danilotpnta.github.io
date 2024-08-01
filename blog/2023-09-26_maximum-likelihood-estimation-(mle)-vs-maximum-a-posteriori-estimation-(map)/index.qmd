@@ -2,6 +2,8 @@
 title: "Maximum Likelihood vs Maximum a Posteriori Estimation"
 description: "MLE vs MAP in the context of parameter estimation"
 date: "2023-09-26"
+date-format: long
+year: "2023"
 categories: [All, TAGS]
 jupyter: git-pages
 toc: false

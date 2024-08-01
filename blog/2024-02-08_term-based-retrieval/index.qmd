@@ -1,0 +1,202 @@
+---
+title: "Term-based Retrieval"
+description: "Description of this Post"
+date: "2024-02-13T23:50:13"
+date-format: long
+year: "2024"
+categories: [All, Information Retrieval, TAGS]
+toc: false
+jupyter: git-pages
+code-fold: true
+number-sections: true
+---
+
+## Title
+<center>![Slide 1](imgs/page_1.png){.w575}</center><pre></pre>
+
+
+
+## Document representation and matching
+<center>![Slide 2](imgs/page_2.png){.w575}</center><pre></pre>
+
+
+
+## Outline
+<center>![Slide 3](imgs/page_3.png){.w575}</center><pre></pre>
+
+
+
+## Outline
+<center>![Slide 4](imgs/page_4.png){.w575}</center><pre></pre>
+
+
+
+## Documents as vectors
+<center>![Slide 5](imgs/page_5.png){.w575}</center><pre></pre>
+
+The documents are the columns. These columns are the vectors which are sparse.  These are books. The rows are the characters
+
+## Match using cosine similarity
+<center>![Slide 6](imgs/page_6.png){.w575}</center><pre></pre>
+
+There is difference between cosine similarity and distance. 
+
+Similarity here a higher number is closer, this is just the dot product of the two vectors
+
+<center>![](imgs/2024-02-10-12-09-50.png){.w550}</center><pre></pre>
+
+## Term frequency
+<center>![Slide 7](imgs/page_7.png){.w575}</center><pre></pre>
+
+This is more helpfull because it tell us is how salient a token is in a document
+
+## Term frequency
+<center>![Slide 8](imgs/page_8.png){.w575}</center><pre></pre>
+
+ $tf_{t,d}$ is the frequency of token $t$ in document $d$
+
+
+## Retrieval Axioms
+
+
+### TFC2
+Signal, we see one term once and the diff on looking it 20 times. But imagine we have also a doc where there is 21 terms, then the log make it the same, because both have about 20 terms
+
+We penalize with these scoping words, we want to penalize because we do not want to get a document whit many stop words
+
+
+## Slide 10
+
+LNCs, No adding more pages, we prefer the one document has less documents 
+
+The query: University of Amsterdam, we want the terms of the query to be closer to each other
+
+
+
+## Inverse document frequency
+<center>![Slide 9](imgs/page_9.png){.w575}</center><re></re>
+
+In B25 assignment there is a more complicated on how to calculate $IDF$. 
+
+- Term frequency $TF$, is a proxy for term's importance in a document
+
+- Inverse document frequency $IDF$, is a proxy for a term's descriptiveness. So how happy should your ranking function be when you see this term. 
+  - For instance the term 'the' not really happy, in contrast, 'ipad 12X34' very happy because this does not occur very much.  
+  - `log(200/100) = 0,30` in contrast to, `log(200/1) = 2,30`.  
+  - For instance if you have a term that occurs in every document you would have `log(200/200) = 0`
+
+$df$ is the document frequency of token $t$. For instance, token = 'run' df(run) = 8 documents, meaning the word 'run' appears in 8 documents 
+
+
+## Inverse document frequency
+<center>![Slide 10](imgs/page_10.png){.w575}</center><pre></pre>
+
+Calpurnia is a very rare term that does not occur in all documents does, its $IDF$ would be higuer
+
+
+
+## TF-IDF
+<center>![Slide 11](imgs/page_11.png){.w575}</center><pre></pre>
+
+
+One time versus twn times in the document, how likely we have seen that term in the document, so how useful is to find that term. 
+
+
+## TF-IDF summary
+<center>![Slide 12](imgs/page_12.png){.w575}</center><pre></pre>
+
+
+
+## Outline
+<center>![Slide 13](imgs/page_13.png){.w575}</center><pre></pre>
+
+
+## Outline
+<center>![Slide 14](imgs/page_14.png){.w575}</center><pre></pre>
+
+
+
+## Language model
+<center>![Slide 15](imgs/page_15.png){.w575}</center><pre></pre>
+
+
+
+## Unigram language model example
+<center>![Slide 16](imgs/page_16.png){.w575}</center><pre></pre>
+
+
+
+## Documents as distributions
+<center>![Slide 17](imgs/page_17.png){.w575}</center><pre></pre>
+
+What if the term does not appear, int he document even thought we are talkinig about say hollad? We then will not retrieve this document which is clearly not the sace
+
+## Match using query likelihood model (QLM)
+<center>![Slide 18](imgs/page_18.png){.w575}</center><pre></pre>
+
+
+
+## Match using KL-divergence
+<center>![Slide 19](imgs/page_19.png){.w575}</center><pre></pre>
+
+The lower the divergene the lower the similarity
+
+## Outline
+<center>![Slide 20](imgs/page_20.png){.w575}</center><pre></pre>
+
+
+
+## Jelinek-Mercer smoothing
+<center>![Slide 21](imgs/page_21.png){.w575}</center><pre></pre>
+
+
+
+## Dirichlet smoothing
+<center>![Slide 22](imgs/page_22.png){.w575}</center><pre></pre>
+
+
+
+## Language modeling for IR summary
+<center>![Slide 23](imgs/page_23.png){.w575}</center><pre></pre>
+
+
+
+## Outline
+<center>![Slide 24](imgs/page_24.png){.w575}</center><pre></pre>
+
+
+
+## BM25
+<center>![Slide 25](imgs/page_25.png){.w575}</center><pre></pre>
+
+
+
+## BM25
+<center>![Slide 26](imgs/page_26.png){.w575}</center><pre></pre>
+
+
+
+## BM25 for long queries
+<center>![Slide 27](imgs/page_27.png){.w575}</center><pre></pre>
+
+
+
+## Experimental comparison
+<center>![Slide 28](imgs/page_28.png){.w575}</center><pre></pre>
+
+
+
+## Experimental comparison
+<center>![Slide 29](imgs/page_29.png){.w575}</center><pre></pre>
+
+
+
+## Content-based retrieval summary
+<center>![Slide 30](imgs/page_30.png){.w575}</center><pre></pre>
+
+
+
+## Materials
+<center>![Slide 31](imgs/page_31.png){.w575}</center><pre></pre>
+
+

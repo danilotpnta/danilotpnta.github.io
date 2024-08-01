@@ -1,6 +1,8 @@
 ---
 title: "2022 into 2023"
 date: "2023-01-12"
+date-format: long
+year: "2023"
 categories: [All, News]
 ---
 

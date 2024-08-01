@@ -70,7 +70,11 @@
                             <% if (i === 1) { %>
                                 <a href="<%- post.path %>" class="title listing-title">
                                     <% if (counter === 0) { %>
-                                        <%= post.title %> <span class="new_label_post">NEW</span>
+                                        <% if (templateParams.param2) { %>
+                                            <%= post.title %> <span class="new_label_post">NEW</span>
+                                        <% } else{ %>
+                                            <%= post.title %>
+                                        <% } %>
                                     <% } else{ %>
                                         <%= post.title %>
                                     <% } %>

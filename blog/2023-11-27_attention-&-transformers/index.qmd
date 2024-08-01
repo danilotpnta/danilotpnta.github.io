@@ -1,0 +1,595 @@
+---
+title: "Attention & Transformers"
+description: "Description of this Post"
+date: "2023-11-27"
+date-format: long
+year: "2023"
+categories: [All, Deep Learning, TAGS]
+toc: false
+jupyter: git-pages
+code-fold: true
+number-sections: true
+---
+
+## General Overview: Transformer Architecture
+<center>![](imgs/image.png){}</center><pre></pre>
+
+
+## Background knowledge
+
+<center><iframe width="575" height="315" src="https://www.youtube.com/embed/4Bdc55j80l8?si=XFM7UfO0WeWhApIw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center><pre></pre>
+
+<center><iframe width="575" height="315" src="https://www.youtube.com/embed/e9-0BxyKG10?si=QRjwGtaNgZYd__Gm&amp;start=971" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center><pre></pre>
+
+
+<!-- ## Title
+<center>![Slide 2](imgs/page_2.png){.w575}</center><pre></pre> -->
+
+
+<!-- ## Title -->
+<center>![Slide 3](imgs/page_3.png){.w575}</center><pre></pre>
+
+
+## Seq2seq models
+<center>![Slide 4](imgs/page_4.png){.w575}</center><pre></pre>
+
+
+
+## Neural machine translation with a seq2seq model
+<center>![Slide 5](imgs/page_5.png){.w575}</center><pre></pre>
+
+
+
+## Defining seq2seq for NMT": Encoder
+<center>![Slide 6](imgs/page_6.png){.w575}</center><pre></pre>
+
+h_{t-1} is the hidden state, is this what makes a NN like $f()$ be recurrent
+
+## Defining seq2seg for NMT: Decoder
+<center>![Slide 7](imgs/page_7.png){.w575}</center><pre></pre>
+
+
+
+## Issue of seq2seq models
+<center>![Slide 8](imgs/page_8.png){.w575}</center><pre></pre>
+
+The problem is that they were trying to compress all info into a context vector $c$
+
+
+
+## Attention
+<center>![Slide 9](imgs/page_9.png){.w575}</center><pre></pre>
+
+
+
+## Here, | found what you were 
+<center>![Slide 10](imgs/page_10.png){.w575}</center><pre></pre>
+
+
+
+## Attention
+<center>![Slide 11](imgs/page_11.png){.w575}</center><pre></pre>
+
+
+
+## Formal definition of Attention
+<center>![Slide 12](imgs/page_12.png){.w575}</center><pre></pre>
+
+
+
+## Formal definition of Attention
+<center>![Slide 13](imgs/page_13.png){.w575}</center><pre></pre>
+
+If the value e or the alignment model is high then it tells you how similar the inputs around position j and the outputs at position i match. 
+
+## Formal definition of Attention
+<center>![Slide 14](imgs/page_14.png){.w575}</center><pre></pre>
+
+
+
+## Why attention?
+<center>![Slide 15](imgs/page_15.png){.w575}</center><pre></pre>
+
+
+
+## Self-attention
+<center>![Slide 16](imgs/page_16.png){.w575}</center><pre></pre>
+
+
+
+## Paying attention in vision
+<center>![Slide 17](imgs/page_17.png){.w575}</center><pre></pre>
+
+
+
+## Attention is all you need
+<center>![Slide 18](imgs/page_18.png){.w575}</center><pre></pre>
+
+
+
+## Queries, keys and values
+<center>![Slide 19](imgs/page_19.png){.w575}</center><pre></pre>
+
+
+
+## Scaled Dot-Product Attention
+<center>![Slide 20](imgs/page_20.png){.w575}</center><pre></pre>
+
+
+
+## Multi-head attention
+<center>![Slide 21](imgs/page_21.png){.w575}</center><pre></pre>
+
+
+
+## Multi-head self-attention
+<center>![Slide 22](imgs/page_22.png){.w575}</center><pre></pre>
+
+
+
+## Multi-head self-attention
+<center>![Slide 23](imgs/page_23.png){.w575}</center><pre></pre>
+
+
+
+## Transformer encoder
+<center>![Slide 24](imgs/page_24.png){.w575}</center><pre></pre>
+
+
+
+## Transformer decoder
+<center>![Slide 25](imgs/page_25.png){.w575}</center><pre></pre>
+
+
+:::{.callout-note collapse="false"}
+
+# Why do we use a mask in the decoder of self attention?
+
+
+### Autoregressive Property:
+Autoregressive models generate outputs one step at a time in a sequential manner. In the context of natural language processing, this means predicting the next word in a sequence given the preceding words. Autoregressive models are trained to predict the next token in the sequence based on the tokens that have already been generated.
+
+### Decoder in a Transformer:
+The decoder in a transformer is responsible for generating the output sequence. It consists of multiple layers, each containing a self-attention mechanism and feedforward neural networks. The self-attention mechanism allows the model to weigh different parts of the input sequence differently when generating each token.
+
+### Cheating and the Mask:
+"Cheating" refers to the undesirable situation where the model uses information from future positions in the sequence during training. During training, the model is fed the true output sequence up to the current position to calculate loss and update its parameters. If the model were allowed to attend to future positions, it might artificially inflate its performance by relying on information that it wouldn't have during actual generation.
+
+The mask applied in the decoder's self-attention mechanism prevents the model from accessing future information. The mask sets the attention scores for future positions to very small values, essentially blocking the model from attending to tokens that haven't been generated yet. This ensures that the model learns to generate each token based only on the information available up to that point, aligning with the autoregressive nature of the decoding process.
+
+### Example:
+Consider the task of language translation. When translating a sentence from English to French, the decoder generates the translation one word at a time. If it were allowed to attend to words in the future, it might incorrectly use information from the French translation that hasn't been generated yet. This could lead to overfitting during training and poor generalization to unseen data.
+
+In summary, preventing "cheating" by using a mask ensures that the decoder learns to generate outputs based on the information available up to the current step, improving the model's ability to generalize to unseen data and maintain the autoregressive property essential for sequence generation tasks.
+:::
+
+## The full Transformer
+<center>![Slide 26](imgs/page_26.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 27](imgs/page_27.png){.w575}</center><pre></pre>
+
+
+
+## Coding a Transformer (PyTorch): init
+<center>![Slide 28](imgs/page_28.png){.w575}</center><pre></pre>
+
+
+
+## Coding a Transformer (PyTorch): forward pass
+<center>![Slide 29](imgs/page_29.png){.w575}</center><pre></pre>
+
+tgt: in roder to predict the next word, you can look at the preceding word. So the target is the same as source except that is shofted one to the left. We do it so that it shofts and we are able to predict the last word 
+
+## Transformer: Positional encodings
+<center>![Slide 30](imgs/page_30.png){.w575}</center><pre></pre>
+
+Attention is a permutation-invariant operation, but this is not ideal because we might have that sometimes the order is important like with 'not' 
+
+positional enconding to locate where are you at the beginning or at the end
+
+## Transformer: Positional encodings
+<center>![Slide 31](imgs/page_31.png){.w575}</center><pre></pre>
+
+if they are apart from each other their positional encoding should be different
+
+
+## Coding the Positional Encodings (PyTorch)
+<center>![Slide 32](imgs/page_32.png){.w575}</center><pre></pre>
+
+
+
+## Pros & Cons
+<center>![Slide 33](imgs/page_33.png){.w575}</center><pre></pre>
+
+It scales quadratically with the num inputs, the matrix is N * N let see an example:
+
+The quadratic scaling of transformers with respect to the number of inputs primarily arises from the self-attention mechanism used in transformers. In self-attention, each element in the input sequence attends to all other elements, and the attention scores are computed pairwise. This leads to a quadratic dependency on the number of inputs.
+
+Let's consider a simple example with a sequence of length $N$. For simplicity, let's assume each input element has a dimension of 1 for illustration purposes.
+
+What about other dimensions, wel that can be possible because remember we have our embeddings as the input to the NN, not the words itself
+
+
+<center>![](imgs/2023-11-28-17-32-03.png){.w350}</center><pre></pre>
+
+Like in this picture our dimensions are clearly larger than 1 for the embeddings 
+
+1. **Original Sequence (1D):**
+   $$ 
+   x_1, x_2, x_3, \ldots, x_N
+   $$
+
+2. **Self-Attention Weights:**
+   For each element $x_i$, self-attention computes a weight for all other elements $x_j$ based on their relationships. This results in a square matrix of attention weights:
+
+   $$
+   \begin{bmatrix}
+   w_{1,1} & w_{1,2} & \ldots & w_{1,N} \\
+   w_{2,1} & w_{2,2} & \ldots & w_{2,N} \\
+   \vdots & \vdots & \ddots & \vdots \\
+   w_{N,1} & w_{N,2} & \ldots & w_{N,N} \\
+   \end{bmatrix}
+  $$
+
+   Each entry $w_{i,j}$ represents the attention weight between $x_i$ and $x_j$.
+
+3. **Output for Each Element:**
+   The output for each element $x_i$ is computed as a weighted sum of all elements based on the attention weights:
+
+   $$
+   \text{output}_{i} = w_{i,1} \cdot x_1 + w_{i,2} \cdot x_2 + \ldots + w_{i,N} \cdot x_N
+  $$
+
+   This involves $N$ multiplications for each element.
+
+4. **Total Complexity:**
+   For $N$ elements, we need to compute $N$ attention weights for each element, resulting in a total of $N^2$ attention weights. Therefore, the overall complexity is quadratic, $O(N^2)$, due to the pairwise comparisons.
+
+This quadratic scaling becomes computationally expensive as the sequence length increases, leading to challenges in handling long sequences efficiently. To address this, techniques like sparse attention patterns and approximations have been proposed in research to reduce the computational cost while maintaining the benefits of self-attention.
+
+
+<center>![Slide 34](imgs/page_34.png){.w575}</center><pre></pre>
+
+
+
+## Recommended papers
+<center>![Slide 35](imgs/page_35.png){.w575}</center><pre></pre>
+
+
+
+
+<center>![Slide 36](imgs/page_36.png){.w575}</center><pre></pre>
+
+
+
+<center>![Slide 37](imgs/page_37.png){.w575}</center><pre></pre>
+
+
+
+## BERT
+<center>![Slide 38](imgs/page_38.png){.w575}</center><pre></pre>
+
+
+
+## BERT input representation
+<center>![Slide 39](imgs/page_39.png){.w575}</center><pre></pre>
+
+
+
+## BERT pre-training
+<center>![Slide 40](imgs/page_40.png){.w575}</center><pre></pre>
+
+
+
+## BERT fine-tuning
+<center>![Slide 41](imgs/page_41.png){.w575}</center><pre></pre>
+
+
+
+## BERT for feature extraction
+<center>![Slide 42](imgs/page_42.png){.w575}</center><pre></pre>
+
+With BERT we gained contextualized word embeddings
+
+## BERTology
+<center>![Slide 43](imgs/page_43.png){.w575}</center><pre></pre>
+
+
+
+## GPT-{1, 2, 3, 4}
+<center>![Slide 44](imgs/page_44.png){.w575}</center><pre></pre>
+
+With bert you did not have a generative model, with GPT you can because it only relies on the past to predict the next ones. Bert mask the word in the middle, but sees at the right and left to see the context.
+
+You dont need to have labels, because pred the next word is just looking in the corpus what is the actual word that should fit.
+
+## GPT-{1, 2, 3}
+<center>![Slide 45](imgs/page_45.png){.w575}</center><pre></pre>
+
+
+
+## GPT: In- context learning 
+
+The three settings we explore for in-context learning Traditional fine-tuning (not used for GPT-3)
+<center>![Slide 46](imgs/page_46.png){.w575}</center><pre></pre>
+
+The ability to not train gradients is a cool ability that these hug models have
+
+**What is in-context learning?**
+
+In natural language processing or conversation, understanding a word or phrase in context means considering the words or sentences that precede and follow it to grasp its intended meaning. This is important because the same word can have different meanings in different situations.
+
+In the context of machine learning, especially with language models like GPT-3, providing information "in context" often involves supplying relevant details or context so that the model can generate responses or perform tasks that take into account the broader context of the input. This is particularly important for tasks that require understanding and generating coherent and contextually appropriate language.
+
+
+## Discuss 
+
+For models like StableDiffusion, Dalle, EMU video etc. T5
+<center>![Slide 47](imgs/page_47.png){.w575}</center><pre></pre>
+
+Why may encoders models be favorable compared to decoder models?
+
+- Decoders are also trained with masks but if you want to predict the next word, this representation looks at everything that comes before, so in a way if that is what you care about there is no mack really (because you are looking at everything that was looked before)
+
+- Nobody knows the answer for this question
+
+
+- Hypothesis is that encoders compress the information, while for Large language models, they are basically the job of encoding and decoding at the same time, because th closer you get to the ouput the more you need to go back to i.e correct grammar and very low level features, and somewhere in the middle of these decoder models there is the summary semantics that you could use for the vission models but you don't know exactly where those features are. So for encoders you know exaclty where th summary is because that is still the bottleneck still but for decoders we dont know where to take the features
+
+
+- A CNN is an encoder
+
+- Unet also has this decoder then the decoder part like
+
+## GPT vs BERT
+<center>![Slide 48](imgs/page_48.png){.w575}</center><pre></pre>
+
+
+
+## Multimodal Transformer architecture: CLIP
+<center>![Slide 49](imgs/page_49.png){.w575}</center><pre></pre>
+
+
+
+## Multimodal Transformer architecture: CLIP
+<center>![Slide 50](imgs/page_50.png){.w575}</center><pre></pre>
+
+Here we want things to be close but different. That is hard, and with these hard examples we learn new features and learn more
+
+Now differentiating a dog vs a sheep that would be easier and eventually you will not learn anything.
+
+1:32
+
+## Multimodal Transformer architecture: CLIP
+<center>![Slide 51](imgs/page_51.png){.w575}</center><pre></pre>
+
+Because they use a text encoder, like BERT, they can do Zero-shot for classification images
+
+## CLIP: Zero-Shot Examples
+<center>![Slide 52](imgs/page_52.png){.w575}</center><pre></pre>
+
+
+
+## CLIP: Robustness
+<center>![Slide 53](imgs/page_53.png){.w575}</center><pre></pre>
+
+- Better because of the internet:
+
+ CLIP is pre-trained on a large dataset with diverse images and associated text from the internet. This diverse pre-training data helps the model learn features that are more transferable across different tasks and domains. In contrast, a supervised ImageNet model might be optimized for the specific categories present in ImageNet, and its features may not generalize as well to new, unseen classes.
+
+- Better because we can guide it using engineered prompts:
+
+ In zero-shot learning with CLIP, you can provide textual prompts to guide the model's behavior. This allows you to specify the task or class you're interested in, enabling the model to adapt its predictions based on the provided textual information
+
+- Less prone to overfitting due to have trained in larger dataset:
+
+Supervised models trained on specific datasets, such as ImageNet, may be prone to overfitting to the idiosyncrasies of that dataset. CLIP, having been trained on a broader range of data, may be less prone to overfitting to specific dataset biases
+
+- More data more understanding of semantics:
+
+CLIP's strength lies in its ability to understand the semantic relationships between images and text. A larger dataset provides more examples of diverse language-image pairs, allowing the model to learn richer semantic embeddings
+
+## CLIP: Usage in other models
+<center>![Slide 54](imgs/page_54.png){.w575}</center><pre></pre>
+
+
+
+## CLIP: Shortcomings
+<center>![Slide 55](imgs/page_55.png){.w575}</center><pre></pre>
+
+CLIP does not have a decoder, so it cannot generate text
+
+## Visual Language Model: Flamingo
+<center>![Slide 56](imgs/page_56.png){.w575}</center><pre></pre>
+
+Basically with CLIP you give images, out labels in form of a prompt text
+
+With flamingo you give images and text prompts and can generate now the output cpation for an specific image
+
+GPT, you give it some text and is able to see what is next because it uses decoders
+
+## Visual Language Model: Flamingo
+<center>![Slide 57](imgs/page_57.png){.w575}</center><pre></pre>
+
+The language model is frozen, but you add this cross attention gates. So the cross atentions is sort of similar to the encoder decoder structure, when this language model can attend to the visual inputs. The pink is what is being learned. The visual encoder are also keept frozen.
+
+The perciver part allows you to change the representation of the encoder
+
+## Visual Language Model: Flamingo
+<center>![Slide 58](imgs/page_58.png){.w575}</center><pre></pre>
+
+Here there is an encoder and a decoder
+
+## Vision Transformer
+<center>![Slide 59](imgs/page_59.png){.w575}</center><pre></pre>
+
+
+
+## Understanding a “Figure 1”
+<center>![Slide 60](imgs/page_60.png){.w575}</center><pre></pre>
+
+This is similar to BERT, in bert we have positional embedding. 
+
+Here we split the picture but still we conserve the order by remembering the index values which define the value 
+
+Bert process information in parallel, like in the paper see image below and why do we need positional embeding is because:
+
+BERT (Bidirectional Encoder Representations from Transformers) is a transformer-based model designed for natural language processing tasks. Unlike traditional sequential models, transformers process input data in parallel, which makes them highly efficient but also means they don't inherently understand the order of the input sequence. To address this limitation and enable transformers to capture sequential information, positional embeddings are used.
+
+Positional embeddings are added to the input embeddings to provide information about the position of each token in a sequence. In BERT, the model processes the input tokens in parallel, and without positional embeddings, it would have no inherent understanding of the order of the tokens. Positional embeddings help the model distinguish between tokens based on their position in the sequence, allowing it to capture the sequential structure of the input.
+
+
+Coming back to ViT model, here we can see that the model also process information in parallel that's why we need positional embedding so that we can then learnthe order of how the pic was constructed 
+
+
+<center>![](imgs/2023-11-28-23-58-08.png){.w550}</center><pre></pre>
+
+## Quiz: From what you now know about attention, what
+<center>![Slide 61](imgs/page_61.png){.w575}</center><pre></pre>
+
+Both attention mechanisms and convolutions are essential components in neural network architectures, and they each have their advantages and disadvantages. Here's a comparison of the two:
+
+### Attention Mechanisms:
+
+#### Advantages:
+1. **Global Context Handling:** Attention mechanisms allow the model to focus on different parts of the input sequence when making predictions, enabling the model to consider global context and dependencies.
+
+2. **Variable Receptive Field:** Attention doesn't enforce a fixed receptive field, meaning the model can attend to different parts of the input sequence with varying degrees of focus. This flexibility can be beneficial for tasks where capturing long-range dependencies is crucial.
+
+3. **Sequence-to-Sequence Tasks:** Attention mechanisms have been particularly successful in sequence-to-sequence tasks, such as machine translation, where the input and output sequences can have varying lengths and alignments.
+
+#### Disadvantages:
+1. **Computational Complexity:** Attention mechanisms can be computationally expensive, especially with large sequences, as they require pairwise comparisons between all elements in the sequence.
+
+2. **Memory Requirements:** The model needs to store attention weights for each element in the sequence, leading to increased memory requirements.
+
+### Convolutional Operations:
+
+#### Advantages:
+1. **Parameter Sharing:** Convolutional layers use shared weights, which reduces the number of parameters in the model. This can make convolutional networks more computationally efficient and easier to train, especially on tasks with limited data.
+
+2. **Local Receptive Field:** Convolutional layers have a fixed-size receptive field, allowing them to capture local patterns and spatial hierarchies efficiently.
+
+3. **Translation Invariance:** Convolutional layers can provide some degree of translation invariance, meaning they can recognize patterns regardless of their exact position in the input.
+
+#### Disadvantages:
+1. **Limited Global Context:** Convolutional layers have a fixed receptive field, which may limit their ability to capture long-range dependencies in the data.
+
+2. **Not Well-Suited for Sequence Tasks:** While convolutional layers are effective for image-related tasks, they may not be as naturally suited for sequence-to-sequence tasks where the input and output lengths can vary.
+
+In practice, a combination of both attention mechanisms and convolutional layers is often used in hybrid models to leverage the strengths of each. For example, the Transformer architecture combines self-attention mechanisms with feedforward layers, providing an effective approach for a variety of natural language processing tasks.
+
+
+## Vision Transformer
+<center>![Slide 62](imgs/page_62.png){.w575}</center><pre></pre>
+
+
+
+## Vision Transformer
+<center>![Slide 63](imgs/page_63.png){.w575}</center><pre></pre>
+
+In ViT we actually learn the positional embeddings, compared to Bert, we can actually visualize them and see that 
+
+## Attention as a superset of convolutions
+<center>![Slide 64](imgs/page_64.png){.w575}</center><pre></pre>
+
+
+
+## Training a ViT is more difficult
+<center>![Slide 65](imgs/page_65.png){.w575}</center><pre></pre>
+
+
+
+## Vil features
+<center>![Slide 66](imgs/page_66.png){.w575}</center><pre></pre>
+
+
+
+## Also here: ImageNet can (more or less) be solved with textures
+<center>![Slide 67](imgs/page_67.png){.w575}</center><pre></pre>
+
+
+
+## Swin Transformer: add hierarchy back in?
+<center>![Slide 68](imgs/page_68.png){.w575}</center><pre></pre>
+
+
+
+## Hybrid Architectures get best performances (atm)
+<center>![Slide 69](imgs/page_69.png){.w575}</center><pre></pre>
+
+
+
+## The Perceiver
+<center>![Slide 70](imgs/page_70.png){.w575}</center><pre></pre>
+
+
+
+## The Perceiver: main idea
+<center>![Slide 71](imgs/page_71.png){.w575}</center><pre></pre>
+
+
+
+## The Perceiver: Taming quadratic complexity
+<center>![Slide 72](imgs/page_72.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 73](imgs/page_73.png){.w575}</center><pre></pre>
+
+
+
+
+
+
+
+
+
+
+## Notes on weight sharing for CNN
+
+
+A convolutional layer is generally comprised of many "filters", which are usually 2x2 or 3x3. These filters are applied in a "sliding window" across the entire layer's input. The "weight sharing" is using fixed weights for this filter across the entire input. It does not mean that all of the filters are equivalent.
+
+To be concrete, let's imagine a 2x2 filter 𝐹
+ striding a 3x3 input 𝑋
+ with padding, so the filter gets applied 4 times. Let's denote the unrolled filter 𝛽
+
+ $$
+\mathbf{X} = \begin{bmatrix}
+  x_{11} & x_{21} & x_{31} \\
+  x_{12} & x_{22} & x_{32} \\
+  x_{13} & x_{23} & x_{33} \\
+\end{bmatrix}
+$$
+
+$$
+\mathbf{F} = \begin{bmatrix}
+  w_{11} & w_{21} \\
+  w_{12} & w_{22} \\
+\end{bmatrix}
+$$
+
+$$
+\boldsymbol{\beta} = \begin{bmatrix}
+  w_{11} & w_{12} & w_{21} & w_{22} \\
+\end{bmatrix}
+$$
+
+$$
+\mathbf{F} \cdot \boldsymbol{\beta} = \begin{bmatrix}
+  \beta \cdot [x_{11}, x_{12}, x_{21}, x_{22}] & \beta \cdot [x_{12}, x_{13}, x_{22}, x_{23}] \\
+  \beta \cdot [x_{21}, x_{22}, x_{31}, x_{32}] & \beta \cdot [x_{22}, x_{23}, x_{32}, x_{33}]
+\end{bmatrix}
+$$
+
+"Weight sharing" means when we apply this 2x2 filter to our 3x3 input, we reuse the same four weights given by the filter across the entire input. The alternative would be each filter application having its own set of inputs (which would really be a separate filter for each region of the image), giving a total of 16 weights, or a dense layer with 4 nodes giving 36 weights.
+
+Sharing weights in this way significantly reduces the number of weights we have to learn, making it easier to learn very deep architectures, and additionally allows us to learn features that are agnostic to what region of the input is being considered.
+
+
+![](https://i.stack.imgur.com/cWe7D.gif)

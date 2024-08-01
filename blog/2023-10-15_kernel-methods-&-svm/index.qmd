@@ -1,8 +1,10 @@
 ---
 title: "Kernel methods & SVM"
-description: "Lecture Notes UvA on 9-10-2023"
+description: "Lecture Notes on 9-10-2023"
 date: "2023-10-15"
-categories: [All, Education, TAGS]
+date-format: long
+year: "2023"
+categories: [All, Machine Learning, TAGS]
 toc: false
 jupyter: git-pages
 code-fold: true
@@ -21,13 +23,13 @@ In Unsupervised Learning we assume a latent target. In supervised we have a targ
         - In regression we want to have a continuous target variable  
         - Find model parameters via ML, MAP (or use fully Bayesian)
         - If we want to avoid overfilling we include a prior
-        <center>![](2023-10-15-00-31-35.png){.w250}</center><pre></pre>
+        <center>![](imgs/2023-10-15-00-31-35.png){.w250}</center><pre></pre>
 2. Classification: is discrete, the target $\in \{C1,...C_k\}$ finite set of options
     - **Probabilistic modelling:**
         - We also predict distributions. Here we want to predict a probability per each class ie. generalized bernoulli distribution
         - Find model parameters via ML, MAP (or use fully Bayesian)    
         - If we want to avoid overfilling we include a prior 
-        <center>![](2023-10-15-00-29-12.png){.w250}</center><pre></pre> 
+        <center>![](imgs/2023-10-15-00-29-12.png){.w250}</center><pre></pre> 
 
 **Unsupervised Learning:**
 
@@ -83,12 +85,12 @@ Discriminative methods (left) & Probabilistic methods (Right)
 
 ## So Far: Parametric Models
 
-<center>![](2023-10-15-10-31-31.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-15-10-31-31.png){.w550}</center><pre></pre>
 
 - We teak the parameters highlighted in green color
 
 ## Parametric vs Non-Parametric Models
-<center>![](2023-10-15-10-38-54.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-15-10-38-54.png){.w550}</center><pre></pre>
 - In parametric you train then discard data and use weights W or other parameters, in Non-parametric you do predictions but you always carry the data to kae such predictions.
     - Because carrying big data is not efficient then you may use SVM
 
@@ -96,7 +98,7 @@ Discriminative methods (left) & Probabilistic methods (Right)
 This means we have a continuos representation of our space. We can sample as finely as we want, so we can discretized and the index would be one function, because $M=\infty$ then we adjust this index to the sampling rate to make it more or less smother
 
 ## Non-Parametric Kernel Methods
-<center>![](2023-10-15-10-56-47.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-15-10-56-47.png){.w550}</center><pre></pre>
 Ridge regression can be defined in kernelize form without using explicit using basis functions.
 
 - **Primal** for the parametric case
@@ -107,19 +109,19 @@ For linear models:
 
 - The kernel it just computing the similarity between $x$ and $x'$ 
 
-<center>![](2023-10-15-11-26-12.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-15-11-26-12.png){.w550}</center><pre></pre>
 
 ## Kernelized Ridge Regression
 
-<center>![](2023-10-15-11-26-58.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-15-11-26-58.png){.w550}</center><pre></pre>
 
-<center>![](2023-10-15-11-28-35.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-15-11-28-35.png){.w550}</center><pre></pre>
 
-<center>![](2023-10-15-11-29-00.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-15-11-29-00.png){.w550}</center><pre></pre>
 
 ## Primal vs Dual/Kernel Approach
 
-<center>![](2023-10-15-11-30-21.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-15-11-30-21.png){.w550}</center><pre></pre>
 
 ## Kernel Trick/Kernel Substitution
 
@@ -141,13 +143,13 @@ We do not know what kernel will be but we can **prove** that if the kernel is sy
 So basically we find $\mathbb{\phi}(\textbf{x}_n)^T\mathbb{\phi}(\textbf{x}_n) = \textbf{k}(\textbf{x}_n^T, \textbf{x}_m) = \textbf{K}_{nm}$
 :::
 
-<center>![](2023-10-15-13-12-48.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-15-13-12-48.png){.w550}</center><pre></pre>
 
 If a choice any basis function it induces a kernel simply by computing inner product in the new feature space 
 
 ## Deriving the corresponding feature vector
 
-<center>![](2023-10-15-14-24-31.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-15-14-24-31.png){.w550}</center><pre></pre>
 
 For every positive definite kernel there exist a set of basis from $R^d$ to $R^M$. Meaning there would be a set of basis which means instead of solving for the basis we can just get a valid kernel and not learn the basis
 
@@ -160,16 +162,16 @@ Sidenote: there is more chance to overfilling
 
 ### Note on infinite dimensional feature space of Gaussian kernels
 
-<center>![](2023-10-15-14-49-56.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-15-14-49-56.png){.w550}</center><pre></pre>
 
 ## Kernel Trick/ Kernel substitution
 
-<center>![](2023-10-15-14-49-32.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-15-14-49-32.png){.w550}</center><pre></pre>
 
 
 ## Example: polynomial kernel
 
-<center>![](2023-10-15-13-50-21.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-15-13-50-21.png){.w550}</center><pre></pre>
 
 This shows that if we have this polynomial kernel then that we can decompose it into $\mathbb{\phi}(\textbf{x}_n)^T\mathbb{\phi}(\textbf{x}_n)$ 
 
@@ -177,7 +179,7 @@ Where: $\mathbb{\phi}(\textbf{x}) \in \mathbb{R}^{6}$
 
 ## Examples of valid Kernels
 
-<center>![](2023-10-15-13-54-26.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-15-13-54-26.png){.w550}</center><pre></pre>
 
 - The Gaussian kernel produces infinitely $M = \infty$ many basis functions
 
@@ -186,19 +188,19 @@ Where: $\mathbb{\phi}(\textbf{x}) \in \mathbb{R}^{6}$
 
 SVM are kernel methods but with sparse solutions. MEaning some $a_n = 0$ so that we do not compute all datapoints but only relevant. The ones that are relevant are called **suport vectors** 
 
-<center>![](2023-10-15-18-20-46.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-15-18-20-46.png){.w550}</center><pre></pre>
 
 - We are guaranteed to find a solution because it is a Convex optimization problem
 
 ## Linearly Separable dataset
 
-<center>![](2023-10-15-18-23-40.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-15-18-23-40.png){.w550}</center><pre></pre>
 
 - One way to tell whether a classifier is better than other is to look at how far us the margin from a closes point to the decision boundary. If the margin is large then I have a stable classifier.
 
 > **Goal:** we want to maximize the margin to have a stable classifier. To classify the size of the margin we can use some linear projections to the boundary we see this in the next topic
 
-<center>![](2023-10-15-18-24-30.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-15-18-24-30.png){.w550}</center><pre></pre>
 
 The graph above is taking into account that we classify the data correctly in two parts so the blue points in one side the red in another.
 
@@ -206,18 +208,18 @@ The graph above is taking into account that we classify the data correctly in tw
 
 Now that we have a expression for the margin our objective is to **maximize** this margin
 
-<center>![](2023-10-15-19-42-31.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-15-19-42-31.png){.w550}</center><pre></pre>
 
 - In this case we have $r_n$ so we could tune $w$ to obtain the maximum margin to a point. How do we do this? we follow:
 
-<center>![](2023-10-15-21-31-23.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-15-21-31-23.png){.w550}</center><pre></pre>
 
 1. Identify the closest point. The $\kappa$ (kappa) its introduced to say we can amplify our distance we can i.e have the distance in kiloliters or miles etc.
 2. To resolve the ambiguity of measuring in kilometers or in miles or so for, we set our $||\kappa \textbf{w}|| = 1$. This is essentially setting the unit which you want to compute the distance. You are saying then the closest point should have unit 1 this is a **constraint**   
     - From this step it follows that all the points would be  my prediction times label $t_n \, y_n$ will be greater or equal to $1$
 3. We maximize the size of the margin given by 1/|W| with the inequality constraint
 
-<center>![](2023-10-15-21-44-42.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-15-21-44-42.png){.w550}</center><pre></pre>
 
 :::{.callout-note}
 # Maximum Margin Classifier: Goal
@@ -228,9 +230,9 @@ Now that we have a expression for the margin our objective is to **maximize** th
 
 ## Constrained optimization (inequality constraint)
 
-<center>![](2023-10-16-00-53-20.png){.w550}</center><pre></pre>
-<center>![](2023-10-16-00-54-51.png){.w550}</center><pre></pre>
-<center>![](2023-10-16-00-54-43.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-16-00-53-20.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-16-00-54-51.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-16-00-54-43.png){.w550}</center><pre></pre>
 
 - Now the solution should lie within the yellow region
 
@@ -261,7 +263,7 @@ Then you approach the limit from below
 ### Calculating the Lagrange
 
 
-<center>![](2023-10-16-12-37-05.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-16-12-37-05.png){.w550}</center><pre></pre>
 
 :::{.callout-note}
 # Steps to compute the lagrange
@@ -277,23 +279,23 @@ Then you approach the limit from below
 
 1. For the case of SVM we start by step 1. 
 
-<center>![](2023-10-16-13-08-50.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-16-13-08-50.png){.w550}</center><pre></pre>
 
 
 We write the primal Lagrange with the constriant. Also, we introduce the dual variables (lagrange multipliers) $\textbf{a}_n$ meaning for every each datapoint we want it to lie in the proper side of the boundary. This condition that $\textbf{a}_n$ imposes comes from the **KKT** conditions
 
 2. We solve for $\frac{\partial L}{\partial \textbf{w}}=0$, $\frac{\partial L}{\partial b}=0$  and rewrite the Primal to the Dual Lagrangian
  
-<center>![](2023-10-16-13-09-11.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-16-13-09-11.png){.w550}</center><pre></pre>
 
 Once we have those parameters we plug in again in the Lagrange in step 1. Then the function will be dependent on $a_n$ which is then called the **Dual Lagrangian**
-<center>![](2023-10-16-13-47-54.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-16-13-47-54.png){.w550}</center><pre></pre>
 
 > **Remember** Dual Lagrangian would be convex so we know there would be unique solution
  
 Now that we have **derived** the dual we can now apply the kernel trick as follows:
 
-<center>![](2023-10-17-12-57-17.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-17-12-57-17.png){.w550}</center><pre></pre>
 
 ## Sparse solutions due to KKT
 
@@ -306,7 +308,7 @@ Which means we would a couple of datapoints instead of the whole batch $x_n$. Th
 
 :::
 
-<center>![](2023-10-17-13-08-25.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-17-13-08-25.png){.w550}</center><pre></pre>
 
 ## SVM: Solution for bias b
 
@@ -314,19 +316,19 @@ So far we have solve $y(\textbf{x})$ but we still have $\textbf{b}$. So now we s
 
 Recall we have the constraint that we derive deriving the primal wrt to $b$:
 
-<center>![](2023-10-17-16-32-26.png){.w100}</center><pre></pre>
+<center>![](imgs/2023-10-17-16-32-26.png){.w100}</center><pre></pre>
 
 That means I can pick whathever $\textbf{b}$ I want as long the KKT constraints are satisfied
 
 No we use the final constraint that $t_ny_n(x)=1$
 
-<center>![](2023-10-17-16-44-56.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-17-16-44-56.png){.w550}</center><pre></pre>
 
 - In practice when we found a solution for b its better to average them 
 
 ## Maximum Margin Classifier: Contours
 
-<center>![](2023-10-17-16-57-50.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-17-16-57-50.png){.w550}</center><pre></pre>
 
 - If we use a gaussian kernel then our Maximal Margin Classifier we will always be able to classify the points i.e we may end up with an island to classify only one point. 
 
@@ -336,24 +338,24 @@ No we use the final constraint that $t_ny_n(x)=1$
 
 ## Note on outliers
 
-<center>![](2023-10-17-17-04-22.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-17-17-04-22.png){.w550}</center><pre></pre>
 
 Due to the capability of the Maximum Margin Classifier all outliers would be calssified well which sometimes may not be desirable, to avoid this irregular boundaries we introduce *slackness variables*. This notion leads to SVM with **Soft Margins**  
 
 ## Soft Margin Classifiers
-<center>![](2023-10-17-17-11-23.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-17-17-11-23.png){.w550}</center><pre></pre>
 
 - We do not move the decision boundary, we allow outliers but we add a penalty to them
 - Penalty is proportional to the boundary
 
-<center>![](2023-10-17-19-20-21.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-17-19-20-21.png){.w550}</center><pre></pre>
 
 So now because we introduce this slack variable we have a new constraint optimization problem.
 
 
 ## Maximum Margin Classifiers: Soft Margins
 
-<center>![](2023-10-17-19-39-44.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-17-19-39-44.png){.w550}</center><pre></pre>
 
 - The $C$ variable would be the one that decides which points get penalize. That is, $C$ prevents that every point get a slack and, our goal now is to avoid as many points to be in the wrong side of the decision boundaries. 
 
@@ -361,7 +363,7 @@ So now because we introduce this slack variable we have a new constraint optimiz
 
 **Solving steps 1 -> 2:**
 
-<center>![](2023-10-17-19-51-50.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-17-19-51-50.png){.w550}</center><pre></pre>
 
 - Primal variables: $\textbf{w}$, $\textbf{b}$ and $\xi_n$
 - Dual   variables: $a_n$ and $\mu_n$
@@ -370,15 +372,15 @@ So now because we introduce this slack variable we have a new constraint optimiz
 
 - Solving the derivatives for the primal variables $\textbf{w}$, $\textbf{b}$ and $\xi_n$
 
-<center>![](2023-10-17-19-57-56.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-17-19-57-56.png){.w550}</center><pre></pre>
 
 **Solving mid-step: Box constraints:**
 
-<center>![](2023-10-17-21-32-47.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-17-21-32-47.png){.w550}</center><pre></pre>
 
 - The box constraint comes from the green highlighted equations
 
-<center>![](2023-10-17-21-41-35.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-10-17-21-41-35.png){.w550}</center><pre></pre>
 
 
 ## Wrapping up: Maximum Classifiers w/ Soft Margins
@@ -395,7 +397,7 @@ So now because we introduce this slack variable we have a new constraint optimiz
 - If my $C -> \infty$ then I do not allow slack so that means I am very strick because I am penalizing very hugely to my slack that means I will not allow points that corss the margin. Which brings you to the case of hard margin  
     - This means if I have an outlier I will have an smaller decision boundary because that outlier will be considered as a support vector, therefore it will lower the margin size which means I will have an unstable model when a random datapoint appears  
     **Before** & **After**  
-    <center>![](2023-10-17-21-51-07.png){.w250}![](2023-10-17-21-50-19.png){.w275}</center><pre></pre>
+    <center>![](imgs/2023-10-17-21-51-07.png){.w250}![](imgs/2023-10-17-21-50-19.png){.w275}</center><pre></pre>
 
 
 

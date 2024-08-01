@@ -1,0 +1,54 @@
+---
+title: "2023 Into 2024"
+description: "Description of this Post"
+date: "2024-01-02T13:48:12"
+date-format: long
+year: "2024"
+categories: [All, News, TAGS]
+toc: false
+jupyter: git-pages
+code-fold: true
+number-sections: true
+---
+
+
+Hi all, it is already 2024 🥳
+
+There has been many changes since I started this blog. In this section I want to give a short summary of what has happen in 2023.
+
+For previous yearly summaries:
+
+- [2023 into 2024](../blog/2023-into-2024/)
+- [2022 into 2023](../blog/2023-01-12_2022-into-2023/)
+
+## Highlights of 2023 {.unnumbered}
+
+- I have joined University of Amsterdam as a master student in Artificial Intelligence
+- I concluded my internship in Belgium as a Computer Vision Engineer. 
+- I have attended a couple of seminars related to AI
+
+## What I am looking forward?{.unnumbered}
+
+I have selected the following elective courses for my electives:
+
+- Deep Learning 2
+- Computer Vision 2
+- Data Mining Techniques
+
+And after summer I will be choising more electives for summer and autum period. I am exited for that and in the meantime I am planning to do an internship
+
+I am interested in [Multimodal Models](https://g.co/kgs/NnrfeaE) and [Generative AI](https://blog.google/inside-google/googlers/ask-a-techspert/what-is-generative-ai/). If you see this post and want to reach out. Then hit me up to my email address: `danilotpnta@gmail.com`
+
+
+
+
+
+
+
+
+
+
+
+
+
+

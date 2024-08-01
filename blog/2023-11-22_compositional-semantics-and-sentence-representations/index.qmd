@@ -1,0 +1,693 @@
+---
+title: "Compositional semantics and sentence representations"
+description: "Description of this Post"
+date: "2023-11-22"
+date-format: long
+year: "2023"
+categories: [All, NLP, TAGS]
+toc: false
+jupyter: git-pages
+code-fold: true
+number-sections: true
+---
+
+<center>![Slide 1](imgs/page_1.png){.w575}</center><pre></pre>
+
+
+<!-- ## Title -->
+<center>![Slide 2](imgs/page_2.png){.w575}</center><pre></pre>
+
+
+## Compositional semantics 
+<center>![Slide 3](imgs/page_3.png){.w575}</center><pre></pre>
+
+Deep here we mean as deeper understanding of language no NN
+
+
+
+## Compositional semantics alongside syntax
+<center>![Slide 4](imgs/page_4.png){.w575}</center><pre></pre>
+
+If we want to model semantics alongside syntax. Word meaning then phrase meaning, then sentence meaning. 
+
+## Non-trivial issues with semantic composition
+<center>![Slide 5](imgs/page_5.png){.w575}</center><pre></pre>
+
+Here in the first i, it refers maybe to a dog. The second one it does not refer to anything. So even if they have same syntax structure they have different meanings
+
+The problem with last one is that even though these phrases can mean soomthing unqiue like the second refere to a person has passed away. Sometimes we may also express that a person just kick the bucket
+
+## Non-trivial issues with semantic composition
+<center>![Slide 6](imgs/page_6.png){.w575}</center><pre></pre>
+
+
+
+## Issues with semantic composition
+<center>![Slide 7](imgs/page_7.png){.w575}</center><pre></pre>
+
+This represent recursion
+
+## Modelling compositional semantics
+<center>![Slide 8](imgs/page_8.png){.w575}</center><pre></pre>
+
+These are two modelling frameworks
+
+1. Here we do the composition directly in vector space
+
+Unsupervised methods, they are general purpose. They capture the meaning of a word based on the similarity with other words. 
+
+2. Here you train your representation in a supervised way, which means you need a task to get the learning signal from. For example in sentiment classification.
+
+For instance if you train your representations to sentiment analysis and then you want to do translation this will not work, cause you train on a different task
+
+<center>![Slide 9](imgs/page_9.png){.w575}</center><pre></pre>
+
+
+
+## Compositional distributional semantics
+
+These are the all **general** purpose **unsupervised** way
+<center>![Slide 10](imgs/page_10.png){.w575}</center><pre></pre>
+
+The idea come up, we were successful to create word representations, why not phrases, then why not in the sentence level.
+
+If you have a finite vocab you can still create an infinitely amount of sentences
+
+It is unfeseable because you dont have every possible sentence there and create a sentence representation for that. But we can do somthing similar which is, instead of learning sentence representatins directly you would try to use the word representation for the sentences and composed to create a sentence representatio.
+
+In principle you need only word representations for all words which is more doable than getting word representations for all sentences
+
+
+
+## Vector mixture models
+<center>![Slide 11](imgs/page_11.png){.w575}</center><pre></pre>
+
+
+
+## Additive and multiplicative models
+<center>![Slide 12](imgs/page_12.png){.w575}</center><pre></pre>
+
+Because summation is symmetric representation, we get the same representation so this model has a flaw
+
+Prepositions are used flexibly in any position, which means they dont have a strong behavioral profile but the content words they do. For example they appear in the same position they co-ocurr in similar context   
+
+## Lexical function models
+<center>![Slide 13](imgs/page_13.png){.w575}</center><pre></pre>
+
+
+
+## Lexical function models
+<center>![Slide 14](imgs/page_14.png){.w575}</center><pre></pre>
+
+
+
+## Learning adjective matrices
+<center>![Slide 15](imgs/page_15.png){.w575}</center><pre></pre>
+
+
+
+## Learning adjective matrices
+<center>![Slide 16](imgs/page_16.png){.w575}</center><pre></pre>
+
+
+
+<!-- ## Title
+<center>![Slide 17](imgs/page_17.png){.w575}</center><pre></pre> -->
+
+
+
+## Title
+<center>![Slide 17](imgs/page_17.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 18](imgs/page_18.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 19](imgs/page_19.png){.w575}</center><pre></pre>
+
+
+
+## Task: Sentiment classification of movie reviews
+<center>![Slide 20](imgs/page_20.png){.w575}</center><pre></pre>
+
+
+
+## Words (and sentences) into vectors
+<center>![Slide 21](imgs/page_21.png){.w575}</center><pre></pre>
+
+
+
+## Sentence representation: A (very) simplified picture
+<center>![Slide 22](imgs/page_22.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 23](imgs/page_23.png){.w575}</center><pre></pre>
+
+
+
+## Dataset: Stanford Sentiment Treebank (SST)
+<center>![Slide 24](imgs/page_24.png){.w575}</center><pre></pre>
+
+
+
+## Binary parse tree: One example
+<center>![Slide 25](imgs/page_25.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 26](imgs/page_26.png){.w575}</center><pre></pre>
+
+
+
+## Models
+<center>![Slide 27](imgs/page_27.png){.w575}</center><pre></pre>
+
+
+
+## First approach: Sentence + Sentiment
+<center>![Slide 28](imgs/page_28.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 29](imgs/page_29.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 30](imgs/page_30.png){.w575}</center><pre></pre>
+
+Here we do not model order or syntax
+
+## Bag of Words
+<center>![Slide 31](imgs/page_31.png){.w575}</center><pre></pre>
+
+
+
+## Bag of Words
+<center>![Slide 32](imgs/page_32.png){.w575}</center><pre></pre>
+
+Because you don't consider order the example in the sentece is the same, so there is a flaw in this model  
+
+## Turning words into numbers
+<center>![Slide 33](imgs/page_33.png){.w575}</center><pre></pre>
+
+
+
+## One-hot vectors select word embeddings
+<center>![Slide 34](imgs/page_34.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 35](imgs/page_35.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 36](imgs/page_36.png){.w575}</center><pre></pre>
+
+Now because the vector representation can squezze more detail in the embedding about the word, then this increase in dimensionality is better
+
+## Continuous Bag of Words (CBOW)
+<center>![Slide 37](imgs/page_37.png){.w575}</center><pre></pre>
+
+
+
+## Recall: Matrix Multiplication
+<center>![Slide 38](imgs/page_38.png){.w575}</center><pre></pre>
+
+
+
+## What about this?
+<center>![Slide 39](imgs/page_39.png){.w575}</center><pre></pre>
+
+Here the problem of just concatenating is that you dont know the size of the W to multiply because the sentence embeddings are vary in length
+
+## What about this?
+<center>![Slide 40](imgs/page_40.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 41](imgs/page_41.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 42](imgs/page_42.png){.w575}</center><pre></pre>
+
+Here we just learn more layers, so more complexity to the model
+
+
+<center>![Slide 43](imgs/page_43.png){.w575}</center><pre></pre>
+
+
+
+## What about this?
+<center>![Slide 44](imgs/page_44.png){.w575}</center><pre></pre>
+
+Deeper is not always better because we might start to overfit, and at test time it will not generalize well
+
+## Question
+<center>![Slide 45](imgs/page_45.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 46](imgs/page_46.png){.w575}</center><pre></pre>
+
+
+
+## Deep CBOW with pretrained embeddings
+<center>![Slide 47](imgs/page_47.png){.w575}</center><pre></pre>
+
+It will be easier if the models already know the word meaning and then it can get the sentoment fo the sentece. Here we have a prior which is our word representation 
+
+## Title
+<center>![Slide 48](imgs/page_48.png){.w575}</center><pre></pre>
+
+There is two paradigms by using pre-trained embeddings 
+
+1. You can keep these representations frozen: so not for training 
+2. or you fine-tune the word representations toguether with your task. This means the word represenation becomes more specialized for the task  
+
+## Recap: Training a neural network
+<center>![Slide 49](imgs/page_49.png){.w575}</center><pre></pre>
+
+
+
+## Cross Entropy Loss
+<center>![Slide 50](imgs/page_50.png){.w575}</center><pre></pre>
+
+
+
+## Softmax
+<center>![Slide 51](imgs/page_51.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 52](imgs/page_52.png){.w575}</center><pre></pre>
+
+Feed forward NNs were not able to contain word order information, RNN can do it
+
+Here the words would be conditioned in the previous words
+
+## Introduction: Recurrent Neural Network (RNN)
+<center>![Slide 53](imgs/page_53.png){.w575}</center><pre></pre>
+
+
+
+## Introduction: Recurrent Neural Network (RNN)
+<center>![Slide 54](imgs/page_54.png){.w575}</center><pre></pre>
+
+6 words 6 times steps
+
+## Introduction: Recurrent Neural Network (RNN)
+<center>![Slide 55](imgs/page_55.png){.w575}</center><pre></pre>
+
+
+
+## Introduction: Unfolding the RNN
+<center>![Slide 56](imgs/page_56.png){.w575}</center><pre></pre>
+
+The W and the R amtrix are the same, they are shared
+
+## Introduction: Making a prediction
+<center>![Slide 57](imgs/page_57.png){.w575}</center><pre></pre>
+
+When you reach the end of the sentence, then you use the ouput vector for this word as the sentence representation. We can do this vecause this last time step was influenced by the entire history so that is why we substitute, this as our sentence representation. And then we can project it as 5 dimensional representation and then we take the argmax or softmax based on this representation
+
+## Introduction: The vanishing gradient problem
+<center>![Slide 58](imgs/page_58.png){.w575}</center><pre></pre>
+
+They tend to surfer from the vanishing problem 
+
+## Introduction: The vanishing gradient problem
+<center>![Slide 59](imgs/page_59.png){.w575}</center><pre></pre>
+
+Here 5 num unrolls N refers to the amount of words you have in a sentence
+
+## What about this?
+<center>![Slide 60](imgs/page_60.png){.w575}</center><pre></pre>
+
+
+
+## RNN vs ANN
+<center>![Slide 61](imgs/page_61.png){.w575}</center><pre></pre>
+
+In the ANN you have different parameters for your matrix in each layer and the problem could cancel out. However even in ANN you can run into vanishing/exploding gradients  
+
+<!-- ## Title -->
+<center>![Slide 62](imgs/page_62.png){.w575}</center><pre></pre>
+
+
+
+## Long Short-Term Memory (LSTM)
+
+CV: resNET skip connections to aliviate exploding/vanishing gradients
+
+NLP: LSTM were introduced
+
+<center>![Slide 63](imgs/page_63.png){.w575}</center><pre></pre>
+
+LSTM are good to deal with long-term dependencies because they are able to cpe with exploding/vanishing gradients
+
+## LSTM: Core idea
+<center>![Slide 64](imgs/page_64.png){.w575}</center><pre></pre>
+
+The cells are supposed to capture the long term memory information from the sentence
+
+This is good because backpropagation through time with have this partially uninterrupted gradient flow 
+
+## LSTMs
+<center>![Slide 65](imgs/page_65.png){.w575}</center><pre></pre>
+
+Now the activation function here would be the LSTM, so each copy would contain an LSTM cell where before we have one layer and now we will have the cell with **four different layers** interacting with each other
+
+## LSTM cell
+<center>![Slide 66](imgs/page_66.png){.w575}</center><pre></pre>
+
+3 gates:
+
+- forget gate
+- input gate
+- output gate
+
+c_t is the memory cell, here we do not apply any weights, we just do multiplication and summation. This is why people call it as a conveyers belt. So here we forget information, we add information but information flows interrupted 
+
+## LSTM: Cell state
+<center>![Slide 67](imgs/page_67.png){.w575}</center><pre></pre>
+
+
+## LSTM: Forget gate
+<center>![Slide 68](imgs/page_68.png){.w575}</center><pre></pre>
+
+
+
+## LSTM: Candidate cell
+<center>![Slide 69](imgs/page_69.png){.w575}</center><pre></pre>
+
+
+
+## LSTM: Input gate
+<center>![Slide 70](imgs/page_70.png){.w575}</center><pre></pre>
+
+
+
+## LSTM
+<center>![Slide 71](imgs/page_71.png){.w575}</center><pre></pre>
+
+
+
+## LSTM: Output gate
+<center>![Slide 72](imgs/page_72.png){.w575}</center><pre></pre>
+
+Here we are saying what do I want to keep from my long term memory. The ouput of that is going to be my new output vector.
+
+### Recap
+
+<center>![](imgs/page_66.png){.w575}</center><pre></pre>
+
+1. Use the **forget gate** to get the input word x_t and the previous h_{t-1} with that you do apply softmax which then you multiply to the cell state which is the memory.
+
+Here if you multiply by 1, then you wan to keep those items in memory. If 0 then you do not want to conserve them.
+
+2. We use the **candidate gate** where you mutliply the ouput of the tanh which gives candidate values between -1 and 1 with some scaled softmax from the **input gate**. With this we selectively add what to conserve in the memory cell
+
+3. We update the values of the **ouput gate** which we take: from the cell memory values between -1 to 1 and we multiply these by a softmax version from the input words x_t and also the previous state h_{t-1}
+
+
+- Step 1 & 2 is called **long-term memory**
+- Step 3, is the **short term memory**. This is a filtered version of the long-term memory.
+
+
+## Long Short-Term Memory (LSTM)
+<center>![Slide 73](imgs/page_73.png){.w575}</center><pre></pre>
+
+- Cell state is the **long term memory**
+- Hidden state is your **short term memory**
+
+## LSTMs: Applications & Success in NLP
+<center>![Slide 74](imgs/page_74.png){.w575}</center><pre></pre>
+
+
+
+<!-- ## Title -->
+<center>![Slide 75](imgs/page_75.png){.w575}</center><pre></pre>
+
+## Summary fo models seen so far 
+<center>![Slide 76](imgs/page_76.png){.w575}</center><pre></pre>
+
+
+Sequence models :
+
+- RNN 
+- LSTM
+
+Tree-structure models are the ones that are also sensitive to the **syntactic structure**
+
+
+## Second approach: Sentence + Sentiment + Syntax
+<center>![Slide 77](imgs/page_77.png){.w575}</center><pre></pre>
+
+
+
+## Exploiting tree structure
+<center>![Slide 78](imgs/page_78.png){.w575}</center><pre></pre>
+
+**Compositionality** was this idea that you cannot derive the meaning of sentences from the meaning of the individual words. 
+
+In the models seen so far, we were getting the sentence representation deriving it from the individual words. But we were not taken the syntactic structure into account. These Tree LSTM allow us to do both. So we will get the meaning of the words and also the rules that combine them 
+
+## Why would it be useful?
+<center>![Slide 79](imgs/page_79.png){.w575}</center><pre></pre>
+
+
+
+## Constituency Parse
+<center>![Slide 80](imgs/page_80.png){.w575}</center><pre></pre>
+
+
+
+## Recurrent vs Tree Recursive NN
+<center>![Slide 81](imgs/page_81.png){.w575}</center><pre></pre>
+
+Recurrent NNS that are LSTMs but you also have tree RNN which are **recursive**
+
+If you input "I loved this movie" to the RNN you will not be able to model, the phrase independetly of the previous words in the sentence. So for instance "this movie" is dependent of having seen "I Loved" that means I cannot extract separate phrase representations from your sentence representations
+
+This is different in the three recursive NN, because you explicitly first compose "this movie" into a **phrase representation** and then you would make it dependent on the previous word while you go up in the three
+
+## Tree Recursive NN
+<center>![Slide 82](imgs/page_82.png){.w575}</center><pre></pre>
+
+
+
+## Practical II data set: Stanford Sentiment Treebank (SST)
+<center>![Slide 83](imgs/page_83.png){.w575}</center><pre></pre>
+
+
+
+## Tree LSTMs: Generalize LSTM to tree structure
+<center>![Slide 84](imgs/page_84.png){.w575}</center><pre></pre>
+
+We can input multiple children in each time step
+
+## Tree LSTMs
+<center>![Slide 85](imgs/page_85.png){.w575}</center><pre></pre>
+
+1. You can use any number of children that you want but you will loose child order information
+
+2. N-ary Tree LSTM: in practical Binary parse tree
+
+
+
+## Child-Sum Tree LSTM
+<center>![Slide 86](imgs/page_86.png){.w575}</center><pre></pre>
+
+
+
+## Child-Sum Tree LSTM
+<center>![Slide 87](imgs/page_87.png){.w575}</center><pre></pre>
+
+
+
+## N-ary Tree LSTM
+<center>![Slide 88](imgs/page_88.png){.w575}</center><pre></pre>
+
+That means I have to input separatly to the model because they have separate parameters matrices, so you not just summed them up. 
+
+## N-ary Tree LSTM
+
+<center>![Slide 66](imgs/page_66.png){.w575}</center><pre></pre>
+<center>![Slide 89](imgs/page_89.png){.w575}</center><pre></pre>
+
+
+## N-ary Tree LSTM
+
+<center>![Slide 90](imgs/page_90.png){.w575}</center><pre></pre>
+
+$u_j$ is for the candidate gate 
+
+For each child $h_j$, we have a separate parameter matrix  and you ill be summing 
+
+<center>![Slide 73](imgs/page_73.png){.w575}</center><pre></pre>
+
+
+## LSTMs vs Tree-LSTMs
+<center>![Slide 91](imgs/page_91.png){.w575}</center><pre></pre>
+
+Tree-LSTM general, general LSTM its just a Tree-LSTM with one child. So if you have one child then you have your standard tree LSTM
+
+## Title
+<center>![Slide 92](imgs/page_92.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 93](imgs/page_93.png){.w575}</center><pre></pre>
+
+
+
+## Building a tree with a transition sequence
+<center>![Slide 94](imgs/page_94.png){.w575}</center><pre></pre>
+
+
+
+## Transition sequence example
+<center>![Slide 95](imgs/page_95.png){.w575}</center><pre></pre>
+
+
+
+## Transition sequence example
+<center>![Slide 96](imgs/page_96.png){.w575}</center><pre></pre>
+
+
+
+## Transition sequence example
+<center>![Slide 97](imgs/page_97.png){.w575}</center><pre></pre>
+
+
+
+## Transition sequence example
+<center>![Slide 98](imgs/page_98.png){.w575}</center><pre></pre>
+
+
+
+## Transition sequence example
+<center>![Slide 99](imgs/page_99.png){.w575}</center><pre></pre>
+
+
+
+## Transition sequence example
+<center>![Slide 100](imgs/page_100.png){.w575}</center><pre></pre>
+
+
+
+## Transition sequence example
+<center>![Slide 101](imgs/page_101.png){.w575}</center><pre></pre>
+
+
+
+## Transition sequence example
+<center>![Slide 102](imgs/page_102.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 103](imgs/page_103.png){.w575}</center><pre></pre>
+
+Because we are doing this in sequence so putting thins on the stack and then to the tree we cannot dot his in parallel, so this is slow. Thus, we want to do mini-batch where you process multiple sentences at the same time and 
+
+## Transition sequence example (mini-batched)
+<center>![Slide 104](imgs/page_104.png){.w575}</center><pre></pre>
+
+
+
+## Transition sequence example (mini-batched)
+<center>![Slide 105](imgs/page_105.png){.w575}</center><pre></pre>
+
+
+
+## Transition sequence example (mini-batched)
+<center>![Slide 106](imgs/page_106.png){.w575}</center><pre></pre>
+
+
+
+## Transition sequence example (mini-batched)
+<center>![Slide 107](imgs/page_107.png){.w575}</center><pre></pre>
+
+
+
+## Transition sequence example (mini-batched)
+<center>![Slide 108](imgs/page_108.png){.w575}</center><pre></pre>
+
+
+
+## Transition sequence example (mini-batched)
+<center>![Slide 109](imgs/page_109.png){.w575}</center><pre></pre>
+
+
+
+## Optional approach: Sentence + Sentiment + Syntax + Node-level sentiment
+<center>![Slide 110](imgs/page_110.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 111](imgs/page_111.png){.w575}</center><pre></pre>
+
+
+
+## Recap
+<center>![Slide 112](imgs/page_112.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 113](imgs/page_113.png){.w575}</center><pre></pre>
+
+
+
+## Input
+<center>![Slide 114](imgs/page_114.png){.w575}</center><pre></pre>
+
+
+
+## Recap: Activation functions
+<center>![Slide 115](imgs/page_115.png){.w575}</center><pre></pre>
+
+
+
+## Introduction: Intuition to solving the vanishing gradient
+<center>![Slide 116](imgs/page_116.png){.w575}</center><pre></pre>
+
+
+
+## Introduction: A small improvement
+<center>![Slide 117](imgs/page_117.png){.w575}</center><pre></pre>
+
+
+
+## Child-Sum Tree LSTM
+<center>![Slide 118](imgs/page_118.png){.w575}</center><pre></pre>
+
+
+
+## A naive recursive NN
+<center>![Slide 119](imgs/page_119.png){.w575}</center><pre></pre>
+
+
+
+## SGD vs GD
+<center>![Slide 120](imgs/page_120.png){.w575}</center><pre></pre>
+

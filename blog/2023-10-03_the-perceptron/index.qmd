@@ -1,37 +1,40 @@
 ---
 title: "The Perceptron"
-description: "Lecture Notes UvA on 19-9-2023"
+description: "Lecture Notes on 19-9-2023"
 date: "2023-10-03"
-categories: [All, Education, Machine Learning, TAGS, AI]
+date-format: long
+year: "2023"
+categories: [All, Machine Learning, TAGS, AI]
 toc: false
 jupyter: git-pages
 code-fold: true
 number-sections: true
 ---
 
+
 ## The Perceptron Model
 
 it just a linear model where:
 
-<center>[![](2023-10-03-01-07-17.png)]{.w400}</center>
+<center>[![](imgs/2023-10-03-01-07-17.png)]{.w400}</center>
 
 Here $\phi(x)=x$ for instance.
 
 ### Error function
 
-<center>[![](2023-10-03-01-42-06.png)]{.w400}</center>
+<center>[![](imgs/2023-10-03-01-42-06.png)]{.w400}</center>
 
 ### The Perceptron: Learning
 
-<center>[![](2023-10-03-01-58-58.png)]{.w400}</center>
+<center>[![](imgs/2023-10-03-01-58-58.png)]{.w400}</center>
 
 Here $<1$ we can also have $\gamma$
 
-<center>[![](2023-10-03-10-52-04.png)]{.w400}</center>
+<center>[![](imgs/2023-10-03-10-52-04.png)]{.w400}</center>
 
 ### Perceptron Learning as Gradient Descent
 
-<center>[![](2023-10-03-02-00-16.png)]{.w400}</center>
+<center>[![](imgs/2023-10-03-02-00-16.png)]{.w400}</center>
 
 ### Pros with the Perceptron
 

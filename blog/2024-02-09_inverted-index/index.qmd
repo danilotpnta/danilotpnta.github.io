@@ -1,0 +1,193 @@
+---
+title: "Inverted Index"
+description: "Description of this Post"
+date: "2024-02-08T19:50:13"
+date-format: long
+year: "2024"
+categories: [All, Information Retrieval, TAGS]
+toc: false
+jupyter: git-pages
+code-fold: true
+number-sections: true
+---
+
+<center>![Slide 1](imgs/page_1.png){.w575}</center><pre></pre>
+
+
+
+## Outline
+<center>![Slide 2](imgs/page_2.png){.w575}</center><pre></pre>
+
+
+
+## Outline
+<center>![Slide 3](imgs/page_3.png){.w575}</center><pre></pre>
+
+
+
+## Full indexing architecture
+<center>![Slide 4](imgs/page_4.png){.w575}</center><pre></pre>
+
+
+
+## Web graph
+<center>![Slide 5](imgs/page_5.png){.w575}</center><pre></pre>
+
+
+
+## Forward index
+<center>![Slide 6](imgs/page_6.png){.w575}</center><pre></pre>
+
+
+
+## Page attribute file
+<center>![Slide 7](imgs/page_7.png){.w575}</center><pre></pre>
+
+
+
+## Page attribute file
+<center>![Slide 8](imgs/page_8.png){.w575}</center><pre></pre>
+
+
+
+## Inverted index
+<center>![Slide 9](imgs/page_9.png){.w575}</center><pre></pre>
+
+
+
+## Outline
+<center>![Slide 10](imgs/page_10.png){.w575}</center><pre></pre>
+
+
+
+## Inverted index
+<center>![Slide 11](imgs/page_11.png){.w575}</center><pre></pre>
+
+
+
+## Example
+<center>![Slide 12](imgs/page_12.png){.w575}</center><pre></pre>
+
+
+
+## Document identifiers
+<center>![Slide 13](imgs/page_13.png){.w575}</center><pre></pre>
+
+
+
+## Frequencies
+<center>![Slide 14](imgs/page_14.png){.w575}</center><pre></pre>
+
+
+
+## Positions
+<center>![Slide 15](imgs/page_15.png){.w575}</center><pre></pre>
+
+
+
+## Full inverted index
+<center>![Slide 16](imgs/page_16.png){.w575}</center><pre></pre>
+
+
+
+## Summary
+<center>![Slide 17](imgs/page_17.png){.w575}</center><pre></pre>
+
+
+
+## Outline
+<center>![Slide 18](imgs/page_18.png){.w575}</center><pre></pre>
+
+
+
+## Simple indexer
+<center>![Slide 19](imgs/page_19.png){.w575}</center><pre></pre>
+
+
+
+## What are the problems with this simple indexer?
+<center>![Slide 20](imgs/page_20.png){.w575}</center><pre></pre>
+
+
+
+## Two-pass index
+<center>![Slide 21](imgs/page_21.png){.w575}</center><pre></pre>
+
+
+
+## One-pass index with merging
+<center>![Slide 22](imgs/page_22.png){.w575}</center><pre></pre>
+
+
+
+## Aardvark
+<center>![Slide 23](imgs/page_23.png){.w575}</center><pre></pre>
+
+
+
+## Distributed indexing (MapReduce)
+<center>![Slide 24](imgs/page_24.png){.w575}</center><pre></pre>
+
+
+
+## Summary
+<center>![Slide 25](imgs/page_25.png){.w575}</center><pre></pre>
+
+
+
+## Outline
+<center>![Slide 26](imgs/page_26.png){.w575}</center><pre></pre>
+
+
+
+## No merge
+<center>![Slide 27](imgs/page_27.png){.w575}</center><pre></pre>
+
+
+
+## Incremental update
+<center>![Slide 28](imgs/page_28.png){.w575}</center><pre></pre>
+
+
+
+## Immediate merge (in-memory)
+<center>![Slide 29](imgs/page_29.png){.w575}</center><pre></pre>
+
+
+
+## Lazy merge
+<center>![Slide 30](imgs/page_30.png){.w575}</center><pre></pre>
+
+
+
+## Page deletions
+<center>![Slide 31](imgs/page_31.png){.w575}</center><pre></pre>
+
+
+
+## Summary
+<center>![Slide 32](imgs/page_32.png){.w575}</center><pre></pre>
+
+
+
+## Summary
+<center>![Slide 33](imgs/page_33.png){.w575}</center><pre></pre>
+
+
+
+## Additional References
+<center>![Slide 34](imgs/page_34.png){.w575}</center><pre></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

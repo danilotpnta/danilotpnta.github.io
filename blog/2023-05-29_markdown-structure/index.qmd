@@ -2,6 +2,8 @@
 title: "Markdown structure, titles and CSS"
 description: "Showing how titles and sections will be displayed in all posts"
 date: "2023-05-29"
+date-format: long
+year: "2023"
 categories: [All, Markdown, TAGS, Testing]
 image: "image.jpg"
 toc-depth: 4

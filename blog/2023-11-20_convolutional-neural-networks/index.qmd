@@ -1,0 +1,916 @@
+---
+title: "Convolutional Neural Networks"
+description: "Description of this Post"
+date: "2023-11-20"
+date-format: long
+year: "2023"
+categories: [All, Deep Learning, TAGS]
+toc: false
+jupyter: git-pages
+code-fold: true
+number-sections: true
+---
+
+<!-- ## Title
+<center>![Slide 1](imgs/page_1.png){.w575}</center><pre></pre> -->
+
+
+
+## Optimizing neural networks
+<center>![Slide 2](imgs/page_2.png){.w575}</center><pre></pre>
+
+ 
+
+## Multi-layer perceptrons (Recap)
+<center>![Slide 3](imgs/page_3.png){.w575}</center><pre></pre>
+
+
+
+## Multi-layer perceptrons (Recap)
+<center>![Slide 4](imgs/page_4.png){.w575}</center><pre></pre>
+
+Prior knowledge, is something that we know about the data, we want to bring this into the design of the NNs
+
+## Consider an image
+<center>![Slide 5](imgs/page_5.png){.w575}</center><pre></pre>
+
+
+
+## Hubel and Wiesel: Nobel Prize for Physiology or Medicine in 1981
+<center>![Slide 6](imgs/page_6.png){.w575}</center><pre></pre>
+
+Here when we see edges, there is some electricity
+
+## Filters, yes. How about learnable filters
+<center>![Slide 7](imgs/page_7.png){.w575}</center><pre></pre>
+
+Canny and GAbor filters they all try to find edges, then it can be used for recognition purposes. 
+
+## Filters, yes. How about learnable filters
+<center>![Slide 8](imgs/page_8.png){.w575}</center><pre></pre>
+
+
+
+## The convolution operation
+<center>![Slide 9](imgs/page_9.png){.w575}</center><pre></pre>
+
+## The convolution operation
+<center>![Slide 10](imgs/page_10.png){.w575}</center><pre></pre>
+<center>![](imgs/2023-11-21-16-22-45.png){.w350}</center><pre></pre>
+<center>![](imgs/2023-11-21-16-23-47.png){.w350}</center><pre></pre>
+
+Here f*g is the convolution in red line. In the 1D case
+
+Here g is the kernel
+
+## Convolution for 2D images
+<center>![Slide 11](imgs/page_11.png){.w575}</center><pre></pre>
+
+Now our kernel is 2D
+
+## Convolution for 2D images
+<center>![Slide 12](imgs/page_12.png){.w575}</center><pre></pre>
+
+
+
+## Examples
+<center>![Slide 13](imgs/page_13.png){.w575}</center><pre></pre>
+
+
+
+## Examples
+<center>![Slide 14](imgs/page_14.png){.w575}</center><pre></pre>
+
+Sobel fires for vertical edges
+
+## Quiz
+<center>![Slide 15](imgs/page_15.png){.w575}</center><pre></pre>
+
+2. It will emphasize edges
+
+If you take a CNN and you have weights uniform then you would not have this edge detectors and the NN would not train well
+
+This is like adding prior knowledge because we know edges are supper important to detect  whether is a cat or a dog
+
+
+
+## The motivation of convolutions
+<center>![Slide 16](imgs/page_16.png){.w575}</center><pre></pre>
+
+Local connectivity, for ie if you want to detect edges, you dont need to look at the whole image and because you share the parameters, the weights are tied and you are more efficient. 
+
+
+
+## The motivation of convolutions
+<center>![Slide 17](imgs/page_17.png){.w575}</center><pre></pre>
+
+This saves quite a bit of neurons connected, so less parameters, this is the same as analysing an img of 16x16, but now instead we use filters so that we can detect edges and only with these edges we have now building blocks which are less than computing the whole image.
+
+Here the kernel would be of width 3
+
+## The motivation of convolutions
+<center>![Slide 18](imgs/page_18.png){.w575}</center><pre></pre>
+
+So here in the left the NN has a receptive field of size 3, because this is how much a neuron can look up, so it is the kernel size. But per layer the receptive field gradually grows which allow you to have a hierarchical structure
+
+- For instance the neurons at layer 50 now they can see at the whole image and can put image into context. This is how you go from local to global 
+
+## The motivation of convolutions
+<center>![Slide 19](imgs/page_19.png){.w575}</center><pre></pre>
+
+
+
+## The motivation of convolutions
+<center>![Slide 20](imgs/page_20.png){.w575}</center><pre></pre>
+
+If the input shift then the outputs does the same, this is not the case for a fully connected NN
+
+## A simple convolution: saves space!
+<center>![Slide 21](imgs/page_21.png){.w575}</center><pre></pre>
+
+The bigger the filter the more zeros we will have
+
+## Convolution vs Pooling in 2D
+<center>![](imgs/2023-11-21-20-02-21.png){.w550}</center><pre></pre>
+
+
+## The pooling operations
+<center>![Slide 22](imgs/page_22.png){.w575}</center><pre></pre>
+
+Pooling functions are another way to incorporate prior knowledge. It aggregates the activations. This can be local or global 
+
+You can max pool, or average pool the activations in some rectangular neighborhood. It reduces the space size and improves the efficiency and it also increases robustness
+
+It also incorporates invariance to translations, because it will not matter whether the 6 would be in that corner or so on so on
+
+At the last step you could od average global pooling, and just have one vector out, and in this vector will be trained to represent the whole image. Here you could apply a fully connected layer if you care classification
+
+Min, max all are differentiable. If you instead would have and argmax then it will not be differentiable
+
+So pooling operations like the global ones, also allow you to be independent in which input image you feed into your NN
+
+## LeNet-5
+<center>![Slide 23](imgs/page_23.png){.w575}</center><pre></pre>
+
+Here you do not have global pooling so an img of 29x29 would not have worked
+
+The hidden dimensionalities are called channels, and the pooling is applied to all channels. So pooling operations do not change dimensionality but change the spatial extent.
+
+So each layer would have channels those are all the squares in a layer, pooling it is apploed to every channel and per channel it reduces its square matrix to a lower width and lower height 
+
+### More
+
+LeNet-5, a convolutional neural network architecture proposed by Yann LeCun and his collaborators in 1998, does not use global average pooling in its original design. LeNet-5 primarily relies on subsampling layers (pooling layers) and fully connected layers.
+
+The typical structure of LeNet-5 consists of alternating convolutional layers with subsampling (pooling) layers, followed by fully connected layers. The pooling layers in LeNet-5 perform down-sampling through operations like max pooling. Global average pooling was not a commonly used technique at the time LeNet-5 was introduced.
+
+Global average pooling became more prominent in later CNN architectures, such as Google's Inception models and the popular ResNet architectures
+
+### Global Pooling
+Global pooling (or global average pooling) is a technique used in convolutional neural networks (CNNs) to reduce the spatial dimensions of a feature map to a single value or a vector. It involves taking the average (or maximum) value across all spatial locations of each feature map, resulting in a global representation.
+
+Here's an example of global average pooling with Python using NumPy:
+
+```python
+import numpy as np
+
+# Assume you have a 3x3 feature map with 2 channels
+feature_map = np.array([
+    [[1, 2, 3], [4, 5, 6], [7, 8, 9]],
+    [[10, 11, 12], [13, 14, 15], [16, 17, 18]]
+])
+
+# Apply global average pooling
+global_avg_pooled = np.mean(feature_map, axis=(0, 1))
+
+# Print the original feature map and the result after global average pooling
+print("Original Feature Map:")
+print(feature_map)
+print("\nGlobal Average Pooled Result:")
+print(global_avg_pooled)
+```
+
+In this example, `feature_map` is a 3x3 feature map with 2 channels. The `np.mean` function is used to compute the average along the spatial dimensions (axis 0 and 1). The resulting `global_avg_pooled` is a vector representing the global average-pooled values for each channel.
+
+The output should look like this:
+
+``` python
+Original Feature Map:
+[[[ 1  2  3]
+  [ 4  5  6]
+  [ 7  8  9]]
+
+ [[10 11 12]
+  [13 14 15]
+  [16 17 18]]]
+
+Global Average Pooled Result:
+[8.5 9.5 10.5]
+```
+
+In this case, the global average pooling operation has computed the average value for each channel across all spatial locations, resulting in a global representation for each channel. This global representation is often used as a compact and informative input to subsequent layers or for making predictions in the network.
+
+## AlexNet: similar principles, but some extra engineering.
+<center>![Slide 24](imgs/page_24.png){.w575}</center><pre></pre>
+
+
+
+<!-- ## Title -->
+<center>![Slide 25](imgs/page_25.png){.w575}</center><pre></pre>
+
+Weight sharing in convolutional neural networks (CNNs) refers to the practice of using the same set of learnable parameters (weights and biases) for multiple units or neurons in a layer. In other words, the weights are shared across different spatial locations in the input.
+
+The key idea behind weight sharing is to enforce translation invariance in the features learned by the convolutional layers. In an image, certain features (e.g., edges, textures) are meaningful regardless of their specific location. By using shared weights, the network can learn to detect these features at different spatial positions, leading to a more robust and generalizable representation.
+
+Here's a brief explanation of weight sharing in CNNs:
+
+1. **Convolutional Operation:**
+   - In a convolutional layer, a set of filters (also known as kernels) is applied to the input image or feature map.
+   - Each filter is characterized by a set of learnable weights and biases.
+
+2. **Spatial Weight Sharing:**
+   - Instead of having unique weights for each spatial location in the input, weight sharing involves using the same set of weights across different spatial locations.
+   - For example, if a filter detects a certain feature (e.g., an edge) at one location, the same filter with the same weights can be used to detect the same feature at a different location.
+
+3. **Benefits:**
+   - Reduces the number of learnable parameters in the network, making it more computationally efficient.
+   - Encourages the learning of spatially invariant features, enhancing the network's ability to recognize patterns across different locations.
+
+4. **Translation Invariance:**
+   - Weight sharing helps the network achieve translation invariance, meaning that it can recognize features regardless of their position in the input.
+
+
+
+### CNN and Weight Sharing
+CNN is primarily used for image classification and segmentation, and it works by finding similar patterns throughout the input. These patterns can be found by sliding a filter with shared weights across the input. The shared weights concept allows the network to learn the same pattern, regardless of its position in the input
+
+<!-- ## What shape should the
+<center>![Slide 26](imgs/page_26.png){.w575}</center><pre></pre>
+
+
+
+## What shape should the
+<center>![Slide 27](imgs/page_27.png){.w575}</center><pre></pre> -->
+
+
+
+## What shape should the
+<center>![Slide 28](imgs/page_28.png){.w575}</center><pre></pre>
+
+
+
+<!-- ## 3D Activations
+<center>![Slide 29](imgs/page_29.png){.w575}</center><pre></pre> -->
+
+
+
+## 3D Activations
+<center>![Slide 30](imgs/page_30.png){.w575}</center><pre></pre>
+
+Instead of calling it RGB channels, we just call it channels
+
+<!-- ## 3D Activations
+<center>![Slide 31](imgs/page_31.png){.w575}</center><pre></pre> -->
+
+
+
+## 3D Activations
+<center>![Slide 32](imgs/page_32.png){.w575}</center><pre></pre>
+
+Now the activations contain width and height and also depth. 
+
+The depth is govern by the hidden dimensionality of the NN
+
+<!-- ## 3D Activations
+<center>![Slide 33](imgs/page_33.png){.w575}</center><pre></pre> -->
+
+
+
+## 3D Activations
+<center>![Slide 34](imgs/page_34.png){.w575}</center><pre></pre>
+
+
+
+## 3D Activations
+<center>![Slide 35](imgs/page_35.png){.w575}</center><pre></pre>
+
+Here this is a convolution kernel, with kernel size 5x5 
+
+Now our neuron has a kernel size of 5x5 weights and also x3 because it has 3 channels 
+
+So each Neuron as a 3D filter
+
+
+
+<!-- ## 3D Activations
+<center>![Slide 36](imgs/page_36.png){.w575}</center><pre></pre> -->
+
+
+
+<!-- ## 3D Activations
+<center>![Slide 37](imgs/page_37.png){.w575}</center><pre></pre> -->
+
+
+
+## 3D Activations
+<center>![Slide 38](imgs/page_38.png){.w575}</center><pre></pre>
+
+<!-- <center>![](imgs/2023-11-21-19-51-29.png){.w300}</center><pre></pre>
+<center>![](imgs/2023-11-21-19-51-51.png){.w575}</center><pre></pre> -->
+
+### Example: Not-moving Filter
+<center>![](imgs/2023-11-21-20-38-41.png){.w300}</center><pre></pre>
+
+Here we have:
+
+- Input Layer: 3x32x32
+- Kernel 5-size: 3x5x5
+
+If we do not slide the filter then we are gonna end up with:
+
+- Pre-output: 3x1x1 (three scalar values per each channel)
+
+Now we do a summation over the three channels and we have thus:
+
+- Output: 1x1x1
+
+
+### Example: Sliding Filter
+![](https://miro.medium.com/v2/resize:fit:720/format:webp/1*Emy_ai48XaOeGDgykLypPg.gif)
+![Source: [link](http://webcache.googleusercontent.com/search?q=cache:https://towardsdatascience.com/a-comprehensive-introduction-to-different-types-of-convolutions-in-deep-learning-669281e58215&strip=0&vwsrc=1&referer=medium-parser)](https://miro.medium.com/v2/resize:fit:720/format:webp/1*5otecXBNlms3lslqlYworA.gif)
+
+
+Imagine now that we slide this 3D filter along all the input layer, then we end up:
+
+- Pre-ouput: 3x(28)x(28), where we compute (width - kernel_size + 1) = (32-5+1)
+
+Now we sum over all three channel element wise and end up with:
+
+- Output: 1x28x28
+
+<!-- ## 3D Activations
+<center>![Slide 39](imgs/page_39.png){.w575}</center><pre></pre> -->
+
+
+
+<!-- ## 3D Activations
+<center>![Slide 40](imgs/page_40.png){.w575}</center><pre></pre> -->
+
+
+
+<!-- ## 3D Activations
+<center>![Slide 41](imgs/page_41.png){.w575}</center><pre></pre> -->
+
+
+
+## 3D Activations
+<center>![Slide 42](imgs/page_42.png){.w575}</center><pre></pre>
+
+
+
+<!-- ## 3D Activations
+<center>![Slide 43](imgs/page_43.png){.w575}</center><pre></pre> -->
+
+
+
+## 3D Activations
+<center>![Slide 44](imgs/page_44.png){.w575}</center><pre></pre>
+
+
+
+## 3D Activations
+<center>![Slide 45](imgs/page_45.png){.w575}</center><pre></pre>
+
+If you now slide the filter with as many neurons we will get:
+
+- Ouput: depth x ($l$) x ($l$)
+
+Where $l$ = width - kernel_size + 1
+
+
+
+<!-- ## 3D Activations
+<center>![Slide 46](imgs/page_46.png){.w575}</center><pre></pre> -->
+
+
+
+## 3D Activations
+<center>![Slide 47](imgs/page_47.png){.w575}</center><pre></pre>
+
+
+
+<!-- ## 3D Activations
+<center>![Slide 48](imgs/page_48.png){.w575}</center><pre></pre> -->
+
+
+
+<!-- ## 31) Activations
+<center>![Slide 49](imgs/page_49.png){.w575}</center><pre></pre> -->
+
+
+
+## 3D Activations
+<center>![Slide 50](imgs/page_50.png){.w575}</center><pre></pre>
+
+
+
+<!-- ## 3D Activations
+<center>![Slide 51](imgs/page_51.png){.w575}</center><pre></pre> -->
+
+
+
+## 3D Activations
+<center>![Slide 52](imgs/page_52.png){.w575}</center><pre></pre>
+
+
+
+## 3D Activations
+<center>![Slide 53](imgs/page_53.png){.w575}</center><pre></pre>
+
+
+
+## 3D Activations
+<center>![Slide 54](imgs/page_54.png){.w575}</center><pre></pre>
+
+
+
+## 3D Activations
+<center>![Slide 55](imgs/page_55.png){.w575}</center><pre></pre>
+
+
+
+## 3D Activations
+<center>![Slide 56](imgs/page_56.png){.w575}</center><pre></pre>
+
+
+
+## Putting it together
+<center>![Slide 57](imgs/page_57.png){.w575}</center><pre></pre>
+
+
+
+## Putting it together
+<center>![Slide 58](imgs/page_58.png){.w575}</center><pre></pre>
+
+
+
+## Putting it together
+<center>![Slide 59](imgs/page_59.png){.w575}</center><pre></pre>
+
+
+
+## Putting it together
+<center>![Slide 60](imgs/page_60.png){.w575}</center><pre></pre>
+
+
+
+## Putting it together
+<center>![Slide 61](imgs/page_61.png){.w575}</center><pre></pre>
+
+
+
+## Putting it together
+<center>![Slide 62](imgs/page_62.png){.w575}</center><pre></pre>
+
+
+
+## Putting it together
+<center>![Slide 63](imgs/page_63.png){.w575}</center><pre></pre>
+
+
+
+## Putting it together
+<center>![Slide 64](imgs/page_64.png){.w575}</center><pre></pre>
+
+Here all these coloured layers in the cube are filters which are neurons. All these neurons act only in one hidden layer8
+
+## Convolution: Stride
+<center>![Slide 65](imgs/page_65.png){.w575}</center><pre></pre>
+
+
+
+## Convolution: Stride
+<center>![Slide 66](imgs/page_66.png){.w575}</center><pre></pre>
+
+
+
+## Convolution: Stride
+<center>![Slide 67](imgs/page_67.png){.w575}</center><pre></pre>
+
+
+
+## Convolution: Stride
+<center>![Slide 68](imgs/page_68.png){.w575}</center><pre></pre>
+
+
+
+## Convolution: Stride
+<center>![Slide 69](imgs/page_69.png){.w575}</center><pre></pre>
+
+
+
+## Convolution: Stride
+<center>![Slide 70](imgs/page_70.png){.w575}</center><pre></pre>
+
+
+
+## Convolution: Stride
+<center>![Slide 71](imgs/page_71.png){.w575}</center><pre></pre>
+
+In each time sum across channels because if you want to detect something you want to use all the colors, all the incoming channels 
+
+So each convolution sums all channels like in RGB, because you dont want a filter that only looks at blue, one that only looks at red ..
+
+
+
+## Convolution: Stride
+<center>![Slide 72](imgs/page_72.png){.w575}</center><pre></pre>
+
+Here in the next slide we see that **stride** is the number of squares that are moved, so the kernel filter will i.e stride=3 will slide every two squares
+
+## Convolution: Stride
+<center>![Slide 73](imgs/page_73.png){.w575}</center><pre></pre>
+
+
+
+## Convolution: Stride
+<center>![Slide 74](imgs/page_74.png){.w575}</center><pre></pre>
+
+
+
+## Convolution: Stride
+<center>![Slide 75](imgs/page_75.png){.w575}</center><pre></pre>
+
+
+
+## Convolution: Padding
+<center>![Slide 76](imgs/page_76.png){.w575}</center><pre></pre>
+
+
+
+## Convolution: Padding
+<center>![Slide 77](imgs/page_77.png){.w575}</center><pre></pre>
+
+
+
+## Convolution: Padding
+<center>![Slide 78](imgs/page_78.png){.w575}</center><pre></pre>
+
+
+
+## Convolution: Padding
+<center>![Slide 79](imgs/page_79.png){.w575}</center><pre></pre>
+
+
+
+<!-- ## Convolution:
+<center>![Slide 80](imgs/page_80.png){.w575}</center><pre></pre> -->
+
+
+
+## Convolution:
+<center>![Slide 81](imgs/page_81.png){.w575}</center><pre></pre>
+
+W_out is what you get in the ouput layer of the slide (so for one filter)
+
+
+## 1x1 Convolution
+<center>![Slide 82](imgs/page_82.png){.w575}</center><pre></pre>
+
+It looks at all the values in the depth, so in RGB, or more importantly in deep NNs the different hidden layers and they just mixed those information together  
+
+## 1x1 Convolution: a computationally cheap method
+<center>![Slide 83](imgs/page_83.png){.w575}</center><pre></pre>
+
+Here in the 5x5x32 the convolution will be done over the 192 channels, 32 times (because we have 32 filters as depth), so sliding the filter a lot
+
+In the bottom case we reduce the number of channels so now we reduce computations
+
+## Quiz:
+<center>![Slide 84](imgs/page_84.png){.w575}</center><pre></pre>
+
+1. 
+- In the case of a fully connected layer, it connects everything in the layer. And even the 1x1 convolution it takes the full input dimensionality meaning it takes a look at all 192 channels still. In the 1x1 it reduces the number of connections comparing to fully connected and also it mixes local information
+
+:::{.callout-note collapse="false"}
+# More differences:
+A 1x1 convolutional layer and a fully-connected layer (dense layer) are similar in that they both perform a linear transformation on the input data, but there are key differences between the two.
+
+### 1x1 Convolutional Layer:
+
+1. **Spatial Information:**
+   - A 1x1 convolutional layer operates on spatial information in the input tensor.
+   - It applies convolutional filters with a size of 1x1, which means it processes information at individual spatial locations.
+   - Useful for capturing relationships between channels but does not capture spatial patterns.
+
+2. **Parameter Sharing:**
+   - Utilizes parameter sharing, similar to larger convolutional layers.
+   - Each element in the output is the result of a weighted sum of its input elements, considering all channels.
+
+3. **Output Dimensions:**
+   - The output dimensions depend on the number of 1x1 filters used.
+
+### Fully-Connected Layer:
+
+1. **Flattening:**
+   - A fully-connected layer operates on the flattened version of the input.
+   - It considers all elements in the input tensor as individual input features.
+
+2. **Parameter Sharing:**
+   - Each neuron in a fully-connected layer has its set of weights for every input feature.
+   - No parameter sharing between different neurons.
+
+3. **Output Dimensions:**
+   - The output dimensions are determined by the number of neurons in the layer.
+
+### Differences:
+
+1. **Spatial vs. Global Information:**
+   - 1x1 convolutional layers capture spatial information within each channel.
+   - Fully-connected layers operate on global information, considering all elements as individual features.
+
+2. **Parameter Sharing:**
+   - 1x1 convolutions use parameter sharing, making them more efficient for processing spatially correlated features.
+   - Fully-connected layers lack parameter sharing, resulting in a larger number of parameters.
+
+3. **Computational Efficiency:**
+   - 1x1 convolutions are computationally more efficient than fully-connected layers, especially in scenarios with spatially structured data.
+
+4. **Usage in Convolutional Networks:**
+   - 1x1 convolutions are commonly used in convolutional neural networks (CNNs) to adjust the number of channels and perform feature transformations.
+   - Fully-connected layers are typically used in the final layers of a neural network for classification.
+
+:::
+2. 
+- You dont loss necessarily information, we do not want to do it at the beginning because mixing, red, blue and green per pixel does not do much. It makes sense to do it later if you have edges on top of edges and then you mix this information, it makes more sense.  
+- It is also not good to apply 1x1 when you do **not** want translation invariance
+- every 1x1 is strictly local, every neuron as a receptive field so there is actually spatial information there
+
+## Dilated Convolutions
+<center>![Slide 85](imgs/page_85.png){.w575}</center><pre></pre>
+
+This is very usefull if you need to deal with a huge image, but dont want huge hidden activations
+
+If you do this then you can quickly downscale the image, without ignoring too many things
+
+Also think that dilation its less expensive because doing 5x5 its more expensive than doing 3x3, so you can learn 3x3 but with holes in between and that is more efficient to consider large spatial footprint 
+
+## Pooling
+<center>![Slide 86](imgs/page_86.png){.w575}</center><pre></pre>
+
+
+
+## Pooling
+<center>![Slide 87](imgs/page_87.png){.w575}</center><pre></pre>
+
+
+
+## Max Pooling
+<center>![Slide 88](imgs/page_88.png){.w575}</center><pre></pre>
+
+
+
+## Getting rid of pooling
+<center>![Slide 89](imgs/page_89.png){.w575}</center><pre></pre>
+
+Instead of using pooling you can use a larger stride (so how many squares we slide) that we talk about 
+
+In Transformers pooling it is also not used anymore
+
+In CNN is used
+
+
+
+<!-- ## Example ConvNet
+<center>![Slide 90](imgs/page_90.png){.w575}</center><pre></pre>
+
+
+
+## Example ConvNet
+<center>![Slide 91](imgs/page_91.png){.w575}</center><pre></pre> -->
+
+
+
+<!-- ## Example ConvNet
+<center>![Slide 92](imgs/page_92.png){.w575}</center><pre></pre> -->
+
+
+
+## Example ConvNet
+<center>![Slide 93](imgs/page_93.png){.w575}</center><pre></pre>
+
+Every filter is one row here
+
+
+## Quiz
+<center>![Slide 94](imgs/page_94.png){.w575}</center><pre></pre>
+
+If you choose the kernel size to be the same as the input image then it is fully connected.
+
+Mathematically 1
+
+Implementation wise 2
+
+## How research gets done part 4 
+<center>![Slide 95](imgs/page_95.png){.w575}</center><pre></pre>
+
+
+<center>![Slide 96](imgs/page_96.png){.w575}</center><pre></pre>
+
+
+## AlexNet
+<center>![Slide 97](imgs/page_97.png){.w575}</center><pre></pre>
+
+
+
+## AlexNet
+<center>![Slide 98](imgs/page_98.png){.w575}</center><pre></pre>
+
+
+
+## Activation function
+<center>![Slide 99](imgs/page_99.png){.w575}</center><pre></pre>
+
+Faster to train because of simple Relu, and also the gradients are not vanishing because you have the gradient of 1 starting from the positive direction
+
+Why does gradient do not vanish with Relu?
+
+The vanishing gradient problem refers to the issue where the gradients of the loss function with respect to the weights become extremely small during backpropagation, making it challenging for the model to learn and update its parameters effectively. This problem is particularly associated with activation functions that squash their input into a small range, such as the sigmoid or hyperbolic tangent (tanh) functions.
+
+ReLU (Rectified Linear Unit), on the other hand, has a non-saturating activation behavior, which means that it does not squash its input into a small range.
+
+ReLU does not saturate in the positive region of its input. For positive input values, the gradient remains constant (1), leading to consistent and non-vanishing gradients during backpropagation.
+
+## Activation function
+<center>![Slide 100](imgs/page_100.png){.w575}</center><pre></pre>
+
+
+
+## Training with multiple GPUs
+<center>![Slide 101](imgs/page_101.png){.w575}</center><pre></pre>
+
+
+
+## Training with multiple GPUs
+<center>![Slide 102](imgs/page_102.png){.w575}</center><pre></pre>
+
+
+
+## On that note: Communicating between GPUs: PyTorch
+<center>![Slide 103](imgs/page_103.png){.w575}</center><pre></pre>
+
+
+
+## Local Response Normalization
+<center>![Slide 104](imgs/page_104.png){.w575}</center><pre></pre>
+
+
+
+## Overlapping Pooling
+<center>![Slide 105](imgs/page_105.png){.w575}</center><pre></pre>
+
+
+
+## Overlapping Pooling
+<center>![Slide 106](imgs/page_106.png){.w575}</center><pre></pre>
+
+
+
+## Overall architecture
+<center>![Slide 107](imgs/page_107.png){.w575}</center><pre></pre>
+
+The max pooling make a vector per every image
+
+
+## The Overfitting Problem
+<center>![Slide 108](imgs/page_108.png){.w575}</center><pre></pre>
+
+**If a have a cnn that has many parameter more than my data input will i overfit?**
+
+If your CNN has a large number of parameters (i.e., it's a complex model) and you have a small dataset, there is an increased risk of overfitting. A complex model may have the capacity to memorize the training data, capturing noise and outliers instead of learning generalizable patterns.
+
+
+Althoug all these increase training time but high performance
+
+
+## The learned filters
+<center>![Slide 109](imgs/page_109.png){.w575}</center><pre></pre>
+
+
+
+## Removing layer 7
+<center>![Slide 110](imgs/page_110.png){.w575}</center><pre></pre>
+
+
+
+## Removing layer 6, 7
+<center>![Slide 111](imgs/page_111.png){.w575}</center><pre></pre>
+
+
+
+## Removing layer 3, 4
+<center>![Slide 112](imgs/page_112.png){.w575}</center><pre></pre>
+
+We dont save that much parameters because convolutional layers are more efficient (they are not fully connected, not too many parameters)
+
+## Removing layer 3, 4, 6, 7
+<center>![Slide 113](imgs/page_113.png){.w575}</center><pre></pre>
+
+
+
+## Translation invariance
+<center>![Slide 114](imgs/page_114.png){.w575}</center><pre></pre>
+
+Despite saying that CNN tend to be equivariant which means if you shift the input the output should also shift you can see that if you do that with these images, where you are just shifting the images the outputs do vary quite a lot  
+
+
+So CNN do not learn something that is explicit symmetrical or explicitly equivariant. Equivariance may be a good prior that we put in, but that does not mean that that really happens  
+
+
+## Scale invariance
+<center>![Slide 115](imgs/page_115.png){.w575}</center><pre></pre>
+
+Same with scale, we have said that we apply the pooling operations so therefore we can be a bit invariant to scaling, but still NNs tend not to be super scale invariant
+
+## Rotation invariance
+<center>![Slide 116](imgs/page_116.png){.w575}</center><pre></pre>
+
+
+
+## Further reading
+<center>![Slide 117](imgs/page_117.png){.w575}</center><pre></pre>
+
+
+
+<center>![Slide 118](imgs/page_118.png){.w575}</center><pre></pre>
+
+
+
+## Transfer learning: carry benefits from large dataset to the small one!
+<center>![Slide 119](imgs/page_119.png){.w575}</center><pre></pre>
+
+
+
+## UPDATE: Transfer learning
+<center>![Slide 120](imgs/page_120.png){.w575}</center><pre></pre>
+
+
+
+## Why use Transfer Learning?
+<center>![Slide 121](imgs/page_121.png){.w575}</center><pre></pre>
+
+The answer is yes even if you have saved the weights from a extremely good model and you have a small dataset
+
+## Convnets are good in transfer learning
+<center>![Slide 122](imgs/page_122.png){.w575}</center><pre></pre>
+
+Fine Tune the whole NN
+
+Or use the CNN as feature extractor
+
+## Solution I: Fine-tune hT using hS as initialization
+<center>![Slide 123](imgs/page_123.png){.w575}</center><pre></pre>
+
+
+
+## Initializing hT with hS
+<center>![Slide 124](imgs/page_124.png){.w575}</center><pre></pre>
+
+Imagnet, it outputs 1000 categories. If you want to classification for 30 categories then you need to throw that one away and restart training a new classifier to your needs
+
+AlexNet, you can start removing some layers depending on how much data you have
+
+## Initializing hT with hS
+<center>![Slide 125](imgs/page_125.png){.w575}</center><pre></pre>
+
+if you pertained your NN in ImgNet and now you want to do Satalite classification then it may be usefull to find tune even those layers the bottom ones
+
+## How to fine-tune? 
+<center>![Slide 126](imgs/page_126.png){.w575}</center><pre></pre>
+
+
+## Solution II: Use hS, as a feature extractor for hT
+<center>![Slide 127](imgs/page_127.png){.w575}</center><pre></pre>
+
+
+
+## Transfer learning benchmarks & techniques
+<center>![Slide 128](imgs/page_128.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 129](imgs/page_129.png){.w575}</center><pre></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+

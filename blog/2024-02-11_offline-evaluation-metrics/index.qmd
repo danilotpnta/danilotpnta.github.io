@@ -1,0 +1,122 @@
+---
+title: "Offline Evaluation Metrics"
+description: "Description of this Post"
+date: "2024-02-13T23:59:41"
+date-format: long
+year: "2024"
+categories: [All, Information Retrieval, TAGS]
+toc: false
+jupyter: git-pages
+code-fold: true
+number-sections: true
+---
+## Outline
+<center>![Slide 25](imgs/page_25.png){.w575}</center><pre></pre>
+
+
+
+## Precision and recall
+<center>![Slide 26](imgs/page_26.png){.w575}</center><pre></pre>
+
+
+
+## Precision and recall
+<center>![Slide 27](imgs/page_27.png){.w575}</center><pre></pre>
+
+
+
+## Precision-recall curve
+<center>![Slide 28](imgs/page_28.png){.w575}</center><pre></pre>
+
+
+
+## F-measure
+<center>![Slide 29](imgs/page_29.png){.w575}</center><pre></pre>
+
+
+
+## Any problems with the metrics so far?
+<center>![Slide 30](imgs/page_30.png){.w575}</center><pre></pre>
+
+
+
+## Outline
+<center>![Slide 31](imgs/page_31.png){.w575}</center><pre></pre>
+
+
+
+## Precision and recall
+<center>![Slide 32](imgs/page_32.png){.w575}</center><pre></pre>
+
+
+
+## Other common metrics
+<center>![Slide 33](imgs/page_33.png){.w575}</center><pre></pre>
+
+
+
+## Any problems with the metrics so far?
+<center>![Slide 34](imgs/page_34.png){.w575}</center><pre></pre>
+
+
+
+## Outline
+<center>![Slide 35](imgs/page_35.png){.w575}</center><pre></pre>
+
+
+
+## User search behavior
+<center>![Slide 36](imgs/page_36.png){.w575}</center><pre></pre>
+
+
+
+## Discounted cumulative gain (DCG)
+<center>![Slide 37](imgs/page_37.png){.w575}</center><pre></pre>
+
+
+
+## Rank-biased precision (RBP)
+<center>![Slide 38](imgs/page_38.png){.w575}</center><pre></pre>
+
+
+
+## Rank-biased precision (RBP)
+<center>![Slide 39](imgs/page_39.png){.w575}</center><pre></pre>
+
+
+
+## Expected reciprocal rank (ERR)
+<center>![Slide 40](imgs/page_40.png){.w575}</center><pre></pre>
+
+
+
+## Expected reciprocal rank (ERR)
+<center>![Slide 41](imgs/page_41.png){.w575}</center><pre></pre>
+
+
+
+## Offline evaluation summary
+<center>![Slide 42](imgs/page_42.png){.w575}</center><pre></pre>
+
+
+
+## Materials
+<center>![Slide 43](imgs/page_43.png){.w575}</center><pre></pre>
+
+
+
+## Materials
+<center>![Slide 44](imgs/page_44.png){.w575}</center><pre></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+

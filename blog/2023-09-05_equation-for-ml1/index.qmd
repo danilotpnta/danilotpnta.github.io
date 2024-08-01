@@ -1,8 +1,10 @@
 ---
 title: "Probability Theory in Machine Learning"
-description: "Formulas for the course at UvA: Machine Learning 1"
+description: "Formulas for the course: Machine Learning 1"
 date: "2023-09-05"
-categories: [All, Education, Machine Learning, TAGS, Probability Theory]
+date-format: long
+year: "2023"
+categories: [All, Mathematics, TAGS, Probability Theory]
 number-sections: true
 toc: false
 ---

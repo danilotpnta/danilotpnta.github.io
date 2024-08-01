@@ -2,7 +2,9 @@
 title: "Matrix Calculus & Derivatives Ax"
 description: "Derivatives of vectors, matrix and other utils"
 date: "2023-09-26"
-categories: [All, Education, TAGS, Vector Calculus]
+date-format: long
+year: "2023"
+categories: [All, Mathematics, TAGS, Vector Calculus]
 toc: false
 callout-appearance: minimal
 ---
@@ -89,7 +91,7 @@ $$
 **Wrt Matrix:**
 $$
 \begin{align}
-\frac{\partial(\textbf{x}^T\textbf{A}\textbf{x})}{\partial\textbf{A}} =& \textbf{x}^T\textbf{x}^T\\
+\frac{\partial(\textbf{x}^T\textbf{A}\textbf{x})}{\partial\textbf{A}} =& \textbf{x}\textbf{x}^T\\
 \frac{\partial(\textbf{a}^T\textbf{A}\textbf{b})}{\partial\textbf{A}} =& \textbf{a}\textbf{b}^T\\
 \frac{\partial(\textbf{a}^T\textbf{A}^T\textbf{b})}{\partial\textbf{A}} =& \textbf{b}\textbf{a}^T\\
 \end{align}

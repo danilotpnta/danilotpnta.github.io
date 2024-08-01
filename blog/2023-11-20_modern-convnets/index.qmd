@@ -1,0 +1,927 @@
+---
+title: "Modern ConvNets"
+description: "Description of this Post"
+date: "2023-11-20"
+date-format: long
+year: "2023"
+categories: [All, Deep Learning, TAGS]
+toc: false
+jupyter: git-pages
+code-fold: true
+number-sections: true
+---
+
+<!-- ## Title
+<center>![Slide 1](imgs/page_1.png){.w575}</center><pre></pre> -->
+
+
+## Lecture overview
+<center>![Slide 2](imgs/page_2.png){.w575}</center><pre></pre>
+
+
+
+## Understanding deep embeddings
+<center>![Slide 3](imgs/page_3.png){.w575}</center><pre></pre>
+
+
+## The deep layers will gradually learn more abstract features.
+<center>![Slide 4](imgs/page_4.png){.w575}</center><pre></pre>
+
+The things that are not important are guided by SGD
+
+## This deep, lower dimensional space learns meaningful structures
+<center>![Slide 5](imgs/page_5.png){.w575}</center><pre></pre>
+
+Call lower dimension manifold. RGB does not have meaningfull transformations
+
+## What do the different layers in a deep neural netwok learn
+<center>![Slide 6](imgs/page_6.png){.w575}</center><pre></pre>
+
+
+
+## What do the different layers in a deep neural network learn
+<center>![Slide 7](imgs/page_7.png){.w575}</center><pre></pre>
+
+
+
+## How do these layers correspond to “semantics”: numerical evaluation
+<center>![Slide 8](imgs/page_8.png){.w575}</center><pre></pre>
+
+We Pooled them because the features are too big, we get smaller size inputs 
+
+### 1. 2D Pooling (e.g., Max Pooling) in CNNs:
+
+
+Consider an input feature map with dimensions `[batch_size, channels, height, width]`:
+
+```plaintext
+[32, 64, 32, 32]
+```
+
+- **Max Pooling (2x2):**
+  - Apply a 2x2 max pooling operation, reducing height and width by half.
+  - Resulting feature map: `[32, 64, 16, 16]`.
+
+```plaintext
+Input:           [32, 64, 32, 32]
+Max Pooling:     [32, 64, 16, 16]
+```
+
+
+<center>![](imgs/2023-11-27-22-22-01.png){.w550}</center><pre></pre>
+
+Convolution uses this formula remember:
+<center>![](imgs/2023-11-27-22-38-17.png){.w550}</center><pre></pre>
+
+- This is AlexNet, [Source](https://stackoverflow.com/questions/42733971/understanding-the-dimensions-of-a-fully-connected-layer-that-follows-a-max-pooli)
+<center>![](imgs/2023-11-27-22-39-07.png){.w550}</center><pre></pre>
+
+> **Remember:** the num of kernels for Convolution determines the new depth-dimension.
+
+> What if the deepth was 3 channels, then we apply convolution to the 3 channels and then we summed them over. That is using only one kernel, now if we have 6 kernels we would sum the 3 channels, 6 times, but at the end we end up with a new deepth of 6. Check [this](https://www.danilotpnta.com/blog/2023-11-20_convolutional-neural-networks/index.html#putting-it-together-7)
+
+
+**Flattening Operation:** multiply all its dimensions to form a 1D vector
+
+- Output: `[batch_size, num_filters * reduced_height * reduced_width]`
+
+
+:::{.callout-note collapse="False"}
+# How to train a linear layer on top of a pretrained model?
+
+Training a linear layer on top of a pretrained model is a common practice in transfer learning. Here's an example using a pretrained convolutional neural network (CNN) as a feature extractor, and then adding a linear layer on top for a specific task, such as image classification.
+
+Let's assume we have a pretrained ResNet18 model, and we want to use it for a new classification task. The final classification layer of ResNet18 is typically a linear layer. We will replace this final layer with our custom linear layer.
+
+```python
+import torch
+import torch.nn as nn
+import torchvision.models as models
+
+# Load pretrained ResNet18
+pretrained_resnet18 = models.resnet18(pretrained=True)
+
+# Freeze all layers except the final classification layer
+for param in pretrained_resnet18.parameters():
+    param.requires_grad = False
+
+# Modify the final classification layer
+in_features = pretrained_resnet18.fc.in_features
+num_classes = 10  # Assuming 10 classes for the new task
+custom_linear_layer = nn.Linear(in_features, num_classes)
+pretrained_resnet18.fc = custom_linear_layer
+
+# Now, you can train the modified model for your specific task
+# Let's assume you have input data of shape (batch_size, 3, 224, 224) for RGB images
+# and corresponding labels of shape (batch_size)
+
+# Example training loop
+criterion = nn.CrossEntropyLoss()
+optimizer = torch.optim.SGD(pretrained_resnet18.parameters(), lr=0.001)
+
+# Training iterations
+for epoch in range(num_epochs):
+    for inputs, labels in dataloader:  # Assume you have a DataLoader for your dataset
+        optimizer.zero_grad()
+        outputs = pretrained_resnet18(inputs)
+        loss = criterion(outputs, labels)
+        loss.backward()
+        optimizer.step()
+
+# After training, you can use the modified model for predictions
+```
+
+In this example:
+- We load a pretrained ResNet18 model from torchvision.
+- We freeze all layers of the pretrained model to retain their weights during training.
+- We replace the final classification layer with our custom linear layer (`custom_linear_layer`).
+- We then train the modified model for the new task using a suitable loss function and optimizer.
+
+The dimensions involved depend on your specific input data, but in this case, assuming RGB images of size 224x224, the input shape would be (batch_size, 3, 224, 224), and the linear layer would map to the number of classes in your new task.
+
+## How does this linear layer looks like?
+
+In the context of a linear layer in neural networks, such as `nn.Linear(in_features, num_classes)`, here's what the terms mean:
+
+- `in_features`: This is the number of input features (or neurons) coming into the linear layer. In the example I provided earlier with the modified ResNet18 model, `in_features` is the number of features produced by the previous layer, which is the final layer of the feature extractor part of ResNet18. This value depends on the architecture of the pretrained model; you can check it using `pretrained_resnet18.fc.in_features`.
+
+- `num_classes`: This is the number of output features (or neurons) produced by the linear layer. In the context of a classification task, `num_classes` typically represents the number of classes you have in your specific classification problem. Each output neuron corresponds to a class, and the model will learn to assign higher values to the correct class during training.
+
+Now, for the number of weights and neurons:
+
+- Weights: The linear layer has a weight matrix of size `(out_features, in_features)`, and a bias vector of size `(out_features)`. In this case, the weight matrix has dimensions `(num_classes, in_features)`.
+
+  Total number of trainable weights = `(num_classes * in_features) + num_classes`.
+
+- Neurons: The linear layer has `num_classes` output neurons. Each neuron receives input from all `in_features` neurons in the previous layer.
+
+So, if you have a linear layer defined as `nn.Linear(512, 10)`, for example:
+
+- `in_features` is 512.
+- `num_classes` is 10.
+
+The total number of trainable weights would be `(10 * 512) + 10 = 5130`, and there would be 10 neurons in the output layer. Each neuron in the output layer is associated with a specific class, and the weights determine how strongly each input feature contributes to the prediction for that class.
+
+### Imaging it using Pytorch:
+More at [source](https://www.sharetechnote.com/html/Python_PyTorch_nn_Sequential_01.html):
+
+<center>![](imgs/2023-11-27-23-03-29.png){.w450}</center><pre></pre>
+<center>![](imgs/2023-11-27-23-03-48.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-11-27-23-04-08.png){.w550}</center><pre></pre>
+<center>![](imgs/2023-11-27-23-04-27.png){.w550}</center><pre></pre>
+:::
+
+
+
+## . Let’s wake up: Summarize the last few minutes to your neighbor. |
+<center>![Slide 9](imgs/page_9.png){.w575}</center><pre></pre>
+
+
+
+## 1x1 Convolution: a computationally cheap method
+<center>![Slide 10](imgs/page_10.png){.w575}</center><pre></pre>
+
+
+
+<!-- ## 1x1 Convolution: a computationally cheap method -->
+
+
+<center>![Slide 11](imgs/page_11.png){.w575}</center><pre></pre>
+
+
+
+## ConvNet Configuration
+<!-- <center>![Slide 12](imgs/page_12.png){.w575}</center><pre></pre> -->
+<center>![](imgs/2023-11-27-23-17-04.png){.w575}</center><pre></pre>
+
+
+## VGG 16
+<!-- <center>![](imgs/2023-11-27-23-13-56.png){.w575}</center><pre></pre> -->
+<center>![](imgs/2023-11-27-23-19-41.png){.w575}</center><pre></pre>
+<center>![Slide 13](imgs/page_13.png){.w575}</center><pre></pre>
+
+
+
+## Characteristics
+<center>![](imgs/2023-11-27-23-24-23.png){.w150}</center><pre></pre>
+<center>![Slide 14](imgs/page_14.png){.w575}</center><pre></pre>
+
+
+
+## Why 3x3 filters?
+<center>![Slide 15](imgs/page_15.png){.w575}</center><pre></pre>
+
+
+
+## Why 3x3 filters?
+<center>![Slide 16](imgs/page_16.png){.w575}</center><pre></pre>
+
+
+
+## Why 3x3 filters?
+<center>![Slide 17](imgs/page_17.png){.w575}</center><pre></pre>
+
+
+
+## Why 3x3 filters?
+<center>![Slide 18](imgs/page_18.png){.w575}</center><pre></pre>
+
+Having 3 filters of 3x3 --> 7 is better because it can learn more non-linearities, more non-trivial functions, having large kernels is expensive, having small kernels but multiple of them is more cheaper
+
+## Even smaller filters?
+<center>![Slide 19](imgs/page_19.png){.w575}</center><pre></pre>
+
+When we remove dimensions is because we are getting rid of unimportant features, i.e. background, we also call th 1x1 kernel a bottleneck 
+
+## Overall shapes and sizes when inputting a 224x224 image:
+Vgg architecture
+
+<center>![Slide 20](imgs/page_20.png){.w575}</center><pre></pre>
+
+
+
+## Training
+<center>![Slide 21](imgs/page_21.png){.w575}</center><pre></pre>
+
+They use dropout on the FC layers because they tend to overfit quite easily
+
+## Feature maps
+<center>![Slide 22](imgs/page_22.png){.w575}</center><pre></pre>
+
+Some neuros (each item in the row, in total 8) for some the neuron does not fire it because we i.e have the background. 
+
+- In the first block we recognize edges
+- Later stages. our dimensionality decreases, that's why we get block structures
+
+## Filters
+<center>![Slide 23](imgs/page_23.png){.w575}</center><pre></pre>
+
+> **Remember:** Train only the parameters of the linear classifier while keeping the parameters of the pre-trained model frozen. This is sometimes called "freezing" the pre-trained layers
+
+Because the above its not understandable, so for that we can keep the network frozen and now have an incoming image that is parametrized. Now your input image is torch.nnParameter(3,224,224). And we run gradient descent on this input image.
+
+With that we want to maximize the activation function for a particular filter, so the loss function is the activation negative value of this filter, and you do backpropagation in the incoming image.
+
+So then you get for example for some filter, some edges in one direction. And for higuer level featuers you can see some slighly more complex patterns
+
+
+## Class Outputs
+<center>![Slide 24](imgs/page_24.png){.w575}</center><pre></pre>
+
+Here you see that the neuron will fire up for instance if the incoming image is a rabit, then the first filter will fire up
+
+## Another Architecture
+<center>![Slide 25](imgs/page_25.png){.w575}</center><pre></pre>
+
+
+
+## Basic idea
+<center>![Slide 26](imgs/page_26.png){.w575}</center><pre></pre>
+
+
+
+## Basic idea
+<center>![Slide 27](imgs/page_27.png){.w575}</center><pre></pre>
+
+
+
+## Inception module
+<center>![Slide 28](imgs/page_28.png){.w575}</center><pre></pre>
+
+
+
+## Inception module
+<center>![Slide 29](imgs/page_29.png){.w575}</center><pre></pre>
+
+They are expensive because we have this:
+
+<center>![](imgs/2023-11-28-09-38-07.png){.w350}</center><pre></pre>
+
+So more parameters to train hence expensive.
+
+Hence we apply 1x1 intermediate convolutions to reduce the dimensionality and have less parameters to train
+
+## Architecture
+<center>![Slide 30](imgs/page_30.png){.w575}</center><pre></pre>
+
+
+## Architecture: the “Inception” module
+<center>![Slide 31](imgs/page_31.png){.w575}</center><pre></pre>
+
+The green block is concatenation because spatially they have the same size, so you can stack them together 
+
+## Architecture: the auxiliary classifier idea
+<center>![Slide 32](imgs/page_32.png){.w575}</center><pre></pre>
+
+Here in this auxilliary classifier, they predict the classes. This gives you gradients even if you havent reach the end of the network 
+
+## Why aux classifiers? Vanishing gradients
+<center>![Slide 33](imgs/page_33.png){.w575}</center><pre></pre>
+
+We do this becaus otherwhise we end up with the vanishing problem so at one stage you can just use you aux classifier. If you get extremely small gradients then it is very slow to train
+
+
+
+## Architecture
+<center>![Slide 34](imgs/page_34.png){.w575}</center><pre></pre>
+
+After training you dont need them anymore you can trhow them away (for aux classifier)
+
+## Inceptions v2, v3, V4, ....
+<center>![Slide 35](imgs/page_35.png){.w575}</center><pre></pre>
+
+The first picture refers to this two 3x3 then making 5x5, this inclusion of filters make the computations less expensive while introduction non-linearitties to be learn 
+
+## ResNets
+<center>![Slide 36](imgs/page_36.png){.w575}</center><pre></pre>
+
+
+
+## AlexNet (2012)
+<center>![Slide 37](imgs/page_37.png){.w575}</center><pre></pre>
+
+
+
+## Evolution
+<center>![Slide 38](imgs/page_38.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 39](imgs/page_39.png){.w575}</center><pre></pre>
+
+
+
+## Evolution
+<center>![Slide 40](imgs/page_40.png){.w575}</center><pre></pre>
+
+
+
+## Evolution
+<center>![Slide 41](imgs/page_41.png){.w575}</center><pre></pre>
+
+
+
+## Why care about architectures... here’s why:
+<center>![Slide 42](imgs/page_42.png){.w575}</center><pre></pre>
+
+They become more accurate because the parameters did not increase that much despite having more layers. This is because we interchange the 5x5 filter in convolution by i.e two 3x3 kernels
+
+## Some facts about ResNets
+<center>![Slide 43](imgs/page_43.png){.w575}</center><pre></pre>
+
+
+
+## Hypothesis
+<center>![Slide 44](imgs/page_44.png){.w575}</center><pre></pre>
+
+If your problem only required, the depth of a CNNA, then B in terms of performance would be the same 
+
+## Hypothesis
+<center>![Slide 45](imgs/page_45.png){.w575}</center><pre></pre>
+
+
+
+## Hypothesis
+<center>![Slide 46](imgs/page_46.png){.w575}</center><pre></pre>
+
+
+
+## However, when trained the deeper network has higher training error
+<center>![Slide 47](imgs/page_47.png){.w575}</center><pre></pre>
+
+Here th problem is that we say that the deeper CNN would yield the same ouput as the smaller architecture but in this case when looking at the error the larger one has more error. So what happen in next slide. It may be with regards to optimization because in theory it should be able to lear in because of more flexibility by the NN
+
+## Testing the hypothesis
+<center>![Slide 48](imgs/page_48.png){.w575}</center><pre></pre>
+
+Here the optimization is the problem, it is more harder to optimize this landscape 
+
+## Observation
+<center>![Slide 49](imgs/page_49.png){.w575}</center><pre></pre>
+
+Because you have many layers the training layers get lost, and model does not learn anymore
+
+## The “residual idea”, intuitively
+<center>![Slide 50](imgs/page_50.png){.w575}</center><pre></pre>
+
+Here the intuition is that technically it would be possible, so why not we make it easy for the NN to learn this easy relationship, here is the residual idea.
+
+So instead of learning how you map things instead lets learn how you change it. So a difference that we need to learn not the mapping. So then here we are making the NN to explicitly model the difference in mappings  
+
+## The residual block
+<center>![Slide 51](imgs/page_51.png){.w575}</center><pre></pre>
+
+With these new connection it make the vanishing problem not to occurr because the input can pass to the next layers
+
+So here if the dimensions do not matche we need to make them amtch because we are just saying x=f(x) so f() here should make things equal, because we said that they were the identity functions 
+
+Advantages and Disadvantages of Residual networks here:
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/Q1JCrG1bJ-A?si=HScT-f9XV9t35tgP&amp;controls=0&amp;start=971" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></center>
+
+
+## No degradation anymore
+<center>![Slide 52](imgs/page_52.png){.w575}</center><pre></pre>
+
+
+
+## ResNet breaks records
+<center>![Slide 53](imgs/page_53.png){.w575}</center><pre></pre>
+
+
+
+## ResNet variants & ResNeXt 
+<center>![Slide 54](imgs/page_54.png){.w575}</center><pre></pre>
+
+
+
+## Some observations
+<center>![Slide 55](imgs/page_55.png){.w575}</center><pre></pre>
+
+Residual connections or identity shortcuts 
+
+:::{.callout-note collapse="false"}
+# Why do we use batchnormas and how does this relate so vanishing gradient problems?
+Batch Normalization (BatchNorm) is a technique used in neural networks to normalize the inputs of a layer, typically by subtracting the mean and dividing by the standard deviation of the batch. BatchNorm has several benefits and is commonly used for the following reasons:
+
+1. **Stabilizing and Accelerating Training:**
+   - BatchNorm can help stabilize and accelerate the training of deep neural networks. It mitigates issues related to internal covariate shift, which is the change in the distribution of network activations due to parameter updates during training. By normalizing the inputs, it helps maintain a more consistent distribution of activations throughout the training process.
+
+2. **Regularization:**
+   - BatchNorm acts as a form of regularization by introducing noise during training. It adds a small amount of noise to the hidden unit activations, which has a similar effect to dropout, helping prevent overfitting.
+
+3. **Reducing Sensitivity to Initialization:**
+   - BatchNorm reduces the sensitivity of neural networks to weight initialization. It allows the use of higher learning rates and makes the training less dependent on the choice of initial weights.
+
+4. **Addressing Gradient Problems:**
+   - During training, neural networks often encounter problems related to vanishing or exploding gradients. BatchNorm helps mitigate these issues by normalizing the inputs, which can prevent gradients from becoming too small or too large.
+
+5. **Enabling Higher Learning Rates:**
+   - BatchNorm enables the use of higher learning rates during training. This can lead to faster convergence and shorter training times.
+
+6. **Improved Generalization:**
+   - BatchNorm can improve the generalization performance of a model by providing a form of noise during training.
+
+Batch Normalization is a widely used technique that improves the stability, speed, and generalization of neural network training. It addresses various challenges associated with training deep networks, including gradient-related problems, and has become a standard component in many modern neural network architectures.
+
+:::
+
+## Quiz
+
+On the right you see the.. 
+<center>![Slide 56](imgs/page_56.png){.w575}</center><pre></pre>
+
+1. False, batch + ReLu makes half of the value zero 
+2. False, it is okay to write it like that
+3. Say conv2 has a dimensionality of 256, but the input has dimension of 128, then downsample function will donwsample to 128 to match the input dimensions. So that means the residual operations have always need to have the same channel
+
+Example in residuals you can do concat or add
+
+1. concat: you end up with 
+
+- Tensor A: Shape (ch, 3, 4)
+- Tensor B: Shape (ch, 2, 4)
+- Out: Shape (ch, 2, 4)
+
+2. Add, both tensors needs to have same shape
+- Tensor A: Shape (ch, 6, 4)
+- Tensor B: Shape (ch, 6, 4)
+- Out: Shape (ch, 6, 4)
+
+So here they ar saying that to do residual connections the channels needs to be of same dimensions thus why we need the `donwsample` function. Zero padding is only used for spatial dimensions 
+
+
+
+
+## HighwayNet (slightly earlier than ResNets in 2015)
+<center>![Slide 57](imgs/page_57.png){.w575}</center><pre></pre>
+
+
+
+## DenseNet
+<center>![Slide 58](imgs/page_58.png){.w575}</center><pre></pre>
+
+
+
+## DenseNet
+<center>![Slide 59](imgs/page_59.png){.w575}</center><pre></pre>
+
+Because of the skip connections it also has benefits for optimization 
+
+## DenseNet
+<center>![Slide 60](imgs/page_60.png){.w575}</center><pre></pre>
+
+<center>![](imgs/2023-11-28-11-39-50.png){.w250}</center><pre></pre>
+
+
+## DenseNets
+<center>![Slide 61](imgs/page_61.png){.w575}</center><pre></pre>
+
+
+
+## Trend has not stopped with DenseNet
+<center>![Slide 62](imgs/page_62.png){.w575}</center><pre></pre>
+
+
+
+## MobileNets: Depthwise convolutions for high latency
+<center>![Slide 63](imgs/page_63.png){.w575}</center><pre></pre>
+
+Deepthwise it only looks at one ch, so the filer is kxkx1
+
+Pointwise then mixes channels
+
+
+:::{.callout-note collapse="false"}
+# How does conv 1x1 can change channels?
+
+A 1x1 convolutional layer is often used for channel-wise transformations because it operates independently on each pixel across the spatial dimensions but can modify the depth (number of channels) of the input tensor. Here's an example with tensors to illustrate this concept:
+
+Let's consider an input tensor with dimensions `[batch_size, height, width, channels]`, where:
+- `batch_size` is the number of samples in the batch,
+- `height` and `width` are the spatial dimensions of the feature map, and
+- `channels` is the number of channels (or features) at each spatial location.
+
+Now, let's apply a 1x1 convolutional layer with, say, 3 output channels. The operation is channel-wise, meaning it independently transforms each channel without considering information from other channels. However, it changes the number of channels.
+
+```plaintext
+Input Tensor: [batch_size, height, width, channels_in]
+
+1x1 Convolutional Layer (3 output channels):
+
+Output Tensor: [batch_size, height, width, 3]
+```
+
+In this example, the 1x1 convolutional layer has transformed the input tensor by performing a linear operation on each channel independently. The resulting tensor now has 3 output channels. This operation is useful for adjusting the channel dimensions while keeping the spatial dimensions intact.
+
+It's computationally efficient because it involves fewer parameters compared to larger convolutional kernels, and it introduces non-linearity through activation functions applied to each channel independently.
+
+Here's how the channel-wise transformation works without changing the spatial context. Suppose we have the following input tensor:
+
+```plaintext
+Input Tensor: [batch_size, height, width, 5]
+```
+
+After applying a 1x1 convolutional layer with 3 output channels, the output tensor would be:
+
+```plaintext
+Output Tensor: [batch_size, height, width, 3]
+```
+
+Each channel in the output tensor is a linear combination of the corresponding channels in the input tensor, and non-linearity is introduced through activation functions applied independently to each channel.
+
+:::
+## Last Architecture BagNet: Solving ImageNet with tiny 9x9 sized puzzle pieces?
+<center>![Slide 64](imgs/page_64.png){.w575}</center><pre></pre>
+
+having only 1x1 conv means that the receptive field does not grow
+
+## ImageNet: mostly textures?
+<center>![Slide 65](imgs/page_65.png){.w575}</center><pre></pre>
+
+
+
+## How research gets done part 5
+
+Isamu Akasaki:
+“As Thomas Edison said, ‘Genius is
+one percent inspiration and 99
+perspiration.’ | say this to younger
+<center>![Slide 66](imgs/page_66.png){.w575}</center><pre></pre>
+
+
+
+## Object detection
+<center>![Slide 67](imgs/page_67.png){.w575}</center><pre></pre>
+
+
+
+## Region-based Convolutional Neural Network (R-CNN)
+<center>![Slide 68](imgs/page_68.png){.w575}</center><pre></pre>
+
+
+
+## R-CNN
+<center>![Slide 69](imgs/page_69.png){.w575}</center><pre></pre>
+
+To all the 2k regions boxes we apply CNN, and 2k times the model needs to say which for each of these 2k boses what appears on the image, eg, a car, a plane etc.
+
+## Improving the Bounding Boxes
+<center>![Slide 70](imgs/page_70.png){.w575}</center><pre></pre>
+
+
+
+## To summarize
+<center>![Slide 71](imgs/page_71.png){.w575}</center><pre></pre>
+
+
+
+## R-CNN is really quite slow for a few simple reasons:
+<center>![Slide 72](imgs/page_72.png){.w575}</center><pre></pre>
+
+
+
+## Some results
+<center>![Slide 73](imgs/page_73.png){.w575}</center><pre></pre>
+
+
+
+## Fast R-CNN
+<center>![Slide 74](imgs/page_74.png){.w575}</center><pre></pre>
+
+
+
+## Fast R-CNN Insight 1: Region of Interest Pooling (ROIPool)
+<center>![Slide 75](imgs/page_75.png){.w575}</center><pre></pre>
+
+
+
+## Region of Interest Pooling (ROIPool)
+<center>![Slide 76](imgs/page_76.png){.w575}</center><pre></pre>
+
+
+
+## Region of Interest Pooling (ROIPool)
+<center>![Slide 77](imgs/page_77.png){.w575}</center><pre></pre>
+
+
+
+## Region of Interest Pooling (ROIPool)
+<center>![Slide 78](imgs/page_78.png){.w575}</center><pre></pre>
+
+
+
+## Region of Interest Pooling (ROIPool)
+<center>![Slide 79](imgs/page_79.png){.w575}</center><pre></pre>
+
+
+
+## Fast R-CNN Insight 2: Combine All Models into One Network
+<center>![Slide 80](imgs/page_80.png){.w575}</center><pre></pre>
+
+
+
+## Fast R-CNN: Joint training framework
+<center>![Slide 81](imgs/page_81.png){.w575}</center><pre></pre>
+
+
+
+## Fast R-CNN: Steps
+<center>![Slide 82](imgs/page_82.png){.w575}</center><pre></pre>
+
+
+
+## Fast R-CNN: Steps
+<center>![Slide 83](imgs/page_83.png){.w575}</center><pre></pre>
+
+
+
+## Fast R-CNN: Steps
+<center>![Slide 84](imgs/page_84.png){.w575}</center><pre></pre>
+
+
+
+## Fast R-CNN: Steps
+<center>![Slide 85](imgs/page_85.png){.w575}</center><pre></pre>
+
+
+
+## Fast R-CNN: Steps
+<center>![Slide 86](imgs/page_86.png){.w575}</center><pre></pre>
+
+
+
+## Smart training
+<center>![Slide 87](imgs/page_87.png){.w575}</center><pre></pre>
+
+
+
+## Some results
+<center>![Slide 88](imgs/page_88.png){.w575}</center><pre></pre>
+
+
+
+## Fast-RCNN
+<center>![Slide 89](imgs/page_89.png){.w575}</center><pre></pre>
+
+
+
+## Faster R-CNN - Speeding Up Region Proposal
+<center>![Slide 90](imgs/page_90.png){.w575}</center><pre></pre>
+
+
+
+## Faster R-CNN
+<center>![Slide 91](imgs/page_91.png){.w575}</center><pre></pre>
+
+
+
+## Faster R-CNN
+<center>![Slide 92](imgs/page_92.png){.w575}</center><pre></pre>
+
+
+
+## Faster R-CNN [Girshick2016]
+<center>![Slide 93](imgs/page_93.png){.w575}</center><pre></pre>
+
+
+
+## Mask R-CNN
+<center>![Slide 94](imgs/page_94.png){.w575}</center><pre></pre>
+
+
+
+## Mask R-CNN
+<center>![Slide 95](imgs/page_95.png){.w575}</center><pre></pre>
+
+
+
+## Mask R-CNN
+<center>![Slide 96](imgs/page_96.png){.w575}</center><pre></pre>
+
+
+
+## RoIAlign - Realigning RoIPool to be More Accurate
+<center>![Slide 97](imgs/page_97.png){.w575}</center><pre></pre>
+
+
+
+## RoIAlign - Realigning RoIPool to be More Accurate
+<center>![Slide 98](imgs/page_98.png){.w575}</center><pre></pre>
+
+
+
+## 99
+<!-- person OO lumbrella.97
+
+roa 97
+person.66 ia person 7" umbreta.26umbroia. 99
+TF skateboard: ’ ) aoe
+
+utnbrella1.00.
+
+| —-_ , ee Te gt -->
+<center>![Slide 99](imgs/page_99.png){.w575}</center><pre></pre>
+
+
+
+## Becoming fully convolutional
+<center>![Slide 100](imgs/page_100.png){.w575}</center><pre></pre>
+
+
+
+:::{.callout-note collapse="false"}
+# Turning a fully connected layer into a 1x1 convolutional layer
+
+This involves reshaping the weight matrix of the fully connected layer to match the dimensions of a convolutional kernel. Let's consider an example with tensor dimensions.
+
+Suppose you have a fully connected layer with input size `C_in` and output size `C_out`. The weight matrix of this fully connected layer is of shape `(C_out, C_in)`.
+
+Now, to turn it into a 1x1 convolutional layer, you can reshape the weight matrix into the shape `(C_out, C_in, 1, 1)`. The resulting operation is equivalent to a 1x1 convolution with `C_in` input channels and `C_out` output channels.
+
+Here's an example:
+
+```plaintext
+Fully Connected Layer:
+Input: [batch_size, C_in]
+Weights: [C_out, C_in]
+
+Reshaped Weights for 1x1 Convolution:
+Weights: [C_out, C_in, 1, 1]
+
+Input Tensor for 1x1 Convolution:
+Input: [batch_size, C_in, 1, 1]
+
+Output Tensor for 1x1 Convolution:
+Output: [batch_size, C_out, 1, 1]
+```
+
+In this example, the reshaped weights effectively create a 1x1 convolutional kernel that operates on each channel independently and produces an output tensor with the specified number of channels.
+
+This transformation allows you to apply convolutional operations even in scenarios where the spatial dimensions are reduced to 1x1. It's particularly useful in the context of neural network architectures, where convolutional layers are preferred for their ability to capture spatial hierarchies.
+
+**What is the input dimensionality of a 1x1 conv?**
+The input dimensionality of a 1x1 convolutional layer is typically three-dimensional. The dimensions correspond to:
+
+1. **Batch Size (B):** The number of samples in a mini-batch.
+2. **Number of Input Channels (C_in):** The depth or number of channels in the input feature map.
+3. **Spatial Dimension (H x W):** Although a 1x1 convolution operates on a spatial dimension, it often involves 1x1 spatial dimensions (height and width). This is different from traditional convolutions that operate on larger spatial dimensions.
+
+So, the input tensor shape for a 1x1 convolutional layer is often represented as `[B, C_in, 1, 1]`, where `B` is the batch size, `C_in` is the number of input channels, and the spatial dimensions are 1x1.
+
+1:48 check in the video
+
+They are not the same the 1x1 conv and the FC layer but they share the same weights and same meaning of the weight
+
+**How would a max pooling reduces spatial dimension to 1?**
+
+Max pooling reduces spatial dimensions by selecting the maximum value within each pooling window. The pooling window slides over the input data, and for each window, only the maximum value is retained in the pooled output. This process effectively downsamples the input.
+
+Let's consider an example with a 1D input tensor of size 6 and a max pooling operation with a window size of 2. Here's the input tensor:
+
+$\text{Input Tensor: } [1, 3, 5, 2, 8, 6]$
+
+Applying max pooling with a window size of 2 reduces the spatial dimension by selecting the maximum value in each window:
+
+$\text{Max Pooled Output: } [3, 5, 8]$
+
+In this example, the original input had 6 elements, and after max pooling, the output has 3 elements, effectively reducing the spatial dimension. The reduction factor depends on the size of the pooling window and the stride (the step size at which the window moves).
+
+You take the weights of a FC layer and you input them into a 1x1 convolution layer or you just apply the FC layer at every location 
+
+## What is the input dimensionality of a one by 1x1 convolution?
+The input dimensionality of a 1x1 convolutional layer is typically three-dimensional. The dimensions correspond to:
+
+1. **Batch Size (B):** The number of samples in a mini-batch.
+2. **Number of Input Channels (C_in):** The depth or number of channels in the input feature map.
+3. **Spatial Dimension (H x W):** Although a 1x1 convolution operates on a spatial dimension, it often involves 1x1 spatial dimensions (height and width). This is different from traditional convolutions that operate on larger spatial dimensions.
+
+So, the input tensor shape for a 1x1 convolutional layer is often represented as `[B, C_in, 1, 1]`, where `B` is the batch size, `C_in` is the number of input channels, and the spatial dimensions are 1x1.
+
+
+## What is the input dimensionality of a FC layer?
+
+For a fully connected layer (dense layer) with $N$ input neurons and $M$ output neurons, the number of weights is given by:
+
+$W = N \times M$
+
+So, for a fully connected layer, the number of weights depends on the number of input and output neurons.
+
+Comparing this with the 1x1 convolutional layer discussed earlier:
+
+- For a 1x1 convolution with $C_{\text{in}}$ input channels and $C_{\text{out}}$ output channels, the number of weights is $C_{\text{in}} \times C_{\text{out}}$.
+
+In general, the number of weights for a fully connected layer is not necessarily the same as that for a 1x1 convolutional layer, as it depends on the specific architecture and dimensions of the layers involved. The key difference lies in how the connections are structured in each type of layer.
+
+
+##  1x1 conv & FC similarity
+
+> You take the weights of a FC layer and you input them into a 1x1 convolution layer or you just apply the FC layer at every location 
+
+
+The statement refers to a conceptual similarity between a fully connected (FC) layer and a 1x1 convolutional layer in terms of their weight organization.
+
+1. **FC Layer:** In a traditional fully connected layer, all neurons are connected to every element in the input. If the input has dimensions $N \times M$, where $N$ is the batch size and $M$ is the number of input features, the FC layer has $M$ weights per neuron.
+
+2. **1x1 Convolutional Layer:** A 1x1 convolutional layer, despite being convolutional, can be thought of as a fully connected layer applied at every spatial location independently. It has a kernel size of $1 \times 1$, meaning it considers only the individual elements at each location. The weights in this case are shared across all spatial locations but applied independently to each location.
+
+So, conceptually, you can take the weights of a FC layer and use them in a 1x1 convolutional layer. This is based on the idea that a 1x1 convolution can capture the essence of a fully connected layer when applied independently across spatial dimensions.
+
+Here's a simplified example to illustrate:
+
+- **FC Layer:** $M$ weights per neuron, where $M$ is the number of input features.
+- **1x1 Conv Layer:** $M$ shared weights applied independently at each spatial location.
+
+This conceptual equivalence is often used in practice, especially in neural network architectures that leverage convolutional layers for spatial hierarchies and fully connected layers for global relationships.
+
+More into 1x1 conv similarity with FC
+
+1. **Convolutional Nature:** A 1x1 convolutional layer is a convolutional layer, which means it applies a set of filters (kernels) to the input data. In traditional convolution, these filters scan through local regions of the input, capturing spatial patterns.
+
+2. **Kernel Size:** The term "1x1" refers to the size of the filters. A 1x1 convolutional layer uses filters that are 1x1 in size. This means the filter considers only one element at a time during convolution.
+
+3. **Fully Connected Analogy:** Despite being a convolutional layer, a 1x1 convolutional layer can be conceptually thought of as a fully connected layer. In a fully connected layer, each neuron is connected to every element in the input. Similarly, a 1x1 convolutional layer can be viewed as having a filter that is as wide and tall as the input, effectively connecting each element in the input to the corresponding neuron in the output.
+
+4. **Spatial Independence:** The key distinction is that, unlike a traditional fully connected layer, the weights in a 1x1 convolutional layer are shared across all spatial locations. This means the same set of weights is used at every position in the input. However, these shared weights are applied independently to each location, capturing local patterns.
+
+Therefore, a 1x1 convolutional layer behaves like a fully connected layer applied independently at each spatial location, using shared weights for efficiency. This provides a way to introduce non-linearity and channel-wise transformations without the need for a fully connected layer, especially in the context of convolutional neural networks (CNNs).
+
+:::
+
+
+## Upsampling the output
+<center>![Slide 101](imgs/page_101.png){.w575}</center><pre></pre>
+
+
+
+## “Deconvolution”
+<center>![Slide 102](imgs/page_102.png){.w575}</center><pre></pre>
+
+
+
+## End-to-end, pixels-to-pixels network
+<center>![Slide 103](imgs/page_103.png){.w575}</center><pre></pre>
+
+
+
+## End-to-end, pixels-to-pixels network
+<center>![Slide 104](imgs/page_104.png){.w575}</center><pre></pre>
+
+
+
+## References
+<center>![Slide 105](imgs/page_105.png){.w575}</center><pre></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+

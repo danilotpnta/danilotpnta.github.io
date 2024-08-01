@@ -2,6 +2,8 @@
 title: "The Covariance Matrix and relation with PCA"
 description: "Description of this Post"
 date: "2023-10-12"
+date-format: long
+year: "2023"
 categories: [All, TAGS]
 toc: false
 jupyter: git-pages
@@ -57,7 +59,7 @@ Where:
 
 Below some example: 
 
-<center>![](2023-10-12-17-19-45.png){}</center><pre></pre>
+<center>![](imgs/2023-10-12-17-19-45.png){}</center><pre></pre>
 
 ## Python Example
 
@@ -92,7 +94,7 @@ $$
 
 If this data was generated with unit cov(x,x) and unit cov(y,y) then we have a Identity covariance matrix
 
-<center>![](2023-10-12-17-33-35.png){.w300}</center><pre></pre>
+<center>![](imgs/2023-10-12-17-33-35.png){.w300}</center><pre></pre>
 
 - As x1 increases x2 increases too, because we have 0.8. We have a positive correlation on the data.
 
@@ -101,15 +103,15 @@ If this data was generated with unit cov(x,x) and unit cov(y,y) then we have a I
 
 When you multiply the $\Sigma$ covariance matrix times a vector and then again and again you end up with a vector that points to directions where you have the greatest variance in the data. So like where all points are spread out. 
 
-<center>![](2023-10-12-17-41-50.png){}</center><pre></pre>
+<center>![](imgs/2023-10-12-17-41-50.png){}</center><pre></pre>
 
 - If I multiply the vector $e2$ by the cov matrix it will not turn but will get longer and longer but will point in the same direction 
 - Thus we want to find some vector $e$ that when we multiply it with the cov matrix do not change direction. The vectors are called eigenvectors and the lambdas so the scalar version will be called eigenvalues. 
 - The later point will be called our principal components which are the eigenvectors with the largest eigenvalues
 
-<center>![](2023-10-12-17-52-01.png){}</center><pre></pre>
+<center>![](imgs/2023-10-12-17-52-01.png){}</center><pre></pre>
 
-<center>![](2023-10-12-17-57-37.png){}</center><pre></pre>
+<center>![](imgs/2023-10-12-17-57-37.png){}</center><pre></pre>
 
 
 

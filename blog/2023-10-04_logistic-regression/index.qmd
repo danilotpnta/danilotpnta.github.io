@@ -1,13 +1,16 @@
 ---
 title: "Logistic Regression"
-description: "Lecture Notes UvA on 25-9-2023"
+description: "Lecture Notes on 25-9-2023"
 date: "2023-10-04"
-categories: [All, Education, Machine Learning, TAGS, Python]
+date-format: long
+year: "2023"
+categories: [All, Machine Learning, TAGS, Python]
 toc: false
 jupyter: git-pages
 code-fold: true
 number-sections: true
 ---
+
 :::{.callout-tip collapse="false"}
 ## Intuition Logistic Regression for Binary Classification
 
@@ -114,7 +117,7 @@ Now, lets talk about **Logistic Regression**
 - Perceptron and Logistic Regression is a type of directly parametrize linear model
 - The only difference between these two its how you train the model.
 
-<center>[![](2023-10-03-10-59-38.png)]{.w400}</center>
+<center>[![](imgs/2023-10-03-10-59-38.png)]{.w400}</center>
 
 ## Deriving Logistic Regression
 
@@ -124,27 +127,27 @@ Here the want to link linear model to probabilities to get Logistic Regression
 
 - When we set up Bayes Classifiers, We look at the ratio of probabilities.
 
-<center>[![](2023-10-03-11-09-14.png)]{.w300}</center>
+<center>[![](imgs/2023-10-03-11-09-14.png)]{.w300}</center>
 
 Here we are saying that this ratio would not work because i.e if we would predict a negative value for this ratio that would mean that either the denominator or denominator would be negative. But negative probables cannot happen.
 
 The solution, make compute the $\ln$
 
-<center>[![](2023-10-03-11-16-12.png)]{.w300}</center>
+<center>[![](imgs/2023-10-03-11-16-12.png)]{.w300}</center>
 
 Note that at the decision boundary meaning when $p(C_1|x)=p(C_2|x)$ we would have that the ratio is zero.
 
 Now, rearranging the expression above:
 
-<center>[![](2023-10-03-11-21-54.png)]{.w300}</center>
-<center>[![](2023-10-03-11-44-35.png)]{.w300}</center>
-<center>[![](2023-10-03-11-50-37.png)]{.w300}</center>
-<center>![Sigmoid](2023-10-03-11-47-57.png){#fig-plot_sigmoid}</center>
+<center>[![](imgs/2023-10-03-11-21-54.png)]{.w300}</center>
+<center>[![](imgs/2023-10-03-11-44-35.png)]{.w300}</center>
+<center>[![](imgs/2023-10-03-11-50-37.png)]{.w300}</center>
+<center>![Sigmoid](imgs/2023-10-03-11-47-57.png){#fig-plot_sigmoid}</center>
 
 
 ## Logistic Regression: Making Predictions
 
-<center>[![](2023-10-03-11-53-34.png)]{.w300}</center>
+<center>[![](imgs/2023-10-03-11-53-34.png)]{.w300}</center>
 
 ## Counting Parameters
 
@@ -178,7 +181,7 @@ That means for the LDA we need around $D^2$ as compared to Logistic Regression $
 
 We talked about our Logistic Regression model, now lets see how do we fit into our data.
 
-<center>[![](2023-10-03-13-58-09.png)]{}</center>
+<center>[![](imgs/2023-10-03-13-58-09.png)]{}</center>
 
 ## Learning via Log-likelihood
 
@@ -186,21 +189,21 @@ We assume our data are ID.
 
 Now that we have our labels which are binary we could use a Bernouli distribution to model this.
 
-<center>[![](2023-10-03-13-50-32.png)]{.w300}</center>
+<center>[![](imgs/2023-10-03-13-50-32.png)]{.w300}</center>
 
 Where, $\pi$ represents the probability of sucess and $t$ represents our possible outcomes. In this case our outcomes would be to belong to class $0$ if $C_0$ or $1$ if $C_1$
 
-<center>[![](2023-10-03-14-05-43.png)]{.w300}</center>
+<center>[![](imgs/2023-10-03-14-05-43.png)]{.w300}</center>
 
 Where, $\sigma(\textbf{w}^T\textbf{x}_n)^{t_n}$ is equal to $p(C1|x)$. See the graph of the sigmoid @fig-plot_sigmoid 
 
 Now lets take the log of this Likelihood
 
-<center>![](2023-10-03-14-28-19.png){.w350}</center>
+<center>![](imgs/2023-10-03-14-28-19.png){.w350}</center>
 
 To compute the Error we have:
 
-<center>![](2023-10-03-17-04-41.png){.w400}</center>
+<center>![](imgs/2023-10-03-17-04-41.png){.w400}</center>
 
 This is equation is also called *cross-entropy loss*
 
@@ -211,17 +214,17 @@ The other way around, the truth label is $t_n=1$ but the output of $\sigma(\text
 $E(w)$ is convex in $\textbf{w}$ but unlike linear regression there is no analytical solution <a id="error">[1]</a>. Which means if we take the derivative and solve for $w$ we would get stuck. 
   
 - What is convex decision boundaries?
-<center>![](2023-10-03-17-24-19.png){.w300}</center>
+<center>![](imgs/2023-10-03-17-24-19.png){.w300}</center>
 
 if you take any two points within the boundary, the line segment connecting those points lies entirely within the boundary as well
 
 ## Class-Entropy Loss
 
-<center>![](2023-10-03-17-31-13.png){.w300}</center>
+<center>![](imgs/2023-10-03-17-31-13.png){.w300}</center>
 
 ### Comparing Logistic Regression and Square Regression
 
-<center>![](2023-10-03-17-35-30.png){.w400}</center>
+<center>![](imgs/2023-10-03-17-35-30.png){.w400}</center>
 
 Logistic Regression is on the green line, Least Square Regression the purple.
 
@@ -233,7 +236,7 @@ Logistic Regression is on the green line, Least Square Regression the purple.
 
 > Note, because we saw that the [Error](#error) of the Log-likelihood of Logistic Regression cannot be solved analytically then we turn into gradient descent
 
-<center>![](2023-10-03-18-37-13.png){.w350}</center>
+<center>![](imgs/2023-10-03-18-37-13.png){.w350}</center>
 
 <pre></pre>
 
@@ -243,38 +246,38 @@ Because the above summation is expensive then we got variants.
 - **Stochastic:** Use one data point to approximate sum  
 Here we pick a random point $i$ and we multiply by $N$ to replicate the magnitude of learning rate. This is to keep same scale as the full gradient descent formula we see above. In other words this is just to conserve the magnitude of the $\eta$ value
 
-<center>![](2023-10-03-18-46-48.png){.w350}</center>
+<center>![](imgs/2023-10-03-18-46-48.png){.w350}</center>
 
 - **Mini-Batch:** Use B data points where 1 < B < N. Usually B much less than N (B << N)
 
-<center>![](2023-10-03-18-47-54.png){.w350}</center>
+<center>![](imgs/2023-10-03-18-47-54.png){.w350}</center>
 
 ### Gradient Descent: Variants Performance
 
-<center>![](2023-10-03-18-51-55.png){.w400}</center>
+<center>![](imgs/2023-10-03-18-51-55.png){.w400}</center>
 
 ## Gradient Calculation
 
-<center>![](2023-10-03-19-36-33.png){.w300}</center>
+<center>![](imgs/2023-10-03-19-36-33.png){.w300}</center>
 
-<center>![](2023-10-03-19-36-56.png){.w350}</center>
+<center>![](imgs/2023-10-03-19-36-56.png){.w350}</center>
 
-<center>![](2023-10-03-19-41-28.png){.w450}</center>
+<center>![](imgs/2023-10-03-19-41-28.png){.w450}</center>
 
-<center>![](2023-10-03-19-39-58.png){.w450}</center>
+<center>![](imgs/2023-10-03-19-39-58.png){.w450}</center>
 
-The answer look identical to the one proposed for the perceptron in our prev [post](../2023-10-03_the-perceptron/#perceptron-learning-as-gradient-descent)
+The answer look identical to the one proposed for the perceptron in our prev [post](../imgs/2023-10-03_the-perceptron/#perceptron-learning-as-gradient-descent)
 
-<center>![](2023-10-03-21-16-01.png){.w350}</center>
+<center>![](imgs/2023-10-03-21-16-01.png){.w350}</center>
 
 - The difference with the perceptron its that the update for the weights its softer. 
-- The Gradient descent with logistic regresion will keep updating until $t_i-\sigma(\textbf{w}_t^T\textbf{x}_i)$ is close to zero, whereas the perceptron because of this $f(w^T\phi)>0$ condition will be: $t_i-\sigma(\textbf{w}_t^T\textbf{x}_i)$ this is close enough (review the inequality [post](../2023-10-03_the-perceptron/#the-perceptron-model)) to zero then we do not update the weight.   
+- The Gradient descent with logistic regresion will keep updating until $t_i-\sigma(\textbf{w}_t^T\textbf{x}_i)$ is close to zero, whereas the perceptron because of this $f(w^T\phi)>0$ condition will be: $t_i-\sigma(\textbf{w}_t^T\textbf{x}_i)$ this is close enough (review the inequality [post](../imgs/2023-10-03_the-perceptron/#the-perceptron-model)) to zero then we do not update the weight.   
 
 ##  Stochastic Gradient Descent
 
 Here the perceptron choose only misclassified, here in Stochastic Gradient Descent we would pick any point randomly. Even if it's well classified already.
 
-<center>![](2023-10-03-21-31-30.png){.w450}</center>
+<center>![](imgs/2023-10-03-21-31-30.png){.w450}</center>
 
 
 Now the question is: how do I set this parameter $\eta$ the learning rate. The answer to that is a method that help us find that. It's called Newton-Raphson 
@@ -292,7 +295,7 @@ The second derivative corresponds to the curvature of the loss function, thus
 
 This captures the notion of curvature
 
-<center>![](2023-10-03-22-31-31.png){.w400}</center>
+<center>![](imgs/2023-10-03-22-31-31.png){.w400}</center>
 
 - **Small second derivative --> large learning rate**  
 So if these two purple arrows are pointing in the same direction it means there their second derivative is small because there is no much change which then means we can increase the learning rate because there is still a curvature meaning we have not reach to global minimum
@@ -301,23 +304,23 @@ So if these two purple arrows are pointing in the same direction it means there 
 In the second case with the green arrows, this time the second derivative is large because there is a substantial change from pointing down to now pointing in almost horizontal direction. Then that means that we are getting closer to a deep and this we want to make the learning rate small
 
 ### Computing 2nd Derivative (for scalar)
-<center>![](2023-10-03-22-37-44.png){.w400}</center>
+<center>![](imgs/2023-10-03-22-37-44.png){.w400}</center>
 
 Here the second derivative $\frac{\partial^2}{\partial w_t^2}$ represents the curvature of the loss function so the answer that we will show below is just the graph of how this curvature would look like.
 
-<center>![](2023-10-03-22-56-20.png){.w400}</center>
+<center>![](imgs/2023-10-03-22-56-20.png){.w400}</center>
 
 1. The error curvature would be maximized when the model is uncertain. The intuition is that if you have a lot of points next to the decision boundary then   
 
 2. It is small when the model is certain. 
 
-<center>![](2023-10-03-23-43-59.png){.w400}</center>
+<center>![](imgs/2023-10-03-23-43-59.png){.w400}</center>
 
 Where we have introduce the normalization term
 
 ## Steepest DEscent vs Newton-Raphson
 
-<center>![](2023-10-03-23-48-19.png){.w400}</center>
+<center>![](imgs/2023-10-03-23-48-19.png){.w400}</center>
 
 <pre></pre>
 
@@ -341,20 +344,20 @@ Therefore, the Jacobian matrix $\partial (x^T) / \partial x$ is a diagonal matri
 
 ## Newton-Raphson Iterative Optimization
 
-<center>![](2023-10-04-00-06-19.png){.w400}</center>
+<center>![](imgs/2023-10-04-00-06-19.png){.w400}</center>
 
-<center>![](2023-10-04-00-07-50.png){}</center>
+<center>![](imgs/2023-10-04-00-07-50.png){}</center>
 
 ### What is the H?
 
-<center>![](2023-10-04-00-15-24.png){.w350}</center>
+<center>![](imgs/2023-10-04-00-15-24.png){.w350}</center>
 <pre></pre>
 
 The blue highlighted section means that we have taken the second derivative over the error of the log-likelihood which has a minus hence why the blue hihglited parts vary in order.
 
 ## Newton-Rpahson Iterative Optimization
 
-<center>![](2023-10-04-00-20-39.png){.w400}</center>
+<center>![](imgs/2023-10-04-00-20-39.png){.w400}</center>
 
 <!-- ## Iterative Reweighted Least Squares
 

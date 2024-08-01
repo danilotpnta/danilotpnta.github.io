@@ -1,0 +1,489 @@
+---
+title: "Self-supervised Learning I"
+description: "Description of this Post"
+date: "2023-12-14"
+date-format: long
+year: "2023"
+categories: [All, Deep Learning, TAGS]
+toc: false
+jupyter: git-pages
+code-fold: true
+number-sections: true
+---
+
+## Selt-supervised learning for computer vision 
+<center>![Slide 1](imgs/page_1.png){.w575}</center><pre></pre>
+
+
+## Organisation
+<center>![Slide 2](imgs/page_2.png){.w575}</center><pre></pre>
+
+
+
+## Self-supervised learning came up in multiple previous lectures.
+<center>![Slide 3](imgs/page_3.png){.w575}</center><pre></pre>
+
+
+
+## Today:
+<center>![Slide 4](imgs/page_4.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 5](imgs/page_5.png){.w575}</center><pre></pre>
+
+
+## The field of Al has made rapid progress, the crucial fuel is data
+<center>![Slide 6](imgs/page_6.png){.w575}</center><pre></pre>
+
+
+
+## Manual annotations for the data are limiting.
+<center>![Slide 7](imgs/page_7.png){.w575}</center><pre></pre>
+
+-  Weak supervised learnings are for i.e hastags in instagram, this can be noisy because a person can show a pic of a dog with #cute which is not very representative as a label
+
+-  Weak supervised learning is a type of machine learning that falls between supervised and unsupervised learning. In weakly supervised learning, the training data is labeled, but the labels are noisy, incomplete, or imprecise. This approach is often used when it's challenging or expensive to obtain a fully labeled dataset
+
+## Solving the problem of expensive annotations: self-supervision.
+<center>![Slide 8](imgs/page_8.png){.w575}</center><pre></pre>
+
+
+
+## General procedure of self-supervised learning.
+<center>![Slide 9](imgs/page_9.png){.w575}</center><pre></pre>
+
+Here your transformation could be augmentations for instance. 
+
+The proxy task provides you with some gradients. That trains the DNN. Proxy tasks could be geometry based, clustering and so on
+
+
+## General procedure of self-supervised learning.
+<center>![Slide 10](imgs/page_10.png){.w575}</center><pre></pre>
+
+In Representation Learning you get image in and then vector out 
+
+Sueful Slef-supervised learning: You pose some task which was previously done in a supervised manner as a self-supervised task. This could be object detection & segmentation
+
+## Title
+<center>![Slide 11](imgs/page_11.png){.w575}</center><pre></pre>
+
+
+
+## Reason 1: Scalability
+<center>![Slide 12](imgs/page_12.png){.w575}</center><pre></pre>
+
+
+
+## Reason 1: Scalability
+<center>![Slide 13](imgs/page_13.png){.w575}</center><pre></pre>
+
+
+
+## Reason 2: Constantly changing domains
+<center>![Slide 14](imgs/page_14.png){.w575}</center><pre></pre>
+
+
+
+## Reason 2: Accessibility & generalisability
+<center>![Slide 15](imgs/page_15.png){.w575}</center><pre></pre>
+
+Why do we want to do self-supervised learning?
+
+Once you have a pre-trained model you can example use it to classify samples
+
+So you can do pre-training on a lot of data and then aftwerwards you can fine tuning it on your specific i.e hospital data.
+
+Also pre-trained representations have been used in archeology for figuring out whether a particular sample belongs to a particular period
+
+## Reason 3: Ambiguity of labels
+<center>![Slide 16](imgs/page_16.png){.w575}</center><pre></pre>
+
+In weakly supervised learning you dont used lables that humans specifically provided but instead labels that you found i.e hastags that people place. Also for instance for the CLIP model where you have images and captions. This were just drawn from the internet so some of this captions you may see i.e a laptop and the labels may not be laptop but read product #15, or another example there may be a pic of a dog and it may say 'my fav partner to go on a walk'. So that is ambiguous and confusing for the model. So instead serlf-supervise model implies that we only use the raw data, so we dont use any of the annotations.
+
+So a reason to do self-supervised learning is that because these lalbels from the internet are already not accurate then you dont want to use them. Instead you can do slef-supervised learning where you train a DNN with unlabel data and then use it into your task at hand
+
+## Reason 4: Investigating the fundamentals of visual understanding
+<center>![Slide 17](imgs/page_17.png){.w575}</center><pre></pre>
+
+Can we understand really what happens without labels? so the fundamentals of computer vision.
+
+## Quiz: 
+<center>![Slide 18](imgs/page_18.png){.w575}</center><pre></pre>
+
+Slef-supervised refers more to you want get something that you can use for another datasets. So topically in representation learning the dinstiction is clear because if you are learning a contrastive model that by itself is not usefull but in that case you can say self-supervised learning is part of supervised learning methodologies.
+
+- Normal AE are unsupervised learning methods
+
+- There another autoencoders that are self-supervised learners. 
+
+
+## Title
+<center>![Slide 19](imgs/page_19.png){.w575}</center><pre></pre>
+
+
+
+## Here, we will only cover the most important works.
+Further details and recent developments can be found here:
+<center>![Slide 20](imgs/page_20.png){.w575}</center><pre></pre>
+
+
+
+## How does one learn without labels?
+<center>![Slide 21](imgs/page_21.png){.w575}</center><pre></pre>
+
+- We say that we need to generate gradients. So some type of signals that we can leverage include:
+
+- Reconstructions: we can remove some aprt of the image and ask the model to reconstruct what has been hidden
+- Geometry
+
+
+## Early methods: Context prediction
+<center>![Slide 22](imgs/page_22.png){.w575}</center><pre></pre>
+
+
+
+## Note: similar to how BERT has been trained
+<center>![Slide 23](imgs/page_23.png){.w575}</center><pre></pre>
+
+
+
+## Early methods
+<center>![Slide 24](imgs/page_24.png){.w575}</center><pre></pre>
+
+- Context Encoders, you maks now a part of a image, so you put a white mask on top of the image and then you trained a model to ouput a dense feature map that will put the pixeles at that location. You only apply the loss at this locations but because you use a CNN you train all the weights. 
+
+## Geometry: RotNet: learn features by predicting “which way is up”.
+<center>![Slide 25](imgs/page_25.png){.w575}</center><pre></pre>
+
+
+
+## Image-uniqueness: Exemplar CNN, precursor to contrastive learning
+<center>![Slide 26](imgs/page_26.png){.w575}</center><pre></pre>
+
+EXampler CNN came before Contrastive Learning, this helps to work on CLip. Here you augment the image multiple times for each iamge, and now you model needs to ouput which image identity it was.
+
+The idea of image uniqueness is that if you have near dusplicate copies of the same image then it makes for a string signal. For isntance if you have a dog jumping vs a dog sitting, that is very difficult to differentiate so in that sense the model needs to learn quite some good feature in order to be differentiating these two classes. 
+
+This also enforces augmentation-invariance because all the different views, all the different augmentations of the image they should be the same
+
+## Modern Noise-contrastive self-supervised learning
+<center>![Slide 27](imgs/page_27.png){.w575}</center><pre></pre>
+
+After that people develop contrastive models. 
+
+
+The basic idea for simCLR is: you take two views for two images. You have two augmentations of the dogs a and two for the chair.
+
+Here the softmax is calcualting the similarity of z_i and z_j. These are the last representations. The sim() function is the dot products which tells you how similar they are. You apply the softmax across all these dot products
+
+## CLIP from Lect 9 and assignment 2 simply applies SimCLR across modalities
+<center>![Slide 28](imgs/page_28.png){.w575}</center><pre></pre>
+
+
+
+## Modern Noise-contrastive self-supervised learning
+<center>![Slide 29](imgs/page_29.png){.w575}</center><pre></pre>
+
+
+
+## Masked Image Modelling (recent development)
+<center>![Slide 30](imgs/page_30.png){.w575}</center><pre></pre>
+
+Transformers work on sequences but CNN this approach would not work because the ouputs are always spatial that means you can simply leave some. Then you get a representation and your task is to predict all these missing patches given the patches that you have seen
+
+## Clustering
+<center>![Slide 31](imgs/page_31.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 32](imgs/page_32.png){.w575}</center><pre></pre>
+
+
+
+## Datasets for images: Pretraining and downstream
+<center>![Slide 33](imgs/page_33.png){.w575}</center><pre></pre>
+
+
+
+## Recent surge in research on problematic images in ImageNet
+<center>![Slide 34](imgs/page_34.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 35](imgs/page_35.png){.w575}</center><pre></pre>
+
+
+
+## The dataset: diverse, containing nature and buildings.
+<center>![Slide 36](imgs/page_36.png){.w575}</center><pre></pre>
+
+
+
+## Datasets for images: Pretraining and
+<center>![Slide 37](imgs/page_37.png){.w575}</center><pre></pre>
+
+
+
+## Downstream semi-supervised tasks: Self-supervised Learning helps
+<center>![Slide 38](imgs/page_38.png){.w575}</center><pre></pre>
+
+- Supervised: red
+- Self-supervised: Blue
+
+
+
+## Title
+<center>![Slide 39](imgs/page_39.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 40](imgs/page_40.png){.w575}</center><pre></pre>
+
+
+
+## Goal: Discover visual concepts without annotations.
+<center>![Slide 41](imgs/page_41.png){.w575}</center><pre></pre>
+
+
+
+## How can we solve this chicken and egg problem?
+<center>![Slide 42](imgs/page_42.png){.w575}</center><pre></pre>
+
+
+
+## The key to image understanding is separating meaning from appearance.
+<center>![Slide 43](imgs/page_43.png){.w575}</center><pre></pre>
+
+Even though the pixel values are different 
+
+## Quiz:
+<center>![Slide 44](imgs/page_44.png){.w575}</center><pre></pre>
+
+1. So if you stay in the same domain, or a clone one you know that that the $lr$ would be quite similar
+2. You also can set the network architecture because if you know is a vision recognition taks then you know a Conv architecture is meaningful.
+4. If your dataset is small then you reduce it because you trained before with tons of images so the epochs were also big
+ 
+
+## Our work applies the idea of augmentation invariance to assign concepts.
+<center>![Slide 45](imgs/page_45.png){.w575}</center><pre></pre>
+
+
+
+## Our work applies the idea of transformation invariance to assign concepts.
+<center>![Slide 46](imgs/page_46.png){.w575}</center><pre></pre>
+
+
+
+## How can we optimize the labels and make assignments consistents
+<center>![Slide 47](imgs/page_47.png){.w575}</center><pre></pre>
+
+
+here we want to make y differentiable because we want to learn those labels. 
+
+## SK optimisation (not needed for exam)
+<center>![Slide 48](imgs/page_48.png){.w575}</center><pre></pre>
+
+
+
+## SK optimisation of assignments Q (not needed for exam)
+<center>![Slide 49](imgs/page_49.png){.w575}</center><pre></pre>
+
+
+
+## Algorithm
+<center>![Slide 50](imgs/page_50.png){.w575}</center><pre></pre>
+
+
+
+## Our method applied on 1.2 million images:
+
+Examples
+<center>![Slide 51](imgs/page_51.png){.w575}</center><pre></pre>
+
+
+
+## Automatically discovered concepts match manual annotation.
+<center>![Slide 52](imgs/page_52.png){.w575}</center><pre></pre>
+
+
+
+## AlexNet, ImageNet linear probes (remember Lecture 5)
+<center>![Slide 53](imgs/page_53.png){.w575}</center><pre></pre>
+
+
+
+## Self-supervised labelling from three core ideas
+<center>![Slide 54](imgs/page_54.png){.w575}</center><pre></pre>
+
+
+
+## More recently...
+<center>![Slide 55](imgs/page_55.png){.w575}</center><pre></pre>
+
+
+
+## DINO has remarkable properties
+<center>![Slide 56](imgs/page_56.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 57](imgs/page_57.png){.w575}</center><pre></pre>
+
+
+
+## However: The world is not object-centric.
+<center>![Slide 58](imgs/page_58.png){.w575}</center><pre></pre>
+
+
+
+## Self-Supervised Learning of Object Parts for Semantic Segmentation
+<center>![Slide 59](imgs/page_59.png){.w575}</center><pre></pre>
+
+
+
+## Self-Supervised Learning of Odject Parts for semantic Segmentation
+<center>![Slide 60](imgs/page_60.png){.w575}</center><pre></pre>
+
+
+
+## Self-Supervised Learning has to move from image-level to spatially-dense learning
+
+<center>![Slide 61](imgs/page_61.png){.w575}</center><pre></pre>
+
+
+
+## We propose a dense clustering pretext task to learn object parts
+<center>![Slide 62](imgs/page_62.png){.w575}</center><pre></pre>
+
+
+
+## Quiz
+<center>![Slide 63](imgs/page_63.png){.w575}</center><pre></pre>
+
+2. False. ROI-Align cannot take care of non-recatangular selections
+4. False, just like any pooling can provide gradients
+
+## Title
+<center>![Slide 64](imgs/page_64.png){.w575}</center><pre></pre>
+
+
+
+## Additional Innovation 2: Overclustering with Community Detection (CD)
+<center>![Slide 65](imgs/page_65.png){.w575}</center><pre></pre>
+
+
+
+## Overclustering with Community Detection ran.
+<center>![Slide 66](imgs/page_66.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 67](imgs/page_67.png){.w575}</center><pre></pre>
+
+
+
+## Leopart improves fully unsupervised SOTA by >6%
+<center>![Slide 68](imgs/page_68.png){.w575}</center><pre></pre>
+
+
+
+## Leopart achieves transfer SOTA on three datasets simultaneously
+<center>![Slide 69](imgs/page_69.png){.w575}</center><pre></pre>
+
+
+
+## Augmentations were key for both SeLa and Leopart.
+<center>![Slide 70](imgs/page_70.png){.w575}</center><pre></pre>
+
+
+
+## How can we Isolate the effect of augmentations?
+By learning from a single image
+
+Py4t4
+<center>![Slide 71](imgs/page_71.png){.w575}</center><pre></pre>
+
+
+
+## How do we go about thiss
+<center>![Slide 72](imgs/page_72.png){.w575}</center><pre></pre>
+
+
+
+## What do we learn?
+<center>![Slide 73](imgs/page_73.png){.w575}</center><pre></pre>
+
+
+
+## Tested images
+<center>![Slide 74](imgs/page_74.png){.w575}</center><pre></pre>
+
+
+
+## Self-supervised learning from one image:
+First convolutional layer
+<center>![Slide 75](imgs/page_75.png){.w575}</center><pre></pre>
+
+
+
+## Self-supervised learning from one image:
+Quality (ImageNet linear probes)
+<center>![Slide 76](imgs/page_76.png){.w575}</center><pre></pre>
+
+
+
+## Self-supervised learning from one image:
+Quality (ImageNet linear probes)
+<center>![Slide 77](imgs/page_77.png){.w575}</center><pre></pre>
+
+
+
+## Style transfer with a 1-image trained CNN
+<center>![Slide 78](imgs/page_78.png){.w575}</center><pre></pre>
+
+
+
+## | Update Feb 2021 |] Using a ResNet-50 and MoCo loss,
+we get even closer for fine-tuning tasks.
+<center>![Slide 79](imgs/page_79.png){.w575}</center><pre></pre>
+
+
+
+## Update 2:
+<center>![Slide 80](imgs/page_80.png){.w575}</center><pre></pre>
+
+
+
+## Conclusion
+<center>![Slide 81](imgs/page_81.png){.w575}</center><pre></pre>
+
+
+
+## unsup. pre-train
+<center>![Slide 82](imgs/page_82.png){.w575}</center><pre></pre>
+
+
+
+## Title
+<center>![Slide 83](imgs/page_83.png){.w575}</center><pre></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

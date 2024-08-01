@@ -1,14 +1,35 @@
 ---
 pagetitle: "Danilo Toapanta - Blog"
 listing:
+    - id: posts-2024
+      template: listing-blog.ejs
+      template-params:
+        param1: "2024"
+        param2: "NEW"
+      type: custom
+      page-size: 100
+      contents: /
+      include: 
+        year: "2024"
+      sort: "date desc"
+      fields: [date, title, categories]
+      field-display-names:
+        date: " "
+        title: "  "
+        categories: " "
+      categories: false
+      sort-ui: false
+      filter-ui: false
+      date-format: MMM DD
     - id: posts-2023
       template: listing-blog.ejs
       template-params:
         param1: "2023"
       type: custom
+      page-size: 100
       contents: /
-      exclude: 
-        year: "2022"
+      include: 
+        year: "2023"
       sort: "date desc"
       fields: [date, title, categories]
       field-display-names:
@@ -24,6 +45,7 @@ listing:
       template-params:
         param1: "2022"
       type: custom
+      page-size: 100
       contents: /
       include: 
         year: "2022"
@@ -42,6 +64,9 @@ title-block-banner: true
 sidebar: false
 include-after-body: show-all-posts.html
 css: index.css
+format:
+  html:
+    html-table-processing: none
 ---
 
 <!-- This activates option to run Javascript -->
@@ -50,38 +75,36 @@ knitr::opts_chunk$set(echo = TRUE)
 library(knitr)
 ```
 
-<p style="margin-bottom: 0px; padding-bottom: 30px; display: none; ">
-  In this section Danilo writes down his notes, the things he has figured out about his computer, and ocasionally when feeling inspired he writes poems. 
-</p>
 
+```{=html}
 <div class="grid-showAllCateg-Notes">
-<div class="background-color-show-posts" style="display: flex; justify-content: center; padding: 5px 0px; border-radius: 5px;">
-<!-- <div style="display: flex; justify-content: center; padding-top: 10px; padding-bottom 8px;"> -->
-  <a id="clickable-showing-all-posts" href="/blog" style="text-decoration: none; pointer-events: none;">
-    <p align="center" id="showing-all-posts" class="color-show-posts" style="font-weight: 400; margin: 0px; padding: 0px; font-style:italic">
-        Showing All Posts 
-    </p>
-  </a>
-  <a id="clickable-show-all-posts" href="/blog/#category=All" style="text-decoration: none; pointer-events: none;">
-    <p align="center" id="reload-posts-icon" class="color-show-posts" style="display:none; font-weight: 400; margin: 0px; padding: 0px; font-style:italic;">
-      Show All Posts <i style="padding-left:2px;" class='bi bi-arrow-counterclockwise'></i> 
-    </p>
-  </a>
+    <div class="background-color-show-posts" style="display: flex; justify-content: center; padding: 5px 0px; border-radius: 5px;">
+        <a id="clickable-showing-all-posts" href="/blog" style="text-decoration: none; pointer-events: none;">
+            <p align="center" id="showing-all-posts" class="color-show-posts" style="font-weight: 400; margin: 0px; padding: 0px; font-style: italic;">
+                Showing All Posts
+            </p>
+        </a>
+        <a id="clickable-show-all-posts" href="/blog/#category=All" style="text-decoration: none; pointer-events: none;">
+            <p align="center" id="reload-posts-icon" class="color-show-posts" style="display: none; font-weight: 400; margin: 0px; padding: 0px; font-style: italic;">
+                Show All Posts <i style="padding-left: 2px;" class='bi bi-arrow-counterclockwise'></i>
+            </p>
+        </a>
+    </div>
+    <div class="background-color-show-posts" style="display: flex; justify-content: center; padding: 5px 0px; border-radius: 5px;">
+        <a id="clickable-showing-all-posts" href="/notes" style="text-decoration: none;">
+            <p align="center" id="showing-all-posts" class="color-show-posts" style="font-weight: 400; margin: 0px; padding: 0px;">
+                Notes
+            </p>
+        </a>
+    </div>
 </div>
-<div class="background-color-show-posts" style="display: flex; justify-content: center; padding: 5px 0px; border-radius: 5px;">
-<!-- <div style="display: flex; justify-content: center; padding-top: 10px; padding-bottom 8px;"> -->
-  <a id="clickable-showing-all-posts" href="/notes" style="text-decoration: none;">
-    <p align="center" id="showing-all-posts" class="color-show-posts" style="font-weight: 400; margin: 0px; padding: 0px; ">
-        Notes
-    </p>
-  </a>
-</div>
-</div>
+```
 
 
 :::{.grid-blog}
 :::{.main-content-blog}
 
+```{=html}
 <div id= "show-tag-cat-selected" style="display:none;">
   <p style="padding-top:40px; padding-bottom:5px; margin-bottom:0px; color: #838383;">
     <span id="green_number_blog" style="padding-bottom:0px; margin-bottom:0px; color: #14ae73;">
@@ -93,10 +116,22 @@ library(knitr)
   </p>
   <h1 id="tag_category_name" style="padding:0px 0px; margin: 0px 0px; padding-bottom:15px; border-bottom: none">Python</h1>
 </div>
+```
 
 <!-- <h3 class="unlisted unnumbered no_anchor_link" style="margin-top: 0px; padding-top:30px; padding-bottom: 8px; font-size: 1.6rem;">2023</h3> -->
 
+```{=html}
 <div style="padding-top:10px; "></div>
+```
+
+:::{.datePadding .newFont_and_color}
+:::{#posts-2024}
+:::
+:::
+
+```{=html}
+<div style="padding-top:10px; "></div>
+```
 
 :::{.datePadding .newFont_and_color}
 :::{#posts-2023}
@@ -127,12 +162,14 @@ library(knitr)
     <p class="post-sidebar-card-title" style="font-size: 14px; font-weight: 550; margin-bottom: 12px">
       TAGS
     </p>
-    <div id="list-blog-tags" class="list-blog"></div>  
+    <div id="list-blog-tags" class="list-blog-tags"></div>  
   </div>
 
 </div>
 ```
 :::
+
+
 
 
 ```{js echo=FALSE}
@@ -197,7 +234,7 @@ let list_tags = document.getElementById("list-blog-tags");
 
 Object.keys(array_tags).forEach((item) => {
     let a = document.createElement("a");
-    a.className = "category";
+    a.className = "tag";
     a.href = `#category=${item}`;
     a.setAttribute("id", item);
 
@@ -206,122 +243,52 @@ Object.keys(array_tags).forEach((item) => {
     div_name.innerText = item;
     a.appendChild(div_name);
 
-    var div_count = document.createElement('div');
-    div_count.className = "count";
-    div_count.innerText = array_tags[item];
-    a.appendChild(div_count);
+    // var div_count = document.createElement('div');
+    // div_count.className = "count";
+    // div_count.innerText = array_tags[item];
+    // a.appendChild(div_count);
 
     list_tags.appendChild(a);
 });
 
+
+window.addEventListener('scroll', adjustSidebarPosition);
+window.addEventListener('resize', adjustSidebarSizeAndPosition);
+
+var sidebar = document.querySelector('.sidebar-blog');
+var referenceElement = document.querySelector('.main-content-blog'); // Reference element to align the sidebar with
+
+function adjustSidebarPosition() {
+    var triggerPosition = referenceElement.offsetTop;
+
+    if (window.scrollY >= triggerPosition) {
+        fixSidebar();
+    } else {
+        resetSidebarStyle();
+    }
+}
+
+function fixSidebar() {
+    var referenceRect = referenceElement.getBoundingClientRect();
+    var adjustment = 54; // Number of pixels to adjust. Experiment with this value.
+
+    sidebar.style.position = 'fixed';
+    sidebar.style.top = '0';
+    sidebar.style.left = (referenceRect.right + window.scrollX + adjustment) + 'px';
+}
+
+
+function adjustSidebarSizeAndPosition() {
+    if (sidebar.style.position === 'fixed') {
+        fixSidebar(); // Re-fix the sidebar with updated dimensions and position
+    }
+}
+
+function resetSidebarStyle() {
+    sidebar.style.position = 'relative';
+    sidebar.style.top = '';
+    sidebar.style.left = '';
+}
 ```
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

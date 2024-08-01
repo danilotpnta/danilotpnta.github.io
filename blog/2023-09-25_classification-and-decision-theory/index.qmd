@@ -1,8 +1,10 @@
 ---
 title: "Classification and Decision Theory"
-description: "Notes for the course at UvA: Machine Learning 1"
+description: "Notes for the course at: Machine Learning 1"
 date: "2023-09-25"
-categories: [All, Education, Machine Learning, TAGS, Classification]
+date-format: long
+year: "2023"
+categories: [All, Machine Learning, TAGS, Classification]
 number-sections: true
 toc: false
 jupyter: git-pages
@@ -10,6 +12,7 @@ execute:
   freeze: true
 code-fold: true
 ---
+
 
 <h1>Classification</h1>
 
@@ -295,7 +298,7 @@ This plot visually illustrates how variance represents the spread along each dim
 - In the second plot (Equal Variance Case), the color yellow also represents regions of higher probability density. Even though the covariance is zero, meaning there is no linear relationship between the X and Y dimensions, the multivariate Gaussian distribution still has a peak at the mean (center) in each dimension. The color yellow again corresponds to higher probability values in this context.
 
 <center>
-<img class="img-fluid" width='450px' src="img_m.jpeg"></img>
+<img class="img-fluid" width='450px' src="imgs/img_m.jpeg"></img>
 </center>
 
 1. **QDA:** they have separate Covariances

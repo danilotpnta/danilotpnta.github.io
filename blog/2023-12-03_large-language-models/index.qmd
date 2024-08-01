@@ -1,0 +1,202 @@
+---
+title: "Large language models"
+description: "Description of this Post"
+date: "2023-12-03"
+date-format: long
+year: "2023"
+categories: [All, NLP, TAGS]
+toc: false
+jupyter: git-pages
+code-fold: true
+number-sections: true
+---
+
+## Title
+<center>![Slide ](imgs/page_1.png){.w575}</center><pre></pre>
+
+
+## Outline.
+<center>![Slide ](imgs/page_2.png){.w575}</center><pre></pre>
+
+
+
+## Large language models
+<center>![Slide ](imgs/page_3.png){.w575}</center><pre></pre>
+
+
+
+## Why is this useful?
+<center>![Slide ](imgs/page_4.png){.w575}</center><pre></pre>
+
+
+
+## What can we expect this model to capture?
+<center>![Slide ](imgs/page_5.png){.w575}</center><pre></pre>
+
+
+
+## ELMo: Embeddings from Language Models
+
+Datare at al 9N12 Maan rnntoyvtalizad winrdn ranrocaontatinne
+<center>![Slide ](imgs/page_6.png){.w575}</center><pre></pre>
+
+
+
+## The ELMo model
+<center>![Slide ](imgs/page_7.png){.w575}</center><pre></pre>
+
+
+
+## The contributions of ELMo
+<center>![Slide ](imgs/page_8.png){.w575}</center><pre></pre>
+
+
+
+## The rise of the Transformer
+<center>![Slide ](imgs/page_9.png){.w575}</center><pre></pre>
+
+
+
+## BERT: Architecture
+<center>![Slide ](imgs/page_10.png){.w575}</center><pre></pre>
+
+
+
+## BERT: Input representations
+<center>![Slide ](imgs/page_11.png){.w575}</center><pre></pre>
+
+
+
+## BERT: Pretraining tasks
+<center>![Slide ](imgs/page_12.png){.w575}</center><pre></pre>
+
+
+
+## BERT: Pretraining tasks
+<center>![Slide ](imgs/page_13.png){.w575}</center><pre></pre>
+
+
+
+## BERT: pretraining
+<center>![Slide ](imgs/page_14.png){.w575}</center><pre></pre>
+
+
+
+## BERT: fine-tuning
+<center>![Slide ](imgs/page_15.png){.w575}</center><pre></pre>
+
+
+
+## The contributions of BERT
+<center>![Slide ](imgs/page_16.png){.w575}</center><pre></pre>
+
+
+
+## Outline.
+<center>![Slide ](imgs/page_17.png){.w575}</center><pre></pre>
+
+
+
+## Generative language models: The GPT family
+<center>![Slide ](imgs/page_18.png){.w575}</center><pre></pre>
+
+
+
+## More than a language model?
+<center>![Slide ](imgs/page_19.png){.w575}</center><pre></pre>
+
+
+
+## InstructGPT and ChatGPT
+<center>![Slide ](imgs/page_20.png){.w575}</center><pre></pre>
+
+
+
+## An example from ChatGPT
+<center>![Slide ](imgs/page_21.png){.w575}</center><pre></pre>
+
+
+
+## Reinforcement learning from human feedback
+<center>![Slide ](imgs/page_22.png){.w575}</center><pre></pre>
+
+
+
+## Reinforcement learning from human feedback
+<center>![Slide ](imgs/page_23.png){.w575}</center><pre></pre>
+
+
+
+## Training a reward model
+<center>![Slide ](imgs/page_24.png){.w575}</center><pre></pre>
+
+
+
+## Training a reward model
+<center>![Slide ](imgs/page_25.png){.w575}</center><pre></pre>
+
+
+
+## Fine-tuning with reinforcement learning
+<center>![Slide ](imgs/page_26.png){.w575}</center><pre></pre>
+
+
+
+## Outline.
+<center>![Slide ](imgs/page_27.png){.w575}</center><pre></pre>
+
+
+
+## Instruction-tuned LLMs and multi-task learning
+
+Sanh etal 2022 Multitasck Promoted Training Enables Zero-Shot Task
+<center>![Slide ](imgs/page_28.png){.w575}</center><pre></pre>
+
+
+
+## Multilingual LLMs
+<center>![Slide ](imgs/page_29.png){.w575}</center><pre></pre>
+
+
+
+## Multilingual LLMs: Intuition
+<center>![Slide ](imgs/page_30.png){.w575}</center><pre></pre>
+
+
+
+## Multilingual LLMs: Models
+
+TLlRAtn4d4an lARAIIRARR ARKRRRARBA yathin nnn masAazl
+<center>![Slide ](imgs/page_31.png){.w575}</center><pre></pre>
+
+
+
+## Multilingual LLMs: Application
+<center>![Slide ](imgs/page_32.png){.w575}</center><pre></pre>
+
+
+
+## Can LLMs solve NLP?
+<center>![Slide ](imgs/page_33.png){.w575}</center><pre></pre>
+
+
+
+## Can LLMs solve NLP?
+<center>![Slide ](imgs/page_34.png){.w575}</center><pre></pre>
+
+
+
+## Outstanding challenges and future directions
+<center>![Slide ](imgs/page_35.png){.w575}</center><pre></pre>
+
+
+
+
+
+
+
+
+
+
+
+

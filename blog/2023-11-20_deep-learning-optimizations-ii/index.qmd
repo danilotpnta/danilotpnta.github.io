@@ -1,0 +1,827 @@
+---
+title: "Deep Learning Optimizations II"
+description: "Description of this Post"
+date: "2023-11-20"
+date-format: long
+year: "2023"
+categories: [All, Deep Learning, TAGS]
+toc: false
+jupyter: git-pages
+code-fold: true
+number-sections: true
+---
+
+<!-- ## Title -->
+<!-- <center>![Slide 1](imgs/page_1.png){.w575}</center><pre></pre> -->
+
+
+
+<!-- ## Last time: -->
+<!-- <center>![Slide 2](imgs/page_2.png){.w575}</center><pre></pre> -->
+
+
+
+<!-- ## Lecture overview
+<center>![Slide 3](imgs/page_3.png){.w575}</center><pre></pre> -->
+
+
+
+## Lecture overview
+<center>![Slide 4](imgs/page_4.png){.w575}</center><pre></pre>
+
+
+
+## Start with
+<center>![Slide 5](imgs/page_5.png){.w575}</center><pre></pre>
+
+
+
+## Quiz
+<center>![Slide 6](imgs/page_6.png){.w575}</center><pre></pre>
+
+Why left would be preferred?
+
+- simpler model
+- generalize better to unseen data
+
+Why the right is better?
+
+- We are actually fitting all the data points
+- The right hand side is the ground truth
+- You dont care about extrapolating 
+
+## Digression: Gravitation
+
+<center>![Slide 7](imgs/page_7.png){.w575}</center><pre></pre>
+
+
+
+## Bias-variance tradeoff
+<center>![Slide 8](imgs/page_8.png){.w575}</center><pre></pre>
+
+The single best prediction of the parameters
+
+A good estimator is a function whose output is close to the true underlying thetha that generated the data
+
+## Bias-variance tradeoff
+<center>![Slide 9](imgs/page_9.png){.w575}</center><pre></pre>
+
+
+**Bias**
+
+Estimator's expected value= so the ouput of our thetha estimate and the true value of that parameter
+
+Bias comes from not being able to model the real model in a correct way
+
+**Variance**
+
+So if you use a different training set or a different split how different are the learnt NNs parameters. If differ a lot then high variance
+
+## Bias-variance tradeoff
+<center>![Slide 10](imgs/page_10.png){.w575}</center><pre></pre>
+
+High variance & low bias, your model on average get it right but it has a high variance because it wants to model all noise, so overfilling, it spread all over the place 
+
+High bias and low variance, in average it does not even get it correct so underfitting
+
+## Overfitting
+<center>![Slide 11](imgs/page_11.png){.w575}</center><pre></pre>
+
+
+## Overfitting
+<center>![Slide 12](imgs/page_12.png){.w575}</center><pre></pre>
+
+It will learn to recognize that the img contains hourses not by the hourses but the watermark. This is seen in the heat-map where the point of attention is in the watermark. This is overfitting 
+
+## Overfitting
+<center>![Slide 13](imgs/page_13.png){.w575}</center><pre></pre>
+
+To avoid overfitting we use **regularization**
+
+## Overfitting: how “powerful” are neural networks?
+<center>![Slide 14](imgs/page_14.png){.w575}</center><pre></pre>
+
+
+
+## This isn’t the full story..
+<center>![Slide 15](imgs/page_15.png){.w575}</center><pre></pre>
+
+
+
+## Update 2019: Double Descent
+<center>![Slide 16](imgs/page_16.png){.w575}</center><pre></pre>
+
+Dash line is where the data samples equals the number of parameters
+
+So in the top right image even if we have increase the number of hidden layers and our training error is zero then our test set is still decreasing that is weird.
+
+So here we then presume that bigger model will have lower error.
+
+Before we use to have a curve upwrads from the tipical bias/variance curve in the prev slide, but the weird thing is that where the dash line meets then this error starts to decrease again. 
+
+Two answers: smoothness and regularization
+
+## Double-descent: Smoothness from bigger models
+<center>![Slide 17](imgs/page_17.png){.w575}</center><pre></pre>
+
+In the x axis you have the number of times SGD was proceed, so the amount of units of texts akak 'words' were processed
+
+We can see that with larger models I require fewer samples to reach a lower test loss
+
+Also when they reach stability they can provide with a test loss which is the best shot they can give and this depends on their size, larger models give more accurate results 
+
+Also it shows that the quicker models learns quickler than the smaller model. So while the smaller model for a given number of tokens the large model learns more quickler.
+
+This is Language models still not applicable for vision.
+
+We also can say that (in language models) in terms of flops is more efficient to learn large models for fewer steps than to learn small models for larger amount of steps 
+
+## Double-descent in practice?
+<center>![Slide 18](imgs/page_18.png){.w575}</center><pre></pre>
+
+In practice if you increase the number of neurons you may be closer to overfitting. For that we need regularization 
+
+## Regularization
+<center>![Slide 19](imgs/page_19.png){.w575}</center><pre></pre>
+
+Here we reduce the complexity of a NN and avoid ovverfitting
+
+## 1) L2-regularization
+<center>![Slide 20](imgs/page_20.png){.w575}</center><pre></pre>
+
+Referred to weight decay or Ritch regression in the linear case  
+
+Omega is proportional to how large the weights are
+
+Minimizing this is also the same as if you assume a Gaussian prior on your weight, here you assume the weights are Gaussian distributed 
+
+## 1) L2-regularization
+
+### L2 & L1 Formula
+<center>![](imgs/2023-11-21-00-30-48.png){.w250}</center><pre></pre>
+
+
+:::{.callout-note collapse="false"}
+# L2 example Python
+
+The L2 loss, also known as the Euclidean loss or Mean Squared Error (MSE), is a common loss function used in regression problems. It measures the average squared difference between the predicted values and the actual values.
+
+The formula for L2 loss is given by:
+
+$L2\_loss = \frac{1}{N} \sum_{i=1}^{N} (y_i - \hat{y}_i)^2$
+
+Where:
+
+- $N$ is the number of data points.
+- $y_i$ is the true (ground truth) value for the i-th data point.
+- $\hat{y}_i$ is the predicted value for the i-th data point.
+
+Here's a simple example in Python using NumPy:
+
+```{python}
+import numpy as np
+
+# Generate some example data
+true_values = np.array([2, 4, 5, 4, 5])
+predicted_values = np.array([1.5, 3.5, 4.8, 4.2, 5.2])
+
+# Calculate L2 loss
+l2_loss = np.mean((true_values - predicted_values)**2)
+
+print("L2 Loss:", l2_loss)
+```
+
+The L2 loss is calculated by taking the mean of the squared differences between the true and predicted values. The smaller the L2 loss, the better the model's predictions align with the true values.
+
+:::
+
+<center>![Slide 21](imgs/page_21.png){.w575}</center><pre></pre>
+
+Lamda tells you how important the regularization is, if:
+
+- Lambda high then puts all the weights towards zero
+- Lambda is zero, then it learns the typical loss and do not care about regularization 
+
+Lambda during trainnig is fixed, if you want to find the best one you need to run lots of experiments
+
+## 2) L1-regularization
+<center>![Slide 22](imgs/page_22.png){.w575}</center><pre></pre>
+
+Isotropics means is equal in all directions
+
+Now if you take the gradient of this, now if you take derivative of w, because you want to optimize then it end ups a 1/2. So you end up with a constant factor in the loss that keeps getting substracted. So what happens is that we end up substracting a constant to our weights.
+
+So it substract a bit from the positive weights and adds a bit to the negative weights and pushed them towards zero
+
+## 2) L1-regularization
+<center>![Slide 23](imgs/page_23.png){.w575}</center><pre></pre>
+
+L1 leads to sparce weights, so that means more weights will be closer to zero 
+
+If alpha here increases then that means weights become zero
+
+
+## Why do L1 and L2 Regularizations work?
+<center>![Slide 24](imgs/page_24.png){.w575}</center><pre></pre>
+
+L2 regularization has basically a circular constraint area because you have w1^2 + w2^2 needs to be constant so all these combinations would be a circle
+
+So the contours of the loss function in red will intercept the constrains regions at an axis. What that means is that if you are trying to find in this case the optimal loss, then it touches the constraint region where one of the values is set to zero while with L2 regularization there is no particular point where you could make one of the weights zero
+
+This is because it needs to have the sum of the squares to be a small value but there is no particular motivation to have a similar weigth dimension to be equal to zero, so there is no reason to have sparse weights in L2
+
+
+
+## Effect: linear regression example
+<center>![Slide 25](imgs/page_25.png){.w575}</center><pre></pre>
+
+Here the alpha goes from strong to weak
+
+In L1 it puches some weights to zero and then stay zero aftwer a while and it is not like all of them get smaller at the same time but some of them stay quite high for a loong time, and now increasing alpha here you are making individual weights close to zero.
+
+**L2 Regularization (Weight Decay):** Encourages smaller weights but does not force them to be exactly zero. It smoothens the weights but doesn't induce sparsity.
+
+**L1 Regularization:** Promotes sparsity by adding a penalty term based on the absolute values of the weights. This can lead to some weights being exactly zero.
+
+
+
+## 3) Early stopping
+<center>![Slide 26](imgs/page_26.png){.w575}</center><pre></pre>
+
+
+
+## 3) Early stopping
+<center>![Slide 27](imgs/page_27.png){.w575}</center><pre></pre>
+
+*Typo: with better **test** set error
+
+The model at this stage have low variance because they are not overfitting
+
+
+## 3) Early stopping
+<center>![Slide 28](imgs/page_28.png){.w575}</center><pre></pre>
+
+
+
+## Why does early-stopping work as regularization?
+<center>![Slide 29](imgs/page_29.png){.w575}</center><pre></pre>
+
+
+
+## Why does early-stopping work as regularization?
+<center>![Slide 30](imgs/page_30.png){.w575}</center><pre></pre>
+
+Here weight decay they mean by L2-regularization
+
+
+:::{.callout-note collapse="false"}
+# Weight decay (L2-loss) vs Early Stopping
+
+Weight decay, also known as L2 regularization, is a technique to prevent overfitting by adding a penalty term to the loss function that is proportional to the squared magnitudes of the weights. This regularization term discourages the model from learning very large weights and encourages a smoother and more generalized solution.
+
+**Early Stopping:**
+
+Early stopping is a regularization technique used during the training of a machine learning model, typically in the context of iterative optimization algorithms like gradient descent. The idea behind early stopping is to monitor the model's performance on a validation set during training and stop the training process when the performance on the validation set starts to degrade, even if the performance on the training set continues to improve.
+
+- **Mechanism:** Monitor a performance metric (e.g., validation loss) on a separate validation set during training.
+- **Decision Criteria:** Stop training when the performance on the validation set starts to worsen or fails to improve for a certain number of consecutive epochs.
+- **Purpose:** Prevent overfitting by terminating training before the model starts to memorize noise in the training data.
+
+**Weight Decay (L2 Regularization):**
+
+Weight decay, also known as L2 regularization, is a technique to prevent overfitting by adding a penalty term to the loss function that is proportional to the squared magnitudes of the weights. This regularization term discourages the model from learning very large weights and encourages a smoother and more generalized solution.
+
+- **Mechanism:** Add a term to the loss function that penalizes large weights by adding the sum of squared weights multiplied by a regularization strength.
+- **Decision Criteria:** No specific stopping criterion; regularization is applied throughout the training process.
+- **Purpose:** Encourage the model to have smaller and more evenly distributed weights, preventing overfitting.
+
+**Key Differences:**
+
+1. **Focus:**
+   - Early stopping focuses on monitoring the model's performance during training and stopping when the validation performance indicates potential overfitting.
+   - Weight decay focuses on adjusting the optimization objective by penalizing large weights, aiming to prevent overfitting from the beginning of training.
+
+2. **Decision Criteria:**
+   - Early stopping makes decisions based on the validation performance, and the training stops when the validation performance degrades.
+   - Weight decay does not have a specific stopping criterion; it is a continuous regularization technique applied throughout training.
+
+3. **Implementation:**
+   - Early stopping involves monitoring and interrupting the training loop.
+   - Weight decay involves adding a regularization term to the loss function during each iteration of the optimization algorithm.
+
+In practice, these techniques can be used together to enhance the regularization effect and improve the generalization performance of a machine learning model.
+:::
+
+
+## 4) Dropout: the problem it addresses
+<center>![Slide 31](imgs/page_31.png){.w575}</center><pre></pre>
+
+
+
+## 4) Dropout: why does it work?
+<center>![Slide 32](imgs/page_32.png){.w575}</center><pre></pre>
+
+
+
+## 4) Dropout: why does it work?
+<center>![Slide 33](imgs/page_33.png){.w575}</center><pre></pre>
+
+
+
+## 4) Dropout: how is it implemented?
+<center>![Slide 34](imgs/page_34.png){.w575}</center><pre></pre>
+
+You switch the activations to 0, and now say with Bernulli you have 50% neurons working
+
+During testing you are not learning so you use all the neurons
+
+- Now with Dropout you cannot have neurons that are inactive, because you drop all other neurons so now they need to work 
+- Decreases overfitting
+
+
+## Dropout
+<center>![Slide 35](imgs/page_35.png){.w575}</center><pre></pre>
+
+
+
+## Dropout
+<center>![Slide 36](imgs/page_36.png){.w575}</center><pre></pre>
+
+
+
+## Dropout
+<center>![Slide 37](imgs/page_37.png){.w575}</center><pre></pre>
+
+
+
+## Dropout
+<center>![Slide 38](imgs/page_38.png){.w575}</center><pre></pre>
+
+
+
+## Dropout
+<center>![Slide 39](imgs/page_39.png){.w575}</center><pre></pre>
+
+
+
+## Dropout
+<center>![Slide 40](imgs/page_40.png){.w575}</center><pre></pre>
+
+
+
+## Dropout US. Bagging
+<center>![Slide 41](imgs/page_41.png){.w575}</center><pre></pre>
+
+Bagging, also known as bootstrap aggregation, is the ensemble learning method that is commonly used to reduce variance within a noisy dataset. It is train in parallel
+
+<center>![](imgs/2023-11-21-11-01-40.png){.w350}</center><pre></pre>
+
+Bagging:
+
+- Has its corresponding  training set that is different from the whole training set
+- Uses all neurons
+
+Dropout:
+
+- It does not employ all neurons 
+- They are not trained they only get one SGD because you have many infinitely subnetworks, so if you apply dropout it is very unlikely that you trian the same subentwork many times 
+
+
+## Dropout beyond Bagging
+<center>![Slide 42](imgs/page_42.png){.w575}</center><pre></pre>
+
+
+
+## 5) Data augmentation
+<center>![Slide 43](imgs/page_43.png){.w575}</center><pre></pre>
+
+
+
+## Data augmentation
+<center>![Slide 44](imgs/page_44.png){.w575}</center><pre></pre>
+
+
+
+## One note about backtranslation though:
+<center>![Slide 45](imgs/page_45.png){.w575}</center><pre></pre>
+
+
+
+## Common computer vision augmentations visualised
+<center>![Slide 46](imgs/page_46.png){.w575}</center><pre></pre>
+
+
+
+## Data augmentation
+<center>![Slide 47](imgs/page_47.png){.w575}</center><pre></pre>
+
+
+
+## Data augmentation
+<center>![Slide 48](imgs/page_48.png){.w575}</center><pre></pre>
+
+
+
+## Other regularizations
+<center>![Slide 49](imgs/page_49.png){.w575}</center><pre></pre>
+
+
+
+## Various ways to regularise
+<center>![Slide 50](imgs/page_50.png){.w575}</center><pre></pre>
+
+
+
+## Normalization
+<center>![Slide 51](imgs/page_51.png){.w575}</center><pre></pre>
+
+Putting data into a common shape without distorting tis shape
+
+## Data preprocessing
+<center>![Slide 52](imgs/page_52.png){.w575}</center><pre></pre>
+
+Here basically if we have in same scale then our weights will not be elongated like in the elipse, now they would be able to take the same step size in the correct direction
+
+## Normalizing Input Data
+<center>![Slide 53](imgs/page_53.png){.w575}</center><pre></pre>
+
+This we apply in the input stage:
+
+Normalization is a linear operator so you can put this back into the NN after you have trained if you want to 
+
+
+## Normalizing intermediate layers
+<center>![Slide 54](imgs/page_54.png){.w575}</center><pre></pre>
+
+Here we talked about the normalization within the NN
+
+
+## Batch normalization
+<center>![Slide 55](imgs/page_55.png){.w575}</center><pre></pre>
+
+
+
+## Batch normalization
+<center>![Slide 56](imgs/page_56.png){.w575}</center><pre></pre>
+
+:::{.callout-note collapse="false"}
+
+# How does batch normalization works?
+
+Batch Normalization (BatchNorm) is a technique used in neural networks to improve the training stability and speed by normalizing the inputs of each layer. It was introduced by Sergey Ioffe and Christian Szegedy in their paper "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift."
+
+Here's a high-level overview of how Batch Normalization works:
+
+### Steps of Batch Normalization:
+
+1. **Normalization:**
+   - For each mini-batch during training, normalize the input by subtracting the mean and dividing by the standard deviation. The normalization is applied independently to each feature (dimension) in the input.
+
+   $\hat{x}^{(k)} = \frac{x^{(k)} - \mu}{\sqrt{\sigma^2 + \epsilon}}$
+
+   Where:
+   - $\hat{x}^{(k)}$ is the normalized output for the k-th feature.
+   - $x^{(k)}$ is the input for the k-th feature.
+   - $\mu$ is the mean of the mini-batch.
+   - $\sigma^2$ is the variance of the mini-batch.
+   - $\epsilon$ is a small constant added for numerical stability.
+
+2. **Scale and Shift:**
+   - Introduce learnable parameters (scale and shift) for each feature to allow the model to adapt during training.
+
+   $y^{(k)} = \gamma \hat{x}^{(k)} + \beta$
+
+   Where:
+   - $y^{(k)}$ is the final output for the k-th feature.
+   - $\gamma$ is a learnable scale parameter.
+   - $\beta$ is a learnable shift parameter.
+
+3. **Training and Inference:**
+   - During training, the mean and variance are computed for each mini-batch and used for normalization.
+   - During inference, running averages of mean and variance from the training phase are typically used for normalization to ensure consistency.
+
+### Benefits of Batch Normalization:
+
+1. **Improved Training Stability:**
+   - Helps mitigate the internal covariate shift problem, leading to more stable and faster convergence during training.
+
+2. **Reduced Sensitivity to Initialization:**
+   - Reduces the sensitivity of the model to the choice of initial weights.
+
+3. **Allows Higher Learning Rates:**
+   - Enables the use of higher learning rates, which can accelerate training.
+
+4. **Acts as Regularization:**
+   - Introduces a slight regularization effect, reducing the need for other regularization techniques.
+
+5. **Applicability to Various Architectures:**
+   - Can be applied to various types of neural network architectures, including fully connected layers, convolutional layers, and recurrent layers.
+
+Batch Normalization has become a standard component in many deep learning architectures due to its effectiveness in improving training stability and convergence speed.
+
+:::
+
+## Batch normalization — The algorithm
+<center>![Slide 57](imgs/page_57.png){.w575}</center><pre></pre>
+
+
+
+## How does batch normalization help optimization?
+<center>![Slide 58](imgs/page_58.png){.w575}</center><pre></pre>
+
+Because some layers will push ouputs in one direction, then other layers will not use this. With batch norm we centered data so that all layers train around these centered inputs
+
+## How does batch normalization help optimization?
+<center>![Slide 59](imgs/page_59.png){.w575}</center><pre></pre>
+
+
+
+## Benefits of Batch normalization
+<center>![Slide 60](imgs/page_60.png){.w575}</center><pre></pre>
+
+1. Train faster because all layers train similarly quickly
+2. Allows you to have high learning rates because you wont have vanishing or exploding gradients because everything is 0-1 distributed 
+3. Makes weights easier to initialize, because you know everything will be between 0-1
+4. Make activations function sensible because all the activation functions have something special about zero
+5. Have added noise that comes from estimating the batch statistics, any noise that may help is regularization. Here the noise reduces overfitting and that acts as a regularization so that your model does not overfit.  
+Put it simple: Noise Disrupts Patterns
+
+
+## Quiz
+<center>![Slide 61](imgs/page_61.png){.w575}</center><pre></pre>
+
+There is **no** answer here
+
+## Batch normalization at test time
+<center>![Slide 62](imgs/page_62.png){.w575}</center><pre></pre>
+
+The important thing is that when you go to test time, you dont have batches (you dont want anything that is depended on how you construct the batch) because that means if you take another batch is not the same which then is not reproducible. 
+
+So what we usually do is keep a moving average of the mean and variance during training, and then at test time you plug them
+
+Basically you extract the mean and the variance form the training and use it in test data
+
+## Disadvantages of batch normalization
+<center>![Slide 63](imgs/page_63.png){.w575}</center><pre></pre>
+
+
+- It requires you to have large batch sizes because otherwhise the estimate of mean and variance is too noisy
+- Problematic if you have discrepancy of the training and tst data
+- Now the loss you get from training sample A, depends on what other training sample are present in the batch via this normalization of the mean and variance 
+- One disadvantage is that is usually the reason for bugs, because if you keep estimating the mean and variances for the test data but now it is not reproducible because it will depend on the batch itself 
+
+
+## Disadvantages of batch normalization with distributed training
+<center>![Slide 64](imgs/page_64.png){.w575}</center><pre></pre>
+
+- Different values across GPU
+- If you batch size is small in a single GPU, but maybe you have 10 GPUs running and for 10 GPUs your batch size is bigger, it will be a stupid idea to estimate 10 very noisy estimate of the mean and variance but instead you should compute across the GPU
+
+## Layer normalization
+<center>![Slide 65](imgs/page_65.png){.w575}</center><pre></pre>
+
+Better explained [here](https://www.pinecone.io/learn/batch-layer-normalization/)
+
+Here mean and variance are not computed across batch but across all channels and spatial dimensions.
+
+So now the statistics are independent of the batch size because now they depend on the feature dimensions see example below:
+
+:::{.callout-note collapse="false"}
+# Example Layer normalization
+
+Layer Normalization is a normalization technique similar to Batch Normalization but operates on a per-sample basis rather than per-minibatch. It normalizes the inputs of a layer across the features (dimensions) for each individual sample. Here's an example of how Layer Normalization is typically applied:
+
+
+```{python}
+#| code-fold: false
+import torch
+import torch.nn as nn
+
+# Assuming input has shape (batch_size, num_features)
+input_data = torch.randn(32, 64)
+
+# Layer Normalization
+layer_norm = nn.LayerNorm(normalized_shape=64)
+output = layer_norm(input_data)
+
+# Display input and output shapes
+print("Input shape:", input_data.shape)
+print("Output shape:", output.shape)
+
+```
+
+In this example:
+
+- `input_data` is a random tensor with shape (32, 64), representing a batch of 32 samples, each with 64 features.
+
+- `nn.LayerNorm` is the Layer Normalization layer provided by PyTorch. The `normalized_shape` parameter specifies the number of features in the input tensor.
+
+- The `output` tensor is the result of applying Layer Normalization to the input data.
+
+Layer Normalization normalizes the values along the feature dimension independently for each sample. This means that each feature in a sample is normalized based on its mean and standard deviation across the entire sample, rather than across a batch as in Batch Normalization.
+
+Layer Normalization is useful when the batch size is small or when working with sequences of varying lengths, as it normalizes each sample independently. It has been widely used in natural language processing tasks and recurrent neural networks.
+:::
+
+Basically, we have that our mean and std will be computed across dimensions, so on the columns, not on each input.
+So then each sample  (so each row) we make it with this mean and std to be distributed between 0 and 1.
+
+This is great for RNN, or other stuff that requires small batch sizes.
+
+Here the same operations happens at training and test time.
+
+So now instead of normalizing across data samples now we basically i.e. if the input is an image that each color should be roughly be ocurring the same amount of spread across all the image, because now we normalize it across channel dimensions  
+
+## Layer normalization (LN)
+<center>![Slide 66](imgs/page_66.png){.w575}</center><pre></pre>
+
+
+
+## Instance normalization (IN)
+<center>![Slide 67](imgs/page_67.png){.w575}</center><pre></pre>
+
+Instance normalization now you do layer normalization but per channel and per training example.
+
+So now the network should be agnostic to the constract of the original iamge and of the constrast whithin the channels
+
+Not used that often
+
+Here we compute the mean and var per sample but not per channel.
+
+:::{.callout-note collapse="false"}
+# How Instance Normalization works
+
+Instance Normalization is a normalization technique similar to Batch Normalization and Layer Normalization but operates on a per-instance basis. It normalizes the activations of each individual sample independently. Here's an explanation of how Instance Normalization works:
+
+### Instance Normalization Steps:
+
+1. **Input Tensor:**
+   - Assume you have an input tensor $X$ with shape $(N, C, H, W)$, where:
+     - $N$ is the batch size.
+     - $C$ is the number of channels.
+     - $H$ is the height of the feature map.
+     - $W$ is the width of the feature map.
+
+2. **Calculate Mean and Variance:**
+   - For each instance (sample) in the batch, calculate the mean $\mu$ and variance $\sigma^2$ along each channel independently. This is done for each channel and each instance separately.
+
+   $$\mu_c = \frac{1}{H \cdot W} \sum_{i=1}^{H} \sum_{j=1}^{W} X_{n,c,i,j}$$
+
+   $$\sigma^2_c = \frac{1}{H \cdot W} \sum_{i=1}^{H} \sum_{j=1}^{W} (X_{n,c,i,j} - \mu_c)^2$$
+
+3. **Normalize:**
+   - Normalize each channel of each instance independently using the calculated mean and standard deviation:
+
+   $$\hat{X}_{n,c,i,j} = \frac{X_{n,c,i,j} - \mu_c}{\sqrt{\sigma^2_c + \epsilon}}$$
+
+   Where:
+   - $\hat{X}_{n,c,i,j}$ is the normalized value.
+   - $X_{n,c,i,j}$ is the original input value.
+   - $\mu_c$ is the mean of the channel $c$ for the instance $n$.
+   - $\sigma^2_c$ is the variance of the channel $c$ for the instance $n$.
+   - $\epsilon$ is a small constant added for numerical stability.
+
+4. **Scale and Shift:**
+   - Introduce learnable scale ($\gamma$) and shift ($\beta$) parameters for each channel:
+
+   $$Y_{n,c,i,j} = \gamma_c \hat{X}_{n,c,i,j} + \beta_c$$
+
+   Where:
+   - $Y_{n,c,i,j}$ is the final normalized output.
+   - $\gamma_c$ is a learnable scale parameter for channel $c$.
+   - $\beta_c$ is a learnable shift parameter for channel $c$.
+
+### Benefits of Instance Normalization:
+
+- **Normalization Across Samples:**
+  - Instance Normalization normalizes each instance independently, making it suitable for scenarios where batch sizes may vary or are small.
+
+- **Reduces Covariate Shift:**
+  - Similar to Batch Normalization, Instance Normalization helps reduce internal covariate shift, leading to more stable training.
+
+- **Applicability to Style Transfer:**
+  - Instance Normalization has found applications in style transfer tasks in computer vision.
+
+Instance Normalization is often used in computer vision tasks, especially in scenarios where the batch size may be small or when normalization across instances is desired.
+
+
+:::
+
+## Group normalization (GN)
+<center>![Slide 68](imgs/page_68.png){.w575}</center><pre></pre>
+
+We are gonna group different certain channels toguether. So we are not normalizing per channel  but per groups, for instance 5 channels. 
+
+1. If you have only one group then you recover layer nomalization because layer normal normalizes across all channels and not per channel 
+
+2. If you have more number of channel group toguether i.e 3 channels group together then you do Instance normalization. meaning you compute the mean per sample across each channel
+
+- In Grouped Convs, you are basically separating the hidden layers or the hidden channels in hidden groups which makes computations more easier
+
+- This is better than batch normalization for small batches <32
+
+## A comparison of different normalizations
+<center>![Slide 69](imgs/page_69.png){.w575}</center><pre></pre>
+
+
+
+## Weight normalization
+<center>![Slide 70](imgs/page_70.png){.w575}</center><pre></pre>
+
+You can thing the weights like a vector, you can have its magnitude and its direction. Now with this g can learn this parameter which tells you how long you want to go in that direction  
+
+
+<center>![Slide 72](imgs/page_72.png){.w575}</center><pre></pre>
+
+
+<center>![Slide 73](imgs/page_73.png){.w575}</center><pre></pre>
+
+
+
+## Learning rate
+<center>![Slide 74](imgs/page_74.png){.w575}</center><pre></pre>
+
+
+
+## Convergence
+<center>![Slide 75](imgs/page_75.png){.w575}</center><pre></pre>
+
+To achieve convergence you need tehse two equations:
+
+1. all learning over time should be infinitely to allow for exploration
+2. The quadratic term should be less than infite to converge
+
+## Learning rate schedules
+<center>![Slide 76](imgs/page_76.png){.w575}</center><pre></pre>
+
+You also make a warmpup learning rate so you start by going up in a linear fashion
+
+## In practice
+<center>![Slide 77](imgs/page_77.png){.w575}</center><pre></pre>
+
+
+
+## Quiz
+<center>![Slide 78](imgs/page_78.png){.w575}</center><pre></pre>
+
+We do all of the above,
+
+- It is good that if the loss explode you check the individual values of the gradients, 
+- or was the batch size was so small that something could have affect it
+- or was the learning rate too high that even a small batch it was not too but but the large learning rate was too big tha then it end up in a completely broken spot in the NNs
+
+## Dropout rate
+<center>![Slide 79](imgs/page_79.png){.w575}</center><pre></pre>
+
+
+
+## Batch size
+<center>![Slide 80](imgs/page_80.png){.w575}</center><pre></pre>
+
+
+
+## Designing CNNs to become even better. (Don’t try this at home)
+<center>![Slide 81](imgs/page_81.png){.w575}</center><pre></pre>
+
+Architecture, which model do you use?
+
+
+## Number of layers and neurons
+<center>![Slide 82](imgs/page_82.png){.w575}</center><pre></pre>
+
+Progress is not only in the architecture side, for example if you want to develop better algorithms, you want to have just a neural network which can identify between cats and dogs, there is multiple ways:
+
+1. Come up with a new architecture
+2. Come up with better gradients and better weights of the NNs 
+
+## Babysitting Deep Nets
+<center>![Slide 83](imgs/page_83.png){.w575}</center><pre></pre>
+
+for classifying 8 classes, the loss should be -log(1/8) and you check whether is true, if it gets worst performance that randomly guessing so something is wrong
+
+## Logging tools
+<center>![Slide 84](imgs/page_84.png){.w575}</center><pre></pre>
+
+
+
+## Babysitting Deep Nets
+<center>![Slide 85](imgs/page_85.png){.w575}</center><pre></pre>
+
+[Link1](http://karpathy.github.io/2019/04/25/recipe/)
+
+## Reading material
+<center>![Slide 86](imgs/page_86.png){.w575}</center><pre></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
