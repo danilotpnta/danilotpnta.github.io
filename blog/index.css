@@ -301,3 +301,7 @@ span.hasth-tag {
     display: none !important;
 }
 
+/* Gives some padding before the footer */
+main {
+    margin-bottom: 3em;
+}
