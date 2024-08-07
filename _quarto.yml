@@ -38,20 +38,12 @@ website:
     type: overlay
 
   navbar:
-    title: "<span id='danilo_topanta_brand'> Danilo Toapanta</span> <a id='mysite' class='mysite' href= '../../../../../sites/'>MySites</a>"
-    # title: "<span id='danilo_topanta_brand'> Danilo Toapanta</span>"
-    # logo-href: ../../../../../../../../../../../sites/
+    title: "<span id='danilo_topanta_brand'> Danilo Toapanta</span> <a id='mysite' class='mysite' href= '/sites/'>MySites</a>"
     right:
       - text: "<span id='home-welcome-msg'>Home</span>"
         file: index.qmd
       - text: "Blog"
         href: blog/index.qmd
-      # - text: "Writing"
-      #   menu:
-      #   - text: Blog
-      #     href: blog/index.qmd
-      #   - text: Notes
-      #     href: notes/index.qmd
       - text: "Projects"
         href: projects/index.qmd
       - text: "About"
@@ -59,34 +51,18 @@ website:
       - icon: github
         href: https://github.com/danilotpnta?tab=repositories
         target: _blank
-      # - icon: braces
-        # href: dev/ # Replace for actual url
-      # - icon: search 
-        # href: "#top"
-      # - icon: moon
-      #   href: about/qmd
 
   page-footer:
     left:
-      # - text: "[Mantained by Danilo Toapanta]{.footerDaniloToapanta}"
       - text: "[© 2024 Danilo Toapanta]{.footerDaniloToapanta}"
         file: about/index.qmd
     center: 
-      # - text: "Mantained by Danilo Toapanta 
-      #        [[Newsletter](coming-soon.qmd)]{.a-padding-footer .disable-link-underline}
-      #        [[RSS](docs/sitemap.xml)]{.a-padding-footer .disable-link-underline}
-      #        "
-      # - text: "[Mantained by Danilo Toapanta]{.footerDaniloToapanta}"
-      #   file: about/index.qmd
       - text: "Privacy"
         file: privacy/index.qmd
-      - text: "Donate a Coffe"
+      - text: "Donate a Coffee"
         file: coming-soon.qmd
       - text: "Version 1.2.0"
         file: site-ver-hist/index.qmd
-      # - icon: github
-      #   href: https://github.com/
-    # center: "Mantained by Danilo Toapanta </br> [[Source](https://github.com/danilotpnta/danilotpnta.github.io)]{.grey-link-underline} | License "
     right:
       - icon: github
         href: https://github.com/
@@ -110,7 +86,6 @@ format:
     code-link: true
     code-fold: show
     highlight-style:
-      # light: styling/atom-one-light.theme
       light: styling/arrow-light.theme
       dark: styling/dracula.theme
     include-in-header:
