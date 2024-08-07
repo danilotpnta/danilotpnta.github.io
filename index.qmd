@@ -1,8 +1,9 @@
 ---
 #title: "Our market share is `r round(100 * 3, 2)`% now!"
 sidebar: false
-css: index.css
+css: styling/index.css
 ---
+
 
 <!-- :::{.center .show-anchor-link}
 # Home {.unlisted .unnumbered }
