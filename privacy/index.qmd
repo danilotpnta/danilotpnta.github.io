@@ -1,0 +1,31 @@
+---
+pagetitle: "Danilo Toapanta - Privacy Policy"
+title: "Privacy Policy"
+date-modified: last-modified
+---
+
+## Introduction
+Welcome to [danilotpnta.com](https://www.danilotpnta.com/). This privacy policy explains how we collect, use, and share information about you when you use our website.
+
+## Data Collection
+We do not collect personal data unless you explicitly provide it to us, such as when you subscribe to our newsletter or contact us directly.
+
+## Usage of Collected Data
+Any data collected will be used solely for the purpose for which it was provided, such as sending newsletters or responding to inquiries.
+
+## Third-Party Services
+We may use third-party services to improve our website's functionality. These services may collect anonymous data about your usage.
+
+## Content Disclaimer
+Some of the content on this website, including images and lecture slides, may not be authored by us. We respect the intellectual property rights of others and strive to give proper credit to original authors. If you find any content on our website that belongs to you and is not properly credited, please contact us, and we will take appropriate action.
+
+## Contact Information
+If you have any questions or feedback, please contact us at:
+
+- danilotpnta [at] gmail [dot] com.
+
+## Changes to This Privacy Policy
+We may update this privacy policy from time to time. Any changes will be posted on this page with an updated revision date.
+
+
+

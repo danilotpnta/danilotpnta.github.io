@@ -2,6 +2,8 @@
 title: "Features, tools & improvements website "
 description: "Description of this Note"
 date: "2023-08-27"
+date-format: long
+year: "2023"
 categories: [All, TAGS]
 number-sections: true
 toc: false

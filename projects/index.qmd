@@ -23,7 +23,6 @@ css: index.css
 include-after-body: show-all-projects.html
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(knitr)

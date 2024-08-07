@@ -2,6 +2,8 @@
 title: "Commands GitHub"
 description: "A useful list of Github commands"
 date: "2023-08-22"
+date-format: long
+year: "2023"
 categories: [All, GitHub, TAGS]
 number-sections: false
 ---

@@ -2,6 +2,8 @@
 title: "Commands Quarto"
 description: "A useful list of Quarto commands"
 date: "2023-08-22"
+date-format: long
+year: "2023"
 categories: [All, Quarto, TAGS]
 number-sections: false
 ---

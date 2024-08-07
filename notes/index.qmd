@@ -26,6 +26,9 @@ include-after-body: show-all-posts.html
 css: index.css
 toc: false
 number-sections: false
+format:
+  html:
+    html-table-processing: none
 ---
 
 <!-- This activates option to run Javascript -->
@@ -36,6 +39,7 @@ library(knitr)
 
 <!-- <h1 style="padding: 0em; margin: 0em; padding-bottom: 1rem"> Notes </h1> -->
 
+```{=html}
 <div class="grid-text-showAllCateg">
 <div class="background-color-show-posts" style="display: flex; justify-content: center; align-items: center; padding: 5px 0px; border-radius: 5px;">
   <a id="clickable-showing-all-posts" href="/notes" style="text-decoration: none; pointer-events: none;">
@@ -58,24 +62,13 @@ library(knitr)
   </a>
 </div>
 </div>
-
-<!-- <div class="background-color-show-posts" style="display: flex; justify-content: center; padding: 5px 0px; border-radius: 5px;">
-  <a id="clickable-showing-all-posts" href="/notes" style="text-decoration: none; pointer-events: none;">
-    <p align="center" id="showing-all-posts" class="color-show-posts" style="font-weight: 400; margin: 0px; padding: 0px; font-style:italic">
-        Showing All Notes 
-    </p>
-  </a>
-  <a id="clickable-show-all-posts" href="/notes/#category=All" style="text-decoration: none; pointer-events: none;">
-    <p align="center" id="reload-posts-icon" class="color-show-posts" style="display:none; font-weight: 400; margin: 0px; padding: 0px; font-style:italic;">
-      Show All Notes <i style="padding-left:2px;" class='bi bi-arrow-counterclockwise'></i> 
-    </p>
-  </a>
-</div> -->
+```
 
 
 :::{.grid-blog}
 :::{.main-content-blog}
 
+```{=html}
 <div id= "show-tag-cat-selected" style="display:none;">
   <p style="padding-top:40px; padding-bottom:5px; margin-bottom:0px; color: #838383;">
     <span id="green_number_blog" style="padding-bottom:0px; margin-bottom:0px; color: #14ae73;">
@@ -88,9 +81,8 @@ library(knitr)
   <h1 id="tag_category_name" style="padding:0px 0px; margin: 0px 0px; padding-bottom:15px; border-bottom: none">Python</h1>
 </div>
 
-<!-- <h3 class="unlisted unnumbered no_anchor_link" style="margin-top: 0px; padding-top:30px; padding-bottom: 8px; font-size: 1.6rem;">2023</h3> -->
-
 <div style="padding-top:10px; "></div>
+```
 
 :::{.datePadding .newFont_and_color}
 :::{#notes-2023}
@@ -121,6 +113,7 @@ library(knitr)
 </div>
 ```
 :::
+
 
 
 ```{js echo=FALSE}
@@ -201,11 +194,7 @@ Object.keys(array_tags).forEach((item) => {
 
     list_tags.appendChild(a);
 });
-
-
-
 ```
-
 
 
 

@@ -2,7 +2,9 @@
 title: "BSc of Science Courses"
 description: "A list of the courses that I have taken during my Bachelor studies"
 date: "2023-09-03"
-categories: [All, Education, TAGS, UTwente, UvA]
+date-format: long
+year: "2023"
+categories: [All, Education, TAGS, UTwente]
 number-sections: true
 draft: true
 toc: false

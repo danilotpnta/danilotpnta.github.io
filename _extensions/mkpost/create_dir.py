@@ -41,6 +41,11 @@ def create_post(type_file, post_name):
 
     # Make a Directory
     os.mkdir(path_folder)
+
+    # Make imgs directory
+    imgs_path = path_folder + "/imgs"
+    if not os.path.exists(imgs_path):
+        os.makedirs(imgs_path)
     # print("Directory '% s' created!" % folder_name)
 
     # --------------- HELPER FUNCTION ------------------
@@ -68,7 +73,8 @@ def create_post(type_file, post_name):
             lines[title_row] = f'    \"title: \\"{raw_post_name}\\"\\n\",'
 
             date_row = 11
-            lines[date_row] = f'    \"date: \\"{current_date}\\"\\n\",'
+            current_time = datetime.today().strftime('T%H:%M:%S')
+            lines[date_row] = f'    \"date: \\"{current_date+current_time}\\"\\n\",'
 
             code_name_row = 16
             post_code_name = post_name + '.out.ipynb'
@@ -79,7 +85,12 @@ def create_post(type_file, post_name):
             lines[title_row] = f'title: "{raw_post_name}"\n'
 
             date_row = 3
-            lines[date_row] = f'date: "{current_date}"\n'
+            current_time = datetime.today().strftime('T%H:%M:%S')
+            lines[date_row] = f'date: "{current_date+current_time}"\n'
+
+            year_row = 5
+            current_year = datetime.today().strftime('%Y')
+            lines[year_row] = f'year: "{current_year}"\n'
 
         file = open(destination_file, 'w')
         file.writelines(lines)

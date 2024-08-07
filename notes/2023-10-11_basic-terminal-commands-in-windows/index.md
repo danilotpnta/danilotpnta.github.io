@@ -1,7 +1,9 @@
 ---
-title: "Basic Terminal Commands in Windows"
+title: "Commands in Windows"
 description: "Description of this Note"
 date: "2023-10-11"
+date-format: long
+year: "2023"
 categories: [All, TAGS]
 number-sections: true
 toc: false

@@ -1,0 +1,51 @@
+---
+pagetitle: "Danilo Toapanta - Version History"
+title: "Release History"
+---
+
+:::{.release}
+## Version 1.2.0 
+
+[Date: 2024-08-05]{.release-date}
+
+
+- Improved website layout and navigation.
+- Added new sections for machine learning tutorials.
+- Updated the image gallery with new lecture slides.
+- Fixed various bugs and improved performance.
+:::
+
+:::{.release}
+## Version 1.1.0
+
+[Date: 2024-06-01]{.release-date}
+
+🎊 Added search functionality. 🎊
+
+![](imgs/search_bar.png)
+
+- Introduced a new design for the homepage.
+- Enhanced the blog section with new features.
+- Updated the privacy policy page.
+- Fixed minor bugs.
+:::
+
+
+:::{.release}
+## Version 1.0.0
+
+[Date: 2024-01-15]{.release-date}
+
+
+🚀 Introduce categories and tags to blog section. 👀
+
+![](imgs/post_counter.png)
+
+- Initial release of the website.
+- Published initial machine learning articles and notes.
+- Uploaded initial set of lecture images.
+- Created privacy policy and code of conduct pages.
+:::
+
+
+

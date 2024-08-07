@@ -2,6 +2,8 @@
 title: "How to embed ML application?"
 description: "Example how to add ml application from gradio.app"
 date: "2023-10-06"
+date-format: long
+year: "2023"
 categories: [All, TAGS]
 number-sections: true
 toc: false

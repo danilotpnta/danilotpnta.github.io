@@ -2,6 +2,8 @@
 title: "How to create Conda environment using YML file?"
 description: "Description of this Note"
 date: "2023-09-11"
+date-format: long
+year: "2023"
 categories: [All, Environment, TAGS, Conda]
 number-sections: true
 toc: false

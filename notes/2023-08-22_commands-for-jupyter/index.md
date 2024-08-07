@@ -2,6 +2,8 @@
 title: "Commands Jupyter"
 description: "Description of this Note"
 date: "2023-08-22"
+date-format: long
+year: "2023"
 categories: [All, TAGS, Python]
 number-sections: false
 ---

@@ -2,6 +2,8 @@
 title: "How to Create a Jupyther Kernel"
 description: "Description of this Note"
 date: "2023-09-04"
+date-format: long
+year: "2023"
 categories: [All, TAGS]
 number-sections: true
 toc: false

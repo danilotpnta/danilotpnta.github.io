@@ -166,7 +166,7 @@ $font-size-base: 1.02rem;
     }
 
     // Hides the HAMBURGER Button
-    .navbar-dark .navbar-toggler {
+    .navbar-toggler {
         display: none;
     }
 
@@ -197,6 +197,10 @@ $font-size-base: 1.02rem;
 
 // --------------------------- NAV BAR -----------------------//
 
+.navbar-container.container-fluid {
+    --bs-gutter-x: 0rem !important;
+}
+
 // New changes to page width:
 @media (min-width: 992px){
     .navbar-container {
@@ -213,7 +217,7 @@ $font-size-base: 1.02rem;
 
 }
 // Removes bottom padding DANILO TOAPANTA
-.navbar-dark .navbar-brand {
+.navbar-brand {
     padding-bottom: 0px;
 }
 
@@ -233,7 +237,7 @@ $font-size-base: 1.02rem;
 //     }  
 // }
 
-.navbar-dark .navbar>.container-xxl, .navbar>.container-xl, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container, .navbar>.container-fluid{
+.navbar>.container-xxl, .navbar>.container-xl, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container, .navbar>.container-fluid{
     max-width: 670px; // 670px default
     margin: 0 auto;
 //     margin-left: 529px ;   // move all header to left
@@ -280,23 +284,23 @@ $font-size-base: 1.02rem;
     font-size: .7em !important;
     opacity: .7 !important;
 }
+// Fixes METADATA Spacing
+#title-block-header {
+    margin-block-end: 0rem !important;
+}
 
-// Fxes METADATA Spacing
+// Fixes METADATA Spacing
 .quarto-title .quarto-categories {
     padding-bottom: 0em !important;
 }
 
-// Fxes METADATA Spacing
-#title-block-header {
-    margin-block-end: 0rem !important;
-}
 
 .quarto-title-banner {
     padding-bottom: 0em !important;
 }
 
 // Increases Font Size of Nav Brand
-.navbar-dark .navbar-brand {
+.navbar-brand {
     font-size:  1.85rem;
     margin-bottom: 7px !important;
     letter-spacing: -.01rem;
@@ -370,8 +374,10 @@ footer.footer .nav-footer, #quarto-header>nav {
 
 table, .table {
 //     caption-side: top;
-    margin-bottom: 0rem;
-    margin-top: -0.5rem;
+    margin-bottom: 0rem !important;
+    margin-top: -0.5rem !important;
+    border-top: none !important;
+
 }
 
 // Make borders of table transparent
@@ -561,6 +567,12 @@ code {
 }
 
 // Title of the CATEGORIES or TAGS
+.list-blog-tags a {
+    // color: #666; // Default
+    color: #7a7b7b;
+}
+
+
 .list-blog a {
     // color: #666; // Default
     color: #7a7b7b;
@@ -575,6 +587,11 @@ code {
 a.category.active, a.category.active .count, a.category:hover .count, a.category:hover .name {
     color: #14ae73;
 }
+
+a.tag.active, a.tag:hover, a.category:hover .name {
+    color: #14ae73;
+}
+
 
 // a.category.active, a.category.active .count {
 //     color: #728371;
@@ -605,6 +622,16 @@ a.category.active, a.category.active .count, a.category:hover .count, a.category
     // background-color: #75fc8845 !important;
     pointer-events: none;
     // border-radius: 4px;
+}
+
+// Gives color to Danilo Toapanta metadata 
+#title-block-header.quarto-title-block.default .quarto-title-meta-contents a {
+    color: #212529;
+}
+
+// Gives background color to code area
+p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
+    background-color: #f6f6f6 !important;
 }
 
 
@@ -854,7 +881,7 @@ to hover with the Green color */
 //     text-align: center;
   margin: 0;
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -1272,7 +1299,7 @@ background: #b7b7b7;
 
 }
 
-.navbar-dark .navbar>.container-xxl, .navbar>.container-xl, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container, .navbar>.container-fluid {
+.navbar>.container-xxl, .navbar>.container-xl, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container, .navbar>.container-fluid {
     max-width: inherit;
 }
 
@@ -1310,6 +1337,15 @@ background: #b7b7b7;
     position: static;
 }
 
+// First Danilo Toapanta then HAMBURGER icon 
+.navbar .navbar-brand-container {
+    order: 0 !important;
+}
+
+// button.navbar-toggler {
+//     display: none !important;
+// }
+
 // This disables ANIMATION Header coming up
 .fixed-top {
     position: absolute !important;
@@ -1335,28 +1371,13 @@ header.headroom--unpinned {
 
 // Change surrounding color when pressing 
 // HAMBURGUER icon
-.navbar-dark .navbar-toggler {
+.navbar-toggler {
     color:#ffffff00
-}
-
-.a-padding-footer a{
-    padding-left: 1em;
-}
-
-// Allows to display Complete Footer
-.nav-footer-center {
-    min-width: 100%;
-    white-space: nowrap
 }
 
 // Elimnates last row
 .page-rows-contents {
     grid-template-rows: [content-top] minmax(max-content, 1fr) [content-bottom] minmax(0px, max-content) [page-bottom];
-}
-
-// Eliminates padding-top FOOTER
-.nav-footer-center {
-    margin-top: 0em;
 }
 
 
@@ -1419,6 +1440,31 @@ a.new-look-link {
 
 .quarto-navbar-tools{
     display: none !important;
+}
+
+// --------------------------- FOOTER  -------------------------- //
+
+.nav-footer .toc-actions {
+    display: none !important;
+}
+
+.a-padding-footer a{
+    padding-left: 1em;
+}
+
+// Allows to display Complete CENTER Footer
+// .nav-footer-center {
+//     min-width: 100%;
+//     white-space: nowrap
+// }
+
+// Eliminates padding-top FOOTER
+.nav-footer-center {
+    margin-top: 0em;
+}
+
+footer.footer .nav-footer, #quarto-header>nav {
+    padding-top: 0px;
 }
 
 
@@ -1545,10 +1591,41 @@ a.new-look-link {
 }
 
 
-
-
 // Gives color to label
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
     color: #5a6570;
 }
 
+// --------------------------- ANNOUNCEMENT  -------------------------- //
+
+#quarto-announcement {
+    justify-content: center; /* Center the entire content */
+    // align-items: center; /* Center items vertically */
+}
+
+.quarto-announcement-content {
+    align-items: center; /* Center items vertically within the content */
+}
+
+.quarto-announcement-icon {
+    margin-right: .5em; /* Add some space between the icon and the text */
+}
+
+#quarto-announcement .quarto-announcement-content {
+    margin-right: .5em;
+}
+
+.quarto-announcement-action {
+    position: absolute;
+    right: .5em; /* Position the close icon to the right */
+    margin-right: .25em;
+}
+
+// --------------------------- VERSION - HISTORY  -------------------------- //
+.release {
+    border: 1px solid #e1e4e8;
+}
+
+.release-date {
+    color: #586069;
+}

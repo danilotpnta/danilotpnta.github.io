@@ -171,7 +171,7 @@ $font-size-base: 1.02rem;
     }
 
     // Hides the HAMBURGER Button
-    .navbar-dark .navbar-toggler {
+    .navbar-toggler {
         display: none;
     }
 
@@ -201,6 +201,10 @@ $font-size-base: 1.02rem;
 }
 
 // --------------------------- NAV BAR -----------------------//
+
+.navbar-container.container-fluid {
+    --bs-gutter-x: 0rem !important;
+}
 
 // New changes to page width:
 @media (min-width: 992px){
@@ -256,11 +260,23 @@ h1, .h1, h2, .h2 {
     }
 }
 
+// Increases Font Size of Nav Brand
+.navbar-brand {
+    font-size:  1.85rem;
+    margin-bottom: 7px !important;
+    letter-spacing: -.01rem;
+    font-weight: 500;
+    opacity: 0.95;
+    // color: #595959;
+    vertical-align: text-bottom;
+    overflow: inherit;
+}
+
 // ---------------------- TABLES GENERAL  ---------------------- //
 
-table, .table {
-    margin-bottom: 0rem;
-}
+// table, .table {
+//     margin-bottom: 0rem;
+// }
        
 thead, tbody, tfoot, tr, td, th {
     border-color: transparent;
@@ -411,6 +427,19 @@ pre.sourceCode {
     color: darkgrey;
 }
 
+// Gives color to Danilo Toapanta metadata 
+#title-block-header.quarto-title-block.default .quarto-title-meta-contents a {
+    color: #fff;
+}
+
+// Gives background color to code area
+p code:not(.sourceCode), li code:not(.sourceCode), td code:not(.sourceCode) {
+    background-color: #373b3b !important;
+}
+
+pre code {
+    color: white;
+}
 
 // ---------------------------- NAV BAR ---------------------------- //
 
@@ -590,7 +619,7 @@ div.quarto-about-solana {
 }
 
 
-.navbar-dark .navbar>.container-xxl, .navbar>.container-xl, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container, .navbar>.container-fluid {
+.navbar>.container-xxl, .navbar>.container-xl, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container, .navbar>.container-fluid {
     max-width: inherit;
 }
 
@@ -840,4 +869,39 @@ to hover with the Green color */
 
 .aa-SubmitIcon{
     opacity: 0.7 !important;
+}
+
+// --------------------------- ANNOUNCEMENT  -------------------------- //
+
+#quarto-announcement {
+    justify-content: center; /* Center the entire content */
+    // align-items: center; /* Center items vertically */
+}
+
+.quarto-announcement-content {
+    align-items: center; /* Center items vertically within the content */
+}
+
+.quarto-announcement-icon {
+    margin-right: .5em; /* Add some space between the icon and the text */
+}
+
+#quarto-announcement .quarto-announcement-content {
+    margin-right: .5em;
+}
+
+.quarto-announcement-action {
+    position: absolute;
+    right: .5em; /* Position the close icon to the right */
+    margin-right: .25em;
+}
+
+
+// --------------------------- VERSION - HISTORY  -------------------------- //
+.release {
+    border: 1px solid #5e646b;
+}
+
+.release-date {
+    color: #c9d1d9;
 }

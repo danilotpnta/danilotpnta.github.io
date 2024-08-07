@@ -2,6 +2,8 @@
 title: "BSc Cursos Universidad"
 description: "Lista de cursos que he cursado en la universidad"
 date: "2023-09-03"
+date-format: long
+year: "2023"
 categories: [All, TAGS]
 number-sections: true
 toc: false

@@ -12,18 +12,31 @@ resources:
 
 website:
 
+  image: assets/danilo.png
   favicon: assets/danilo.png
   title: "Danilo Toapanta"
-  site-url: "https://www.danilotpnta.com"
   description: Personal website, portfolio and blog
-  image: assets/danilo.png
-  back-to-top-navigation: false
-#  site-path: "/danilotpnta.github.io/"  # when commented 404.html renders correctly
+  # site-path: "/danilotpnta.github.io/"  # when commented 404.html renders correctly
   # site-url: https://danilotpnta.github.io/
+  site-url: "https://www.danilotpnta.com"
+  repo-url: "https://github.com/danilotpnta/danilotpnta.github.io/"
+  repo-actions: [source, edit, issue]
+  # repo-branch: "gh-pages"
+
+  announcement: 
+    icon: info-circle
+    dismissable: false
+    content: "**Let op** - This website is undergoing scheduled maintenance"
+    type: primary
+    position: above-navbar
   
+  page-navigation: true
+  back-to-top-navigation: false
+
   search: 
     location: navbar
     type: overlay
+
   navbar:
     title: "<span id='danilo_topanta_brand'> Danilo Toapanta</span> <a id='mysite' class='mysite' href= '../../../../../sites/'>MySites</a>"
     # title: "<span id='danilo_topanta_brand'> Danilo Toapanta</span>"
@@ -53,28 +66,35 @@ website:
       # - icon: moon
       #   href: about/qmd
 
-
   page-footer:
+    left:
+      # - text: "[Mantained by Danilo Toapanta]{.footerDaniloToapanta}"
+      - text: "[© 2024 Danilo Toapanta]{.footerDaniloToapanta}"
+        file: about/index.qmd
     center: 
       # - text: "Mantained by Danilo Toapanta 
       #        [[Newsletter](coming-soon.qmd)]{.a-padding-footer .disable-link-underline}
       #        [[RSS](docs/sitemap.xml)]{.a-padding-footer .disable-link-underline}
       #        "
-      - text: "[Mantained by Danilo Toapanta]{.footerDaniloToapanta}"
-        file: about/index.qmd
-      - text: "Newsletter"
+      # - text: "[Mantained by Danilo Toapanta]{.footerDaniloToapanta}"
+      #   file: about/index.qmd
+      - text: "Privacy"
+        file: privacy/index.qmd
+      - text: "Donate a Coffe"
         file: coming-soon.qmd
-      - text: "RSS"
-        file: docs/sitemap.xml
+      - text: "Version 1.2.0"
+        file: site-ver-hist/index.qmd
       # - icon: github
       #   href: https://github.com/
     # center: "Mantained by Danilo Toapanta </br> [[Source](https://github.com/danilotpnta/danilotpnta.github.io)]{.grey-link-underline} | License "
-#    right:
-#      - icon: github
-#        href: https://github.com/
-#      - icon: twitter
-#        href: https://twitter.com/
-
+    right:
+      - icon: github
+        href: https://github.com/
+      - icon: twitter
+        href: https://twitter.com/
+      - icon: rss-fill
+        file: docs/sitemap.xml
+    
 format:
   html:
     html-math-method: mathjax
@@ -103,7 +123,5 @@ format:
             };
             </script>
       - file: _partials/icons/add-icons.html
-      - text: |
-          <link rel = "shortcut icon" href = "../../../../../../../../../../../assets/danilo.ico" />
     include-after-body:
       - file: _partials/search.html

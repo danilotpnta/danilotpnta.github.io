@@ -2,6 +2,8 @@
 title: "Command Environments"
 description: "A useful list of conda commands"
 date: "2023-08-22"
+date-format: long
+year: "2023"
 categories: [All, Environments, TAGS, Conda]
 number-sections: false
 ---

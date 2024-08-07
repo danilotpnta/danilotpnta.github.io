@@ -2,6 +2,8 @@
 title: "Commands Shells"
 description: "A useful list of Shell commands"
 date: "2023-08-22"
+date-format: long
+year: "2023"
 categories: [All, Shells, Scripting, TAGS, Bash, Zsh]
 number-sections: false
 ---

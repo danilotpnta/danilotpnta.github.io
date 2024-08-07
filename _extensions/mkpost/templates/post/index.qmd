@@ -2,6 +2,8 @@
 title: "Post's Title"
 description: "Description of this Post"
 date: "1999-12-30"
+date-format: long
+year: "1999"
 categories: [All, TAGS]
 toc: false
 jupyter: git-pages

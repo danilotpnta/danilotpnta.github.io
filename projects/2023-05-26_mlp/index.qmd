@@ -2,6 +2,8 @@
 title: "ML Project"
 image: image.png
 date: "2023-05-26"
+date-format: long
+year: "2023"
 categories: [All, Python, OpenSpiel, TAGS, Machine Learning]
 source: https://github.com/danilotpnta/MachineLearning
 ---

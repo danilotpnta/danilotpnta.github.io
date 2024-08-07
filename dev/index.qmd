@@ -3,7 +3,6 @@ pagetitle: "Danilo Toapanta - DEV"
 title: ''
 code-fold: true
 css: index.css
-date-modified: last-modified
 ---
 
 :::{.center .show-anchor-link}
