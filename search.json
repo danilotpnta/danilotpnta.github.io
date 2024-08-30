@@ -5434,9 +5434,9 @@
   {
     "objectID": "contact/index.html",
     "href": "contact/index.html",
-    "title": "Contact me ",
+    "title": "\nContact me \n",
     "section": "",
-    "text": "Contact me \n\nThanks for considering reaching out to me. I’m always happy to hear from you. You can use this form to send me an email.\nI also would love hearing if my educational materials have been helpful for you, and how they could be improved; particularly if they could be made more accessible.\n\n          \n\n\n\n\n\n\n\n\nFull Name  Email Address  Message\n\n\nSubmit"
+    "text": "Contact me \n\nThanks for considering reaching out to me. I’m always happy to hear from you. You can use this form to send me an email.\nI also would love hearing if my educational materials have been helpful for you, and how they could be improved; particularly if they could be made more accessible.\n\n          \n\n\n\n\n\n\n\nFull Name  Email Address  Message\n\n\nSubmit"
   },
   {
     "objectID": "coming-soon.html",
@@ -5520,7 +5520,7 @@
     "href": "about/index.html",
     "title": "Danilo Toapanta",
     "section": "",
-    "text": "Hi, there! This is Danilo.\n                    \n                    I’m an AI researcher based in the Netherlands.\n                    I studied Computer Science & Electrical Engineering in my undergraduate programme and now I am doing my master in Artificial Intelligence.\n                    When I am not trying to figure out how my computer works, I like to read books, run, go for a swim, and spend some quality time with my family.\n                    \n                    \n                        You can look me up on Github↗. \n                        Check out my LinkedIn↗. \n                        Read my lastest post.\n                        Or send me an\n                            email↗."
+    "text": "Hi, there! This is Danilo.\n                    \n                    I’m an AI researcher based in the Netherlands.\n                    I studied Computer Science & Electrical Engineering in my undergraduate programme and now I am doing my master in Artificial Intelligence.\n                    When I am not trying to figure out how my computer works, I like to read books, run, go for a swim, and spend some quality time with my family.\n                    \n                    \n                        \n                        Read my lastest post.\n                        Or send me an\n                            email↗."
   },
   {
     "objectID": "index.html",

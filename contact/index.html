@@ -240,13 +240,13 @@ window.MathJax = {
     }
       // Show successful message sent to user
     function showMessage(text, type) {
-      var messageDiv = document.getElementById('message-information');
+      var messageDiv = document.getElementById('message-confirmation');
       messageDiv.innerText = text;
       messageDiv.style.display = 'block';
       messageDiv.style.borderColor = type === 'success' ? 'green' : 'red';
       setTimeout(function() {
         messageDiv.style.display = 'none';
-      }, 5000); // 5 seconds
+      }, 4000); // 5 seconds
     }
     // Clicking on the email icon focuses on the Full Name input field
     function highlightContainer(event) {
@@ -258,14 +258,13 @@ window.MathJax = {
 
 <div class="grid">
 <div id="note" class="g-col-5">
-<section id="contact-me" class="level1">
-<h1>Contact me <span class="note-icon"><i class="fa-solid fa-feather-pointed" aria-label="feather-pointed"></i></span></h1>
-<!-- # Contact me []{.note-icon} -->
+<h1 class="contact-title">
+Contact me <span class="note-icon"><i class="fa-solid fa-feather-pointed" aria-label="feather-pointed"></i></span>
+</h1>
 <p>Thanks for considering reaching out to me. I’m always happy to hear from you. You can use this form to send me an email.</p>
 <p>I also would love hearing if my educational materials have been helpful for you, and how they could be improved; particularly if they could be made more accessible.</p>
 <!-- Hugging Face -->
-<p><a class="link-dark me-1" href="https://github.com/spcanelon" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://huggingface.co/danilotpnta" title="Hugging Face" target="_blank" rel="noopener" style="text-decoration: none"> <svg class="huggingface-icon" width="1.1em" height="1.1em" viewbox="0 0 24 24" aria-label="huggingface"> <use href="#huggingface-icon"></use></svg> </a> <a class="link-dark me-1" href="https://linkedin.com/in/danilotpnta" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a class="link-dark me-1" href="https://x.com/DaniloToapnta" title="Twitter" target="_blank" rel="noopener" style="text-decoration: none;"> <svg class="twitter-icon" width="1em" height="1em" viewbox="0 0 24 24" aria-label="twitter"> <use href="#twitter-icon"></use></svg> </a> <a class="link-dark me-1" href="#" title="Email" rel="noopener" onclick="highlightContainer(event)"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a></p>
-</section>
+<p><a class="link-dark me-1" href="https://github.com/danilotpnta" title="github" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-label="github"></i></a> <a class="link-dark me-1" href="https://huggingface.co/danilotpnta" title="Hugging Face" target="_blank" rel="noopener" style="text-decoration: none"> <svg class="huggingface-icon" width="1.1em" height="1.1em" viewbox="0 0 24 24" aria-label="huggingface"> <use href="#huggingface-icon"></use></svg> </a> <a class="link-dark me-1" href="https://linkedin.com/in/danilotpnta" title="LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-label="linkedin"></i></a> <a class="link-dark me-1" href="https://x.com/DaniloToapnta" title="Twitter" target="_blank" rel="noopener" style="text-decoration: none;"> <svg class="twitter-icon" width="1em" height="1em" viewbox="0 0 24 24" aria-label="twitter"> <use href="#twitter-icon"></use></svg> </a> <a class="link-dark me-1" href="#" title="Email" rel="noopener" onclick="highlightContainer(event)"><i class="fa-solid fa-envelope" aria-label="envelope"></i></a></p>
 </div>
 <div class="g-col-1">
 
@@ -284,14 +283,6 @@ Submit
 </div>
 </div>
 </div>
-<style>
-.link-dark{
-  font-size: 19px;
-}
-#message {
-  height: 7em;
-}
-</style>
 
 
 

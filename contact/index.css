@@ -83,3 +83,16 @@ padding-bottom: 5px;
 .note-icon{
 font-size: smaller;
 }
+
+@media (max-width: 569px){
+    h1.contact-title {
+        margin-top: 0em;
+    }
+}
+
+.link-dark{
+    font-size: 19px;
+  }
+  #message {
+    height: 7em;
+  }
