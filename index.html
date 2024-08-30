@@ -72,30 +72,6 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <!-- <link href="../../site_libs/quarto-contrib/material-icons-0.14.2/mi.css" rel="stylesheet"> -->
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  function openSearchIfParamExists() {
-    const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has('search')) {
-      // Programmatically click the search icon to open the search overlay
-      const searchIcon = document.querySelector('.bi-search');
-      if (searchIcon) {
-        searchIcon.click(); // Trigger the search icon click to open the search overlay
-        setTimeout(() => {
-          const searchBox = document.querySelector('.aa-Input');
-          if (searchBox) {
-            searchBox.focus(); // Focus on the actual input box
-          }
-        }, 500); // Adjust the timeout as needed
-      }
-    }
-  }
-
-  // Call the function to check the query parameter and open the search if needed
-  openSearchIfParamExists();
-});
-
-</script>
-<script>
 window.MathJax = {
   tex: {
     tags: 'ams'
@@ -104,7 +80,7 @@ window.MathJax = {
 </script>
 
 
-<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="styling/index.css">
 </head>
 
 <body class="floating nav-fixed">
@@ -118,7 +94,7 @@ window.MathJax = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title"><span id="danilo_topanta_brand"> Danilo Toapanta</span> <a id="mysite" class="mysite" href="../../../../../sites/">MySites</a></span>
+    <span class="navbar-title"><span id="danilo_topanta_brand"> Danilo Toapanta</span> <a id="mysite" class="mysite" href="./site-ver-hist/">v1.2</a></span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -179,10 +155,7 @@ window.MathJax = {
     Recognize this picture? shot me a [[message](mailto:danilotpnta@gmail.com?subject=%5BWebsite%5D%20-%20'Insert%20Subject%20Here'){target="_blank"}]{.disable-link-color-grey} if you do.
 </span> -->
 <p><img src="assets/banner.png" class="about-image rounded" style="display: block border-radius: .65rem !important; width: 100%; height: auto; padding-top: 5px;"></p>
-<p><span style="color: rgb(128, 128, 128, 1); font-weight:550; padding-right: 2.5px;"> Quick links: </span> <a style="text-decoration-color:rgba(163, 166, 168, 0.40); color: grey; )" href="./coming-soon.html">Slides</a> <span style="color:grey;"> |</span> <!-- <a style = "text-decoration-color:rgba(163, 166, 168, 0.40); color: grey; )" href= "tailor/">Tailor</a>
-<span style="color:grey;"> |</span>  --> <a style="text-decoration-color:rgba(163, 166, 168, 0.40); color: grey; )" href="projects/">Projects</a> <span style="color:grey;"> |</span> <a style="text-decoration-color:rgba(163, 166, 168, 0.40); color: grey;" href="books/">Books</a> <span style="color:grey;"></span></p>
-<!-- |</span> 
-<a style = "text-decoration-color:rgba(163, 166, 168, 0.40); color: grey;" href= "now/">What I'm doing now</a> -->
+<p><span style="color: rgb(128, 128, 128, 1); font-weight:550; padding-right: 2.5px;"> Quick links: </span> <a style="text-decoration-color:rgba(163, 166, 168, 0.40); color: grey; )" href="./coming-soon.html">Slides</a> <span style="color:grey;"> |</span> <a style="text-decoration-color:rgba(163, 166, 168, 0.40); color: grey; )" href="projects/">Projects</a> <span style="color:grey;"> |</span> <a style="text-decoration-color:rgba(163, 166, 168, 0.40); color: grey;" href="books/">Books</a> <span style="color:grey;"></span></p>
 <section id="news" class="level3 unlisted unnumbered">
 <h3 class="unlisted unnumbered anchored" data-anchor-id="news">News</h3>
 
@@ -191,9 +164,7 @@ window.MathJax = {
         <div>
             <div><span>Sep 2023</span> - I am attending, <a href="https://www.eatilburg.nl/calendar/openai" target="_blank" rel="noopener">OpenAI</a>: AI and the Future of Humanity</div>
             <div><span>Jun 2023</span> - I will do an intership at <a href="https://www.imec.be/nl" target="_blank" rel="noopener">IMEC</a></div>
-            <!-- <div><span>May 2023</span> - Have been accepted to the M.Sc. in AI at <a
-                                            href="https://www.uva.nl/"
-                                            target="_blank" rel="noopener">UvA</a></div> -->
+            <div><span>May 2023</span> - Have been accepted to the M.Sc. in AI at <a href="https://www.uva.nl/" target="_blank" rel="noopener">UvA</a></div>
             <div><span>Feb 2023</span> - Now the website has a Blog section</div>
             <div><span>Nov 2023</span> - Have completed <a href="https://inst.eecs.berkeley.edu/~cs188/sp22/project2/#question-3-5-points-alpha-beta-pruning" target="_blank" rel="noopener">AI Berkeley Course</a></div>
         </div>
@@ -209,7 +180,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>This website is built using Quarto. For a quick start guide, visit: <a href="./dev/index.html" style="color:inherit; text-decoration-color:#a3a6a8a1 ">DEV</a>.</p>
+<p>This website is built using Quarto. For a quick start guide, visit the <a href="https://quarto.org/" style="color:inherit; text-decoration-color:#a3a6a8a1 ">docs</a>.</p>
 </div>
 </div>
 
@@ -801,13 +772,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./coming-soon.html">
-<p>Donate a Coffe</p>
+    <a class="nav-link" href="./contact/index.html">
+<p>Contact</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./version-history/index.html">
-<p>Version 1.2.0</p>
+    <a class="nav-link" href="./license/index.html">
+<p>License</p>
 </a>
   </li>  
 </ul>

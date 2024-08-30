@@ -1,10 +1,38 @@
 [
   {
-    "objectID": "dev/index.html",
-    "href": "dev/index.html",
-    "title": "Danilo Toapanta",
+    "objectID": "accessibility/index.html",
+    "href": "accessibility/index.html",
+    "title": "Accessibility Commitment",
     "section": "",
-    "text": "In this section I have recompiled the sources, links and all the material that were more helpfull during the creation of this website."
+    "text": "Making sure all content I publish on the web is accessible to anyone and everyone is very important to me. While I’m not an expert on web design or accessibility, I am committed to trying my best.\nThis accessibility commitment was adapted from Silvia Canelón’s excellent blog."
+  },
+  {
+    "objectID": "accessibility/index.html#feedback",
+    "href": "accessibility/index.html#feedback",
+    "title": "Accessibility Commitment",
+    "section": "Feedback",
+    "text": "Feedback\nI welcome any feedback on the accessibility and inclusivity of my site and content. Please let me know if you encounter any accessibility barriers or areas for improvement and I’ll do my best to remedy them."
+  },
+  {
+    "objectID": "accessibility/index.html#accessibility-practices",
+    "href": "accessibility/index.html#accessibility-practices",
+    "title": "Accessibility Commitment",
+    "section": "Accessibility practices",
+    "text": "Accessibility practices\nThis site has been designed with the following features in mind:\n\nA color palette that meets WCAG 2.1 AA standards for contrast.\nAlternative text for all informative images.\nReadable font faces, specifically to avoid impostor letter shapes and mirroring.\n\nEach character in [iIl], [ceo], and [db qp] should all be distinct from one another.1\nThis site primarily uses Domine for headings, Atkinson Hyperlegible for body text (developed by the Braille Institute), and Fira Code for code.\n\nA table of contents in the sidebars for easier navigation.\n\nI use Google’s Lighthouse accessibility tests to check the accessibility of my website at each deployment. While I would love a perfect score of 100, I commit to a score of at least 80. The Quarto GitHub has quite a few open GitHub issues with accessibility tags that I have no control over."
+  },
+  {
+    "objectID": "accessibility/index.html#accessibility-tools",
+    "href": "accessibility/index.html#accessibility-tools",
+    "title": "Accessibility Commitment",
+    "section": "Accessibility tools",
+    "text": "Accessibility tools\n\nGoogle Lighthouse Tool\nGoogle Chrome Accessibility Features Reference\nColour Contrast Checker\nViz Palette\nWAVE Web Accessibility Evaluation Tool\nMicrosoft Edge Accessibility Guide"
+  },
+  {
+    "objectID": "accessibility/index.html#footnotes",
+    "href": "accessibility/index.html#footnotes",
+    "title": "Accessibility Commitment",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nAdded the [ceo] and [db qp] tests from Cara Thompson’s amazing data viz design system talk, specifically slide 22: Font inspiration.↩︎"
   },
   {
     "objectID": "notes/2023-09-03_commands-terminal/index.html",
@@ -5369,13 +5397,6 @@
     "text": "Welcome to danilotpnta.com. This privacy policy explains how we collect, use, and share information about you when you use our website."
   },
   {
-    "objectID": "privacy/index.html#introduction",
-    "href": "privacy/index.html#introduction",
-    "title": "Privacy Policy",
-    "section": "",
-    "text": "Welcome to danilotpnta.com. This privacy policy explains how we collect, use, and share information about you when you use our website."
-  },
-  {
     "objectID": "privacy/index.html#data-collection",
     "href": "privacy/index.html#data-collection",
     "title": "Privacy Policy",
@@ -5397,20 +5418,6 @@
     "text": "Third-Party Services\nWe may use third-party services to improve our website’s functionality. These services may collect anonymous data about your usage."
   },
   {
-    "objectID": "privacy/index.html#content-disclaimer",
-    "href": "privacy/index.html#content-disclaimer",
-    "title": "Privacy Policy",
-    "section": "Content Disclaimer",
-    "text": "Content Disclaimer\nSome of the content on this website, including images and lecture slides, may not be authored by us. We respect the intellectual property rights of others and strive to give proper credit to original authors. If you find any content on our website that belongs to you and is not properly credited, please contact us, and we will take appropriate action."
-  },
-  {
-    "objectID": "privacy/index.html#contact-information",
-    "href": "privacy/index.html#contact-information",
-    "title": "Privacy Policy",
-    "section": "Contact Information",
-    "text": "Contact Information\nIf you have any questions or feedback, please contact us at:\n\ndanilotpnta [at] gmail [dot] com."
-  },
-  {
     "objectID": "privacy/index.html#changes-to-this-privacy-policy",
     "href": "privacy/index.html#changes-to-this-privacy-policy",
     "title": "Privacy Policy",
@@ -5418,32 +5425,18 @@
     "text": "Changes to This Privacy Policy\nWe may update this privacy policy from time to time. Any changes will be posted on this page with an updated revision date."
   },
   {
-    "objectID": "version-history/index.html",
-    "href": "version-history/index.html",
-    "title": "Release History",
+    "objectID": "privacy/index.html#contact",
+    "href": "privacy/index.html#contact",
+    "title": "Privacy Policy",
+    "section": "Contact",
+    "text": "Contact\nIf you have any questions about this privacy policy or need further clarification, please reach out to me."
+  },
+  {
+    "objectID": "contact/index.html",
+    "href": "contact/index.html",
+    "title": "Contact me ",
     "section": "",
-    "text": "Date: 2024-08-05\n\nImproved website layout and navigation.\nAdded new sections for machine learning tutorials.\nUpdated the image gallery with new lecture slides.\nFixed various bugs and improved performance."
-  },
-  {
-    "objectID": "version-history/index.html#version-1.2.0",
-    "href": "version-history/index.html#version-1.2.0",
-    "title": "Release History",
-    "section": "",
-    "text": "Date: 2024-08-05\n\nImproved website layout and navigation.\nAdded new sections for machine learning tutorials.\nUpdated the image gallery with new lecture slides.\nFixed various bugs and improved performance."
-  },
-  {
-    "objectID": "version-history/index.html#version-1.1.0",
-    "href": "version-history/index.html#version-1.1.0",
-    "title": "Release History",
-    "section": "Version 1.1.0",
-    "text": "Version 1.1.0\nDate: 2024-06-01\n🎊 Added search functionality. 🎊\n\n\nIntroduced a new design for the homepage.\nEnhanced the blog section with new features.\nUpdated the privacy policy page.\nFixed minor bugs."
-  },
-  {
-    "objectID": "version-history/index.html#version-1.0.0",
-    "href": "version-history/index.html#version-1.0.0",
-    "title": "Release History",
-    "section": "Version 1.0.0",
-    "text": "Version 1.0.0\nDate: 2024-01-15\n🚀 Introduce categories and tags to blog section. 👀\n\n\nInitial release of the website.\nPublished initial machine learning articles and notes.\nUploaded initial set of lecture images.\nCreated privacy policy and code of conduct pages."
+    "text": "Contact me \n\nThanks for considering reaching out to me. I’m always happy to hear from you. You can use this form to send me an email.\nI also would love hearing if my educational materials have been helpful for you, and how they could be improved; particularly if they could be made more accessible.\n\n          \n\n\n\n\n\n\n\n\nFull Name  Email Address  Message\n\n\nSubmit"
   },
   {
     "objectID": "coming-soon.html",
@@ -5451,6 +5444,76 @@
     "title": "Coming Soon",
     "section": "",
     "text": "Coming Soon\n        \n    \n    \n        \n            The page you requested is under construction."
+  },
+  {
+    "objectID": "license/index.html",
+    "href": "license/index.html",
+    "title": "CC BY-NC-SA 4.0 License",
+    "section": "",
+    "text": "The content of this website is released under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA) license."
+  },
+  {
+    "objectID": "license/index.html#license-overview",
+    "href": "license/index.html#license-overview",
+    "title": "CC BY-NC-SA 4.0 License",
+    "section": "",
+    "text": "The content of this website is released under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA) license."
+  },
+  {
+    "objectID": "license/index.html#personal-disclaimer",
+    "href": "license/index.html#personal-disclaimer",
+    "title": "CC BY-NC-SA 4.0 License",
+    "section": "Personal Disclaimer",
+    "text": "Personal Disclaimer\nOpinions expressed are solely my own and do not express the views of my employer or any organizations I am associated with."
+  },
+  {
+    "objectID": "license/index.html#content-disclaimer",
+    "href": "license/index.html#content-disclaimer",
+    "title": "CC BY-NC-SA 4.0 License",
+    "section": "Content Disclaimer",
+    "text": "Content Disclaimer\nSome of the content on this website, including images and lecture slides, may not be authored by us. We respect the intellectual property rights of others and strive to give proper credit to original authors. If you find any content on our website that belongs to you and is not properly credited, please contact us, and we will take appropriate action."
+  },
+  {
+    "objectID": "license/index.html#attribution-and-credit",
+    "href": "license/index.html#attribution-and-credit",
+    "title": "CC BY-NC-SA 4.0 License",
+    "section": "Attribution and Credit",
+    "text": "Attribution and Credit\nThe content I create is intended for personal or educational use and is not available for commercial purposes. That means you are welcome to:\n\n\nShare the content with proper credit.\nUse the content for non-commercial purposes."
+  },
+  {
+    "objectID": "license/index.html#contact",
+    "href": "license/index.html#contact",
+    "title": "CC BY-NC-SA 4.0 License",
+    "section": "Contact",
+    "text": "Contact\nIf you have any questions about the use of my content or would like to collaborate with me, feel free to contact me."
+  },
+  {
+    "objectID": "site-ver-hist/index.html",
+    "href": "site-ver-hist/index.html",
+    "title": "Release History",
+    "section": "",
+    "text": "Welcome to the release history of danilotpnta.com. Here, you can find a detailed log of all the updates, new features, and improvements made to the website over time."
+  },
+  {
+    "objectID": "site-ver-hist/index.html#version-1.2.0",
+    "href": "site-ver-hist/index.html#version-1.2.0",
+    "title": "Release History",
+    "section": "Version 1.2.0",
+    "text": "Version 1.2.0\nDate: 2024-08-05\n\nImproved website layout and navigation.\nAdded new sections for machine learning tutorials.\nUpdated the image gallery with new lecture slides.\nFixed various bugs and improved performance."
+  },
+  {
+    "objectID": "site-ver-hist/index.html#version-1.1.0",
+    "href": "site-ver-hist/index.html#version-1.1.0",
+    "title": "Release History",
+    "section": "Version 1.1.0",
+    "text": "Version 1.1.0\nDate: 2024-06-01\n🎊 Added search functionality. 🎊\n\n\nIntroduced a new design for the homepage.\nEnhanced the blog section with new features.\nUpdated the privacy policy page.\nFixed minor bugs."
+  },
+  {
+    "objectID": "site-ver-hist/index.html#version-1.0.0",
+    "href": "site-ver-hist/index.html#version-1.0.0",
+    "title": "Release History",
+    "section": "Version 1.0.0",
+    "text": "Version 1.0.0\nDate: 2024-01-15\n🚀 Introduce categories and tags to blog section. 👀\n\n\nInitial release of the website.\nPublished initial machine learning articles and notes.\nUploaded initial set of lecture images.\nCreated privacy policy and code of conduct pages."
   },
   {
     "objectID": "about/index.html",
@@ -5464,7 +5527,7 @@
     "href": "index.html",
     "title": "Danilo Toapanta",
     "section": "",
-    "text": "Quick links:  Slides  |  Projects  | Books \n\n\nNews\n\n\n    \n        \n            Sep 2023 - I am attending, OpenAI: AI and the Future of Humanity\n            Jun 2023 - I will do an intership at IMEC\n            \n            Feb 2023 - Now the website has a Blog section\n            Nov 2023 - Have completed AI Berkeley Course\n        \n    \n\n\n\n\n\n\n\nNote\n\n\n\nThis website is built using Quarto. For a quick start guide, visit: DEV."
+    "text": "Quick links:  Slides  | Projects  | Books \n\nNews\n\n\n    \n        \n            Sep 2023 - I am attending, OpenAI: AI and the Future of Humanity\n            Jun 2023 - I will do an intership at IMEC\n            May 2023 - Have been accepted to the M.Sc. in AI at UvA\n            Feb 2023 - Now the website has a Blog section\n            Nov 2023 - Have completed AI Berkeley Course\n        \n    \n\n\n\n\n\n\n\nNote\n\n\n\nThis website is built using Quarto. For a quick start guide, visit the docs."
   },
   {
     "objectID": "blog/2023-09-04_mnist-classification/index.html",
@@ -11452,10 +11515,10 @@
     "text": "Commands Quarto\n        \n        \n                    \n                \n                    A useful list of Quarto commands\n                \n            \n        \n        \n                    \n                \n                \n                    \n\n                                            \n                            \n                                All\n                            \n                        \n                                            \n                            \n                                Quarto\n                            \n                        \n                                            \n                            \n                                TAGS\n                            \n                        \n                                    \n                \n\n\n                \n                    \n                    \n                    \n                        \n                        \n                        \n                        \n                    \n\n                    \n                                            \n                            \n                               \n                                All\n                            \n                        \n                                            \n                            \n                               \n                                Quarto\n                            \n                        \n                                            \n                            \n                               \n                                TAGS\n                            \n                        \n                    \n                    \n                \n\n                    \n    \n\n\n    \n    \n\n        \n        Author\n        \n                 Danilo Toapanta \n              \n      \n        \n        \n        Published\n        \n          August 22, 2023\n        \n      \n      \n        \n      \n      \n\n    \n    \n\n\n\n# Creates website in folder 'mysite'\nquarto create-project /Users/datoapanta/Desktop/mysite --type website  \n\n# To render it and preview in local host\nquarto preview mysite\n\n# Creates blog in folder 'blog'\nquarto create-project /Users/datoapanta/Desktop/blog --type website:blog\n\n# To render it and preview in local host\nquarto preview blog"
   },
   {
-    "objectID": "now/index.html",
-    "href": "now/index.html",
+    "objectID": "dev/index.html",
+    "href": "dev/index.html",
     "title": "Danilo Toapanta",
     "section": "",
-    "text": "What I’m working on right now\n\n\nUpdated on August 16th, 2023.\n\n\n    \n\nCore Habits\n\nRead ≧ 20 min\nExercise ≧ 1 hour\nMeditate ≧ 10 minutes\nRun weekly ≧ 18km\nInternship\n\nConnect Hugging Face ML application to repo\nYAML automation for downloading JPEG\nWebsite\n\nFinishing up the project page.\nFuture features can be found at DEV\n\nR Studio\n\nLearning file management\nReading\n\n\nAtomic Habits by James Clear\n\n—\n\nBooks I’ve enjoy reading\n\n\n\nArchive \n\n\n\n\n\n\n\nWhat I’m working on right now\n\n\nUpdated on July 24th, 2023.\n\n\n    \n\nCore habits\n\nRead ≧ 20 min\nExercise ≧ 1 hour\nMeditate ≧ 10 minutes\nWebsite\n\nGet a domain to publish this site\nFuture features can be found at DEV\n\nReading\n\n\n12 Rules for Life by Jordan Peterson\n\n\n\n\n\n\n\nWhat I’m working on right now\n\n\nUpdated on June 28th, 2023\n\n\n    \n\nWebsite\n\nStart coding from scracth this site"
+    "text": "In this section I have recompiled the sources, links and all the material that were more helpfull during the creation of this website."
   }
 ]

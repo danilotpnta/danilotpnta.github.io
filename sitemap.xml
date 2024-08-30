@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.danilotpnta.com/dev/index.html</loc>
-    <lastmod>2024-08-05T18:35:50.145Z</lastmod>
+    <loc>https://www.danilotpnta.com/accessibility/index.html</loc>
+    <lastmod>2024-08-09T09:11:47.377Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/notes/2023-09-03_commands-terminal/index.html</loc>
@@ -70,7 +70,7 @@
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2024-04-02_regular-group-convolutions/index.html</loc>
-    <lastmod>2024-04-02T11:50:10.000Z</lastmod>
+    <lastmod>2024-08-07T06:10:16.921Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-10-04_logistic-regression/index.html</loc>
@@ -198,15 +198,23 @@
   </url>
   <url>
     <loc>https://www.danilotpnta.com/privacy/index.html</loc>
-    <lastmod>2024-08-05T17:23:21.991Z</lastmod>
+    <lastmod>2024-08-09T09:01:07.676Z</lastmod>
   </url>
   <url>
-    <loc>https://www.danilotpnta.com/version-history/index.html</loc>
-    <lastmod>2024-08-05T18:32:07.158Z</lastmod>
+    <loc>https://www.danilotpnta.com/contact/index.html</loc>
+    <lastmod>2024-08-30T19:09:47.304Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/coming-soon.html</loc>
     <lastmod>2023-08-07T14:52:40.000Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/license/index.html</loc>
+    <lastmod>2024-08-09T09:04:37.384Z</lastmod>
+  </url>
+  <url>
+    <loc>https://www.danilotpnta.com/site-ver-hist/index.html</loc>
+    <lastmod>2024-08-09T09:20:13.320Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/projects/2020-05-12_cpp-project/Python-demo.html</loc>
@@ -226,11 +234,11 @@
   </url>
   <url>
     <loc>https://www.danilotpnta.com/about/index.html</loc>
-    <lastmod>2024-07-11T19:08:14.042Z</lastmod>
+    <lastmod>2024-08-30T19:10:46.826Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/index.html</loc>
-    <lastmod>2024-08-05T18:34:57.779Z</lastmod>
+    <lastmod>2024-08-09T09:23:33.579Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-09-04_mnist-classification/index.html</loc>
@@ -330,7 +338,7 @@
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2024-04-02_se(2)-equivariant-nn-example/index.html</loc>
-    <lastmod>2024-04-02T12:12:13.000Z</lastmod>
+    <lastmod>2024-08-07T06:09:18.834Z</lastmod>
   </url>
   <url>
     <loc>https://www.danilotpnta.com/blog/2023-12-03_large-language-models/index.html</loc>
@@ -377,7 +385,7 @@
     <lastmod>2024-01-02T10:27:23.000Z</lastmod>
   </url>
   <url>
-    <loc>https://www.danilotpnta.com/now/index.html</loc>
-    <lastmod>2023-08-16T19:30:48.000Z</lastmod>
+    <loc>https://www.danilotpnta.com/dev/index.html</loc>
+    <lastmod>2024-08-05T18:35:50.145Z</lastmod>
   </url>
 </urlset>
