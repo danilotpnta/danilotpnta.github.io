@@ -6006,39 +6006,60 @@
     "text": "Hi, there! This is Danilo.\n                    \n                    I’m an AI researcher based in the Netherlands.\n                    I studied Computer Science in my undergraduate programme and now I am doing my master in Artificial Intelligence.\n                    When I am not trying to figure out how my computer works, I like to read books, go for a swim, and spend some quality time with my family.\n                    \n                    \n                        \n                        Read my lastest post.\n                        Or send me an\n                            email↗."
   },
   {
-    "objectID": "site-ver-hist/index.html",
-    "href": "site-ver-hist/index.html",
-    "title": "Release History",
+    "objectID": "privacy/index.html",
+    "href": "privacy/index.html",
+    "title": "Privacy Policy",
     "section": "",
-    "text": "Welcome to the release history of danilotpnta.com. Here, you can find a detailed log of all the updates, new features, and improvements made to the website over time."
+    "text": "Welcome to danilotpnta.com. This privacy policy explains how we collect, use, and share information about you when you use our website."
   },
   {
-    "objectID": "site-ver-hist/index.html#version-1.3.0",
-    "href": "site-ver-hist/index.html#version-1.3.0",
-    "title": "Release History",
-    "section": "Version 1.3.0",
-    "text": "Version 1.3.0\nDate: 2024-09-02\n📬 Now you can easily send me an email through this form! 📨\n\n\nAdd enhanced email security with CAPTCHA to protect against spam.\nIntroduced an announcement bar for important updates and messages."
+    "objectID": "privacy/index.html#data-collection",
+    "href": "privacy/index.html#data-collection",
+    "title": "Privacy Policy",
+    "section": "Data Collection",
+    "text": "Data Collection\nWe do not collect personal data unless you explicitly provide it to us, such as when you subscribe to our newsletter or contact us directly."
   },
   {
-    "objectID": "site-ver-hist/index.html#version-1.2.0",
-    "href": "site-ver-hist/index.html#version-1.2.0",
-    "title": "Release History",
-    "section": "Version 1.2.0",
-    "text": "Version 1.2.0\nDate: 2024-08-05\n\nImproved website layout and navigation.\nAdded new sections for machine learning tutorials.\nUpdated the image gallery with new lecture slides.\nFixed various bugs and improved performance."
+    "objectID": "privacy/index.html#usage-of-collected-data",
+    "href": "privacy/index.html#usage-of-collected-data",
+    "title": "Privacy Policy",
+    "section": "Usage of Collected Data",
+    "text": "Usage of Collected Data\nAny data collected will be used solely for the purpose for which it was provided, such as sending newsletters or responding to inquiries."
   },
   {
-    "objectID": "site-ver-hist/index.html#version-1.1.0",
-    "href": "site-ver-hist/index.html#version-1.1.0",
-    "title": "Release History",
-    "section": "Version 1.1.0",
-    "text": "Version 1.1.0\nDate: 2024-06-01\n🎊 Added search functionality. 🎊\n\n\nIntroduced a new design for the homepage.\nEnhanced the blog section with new features.\nUpdated the privacy policy page.\nFixed minor bugs."
+    "objectID": "privacy/index.html#third-party-services",
+    "href": "privacy/index.html#third-party-services",
+    "title": "Privacy Policy",
+    "section": "Third-Party Services",
+    "text": "Third-Party Services\nWe may use third-party services to improve our website’s functionality. These services may collect anonymous data about your usage."
   },
   {
-    "objectID": "site-ver-hist/index.html#version-1.0.0",
-    "href": "site-ver-hist/index.html#version-1.0.0",
-    "title": "Release History",
-    "section": "Version 1.0.0",
-    "text": "Version 1.0.0\nDate: 2024-01-15\n🚀 Introduce categories and tags to blog section. 👀\n\n\nInitial release of the website.\nPublished initial machine learning articles and notes.\nUploaded initial set of lecture images.\nCreated privacy policy and code of conduct pages."
+    "objectID": "privacy/index.html#changes-to-this-privacy-policy",
+    "href": "privacy/index.html#changes-to-this-privacy-policy",
+    "title": "Privacy Policy",
+    "section": "Changes to This Privacy Policy",
+    "text": "Changes to This Privacy Policy\nWe may update this privacy policy from time to time. Any changes will be posted on this page with an updated revision date."
+  },
+  {
+    "objectID": "privacy/index.html#contact",
+    "href": "privacy/index.html#contact",
+    "title": "Privacy Policy",
+    "section": "Contact",
+    "text": "Contact\nIf you have any questions about this privacy policy or need further clarification, please reach out to me."
+  },
+  {
+    "objectID": "contact/index.html",
+    "href": "contact/index.html",
+    "title": "\nContact me \n",
+    "section": "",
+    "text": "Contact me \n\nThanks for consider reaching out to me. I’m always happy to hear from you. You can use this form to send me an email.\nI’d love to hear if my educational materials have been helpful for you, and how they could be improved; particularly if they could be made more accessible.\n\n\n          \n\n\n\n\n\n\n\n\nFull Name  Email Address  Message\n\n\nSubmit"
+  },
+  {
+    "objectID": "coming-soon.html",
+    "href": "coming-soon.html",
+    "title": "Coming Soon",
+    "section": "",
+    "text": "Coming Soon\n        \n    \n    \n        \n            The page you requested is under construction."
   },
   {
     "objectID": "license/index.html",
@@ -6083,60 +6104,39 @@
     "text": "Contact\nIf you have any questions about the use of my content or would like to collaborate with me, feel free to contact me."
   },
   {
-    "objectID": "coming-soon.html",
-    "href": "coming-soon.html",
-    "title": "Coming Soon",
+    "objectID": "site-ver-hist/index.html",
+    "href": "site-ver-hist/index.html",
+    "title": "Release History",
     "section": "",
-    "text": "Coming Soon\n        \n    \n    \n        \n            The page you requested is under construction."
+    "text": "Welcome to the release history of danilotpnta.com. Here, you can find a detailed log of all the updates, new features, and improvements made to the website over time."
   },
   {
-    "objectID": "contact/index.html",
-    "href": "contact/index.html",
-    "title": "\nContact me \n",
-    "section": "",
-    "text": "Contact me \n\nThanks for consider reaching out to me. I’m always happy to hear from you. You can use this form to send me an email.\nI’d love to hear if my educational materials have been helpful for you, and how they could be improved; particularly if they could be made more accessible.\n\n\n          \n\n\n\n\n\n\n\n\nFull Name  Email Address  Message\n\n\nSubmit"
+    "objectID": "site-ver-hist/index.html#version-1.3.0",
+    "href": "site-ver-hist/index.html#version-1.3.0",
+    "title": "Release History",
+    "section": "Version 1.3.0",
+    "text": "Version 1.3.0\nDate: 2024-09-02\n📬 Now you can easily send me an email through this form! 📨\n\n\nAdd enhanced email security with CAPTCHA to protect against spam.\nIntroduced an announcement bar for important updates and messages."
   },
   {
-    "objectID": "privacy/index.html",
-    "href": "privacy/index.html",
-    "title": "Privacy Policy",
-    "section": "",
-    "text": "Welcome to danilotpnta.com. This privacy policy explains how we collect, use, and share information about you when you use our website."
+    "objectID": "site-ver-hist/index.html#version-1.2.0",
+    "href": "site-ver-hist/index.html#version-1.2.0",
+    "title": "Release History",
+    "section": "Version 1.2.0",
+    "text": "Version 1.2.0\nDate: 2024-08-05\n\nImproved website layout and navigation.\nAdded new sections for machine learning tutorials.\nUpdated the image gallery with new lecture slides.\nFixed various bugs and improved performance."
   },
   {
-    "objectID": "privacy/index.html#data-collection",
-    "href": "privacy/index.html#data-collection",
-    "title": "Privacy Policy",
-    "section": "Data Collection",
-    "text": "Data Collection\nWe do not collect personal data unless you explicitly provide it to us, such as when you subscribe to our newsletter or contact us directly."
+    "objectID": "site-ver-hist/index.html#version-1.1.0",
+    "href": "site-ver-hist/index.html#version-1.1.0",
+    "title": "Release History",
+    "section": "Version 1.1.0",
+    "text": "Version 1.1.0\nDate: 2024-06-01\n🎊 Added search functionality. 🎊\n\n\nIntroduced a new design for the homepage.\nEnhanced the blog section with new features.\nUpdated the privacy policy page.\nFixed minor bugs."
   },
   {
-    "objectID": "privacy/index.html#usage-of-collected-data",
-    "href": "privacy/index.html#usage-of-collected-data",
-    "title": "Privacy Policy",
-    "section": "Usage of Collected Data",
-    "text": "Usage of Collected Data\nAny data collected will be used solely for the purpose for which it was provided, such as sending newsletters or responding to inquiries."
-  },
-  {
-    "objectID": "privacy/index.html#third-party-services",
-    "href": "privacy/index.html#third-party-services",
-    "title": "Privacy Policy",
-    "section": "Third-Party Services",
-    "text": "Third-Party Services\nWe may use third-party services to improve our website’s functionality. These services may collect anonymous data about your usage."
-  },
-  {
-    "objectID": "privacy/index.html#changes-to-this-privacy-policy",
-    "href": "privacy/index.html#changes-to-this-privacy-policy",
-    "title": "Privacy Policy",
-    "section": "Changes to This Privacy Policy",
-    "text": "Changes to This Privacy Policy\nWe may update this privacy policy from time to time. Any changes will be posted on this page with an updated revision date."
-  },
-  {
-    "objectID": "privacy/index.html#contact",
-    "href": "privacy/index.html#contact",
-    "title": "Privacy Policy",
-    "section": "Contact",
-    "text": "Contact\nIf you have any questions about this privacy policy or need further clarification, please reach out to me."
+    "objectID": "site-ver-hist/index.html#version-1.0.0",
+    "href": "site-ver-hist/index.html#version-1.0.0",
+    "title": "Release History",
+    "section": "Version 1.0.0",
+    "text": "Version 1.0.0\nDate: 2024-01-15\n🚀 Introduce categories and tags to blog section. 👀\n\n\nInitial release of the website.\nPublished initial machine learning articles and notes.\nUploaded initial set of lecture images.\nCreated privacy policy and code of conduct pages."
   },
   {
     "objectID": "projects/index.html",
@@ -11492,12 +11492,5 @@
     "title": "Commands Terminal",
     "section": "3 Vim",
     "text": "3 Vim\n:wq     # to write/save and quit\nESC     # to scape from __INSERT__\n\n3.1 Prompt Message\nhe Bash command prompt looks like this by default:\n[USERNAME]@[HOSTNAME]:[PATH][SYMBOL]\n\n[USERNAME] is the username of the currently operating user. normally this is your user, but when you run sudo su or similar commands, you get a “root shell”, that means the user is “root”.\n[HOSTNAME] is your hostname. It’s the name of your computer. You had to enter that during the system installation.\n[PATH] is your current working directory, the directory you’re currently operating on. When you open a new terminal, the default directory is your current user’s home directory. A synonym for /home/YOURUSERNAME is ~.\n[SYMBOL] is usually either $ if you’re operating as any normal user, or # if you’re operating as “root” user.\n\nSo your Bash prompt looks like this:\nganesh@ganesh:~$\nThat means you’re logged in as user ganesh on a computer called ganesh as well, currently operating in your own home directory (~). Of course you’re not “root”, therefore the $."
-  },
-  {
-    "objectID": "projects/2024-09-02_ai-ml-cheatsheet/index.html",
-    "href": "projects/2024-09-02_ai-ml-cheatsheet/index.html",
-    "title": "AI/Ml Cheatsheet",
-    "section": "",
-    "text": "https://ai-ml-cheatsheet.streamlit.app/?embed_options=show_toolbar,light_theme,show_colored_line,show_padding,show_footer"
   }
 ]
