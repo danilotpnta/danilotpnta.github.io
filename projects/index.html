@@ -77,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-image','listing-title','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-project","listing-execute","listing-resources","listing-website","listing-format","listing-language","listing-freeze","listing-title-block-banner","listing-author","listing-title","listing-subtitle","listing-date","listing-categories","listing-image","listing-sidebar","listing-source","listing-modal-width","listing-iframe","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-jupyter","listing-date-format","listing-year","listing-paper"],
+      searchColumns: ["listing-project","listing-execute","listing-resources","listing-website","listing-format","listing-language","listing-freeze","listing-title-block-banner","listing-author","listing-title","listing-subtitle","listing-date","listing-categories","listing-image","listing-sidebar","listing-source","listing-modal-width","listing-iframe","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-date-format","listing-year","listing-jupyter","listing-paper"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -285,13 +285,13 @@ window.Quarto = {
             <!-- All  -->
             1
                                                        
-            <!-- Python  -->
+            <!-- Gradio  -->
             2
                                                        
-            <!-- Torch  -->
+            <!-- Python  -->
             3
                                                        
-            <!-- Tensorflow  -->
+            <!-- Dockerfile  -->
             4
         
         
@@ -317,13 +317,13 @@ window.Quarto = {
             <!-- All  -->
             5
                                                        
-            <!-- HTML  -->
+            <!-- Streamlit  -->
             6
                                                        
-            <!-- Javascript  -->
+            <!-- Python  -->
             7
                                                        
-            <!-- SCSS  -->
+            <!-- Markdown  -->
             8
         
         
@@ -332,11 +332,8 @@ window.Quarto = {
          
             <!-- +1 to avoid inserting the name TAG -->
             
-                <!-- Blog -->
+                <!-- Machine Learning -->
                 2
-            
-                <!-- Research -->
-                3
             
         
     
@@ -352,11 +349,14 @@ window.Quarto = {
             <!-- All  -->
             9
                                                        
-            <!-- Python  -->
+            <!-- Dash  -->
             10
                                                        
-            <!-- OpenSpiel  -->
+            <!-- Python  -->
             11
+                                                       
+            <!-- JavaScript  -->
+            12
         
         
 
@@ -365,7 +365,7 @@ window.Quarto = {
             <!-- +1 to avoid inserting the name TAG -->
             
                 <!-- Machine Learning -->
-                4
+                3
             
         
     
@@ -379,13 +379,16 @@ window.Quarto = {
         adding this to the array_categories -->
                                                        
             <!-- All  -->
-            12
-                                                       
-            <!-- Python  -->
             13
                                                        
-            <!-- Numba  -->
+            <!-- HTML  -->
             14
+                                                       
+            <!-- Javascript  -->
+            15
+                                                       
+            <!-- SCSS  -->
+            16
         
         
 
@@ -393,7 +396,10 @@ window.Quarto = {
          
             <!-- +1 to avoid inserting the name TAG -->
             
-                <!-- Optimization -->
+                <!-- Blog -->
+                4
+            
+                <!-- Research -->
                 5
             
         
@@ -408,16 +414,13 @@ window.Quarto = {
         adding this to the array_categories -->
                                                        
             <!-- All  -->
-            15
-                                                       
-            <!-- Python  -->
-            16
-                                                       
-            <!-- Kaggle  -->
             17
                                                        
-            <!-- Tensorflow  -->
+            <!-- Python  -->
             18
+                                                       
+            <!-- OpenSpiel  -->
+            19
         
         
 
@@ -425,10 +428,36 @@ window.Quarto = {
          
             <!-- +1 to avoid inserting the name TAG -->
             
-                <!-- Computer Vision -->
+                <!-- Machine Learning -->
                 6
             
-                <!-- Control Systems -->
+        
+    
+        
+
+        <!-- If -1 means there is no TAG written so go over the loop because
+        the rest of the array CATEGORIES could be "categories"  -->
+        
+
+        <!--  If there is no CATEGORY written in post skip
+        adding this to the array_categories -->
+                                                       
+            <!-- All  -->
+            20
+                                                       
+            <!-- Python  -->
+            21
+                                                       
+            <!-- Numba  -->
+            22
+        
+        
+
+        <!-- if there is no TAG written then do not continue this for-loop  -->
+         
+            <!-- +1 to avoid inserting the name TAG -->
+            
+                <!-- Optimization -->
                 7
             
         
@@ -443,13 +472,16 @@ window.Quarto = {
         adding this to the array_categories -->
                                                        
             <!-- All  -->
-            19
+            23
                                                        
             <!-- Python  -->
-            20
+            24
                                                        
-            <!-- LateX  -->
-            21
+            <!-- Kaggle  -->
+            25
+                                                       
+            <!-- Tensorflow  -->
+            26
         
         
 
@@ -457,10 +489,10 @@ window.Quarto = {
          
             <!-- +1 to avoid inserting the name TAG -->
             
-                <!-- Machine Learning -->
+                <!-- Computer Vision -->
                 8
             
-                <!-- Algorithms -->
+                <!-- Control Systems -->
                 9
             
         
@@ -475,16 +507,13 @@ window.Quarto = {
         adding this to the array_categories -->
                                                        
             <!-- All  -->
-            22
+            27
                                                        
-            <!-- C++  -->
-            23
+            <!-- Python  -->
+            28
                                                        
             <!-- LateX  -->
-            24
-                                                       
-            <!-- Arduino  -->
-            25
+            29
         
         
 
@@ -492,33 +521,10 @@ window.Quarto = {
          
             <!-- +1 to avoid inserting the name TAG -->
             
-                <!-- Electrical Engineering -->
+                <!-- Machine Learning -->
                 10
             
-        
-    
-        
-
-        <!-- If -1 means there is no TAG written so go over the loop because
-        the rest of the array CATEGORIES could be "categories"  -->
-        
-
-        <!--  If there is no CATEGORY written in post skip
-        adding this to the array_categories -->
-                                                       
-            <!-- All  -->
-            26
-                                                       
-            <!-- C++  -->
-            27
-        
-        
-
-        <!-- if there is no TAG written then do not continue this for-loop  -->
-         
-            <!-- +1 to avoid inserting the name TAG -->
-            
-                <!-- Software Engineering -->
+                <!-- Algorithms -->
                 11
             
         
@@ -533,10 +539,16 @@ window.Quarto = {
         adding this to the array_categories -->
                                                        
             <!-- All  -->
-            28
+            30
                                                        
-            <!-- 20-sim  -->
-            29
+            <!-- C++  -->
+            31
+                                                       
+            <!-- LateX  -->
+            32
+                                                       
+            <!-- Arduino  -->
+            33
         
         
 
@@ -549,23 +561,87 @@ window.Quarto = {
             
         
     
+        
+
+        <!-- If -1 means there is no TAG written so go over the loop because
+        the rest of the array CATEGORIES could be "categories"  -->
+        
+
+        <!--  If there is no CATEGORY written in post skip
+        adding this to the array_categories -->
+                                                       
+            <!-- All  -->
+            34
+                                                       
+            <!-- C++  -->
+            35
+        
+        
+
+        <!-- if there is no TAG written then do not continue this for-loop  -->
+         
+            <!-- +1 to avoid inserting the name TAG -->
+            
+                <!-- Software Engineering -->
+                13
+            
+        
+    
+        
+
+        <!-- If -1 means there is no TAG written so go over the loop because
+        the rest of the array CATEGORIES could be "categories"  -->
+        
+
+        <!--  If there is no CATEGORY written in post skip
+        adding this to the array_categories -->
+                                                       
+            <!-- All  -->
+            36
+                                                       
+            <!-- 20-sim  -->
+            37
+        
+        
+
+        <!-- if there is no TAG written then do not continue this for-loop  -->
+         
+            <!-- +1 to avoid inserting the name TAG -->
+            
+                <!-- Electrical Engineering -->
+                14
+            
+        
+    
 </div>
 
 <div class="list grid" style="column-gap: 23px; row-gap: .9rem;">
     
 
         <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-categories="All,Python,Torch,Tensorflow,TAGS,Machine Learning" data-listing-date-sort="1725228000000" data-listing-file-modified-sort="1726996423994" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="0" data-categories="All,Gradio,Python,Dockerfile,TAGS,Machine Learning" data-listing-date-sort="1726956000000" data-listing-file-modified-sort="1727028224025" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
 
             <!-- Starting of MODAL -->
-            <div class="modal" id="aiml_cheatsheet" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal" id="youtubewhisper" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                 
                    
                 
                 <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 1200px">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title anchored" id="exampleModalLongTitle">AI/Ml Cheatsheet</h5>
+                        <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: flex; align-items: center;">
+                                <!-- Modal Title -->
+                                <h5 class="modal-title anchored" id="exampleModalLongTitle" style="margin-right: 15px;">
+                                    Youtube-Whisper
+                                </h5>
+                        
+                                <!-- "Open full screen" link next to the title -->
+                                
+                                    <a href="https://yt-whisper.danilotpnta.com/" target="_blank" class="button small" style="text-decoration: none; border-color: rgba(221, 221, 221);">
+                                        Open in Full Screen
+                                    </a>
+                                
+                            </div>
                             <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                             </button>
@@ -579,7 +655,155 @@ window.Quarto = {
 
                                      <!-- If iframe exists, only render the iframe and skip the columns -->
                                     
-                                        <div class="card border-1 g-col-12 mb-2" data-index="1" data-categories="All,Python,Torch,Tensorflow,TAGS,Machine Learning" data-listing-date-sort="1725228000000" data-listing-file-modified-sort="1726996423994" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+                                        <div class="card border-1 g-col-12 mb-2" data-index="1" data-categories="All,Gradio,Python,Dockerfile,TAGS,Machine Learning" data-listing-date-sort="1726956000000" data-listing-file-modified-sort="1727028224025" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+                                            <iframe src="https://yt-whisper.danilotpnta.com/" style="height: 750px; width: 100%;">
+                                            </iframe>
+                                        </div>
+                                    
+
+                                </div> <!-- Here ENDS content of MODAL -->
+
+                            </div>
+<!-- END Container -->
+
+                        </div> <!-- END body-modal -->
+
+                    </div> <!-- END modal-content -->
+
+                </div> <!-- END modal-dialog --> 
+
+            </div> <!-- End of MODAL -->
+            
+
+            <!-- IMAGE -->
+            <!-- <a href="/projects/2024-09-22_yt-whisper/index.qmd"> -->
+            <a href="#" data-bs-toggle="modal" data-bs-target="#youtubewhisper">
+                <div class="card-title change-title-background-color" style="text-align: center; padding-bottom: 0.4em;  padding-top: 0.4em; ">
+                    Youtube-Whisper
+                </div>
+                <img src="../projects/2024-09-22_yt-whisper/image.png" alt="" class="thumbnail-image card-img" style="height: 150px;"></a>
+
+            <div class="card-body post-contents">
+
+                <!-- <a  class="button small flex" href="/projects/2024-09-22_yt-whisper/index.qmd" > -->
+                <a class="button small flex" href="#" data-bs-toggle="modal" data-bs-target="#youtubewhisper">
+                    About
+                </a> 
+                
+
+                
+
+                
+
+                
+                    <a class="button small flex" href="https://github.com/danilotpnta/Youtube-Whisper" target="_blank" rel="noreferrer">
+                        Code
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg><!-- <i class="bi bi-github me-1 github-icon-projects"></i>  --></a> 
+                
+
+                
+                    
+                
+
+                <!-- Displays Categories -->    
+                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
+                
+                    <!-- Keyword TAG in frontmatter not found 
+                        - Display the only ONE CATEGORY found --> 
+                    
+                        
+                            <span class="listing-category Gradio">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Gradio">
+                                    Gradio
+                                </a>   
+                            </span>
+                        
+                            <span class="listing-category Python">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Python">
+                                    Python
+                                </a>   
+                            </span>
+                        
+                            <span class="listing-category Dockerfile">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Dockerfile">
+                                    Dockerfile
+                                </a>   
+                            </span>
+                        
+                    
+                </div> 
+
+                <!-- Display TAGS -->
+                <div class="listing-categories" style="padding-top: 0em;">
+                    
+                    <!-- Displays Technology Tag + Icon -->
+                    <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
+                        <!-- <a  href="/projects"> -->
+                        <!-- <i class="fa-solid fa-tag fa-rotate-90 tag-icon-projects" ></i> Tags: -->
+                        <!-- <i class="bi bi-archive archive-icon-projects"></i>  Tags:-->
+                        Tags:
+                        <!-- </a> -->
+                    </div>
+                                            
+                    <!-- Keyword TAG in frontmatter not found 
+                         - If there is NO || only ONE element in Categories then show "Other" as tag --> 
+                    
+                        
+                            
+                            <div class="listing-category-inactive Machine Learning">
+                                <!-- Add 'Python icon' -->
+                                
+                                    <a href="../projects/#category=Machine Learning">
+                                        Machine Learning
+                                    </a>   
+                                   
+                            </div>
+                        
+                    
+                </div> 
+                
+            </div>
+        </div>
+    
+
+        <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="2" data-categories="All,Streamlit,Python,Markdown,TAGS,Machine Learning" data-listing-date-sort="1725228000000" data-listing-file-modified-sort="1727028183266" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+
+            <!-- Starting of MODAL -->
+            <div class="modal" id="aiml_cheatsheet" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                
+                   
+                
+                <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 1200px">
+                    <div class="modal-content">
+                        <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: flex; align-items: center;">
+                                <!-- Modal Title -->
+                                <h5 class="modal-title anchored" id="exampleModalLongTitle" style="margin-right: 15px;">
+                                    AI/Ml Cheatsheet
+                                </h5>
+                        
+                                <!-- "Open full screen" link next to the title -->
+                                
+                                    <a href="https://ai-ml-cheatsheet.danilotpnta.com?embed=true" target="_blank" class="button small" style="text-decoration: none; border-color: rgba(221, 221, 221);">
+                                        Open in Full Screen
+                                    </a>
+                                
+                            </div>
+                            <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="container">
+
+                                <!-- Here STARTS content of MODAL -->
+                                <div class="grid modal-content-grid">
+
+                                     <!-- If iframe exists, only render the iframe and skip the columns -->
+                                    
+                                        <div class="card border-1 g-col-12 mb-2" data-index="3" data-categories="All,Streamlit,Python,Markdown,TAGS,Machine Learning" data-listing-date-sort="1725228000000" data-listing-file-modified-sort="1727028183266" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
                                             <iframe src="https://ai-ml-cheatsheet.danilotpnta.com?embed=true" style="height: 750px; width: 100%;">
                                             </iframe>
                                         </div>
@@ -636,21 +860,21 @@ window.Quarto = {
                         - Display the only ONE CATEGORY found --> 
                     
                         
+                            <span class="listing-category Streamlit">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Streamlit">
+                                    Streamlit
+                                </a>   
+                            </span>
+                        
                             <span class="listing-category Python">
                                 <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Python">
                                     Python
                                 </a>   
                             </span>
                         
-                            <span class="listing-category Torch">
-                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Torch">
-                                    Torch
-                                </a>   
-                            </span>
-                        
-                            <span class="listing-category Tensorflow">
-                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Tensorflow">
-                                    Tensorflow
+                            <span class="listing-category Markdown">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Markdown">
+                                    Markdown
                                 </a>   
                             </span>
                         
@@ -691,7 +915,155 @@ window.Quarto = {
     
 
         <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="2" data-categories="All,HTML,Javascript,SCSS,TAGS,Blog,Research" data-listing-date-sort="1688162400000" data-listing-file-modified-sort="1707927257000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="4" data-categories="All,Dash,Python,JavaScript,TAGS,Machine Learning" data-listing-date-sort="1688248800000" data-listing-file-modified-sort="1727028174976" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+
+            <!-- Starting of MODAL -->
+            <div class="modal" id="hubertgenreclf" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                
+                   
+                
+                <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 1200px">
+                    <div class="modal-content">
+                        <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: flex; align-items: center;">
+                                <!-- Modal Title -->
+                                <h5 class="modal-title anchored" id="exampleModalLongTitle" style="margin-right: 15px;">
+                                    HuBERT-Genre-Clf
+                                </h5>
+                        
+                                <!-- "Open full screen" link next to the title -->
+                                
+                                    <a href="https://www.hubert-genre-clf.danilotpnta.com/" target="_blank" class="button small" style="text-decoration: none; border-color: rgba(221, 221, 221);">
+                                        Open in Full Screen
+                                    </a>
+                                
+                            </div>
+                            <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="container">
+
+                                <!-- Here STARTS content of MODAL -->
+                                <div class="grid modal-content-grid">
+
+                                     <!-- If iframe exists, only render the iframe and skip the columns -->
+                                    
+                                        <div class="card border-1 g-col-12 mb-2" data-index="5" data-categories="All,Dash,Python,JavaScript,TAGS,Machine Learning" data-listing-date-sort="1688248800000" data-listing-file-modified-sort="1727028174976" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+                                            <iframe src="https://www.hubert-genre-clf.danilotpnta.com/" style="height: 750px; width: 100%;">
+                                            </iframe>
+                                        </div>
+                                    
+
+                                </div> <!-- Here ENDS content of MODAL -->
+
+                            </div>
+<!-- END Container -->
+
+                        </div> <!-- END body-modal -->
+
+                    </div> <!-- END modal-content -->
+
+                </div> <!-- END modal-dialog --> 
+
+            </div> <!-- End of MODAL -->
+            
+
+            <!-- IMAGE -->
+            <!-- <a href="/projects/2023-07-02_HuBERT-Genre-Clf/index.qmd"> -->
+            <a href="#" data-bs-toggle="modal" data-bs-target="#hubertgenreclf">
+                <div class="card-title change-title-background-color" style="text-align: center; padding-bottom: 0.4em;  padding-top: 0.4em; ">
+                    HuBERT-Genre-Clf
+                </div>
+                <img src="../projects/2023-07-02_HuBERT-Genre-Clf/HuBERT-Genre-Clf.png" alt="" class="thumbnail-image card-img" style="height: 150px;"></a>
+
+            <div class="card-body post-contents">
+
+                <!-- <a  class="button small flex" href="/projects/2023-07-02_HuBERT-Genre-Clf/index.qmd" > -->
+                <a class="button small flex" href="#" data-bs-toggle="modal" data-bs-target="#hubertgenreclf">
+                    About
+                </a> 
+                
+
+                
+
+                
+
+                
+                    <a class="button small flex" href="https://github.com/danilotpnta/mma_2024" target="_blank" rel="noreferrer">
+                        Code
+                        <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" style="width: 1rem; height: 1rem; fill: currentcolor;"><g data-name="Layer 2"><g data-name="external-link"><rect width="24" height="24" opacity="0"></rect><path d="M20 11a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h6a1 1 0 0 0 0-2H6a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h12a3 3 0 0 0 3-3v-6a1 1 0 0 0-1-1z"></path><path d="M16 5h1.58l-6.29 6.28a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0L19 6.42V8a1 1 0 0 0 1 1 1 1 0 0 0 1-1V4a1 1 0 0 0-1-1h-4a1 1 0 0 0 0 2z"></path></g></g></svg><!-- <i class="bi bi-github me-1 github-icon-projects"></i>  --></a> 
+                
+
+                
+                    
+                
+
+                <!-- Displays Categories -->    
+                <div class="listing-categories" style="padding-top: 0.6em; padding-bottom: 0em;"> 
+                
+                    <!-- Keyword TAG in frontmatter not found 
+                        - Display the only ONE CATEGORY found --> 
+                    
+                        
+                            <span class="listing-category Dash">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Dash">
+                                    Dash
+                                </a>   
+                            </span>
+                        
+                            <span class="listing-category Python">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=Python">
+                                    Python
+                                </a>   
+                            </span>
+                        
+                            <span class="listing-category JavaScript">
+                                <a style="color: inherit; font-size: 0.95em;" href="../projects/#category=JavaScript">
+                                    JavaScript
+                                </a>   
+                            </span>
+                        
+                    
+                </div> 
+
+                <!-- Display TAGS -->
+                <div class="listing-categories" style="padding-top: 0em;">
+                    
+                    <!-- Displays Technology Tag + Icon -->
+                    <div id="tags" class="listing-category-inactive" style="text-transform: uppercase; padding-left: 0.1rem;">
+                        <!-- <a  href="/projects"> -->
+                        <!-- <i class="fa-solid fa-tag fa-rotate-90 tag-icon-projects" ></i> Tags: -->
+                        <!-- <i class="bi bi-archive archive-icon-projects"></i>  Tags:-->
+                        Tags:
+                        <!-- </a> -->
+                    </div>
+                                            
+                    <!-- Keyword TAG in frontmatter not found 
+                         - If there is NO || only ONE element in Categories then show "Other" as tag --> 
+                    
+                        
+                            
+                            <div class="listing-category-inactive Machine Learning">
+                                <!-- Add 'Python icon' -->
+                                
+                                    <a href="../projects/#category=Machine Learning">
+                                        Machine Learning
+                                    </a>   
+                                   
+                            </div>
+                        
+                    
+                </div> 
+                
+            </div>
+        </div>
+    
+
+        <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="6" data-categories="All,HTML,Javascript,SCSS,TAGS,Blog,Research" data-listing-date-sort="1688162400000" data-listing-file-modified-sort="1707927257000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
 
             <!-- Starting of MODAL -->
             <div class="modal" id="website" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -700,8 +1072,16 @@ window.Quarto = {
                 
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title anchored" id="exampleModalLongTitle">Website</h5>
+                        <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: flex; align-items: center;">
+                                <!-- Modal Title -->
+                                <h5 class="modal-title anchored" id="exampleModalLongTitle" style="margin-right: 15px;">
+                                    Website
+                                </h5>
+                        
+                                <!-- "Open full screen" link next to the title -->
+                                
+                            </div>
                             <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                             </button>
@@ -942,7 +1322,7 @@ window.Quarto = {
     
 
         <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="3" data-categories="All,Python,OpenSpiel,TAGS,Machine Learning" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1704191303000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="7" data-categories="All,Python,OpenSpiel,TAGS,Machine Learning" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1704191303000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
 
             <!-- Starting of MODAL -->
             <div class="modal" id="ml_project" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -951,8 +1331,16 @@ window.Quarto = {
                 
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title anchored" id="exampleModalLongTitle">ML Project</h5>
+                        <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: flex; align-items: center;">
+                                <!-- Modal Title -->
+                                <h5 class="modal-title anchored" id="exampleModalLongTitle" style="margin-right: 15px;">
+                                    ML Project
+                                </h5>
+                        
+                                <!-- "Open full screen" link next to the title -->
+                                
+                            </div>
                             <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                             </button>
@@ -1160,7 +1548,7 @@ window.Quarto = {
     
 
         <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="4" data-categories="All,Python,Numba,TAGS,Optimization" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1704191299000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="8" data-categories="All,Python,Numba,TAGS,Optimization" data-listing-date-sort="1685052000000" data-listing-file-modified-sort="1704191299000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
 
             <!-- Starting of MODAL -->
             <div class="modal" id="ea_project" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -1169,8 +1557,16 @@ window.Quarto = {
                 
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title anchored" id="exampleModalLongTitle">EA Project</h5>
+                        <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: flex; align-items: center;">
+                                <!-- Modal Title -->
+                                <h5 class="modal-title anchored" id="exampleModalLongTitle" style="margin-right: 15px;">
+                                    EA Project
+                                </h5>
+                        
+                                <!-- "Open full screen" link next to the title -->
+                                
+                            </div>
                             <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                             </button>
@@ -1378,7 +1774,7 @@ window.Quarto = {
     
 
         <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="5" data-categories="All,Python,Kaggle,Tensorflow,TAGS,Computer Vision,Control Systems" data-listing-date-sort="1669676400000" data-listing-file-modified-sort="1691937670000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="9" data-categories="All,Python,Kaggle,Tensorflow,TAGS,Computer Vision,Control Systems" data-listing-date-sort="1669676400000" data-listing-file-modified-sort="1691937670000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
 
             <!-- Starting of MODAL -->
             <div class="modal" id="cv_project" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -1387,8 +1783,16 @@ window.Quarto = {
                 
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title anchored" id="exampleModalLongTitle">CV Project</h5>
+                        <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: flex; align-items: center;">
+                                <!-- Modal Title -->
+                                <h5 class="modal-title anchored" id="exampleModalLongTitle" style="margin-right: 15px;">
+                                    CV Project
+                                </h5>
+                        
+                                <!-- "Open full screen" link next to the title -->
+                                
+                            </div>
                             <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                             </button>
@@ -1629,7 +2033,7 @@ window.Quarto = {
     
 
         <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="6" data-categories="All,Python,LateX,TAGS,Machine Learning,Algorithms" data-listing-date-sort="1668207600000" data-listing-file-modified-sort="1691937633000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="10" data-categories="All,Python,LateX,TAGS,Machine Learning,Algorithms" data-listing-date-sort="1668207600000" data-listing-file-modified-sort="1691937633000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
 
             <!-- Starting of MODAL -->
             <div class="modal" id="ai_project" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -1638,8 +2042,16 @@ window.Quarto = {
                 
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title anchored" id="exampleModalLongTitle">AI Project</h5>
+                        <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: flex; align-items: center;">
+                                <!-- Modal Title -->
+                                <h5 class="modal-title anchored" id="exampleModalLongTitle" style="margin-right: 15px;">
+                                    AI Project
+                                </h5>
+                        
+                                <!-- "Open full screen" link next to the title -->
+                                
+                            </div>
                             <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                             </button>
@@ -1867,7 +2279,7 @@ window.Quarto = {
     
 
         <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="7" data-categories="All,C++,LateX,Arduino,TAGS,Electrical Engineering" data-listing-date-sort="1625176800000" data-listing-file-modified-sort="1691941224000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="11" data-categories="All,C++,LateX,Arduino,TAGS,Electrical Engineering" data-listing-date-sort="1625176800000" data-listing-file-modified-sort="1691941224000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
 
             <!-- Starting of MODAL -->
             <div class="modal" id="bsc_thesis" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -1876,8 +2288,16 @@ window.Quarto = {
                 
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title anchored" id="exampleModalLongTitle">BSc Thesis</h5>
+                        <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: flex; align-items: center;">
+                                <!-- Modal Title -->
+                                <h5 class="modal-title anchored" id="exampleModalLongTitle" style="margin-right: 15px;">
+                                    BSc Thesis
+                                </h5>
+                        
+                                <!-- "Open full screen" link next to the title -->
+                                
+                            </div>
                             <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                             </button>
@@ -2098,7 +2518,7 @@ window.Quarto = {
     
 
         <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="8" data-categories="All,C++,TAGS,Software Engineering" data-listing-date-sort="1589234400000" data-listing-file-modified-sort="1691937611000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="12" data-categories="All,C++,TAGS,Software Engineering" data-listing-date-sort="1589234400000" data-listing-file-modified-sort="1691937611000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
 
             <!-- Starting of MODAL -->
             <div class="modal" id="c_project" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -2107,8 +2527,16 @@ window.Quarto = {
                 
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title anchored" id="exampleModalLongTitle">C++ Project</h5>
+                        <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: flex; align-items: center;">
+                                <!-- Modal Title -->
+                                <h5 class="modal-title anchored" id="exampleModalLongTitle" style="margin-right: 15px;">
+                                    C++ Project
+                                </h5>
+                        
+                                <!-- "Open full screen" link next to the title -->
+                                
+                            </div>
                             <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                             </button>
@@ -2303,7 +2731,7 @@ window.Quarto = {
     
 
         <!-- To change increase num columns modify, g-col-md-6: 2columns, g-col-md-4: 3columns, g-col-md-3: 4 columns-->
-        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="9" data-categories="All,20-sim,TAGS,Electrical Engineering" data-listing-date-sort="1585778400000" data-listing-file-modified-sort="1691937558000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+        <div class="card border-1 g-col-12 g-col-sm-6 g-col-md-4 mb-2" data-index="13" data-categories="All,20-sim,TAGS,Electrical Engineering" data-listing-date-sort="1585778400000" data-listing-file-modified-sort="1691937558000" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
 
             <!-- Starting of MODAL -->
             <div class="modal" id="control_systems_project" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -2312,8 +2740,16 @@ window.Quarto = {
                 
                 <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title anchored" id="exampleModalLongTitle">Control Systems Project</h5>
+                        <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center;">
+                            <div style="display: flex; align-items: center;">
+                                <!-- Modal Title -->
+                                <h5 class="modal-title anchored" id="exampleModalLongTitle" style="margin-right: 15px;">
+                                    Control Systems Project
+                                </h5>
+                        
+                                <!-- "Open full screen" link next to the title -->
+                                
+                            </div>
                             <button type="button" class="close custom-modal-button" data-bs-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                             </button>
@@ -2515,15 +2951,47 @@ window.Quarto = {
         </p>
        
         <p class="array_categories"> 
+            Gradio
+        </p>
+       
+        <p class="array_categories"> 
             Python
         </p>
        
         <p class="array_categories"> 
-            Torch
+            Dockerfile
         </p>
        
         <p class="array_categories"> 
-            Tensorflow
+            All
+        </p>
+       
+        <p class="array_categories"> 
+            Streamlit
+        </p>
+       
+        <p class="array_categories"> 
+            Python
+        </p>
+       
+        <p class="array_categories"> 
+            Markdown
+        </p>
+       
+        <p class="array_categories"> 
+            All
+        </p>
+       
+        <p class="array_categories"> 
+            Dash
+        </p>
+       
+        <p class="array_categories"> 
+            Python
+        </p>
+       
+        <p class="array_categories"> 
+            JavaScript
         </p>
        
         <p class="array_categories"> 
@@ -2633,6 +3101,14 @@ window.Quarto = {
         </p>
        
         <p class="array_tags"> 
+            Machine Learning
+        </p>
+       
+        <p class="array_tags"> 
+            Machine Learning
+        </p>
+       
+        <p class="array_tags"> 
             Blog
         </p>
        
@@ -2679,7 +3155,15 @@ window.Quarto = {
     
        
         <p class="array_id_modals"> 
+            youtubewhisper
+        </p>
+       
+        <p class="array_id_modals"> 
             aiml_cheatsheet
+        </p>
+       
+        <p class="array_id_modals"> 
+            hubertgenreclf
         </p>
        
         <p class="array_id_modals"> 
