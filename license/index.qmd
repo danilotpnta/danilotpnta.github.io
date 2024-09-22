@@ -1,0 +1,40 @@
+---
+pagetitle: "Danilo Toapanta - License"
+title: "CC BY-NC-SA 4.0 License"
+toc: true
+---
+## License Overview
+
+The content of this website is released under the [[Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA) license](https://creativecommons.org/licenses/by-nc-sa/4.0/)]{
+.grey-link}.
+
+<p>
+    <i class="fa-brands fa-creative-commons fa-2x" aria-label="creative-commons"></i> 
+    <i class="fa-brands fa-creative-commons-by fa-2x" aria-label="creative-commons-by"></i> 
+    <i class="fa-brands fa-creative-commons-nc fa-2x" aria-label="creative-commons-nc"></i> 
+    <i class="fa-brands fa-creative-commons-sa fa-2x" aria-label="creative-commons-sa"></i>
+</p>
+
+## Personal Disclaimer
+
+Opinions expressed are solely my own and do not express the views of my employer or any organizations I am associated with.
+
+## Content Disclaimer
+
+Some of the content on this website, including images and lecture slides, may not be authored by us. We respect the intellectual property rights of others and strive to give proper credit to original authors. If you find any content on our website that belongs to you and is not properly credited, please contact us, and we will take appropriate action.
+
+## Attribution and Credit
+
+The content I create is intended for personal or educational use and is not available for commercial purposes. That means you are welcome to:
+
+<!-- - You <u>may share the content</u> of this site with proper credit.
+- You <u>may not use this content for commercial purposes</u> without explicit permission. -->
+
+- <u>Share</u> the content with proper credit.
+- <u>Use</u> the content for non-commercial purposes.
+
+## Contact 
+
+If you have any questions about the use of my content or would like to collaborate with me, feel free to contact me.
+
+

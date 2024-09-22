@@ -12,8 +12,8 @@ resources:
 
 website:
 
-  image: assets/danilo.png
-  favicon: assets/danilo.png
+  image: assets/images/danilo.png
+  favicon: assets/images/danilo.png
   title: "Danilo Toapanta"
   description: Personal website, portfolio and blog
   # site-path: "/danilotpnta.github.io/"  # when commented 404.html renders correctly
@@ -38,7 +38,7 @@ website:
     type: overlay
 
   navbar:
-    title: "<span id='danilo_topanta_brand'> Danilo Toapanta</span> <a id='mysite' class='mysite' href= '/sites/'>MySites</a>"
+    title: "<span id='danilo_topanta_brand'> Danilo Toapanta</span> <a id='mysite' class='mysite' href= '/site-ver-hist/'>v1.3</a>"
     right:
       - text: "<span id='home-welcome-msg'>Home</span>"
         file: index.qmd
@@ -59,17 +59,20 @@ website:
     center: 
       - text: "Privacy"
         file: privacy/index.qmd
-      - text: "Donate a Coffee"
-        file: coming-soon.qmd
-      - text: "Version 1.2.0"
-        file: site-ver-hist/index.qmd
+      - text: "Contact"
+        file: contact/index.qmd
+      - text: "License"
+        file: license/index.qmd
     right:
       - icon: github
         href: https://github.com/
+      - icon: linkedin
+        href: https://www.linkedin.com/in/danilotpnta/
       - icon: twitter
-        href: https://twitter.com/
+        href: https://x.com/DaniloToapnta
       - icon: rss-fill
         file: docs/sitemap.xml
+
     
 format:
   html:

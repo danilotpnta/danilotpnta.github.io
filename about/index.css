@@ -92,23 +92,6 @@ main {
     margin-top: 0.5em;
 }
 
-/* @media (max-width: 695px){
-    div.quarto-about-solana {
-        padding-top: 0em !important;
-    }
-} */
-
-@media (max-width: 570px){
-    div.quarto-about-solana {
-        padding-top: 0em !important;
-    }
-}
-@media (min-width: 571px){
-    div.quarto-about-solana {
-        padding-top: 2em !important;
-    }
-}
-
 /* Disable author name */
 #title-block-header{
     display: none !important;

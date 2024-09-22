@@ -946,6 +946,11 @@ input, button, select, optgroup, textarea {
     text-decoration-color:#a3a6a8a1;
 }
 
+.grey-link a{
+    color: dimgrey;
+    text-decoration-color:#a3a6a8a1;
+}
+
 // Margin top of page
 .no-top-margin #main.quarto-document-content.content p {
    margin-top: -0em;
@@ -953,10 +958,10 @@ input, button, select, optgroup, textarea {
 }
 
 // Padding for picture
-.padding_img{
+// .padding_img{
     // padding-left: 100px;
     // margin-top: 1rem;
-}
+// }
 
 // To justify text
 .justify-text {

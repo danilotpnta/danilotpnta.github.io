@@ -1,0 +1,102 @@
+---
+pagetitle: "Danilo Toapanta - Contact"
+toc: true
+include-before-body: 
+  - "huggingface.svg" 
+  - "twitter.svg"
+css: index.css
+---
+
+<head>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <script>
+    function onSubmit(token) {
+      var form = document.getElementById('contact-form');
+      var formData = new FormData(form);
+      fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(function(response) {
+        if (response.ok) {
+          return response.json();
+        } else {
+          return Promise.reject(response);
+        }
+      }).then(function(data) {
+        showMessage('Your message was sent successfully!', 'success');
+        form.reset();
+      }).catch(function(error) {
+        showMessage('There was a problem sending your message.', 'error');
+      });
+    }
+      // Show successful message sent to user
+    function showMessage(text, type) {
+      var messageDiv = document.getElementById('message-confirmation');
+      messageDiv.innerText = text;
+      messageDiv.style.display = 'block';
+      messageDiv.style.borderColor = type === 'success' ? 'green' : 'red';
+      setTimeout(function() {
+        messageDiv.style.display = 'none';
+      }, 4000); // 5 seconds
+    }
+    // Clicking on the email icon focuses on the Full Name input field
+    function highlightContainer(event) {
+      event.preventDefault();  // Prevent the default action of the anchor tag
+      var fullNameInput = document.getElementById('full-name');
+      fullNameInput.focus();  // Focus on the Full Name input field
+    }
+  </script>
+</head>
+
+::: {.grid}
+
+::: {.g-col-5 #note}
+
+<h1 class="contact-title">Contact me [{{< fa feather-pointed >}}]{.note-icon} </h1>
+
+Thanks for consider reaching out to me. I'm always happy to hear from you. You can use this form to send me an email. 
+
+I’d love to hear if my educational materials have been helpful for you, and how they could be improved; particularly if they could be made more accessible. 
+
+<!-- Hugging Face -->
+<p style="margin-bottom: 0.5em;">
+  <a class="link-dark me-1" href="https://github.com/danilotpnta" title="github" target="_blank"rel="noopener">{{< fa brands github >}}</a>
+  <a class="link-dark me-1" href="https://huggingface.co/danilotpnta" title="Hugging Face" target="_blank" rel="noopener" style="text-decoration: none">
+    <svg class="huggingface-icon" width="1.1em" height="1.1em" viewBox="0 0 24 24" aria-label="huggingface"> <use href="#huggingface-icon"></use></svg>
+  </a>
+  <a class="link-dark me-1" href="https://linkedin.com/in/danilotpnta" title="LinkedIn" target="_blank"rel="noopener">{{< fa brands linkedin >}}</a>
+  <a class="link-dark me-1" href="https://x.com/DaniloToapnta" title="Twitter" target="_blank" rel="noopener" style="text-decoration: none;">
+    <svg class="twitter-icon" width="1em" height="1em" viewBox="0 0 24 24" aria-label="twitter"> <use href="#twitter-icon"></use></svg>
+  </a>
+  <a class="link-dark me-1" href="#" title="Email" rel="noopener" onclick="highlightContainer(event)">{{< fa envelope >}}</a>
+</p>
+:::
+
+
+::: {.g-col-1}
+:::
+
+::: {.g-col-6 #form}
+<!-- The form is always visible -->
+<form action="https://formspree.io/f/mblryjnj" method="POST" accept-charset="utf-8" id="contact-form">
+  <label class="label-full-name" for="full-name">Full Name</label>
+  <input type="text" name="name" id="full-name" class="form-control" placeholder="First and Last" required>
+  <label class="label-email-address" for="email-address">Email Address</label>
+  <input type="email" name="_replyto" id="email-address" class="form-control" placeholder="your@email.here" required>
+  <label class="label-message" for="message">Message</label>
+  <textarea rows="6" name="message" id="message" class="form-control" placeholder="Type your message" required></textarea>
+  <button class="g-recaptcha submit-button" data-sitekey="6LfGXSEqAAAAAHUUzb2ahGJ5v0wsubCZW37Hgglg" data-callback='onSubmit' data-action='submit'>Submit</button>
+</form>
+<div id="message-confirmation"></div>
+
+::: 
+:::
+
+
+
+
+
+

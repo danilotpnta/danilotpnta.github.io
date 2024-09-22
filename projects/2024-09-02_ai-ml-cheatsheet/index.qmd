@@ -1,0 +1,20 @@
+---
+title: "AI/Ml Cheatsheet"
+subtitle: "Project template showing an article"
+date: "2024-09-02"
+categories: [All, Python, Torch, Tensorflow, TAGS, Machine Learning]
+image: "image.jpeg"
+sidebar: false
+source: https://github.com/danilotpnta/ai-ml-cheatsheet
+modal-width: "max-width: 1200px"
+iframe: 
+    src: "https://ai-ml-cheatsheet.streamlit.app?embed=true"
+    style: "height: 750px; width: 100%;"
+---
+
+
+
+
+
+
+
