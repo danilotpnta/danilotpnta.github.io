@@ -88,3 +88,7 @@ hr{
     margin-top: 1rem;
     margin-bottom: 2rem;
 }
+
+#title-block-header {
+    display: none;
+}
